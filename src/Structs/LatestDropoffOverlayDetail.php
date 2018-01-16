@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -49,17 +49,17 @@ class LatestDropoffOverlayDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LatestDropOffOverlayType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LatestDropOffOverlayType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LatestDropOffOverlayType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LatestDropOffOverlayType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LatestDropOffOverlayType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LatestDropOffOverlayType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LatestDropOffOverlayType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\LatestDropOffOverlayType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -75,7 +75,7 @@ class LatestDropoffOverlayDetail extends AbstractStructBase
     /**
      * Set Time value
      * @param string $time
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail
      */
     public function setTime($time = null)
     {
@@ -92,7 +92,7 @@ class LatestDropoffOverlayDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -42,7 +42,7 @@ class ClientDetail extends AbstractStructBase
      * - documentation: The language to be used for human-readable Notification.localizedMessages in responses to the request containing this ClientDetail object. Different requests from the same client may contain different Localization data. (Contrast
      * with TransactionDetail.localization, which governs data payload language/translation.)
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Localization
+     * @var \CommerceFedEx\FedExPHP\Structs\Localization
      */
     public $Localization;
     /**
@@ -54,9 +54,9 @@ class ClientDetail extends AbstractStructBase
      * @param string $accountNumber
      * @param string $meterNumber
      * @param string $integratorId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
+     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
      */
-    public function __construct($accountNumber = null, $meterNumber = null, $integratorId = null, \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
+    public function __construct($accountNumber = null, $meterNumber = null, $integratorId = null, \CommerceFedEx\FedExPHP\Structs\Localization $localization = null)
     {
         $this
             ->setAccountNumber($accountNumber)
@@ -75,7 +75,7 @@ class ClientDetail extends AbstractStructBase
     /**
      * Set AccountNumber value
      * @param string $accountNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function setAccountNumber($accountNumber = null)
     {
@@ -97,7 +97,7 @@ class ClientDetail extends AbstractStructBase
     /**
      * Set MeterNumber value
      * @param string $meterNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function setMeterNumber($meterNumber = null)
     {
@@ -119,7 +119,7 @@ class ClientDetail extends AbstractStructBase
     /**
      * Set IntegratorId value
      * @param string $integratorId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function setIntegratorId($integratorId = null)
     {
@@ -132,7 +132,7 @@ class ClientDetail extends AbstractStructBase
     }
     /**
      * Get Localization value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Localization|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Localization|null
      */
     public function getLocalization()
     {
@@ -140,10 +140,10 @@ class ClientDetail extends AbstractStructBase
     }
     /**
      * Set Localization value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
-    public function setLocalization(\NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
+    public function setLocalization(\CommerceFedEx\FedExPHP\Structs\Localization $localization = null)
     {
         $this->Localization = $localization;
         return $this;
@@ -154,7 +154,7 @@ class ClientDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public static function __set_state(array $array)
     {

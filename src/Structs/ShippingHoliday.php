@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -14,7 +14,7 @@ class ShippingHoliday extends AbstractStructBase
      * The Holiday
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Holiday
+     * @var \CommerceFedEx\FedExPHP\Structs\Holiday
      */
     public $Holiday;
     /**
@@ -29,10 +29,10 @@ class ShippingHoliday extends AbstractStructBase
      * Constructor method for ShippingHoliday
      * @uses ShippingHoliday::setHoliday()
      * @uses ShippingHoliday::setUnavailableActions()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Holiday $holiday
+     * @param \CommerceFedEx\FedExPHP\Structs\Holiday $holiday
      * @param string[] $unavailableActions
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Holiday $holiday = null, array $unavailableActions = array())
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\Holiday $holiday = null, array $unavailableActions = array())
     {
         $this
             ->setHoliday($holiday)
@@ -40,7 +40,7 @@ class ShippingHoliday extends AbstractStructBase
     }
     /**
      * Get Holiday value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Holiday|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Holiday|null
      */
     public function getHoliday()
     {
@@ -48,10 +48,10 @@ class ShippingHoliday extends AbstractStructBase
     }
     /**
      * Set Holiday value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Holiday $holiday
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday
+     * @param \CommerceFedEx\FedExPHP\Structs\Holiday $holiday
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingHoliday
      */
-    public function setHoliday(\NicholasCreativeMedia\FedExPHP\Structs\Holiday $holiday = null)
+    public function setHoliday(\CommerceFedEx\FedExPHP\Structs\Holiday $holiday = null)
     {
         $this->Holiday = $holiday;
         return $this;
@@ -66,39 +66,39 @@ class ShippingHoliday extends AbstractStructBase
     }
     /**
      * Set UnavailableActions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingActionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingActionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingActionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingActionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $unavailableActions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingHoliday
      */
     public function setUnavailableActions(array $unavailableActions = array())
     {
         $invalidValues = array();
         foreach ($unavailableActions as $shippingHolidayUnavailableActionsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingActionType::valueIsValid($shippingHolidayUnavailableActionsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\ShippingActionType::valueIsValid($shippingHolidayUnavailableActionsItem)) {
                 $invalidValues[] = var_export($shippingHolidayUnavailableActionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingActionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingActionType::getValidValues())), __LINE__);
         }
         $this->UnavailableActions = $unavailableActions;
         return $this;
     }
     /**
      * Add item to UnavailableActions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingActionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingActionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingActionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingActionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingHoliday
      */
     public function addToUnavailableActions($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingActionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingActionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ShippingActionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingActionType::getValidValues())), __LINE__);
         }
         $this->UnavailableActions[] = $item;
         return $this;
@@ -109,7 +109,7 @@ class ShippingHoliday extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingHoliday
      */
     public static function __set_state(array $array)
     {

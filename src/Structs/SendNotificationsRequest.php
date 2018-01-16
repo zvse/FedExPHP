@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class SendNotificationsRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
@@ -25,14 +25,14 @@ class SendNotificationsRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data identifying the client submitting the transaction.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
@@ -56,7 +56,7 @@ class SendNotificationsRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains a free form field that is echoed back in the reply to match requests with replies and data that governs the data payload language/translations
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -113,7 +113,7 @@ class SendNotificationsRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: This replaces eMailNotificationDetail
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail
      */
     public $EventNotificationDetail;
     /**
@@ -131,21 +131,21 @@ class SendNotificationsRequest extends AbstractStructBase
      * @uses SendNotificationsRequest::setShipDateRangeEnd()
      * @uses SendNotificationsRequest::setSenderEMailAddress()
      * @uses SendNotificationsRequest::setEventNotificationDetail()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
      * @param string $trackingNumber
      * @param string $senderContactName
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param bool $multiPiece
      * @param string $pagingToken
      * @param string $trackingNumberUniqueId
      * @param string $shipDateRangeBegin
      * @param string $shipDateRangeEnd
      * @param string $senderEMailAddress
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail $eventNotificationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail $eventNotificationDetail
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, $trackingNumber = null, $senderContactName = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $multiPiece = null, $pagingToken = null, $trackingNumberUniqueId = null, $shipDateRangeBegin = null, $shipDateRangeEnd = null, $senderEMailAddress = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail $eventNotificationDetail = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, $trackingNumber = null, $senderContactName = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $multiPiece = null, $pagingToken = null, $trackingNumberUniqueId = null, $shipDateRangeBegin = null, $shipDateRangeEnd = null, $senderEMailAddress = null, \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail $eventNotificationDetail = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -164,7 +164,7 @@ class SendNotificationsRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -172,17 +172,17 @@ class SendNotificationsRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
-    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -190,17 +190,17 @@ class SendNotificationsRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
-    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -208,10 +208,10 @@ class SendNotificationsRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
@@ -227,7 +227,7 @@ class SendNotificationsRequest extends AbstractStructBase
     /**
      * Set TrackingNumber value
      * @param string $trackingNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
     public function setTrackingNumber($trackingNumber = null)
     {
@@ -249,7 +249,7 @@ class SendNotificationsRequest extends AbstractStructBase
     /**
      * Set SenderContactName value
      * @param string $senderContactName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
     public function setSenderContactName($senderContactName = null)
     {
@@ -262,7 +262,7 @@ class SendNotificationsRequest extends AbstractStructBase
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -270,10 +270,10 @@ class SendNotificationsRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -289,7 +289,7 @@ class SendNotificationsRequest extends AbstractStructBase
     /**
      * Set MultiPiece value
      * @param bool $multiPiece
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
     public function setMultiPiece($multiPiece = null)
     {
@@ -307,7 +307,7 @@ class SendNotificationsRequest extends AbstractStructBase
     /**
      * Set PagingToken value
      * @param string $pagingToken
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
     public function setPagingToken($pagingToken = null)
     {
@@ -329,7 +329,7 @@ class SendNotificationsRequest extends AbstractStructBase
     /**
      * Set TrackingNumberUniqueId value
      * @param string $trackingNumberUniqueId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
     public function setTrackingNumberUniqueId($trackingNumberUniqueId = null)
     {
@@ -351,7 +351,7 @@ class SendNotificationsRequest extends AbstractStructBase
     /**
      * Set ShipDateRangeBegin value
      * @param string $shipDateRangeBegin
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
     public function setShipDateRangeBegin($shipDateRangeBegin = null)
     {
@@ -373,7 +373,7 @@ class SendNotificationsRequest extends AbstractStructBase
     /**
      * Set ShipDateRangeEnd value
      * @param string $shipDateRangeEnd
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
     public function setShipDateRangeEnd($shipDateRangeEnd = null)
     {
@@ -395,7 +395,7 @@ class SendNotificationsRequest extends AbstractStructBase
     /**
      * Set SenderEMailAddress value
      * @param string $senderEMailAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
     public function setSenderEMailAddress($senderEMailAddress = null)
     {
@@ -408,7 +408,7 @@ class SendNotificationsRequest extends AbstractStructBase
     }
     /**
      * Get EventNotificationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail|null
      */
     public function getEventNotificationDetail()
     {
@@ -416,10 +416,10 @@ class SendNotificationsRequest extends AbstractStructBase
     }
     /**
      * Set EventNotificationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail $eventNotificationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail $eventNotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
-    public function setEventNotificationDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail $eventNotificationDetail = null)
+    public function setEventNotificationDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail $eventNotificationDetail = null)
     {
         $this->EventNotificationDetail = $eventNotificationDetail;
         return $this;
@@ -430,7 +430,7 @@ class SendNotificationsRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest
      */
     public static function __set_state(array $array)
     {

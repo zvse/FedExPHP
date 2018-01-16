@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -28,7 +28,7 @@ class CommercialInvoice extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Any freight charges that are associated with this shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $FreightCharge;
     /**
@@ -36,7 +36,7 @@ class CommercialInvoice extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Any taxes or miscellaneous charges(other than Freight charges or Insurance charges) that are associated with this shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $TaxesOrMiscellaneousCharge;
     /**
@@ -52,7 +52,7 @@ class CommercialInvoice extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Any packing costs that are associated with this shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $PackingCosts;
     /**
@@ -60,7 +60,7 @@ class CommercialInvoice extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Any handling costs that are associated with this shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $HandlingCosts;
     /**
@@ -101,7 +101,7 @@ class CommercialInvoice extends AbstractStructBase
      * - documentation: Additional customer reference data.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[]
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomerReference[]
      */
     public $CustomerReferences;
     /**
@@ -136,20 +136,20 @@ class CommercialInvoice extends AbstractStructBase
      * @uses CommercialInvoice::setOriginatorName()
      * @uses CommercialInvoice::setTermsOfSale()
      * @param string[] $comments
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $freightCharge
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $taxesOrMiscellaneousCharge
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $freightCharge
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $taxesOrMiscellaneousCharge
      * @param string $taxesOrMiscellaneousChargeType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $packingCosts
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $handlingCosts
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $packingCosts
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $handlingCosts
      * @param string $specialInstructions
      * @param string $declarationStatement
      * @param string $paymentTerms
      * @param string $purpose
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[] $customerReferences
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference[] $customerReferences
      * @param string $originatorName
      * @param string $termsOfSale
      */
-    public function __construct(array $comments = array(), \NicholasCreativeMedia\FedExPHP\Structs\Money $freightCharge = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $taxesOrMiscellaneousCharge = null, $taxesOrMiscellaneousChargeType = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $packingCosts = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $handlingCosts = null, $specialInstructions = null, $declarationStatement = null, $paymentTerms = null, $purpose = null, array $customerReferences = array(), $originatorName = null, $termsOfSale = null)
+    public function __construct(array $comments = array(), \CommerceFedEx\FedExPHP\Structs\Money $freightCharge = null, \CommerceFedEx\FedExPHP\Structs\Money $taxesOrMiscellaneousCharge = null, $taxesOrMiscellaneousChargeType = null, \CommerceFedEx\FedExPHP\Structs\Money $packingCosts = null, \CommerceFedEx\FedExPHP\Structs\Money $handlingCosts = null, $specialInstructions = null, $declarationStatement = null, $paymentTerms = null, $purpose = null, array $customerReferences = array(), $originatorName = null, $termsOfSale = null)
     {
         $this
             ->setComments($comments)
@@ -178,7 +178,7 @@ class CommercialInvoice extends AbstractStructBase
      * Set Comments value
      * @throws \InvalidArgumentException
      * @param string[] $comments
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function setComments(array $comments = array())
     {
@@ -195,7 +195,7 @@ class CommercialInvoice extends AbstractStructBase
      * Add item to Comments value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function addToComments($item)
     {
@@ -208,7 +208,7 @@ class CommercialInvoice extends AbstractStructBase
     }
     /**
      * Get FreightCharge value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getFreightCharge()
     {
@@ -216,17 +216,17 @@ class CommercialInvoice extends AbstractStructBase
     }
     /**
      * Set FreightCharge value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $freightCharge
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $freightCharge
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
-    public function setFreightCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $freightCharge = null)
+    public function setFreightCharge(\CommerceFedEx\FedExPHP\Structs\Money $freightCharge = null)
     {
         $this->FreightCharge = $freightCharge;
         return $this;
     }
     /**
      * Get TaxesOrMiscellaneousCharge value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getTaxesOrMiscellaneousCharge()
     {
@@ -234,10 +234,10 @@ class CommercialInvoice extends AbstractStructBase
     }
     /**
      * Set TaxesOrMiscellaneousCharge value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $taxesOrMiscellaneousCharge
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $taxesOrMiscellaneousCharge
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
-    public function setTaxesOrMiscellaneousCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $taxesOrMiscellaneousCharge = null)
+    public function setTaxesOrMiscellaneousCharge(\CommerceFedEx\FedExPHP\Structs\Money $taxesOrMiscellaneousCharge = null)
     {
         $this->TaxesOrMiscellaneousCharge = $taxesOrMiscellaneousCharge;
         return $this;
@@ -252,24 +252,24 @@ class CommercialInvoice extends AbstractStructBase
     }
     /**
      * Set TaxesOrMiscellaneousChargeType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TaxesOrMiscellaneousChargeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TaxesOrMiscellaneousChargeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TaxesOrMiscellaneousChargeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TaxesOrMiscellaneousChargeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $taxesOrMiscellaneousChargeType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function setTaxesOrMiscellaneousChargeType($taxesOrMiscellaneousChargeType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TaxesOrMiscellaneousChargeType::valueIsValid($taxesOrMiscellaneousChargeType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $taxesOrMiscellaneousChargeType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TaxesOrMiscellaneousChargeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TaxesOrMiscellaneousChargeType::valueIsValid($taxesOrMiscellaneousChargeType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $taxesOrMiscellaneousChargeType, implode(', ', \CommerceFedEx\FedExPHP\Enums\TaxesOrMiscellaneousChargeType::getValidValues())), __LINE__);
         }
         $this->TaxesOrMiscellaneousChargeType = $taxesOrMiscellaneousChargeType;
         return $this;
     }
     /**
      * Get PackingCosts value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getPackingCosts()
     {
@@ -277,17 +277,17 @@ class CommercialInvoice extends AbstractStructBase
     }
     /**
      * Set PackingCosts value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $packingCosts
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $packingCosts
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
-    public function setPackingCosts(\NicholasCreativeMedia\FedExPHP\Structs\Money $packingCosts = null)
+    public function setPackingCosts(\CommerceFedEx\FedExPHP\Structs\Money $packingCosts = null)
     {
         $this->PackingCosts = $packingCosts;
         return $this;
     }
     /**
      * Get HandlingCosts value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getHandlingCosts()
     {
@@ -295,10 +295,10 @@ class CommercialInvoice extends AbstractStructBase
     }
     /**
      * Set HandlingCosts value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $handlingCosts
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $handlingCosts
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
-    public function setHandlingCosts(\NicholasCreativeMedia\FedExPHP\Structs\Money $handlingCosts = null)
+    public function setHandlingCosts(\CommerceFedEx\FedExPHP\Structs\Money $handlingCosts = null)
     {
         $this->HandlingCosts = $handlingCosts;
         return $this;
@@ -314,7 +314,7 @@ class CommercialInvoice extends AbstractStructBase
     /**
      * Set SpecialInstructions value
      * @param string $specialInstructions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function setSpecialInstructions($specialInstructions = null)
     {
@@ -336,7 +336,7 @@ class CommercialInvoice extends AbstractStructBase
     /**
      * Set DeclarationStatement value
      * @param string $declarationStatement
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function setDeclarationStatement($declarationStatement = null)
     {
@@ -358,7 +358,7 @@ class CommercialInvoice extends AbstractStructBase
     /**
      * Set PaymentTerms value
      * @param string $paymentTerms
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function setPaymentTerms($paymentTerms = null)
     {
@@ -379,24 +379,24 @@ class CommercialInvoice extends AbstractStructBase
     }
     /**
      * Set Purpose value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PurposeOfShipmentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PurposeOfShipmentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PurposeOfShipmentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PurposeOfShipmentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $purpose
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function setPurpose($purpose = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PurposeOfShipmentType::valueIsValid($purpose)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $purpose, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PurposeOfShipmentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PurposeOfShipmentType::valueIsValid($purpose)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $purpose, implode(', ', \CommerceFedEx\FedExPHP\Enums\PurposeOfShipmentType::getValidValues())), __LINE__);
         }
         $this->Purpose = $purpose;
         return $this;
     }
     /**
      * Get CustomerReferences value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference[]|null
      */
     public function getCustomerReferences()
     {
@@ -405,15 +405,15 @@ class CommercialInvoice extends AbstractStructBase
     /**
      * Set CustomerReferences value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[] $customerReferences
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference[] $customerReferences
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function setCustomerReferences(array $customerReferences = array())
     {
         foreach ($customerReferences as $commercialInvoiceCustomerReferencesItem) {
             // validation for constraint: itemType
-            if (!$commercialInvoiceCustomerReferencesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference) {
-                throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference, "%s" given', is_object($commercialInvoiceCustomerReferencesItem) ? get_class($commercialInvoiceCustomerReferencesItem) : gettype($commercialInvoiceCustomerReferencesItem)), __LINE__);
+            if (!$commercialInvoiceCustomerReferencesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerReference) {
+                throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerReference, "%s" given', is_object($commercialInvoiceCustomerReferencesItem) ? get_class($commercialInvoiceCustomerReferencesItem) : gettype($commercialInvoiceCustomerReferencesItem)), __LINE__);
             }
         }
         $this->CustomerReferences = $customerReferences;
@@ -422,14 +422,14 @@ class CommercialInvoice extends AbstractStructBase
     /**
      * Add item to CustomerReferences value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
-    public function addToCustomerReferences(\NicholasCreativeMedia\FedExPHP\Structs\CustomerReference $item)
+    public function addToCustomerReferences(\CommerceFedEx\FedExPHP\Structs\CustomerReference $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference) {
-            throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerReference) {
+            throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerReferences[] = $item;
         return $this;
@@ -445,7 +445,7 @@ class CommercialInvoice extends AbstractStructBase
     /**
      * Set OriginatorName value
      * @param string $originatorName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function setOriginatorName($originatorName = null)
     {
@@ -467,7 +467,7 @@ class CommercialInvoice extends AbstractStructBase
     /**
      * Set TermsOfSale value
      * @param string $termsOfSale
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public function setTermsOfSale($termsOfSale = null)
     {
@@ -484,7 +484,7 @@ class CommercialInvoice extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -26,7 +26,7 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
      * - documentation: Information about the request/reply such was the transaction successful or not, and any additional information relevant to the request and/or reply. There may be multiple Notifications in a reply.
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
@@ -34,7 +34,7 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Image of letter encoded in Base64 format.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
@@ -42,7 +42,7 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains the CustomerTransactionDetail that is echoed back to the caller for matching requests and replies and a Localization element for defining the language/translation used in the reply data.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -61,12 +61,12 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
      * @uses SignatureProofOfDeliveryLetterReply::setTransactionDetail()
      * @uses SignatureProofOfDeliveryLetterReply::setLetter()
      * @param string $highestSeverity
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $letter
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $letter = null)
+    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $letter = null)
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -85,24 +85,24 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -111,15 +111,15 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $signatureProofOfDeliveryLetterReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$signatureProofOfDeliveryLetterReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($signatureProofOfDeliveryLetterReplyNotificationsItem) ? get_class($signatureProofOfDeliveryLetterReplyNotificationsItem) : gettype($signatureProofOfDeliveryLetterReplyNotificationsItem)), __LINE__);
+            if (!$signatureProofOfDeliveryLetterReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($signatureProofOfDeliveryLetterReplyNotificationsItem) ? get_class($signatureProofOfDeliveryLetterReplyNotificationsItem) : gettype($signatureProofOfDeliveryLetterReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -128,21 +128,21 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
      */
-    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -150,17 +150,17 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -168,10 +168,10 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -187,7 +187,7 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
     /**
      * Set Letter value
      * @param string $letter
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
      */
     public function setLetter($letter = null)
     {
@@ -204,7 +204,7 @@ class SignatureProofOfDeliveryLetterReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply
      */
     public static function __set_state(array $array)
     {

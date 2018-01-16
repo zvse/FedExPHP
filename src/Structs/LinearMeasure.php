@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -52,7 +52,7 @@ class LinearMeasure extends AbstractStructBase
     /**
      * Set Value value
      * @param float $value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LinearMeasure
+     * @return \CommerceFedEx\FedExPHP\Structs\LinearMeasure
      */
     public function setValue($value = null)
     {
@@ -69,17 +69,17 @@ class LinearMeasure extends AbstractStructBase
     }
     /**
      * Set Units value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LinearUnits::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LinearUnits::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $units
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LinearMeasure
+     * @return \CommerceFedEx\FedExPHP\Structs\LinearMeasure
      */
     public function setUnits($units = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::valueIsValid($units)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LinearUnits::valueIsValid($units)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \CommerceFedEx\FedExPHP\Enums\LinearUnits::getValidValues())), __LINE__);
         }
         $this->Units = $units;
         return $this;
@@ -90,7 +90,7 @@ class LinearMeasure extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LinearMeasure
+     * @return \CommerceFedEx\FedExPHP\Structs\LinearMeasure
      */
     public static function __set_state(array $array)
     {

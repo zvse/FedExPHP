@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -21,7 +21,7 @@ class BrokerDetail extends AbstractStructBase
      * The Broker
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
+     * @var \CommerceFedEx\FedExPHP\Structs\Party
      */
     public $Broker;
     /**
@@ -29,9 +29,9 @@ class BrokerDetail extends AbstractStructBase
      * @uses BrokerDetail::setType()
      * @uses BrokerDetail::setBroker()
      * @param string $type
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $broker
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $broker
      */
-    public function __construct($type = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $broker = null)
+    public function __construct($type = null, \CommerceFedEx\FedExPHP\Structs\Party $broker = null)
     {
         $this
             ->setType($type)
@@ -47,24 +47,24 @@ class BrokerDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BrokerType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BrokerType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\BrokerType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\BrokerType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\BrokerDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\BrokerType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\BrokerType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\BrokerType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\BrokerType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
     }
     /**
      * Get Broker value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
      */
     public function getBroker()
     {
@@ -72,10 +72,10 @@ class BrokerDetail extends AbstractStructBase
     }
     /**
      * Set Broker value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $broker
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $broker
+     * @return \CommerceFedEx\FedExPHP\Structs\BrokerDetail
      */
-    public function setBroker(\NicholasCreativeMedia\FedExPHP\Structs\Party $broker = null)
+    public function setBroker(\CommerceFedEx\FedExPHP\Structs\Party $broker = null)
     {
         $this->Broker = $broker;
         return $this;
@@ -86,7 +86,7 @@ class BrokerDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\BrokerDetail
      */
     public static function __set_state(array $array)
     {

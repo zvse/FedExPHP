@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -47,17 +47,17 @@ class CustomerReference extends AbstractStructBase
     }
     /**
      * Set CustomerReferenceType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $customerReferenceType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference
      */
     public function setCustomerReferenceType($customerReferenceType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid($customerReferenceType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $customerReferenceType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid($customerReferenceType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $customerReferenceType, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
         }
         $this->CustomerReferenceType = $customerReferenceType;
         return $this;
@@ -73,7 +73,7 @@ class CustomerReference extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference
      */
     public function setValue($value = null)
     {
@@ -90,7 +90,7 @@ class CustomerReference extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference
      */
     public static function __set_state(array $array)
     {

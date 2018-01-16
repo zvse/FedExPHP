@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -50,7 +50,7 @@ class NotificationParameter extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter
+     * @return \CommerceFedEx\FedExPHP\Structs\NotificationParameter
      */
     public function setId($id = null)
     {
@@ -72,7 +72,7 @@ class NotificationParameter extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter
+     * @return \CommerceFedEx\FedExPHP\Structs\NotificationParameter
      */
     public function setValue($value = null)
     {
@@ -89,7 +89,7 @@ class NotificationParameter extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter
+     * @return \CommerceFedEx\FedExPHP\Structs\NotificationParameter
      */
     public static function __set_state(array $array)
     {

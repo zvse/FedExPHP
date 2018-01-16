@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -69,7 +69,7 @@ class CustomerExceptionRequestDetail extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail
      */
     public function setId($id = null)
     {
@@ -91,7 +91,7 @@ class CustomerExceptionRequestDetail extends AbstractStructBase
     /**
      * Set StatusCode value
      * @param string $statusCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail
      */
     public function setStatusCode($statusCode = null)
     {
@@ -113,7 +113,7 @@ class CustomerExceptionRequestDetail extends AbstractStructBase
     /**
      * Set StatusDescription value
      * @param string $statusDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail
      */
     public function setStatusDescription($statusDescription = null)
     {
@@ -135,7 +135,7 @@ class CustomerExceptionRequestDetail extends AbstractStructBase
     /**
      * Set CreateTime value
      * @param string $createTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail
      */
     public function setCreateTime($createTime = null)
     {
@@ -152,7 +152,7 @@ class CustomerExceptionRequestDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail
      */
     public static function __set_state(array $array)
     {

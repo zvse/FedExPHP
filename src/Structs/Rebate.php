@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -28,7 +28,7 @@ class Rebate extends AbstractStructBase
      * The Amount
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $Amount;
     /**
@@ -46,10 +46,10 @@ class Rebate extends AbstractStructBase
      * @uses Rebate::setPercent()
      * @param string $rebateType
      * @param string $description
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
      * @param float $percent
      */
-    public function __construct($rebateType = null, $description = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null, $percent = null)
+    public function __construct($rebateType = null, $description = null, \CommerceFedEx\FedExPHP\Structs\Money $amount = null, $percent = null)
     {
         $this
             ->setRebateType($rebateType)
@@ -67,17 +67,17 @@ class Rebate extends AbstractStructBase
     }
     /**
      * Set RebateType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RebateType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RebateType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RebateType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RebateType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $rebateType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rebate
+     * @return \CommerceFedEx\FedExPHP\Structs\Rebate
      */
     public function setRebateType($rebateType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RebateType::valueIsValid($rebateType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rebateType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RebateType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RebateType::valueIsValid($rebateType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rebateType, implode(', ', \CommerceFedEx\FedExPHP\Enums\RebateType::getValidValues())), __LINE__);
         }
         $this->RebateType = $rebateType;
         return $this;
@@ -93,7 +93,7 @@ class Rebate extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rebate
+     * @return \CommerceFedEx\FedExPHP\Structs\Rebate
      */
     public function setDescription($description = null)
     {
@@ -106,7 +106,7 @@ class Rebate extends AbstractStructBase
     }
     /**
      * Get Amount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getAmount()
     {
@@ -114,10 +114,10 @@ class Rebate extends AbstractStructBase
     }
     /**
      * Set Amount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rebate
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
+     * @return \CommerceFedEx\FedExPHP\Structs\Rebate
      */
-    public function setAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
+    public function setAmount(\CommerceFedEx\FedExPHP\Structs\Money $amount = null)
     {
         $this->Amount = $amount;
         return $this;
@@ -133,7 +133,7 @@ class Rebate extends AbstractStructBase
     /**
      * Set Percent value
      * @param float $percent
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rebate
+     * @return \CommerceFedEx\FedExPHP\Structs\Rebate
      */
     public function setPercent($percent = null)
     {
@@ -146,7 +146,7 @@ class Rebate extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rebate
+     * @return \CommerceFedEx\FedExPHP\Structs\Rebate
      */
     public static function __set_state(array $array)
     {

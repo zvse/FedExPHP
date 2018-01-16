@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -78,7 +78,7 @@ class TrackAdvanceNotificationDetail extends AbstractStructBase
     /**
      * Set EstimatedTimeOfArrival value
      * @param string $estimatedTimeOfArrival
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail
      */
     public function setEstimatedTimeOfArrival($estimatedTimeOfArrival = null)
     {
@@ -100,7 +100,7 @@ class TrackAdvanceNotificationDetail extends AbstractStructBase
     /**
      * Set Reason value
      * @param string $reason
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail
      */
     public function setReason($reason = null)
     {
@@ -121,17 +121,17 @@ class TrackAdvanceNotificationDetail extends AbstractStructBase
     }
     /**
      * Set Status value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackAdvanceNotificationStatusType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackAdvanceNotificationStatusType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackAdvanceNotificationStatusType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackAdvanceNotificationStatusType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $status
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail
      */
     public function setStatus($status = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackAdvanceNotificationStatusType::valueIsValid($status)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackAdvanceNotificationStatusType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackAdvanceNotificationStatusType::valueIsValid($status)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackAdvanceNotificationStatusType::getValidValues())), __LINE__);
         }
         $this->Status = $status;
         return $this;
@@ -147,7 +147,7 @@ class TrackAdvanceNotificationDetail extends AbstractStructBase
     /**
      * Set StatusDescription value
      * @param string $statusDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail
      */
     public function setStatusDescription($statusDescription = null)
     {
@@ -169,7 +169,7 @@ class TrackAdvanceNotificationDetail extends AbstractStructBase
     /**
      * Set StatusTime value
      * @param string $statusTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail
      */
     public function setStatusTime($statusTime = null)
     {
@@ -186,7 +186,7 @@ class TrackAdvanceNotificationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail
      */
     public static function __set_state(array $array)
     {

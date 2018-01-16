@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -50,7 +50,7 @@ class CustomLabelPosition extends AbstractStructBase
     /**
      * Set X value
      * @param int $x
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public function setX($x = null)
     {
@@ -72,7 +72,7 @@ class CustomLabelPosition extends AbstractStructBase
     /**
      * Set Y value
      * @param int $y
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public function setY($y = null)
     {
@@ -89,7 +89,7 @@ class CustomLabelPosition extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public static function __set_state(array $array)
     {

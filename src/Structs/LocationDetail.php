@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -30,7 +30,7 @@ class LocationDetail extends AbstractStructBase
      * The LocationContactAndAddress
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LocationContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\LocationContactAndAddress
      */
     public $LocationContactAndAddress;
     /**
@@ -67,7 +67,7 @@ class LocationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Details about the clearance location.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClearanceLocationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ClearanceLocationDetail
      */
     public $ClearanceLocationDetail;
     /**
@@ -75,7 +75,7 @@ class LocationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail[]
      */
     public $ServicingLocationDetails;
     /**
@@ -90,7 +90,7 @@ class LocationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Holiday[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Holiday[]
      */
     public $LocationHolidays;
     /**
@@ -113,7 +113,7 @@ class LocationDetail extends AbstractStructBase
      * - documentation: Normal operating hours for the location.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[]
+     * @var \CommerceFedEx\FedExPHP\Structs\LocationHours[]
      */
     public $NormalHours;
     /**
@@ -122,7 +122,7 @@ class LocationDetail extends AbstractStructBase
      * - documentation: Operating hours for the location that are exception from the normal hours of operation.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[]
+     * @var \CommerceFedEx\FedExPHP\Structs\LocationHours[]
      */
     public $ExceptionalHours;
     /**
@@ -130,7 +130,7 @@ class LocationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[]
+     * @var \CommerceFedEx\FedExPHP\Structs\LocationHours[]
      */
     public $HoursForEffectiveDate;
     /**
@@ -138,7 +138,7 @@ class LocationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\CarrierDetail[]
      */
     public $CarrierDetails;
     /**
@@ -162,23 +162,23 @@ class LocationDetail extends AbstractStructBase
      * @uses LocationDetail::setCarrierDetails()
      * @param string $locationId
      * @param int $storeNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationContactAndAddress $locationContactAndAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationContactAndAddress $locationContactAndAddress
      * @param string $specialInstructions
      * @param string $geographicCoordinates
      * @param string $locationType
      * @param string[] $attributes
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClearanceLocationDetail $clearanceLocationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail[] $servicingLocationDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\ClearanceLocationDetail $clearanceLocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail[] $servicingLocationDetails
      * @param string $acceptedCurrency
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Holiday[] $locationHolidays
+     * @param \CommerceFedEx\FedExPHP\Structs\Holiday[] $locationHolidays
      * @param string $mapUrl
      * @param string $entityId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[] $normalHours
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[] $exceptionalHours
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[] $hoursForEffectiveDate
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail[] $carrierDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationHours[] $normalHours
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationHours[] $exceptionalHours
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationHours[] $hoursForEffectiveDate
+     * @param \CommerceFedEx\FedExPHP\Structs\CarrierDetail[] $carrierDetails
      */
-    public function __construct($locationId = null, $storeNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\LocationContactAndAddress $locationContactAndAddress = null, $specialInstructions = null, $geographicCoordinates = null, $locationType = null, array $attributes = array(), \NicholasCreativeMedia\FedExPHP\Structs\ClearanceLocationDetail $clearanceLocationDetail = null, array $servicingLocationDetails = array(), $acceptedCurrency = null, array $locationHolidays = array(), $mapUrl = null, $entityId = null, array $normalHours = array(), array $exceptionalHours = array(), array $hoursForEffectiveDate = array(), array $carrierDetails = array())
+    public function __construct($locationId = null, $storeNumber = null, \CommerceFedEx\FedExPHP\Structs\LocationContactAndAddress $locationContactAndAddress = null, $specialInstructions = null, $geographicCoordinates = null, $locationType = null, array $attributes = array(), \CommerceFedEx\FedExPHP\Structs\ClearanceLocationDetail $clearanceLocationDetail = null, array $servicingLocationDetails = array(), $acceptedCurrency = null, array $locationHolidays = array(), $mapUrl = null, $entityId = null, array $normalHours = array(), array $exceptionalHours = array(), array $hoursForEffectiveDate = array(), array $carrierDetails = array())
     {
         $this
             ->setLocationId($locationId)
@@ -210,7 +210,7 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set LocationId value
      * @param string $locationId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setLocationId($locationId = null)
     {
@@ -232,7 +232,7 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set StoreNumber value
      * @param int $storeNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setStoreNumber($storeNumber = null)
     {
@@ -245,7 +245,7 @@ class LocationDetail extends AbstractStructBase
     }
     /**
      * Get LocationContactAndAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationContactAndAddress|null
      */
     public function getLocationContactAndAddress()
     {
@@ -253,10 +253,10 @@ class LocationDetail extends AbstractStructBase
     }
     /**
      * Set LocationContactAndAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationContactAndAddress $locationContactAndAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationContactAndAddress $locationContactAndAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
-    public function setLocationContactAndAddress(\NicholasCreativeMedia\FedExPHP\Structs\LocationContactAndAddress $locationContactAndAddress = null)
+    public function setLocationContactAndAddress(\CommerceFedEx\FedExPHP\Structs\LocationContactAndAddress $locationContactAndAddress = null)
     {
         $this->LocationContactAndAddress = $locationContactAndAddress;
         return $this;
@@ -272,7 +272,7 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set SpecialInstructions value
      * @param string $specialInstructions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setSpecialInstructions($specialInstructions = null)
     {
@@ -294,7 +294,7 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set GeographicCoordinates value
      * @param string $geographicCoordinates
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setGeographicCoordinates($geographicCoordinates = null)
     {
@@ -315,17 +315,17 @@ class LocationDetail extends AbstractStructBase
     }
     /**
      * Set LocationType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FedExLocationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $locationType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setLocationType($locationType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::valueIsValid($locationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $locationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FedExLocationType::valueIsValid($locationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $locationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
         }
         $this->LocationType = $locationType;
         return $this;
@@ -340,46 +340,46 @@ class LocationDetail extends AbstractStructBase
     }
     /**
      * Set Attributes value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationAttributesType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationAttributesType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationAttributesType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationAttributesType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $attributes
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setAttributes(array $attributes = array())
     {
         $invalidValues = array();
         foreach ($attributes as $locationDetailAttributesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\LocationAttributesType::valueIsValid($locationDetailAttributesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\LocationAttributesType::valueIsValid($locationDetailAttributesItem)) {
                 $invalidValues[] = var_export($locationDetailAttributesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LocationAttributesType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\LocationAttributesType::getValidValues())), __LINE__);
         }
         $this->Attributes = $attributes;
         return $this;
     }
     /**
      * Add item to Attributes value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationAttributesType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationAttributesType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationAttributesType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationAttributesType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function addToAttributes($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LocationAttributesType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LocationAttributesType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LocationAttributesType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\LocationAttributesType::getValidValues())), __LINE__);
         }
         $this->Attributes[] = $item;
         return $this;
     }
     /**
      * Get ClearanceLocationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClearanceLocationDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ClearanceLocationDetail|null
      */
     public function getClearanceLocationDetail()
     {
@@ -387,17 +387,17 @@ class LocationDetail extends AbstractStructBase
     }
     /**
      * Set ClearanceLocationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClearanceLocationDetail $clearanceLocationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ClearanceLocationDetail $clearanceLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
-    public function setClearanceLocationDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClearanceLocationDetail $clearanceLocationDetail = null)
+    public function setClearanceLocationDetail(\CommerceFedEx\FedExPHP\Structs\ClearanceLocationDetail $clearanceLocationDetail = null)
     {
         $this->ClearanceLocationDetail = $clearanceLocationDetail;
         return $this;
     }
     /**
      * Get ServicingLocationDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail[]|null
      */
     public function getServicingLocationDetails()
     {
@@ -406,15 +406,15 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set ServicingLocationDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail[] $servicingLocationDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail[] $servicingLocationDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setServicingLocationDetails(array $servicingLocationDetails = array())
     {
         foreach ($servicingLocationDetails as $locationDetailServicingLocationDetailsItem) {
             // validation for constraint: itemType
-            if (!$locationDetailServicingLocationDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail) {
-                throw new \InvalidArgumentException(sprintf('The ServicingLocationDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail, "%s" given', is_object($locationDetailServicingLocationDetailsItem) ? get_class($locationDetailServicingLocationDetailsItem) : gettype($locationDetailServicingLocationDetailsItem)), __LINE__);
+            if (!$locationDetailServicingLocationDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail) {
+                throw new \InvalidArgumentException(sprintf('The ServicingLocationDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail, "%s" given', is_object($locationDetailServicingLocationDetailsItem) ? get_class($locationDetailServicingLocationDetailsItem) : gettype($locationDetailServicingLocationDetailsItem)), __LINE__);
             }
         }
         $this->ServicingLocationDetails = $servicingLocationDetails;
@@ -423,14 +423,14 @@ class LocationDetail extends AbstractStructBase
     /**
      * Add item to ServicingLocationDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
-    public function addToServicingLocationDetails(\NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail $item)
+    public function addToServicingLocationDetails(\CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail) {
-            throw new \InvalidArgumentException(sprintf('The ServicingLocationDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationIdentificationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail) {
+            throw new \InvalidArgumentException(sprintf('The ServicingLocationDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationIdentificationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ServicingLocationDetails[] = $item;
         return $this;
@@ -446,7 +446,7 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set AcceptedCurrency value
      * @param string $acceptedCurrency
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setAcceptedCurrency($acceptedCurrency = null)
     {
@@ -459,7 +459,7 @@ class LocationDetail extends AbstractStructBase
     }
     /**
      * Get LocationHolidays value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Holiday[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Holiday[]|null
      */
     public function getLocationHolidays()
     {
@@ -468,15 +468,15 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set LocationHolidays value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Holiday[] $locationHolidays
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Holiday[] $locationHolidays
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setLocationHolidays(array $locationHolidays = array())
     {
         foreach ($locationHolidays as $locationDetailLocationHolidaysItem) {
             // validation for constraint: itemType
-            if (!$locationDetailLocationHolidaysItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Holiday) {
-                throw new \InvalidArgumentException(sprintf('The LocationHolidays property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Holiday, "%s" given', is_object($locationDetailLocationHolidaysItem) ? get_class($locationDetailLocationHolidaysItem) : gettype($locationDetailLocationHolidaysItem)), __LINE__);
+            if (!$locationDetailLocationHolidaysItem instanceof \CommerceFedEx\FedExPHP\Structs\Holiday) {
+                throw new \InvalidArgumentException(sprintf('The LocationHolidays property can only contain items of \CommerceFedEx\FedExPHP\Structs\Holiday, "%s" given', is_object($locationDetailLocationHolidaysItem) ? get_class($locationDetailLocationHolidaysItem) : gettype($locationDetailLocationHolidaysItem)), __LINE__);
             }
         }
         $this->LocationHolidays = $locationHolidays;
@@ -485,14 +485,14 @@ class LocationDetail extends AbstractStructBase
     /**
      * Add item to LocationHolidays value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Holiday $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Holiday $item
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
-    public function addToLocationHolidays(\NicholasCreativeMedia\FedExPHP\Structs\Holiday $item)
+    public function addToLocationHolidays(\CommerceFedEx\FedExPHP\Structs\Holiday $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Holiday) {
-            throw new \InvalidArgumentException(sprintf('The LocationHolidays property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Holiday, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Holiday) {
+            throw new \InvalidArgumentException(sprintf('The LocationHolidays property can only contain items of \CommerceFedEx\FedExPHP\Structs\Holiday, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->LocationHolidays[] = $item;
         return $this;
@@ -508,7 +508,7 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set MapUrl value
      * @param string $mapUrl
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setMapUrl($mapUrl = null)
     {
@@ -530,7 +530,7 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set EntityId value
      * @param string $entityId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setEntityId($entityId = null)
     {
@@ -543,7 +543,7 @@ class LocationDetail extends AbstractStructBase
     }
     /**
      * Get NormalHours value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationHours[]|null
      */
     public function getNormalHours()
     {
@@ -552,15 +552,15 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set NormalHours value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[] $normalHours
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationHours[] $normalHours
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setNormalHours(array $normalHours = array())
     {
         foreach ($normalHours as $locationDetailNormalHoursItem) {
             // validation for constraint: itemType
-            if (!$locationDetailNormalHoursItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationHours) {
-                throw new \InvalidArgumentException(sprintf('The NormalHours property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationHours, "%s" given', is_object($locationDetailNormalHoursItem) ? get_class($locationDetailNormalHoursItem) : gettype($locationDetailNormalHoursItem)), __LINE__);
+            if (!$locationDetailNormalHoursItem instanceof \CommerceFedEx\FedExPHP\Structs\LocationHours) {
+                throw new \InvalidArgumentException(sprintf('The NormalHours property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationHours, "%s" given', is_object($locationDetailNormalHoursItem) ? get_class($locationDetailNormalHoursItem) : gettype($locationDetailNormalHoursItem)), __LINE__);
             }
         }
         $this->NormalHours = $normalHours;
@@ -569,21 +569,21 @@ class LocationDetail extends AbstractStructBase
     /**
      * Add item to NormalHours value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationHours $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationHours $item
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
-    public function addToNormalHours(\NicholasCreativeMedia\FedExPHP\Structs\LocationHours $item)
+    public function addToNormalHours(\CommerceFedEx\FedExPHP\Structs\LocationHours $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationHours) {
-            throw new \InvalidArgumentException(sprintf('The NormalHours property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationHours, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\LocationHours) {
+            throw new \InvalidArgumentException(sprintf('The NormalHours property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationHours, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->NormalHours[] = $item;
         return $this;
     }
     /**
      * Get ExceptionalHours value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationHours[]|null
      */
     public function getExceptionalHours()
     {
@@ -592,15 +592,15 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set ExceptionalHours value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[] $exceptionalHours
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationHours[] $exceptionalHours
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setExceptionalHours(array $exceptionalHours = array())
     {
         foreach ($exceptionalHours as $locationDetailExceptionalHoursItem) {
             // validation for constraint: itemType
-            if (!$locationDetailExceptionalHoursItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationHours) {
-                throw new \InvalidArgumentException(sprintf('The ExceptionalHours property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationHours, "%s" given', is_object($locationDetailExceptionalHoursItem) ? get_class($locationDetailExceptionalHoursItem) : gettype($locationDetailExceptionalHoursItem)), __LINE__);
+            if (!$locationDetailExceptionalHoursItem instanceof \CommerceFedEx\FedExPHP\Structs\LocationHours) {
+                throw new \InvalidArgumentException(sprintf('The ExceptionalHours property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationHours, "%s" given', is_object($locationDetailExceptionalHoursItem) ? get_class($locationDetailExceptionalHoursItem) : gettype($locationDetailExceptionalHoursItem)), __LINE__);
             }
         }
         $this->ExceptionalHours = $exceptionalHours;
@@ -609,21 +609,21 @@ class LocationDetail extends AbstractStructBase
     /**
      * Add item to ExceptionalHours value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationHours $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationHours $item
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
-    public function addToExceptionalHours(\NicholasCreativeMedia\FedExPHP\Structs\LocationHours $item)
+    public function addToExceptionalHours(\CommerceFedEx\FedExPHP\Structs\LocationHours $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationHours) {
-            throw new \InvalidArgumentException(sprintf('The ExceptionalHours property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationHours, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\LocationHours) {
+            throw new \InvalidArgumentException(sprintf('The ExceptionalHours property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationHours, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ExceptionalHours[] = $item;
         return $this;
     }
     /**
      * Get HoursForEffectiveDate value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationHours[]|null
      */
     public function getHoursForEffectiveDate()
     {
@@ -632,15 +632,15 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set HoursForEffectiveDate value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationHours[] $hoursForEffectiveDate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationHours[] $hoursForEffectiveDate
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setHoursForEffectiveDate(array $hoursForEffectiveDate = array())
     {
         foreach ($hoursForEffectiveDate as $locationDetailHoursForEffectiveDateItem) {
             // validation for constraint: itemType
-            if (!$locationDetailHoursForEffectiveDateItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationHours) {
-                throw new \InvalidArgumentException(sprintf('The HoursForEffectiveDate property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationHours, "%s" given', is_object($locationDetailHoursForEffectiveDateItem) ? get_class($locationDetailHoursForEffectiveDateItem) : gettype($locationDetailHoursForEffectiveDateItem)), __LINE__);
+            if (!$locationDetailHoursForEffectiveDateItem instanceof \CommerceFedEx\FedExPHP\Structs\LocationHours) {
+                throw new \InvalidArgumentException(sprintf('The HoursForEffectiveDate property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationHours, "%s" given', is_object($locationDetailHoursForEffectiveDateItem) ? get_class($locationDetailHoursForEffectiveDateItem) : gettype($locationDetailHoursForEffectiveDateItem)), __LINE__);
             }
         }
         $this->HoursForEffectiveDate = $hoursForEffectiveDate;
@@ -649,21 +649,21 @@ class LocationDetail extends AbstractStructBase
     /**
      * Add item to HoursForEffectiveDate value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationHours $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationHours $item
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
-    public function addToHoursForEffectiveDate(\NicholasCreativeMedia\FedExPHP\Structs\LocationHours $item)
+    public function addToHoursForEffectiveDate(\CommerceFedEx\FedExPHP\Structs\LocationHours $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationHours) {
-            throw new \InvalidArgumentException(sprintf('The HoursForEffectiveDate property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationHours, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\LocationHours) {
+            throw new \InvalidArgumentException(sprintf('The HoursForEffectiveDate property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationHours, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->HoursForEffectiveDate[] = $item;
         return $this;
     }
     /**
      * Get CarrierDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail[]|null
      */
     public function getCarrierDetails()
     {
@@ -672,15 +672,15 @@ class LocationDetail extends AbstractStructBase
     /**
      * Set CarrierDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail[] $carrierDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CarrierDetail[] $carrierDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public function setCarrierDetails(array $carrierDetails = array())
     {
         foreach ($carrierDetails as $locationDetailCarrierDetailsItem) {
             // validation for constraint: itemType
-            if (!$locationDetailCarrierDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail) {
-                throw new \InvalidArgumentException(sprintf('The CarrierDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail, "%s" given', is_object($locationDetailCarrierDetailsItem) ? get_class($locationDetailCarrierDetailsItem) : gettype($locationDetailCarrierDetailsItem)), __LINE__);
+            if (!$locationDetailCarrierDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\CarrierDetail) {
+                throw new \InvalidArgumentException(sprintf('The CarrierDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\CarrierDetail, "%s" given', is_object($locationDetailCarrierDetailsItem) ? get_class($locationDetailCarrierDetailsItem) : gettype($locationDetailCarrierDetailsItem)), __LINE__);
             }
         }
         $this->CarrierDetails = $carrierDetails;
@@ -689,14 +689,14 @@ class LocationDetail extends AbstractStructBase
     /**
      * Add item to CarrierDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CarrierDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
-    public function addToCarrierDetails(\NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail $item)
+    public function addToCarrierDetails(\CommerceFedEx\FedExPHP\Structs\CarrierDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail) {
-            throw new \InvalidArgumentException(sprintf('The CarrierDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CarrierDetail) {
+            throw new \InvalidArgumentException(sprintf('The CarrierDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\CarrierDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CarrierDetails[] = $item;
         return $this;
@@ -707,7 +707,7 @@ class LocationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public static function __set_state(array $array)
     {

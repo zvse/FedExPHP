@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -24,21 +24,21 @@ class AddressValidationReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -53,7 +53,7 @@ class AddressValidationReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult[]
+     * @var \CommerceFedEx\FedExPHP\Structs\AddressValidationResult[]
      */
     public $AddressResults;
     /**
@@ -65,13 +65,13 @@ class AddressValidationReply extends AbstractStructBase
      * @uses AddressValidationReply::setReplyTimestamp()
      * @uses AddressValidationReply::setAddressResults()
      * @param string $highestSeverity
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $replyTimestamp
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult[] $addressResults
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressValidationResult[] $addressResults
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $replyTimestamp = null, array $addressResults = array())
+    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $replyTimestamp = null, array $addressResults = array())
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -91,24 +91,24 @@ class AddressValidationReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -117,15 +117,15 @@ class AddressValidationReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $addressValidationReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$addressValidationReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($addressValidationReplyNotificationsItem) ? get_class($addressValidationReplyNotificationsItem) : gettype($addressValidationReplyNotificationsItem)), __LINE__);
+            if (!$addressValidationReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($addressValidationReplyNotificationsItem) ? get_class($addressValidationReplyNotificationsItem) : gettype($addressValidationReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -134,21 +134,21 @@ class AddressValidationReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
-    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -156,17 +156,17 @@ class AddressValidationReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -174,10 +174,10 @@ class AddressValidationReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -193,7 +193,7 @@ class AddressValidationReply extends AbstractStructBase
     /**
      * Set ReplyTimestamp value
      * @param string $replyTimestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
     public function setReplyTimestamp($replyTimestamp = null)
     {
@@ -206,7 +206,7 @@ class AddressValidationReply extends AbstractStructBase
     }
     /**
      * Get AddressResults value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult[]|null
      */
     public function getAddressResults()
     {
@@ -215,15 +215,15 @@ class AddressValidationReply extends AbstractStructBase
     /**
      * Set AddressResults value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult[] $addressResults
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressValidationResult[] $addressResults
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
     public function setAddressResults(array $addressResults = array())
     {
         foreach ($addressResults as $addressValidationReplyAddressResultsItem) {
             // validation for constraint: itemType
-            if (!$addressValidationReplyAddressResultsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult) {
-                throw new \InvalidArgumentException(sprintf('The AddressResults property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult, "%s" given', is_object($addressValidationReplyAddressResultsItem) ? get_class($addressValidationReplyAddressResultsItem) : gettype($addressValidationReplyAddressResultsItem)), __LINE__);
+            if (!$addressValidationReplyAddressResultsItem instanceof \CommerceFedEx\FedExPHP\Structs\AddressValidationResult) {
+                throw new \InvalidArgumentException(sprintf('The AddressResults property can only contain items of \CommerceFedEx\FedExPHP\Structs\AddressValidationResult, "%s" given', is_object($addressValidationReplyAddressResultsItem) ? get_class($addressValidationReplyAddressResultsItem) : gettype($addressValidationReplyAddressResultsItem)), __LINE__);
             }
         }
         $this->AddressResults = $addressResults;
@@ -232,14 +232,14 @@ class AddressValidationReply extends AbstractStructBase
     /**
      * Add item to AddressResults value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressValidationResult $item
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
-    public function addToAddressResults(\NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult $item)
+    public function addToAddressResults(\CommerceFedEx\FedExPHP\Structs\AddressValidationResult $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult) {
-            throw new \InvalidArgumentException(sprintf('The AddressResults property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AddressValidationResult) {
+            throw new \InvalidArgumentException(sprintf('The AddressResults property can only contain items of \CommerceFedEx\FedExPHP\Structs\AddressValidationResult, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AddressResults[] = $item;
         return $this;
@@ -250,7 +250,7 @@ class AddressValidationReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
     public static function __set_state(array $array)
     {

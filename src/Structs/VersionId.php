@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -78,7 +78,7 @@ class VersionId extends AbstractStructBase
     /**
      * Set ServiceId value
      * @param string $serviceId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function setServiceId($serviceId = null)
     {
@@ -100,7 +100,7 @@ class VersionId extends AbstractStructBase
     /**
      * Set Major value
      * @param int $major
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function setMajor($major = null)
     {
@@ -122,7 +122,7 @@ class VersionId extends AbstractStructBase
     /**
      * Set Intermediate value
      * @param int $intermediate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function setIntermediate($intermediate = null)
     {
@@ -144,7 +144,7 @@ class VersionId extends AbstractStructBase
     /**
      * Set Minor value
      * @param int $minor
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function setMinor($minor = null)
     {
@@ -161,7 +161,7 @@ class VersionId extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public static function __set_state(array $array)
     {

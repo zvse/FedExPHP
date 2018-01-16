@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,24 +16,24 @@ class CustomLabelBoxEntry extends AbstractStructBase
      * The TopLeftCorner
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public $TopLeftCorner;
     /**
      * The BottomRightCorner
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public $BottomRightCorner;
     /**
      * Constructor method for CustomLabelBoxEntry
      * @uses CustomLabelBoxEntry::setTopLeftCorner()
      * @uses CustomLabelBoxEntry::setBottomRightCorner()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $topLeftCorner
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $topLeftCorner
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $topLeftCorner = null, \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $topLeftCorner = null, \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner = null)
     {
         $this
             ->setTopLeftCorner($topLeftCorner)
@@ -41,7 +41,7 @@ class CustomLabelBoxEntry extends AbstractStructBase
     }
     /**
      * Get TopLeftCorner value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public function getTopLeftCorner()
     {
@@ -49,17 +49,17 @@ class CustomLabelBoxEntry extends AbstractStructBase
     }
     /**
      * Set TopLeftCorner value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $topLeftCorner
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBoxEntry
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $topLeftCorner
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBoxEntry
      */
-    public function setTopLeftCorner(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $topLeftCorner = null)
+    public function setTopLeftCorner(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $topLeftCorner = null)
     {
         $this->TopLeftCorner = $topLeftCorner;
         return $this;
     }
     /**
      * Get BottomRightCorner value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public function getBottomRightCorner()
     {
@@ -67,10 +67,10 @@ class CustomLabelBoxEntry extends AbstractStructBase
     }
     /**
      * Set BottomRightCorner value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBoxEntry
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBoxEntry
      */
-    public function setBottomRightCorner(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner = null)
+    public function setBottomRightCorner(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner = null)
     {
         $this->BottomRightCorner = $bottomRightCorner;
         return $this;
@@ -81,7 +81,7 @@ class CustomLabelBoxEntry extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBoxEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBoxEntry
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -95,7 +95,7 @@ class CompletedTagDetail extends AbstractStructBase
     /**
      * Set ConfirmationNumber value
      * @param string $confirmationNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTagDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail
      */
     public function setConfirmationNumber($confirmationNumber = null)
     {
@@ -117,7 +117,7 @@ class CompletedTagDetail extends AbstractStructBase
     /**
      * Set AccessTime value
      * @param string $accessTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTagDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail
      */
     public function setAccessTime($accessTime = null)
     {
@@ -139,7 +139,7 @@ class CompletedTagDetail extends AbstractStructBase
     /**
      * Set CutoffTime value
      * @param string $cutoffTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTagDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail
      */
     public function setCutoffTime($cutoffTime = null)
     {
@@ -161,7 +161,7 @@ class CompletedTagDetail extends AbstractStructBase
     /**
      * Set Location value
      * @param string $location
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTagDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail
      */
     public function setLocation($location = null)
     {
@@ -183,7 +183,7 @@ class CompletedTagDetail extends AbstractStructBase
     /**
      * Set DeliveryCommitment value
      * @param string $deliveryCommitment
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTagDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail
      */
     public function setDeliveryCommitment($deliveryCommitment = null)
     {
@@ -205,7 +205,7 @@ class CompletedTagDetail extends AbstractStructBase
     /**
      * Set DispatchDate value
      * @param string $dispatchDate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTagDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail
      */
     public function setDispatchDate($dispatchDate = null)
     {
@@ -222,7 +222,7 @@ class CompletedTagDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTagDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail
      */
     public static function __set_state(array $array)
     {

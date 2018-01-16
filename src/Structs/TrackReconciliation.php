@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -52,7 +52,7 @@ class TrackReconciliation extends AbstractStructBase
     /**
      * Set Status value
      * @param string $status
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReconciliation
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReconciliation
      */
     public function setStatus($status = null)
     {
@@ -74,7 +74,7 @@ class TrackReconciliation extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReconciliation
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReconciliation
      */
     public function setDescription($description = null)
     {
@@ -91,7 +91,7 @@ class TrackReconciliation extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReconciliation
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReconciliation
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -57,17 +57,17 @@ class TrackSpecialHandling extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackSpecialHandlingType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackSpecialHandlingType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackSpecialHandlingType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackSpecialHandlingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackSpecialHandlingType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackSpecialHandlingType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackSpecialHandlingType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackSpecialHandlingType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -83,7 +83,7 @@ class TrackSpecialHandling extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling
      */
     public function setDescription($description = null)
     {
@@ -104,17 +104,17 @@ class TrackSpecialHandling extends AbstractStructBase
     }
     /**
      * Set PaymentType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackPaymentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackPaymentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackPaymentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackPaymentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $paymentType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling
      */
     public function setPaymentType($paymentType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackPaymentType::valueIsValid($paymentType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackPaymentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackPaymentType::valueIsValid($paymentType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackPaymentType::getValidValues())), __LINE__);
         }
         $this->PaymentType = $paymentType;
         return $this;
@@ -125,7 +125,7 @@ class TrackSpecialHandling extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling
      */
     public static function __set_state(array $array)
     {

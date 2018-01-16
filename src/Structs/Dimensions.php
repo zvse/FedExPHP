@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -68,7 +68,7 @@ class Dimensions extends AbstractStructBase
     /**
      * Set Length value
      * @param int $length
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
+     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
      */
     public function setLength($length = null)
     {
@@ -90,7 +90,7 @@ class Dimensions extends AbstractStructBase
     /**
      * Set Width value
      * @param int $width
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
+     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
      */
     public function setWidth($width = null)
     {
@@ -112,7 +112,7 @@ class Dimensions extends AbstractStructBase
     /**
      * Set Height value
      * @param int $height
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
+     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
      */
     public function setHeight($height = null)
     {
@@ -133,17 +133,17 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Set Units value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LinearUnits::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LinearUnits::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $units
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
+     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
      */
     public function setUnits($units = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::valueIsValid($units)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LinearUnits::valueIsValid($units)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \CommerceFedEx\FedExPHP\Enums\LinearUnits::getValidValues())), __LINE__);
         }
         $this->Units = $units;
         return $this;
@@ -154,7 +154,7 @@ class Dimensions extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
+     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,7 +15,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: To report soft error on an individual track detail.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification
+     * @var \CommerceFedEx\FedExPHP\Structs\Notification
      */
     public $Notification;
     /**
@@ -30,7 +30,7 @@ class TrackDetail extends AbstractStructBase
      * The Barcode
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode
+     * @var \CommerceFedEx\FedExPHP\Structs\StringBarcode
      */
     public $Barcode;
     /**
@@ -47,7 +47,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies details about the status of the shipment being tracked.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail
      */
     public $StatusDetail;
     /**
@@ -56,7 +56,7 @@ class TrackDetail extends AbstractStructBase
      * - documentation: Notifications to the end user that provide additional information relevant to the tracked shipment. For example, a notification may indicate that a change in behavior has occurred.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail[]
      */
     public $InformationNotes;
     /**
@@ -64,7 +64,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail[]
      */
     public $CustomerExceptionRequests;
     /**
@@ -72,7 +72,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Used to report the status of a piece of a multiple piece shipment which is no longer traveling with the rest of the packages in the shipment or has not been accounted for.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackReconciliation
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackReconciliation
      */
     public $Reconciliation;
     /**
@@ -135,7 +135,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the FXO production centre contact and address.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
      */
     public $ProductionLocationContactAndAddress;
     /**
@@ -143,7 +143,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail[]
      */
     public $OtherIdentifiers;
     /**
@@ -159,7 +159,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies details about service such as service description and type.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail
      */
     public $Service;
     /**
@@ -167,7 +167,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The weight of this package.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public $PackageWeight;
     /**
@@ -175,7 +175,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Physical dimensions of the package.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
+     * @var \CommerceFedEx\FedExPHP\Structs\Dimensions
      */
     public $PackageDimensions;
     /**
@@ -183,7 +183,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The dimensional weight of the package.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public $PackageDimensionalWeight;
     /**
@@ -191,7 +191,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The weight of the entire shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public $ShipmentWeight;
     /**
@@ -247,7 +247,7 @@ class TrackDetail extends AbstractStructBase
      * - documentation: Specifies the details about the SPOC details.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail[]
      */
     public $Charges;
     /**
@@ -277,7 +277,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord[]
+     * @var \CommerceFedEx\FedExPHP\Structs\ContentRecord[]
      */
     public $ShipmentContents;
     /**
@@ -300,14 +300,14 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Commodity[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Commodity[]
      */
     public $Commodities;
     /**
      * The ReturnDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail
      */
     public $ReturnDetail;
     /**
@@ -316,14 +316,14 @@ class TrackDetail extends AbstractStructBase
      * - documentation: Specifies the reason for return.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail[]
      */
     public $CustomsOptionDetails;
     /**
      * The AdvanceNotificationDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail
      */
     public $AdvanceNotificationDetail;
     /**
@@ -332,7 +332,7 @@ class TrackDetail extends AbstractStructBase
      * - documentation: List of special handlings that applied to this package.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling[]
      */
     public $SpecialHandlings;
     /**
@@ -341,7 +341,7 @@ class TrackDetail extends AbstractStructBase
      * - documentation: Specifies the details about the payments for the shipment being tracked.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackPayment[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackPayment[]
      */
     public $Payments;
     /**
@@ -349,7 +349,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: (Returned for CSR SL only.)
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Contact
+     * @var \CommerceFedEx\FedExPHP\Structs\Contact
      */
     public $Shipper;
     /**
@@ -364,7 +364,7 @@ class TrackDetail extends AbstractStructBase
      * The ShipperAddress
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $ShipperAddress;
     /**
@@ -372,7 +372,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The address of the FedEx pickup location/facility.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $OriginLocationAddress;
     /**
@@ -388,7 +388,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp[]
      */
     public $DatesOrTimes;
     /**
@@ -396,7 +396,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The distance from the origin to the destination. Returned for Custom Critical shipments.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Distance
+     * @var \CommerceFedEx\FedExPHP\Structs\Distance
      */
     public $TotalTransitDistance;
     /**
@@ -404,7 +404,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total distance package still has to travel. Returned for Custom Critical shipments.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Distance
+     * @var \CommerceFedEx\FedExPHP\Structs\Distance
      */
     public $DistanceToDestination;
     /**
@@ -413,7 +413,7 @@ class TrackDetail extends AbstractStructBase
      * - documentation: Provides additional details about package delivery.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction[]
      */
     public $SpecialInstructions;
     /**
@@ -421,7 +421,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: (Returned for CSR SL only.)
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Contact
+     * @var \CommerceFedEx\FedExPHP\Structs\Contact
      */
     public $Recipient;
     /**
@@ -429,7 +429,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: This is the latest updated destination address.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $LastUpdatedDestinationAddress;
     /**
@@ -437,14 +437,14 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The address this package is to be (or has been) delivered.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $DestinationAddress;
     /**
      * The HoldAtLocationContact
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Contact
+     * @var \CommerceFedEx\FedExPHP\Structs\Contact
      */
     public $HoldAtLocationContact;
     /**
@@ -452,7 +452,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The address this package is requested to placed on hold.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $HoldAtLocationAddress;
     /**
@@ -468,7 +468,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The address of the FedEx delivery location/facility.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $DestinationLocationAddress;
     /**
@@ -490,7 +490,7 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Actual address where package was delivered. Differs from destinationAddress, which indicates where the package was to be delivered; This field tells where delivery actually occurred (next door, at station, etc.)
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $ActualDeliveryAddress;
     /**
@@ -539,7 +539,7 @@ class TrackDetail extends AbstractStructBase
      * - documentation: Specifies the details about the count of the packages delivered at the delivery location and the count of the packages at the origin.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail[]
      */
     public $PieceCountVerificationDetails;
     /**
@@ -555,14 +555,14 @@ class TrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail[]
      */
     public $AvailableImages;
     /**
      * The Signature
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\SignatureImageDetail
      */
     public $Signature;
     /**
@@ -579,7 +579,7 @@ class TrackDetail extends AbstractStructBase
      * - documentation: Returned for cargo shipments only when they are currently split across vehicles.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart[]
      */
     public $SplitShipmentParts;
     /**
@@ -588,7 +588,7 @@ class TrackDetail extends AbstractStructBase
      * - documentation: Specifies the details about the eligibility for different delivery options.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail[]
      */
     public $DeliveryOptionEligibilityDetails;
     /**
@@ -597,7 +597,7 @@ class TrackDetail extends AbstractStructBase
      * - documentation: Event information for a tracking number.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackEvent[]
      */
     public $Events;
     /**
@@ -676,14 +676,14 @@ class TrackDetail extends AbstractStructBase
      * @uses TrackDetail::setSplitShipmentParts()
      * @uses TrackDetail::setDeliveryOptionEligibilityDetails()
      * @uses TrackDetail::setEvents()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $notification
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification $notification
      * @param string $trackingNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode $barcode
+     * @param \CommerceFedEx\FedExPHP\Structs\StringBarcode $barcode
      * @param string $trackingNumberUniqueIdentifier
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail $statusDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail[] $informationNotes
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail[] $customerExceptionRequests
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackReconciliation $reconciliation
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail $statusDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail[] $informationNotes
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail[] $customerExceptionRequests
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackReconciliation $reconciliation
      * @param string $serviceCommitMessage
      * @param string $destinationServiceArea
      * @param string $destinationServiceAreaDescription
@@ -691,67 +691,67 @@ class TrackDetail extends AbstractStructBase
      * @param string $operatingCompany
      * @param string $operatingCompanyOrCarrierDescription
      * @param string $cartageAgentCompanyName
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $productionLocationContactAndAddress
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail[] $otherIdentifiers
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $productionLocationContactAndAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail[] $otherIdentifiers
      * @param string $formId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail $service
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $packageWeight
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $packageDimensions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $packageDimensionalWeight
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $shipmentWeight
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail $service
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $packageWeight
+     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $packageDimensions
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $packageDimensionalWeight
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $shipmentWeight
      * @param string $packaging
      * @param string $packagingType
      * @param string $physicalPackagingType
      * @param int $packageSequenceNumber
      * @param int $packageCount
      * @param string $creatorSoftwareId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail[] $charges
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail[] $charges
      * @param string $nickName
      * @param string $notes
      * @param string[] $attributes
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord[] $shipmentContents
+     * @param \CommerceFedEx\FedExPHP\Structs\ContentRecord[] $shipmentContents
      * @param string[] $packageContents
      * @param string $clearanceLocationCode
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity[] $commodities
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail $returnDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail[] $customsOptionDetails
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail $advanceNotificationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling[] $specialHandlings
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackPayment[] $payments
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $shipper
+     * @param \CommerceFedEx\FedExPHP\Structs\Commodity[] $commodities
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail $returnDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail[] $customsOptionDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail $advanceNotificationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling[] $specialHandlings
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackPayment[] $payments
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $shipper
      * @param string $possessionStatus
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $shipperAddress
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $originLocationAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $shipperAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $originLocationAddress
      * @param string $originStationId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp[] $datesOrTimes
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $totalTransitDistance
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $distanceToDestination
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction[] $specialInstructions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $recipient
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $lastUpdatedDestinationAddress
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destinationAddress
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $holdAtLocationContact
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $holdAtLocationAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp[] $datesOrTimes
+     * @param \CommerceFedEx\FedExPHP\Structs\Distance $totalTransitDistance
+     * @param \CommerceFedEx\FedExPHP\Structs\Distance $distanceToDestination
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction[] $specialInstructions
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $recipient
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $lastUpdatedDestinationAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $destinationAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $holdAtLocationContact
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $holdAtLocationAddress
      * @param string $destinationStationId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destinationLocationAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $destinationLocationAddress
      * @param string $destinationLocationType
      * @param string $destinationLocationTimeZoneOffset
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $actualDeliveryAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $actualDeliveryAddress
      * @param string $officeOrderDeliveryMethod
      * @param string $deliveryLocationType
      * @param string $deliveryLocationDescription
      * @param int $deliveryAttempts
      * @param string $deliverySignatureName
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail[] $pieceCountVerificationDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail[] $pieceCountVerificationDetails
      * @param int $totalUniqueAddressCountInConsolidation
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail[] $availableImages
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail $signature
+     * @param \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail[] $availableImages
+     * @param \CommerceFedEx\FedExPHP\Structs\SignatureImageDetail $signature
      * @param string[] $notificationEventsAvailable
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart[] $splitShipmentParts
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail[] $deliveryOptionEligibilityDetails
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent[] $events
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart[] $splitShipmentParts
+     * @param \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail[] $deliveryOptionEligibilityDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackEvent[] $events
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Notification $notification = null, $trackingNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode $barcode = null, $trackingNumberUniqueIdentifier = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail $statusDetail = null, array $informationNotes = array(), array $customerExceptionRequests = array(), \NicholasCreativeMedia\FedExPHP\Structs\TrackReconciliation $reconciliation = null, $serviceCommitMessage = null, $destinationServiceArea = null, $destinationServiceAreaDescription = null, $carrierCode = null, $operatingCompany = null, $operatingCompanyOrCarrierDescription = null, $cartageAgentCompanyName = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $productionLocationContactAndAddress = null, array $otherIdentifiers = array(), $formId = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail $service = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $packageWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $packageDimensions = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $packageDimensionalWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $shipmentWeight = null, $packaging = null, $packagingType = null, $physicalPackagingType = null, $packageSequenceNumber = null, $packageCount = null, $creatorSoftwareId = null, array $charges = array(), $nickName = null, $notes = null, array $attributes = array(), array $shipmentContents = array(), array $packageContents = array(), $clearanceLocationCode = null, array $commodities = array(), \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail $returnDetail = null, array $customsOptionDetails = array(), \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail $advanceNotificationDetail = null, array $specialHandlings = array(), array $payments = array(), \NicholasCreativeMedia\FedExPHP\Structs\Contact $shipper = null, $possessionStatus = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $shipperAddress = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $originLocationAddress = null, $originStationId = null, array $datesOrTimes = array(), \NicholasCreativeMedia\FedExPHP\Structs\Distance $totalTransitDistance = null, \NicholasCreativeMedia\FedExPHP\Structs\Distance $distanceToDestination = null, array $specialInstructions = array(), \NicholasCreativeMedia\FedExPHP\Structs\Contact $recipient = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $lastUpdatedDestinationAddress = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $destinationAddress = null, \NicholasCreativeMedia\FedExPHP\Structs\Contact $holdAtLocationContact = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $holdAtLocationAddress = null, $destinationStationId = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $destinationLocationAddress = null, $destinationLocationType = null, $destinationLocationTimeZoneOffset = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $actualDeliveryAddress = null, $officeOrderDeliveryMethod = null, $deliveryLocationType = null, $deliveryLocationDescription = null, $deliveryAttempts = null, $deliverySignatureName = null, array $pieceCountVerificationDetails = array(), $totalUniqueAddressCountInConsolidation = null, array $availableImages = array(), \NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail $signature = null, array $notificationEventsAvailable = array(), array $splitShipmentParts = array(), array $deliveryOptionEligibilityDetails = array(), array $events = array())
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\Notification $notification = null, $trackingNumber = null, \CommerceFedEx\FedExPHP\Structs\StringBarcode $barcode = null, $trackingNumberUniqueIdentifier = null, \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail $statusDetail = null, array $informationNotes = array(), array $customerExceptionRequests = array(), \CommerceFedEx\FedExPHP\Structs\TrackReconciliation $reconciliation = null, $serviceCommitMessage = null, $destinationServiceArea = null, $destinationServiceAreaDescription = null, $carrierCode = null, $operatingCompany = null, $operatingCompanyOrCarrierDescription = null, $cartageAgentCompanyName = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $productionLocationContactAndAddress = null, array $otherIdentifiers = array(), $formId = null, \CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail $service = null, \CommerceFedEx\FedExPHP\Structs\Weight $packageWeight = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $packageDimensions = null, \CommerceFedEx\FedExPHP\Structs\Weight $packageDimensionalWeight = null, \CommerceFedEx\FedExPHP\Structs\Weight $shipmentWeight = null, $packaging = null, $packagingType = null, $physicalPackagingType = null, $packageSequenceNumber = null, $packageCount = null, $creatorSoftwareId = null, array $charges = array(), $nickName = null, $notes = null, array $attributes = array(), array $shipmentContents = array(), array $packageContents = array(), $clearanceLocationCode = null, array $commodities = array(), \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail $returnDetail = null, array $customsOptionDetails = array(), \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail $advanceNotificationDetail = null, array $specialHandlings = array(), array $payments = array(), \CommerceFedEx\FedExPHP\Structs\Contact $shipper = null, $possessionStatus = null, \CommerceFedEx\FedExPHP\Structs\Address $shipperAddress = null, \CommerceFedEx\FedExPHP\Structs\Address $originLocationAddress = null, $originStationId = null, array $datesOrTimes = array(), \CommerceFedEx\FedExPHP\Structs\Distance $totalTransitDistance = null, \CommerceFedEx\FedExPHP\Structs\Distance $distanceToDestination = null, array $specialInstructions = array(), \CommerceFedEx\FedExPHP\Structs\Contact $recipient = null, \CommerceFedEx\FedExPHP\Structs\Address $lastUpdatedDestinationAddress = null, \CommerceFedEx\FedExPHP\Structs\Address $destinationAddress = null, \CommerceFedEx\FedExPHP\Structs\Contact $holdAtLocationContact = null, \CommerceFedEx\FedExPHP\Structs\Address $holdAtLocationAddress = null, $destinationStationId = null, \CommerceFedEx\FedExPHP\Structs\Address $destinationLocationAddress = null, $destinationLocationType = null, $destinationLocationTimeZoneOffset = null, \CommerceFedEx\FedExPHP\Structs\Address $actualDeliveryAddress = null, $officeOrderDeliveryMethod = null, $deliveryLocationType = null, $deliveryLocationDescription = null, $deliveryAttempts = null, $deliverySignatureName = null, array $pieceCountVerificationDetails = array(), $totalUniqueAddressCountInConsolidation = null, array $availableImages = array(), \CommerceFedEx\FedExPHP\Structs\SignatureImageDetail $signature = null, array $notificationEventsAvailable = array(), array $splitShipmentParts = array(), array $deliveryOptionEligibilityDetails = array(), array $events = array())
     {
         $this
             ->setNotification($notification)
@@ -831,7 +831,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get Notification value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Notification|null
      */
     public function getNotification()
     {
@@ -839,10 +839,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set Notification value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $notification
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification $notification
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setNotification(\NicholasCreativeMedia\FedExPHP\Structs\Notification $notification = null)
+    public function setNotification(\CommerceFedEx\FedExPHP\Structs\Notification $notification = null)
     {
         $this->Notification = $notification;
         return $this;
@@ -858,7 +858,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set TrackingNumber value
      * @param string $trackingNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setTrackingNumber($trackingNumber = null)
     {
@@ -871,7 +871,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get Barcode value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode|null
+     * @return \CommerceFedEx\FedExPHP\Structs\StringBarcode|null
      */
     public function getBarcode()
     {
@@ -879,10 +879,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set Barcode value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode $barcode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\StringBarcode $barcode
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setBarcode(\NicholasCreativeMedia\FedExPHP\Structs\StringBarcode $barcode = null)
+    public function setBarcode(\CommerceFedEx\FedExPHP\Structs\StringBarcode $barcode = null)
     {
         $this->Barcode = $barcode;
         return $this;
@@ -898,7 +898,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set TrackingNumberUniqueIdentifier value
      * @param string $trackingNumberUniqueIdentifier
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setTrackingNumberUniqueIdentifier($trackingNumberUniqueIdentifier = null)
     {
@@ -911,7 +911,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get StatusDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail|null
      */
     public function getStatusDetail()
     {
@@ -919,17 +919,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set StatusDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail $statusDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail $statusDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setStatusDetail(\NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail $statusDetail = null)
+    public function setStatusDetail(\CommerceFedEx\FedExPHP\Structs\TrackStatusDetail $statusDetail = null)
     {
         $this->StatusDetail = $statusDetail;
         return $this;
     }
     /**
      * Get InformationNotes value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail[]|null
      */
     public function getInformationNotes()
     {
@@ -938,15 +938,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set InformationNotes value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail[] $informationNotes
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail[] $informationNotes
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setInformationNotes(array $informationNotes = array())
     {
         foreach ($informationNotes as $trackDetailInformationNotesItem) {
             // validation for constraint: itemType
-            if (!$trackDetailInformationNotesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail) {
-                throw new \InvalidArgumentException(sprintf('The InformationNotes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail, "%s" given', is_object($trackDetailInformationNotesItem) ? get_class($trackDetailInformationNotesItem) : gettype($trackDetailInformationNotesItem)), __LINE__);
+            if (!$trackDetailInformationNotesItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail) {
+                throw new \InvalidArgumentException(sprintf('The InformationNotes property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail, "%s" given', is_object($trackDetailInformationNotesItem) ? get_class($trackDetailInformationNotesItem) : gettype($trackDetailInformationNotesItem)), __LINE__);
             }
         }
         $this->InformationNotes = $informationNotes;
@@ -955,21 +955,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to InformationNotes value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToInformationNotes(\NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail $item)
+    public function addToInformationNotes(\CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail) {
-            throw new \InvalidArgumentException(sprintf('The InformationNotes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail) {
+            throw new \InvalidArgumentException(sprintf('The InformationNotes property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->InformationNotes[] = $item;
         return $this;
     }
     /**
      * Get CustomerExceptionRequests value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail[]|null
      */
     public function getCustomerExceptionRequests()
     {
@@ -978,15 +978,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set CustomerExceptionRequests value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail[] $customerExceptionRequests
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail[] $customerExceptionRequests
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setCustomerExceptionRequests(array $customerExceptionRequests = array())
     {
         foreach ($customerExceptionRequests as $trackDetailCustomerExceptionRequestsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailCustomerExceptionRequestsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail) {
-                throw new \InvalidArgumentException(sprintf('The CustomerExceptionRequests property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail, "%s" given', is_object($trackDetailCustomerExceptionRequestsItem) ? get_class($trackDetailCustomerExceptionRequestsItem) : gettype($trackDetailCustomerExceptionRequestsItem)), __LINE__);
+            if (!$trackDetailCustomerExceptionRequestsItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail) {
+                throw new \InvalidArgumentException(sprintf('The CustomerExceptionRequests property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail, "%s" given', is_object($trackDetailCustomerExceptionRequestsItem) ? get_class($trackDetailCustomerExceptionRequestsItem) : gettype($trackDetailCustomerExceptionRequestsItem)), __LINE__);
             }
         }
         $this->CustomerExceptionRequests = $customerExceptionRequests;
@@ -995,21 +995,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to CustomerExceptionRequests value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToCustomerExceptionRequests(\NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail $item)
+    public function addToCustomerExceptionRequests(\CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail) {
-            throw new \InvalidArgumentException(sprintf('The CustomerExceptionRequests property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerExceptionRequestDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail) {
+            throw new \InvalidArgumentException(sprintf('The CustomerExceptionRequests property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerExceptionRequestDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerExceptionRequests[] = $item;
         return $this;
     }
     /**
      * Get Reconciliation value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReconciliation|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReconciliation|null
      */
     public function getReconciliation()
     {
@@ -1017,10 +1017,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set Reconciliation value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackReconciliation $reconciliation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackReconciliation $reconciliation
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setReconciliation(\NicholasCreativeMedia\FedExPHP\Structs\TrackReconciliation $reconciliation = null)
+    public function setReconciliation(\CommerceFedEx\FedExPHP\Structs\TrackReconciliation $reconciliation = null)
     {
         $this->Reconciliation = $reconciliation;
         return $this;
@@ -1036,7 +1036,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set ServiceCommitMessage value
      * @param string $serviceCommitMessage
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setServiceCommitMessage($serviceCommitMessage = null)
     {
@@ -1058,7 +1058,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set DestinationServiceArea value
      * @param string $destinationServiceArea
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDestinationServiceArea($destinationServiceArea = null)
     {
@@ -1080,7 +1080,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set DestinationServiceAreaDescription value
      * @param string $destinationServiceAreaDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDestinationServiceAreaDescription($destinationServiceAreaDescription = null)
     {
@@ -1101,17 +1101,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set CarrierCode value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrierCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setCarrierCode($carrierCode = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->CarrierCode = $carrierCode;
         return $this;
@@ -1126,17 +1126,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set OperatingCompany value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperatingCompanyType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperatingCompanyType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OperatingCompanyType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OperatingCompanyType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $operatingCompany
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setOperatingCompany($operatingCompany = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\OperatingCompanyType::valueIsValid($operatingCompany)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $operatingCompany, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\OperatingCompanyType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\OperatingCompanyType::valueIsValid($operatingCompany)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $operatingCompany, implode(', ', \CommerceFedEx\FedExPHP\Enums\OperatingCompanyType::getValidValues())), __LINE__);
         }
         $this->OperatingCompany = $operatingCompany;
         return $this;
@@ -1152,7 +1152,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set OperatingCompanyOrCarrierDescription value
      * @param string $operatingCompanyOrCarrierDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setOperatingCompanyOrCarrierDescription($operatingCompanyOrCarrierDescription = null)
     {
@@ -1174,7 +1174,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set CartageAgentCompanyName value
      * @param string $cartageAgentCompanyName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setCartageAgentCompanyName($cartageAgentCompanyName = null)
     {
@@ -1187,7 +1187,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get ProductionLocationContactAndAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getProductionLocationContactAndAddress()
     {
@@ -1195,17 +1195,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set ProductionLocationContactAndAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $productionLocationContactAndAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $productionLocationContactAndAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setProductionLocationContactAndAddress(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $productionLocationContactAndAddress = null)
+    public function setProductionLocationContactAndAddress(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $productionLocationContactAndAddress = null)
     {
         $this->ProductionLocationContactAndAddress = $productionLocationContactAndAddress;
         return $this;
     }
     /**
      * Get OtherIdentifiers value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail[]|null
      */
     public function getOtherIdentifiers()
     {
@@ -1214,15 +1214,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set OtherIdentifiers value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail[] $otherIdentifiers
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail[] $otherIdentifiers
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setOtherIdentifiers(array $otherIdentifiers = array())
     {
         foreach ($otherIdentifiers as $trackDetailOtherIdentifiersItem) {
             // validation for constraint: itemType
-            if (!$trackDetailOtherIdentifiersItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail) {
-                throw new \InvalidArgumentException(sprintf('The OtherIdentifiers property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail, "%s" given', is_object($trackDetailOtherIdentifiersItem) ? get_class($trackDetailOtherIdentifiersItem) : gettype($trackDetailOtherIdentifiersItem)), __LINE__);
+            if (!$trackDetailOtherIdentifiersItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail) {
+                throw new \InvalidArgumentException(sprintf('The OtherIdentifiers property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail, "%s" given', is_object($trackDetailOtherIdentifiersItem) ? get_class($trackDetailOtherIdentifiersItem) : gettype($trackDetailOtherIdentifiersItem)), __LINE__);
             }
         }
         $this->OtherIdentifiers = $otherIdentifiers;
@@ -1231,14 +1231,14 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to OtherIdentifiers value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToOtherIdentifiers(\NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail $item)
+    public function addToOtherIdentifiers(\CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail) {
-            throw new \InvalidArgumentException(sprintf('The OtherIdentifiers property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail) {
+            throw new \InvalidArgumentException(sprintf('The OtherIdentifiers property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->OtherIdentifiers[] = $item;
         return $this;
@@ -1254,7 +1254,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set FormId value
      * @param string $formId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setFormId($formId = null)
     {
@@ -1267,7 +1267,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get Service value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail|null
      */
     public function getService()
     {
@@ -1275,17 +1275,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set Service value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail $service
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail $service
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setService(\NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail $service = null)
+    public function setService(\CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail $service = null)
     {
         $this->Service = $service;
         return $this;
     }
     /**
      * Get PackageWeight value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
      */
     public function getPackageWeight()
     {
@@ -1293,17 +1293,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set PackageWeight value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $packageWeight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $packageWeight
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setPackageWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $packageWeight = null)
+    public function setPackageWeight(\CommerceFedEx\FedExPHP\Structs\Weight $packageWeight = null)
     {
         $this->PackageWeight = $packageWeight;
         return $this;
     }
     /**
      * Get PackageDimensions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions|null
      */
     public function getPackageDimensions()
     {
@@ -1311,17 +1311,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set PackageDimensions value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $packageDimensions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $packageDimensions
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setPackageDimensions(\NicholasCreativeMedia\FedExPHP\Structs\Dimensions $packageDimensions = null)
+    public function setPackageDimensions(\CommerceFedEx\FedExPHP\Structs\Dimensions $packageDimensions = null)
     {
         $this->PackageDimensions = $packageDimensions;
         return $this;
     }
     /**
      * Get PackageDimensionalWeight value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
      */
     public function getPackageDimensionalWeight()
     {
@@ -1329,17 +1329,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set PackageDimensionalWeight value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $packageDimensionalWeight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $packageDimensionalWeight
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setPackageDimensionalWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $packageDimensionalWeight = null)
+    public function setPackageDimensionalWeight(\CommerceFedEx\FedExPHP\Structs\Weight $packageDimensionalWeight = null)
     {
         $this->PackageDimensionalWeight = $packageDimensionalWeight;
         return $this;
     }
     /**
      * Get ShipmentWeight value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
      */
     public function getShipmentWeight()
     {
@@ -1347,10 +1347,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set ShipmentWeight value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $shipmentWeight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $shipmentWeight
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setShipmentWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $shipmentWeight = null)
+    public function setShipmentWeight(\CommerceFedEx\FedExPHP\Structs\Weight $shipmentWeight = null)
     {
         $this->ShipmentWeight = $shipmentWeight;
         return $this;
@@ -1366,7 +1366,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set Packaging value
      * @param string $packaging
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setPackaging($packaging = null)
     {
@@ -1387,17 +1387,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set PackagingType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackagingType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackagingType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackagingType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackagingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $packagingType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setPackagingType($packagingType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PackagingType::valueIsValid($packagingType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packagingType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PackagingType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PackagingType::valueIsValid($packagingType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packagingType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PackagingType::getValidValues())), __LINE__);
         }
         $this->PackagingType = $packagingType;
         return $this;
@@ -1412,17 +1412,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set PhysicalPackagingType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $physicalPackagingType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setPhysicalPackagingType($physicalPackagingType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::valueIsValid($physicalPackagingType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $physicalPackagingType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::valueIsValid($physicalPackagingType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $physicalPackagingType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::getValidValues())), __LINE__);
         }
         $this->PhysicalPackagingType = $physicalPackagingType;
         return $this;
@@ -1438,7 +1438,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set PackageSequenceNumber value
      * @param int $packageSequenceNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setPackageSequenceNumber($packageSequenceNumber = null)
     {
@@ -1460,7 +1460,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set PackageCount value
      * @param int $packageCount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setPackageCount($packageCount = null)
     {
@@ -1482,7 +1482,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set CreatorSoftwareId value
      * @param string $creatorSoftwareId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setCreatorSoftwareId($creatorSoftwareId = null)
     {
@@ -1495,7 +1495,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get Charges value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail[]|null
      */
     public function getCharges()
     {
@@ -1504,15 +1504,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set Charges value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail[] $charges
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail[] $charges
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setCharges(array $charges = array())
     {
         foreach ($charges as $trackDetailChargesItem) {
             // validation for constraint: itemType
-            if (!$trackDetailChargesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail) {
-                throw new \InvalidArgumentException(sprintf('The Charges property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail, "%s" given', is_object($trackDetailChargesItem) ? get_class($trackDetailChargesItem) : gettype($trackDetailChargesItem)), __LINE__);
+            if (!$trackDetailChargesItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail) {
+                throw new \InvalidArgumentException(sprintf('The Charges property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail, "%s" given', is_object($trackDetailChargesItem) ? get_class($trackDetailChargesItem) : gettype($trackDetailChargesItem)), __LINE__);
             }
         }
         $this->Charges = $charges;
@@ -1521,14 +1521,14 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to Charges value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToCharges(\NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail $item)
+    public function addToCharges(\CommerceFedEx\FedExPHP\Structs\TrackChargeDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail) {
-            throw new \InvalidArgumentException(sprintf('The Charges property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail) {
+            throw new \InvalidArgumentException(sprintf('The Charges property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Charges[] = $item;
         return $this;
@@ -1544,7 +1544,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set NickName value
      * @param string $nickName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setNickName($nickName = null)
     {
@@ -1566,7 +1566,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set Notes value
      * @param string $notes
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setNotes($notes = null)
     {
@@ -1587,46 +1587,46 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set Attributes value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackDetailAttributeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackDetailAttributeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackDetailAttributeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackDetailAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $attributes
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setAttributes(array $attributes = array())
     {
         $invalidValues = array();
         foreach ($attributes as $trackDetailAttributesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackDetailAttributeType::valueIsValid($trackDetailAttributesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\TrackDetailAttributeType::valueIsValid($trackDetailAttributesItem)) {
                 $invalidValues[] = var_export($trackDetailAttributesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackDetailAttributeType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackDetailAttributeType::getValidValues())), __LINE__);
         }
         $this->Attributes = $attributes;
         return $this;
     }
     /**
      * Add item to Attributes value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackDetailAttributeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackDetailAttributeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackDetailAttributeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackDetailAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function addToAttributes($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackDetailAttributeType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackDetailAttributeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackDetailAttributeType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackDetailAttributeType::getValidValues())), __LINE__);
         }
         $this->Attributes[] = $item;
         return $this;
     }
     /**
      * Get ShipmentContents value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContentRecord[]|null
      */
     public function getShipmentContents()
     {
@@ -1635,15 +1635,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set ShipmentContents value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord[] $shipmentContents
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ContentRecord[] $shipmentContents
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setShipmentContents(array $shipmentContents = array())
     {
         foreach ($shipmentContents as $trackDetailShipmentContentsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailShipmentContentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord) {
-                throw new \InvalidArgumentException(sprintf('The ShipmentContents property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord, "%s" given', is_object($trackDetailShipmentContentsItem) ? get_class($trackDetailShipmentContentsItem) : gettype($trackDetailShipmentContentsItem)), __LINE__);
+            if (!$trackDetailShipmentContentsItem instanceof \CommerceFedEx\FedExPHP\Structs\ContentRecord) {
+                throw new \InvalidArgumentException(sprintf('The ShipmentContents property can only contain items of \CommerceFedEx\FedExPHP\Structs\ContentRecord, "%s" given', is_object($trackDetailShipmentContentsItem) ? get_class($trackDetailShipmentContentsItem) : gettype($trackDetailShipmentContentsItem)), __LINE__);
             }
         }
         $this->ShipmentContents = $shipmentContents;
@@ -1652,14 +1652,14 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to ShipmentContents value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ContentRecord $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToShipmentContents(\NicholasCreativeMedia\FedExPHP\Structs\ContentRecord $item)
+    public function addToShipmentContents(\CommerceFedEx\FedExPHP\Structs\ContentRecord $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord) {
-            throw new \InvalidArgumentException(sprintf('The ShipmentContents property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ContentRecord) {
+            throw new \InvalidArgumentException(sprintf('The ShipmentContents property can only contain items of \CommerceFedEx\FedExPHP\Structs\ContentRecord, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ShipmentContents[] = $item;
         return $this;
@@ -1676,7 +1676,7 @@ class TrackDetail extends AbstractStructBase
      * Set PackageContents value
      * @throws \InvalidArgumentException
      * @param string[] $packageContents
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setPackageContents(array $packageContents = array())
     {
@@ -1693,7 +1693,7 @@ class TrackDetail extends AbstractStructBase
      * Add item to PackageContents value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function addToPackageContents($item)
     {
@@ -1715,7 +1715,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set ClearanceLocationCode value
      * @param string $clearanceLocationCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setClearanceLocationCode($clearanceLocationCode = null)
     {
@@ -1728,7 +1728,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get Commodities value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Commodity[]|null
      */
     public function getCommodities()
     {
@@ -1737,15 +1737,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set Commodities value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity[] $commodities
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Commodity[] $commodities
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setCommodities(array $commodities = array())
     {
         foreach ($commodities as $trackDetailCommoditiesItem) {
             // validation for constraint: itemType
-            if (!$trackDetailCommoditiesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Commodity) {
-                throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Commodity, "%s" given', is_object($trackDetailCommoditiesItem) ? get_class($trackDetailCommoditiesItem) : gettype($trackDetailCommoditiesItem)), __LINE__);
+            if (!$trackDetailCommoditiesItem instanceof \CommerceFedEx\FedExPHP\Structs\Commodity) {
+                throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \CommerceFedEx\FedExPHP\Structs\Commodity, "%s" given', is_object($trackDetailCommoditiesItem) ? get_class($trackDetailCommoditiesItem) : gettype($trackDetailCommoditiesItem)), __LINE__);
             }
         }
         $this->Commodities = $commodities;
@@ -1754,21 +1754,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to Commodities value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Commodity $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToCommodities(\NicholasCreativeMedia\FedExPHP\Structs\Commodity $item)
+    public function addToCommodities(\CommerceFedEx\FedExPHP\Structs\Commodity $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Commodity) {
-            throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Commodity, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Commodity) {
+            throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \CommerceFedEx\FedExPHP\Structs\Commodity, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Commodities[] = $item;
         return $this;
     }
     /**
      * Get ReturnDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail|null
      */
     public function getReturnDetail()
     {
@@ -1776,17 +1776,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set ReturnDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail $returnDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail $returnDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setReturnDetail(\NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail $returnDetail = null)
+    public function setReturnDetail(\CommerceFedEx\FedExPHP\Structs\TrackReturnDetail $returnDetail = null)
     {
         $this->ReturnDetail = $returnDetail;
         return $this;
     }
     /**
      * Get CustomsOptionDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail[]|null
      */
     public function getCustomsOptionDetails()
     {
@@ -1795,15 +1795,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set CustomsOptionDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail[] $customsOptionDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail[] $customsOptionDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setCustomsOptionDetails(array $customsOptionDetails = array())
     {
         foreach ($customsOptionDetails as $trackDetailCustomsOptionDetailsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailCustomsOptionDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail) {
-                throw new \InvalidArgumentException(sprintf('The CustomsOptionDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail, "%s" given', is_object($trackDetailCustomsOptionDetailsItem) ? get_class($trackDetailCustomsOptionDetailsItem) : gettype($trackDetailCustomsOptionDetailsItem)), __LINE__);
+            if (!$trackDetailCustomsOptionDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail) {
+                throw new \InvalidArgumentException(sprintf('The CustomsOptionDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail, "%s" given', is_object($trackDetailCustomsOptionDetailsItem) ? get_class($trackDetailCustomsOptionDetailsItem) : gettype($trackDetailCustomsOptionDetailsItem)), __LINE__);
             }
         }
         $this->CustomsOptionDetails = $customsOptionDetails;
@@ -1812,21 +1812,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to CustomsOptionDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToCustomsOptionDetails(\NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail $item)
+    public function addToCustomsOptionDetails(\CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail) {
-            throw new \InvalidArgumentException(sprintf('The CustomsOptionDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail) {
+            throw new \InvalidArgumentException(sprintf('The CustomsOptionDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomsOptionDetails[] = $item;
         return $this;
     }
     /**
      * Get AdvanceNotificationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail|null
      */
     public function getAdvanceNotificationDetail()
     {
@@ -1834,17 +1834,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set AdvanceNotificationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail $advanceNotificationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail $advanceNotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setAdvanceNotificationDetail(\NicholasCreativeMedia\FedExPHP\Structs\TrackAdvanceNotificationDetail $advanceNotificationDetail = null)
+    public function setAdvanceNotificationDetail(\CommerceFedEx\FedExPHP\Structs\TrackAdvanceNotificationDetail $advanceNotificationDetail = null)
     {
         $this->AdvanceNotificationDetail = $advanceNotificationDetail;
         return $this;
     }
     /**
      * Get SpecialHandlings value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling[]|null
      */
     public function getSpecialHandlings()
     {
@@ -1853,15 +1853,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set SpecialHandlings value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling[] $specialHandlings
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling[] $specialHandlings
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setSpecialHandlings(array $specialHandlings = array())
     {
         foreach ($specialHandlings as $trackDetailSpecialHandlingsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailSpecialHandlingsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling) {
-                throw new \InvalidArgumentException(sprintf('The SpecialHandlings property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling, "%s" given', is_object($trackDetailSpecialHandlingsItem) ? get_class($trackDetailSpecialHandlingsItem) : gettype($trackDetailSpecialHandlingsItem)), __LINE__);
+            if (!$trackDetailSpecialHandlingsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling) {
+                throw new \InvalidArgumentException(sprintf('The SpecialHandlings property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling, "%s" given', is_object($trackDetailSpecialHandlingsItem) ? get_class($trackDetailSpecialHandlingsItem) : gettype($trackDetailSpecialHandlingsItem)), __LINE__);
             }
         }
         $this->SpecialHandlings = $specialHandlings;
@@ -1870,21 +1870,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to SpecialHandlings value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToSpecialHandlings(\NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling $item)
+    public function addToSpecialHandlings(\CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling) {
-            throw new \InvalidArgumentException(sprintf('The SpecialHandlings property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialHandling, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling) {
+            throw new \InvalidArgumentException(sprintf('The SpecialHandlings property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackSpecialHandling, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->SpecialHandlings[] = $item;
         return $this;
     }
     /**
      * Get Payments value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackPayment[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackPayment[]|null
      */
     public function getPayments()
     {
@@ -1893,15 +1893,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set Payments value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackPayment[] $payments
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackPayment[] $payments
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setPayments(array $payments = array())
     {
         foreach ($payments as $trackDetailPaymentsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailPaymentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackPayment) {
-                throw new \InvalidArgumentException(sprintf('The Payments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackPayment, "%s" given', is_object($trackDetailPaymentsItem) ? get_class($trackDetailPaymentsItem) : gettype($trackDetailPaymentsItem)), __LINE__);
+            if (!$trackDetailPaymentsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackPayment) {
+                throw new \InvalidArgumentException(sprintf('The Payments property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackPayment, "%s" given', is_object($trackDetailPaymentsItem) ? get_class($trackDetailPaymentsItem) : gettype($trackDetailPaymentsItem)), __LINE__);
             }
         }
         $this->Payments = $payments;
@@ -1910,21 +1910,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to Payments value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackPayment $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackPayment $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToPayments(\NicholasCreativeMedia\FedExPHP\Structs\TrackPayment $item)
+    public function addToPayments(\CommerceFedEx\FedExPHP\Structs\TrackPayment $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackPayment) {
-            throw new \InvalidArgumentException(sprintf('The Payments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackPayment, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackPayment) {
+            throw new \InvalidArgumentException(sprintf('The Payments property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackPayment, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Payments[] = $item;
         return $this;
     }
     /**
      * Get Shipper value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Contact|null
      */
     public function getShipper()
     {
@@ -1932,10 +1932,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set Shipper value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $shipper
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $shipper
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setShipper(\NicholasCreativeMedia\FedExPHP\Structs\Contact $shipper = null)
+    public function setShipper(\CommerceFedEx\FedExPHP\Structs\Contact $shipper = null)
     {
         $this->Shipper = $shipper;
         return $this;
@@ -1950,24 +1950,24 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set PossessionStatus value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackPossessionStatusType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackPossessionStatusType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackPossessionStatusType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackPossessionStatusType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $possessionStatus
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setPossessionStatus($possessionStatus = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackPossessionStatusType::valueIsValid($possessionStatus)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $possessionStatus, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackPossessionStatusType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackPossessionStatusType::valueIsValid($possessionStatus)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $possessionStatus, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackPossessionStatusType::getValidValues())), __LINE__);
         }
         $this->PossessionStatus = $possessionStatus;
         return $this;
     }
     /**
      * Get ShipperAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getShipperAddress()
     {
@@ -1975,17 +1975,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set ShipperAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $shipperAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $shipperAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setShipperAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $shipperAddress = null)
+    public function setShipperAddress(\CommerceFedEx\FedExPHP\Structs\Address $shipperAddress = null)
     {
         $this->ShipperAddress = $shipperAddress;
         return $this;
     }
     /**
      * Get OriginLocationAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getOriginLocationAddress()
     {
@@ -1993,10 +1993,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set OriginLocationAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $originLocationAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $originLocationAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setOriginLocationAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $originLocationAddress = null)
+    public function setOriginLocationAddress(\CommerceFedEx\FedExPHP\Structs\Address $originLocationAddress = null)
     {
         $this->OriginLocationAddress = $originLocationAddress;
         return $this;
@@ -2012,7 +2012,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set OriginStationId value
      * @param string $originStationId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setOriginStationId($originStationId = null)
     {
@@ -2025,7 +2025,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get DatesOrTimes value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp[]|null
      */
     public function getDatesOrTimes()
     {
@@ -2034,15 +2034,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set DatesOrTimes value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp[] $datesOrTimes
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp[] $datesOrTimes
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDatesOrTimes(array $datesOrTimes = array())
     {
         foreach ($datesOrTimes as $trackDetailDatesOrTimesItem) {
             // validation for constraint: itemType
-            if (!$trackDetailDatesOrTimesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp) {
-                throw new \InvalidArgumentException(sprintf('The DatesOrTimes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp, "%s" given', is_object($trackDetailDatesOrTimesItem) ? get_class($trackDetailDatesOrTimesItem) : gettype($trackDetailDatesOrTimesItem)), __LINE__);
+            if (!$trackDetailDatesOrTimesItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp) {
+                throw new \InvalidArgumentException(sprintf('The DatesOrTimes property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp, "%s" given', is_object($trackDetailDatesOrTimesItem) ? get_class($trackDetailDatesOrTimesItem) : gettype($trackDetailDatesOrTimesItem)), __LINE__);
             }
         }
         $this->DatesOrTimes = $datesOrTimes;
@@ -2051,21 +2051,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to DatesOrTimes value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToDatesOrTimes(\NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp $item)
+    public function addToDatesOrTimes(\CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp) {
-            throw new \InvalidArgumentException(sprintf('The DatesOrTimes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp) {
+            throw new \InvalidArgumentException(sprintf('The DatesOrTimes property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DatesOrTimes[] = $item;
         return $this;
     }
     /**
      * Get TotalTransitDistance value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Distance|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Distance|null
      */
     public function getTotalTransitDistance()
     {
@@ -2073,17 +2073,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set TotalTransitDistance value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $totalTransitDistance
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Distance $totalTransitDistance
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setTotalTransitDistance(\NicholasCreativeMedia\FedExPHP\Structs\Distance $totalTransitDistance = null)
+    public function setTotalTransitDistance(\CommerceFedEx\FedExPHP\Structs\Distance $totalTransitDistance = null)
     {
         $this->TotalTransitDistance = $totalTransitDistance;
         return $this;
     }
     /**
      * Get DistanceToDestination value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Distance|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Distance|null
      */
     public function getDistanceToDestination()
     {
@@ -2091,17 +2091,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set DistanceToDestination value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $distanceToDestination
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Distance $distanceToDestination
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setDistanceToDestination(\NicholasCreativeMedia\FedExPHP\Structs\Distance $distanceToDestination = null)
+    public function setDistanceToDestination(\CommerceFedEx\FedExPHP\Structs\Distance $distanceToDestination = null)
     {
         $this->DistanceToDestination = $distanceToDestination;
         return $this;
     }
     /**
      * Get SpecialInstructions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction[]|null
      */
     public function getSpecialInstructions()
     {
@@ -2110,15 +2110,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set SpecialInstructions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction[] $specialInstructions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction[] $specialInstructions
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setSpecialInstructions(array $specialInstructions = array())
     {
         foreach ($specialInstructions as $trackDetailSpecialInstructionsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailSpecialInstructionsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction) {
-                throw new \InvalidArgumentException(sprintf('The SpecialInstructions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction, "%s" given', is_object($trackDetailSpecialInstructionsItem) ? get_class($trackDetailSpecialInstructionsItem) : gettype($trackDetailSpecialInstructionsItem)), __LINE__);
+            if (!$trackDetailSpecialInstructionsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction) {
+                throw new \InvalidArgumentException(sprintf('The SpecialInstructions property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction, "%s" given', is_object($trackDetailSpecialInstructionsItem) ? get_class($trackDetailSpecialInstructionsItem) : gettype($trackDetailSpecialInstructionsItem)), __LINE__);
             }
         }
         $this->SpecialInstructions = $specialInstructions;
@@ -2127,21 +2127,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to SpecialInstructions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToSpecialInstructions(\NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction $item)
+    public function addToSpecialInstructions(\CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction) {
-            throw new \InvalidArgumentException(sprintf('The SpecialInstructions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction) {
+            throw new \InvalidArgumentException(sprintf('The SpecialInstructions property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->SpecialInstructions[] = $item;
         return $this;
     }
     /**
      * Get Recipient value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Contact|null
      */
     public function getRecipient()
     {
@@ -2149,17 +2149,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set Recipient value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $recipient
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $recipient
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setRecipient(\NicholasCreativeMedia\FedExPHP\Structs\Contact $recipient = null)
+    public function setRecipient(\CommerceFedEx\FedExPHP\Structs\Contact $recipient = null)
     {
         $this->Recipient = $recipient;
         return $this;
     }
     /**
      * Get LastUpdatedDestinationAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getLastUpdatedDestinationAddress()
     {
@@ -2167,17 +2167,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set LastUpdatedDestinationAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $lastUpdatedDestinationAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $lastUpdatedDestinationAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setLastUpdatedDestinationAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $lastUpdatedDestinationAddress = null)
+    public function setLastUpdatedDestinationAddress(\CommerceFedEx\FedExPHP\Structs\Address $lastUpdatedDestinationAddress = null)
     {
         $this->LastUpdatedDestinationAddress = $lastUpdatedDestinationAddress;
         return $this;
     }
     /**
      * Get DestinationAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getDestinationAddress()
     {
@@ -2185,17 +2185,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set DestinationAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destinationAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $destinationAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setDestinationAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $destinationAddress = null)
+    public function setDestinationAddress(\CommerceFedEx\FedExPHP\Structs\Address $destinationAddress = null)
     {
         $this->DestinationAddress = $destinationAddress;
         return $this;
     }
     /**
      * Get HoldAtLocationContact value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Contact|null
      */
     public function getHoldAtLocationContact()
     {
@@ -2203,17 +2203,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set HoldAtLocationContact value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $holdAtLocationContact
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $holdAtLocationContact
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setHoldAtLocationContact(\NicholasCreativeMedia\FedExPHP\Structs\Contact $holdAtLocationContact = null)
+    public function setHoldAtLocationContact(\CommerceFedEx\FedExPHP\Structs\Contact $holdAtLocationContact = null)
     {
         $this->HoldAtLocationContact = $holdAtLocationContact;
         return $this;
     }
     /**
      * Get HoldAtLocationAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getHoldAtLocationAddress()
     {
@@ -2221,10 +2221,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set HoldAtLocationAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $holdAtLocationAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $holdAtLocationAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setHoldAtLocationAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $holdAtLocationAddress = null)
+    public function setHoldAtLocationAddress(\CommerceFedEx\FedExPHP\Structs\Address $holdAtLocationAddress = null)
     {
         $this->HoldAtLocationAddress = $holdAtLocationAddress;
         return $this;
@@ -2240,7 +2240,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set DestinationStationId value
      * @param string $destinationStationId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDestinationStationId($destinationStationId = null)
     {
@@ -2253,7 +2253,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get DestinationLocationAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getDestinationLocationAddress()
     {
@@ -2261,10 +2261,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set DestinationLocationAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destinationLocationAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $destinationLocationAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setDestinationLocationAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $destinationLocationAddress = null)
+    public function setDestinationLocationAddress(\CommerceFedEx\FedExPHP\Structs\Address $destinationLocationAddress = null)
     {
         $this->DestinationLocationAddress = $destinationLocationAddress;
         return $this;
@@ -2279,17 +2279,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set DestinationLocationType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FedExLocationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $destinationLocationType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDestinationLocationType($destinationLocationType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::valueIsValid($destinationLocationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $destinationLocationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FedExLocationType::valueIsValid($destinationLocationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $destinationLocationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
         }
         $this->DestinationLocationType = $destinationLocationType;
         return $this;
@@ -2305,7 +2305,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set DestinationLocationTimeZoneOffset value
      * @param string $destinationLocationTimeZoneOffset
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDestinationLocationTimeZoneOffset($destinationLocationTimeZoneOffset = null)
     {
@@ -2318,7 +2318,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get ActualDeliveryAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getActualDeliveryAddress()
     {
@@ -2326,10 +2326,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set ActualDeliveryAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $actualDeliveryAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $actualDeliveryAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setActualDeliveryAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $actualDeliveryAddress = null)
+    public function setActualDeliveryAddress(\CommerceFedEx\FedExPHP\Structs\Address $actualDeliveryAddress = null)
     {
         $this->ActualDeliveryAddress = $actualDeliveryAddress;
         return $this;
@@ -2344,17 +2344,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set OfficeOrderDeliveryMethod value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OfficeOrderDeliveryMethodType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OfficeOrderDeliveryMethodType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OfficeOrderDeliveryMethodType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OfficeOrderDeliveryMethodType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $officeOrderDeliveryMethod
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setOfficeOrderDeliveryMethod($officeOrderDeliveryMethod = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\OfficeOrderDeliveryMethodType::valueIsValid($officeOrderDeliveryMethod)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $officeOrderDeliveryMethod, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\OfficeOrderDeliveryMethodType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\OfficeOrderDeliveryMethodType::valueIsValid($officeOrderDeliveryMethod)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $officeOrderDeliveryMethod, implode(', ', \CommerceFedEx\FedExPHP\Enums\OfficeOrderDeliveryMethodType::getValidValues())), __LINE__);
         }
         $this->OfficeOrderDeliveryMethod = $officeOrderDeliveryMethod;
         return $this;
@@ -2369,17 +2369,17 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set DeliveryLocationType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackDeliveryLocationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackDeliveryLocationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackDeliveryLocationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackDeliveryLocationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $deliveryLocationType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDeliveryLocationType($deliveryLocationType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackDeliveryLocationType::valueIsValid($deliveryLocationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deliveryLocationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackDeliveryLocationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackDeliveryLocationType::valueIsValid($deliveryLocationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deliveryLocationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackDeliveryLocationType::getValidValues())), __LINE__);
         }
         $this->DeliveryLocationType = $deliveryLocationType;
         return $this;
@@ -2395,7 +2395,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set DeliveryLocationDescription value
      * @param string $deliveryLocationDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDeliveryLocationDescription($deliveryLocationDescription = null)
     {
@@ -2417,7 +2417,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set DeliveryAttempts value
      * @param int $deliveryAttempts
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDeliveryAttempts($deliveryAttempts = null)
     {
@@ -2439,7 +2439,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set DeliverySignatureName value
      * @param string $deliverySignatureName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDeliverySignatureName($deliverySignatureName = null)
     {
@@ -2452,7 +2452,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get PieceCountVerificationDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail[]|null
      */
     public function getPieceCountVerificationDetails()
     {
@@ -2461,15 +2461,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set PieceCountVerificationDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail[] $pieceCountVerificationDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail[] $pieceCountVerificationDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setPieceCountVerificationDetails(array $pieceCountVerificationDetails = array())
     {
         foreach ($pieceCountVerificationDetails as $trackDetailPieceCountVerificationDetailsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailPieceCountVerificationDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail) {
-                throw new \InvalidArgumentException(sprintf('The PieceCountVerificationDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail, "%s" given', is_object($trackDetailPieceCountVerificationDetailsItem) ? get_class($trackDetailPieceCountVerificationDetailsItem) : gettype($trackDetailPieceCountVerificationDetailsItem)), __LINE__);
+            if (!$trackDetailPieceCountVerificationDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail) {
+                throw new \InvalidArgumentException(sprintf('The PieceCountVerificationDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail, "%s" given', is_object($trackDetailPieceCountVerificationDetailsItem) ? get_class($trackDetailPieceCountVerificationDetailsItem) : gettype($trackDetailPieceCountVerificationDetailsItem)), __LINE__);
             }
         }
         $this->PieceCountVerificationDetails = $pieceCountVerificationDetails;
@@ -2478,14 +2478,14 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to PieceCountVerificationDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToPieceCountVerificationDetails(\NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail $item)
+    public function addToPieceCountVerificationDetails(\CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail) {
-            throw new \InvalidArgumentException(sprintf('The PieceCountVerificationDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail) {
+            throw new \InvalidArgumentException(sprintf('The PieceCountVerificationDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->PieceCountVerificationDetails[] = $item;
         return $this;
@@ -2501,7 +2501,7 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set TotalUniqueAddressCountInConsolidation value
      * @param int $totalUniqueAddressCountInConsolidation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setTotalUniqueAddressCountInConsolidation($totalUniqueAddressCountInConsolidation = null)
     {
@@ -2514,7 +2514,7 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Get AvailableImages value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail[]|null
      */
     public function getAvailableImages()
     {
@@ -2523,15 +2523,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set AvailableImages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail[] $availableImages
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail[] $availableImages
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setAvailableImages(array $availableImages = array())
     {
         foreach ($availableImages as $trackDetailAvailableImagesItem) {
             // validation for constraint: itemType
-            if (!$trackDetailAvailableImagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail) {
-                throw new \InvalidArgumentException(sprintf('The AvailableImages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail, "%s" given', is_object($trackDetailAvailableImagesItem) ? get_class($trackDetailAvailableImagesItem) : gettype($trackDetailAvailableImagesItem)), __LINE__);
+            if (!$trackDetailAvailableImagesItem instanceof \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail) {
+                throw new \InvalidArgumentException(sprintf('The AvailableImages property can only contain items of \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail, "%s" given', is_object($trackDetailAvailableImagesItem) ? get_class($trackDetailAvailableImagesItem) : gettype($trackDetailAvailableImagesItem)), __LINE__);
             }
         }
         $this->AvailableImages = $availableImages;
@@ -2540,21 +2540,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to AvailableImages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToAvailableImages(\NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail $item)
+    public function addToAvailableImages(\CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail) {
-            throw new \InvalidArgumentException(sprintf('The AvailableImages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail) {
+            throw new \InvalidArgumentException(sprintf('The AvailableImages property can only contain items of \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AvailableImages[] = $item;
         return $this;
     }
     /**
      * Get Signature value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureImageDetail|null
      */
     public function getSignature()
     {
@@ -2562,10 +2562,10 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set Signature value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail $signature
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\SignatureImageDetail $signature
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function setSignature(\NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail $signature = null)
+    public function setSignature(\CommerceFedEx\FedExPHP\Structs\SignatureImageDetail $signature = null)
     {
         $this->Signature = $signature;
         return $this;
@@ -2580,46 +2580,46 @@ class TrackDetail extends AbstractStructBase
     }
     /**
      * Set NotificationEventsAvailable value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationEventType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationEventType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $notificationEventsAvailable
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setNotificationEventsAvailable(array $notificationEventsAvailable = array())
     {
         $invalidValues = array();
         foreach ($notificationEventsAvailable as $trackDetailNotificationEventsAvailableItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::valueIsValid($trackDetailNotificationEventsAvailableItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\NotificationEventType::valueIsValid($trackDetailNotificationEventsAvailableItem)) {
                 $invalidValues[] = var_export($trackDetailNotificationEventsAvailableItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationEventType::getValidValues())), __LINE__);
         }
         $this->NotificationEventsAvailable = $notificationEventsAvailable;
         return $this;
     }
     /**
      * Add item to NotificationEventsAvailable value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationEventType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationEventType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function addToNotificationEventsAvailable($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NotificationEventType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationEventType::getValidValues())), __LINE__);
         }
         $this->NotificationEventsAvailable[] = $item;
         return $this;
     }
     /**
      * Get SplitShipmentParts value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart[]|null
      */
     public function getSplitShipmentParts()
     {
@@ -2628,15 +2628,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set SplitShipmentParts value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart[] $splitShipmentParts
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart[] $splitShipmentParts
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setSplitShipmentParts(array $splitShipmentParts = array())
     {
         foreach ($splitShipmentParts as $trackDetailSplitShipmentPartsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailSplitShipmentPartsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart) {
-                throw new \InvalidArgumentException(sprintf('The SplitShipmentParts property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart, "%s" given', is_object($trackDetailSplitShipmentPartsItem) ? get_class($trackDetailSplitShipmentPartsItem) : gettype($trackDetailSplitShipmentPartsItem)), __LINE__);
+            if (!$trackDetailSplitShipmentPartsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart) {
+                throw new \InvalidArgumentException(sprintf('The SplitShipmentParts property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart, "%s" given', is_object($trackDetailSplitShipmentPartsItem) ? get_class($trackDetailSplitShipmentPartsItem) : gettype($trackDetailSplitShipmentPartsItem)), __LINE__);
             }
         }
         $this->SplitShipmentParts = $splitShipmentParts;
@@ -2645,21 +2645,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to SplitShipmentParts value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToSplitShipmentParts(\NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart $item)
+    public function addToSplitShipmentParts(\CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart) {
-            throw new \InvalidArgumentException(sprintf('The SplitShipmentParts property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart) {
+            throw new \InvalidArgumentException(sprintf('The SplitShipmentParts property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->SplitShipmentParts[] = $item;
         return $this;
     }
     /**
      * Get DeliveryOptionEligibilityDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail[]|null
      */
     public function getDeliveryOptionEligibilityDetails()
     {
@@ -2668,15 +2668,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set DeliveryOptionEligibilityDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail[] $deliveryOptionEligibilityDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail[] $deliveryOptionEligibilityDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setDeliveryOptionEligibilityDetails(array $deliveryOptionEligibilityDetails = array())
     {
         foreach ($deliveryOptionEligibilityDetails as $trackDetailDeliveryOptionEligibilityDetailsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailDeliveryOptionEligibilityDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail) {
-                throw new \InvalidArgumentException(sprintf('The DeliveryOptionEligibilityDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail, "%s" given', is_object($trackDetailDeliveryOptionEligibilityDetailsItem) ? get_class($trackDetailDeliveryOptionEligibilityDetailsItem) : gettype($trackDetailDeliveryOptionEligibilityDetailsItem)), __LINE__);
+            if (!$trackDetailDeliveryOptionEligibilityDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail) {
+                throw new \InvalidArgumentException(sprintf('The DeliveryOptionEligibilityDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail, "%s" given', is_object($trackDetailDeliveryOptionEligibilityDetailsItem) ? get_class($trackDetailDeliveryOptionEligibilityDetailsItem) : gettype($trackDetailDeliveryOptionEligibilityDetailsItem)), __LINE__);
             }
         }
         $this->DeliveryOptionEligibilityDetails = $deliveryOptionEligibilityDetails;
@@ -2685,21 +2685,21 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to DeliveryOptionEligibilityDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToDeliveryOptionEligibilityDetails(\NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail $item)
+    public function addToDeliveryOptionEligibilityDetails(\CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail) {
-            throw new \InvalidArgumentException(sprintf('The DeliveryOptionEligibilityDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail) {
+            throw new \InvalidArgumentException(sprintf('The DeliveryOptionEligibilityDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DeliveryOptionEligibilityDetails[] = $item;
         return $this;
     }
     /**
      * Get Events value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent[]|null
      */
     public function getEvents()
     {
@@ -2708,15 +2708,15 @@ class TrackDetail extends AbstractStructBase
     /**
      * Set Events value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent[] $events
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackEvent[] $events
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public function setEvents(array $events = array())
     {
         foreach ($events as $trackDetailEventsItem) {
             // validation for constraint: itemType
-            if (!$trackDetailEventsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent) {
-                throw new \InvalidArgumentException(sprintf('The Events property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent, "%s" given', is_object($trackDetailEventsItem) ? get_class($trackDetailEventsItem) : gettype($trackDetailEventsItem)), __LINE__);
+            if (!$trackDetailEventsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackEvent) {
+                throw new \InvalidArgumentException(sprintf('The Events property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackEvent, "%s" given', is_object($trackDetailEventsItem) ? get_class($trackDetailEventsItem) : gettype($trackDetailEventsItem)), __LINE__);
             }
         }
         $this->Events = $events;
@@ -2725,14 +2725,14 @@ class TrackDetail extends AbstractStructBase
     /**
      * Add item to Events value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackEvent $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
-    public function addToEvents(\NicholasCreativeMedia\FedExPHP\Structs\TrackEvent $item)
+    public function addToEvents(\CommerceFedEx\FedExPHP\Structs\TrackEvent $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent) {
-            throw new \InvalidArgumentException(sprintf('The Events property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackEvent) {
+            throw new \InvalidArgumentException(sprintf('The Events property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackEvent, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Events[] = $item;
         return $this;
@@ -2743,7 +2743,7 @@ class TrackDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail
      */
     public static function __set_state(array $array)
     {

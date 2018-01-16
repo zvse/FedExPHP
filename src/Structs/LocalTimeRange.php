@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -50,7 +50,7 @@ class LocalTimeRange extends AbstractStructBase
     /**
      * Set Begins value
      * @param string $begins
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange
+     * @return \CommerceFedEx\FedExPHP\Structs\LocalTimeRange
      */
     public function setBegins($begins = null)
     {
@@ -72,7 +72,7 @@ class LocalTimeRange extends AbstractStructBase
     /**
      * Set Ends value
      * @param string $ends
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange
+     * @return \CommerceFedEx\FedExPHP\Structs\LocalTimeRange
      */
     public function setEnds($ends = null)
     {
@@ -89,7 +89,7 @@ class LocalTimeRange extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange
+     * @return \CommerceFedEx\FedExPHP\Structs\LocalTimeRange
      */
     public static function __set_state(array $array)
     {

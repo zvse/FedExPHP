@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -25,7 +25,7 @@ class SortAndSegregateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total weight of pieces or packages to be sorted/segregated
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public $Weight;
     /**
@@ -33,9 +33,9 @@ class SortAndSegregateDetail extends AbstractStructBase
      * @uses SortAndSegregateDetail::setPieceCount()
      * @uses SortAndSegregateDetail::setWeight()
      * @param int $pieceCount
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
      */
-    public function __construct($pieceCount = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
+    public function __construct($pieceCount = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
     {
         $this
             ->setPieceCount($pieceCount)
@@ -52,7 +52,7 @@ class SortAndSegregateDetail extends AbstractStructBase
     /**
      * Set PieceCount value
      * @param int $pieceCount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SortAndSegregateDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SortAndSegregateDetail
      */
     public function setPieceCount($pieceCount = null)
     {
@@ -65,7 +65,7 @@ class SortAndSegregateDetail extends AbstractStructBase
     }
     /**
      * Get Weight value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
      */
     public function getWeight()
     {
@@ -73,10 +73,10 @@ class SortAndSegregateDetail extends AbstractStructBase
     }
     /**
      * Set Weight value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SortAndSegregateDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
+     * @return \CommerceFedEx\FedExPHP\Structs\SortAndSegregateDetail
      */
-    public function setWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
+    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
     {
         $this->Weight = $weight;
         return $this;
@@ -87,7 +87,7 @@ class SortAndSegregateDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SortAndSegregateDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SortAndSegregateDetail
      */
     public static function __set_state(array $array)
     {

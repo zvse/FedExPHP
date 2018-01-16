@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,22 +17,22 @@ class HazardousCommodityInnerReceptacleDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: This specifies the quantity contained in the inner receptacle.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail
      */
     public $Quantity;
     /**
      * Constructor method for HazardousCommodityInnerReceptacleDetail
      * @uses HazardousCommodityInnerReceptacleDetail::setQuantity()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
+     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null)
     {
         $this
             ->setQuantity($quantity);
     }
     /**
      * Get Quantity value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail|null
      */
     public function getQuantity()
     {
@@ -40,10 +40,10 @@ class HazardousCommodityInnerReceptacleDetail extends AbstractStructBase
     }
     /**
      * Set Quantity value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail
      */
-    public function setQuantity(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null)
+    public function setQuantity(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null)
     {
         $this->Quantity = $quantity;
         return $this;
@@ -54,7 +54,7 @@ class HazardousCommodityInnerReceptacleDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail
      */
     public static function __set_state(array $array)
     {

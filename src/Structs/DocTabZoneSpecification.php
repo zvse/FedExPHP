@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -78,7 +78,7 @@ class DocTabZoneSpecification extends AbstractStructBase
     /**
      * Set ZoneNumber value
      * @param int $zoneNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification
      */
     public function setZoneNumber($zoneNumber = null)
     {
@@ -100,7 +100,7 @@ class DocTabZoneSpecification extends AbstractStructBase
     /**
      * Set Header value
      * @param string $header
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification
      */
     public function setHeader($header = null)
     {
@@ -122,7 +122,7 @@ class DocTabZoneSpecification extends AbstractStructBase
     /**
      * Set DataField value
      * @param string $dataField
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification
      */
     public function setDataField($dataField = null)
     {
@@ -144,7 +144,7 @@ class DocTabZoneSpecification extends AbstractStructBase
     /**
      * Set LiteralValue value
      * @param string $literalValue
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification
      */
     public function setLiteralValue($literalValue = null)
     {
@@ -165,17 +165,17 @@ class DocTabZoneSpecification extends AbstractStructBase
     }
     /**
      * Set Justification value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DocTabZoneJustificationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DocTabZoneJustificationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DocTabZoneJustificationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DocTabZoneJustificationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $justification
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification
      */
     public function setJustification($justification = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DocTabZoneJustificationType::valueIsValid($justification)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $justification, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DocTabZoneJustificationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DocTabZoneJustificationType::valueIsValid($justification)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $justification, implode(', ', \CommerceFedEx\FedExPHP\Enums\DocTabZoneJustificationType::getValidValues())), __LINE__);
         }
         $this->Justification = $justification;
         return $this;
@@ -186,7 +186,7 @@ class DocTabZoneSpecification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification
      */
     public static function __set_state(array $array)
     {

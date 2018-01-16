@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class RatedShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The difference between "list" and "account" total net charge.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $EffectiveNetDiscount;
     /**
@@ -25,7 +25,7 @@ class RatedShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Express COD is shipment level.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $AdjustedCodCollectionAmount;
     /**
@@ -33,7 +33,7 @@ class RatedShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The shipment-level totals for this rate type.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
      */
     public $ShipmentRateDetail;
     /**
@@ -42,7 +42,7 @@ class RatedShipmentDetail extends AbstractStructBase
      * - documentation: The package-level data for this rate type.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail[]
      */
     public $RatedPackages;
     /**
@@ -51,12 +51,12 @@ class RatedShipmentDetail extends AbstractStructBase
      * @uses RatedShipmentDetail::setAdjustedCodCollectionAmount()
      * @uses RatedShipmentDetail::setShipmentRateDetail()
      * @uses RatedShipmentDetail::setRatedPackages()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $adjustedCodCollectionAmount
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail $shipmentRateDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail[] $ratedPackages
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $adjustedCodCollectionAmount
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail $shipmentRateDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail[] $ratedPackages
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $adjustedCodCollectionAmount = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail $shipmentRateDetail = null, array $ratedPackages = array())
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount = null, \CommerceFedEx\FedExPHP\Structs\Money $adjustedCodCollectionAmount = null, \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail $shipmentRateDetail = null, array $ratedPackages = array())
     {
         $this
             ->setEffectiveNetDiscount($effectiveNetDiscount)
@@ -66,7 +66,7 @@ class RatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Get EffectiveNetDiscount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getEffectiveNetDiscount()
     {
@@ -74,17 +74,17 @@ class RatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set EffectiveNetDiscount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail
      */
-    public function setEffectiveNetDiscount(\NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount = null)
+    public function setEffectiveNetDiscount(\CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount = null)
     {
         $this->EffectiveNetDiscount = $effectiveNetDiscount;
         return $this;
     }
     /**
      * Get AdjustedCodCollectionAmount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getAdjustedCodCollectionAmount()
     {
@@ -92,17 +92,17 @@ class RatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set AdjustedCodCollectionAmount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $adjustedCodCollectionAmount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $adjustedCodCollectionAmount
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail
      */
-    public function setAdjustedCodCollectionAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $adjustedCodCollectionAmount = null)
+    public function setAdjustedCodCollectionAmount(\CommerceFedEx\FedExPHP\Structs\Money $adjustedCodCollectionAmount = null)
     {
         $this->AdjustedCodCollectionAmount = $adjustedCodCollectionAmount;
         return $this;
     }
     /**
      * Get ShipmentRateDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail|null
      */
     public function getShipmentRateDetail()
     {
@@ -110,17 +110,17 @@ class RatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set ShipmentRateDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail $shipmentRateDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail $shipmentRateDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail
      */
-    public function setShipmentRateDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail $shipmentRateDetail = null)
+    public function setShipmentRateDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail $shipmentRateDetail = null)
     {
         $this->ShipmentRateDetail = $shipmentRateDetail;
         return $this;
     }
     /**
      * Get RatedPackages value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail[]|null
      */
     public function getRatedPackages()
     {
@@ -129,15 +129,15 @@ class RatedShipmentDetail extends AbstractStructBase
     /**
      * Set RatedPackages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail[] $ratedPackages
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail[] $ratedPackages
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail
      */
     public function setRatedPackages(array $ratedPackages = array())
     {
         foreach ($ratedPackages as $ratedShipmentDetailRatedPackagesItem) {
             // validation for constraint: itemType
-            if (!$ratedShipmentDetailRatedPackagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail) {
-                throw new \InvalidArgumentException(sprintf('The RatedPackages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail, "%s" given', is_object($ratedShipmentDetailRatedPackagesItem) ? get_class($ratedShipmentDetailRatedPackagesItem) : gettype($ratedShipmentDetailRatedPackagesItem)), __LINE__);
+            if (!$ratedShipmentDetailRatedPackagesItem instanceof \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail) {
+                throw new \InvalidArgumentException(sprintf('The RatedPackages property can only contain items of \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail, "%s" given', is_object($ratedShipmentDetailRatedPackagesItem) ? get_class($ratedShipmentDetailRatedPackagesItem) : gettype($ratedShipmentDetailRatedPackagesItem)), __LINE__);
             }
         }
         $this->RatedPackages = $ratedPackages;
@@ -146,14 +146,14 @@ class RatedShipmentDetail extends AbstractStructBase
     /**
      * Add item to RatedPackages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail
      */
-    public function addToRatedPackages(\NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail $item)
+    public function addToRatedPackages(\CommerceFedEx\FedExPHP\Structs\RatedPackageDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail) {
-            throw new \InvalidArgumentException(sprintf('The RatedPackages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail) {
+            throw new \InvalidArgumentException(sprintf('The RatedPackages property can only contain items of \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->RatedPackages[] = $item;
         return $this;
@@ -164,7 +164,7 @@ class RatedShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail
      */
     public static function __set_state(array $array)
     {

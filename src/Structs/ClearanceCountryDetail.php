@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -53,7 +53,7 @@ class ClearanceCountryDetail extends AbstractStructBase
     /**
      * Set ClearanceCountry value
      * @param string $clearanceCountry
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClearanceCountryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClearanceCountryDetail
      */
     public function setClearanceCountry($clearanceCountry = null)
     {
@@ -74,39 +74,39 @@ class ClearanceCountryDetail extends AbstractStructBase
     }
     /**
      * Set SpecialServicesSupported value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $specialServicesSupported
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClearanceCountryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClearanceCountryDetail
      */
     public function setSpecialServicesSupported(array $specialServicesSupported = array())
     {
         $invalidValues = array();
         foreach ($specialServicesSupported as $clearanceCountryDetailSpecialServicesSupportedItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid($clearanceCountryDetailSpecialServicesSupportedItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid($clearanceCountryDetailSpecialServicesSupportedItem)) {
                 $invalidValues[] = var_export($clearanceCountryDetailSpecialServicesSupportedItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->SpecialServicesSupported = $specialServicesSupported;
         return $this;
     }
     /**
      * Add item to SpecialServicesSupported value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClearanceCountryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClearanceCountryDetail
      */
     public function addToSpecialServicesSupported($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->SpecialServicesSupported[] = $item;
         return $this;
@@ -117,7 +117,7 @@ class ClearanceCountryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClearanceCountryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClearanceCountryDetail
      */
     public static function __set_state(array $array)
     {

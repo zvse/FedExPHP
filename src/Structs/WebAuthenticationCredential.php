@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -52,7 +52,7 @@ class WebAuthenticationCredential extends AbstractStructBase
     /**
      * Set Key value
      * @param string $key
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationCredential
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationCredential
      */
     public function setKey($key = null)
     {
@@ -74,7 +74,7 @@ class WebAuthenticationCredential extends AbstractStructBase
     /**
      * Set Password value
      * @param string $password
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationCredential
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationCredential
      */
     public function setPassword($password = null)
     {
@@ -91,7 +91,7 @@ class WebAuthenticationCredential extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationCredential
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationCredential
      */
     public static function __set_state(array $array)
     {

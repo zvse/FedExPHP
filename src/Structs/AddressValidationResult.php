@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -37,21 +37,21 @@ class AddressValidationResult extends AbstractStructBase
      * The EffectiveContact
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Contact
+     * @var \CommerceFedEx\FedExPHP\Structs\Contact
      */
     public $EffectiveContact;
     /**
      * The EffectiveAddress
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $EffectiveAddress;
     /**
      * The ParsedAddressPartsDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ParsedAddressPartsDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ParsedAddressPartsDetail
      */
     public $ParsedAddressPartsDetail;
     /**
@@ -60,7 +60,7 @@ class AddressValidationResult extends AbstractStructBase
      * - documentation: Additional attributes about the validated address from FedEx address respository..
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute[]
+     * @var \CommerceFedEx\FedExPHP\Structs\AddressAttribute[]
      */
     public $Attributes;
     /**
@@ -75,12 +75,12 @@ class AddressValidationResult extends AbstractStructBase
      * @param string $clientReferenceId
      * @param string $state
      * @param string $classification
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $effectiveContact
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $effectiveAddress
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedAddressPartsDetail $parsedAddressPartsDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute[] $attributes
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $effectiveContact
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $effectiveAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\ParsedAddressPartsDetail $parsedAddressPartsDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressAttribute[] $attributes
      */
-    public function __construct($clientReferenceId = null, $state = null, $classification = null, \NicholasCreativeMedia\FedExPHP\Structs\Contact $effectiveContact = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $effectiveAddress = null, \NicholasCreativeMedia\FedExPHP\Structs\ParsedAddressPartsDetail $parsedAddressPartsDetail = null, array $attributes = array())
+    public function __construct($clientReferenceId = null, $state = null, $classification = null, \CommerceFedEx\FedExPHP\Structs\Contact $effectiveContact = null, \CommerceFedEx\FedExPHP\Structs\Address $effectiveAddress = null, \CommerceFedEx\FedExPHP\Structs\ParsedAddressPartsDetail $parsedAddressPartsDetail = null, array $attributes = array())
     {
         $this
             ->setClientReferenceId($clientReferenceId)
@@ -102,7 +102,7 @@ class AddressValidationResult extends AbstractStructBase
     /**
      * Set ClientReferenceId value
      * @param string $clientReferenceId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult
      */
     public function setClientReferenceId($clientReferenceId = null)
     {
@@ -123,17 +123,17 @@ class AddressValidationResult extends AbstractStructBase
     }
     /**
      * Set State value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperationalAddressStateType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperationalAddressStateType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OperationalAddressStateType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OperationalAddressStateType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $state
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult
      */
     public function setState($state = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\OperationalAddressStateType::valueIsValid($state)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $state, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\OperationalAddressStateType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\OperationalAddressStateType::valueIsValid($state)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $state, implode(', ', \CommerceFedEx\FedExPHP\Enums\OperationalAddressStateType::getValidValues())), __LINE__);
         }
         $this->State = $state;
         return $this;
@@ -148,24 +148,24 @@ class AddressValidationResult extends AbstractStructBase
     }
     /**
      * Set Classification value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExAddressClassificationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExAddressClassificationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FedExAddressClassificationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FedExAddressClassificationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $classification
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult
      */
     public function setClassification($classification = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FedExAddressClassificationType::valueIsValid($classification)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $classification, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FedExAddressClassificationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FedExAddressClassificationType::valueIsValid($classification)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $classification, implode(', ', \CommerceFedEx\FedExPHP\Enums\FedExAddressClassificationType::getValidValues())), __LINE__);
         }
         $this->Classification = $classification;
         return $this;
     }
     /**
      * Get EffectiveContact value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Contact|null
      */
     public function getEffectiveContact()
     {
@@ -173,17 +173,17 @@ class AddressValidationResult extends AbstractStructBase
     }
     /**
      * Set EffectiveContact value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $effectiveContact
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $effectiveContact
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult
      */
-    public function setEffectiveContact(\NicholasCreativeMedia\FedExPHP\Structs\Contact $effectiveContact = null)
+    public function setEffectiveContact(\CommerceFedEx\FedExPHP\Structs\Contact $effectiveContact = null)
     {
         $this->EffectiveContact = $effectiveContact;
         return $this;
     }
     /**
      * Get EffectiveAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getEffectiveAddress()
     {
@@ -191,17 +191,17 @@ class AddressValidationResult extends AbstractStructBase
     }
     /**
      * Set EffectiveAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $effectiveAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $effectiveAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult
      */
-    public function setEffectiveAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $effectiveAddress = null)
+    public function setEffectiveAddress(\CommerceFedEx\FedExPHP\Structs\Address $effectiveAddress = null)
     {
         $this->EffectiveAddress = $effectiveAddress;
         return $this;
     }
     /**
      * Get ParsedAddressPartsDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedAddressPartsDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedAddressPartsDetail|null
      */
     public function getParsedAddressPartsDetail()
     {
@@ -209,17 +209,17 @@ class AddressValidationResult extends AbstractStructBase
     }
     /**
      * Set ParsedAddressPartsDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedAddressPartsDetail $parsedAddressPartsDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult
+     * @param \CommerceFedEx\FedExPHP\Structs\ParsedAddressPartsDetail $parsedAddressPartsDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult
      */
-    public function setParsedAddressPartsDetail(\NicholasCreativeMedia\FedExPHP\Structs\ParsedAddressPartsDetail $parsedAddressPartsDetail = null)
+    public function setParsedAddressPartsDetail(\CommerceFedEx\FedExPHP\Structs\ParsedAddressPartsDetail $parsedAddressPartsDetail = null)
     {
         $this->ParsedAddressPartsDetail = $parsedAddressPartsDetail;
         return $this;
     }
     /**
      * Get Attributes value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAttribute[]|null
      */
     public function getAttributes()
     {
@@ -228,15 +228,15 @@ class AddressValidationResult extends AbstractStructBase
     /**
      * Set Attributes value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute[] $attributes
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressAttribute[] $attributes
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult
      */
     public function setAttributes(array $attributes = array())
     {
         foreach ($attributes as $addressValidationResultAttributesItem) {
             // validation for constraint: itemType
-            if (!$addressValidationResultAttributesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute) {
-                throw new \InvalidArgumentException(sprintf('The Attributes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute, "%s" given', is_object($addressValidationResultAttributesItem) ? get_class($addressValidationResultAttributesItem) : gettype($addressValidationResultAttributesItem)), __LINE__);
+            if (!$addressValidationResultAttributesItem instanceof \CommerceFedEx\FedExPHP\Structs\AddressAttribute) {
+                throw new \InvalidArgumentException(sprintf('The Attributes property can only contain items of \CommerceFedEx\FedExPHP\Structs\AddressAttribute, "%s" given', is_object($addressValidationResultAttributesItem) ? get_class($addressValidationResultAttributesItem) : gettype($addressValidationResultAttributesItem)), __LINE__);
             }
         }
         $this->Attributes = $attributes;
@@ -245,14 +245,14 @@ class AddressValidationResult extends AbstractStructBase
     /**
      * Add item to Attributes value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressAttribute $item
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult
      */
-    public function addToAttributes(\NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute $item)
+    public function addToAttributes(\CommerceFedEx\FedExPHP\Structs\AddressAttribute $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute) {
-            throw new \InvalidArgumentException(sprintf('The Attributes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AddressAttribute, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AddressAttribute) {
+            throw new \InvalidArgumentException(sprintf('The Attributes property can only contain items of \CommerceFedEx\FedExPHP\Structs\AddressAttribute, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Attributes[] = $item;
         return $this;
@@ -263,7 +263,7 @@ class AddressValidationResult extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationResult
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationResult
      */
     public static function __set_state(array $array)
     {

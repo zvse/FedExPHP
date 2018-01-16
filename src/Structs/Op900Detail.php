@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class Op900Detail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies characteristics of a shipping document to be produced.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
@@ -34,7 +34,7 @@ class Op900Detail extends AbstractStructBase
      * - documentation: Specifies the usage and identification of customer supplied images to be used on this document.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]
      */
     public $CustomerImageUsages;
     /**
@@ -51,12 +51,12 @@ class Op900Detail extends AbstractStructBase
      * @uses Op900Detail::setReference()
      * @uses Op900Detail::setCustomerImageUsages()
      * @uses Op900Detail::setSignatureName()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
      * @param string $reference
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
      * @param string $signatureName
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null, $reference = null, array $customerImageUsages = array(), $signatureName = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null, $reference = null, array $customerImageUsages = array(), $signatureName = null)
     {
         $this
             ->setFormat($format)
@@ -66,7 +66,7 @@ class Op900Detail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -74,10 +74,10 @@ class Op900Detail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op900Detail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \CommerceFedEx\FedExPHP\Structs\Op900Detail
      */
-    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
@@ -92,24 +92,24 @@ class Op900Detail extends AbstractStructBase
     }
     /**
      * Set Reference value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $reference
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op900Detail
+     * @return \CommerceFedEx\FedExPHP\Structs\Op900Detail
      */
     public function setReference($reference = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid($reference)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $reference, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid($reference)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $reference, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
         }
         $this->Reference = $reference;
         return $this;
     }
     /**
      * Get CustomerImageUsages value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]|null
      */
     public function getCustomerImageUsages()
     {
@@ -118,15 +118,15 @@ class Op900Detail extends AbstractStructBase
     /**
      * Set CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op900Detail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @return \CommerceFedEx\FedExPHP\Structs\Op900Detail
      */
     public function setCustomerImageUsages(array $customerImageUsages = array())
     {
         foreach ($customerImageUsages as $op900DetailCustomerImageUsagesItem) {
             // validation for constraint: itemType
-            if (!$op900DetailCustomerImageUsagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
-                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($op900DetailCustomerImageUsagesItem) ? get_class($op900DetailCustomerImageUsagesItem) : gettype($op900DetailCustomerImageUsagesItem)), __LINE__);
+            if (!$op900DetailCustomerImageUsagesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
+                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($op900DetailCustomerImageUsagesItem) ? get_class($op900DetailCustomerImageUsagesItem) : gettype($op900DetailCustomerImageUsagesItem)), __LINE__);
             }
         }
         $this->CustomerImageUsages = $customerImageUsages;
@@ -135,14 +135,14 @@ class Op900Detail extends AbstractStructBase
     /**
      * Add item to CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op900Detail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item
+     * @return \CommerceFedEx\FedExPHP\Structs\Op900Detail
      */
-    public function addToCustomerImageUsages(\NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item)
+    public function addToCustomerImageUsages(\CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
-            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
+            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerImageUsages[] = $item;
         return $this;
@@ -158,7 +158,7 @@ class Op900Detail extends AbstractStructBase
     /**
      * Set SignatureName value
      * @param string $signatureName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op900Detail
+     * @return \CommerceFedEx\FedExPHP\Structs\Op900Detail
      */
     public function setSignatureName($signatureName = null)
     {
@@ -175,7 +175,7 @@ class Op900Detail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op900Detail
+     * @return \CommerceFedEx\FedExPHP\Structs\Op900Detail
      */
     public static function __set_state(array $array)
     {

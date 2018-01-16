@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -67,17 +67,17 @@ class TrackReturnDetail extends AbstractStructBase
     }
     /**
      * Set MovementStatus value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackReturnMovementStatusType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackReturnMovementStatusType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackReturnMovementStatusType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackReturnMovementStatusType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $movementStatus
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail
      */
     public function setMovementStatus($movementStatus = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackReturnMovementStatusType::valueIsValid($movementStatus)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $movementStatus, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackReturnMovementStatusType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackReturnMovementStatusType::valueIsValid($movementStatus)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $movementStatus, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackReturnMovementStatusType::getValidValues())), __LINE__);
         }
         $this->MovementStatus = $movementStatus;
         return $this;
@@ -92,17 +92,17 @@ class TrackReturnDetail extends AbstractStructBase
     }
     /**
      * Set LabelType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackReturnLabelType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackReturnLabelType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackReturnLabelType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackReturnLabelType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail
      */
     public function setLabelType($labelType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackReturnLabelType::valueIsValid($labelType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackReturnLabelType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackReturnLabelType::valueIsValid($labelType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelType, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackReturnLabelType::getValidValues())), __LINE__);
         }
         $this->LabelType = $labelType;
         return $this;
@@ -118,7 +118,7 @@ class TrackReturnDetail extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail
      */
     public function setDescription($description = null)
     {
@@ -140,7 +140,7 @@ class TrackReturnDetail extends AbstractStructBase
     /**
      * Set AuthorizationName value
      * @param string $authorizationName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail
      */
     public function setAuthorizationName($authorizationName = null)
     {
@@ -157,7 +157,7 @@ class TrackReturnDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReturnDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReturnDetail
      */
     public static function __set_state(array $array)
     {

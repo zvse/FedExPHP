@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -65,7 +65,7 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
      * - documentation: Documents the kinds and quantities of all hazardous commodities in the current package.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer[]
+     * @var \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer[]
      */
     public $Containers;
     /**
@@ -83,7 +83,7 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
      * @param string $regulation
      * @param float $radioactiveTransportIndex
      * @param string $labelType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer[] $containers
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer[] $containers
      */
     public function __construct($referenceId = null, $accessibility = null, $cargoAircraftOnly = null, $regulation = null, $radioactiveTransportIndex = null, $labelType = null, array $containers = array())
     {
@@ -107,7 +107,7 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
     /**
      * Set ReferenceId value
      * @param string $referenceId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
     public function setReferenceId($referenceId = null)
     {
@@ -128,17 +128,17 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
     }
     /**
      * Set Accessibility value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $accessibility
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
     public function setAccessibility($accessibility = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid($accessibility)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $accessibility, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid($accessibility)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $accessibility, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues())), __LINE__);
         }
         $this->Accessibility = $accessibility;
         return $this;
@@ -154,7 +154,7 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
     /**
      * Set CargoAircraftOnly value
      * @param bool $cargoAircraftOnly
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
     public function setCargoAircraftOnly($cargoAircraftOnly = null)
     {
@@ -171,17 +171,17 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
     }
     /**
      * Set Regulation value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityRegulationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityRegulationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityRegulationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityRegulationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $regulation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
     public function setRegulation($regulation = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityRegulationType::valueIsValid($regulation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $regulation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityRegulationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityRegulationType::valueIsValid($regulation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $regulation, implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityRegulationType::getValidValues())), __LINE__);
         }
         $this->Regulation = $regulation;
         return $this;
@@ -197,7 +197,7 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
     /**
      * Set RadioactiveTransportIndex value
      * @param float $radioactiveTransportIndex
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
     public function setRadioactiveTransportIndex($radioactiveTransportIndex = null)
     {
@@ -214,24 +214,24 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
     }
     /**
      * Set LabelType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RadioactiveLabelType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RadioactiveLabelType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RadioactiveLabelType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RadioactiveLabelType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
     public function setLabelType($labelType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RadioactiveLabelType::valueIsValid($labelType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RadioactiveLabelType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RadioactiveLabelType::valueIsValid($labelType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelType, implode(', ', \CommerceFedEx\FedExPHP\Enums\RadioactiveLabelType::getValidValues())), __LINE__);
         }
         $this->LabelType = $labelType;
         return $this;
     }
     /**
      * Get Containers value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer[]|null
      */
     public function getContainers()
     {
@@ -240,15 +240,15 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
     /**
      * Set Containers value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer[] $containers
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer[] $containers
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
     public function setContainers(array $containers = array())
     {
         foreach ($containers as $completedHazardousPackageDetailContainersItem) {
             // validation for constraint: itemType
-            if (!$completedHazardousPackageDetailContainersItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer) {
-                throw new \InvalidArgumentException(sprintf('The Containers property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer, "%s" given', is_object($completedHazardousPackageDetailContainersItem) ? get_class($completedHazardousPackageDetailContainersItem) : gettype($completedHazardousPackageDetailContainersItem)), __LINE__);
+            if (!$completedHazardousPackageDetailContainersItem instanceof \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer) {
+                throw new \InvalidArgumentException(sprintf('The Containers property can only contain items of \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer, "%s" given', is_object($completedHazardousPackageDetailContainersItem) ? get_class($completedHazardousPackageDetailContainersItem) : gettype($completedHazardousPackageDetailContainersItem)), __LINE__);
             }
         }
         $this->Containers = $containers;
@@ -257,14 +257,14 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
     /**
      * Add item to Containers value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
-    public function addToContainers(\NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer $item)
+    public function addToContainers(\CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer) {
-            throw new \InvalidArgumentException(sprintf('The Containers property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer) {
+            throw new \InvalidArgumentException(sprintf('The Containers property can only contain items of \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Containers[] = $item;
         return $this;
@@ -275,7 +275,7 @@ class CompletedHazardousPackageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
     public static function __set_state(array $array)
     {

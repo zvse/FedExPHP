@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -57,17 +57,17 @@ class PieceCountVerificationDetail extends AbstractStructBase
     }
     /**
      * Set CountLocationType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PieceCountLocationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PieceCountLocationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PieceCountLocationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PieceCountLocationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $countLocationType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail
      */
     public function setCountLocationType($countLocationType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PieceCountLocationType::valueIsValid($countLocationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $countLocationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PieceCountLocationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PieceCountLocationType::valueIsValid($countLocationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $countLocationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PieceCountLocationType::getValidValues())), __LINE__);
         }
         $this->CountLocationType = $countLocationType;
         return $this;
@@ -83,7 +83,7 @@ class PieceCountVerificationDetail extends AbstractStructBase
     /**
      * Set Count value
      * @param int $count
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail
      */
     public function setCount($count = null)
     {
@@ -105,7 +105,7 @@ class PieceCountVerificationDetail extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail
      */
     public function setDescription($description = null)
     {
@@ -122,7 +122,7 @@ class PieceCountVerificationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PieceCountVerificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PieceCountVerificationDetail
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -25,7 +25,7 @@ class AppointmentDetail extends AbstractStructBase
      * - documentation: Different appointment time windows on the date specified.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail[]
      */
     public $WindowDetails;
     /**
@@ -33,7 +33,7 @@ class AppointmentDetail extends AbstractStructBase
      * @uses AppointmentDetail::setDate()
      * @uses AppointmentDetail::setWindowDetails()
      * @param string $date
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail[] $windowDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail[] $windowDetails
      */
     public function __construct($date = null, array $windowDetails = array())
     {
@@ -52,7 +52,7 @@ class AppointmentDetail extends AbstractStructBase
     /**
      * Set Date value
      * @param string $date
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentDetail
      */
     public function setDate($date = null)
     {
@@ -65,7 +65,7 @@ class AppointmentDetail extends AbstractStructBase
     }
     /**
      * Get WindowDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail[]|null
      */
     public function getWindowDetails()
     {
@@ -74,15 +74,15 @@ class AppointmentDetail extends AbstractStructBase
     /**
      * Set WindowDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail[] $windowDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail[] $windowDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentDetail
      */
     public function setWindowDetails(array $windowDetails = array())
     {
         foreach ($windowDetails as $appointmentDetailWindowDetailsItem) {
             // validation for constraint: itemType
-            if (!$appointmentDetailWindowDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail) {
-                throw new \InvalidArgumentException(sprintf('The WindowDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail, "%s" given', is_object($appointmentDetailWindowDetailsItem) ? get_class($appointmentDetailWindowDetailsItem) : gettype($appointmentDetailWindowDetailsItem)), __LINE__);
+            if (!$appointmentDetailWindowDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail) {
+                throw new \InvalidArgumentException(sprintf('The WindowDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail, "%s" given', is_object($appointmentDetailWindowDetailsItem) ? get_class($appointmentDetailWindowDetailsItem) : gettype($appointmentDetailWindowDetailsItem)), __LINE__);
             }
         }
         $this->WindowDetails = $windowDetails;
@@ -91,14 +91,14 @@ class AppointmentDetail extends AbstractStructBase
     /**
      * Add item to WindowDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentDetail
      */
-    public function addToWindowDetails(\NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail $item)
+    public function addToWindowDetails(\CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail) {
-            throw new \InvalidArgumentException(sprintf('The WindowDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail) {
+            throw new \InvalidArgumentException(sprintf('The WindowDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->WindowDetails[] = $item;
         return $this;
@@ -109,7 +109,7 @@ class AppointmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentDetail
      */
     public static function __set_state(array $array)
     {

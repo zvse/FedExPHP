@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,7 +16,7 @@ class RatedPackageDetail extends AbstractStructBase
      * - documentation: Echoed from the corresponding package in the rate request (if provided).
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId[]
      */
     public $TrackingIds;
     /**
@@ -32,7 +32,7 @@ class RatedPackageDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The difference between "list" and "account" net charge.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $EffectiveNetDiscount;
     /**
@@ -40,7 +40,7 @@ class RatedPackageDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Ground COD is shipment level.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $AdjustedCodCollectionAmount;
     /**
@@ -55,7 +55,7 @@ class RatedPackageDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Rate data that are tied to a specific package and rate type combination.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\PackageRateDetail
      */
     public $PackageRateDetail;
     /**
@@ -66,14 +66,14 @@ class RatedPackageDetail extends AbstractStructBase
      * @uses RatedPackageDetail::setAdjustedCodCollectionAmount()
      * @uses RatedPackageDetail::setOversizeClass()
      * @uses RatedPackageDetail::setPackageRateDetail()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
      * @param int $groupNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $adjustedCodCollectionAmount
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $adjustedCodCollectionAmount
      * @param string $oversizeClass
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail $packageRateDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PackageRateDetail $packageRateDetail
      */
-    public function __construct(array $trackingIds = array(), $groupNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $adjustedCodCollectionAmount = null, $oversizeClass = null, \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail $packageRateDetail = null)
+    public function __construct(array $trackingIds = array(), $groupNumber = null, \CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount = null, \CommerceFedEx\FedExPHP\Structs\Money $adjustedCodCollectionAmount = null, $oversizeClass = null, \CommerceFedEx\FedExPHP\Structs\PackageRateDetail $packageRateDetail = null)
     {
         $this
             ->setTrackingIds($trackingIds)
@@ -85,7 +85,7 @@ class RatedPackageDetail extends AbstractStructBase
     }
     /**
      * Get TrackingIds value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId[]|null
      */
     public function getTrackingIds()
     {
@@ -94,15 +94,15 @@ class RatedPackageDetail extends AbstractStructBase
     /**
      * Set TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail
      */
     public function setTrackingIds(array $trackingIds = array())
     {
         foreach ($trackingIds as $ratedPackageDetailTrackingIdsItem) {
             // validation for constraint: itemType
-            if (!$ratedPackageDetailTrackingIdsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
-                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($ratedPackageDetailTrackingIdsItem) ? get_class($ratedPackageDetailTrackingIdsItem) : gettype($ratedPackageDetailTrackingIdsItem)), __LINE__);
+            if (!$ratedPackageDetailTrackingIdsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
+                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($ratedPackageDetailTrackingIdsItem) ? get_class($ratedPackageDetailTrackingIdsItem) : gettype($ratedPackageDetailTrackingIdsItem)), __LINE__);
             }
         }
         $this->TrackingIds = $trackingIds;
@@ -111,14 +111,14 @@ class RatedPackageDetail extends AbstractStructBase
     /**
      * Add item to TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $item
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail
      */
-    public function addToTrackingIds(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item)
+    public function addToTrackingIds(\CommerceFedEx\FedExPHP\Structs\TrackingId $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
-            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
+            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->TrackingIds[] = $item;
         return $this;
@@ -134,7 +134,7 @@ class RatedPackageDetail extends AbstractStructBase
     /**
      * Set GroupNumber value
      * @param int $groupNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail
      */
     public function setGroupNumber($groupNumber = null)
     {
@@ -147,7 +147,7 @@ class RatedPackageDetail extends AbstractStructBase
     }
     /**
      * Get EffectiveNetDiscount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getEffectiveNetDiscount()
     {
@@ -155,17 +155,17 @@ class RatedPackageDetail extends AbstractStructBase
     }
     /**
      * Set EffectiveNetDiscount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail
      */
-    public function setEffectiveNetDiscount(\NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount = null)
+    public function setEffectiveNetDiscount(\CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount = null)
     {
         $this->EffectiveNetDiscount = $effectiveNetDiscount;
         return $this;
     }
     /**
      * Get AdjustedCodCollectionAmount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getAdjustedCodCollectionAmount()
     {
@@ -173,10 +173,10 @@ class RatedPackageDetail extends AbstractStructBase
     }
     /**
      * Set AdjustedCodCollectionAmount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $adjustedCodCollectionAmount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $adjustedCodCollectionAmount
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail
      */
-    public function setAdjustedCodCollectionAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $adjustedCodCollectionAmount = null)
+    public function setAdjustedCodCollectionAmount(\CommerceFedEx\FedExPHP\Structs\Money $adjustedCodCollectionAmount = null)
     {
         $this->AdjustedCodCollectionAmount = $adjustedCodCollectionAmount;
         return $this;
@@ -191,24 +191,24 @@ class RatedPackageDetail extends AbstractStructBase
     }
     /**
      * Set OversizeClass value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OversizeClassType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OversizeClassType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OversizeClassType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OversizeClassType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $oversizeClass
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail
      */
     public function setOversizeClass($oversizeClass = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\OversizeClassType::valueIsValid($oversizeClass)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $oversizeClass, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\OversizeClassType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\OversizeClassType::valueIsValid($oversizeClass)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $oversizeClass, implode(', ', \CommerceFedEx\FedExPHP\Enums\OversizeClassType::getValidValues())), __LINE__);
         }
         $this->OversizeClass = $oversizeClass;
         return $this;
     }
     /**
      * Get PackageRateDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageRateDetail|null
      */
     public function getPackageRateDetail()
     {
@@ -216,10 +216,10 @@ class RatedPackageDetail extends AbstractStructBase
     }
     /**
      * Set PackageRateDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail $packageRateDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PackageRateDetail $packageRateDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail
      */
-    public function setPackageRateDetail(\NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail $packageRateDetail = null)
+    public function setPackageRateDetail(\CommerceFedEx\FedExPHP\Structs\PackageRateDetail $packageRateDetail = null)
     {
         $this->PackageRateDetail = $packageRateDetail;
         return $this;
@@ -230,7 +230,7 @@ class RatedPackageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedPackageDetail
      */
     public static function __set_state(array $array)
     {

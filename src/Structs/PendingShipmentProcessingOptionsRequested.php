@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -38,39 +38,39 @@ class PendingShipmentProcessingOptionsRequested extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentProcessingOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentProcessingOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PendingShipmentProcessingOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PendingShipmentProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $options
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested
      */
     public function setOptions(array $options = array())
     {
         $invalidValues = array();
         foreach ($options as $pendingShipmentProcessingOptionsRequestedOptionsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentProcessingOptionType::valueIsValid($pendingShipmentProcessingOptionsRequestedOptionsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\PendingShipmentProcessingOptionType::valueIsValid($pendingShipmentProcessingOptionsRequestedOptionsItem)) {
                 $invalidValues[] = var_export($pendingShipmentProcessingOptionsRequestedOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentProcessingOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\PendingShipmentProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options = $options;
         return $this;
     }
     /**
      * Add item to Options value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentProcessingOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentProcessingOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PendingShipmentProcessingOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PendingShipmentProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested
      */
     public function addToOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentProcessingOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentProcessingOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PendingShipmentProcessingOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\PendingShipmentProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
@@ -81,7 +81,7 @@ class PendingShipmentProcessingOptionsRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested
      */
     public static function __set_state(array $array)
     {

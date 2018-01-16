@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -103,7 +103,7 @@ class CleansedAddressAndLocationDetail extends AbstractStructBase
     /**
      * Set CountryCode value
      * @param string $countryCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public function setCountryCode($countryCode = null)
     {
@@ -125,7 +125,7 @@ class CleansedAddressAndLocationDetail extends AbstractStructBase
     /**
      * Set StateOrProvinceCode value
      * @param string $stateOrProvinceCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public function setStateOrProvinceCode($stateOrProvinceCode = null)
     {
@@ -147,7 +147,7 @@ class CleansedAddressAndLocationDetail extends AbstractStructBase
     /**
      * Set PostalCode value
      * @param string $postalCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public function setPostalCode($postalCode = null)
     {
@@ -169,7 +169,7 @@ class CleansedAddressAndLocationDetail extends AbstractStructBase
     /**
      * Set ServiceArea value
      * @param string $serviceArea
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public function setServiceArea($serviceArea = null)
     {
@@ -191,7 +191,7 @@ class CleansedAddressAndLocationDetail extends AbstractStructBase
     /**
      * Set LocationId value
      * @param string $locationId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public function setLocationId($locationId = null)
     {
@@ -213,7 +213,7 @@ class CleansedAddressAndLocationDetail extends AbstractStructBase
     /**
      * Set LocationNumber value
      * @param int $locationNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public function setLocationNumber($locationNumber = null)
     {
@@ -235,7 +235,7 @@ class CleansedAddressAndLocationDetail extends AbstractStructBase
     /**
      * Set AirportId value
      * @param string $airportId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public function setAirportId($airportId = null)
     {
@@ -252,7 +252,7 @@ class CleansedAddressAndLocationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public static function __set_state(array $array)
     {

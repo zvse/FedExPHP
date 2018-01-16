@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,7 +51,7 @@ class ShipmentVariationOptionDetail extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentVariationOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentVariationOptionDetail
      */
     public function setId($id = null)
     {
@@ -74,7 +74,7 @@ class ShipmentVariationOptionDetail extends AbstractStructBase
      * Set Values value
      * @throws \InvalidArgumentException
      * @param string[] $values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentVariationOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentVariationOptionDetail
      */
     public function setValues(array $values = array())
     {
@@ -91,7 +91,7 @@ class ShipmentVariationOptionDetail extends AbstractStructBase
      * Add item to Values value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentVariationOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentVariationOptionDetail
      */
     public function addToValues($item)
     {
@@ -108,7 +108,7 @@ class ShipmentVariationOptionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentVariationOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentVariationOptionDetail
      */
     public static function __set_state(array $array)
     {

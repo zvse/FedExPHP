@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Services;
+namespace CommerceFedEx\FedExPHP\Services;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -23,12 +23,12 @@ class TrackService extends FedExService
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'TrackService_v12.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\TrackClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\TrackClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('trck',12,0,0);
+        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('trck',12,0,0);
     }
     /**
      * Method to call the operation originally named
@@ -37,10 +37,10 @@ class TrackService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest $signatureProofOfDeliveryLetterRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest $signatureProofOfDeliveryLetterRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply|bool
      */
-    public function retrieveSignatureProofOfDeliveryLetter(\NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest $signatureProofOfDeliveryLetterRequest)
+    public function retrieveSignatureProofOfDeliveryLetter(\CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest $signatureProofOfDeliveryLetterRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->retrieveSignatureProofOfDeliveryLetter($signatureProofOfDeliveryLetterRequest));
@@ -56,10 +56,10 @@ class TrackService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest $trackRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackRequest $trackRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackReply|bool
      */
-    public function track(\NicholasCreativeMedia\FedExPHP\Structs\TrackRequest $trackRequest)
+    public function track(\CommerceFedEx\FedExPHP\Structs\TrackRequest $trackRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->track($trackRequest));
@@ -75,10 +75,10 @@ class TrackService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest $signatureProofOfDeliveryFaxRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest $signatureProofOfDeliveryFaxRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxReply|bool
      */
-    public function sendSignatureProofOfDeliveryFax(\NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest $signatureProofOfDeliveryFaxRequest)
+    public function sendSignatureProofOfDeliveryFax(\CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest $signatureProofOfDeliveryFaxRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->sendSignatureProofOfDeliveryFax($signatureProofOfDeliveryFaxRequest));
@@ -94,10 +94,10 @@ class TrackService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest $sendNotificationsRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest $sendNotificationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply|bool
      */
-    public function sendNotifications(\NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsRequest $sendNotificationsRequest)
+    public function sendNotifications(\CommerceFedEx\FedExPHP\Structs\SendNotificationsRequest $sendNotificationsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->sendNotifications($sendNotificationsRequest));
@@ -110,7 +110,7 @@ class TrackService extends FedExService
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply|\NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxReply|\NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply|\NicholasCreativeMedia\FedExPHP\Structs\TrackReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply|\CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxReply|\CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterReply|\CommerceFedEx\FedExPHP\Structs\TrackReply
      */
     public function getResult()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class HazardousCommodityOptionDetail extends AbstractStructBase
     }
     /**
      * Set LabelTextOption value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityLabelTextOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityLabelTextOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityLabelTextOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityLabelTextOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelTextOption
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail
      */
     public function setLabelTextOption($labelTextOption = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityLabelTextOptionType::valueIsValid($labelTextOption)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelTextOption, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityLabelTextOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityLabelTextOptionType::valueIsValid($labelTextOption)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelTextOption, implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityLabelTextOptionType::getValidValues())), __LINE__);
         }
         $this->LabelTextOption = $labelTextOption;
         return $this;
@@ -77,7 +77,7 @@ class HazardousCommodityOptionDetail extends AbstractStructBase
     /**
      * Set CustomerSuppliedLabelText value
      * @param string $customerSuppliedLabelText
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail
      */
     public function setCustomerSuppliedLabelText($customerSuppliedLabelText = null)
     {
@@ -94,7 +94,7 @@ class HazardousCommodityOptionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail
      */
     public static function __set_state(array $array)
     {

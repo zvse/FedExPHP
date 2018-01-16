@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -57,7 +57,7 @@ class TrackEvent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Address information of the station that is responsible for the scan.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $Address;
     /**
@@ -91,11 +91,11 @@ class TrackEvent extends AbstractStructBase
      * @param string $eventDescription
      * @param string $statusExceptionCode
      * @param string $statusExceptionDescription
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
      * @param string $stationId
      * @param string $arrivalLocation
      */
-    public function __construct($timestamp = null, $eventType = null, $eventDescription = null, $statusExceptionCode = null, $statusExceptionDescription = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $address = null, $stationId = null, $arrivalLocation = null)
+    public function __construct($timestamp = null, $eventType = null, $eventDescription = null, $statusExceptionCode = null, $statusExceptionDescription = null, \CommerceFedEx\FedExPHP\Structs\Address $address = null, $stationId = null, $arrivalLocation = null)
     {
         $this
             ->setTimestamp($timestamp)
@@ -118,7 +118,7 @@ class TrackEvent extends AbstractStructBase
     /**
      * Set Timestamp value
      * @param string $timestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent
      */
     public function setTimestamp($timestamp = null)
     {
@@ -140,7 +140,7 @@ class TrackEvent extends AbstractStructBase
     /**
      * Set EventType value
      * @param string $eventType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent
      */
     public function setEventType($eventType = null)
     {
@@ -162,7 +162,7 @@ class TrackEvent extends AbstractStructBase
     /**
      * Set EventDescription value
      * @param string $eventDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent
      */
     public function setEventDescription($eventDescription = null)
     {
@@ -184,7 +184,7 @@ class TrackEvent extends AbstractStructBase
     /**
      * Set StatusExceptionCode value
      * @param string $statusExceptionCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent
      */
     public function setStatusExceptionCode($statusExceptionCode = null)
     {
@@ -206,7 +206,7 @@ class TrackEvent extends AbstractStructBase
     /**
      * Set StatusExceptionDescription value
      * @param string $statusExceptionDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent
      */
     public function setStatusExceptionDescription($statusExceptionDescription = null)
     {
@@ -219,7 +219,7 @@ class TrackEvent extends AbstractStructBase
     }
     /**
      * Get Address value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getAddress()
     {
@@ -227,10 +227,10 @@ class TrackEvent extends AbstractStructBase
     }
     /**
      * Set Address value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent
      */
-    public function setAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $address = null)
+    public function setAddress(\CommerceFedEx\FedExPHP\Structs\Address $address = null)
     {
         $this->Address = $address;
         return $this;
@@ -246,7 +246,7 @@ class TrackEvent extends AbstractStructBase
     /**
      * Set StationId value
      * @param string $stationId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent
      */
     public function setStationId($stationId = null)
     {
@@ -267,17 +267,17 @@ class TrackEvent extends AbstractStructBase
     }
     /**
      * Set ArrivalLocation value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ArrivalLocationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ArrivalLocationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ArrivalLocationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ArrivalLocationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $arrivalLocation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent
      */
     public function setArrivalLocation($arrivalLocation = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ArrivalLocationType::valueIsValid($arrivalLocation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $arrivalLocation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ArrivalLocationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ArrivalLocationType::valueIsValid($arrivalLocation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $arrivalLocation, implode(', ', \CommerceFedEx\FedExPHP\Enums\ArrivalLocationType::getValidValues())), __LINE__);
         }
         $this->ArrivalLocation = $arrivalLocation;
         return $this;
@@ -288,7 +288,7 @@ class TrackEvent extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackEvent
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackEvent
      */
     public static function __set_state(array $array)
     {

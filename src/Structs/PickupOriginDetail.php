@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -29,7 +29,7 @@ class PickupOriginDetail extends AbstractStructBase
      * The PickupLocation
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
      */
     public $PickupLocation;
     /**
@@ -150,7 +150,7 @@ class PickupOriginDetail extends AbstractStructBase
      * @uses PickupOriginDetail::setEarlyPickup()
      * @param bool $useAccountAddress
      * @param string $addressId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $pickupLocation
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $pickupLocation
      * @param string $packageLocation
      * @param string $buildingPart
      * @param string $buildingPartDescription
@@ -165,7 +165,7 @@ class PickupOriginDetail extends AbstractStructBase
      * @param string $suppliesRequested
      * @param bool $earlyPickup
      */
-    public function __construct($useAccountAddress = null, $addressId = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $pickupLocation = null, $packageLocation = null, $buildingPart = null, $buildingPartDescription = null, $readyTimestamp = null, $companyCloseTime = null, $stayLate = null, $pickupDateType = null, $lastAccessTime = null, $geographicalPostalCode = null, $location = null, $deleteLastUsed = null, $suppliesRequested = null, $earlyPickup = null)
+    public function __construct($useAccountAddress = null, $addressId = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $pickupLocation = null, $packageLocation = null, $buildingPart = null, $buildingPartDescription = null, $readyTimestamp = null, $companyCloseTime = null, $stayLate = null, $pickupDateType = null, $lastAccessTime = null, $geographicalPostalCode = null, $location = null, $deleteLastUsed = null, $suppliesRequested = null, $earlyPickup = null)
     {
         $this
             ->setUseAccountAddress($useAccountAddress)
@@ -196,7 +196,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set UseAccountAddress value
      * @param bool $useAccountAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setUseAccountAddress($useAccountAddress = null)
     {
@@ -214,7 +214,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set AddressId value
      * @param string $addressId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setAddressId($addressId = null)
     {
@@ -227,7 +227,7 @@ class PickupOriginDetail extends AbstractStructBase
     }
     /**
      * Get PickupLocation value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getPickupLocation()
     {
@@ -235,10 +235,10 @@ class PickupOriginDetail extends AbstractStructBase
     }
     /**
      * Set PickupLocation value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $pickupLocation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $pickupLocation
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
-    public function setPickupLocation(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $pickupLocation = null)
+    public function setPickupLocation(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $pickupLocation = null)
     {
         $this->PickupLocation = $pickupLocation;
         return $this;
@@ -253,17 +253,17 @@ class PickupOriginDetail extends AbstractStructBase
     }
     /**
      * Set PackageLocation value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupBuildingLocationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupBuildingLocationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupBuildingLocationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupBuildingLocationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $packageLocation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setPackageLocation($packageLocation = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PickupBuildingLocationType::valueIsValid($packageLocation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packageLocation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PickupBuildingLocationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PickupBuildingLocationType::valueIsValid($packageLocation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packageLocation, implode(', ', \CommerceFedEx\FedExPHP\Enums\PickupBuildingLocationType::getValidValues())), __LINE__);
         }
         $this->PackageLocation = $packageLocation;
         return $this;
@@ -278,17 +278,17 @@ class PickupOriginDetail extends AbstractStructBase
     }
     /**
      * Set BuildingPart value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BuildingPartCode::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BuildingPartCode::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\BuildingPartCode::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\BuildingPartCode::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $buildingPart
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setBuildingPart($buildingPart = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\BuildingPartCode::valueIsValid($buildingPart)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $buildingPart, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\BuildingPartCode::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\BuildingPartCode::valueIsValid($buildingPart)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $buildingPart, implode(', ', \CommerceFedEx\FedExPHP\Enums\BuildingPartCode::getValidValues())), __LINE__);
         }
         $this->BuildingPart = $buildingPart;
         return $this;
@@ -304,7 +304,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set BuildingPartDescription value
      * @param string $buildingPartDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setBuildingPartDescription($buildingPartDescription = null)
     {
@@ -326,7 +326,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set ReadyTimestamp value
      * @param string $readyTimestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setReadyTimestamp($readyTimestamp = null)
     {
@@ -348,7 +348,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set CompanyCloseTime value
      * @param string $companyCloseTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setCompanyCloseTime($companyCloseTime = null)
     {
@@ -370,7 +370,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set StayLate value
      * @param bool $stayLate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setStayLate($stayLate = null)
     {
@@ -387,17 +387,17 @@ class PickupOriginDetail extends AbstractStructBase
     }
     /**
      * Set PickupDateType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $pickupDateType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setPickupDateType($pickupDateType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid($pickupDateType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickupDateType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid($pickupDateType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickupDateType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
         }
         $this->PickupDateType = $pickupDateType;
         return $this;
@@ -413,7 +413,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set LastAccessTime value
      * @param string $lastAccessTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setLastAccessTime($lastAccessTime = null)
     {
@@ -435,7 +435,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set GeographicalPostalCode value
      * @param string $geographicalPostalCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setGeographicalPostalCode($geographicalPostalCode = null)
     {
@@ -457,7 +457,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set Location value
      * @param string $location
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setLocation($location = null)
     {
@@ -479,7 +479,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set DeleteLastUsed value
      * @param bool $deleteLastUsed
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setDeleteLastUsed($deleteLastUsed = null)
     {
@@ -497,7 +497,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set SuppliesRequested value
      * @param string $suppliesRequested
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setSuppliesRequested($suppliesRequested = null)
     {
@@ -519,7 +519,7 @@ class PickupOriginDetail extends AbstractStructBase
     /**
      * Set EarlyPickup value
      * @param bool $earlyPickup
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public function setEarlyPickup($earlyPickup = null)
     {
@@ -532,7 +532,7 @@ class PickupOriginDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupOriginDetail
      */
     public static function __set_state(array $array)
     {

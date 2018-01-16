@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -61,7 +61,7 @@ class DangerousGoodsSignatory extends AbstractStructBase
     /**
      * Set ContactName value
      * @param string $contactName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory
+     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory
      */
     public function setContactName($contactName = null)
     {
@@ -83,7 +83,7 @@ class DangerousGoodsSignatory extends AbstractStructBase
     /**
      * Set Title value
      * @param string $title
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory
+     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory
      */
     public function setTitle($title = null)
     {
@@ -105,7 +105,7 @@ class DangerousGoodsSignatory extends AbstractStructBase
     /**
      * Set Place value
      * @param string $place
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory
+     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory
      */
     public function setPlace($place = null)
     {
@@ -122,7 +122,7 @@ class DangerousGoodsSignatory extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory
+     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory
      */
     public static function __set_state(array $array)
     {

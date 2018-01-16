@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -52,7 +52,7 @@ class Localization extends AbstractStructBase
     /**
      * Set LanguageCode value
      * @param string $languageCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Localization
+     * @return \CommerceFedEx\FedExPHP\Structs\Localization
      */
     public function setLanguageCode($languageCode = null)
     {
@@ -74,7 +74,7 @@ class Localization extends AbstractStructBase
     /**
      * Set LocaleCode value
      * @param string $localeCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Localization
+     * @return \CommerceFedEx\FedExPHP\Structs\Localization
      */
     public function setLocaleCode($localeCode = null)
     {
@@ -91,7 +91,7 @@ class Localization extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Localization
+     * @return \CommerceFedEx\FedExPHP\Structs\Localization
      */
     public static function __set_state(array $array)
     {

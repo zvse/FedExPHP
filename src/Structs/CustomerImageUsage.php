@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -47,17 +47,17 @@ class CustomerImageUsage extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerImageUsageType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerImageUsageType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerImageUsageType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerImageUsageType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomerImageUsageType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomerImageUsageType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CustomerImageUsageType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomerImageUsageType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -72,17 +72,17 @@ class CustomerImageUsage extends AbstractStructBase
     }
     /**
      * Set Id value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageId::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageId::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ImageId::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ImageId::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $id
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage
      */
     public function setId($id = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ImageId::valueIsValid($id)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $id, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ImageId::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ImageId::valueIsValid($id)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $id, implode(', ', \CommerceFedEx\FedExPHP\Enums\ImageId::getValidValues())), __LINE__);
         }
         $this->Id = $id;
         return $this;
@@ -93,7 +93,7 @@ class CustomerImageUsage extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage
      */
     public static function __set_state(array $array)
     {

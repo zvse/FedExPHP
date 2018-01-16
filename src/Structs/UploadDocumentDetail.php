@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -99,7 +99,7 @@ class UploadDocumentDetail extends AbstractStructBase
     /**
      * Set LineNumber value
      * @param int $lineNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentDetail
      */
     public function setLineNumber($lineNumber = null)
     {
@@ -121,7 +121,7 @@ class UploadDocumentDetail extends AbstractStructBase
     /**
      * Set CustomerReference value
      * @param string $customerReference
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentDetail
      */
     public function setCustomerReference($customerReference = null)
     {
@@ -142,17 +142,17 @@ class UploadDocumentDetail extends AbstractStructBase
     }
     /**
      * Set DocumentProducer value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentProducerType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $documentProducer
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentDetail
      */
     public function setDocumentProducer($documentProducer = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid($documentProducer)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentProducer, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentProducerType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid($documentProducer)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentProducer, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::getValidValues())), __LINE__);
         }
         $this->DocumentProducer = $documentProducer;
         return $this;
@@ -167,17 +167,17 @@ class UploadDocumentDetail extends AbstractStructBase
     }
     /**
      * Set DocumentType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $documentType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentDetail
      */
     public function setDocumentType($documentType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentType::valueIsValid($documentType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentType::valueIsValid($documentType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentType, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentType::getValidValues())), __LINE__);
         }
         $this->DocumentType = $documentType;
         return $this;
@@ -193,7 +193,7 @@ class UploadDocumentDetail extends AbstractStructBase
     /**
      * Set FileName value
      * @param string $fileName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentDetail
      */
     public function setFileName($fileName = null)
     {
@@ -215,7 +215,7 @@ class UploadDocumentDetail extends AbstractStructBase
     /**
      * Set DocumentContent value
      * @param string $documentContent
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentDetail
      */
     public function setDocumentContent($documentContent = null)
     {
@@ -237,7 +237,7 @@ class UploadDocumentDetail extends AbstractStructBase
     /**
      * Set ExpirationDate value
      * @param string $expirationDate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentDetail
      */
     public function setExpirationDate($expirationDate = null)
     {
@@ -254,7 +254,7 @@ class UploadDocumentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentDetail
      */
     public static function __set_state(array $array)
     {

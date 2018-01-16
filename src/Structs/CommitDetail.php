@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -42,14 +42,14 @@ class CommitDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Supporting detail for applied options identified in preceding field.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail
      */
     public $AppliedSubOptions;
     /**
      * The DerivedShipmentSignatureOption
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail
      */
     public $DerivedShipmentSignatureOption;
     /**
@@ -57,21 +57,21 @@ class CommitDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail[]
      */
     public $DerivedPackageSignatureOptions;
     /**
      * The DerivedOriginDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public $DerivedOriginDetail;
     /**
      * The DerivedDestinationDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail
      */
     public $DerivedDestinationDetail;
     /**
@@ -119,7 +119,7 @@ class CommitDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The address of the broker to be used for this shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $BrokerAddress;
     /**
@@ -177,7 +177,7 @@ class CommitDetail extends AbstractStructBase
      * "REQUEST COMPLETED"
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public $CommitMessages;
     /**
@@ -195,7 +195,7 @@ class CommitDetail extends AbstractStructBase
      * - documentation: Information about why a shipment delivery is delayed and at what level (country/service etc.).
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\DelayDetail[]
      */
     public $DelayDetails;
     /**
@@ -219,7 +219,7 @@ class CommitDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Freight origin and destination city center information and total distance between origin and destination city centers.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightCommitDetail
      */
     public $FreightCommitDetail;
     /**
@@ -253,31 +253,31 @@ class CommitDetail extends AbstractStructBase
      * @param string $commodityName
      * @param string $serviceType
      * @param string[] $appliedOptions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $derivedShipmentSignatureOption
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail[] $derivedPackageSignatureOptions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedOriginDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedDestinationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions
+     * @param \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $derivedShipmentSignatureOption
+     * @param \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail[] $derivedPackageSignatureOptions
+     * @param \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedOriginDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedDestinationDetail
      * @param string $commitTimestamp
      * @param string $dayOfWeek
      * @param string $transitTime
      * @param string $maximumTransitTime
      * @param string $destinationServiceArea
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $brokerAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $brokerAddress
      * @param string $brokerLocationId
      * @param string $brokerCommitTimestamp
      * @param string $brokerCommitDayOfWeek
      * @param int $brokerToDestinationDays
      * @param string $proofOfDeliveryDate
      * @param string $proofOfDeliveryDayOfWeek
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $commitMessages
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $commitMessages
      * @param string[] $deliveryMessages
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail[] $delayDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\DelayDetail[] $delayDetails
      * @param string $documentContent
      * @param string[] $requiredDocuments
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail $freightCommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightCommitDetail $freightCommitDetail
      */
-    public function __construct($commodityName = null, $serviceType = null, array $appliedOptions = array(), \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions = null, \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $derivedShipmentSignatureOption = null, array $derivedPackageSignatureOptions = array(), \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedOriginDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedDestinationDetail = null, $commitTimestamp = null, $dayOfWeek = null, $transitTime = null, $maximumTransitTime = null, $destinationServiceArea = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $brokerAddress = null, $brokerLocationId = null, $brokerCommitTimestamp = null, $brokerCommitDayOfWeek = null, $brokerToDestinationDays = null, $proofOfDeliveryDate = null, $proofOfDeliveryDayOfWeek = null, array $commitMessages = array(), array $deliveryMessages = array(), array $delayDetails = array(), $documentContent = null, array $requiredDocuments = array(), \NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail $freightCommitDetail = null)
+    public function __construct($commodityName = null, $serviceType = null, array $appliedOptions = array(), \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions = null, \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $derivedShipmentSignatureOption = null, array $derivedPackageSignatureOptions = array(), \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedOriginDetail = null, \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedDestinationDetail = null, $commitTimestamp = null, $dayOfWeek = null, $transitTime = null, $maximumTransitTime = null, $destinationServiceArea = null, \CommerceFedEx\FedExPHP\Structs\Address $brokerAddress = null, $brokerLocationId = null, $brokerCommitTimestamp = null, $brokerCommitDayOfWeek = null, $brokerToDestinationDays = null, $proofOfDeliveryDate = null, $proofOfDeliveryDayOfWeek = null, array $commitMessages = array(), array $deliveryMessages = array(), array $delayDetails = array(), $documentContent = null, array $requiredDocuments = array(), \CommerceFedEx\FedExPHP\Structs\FreightCommitDetail $freightCommitDetail = null)
     {
         $this
             ->setCommodityName($commodityName)
@@ -318,7 +318,7 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set CommodityName value
      * @param string $commodityName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setCommodityName($commodityName = null)
     {
@@ -339,17 +339,17 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set ServiceType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $serviceType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setServiceType($serviceType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid($serviceType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid($serviceType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
         }
         $this->ServiceType = $serviceType;
         return $this;
@@ -364,46 +364,46 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set AppliedOptions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $appliedOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setAppliedOptions(array $appliedOptions = array())
     {
         $invalidValues = array();
         foreach ($appliedOptions as $commitDetailAppliedOptionsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::valueIsValid($commitDetailAppliedOptionsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\ServiceOptionType::valueIsValid($commitDetailAppliedOptionsItem)) {
                 $invalidValues[] = var_export($commitDetailAppliedOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::getValidValues())), __LINE__);
         }
         $this->AppliedOptions = $appliedOptions;
         return $this;
     }
     /**
      * Add item to AppliedOptions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function addToAppliedOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ServiceOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::getValidValues())), __LINE__);
         }
         $this->AppliedOptions[] = $item;
         return $this;
     }
     /**
      * Get AppliedSubOptions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail|null
      */
     public function getAppliedSubOptions()
     {
@@ -411,17 +411,17 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set AppliedSubOptions value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
-    public function setAppliedSubOptions(\NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions = null)
+    public function setAppliedSubOptions(\CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions = null)
     {
         $this->AppliedSubOptions = $appliedSubOptions;
         return $this;
     }
     /**
      * Get DerivedShipmentSignatureOption value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail|null
      */
     public function getDerivedShipmentSignatureOption()
     {
@@ -429,17 +429,17 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set DerivedShipmentSignatureOption value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $derivedShipmentSignatureOption
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $derivedShipmentSignatureOption
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
-    public function setDerivedShipmentSignatureOption(\NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $derivedShipmentSignatureOption = null)
+    public function setDerivedShipmentSignatureOption(\CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $derivedShipmentSignatureOption = null)
     {
         $this->DerivedShipmentSignatureOption = $derivedShipmentSignatureOption;
         return $this;
     }
     /**
      * Get DerivedPackageSignatureOptions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail[]|null
      */
     public function getDerivedPackageSignatureOptions()
     {
@@ -448,15 +448,15 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set DerivedPackageSignatureOptions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail[] $derivedPackageSignatureOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail[] $derivedPackageSignatureOptions
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setDerivedPackageSignatureOptions(array $derivedPackageSignatureOptions = array())
     {
         foreach ($derivedPackageSignatureOptions as $commitDetailDerivedPackageSignatureOptionsItem) {
             // validation for constraint: itemType
-            if (!$commitDetailDerivedPackageSignatureOptionsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail) {
-                throw new \InvalidArgumentException(sprintf('The DerivedPackageSignatureOptions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail, "%s" given', is_object($commitDetailDerivedPackageSignatureOptionsItem) ? get_class($commitDetailDerivedPackageSignatureOptionsItem) : gettype($commitDetailDerivedPackageSignatureOptionsItem)), __LINE__);
+            if (!$commitDetailDerivedPackageSignatureOptionsItem instanceof \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail) {
+                throw new \InvalidArgumentException(sprintf('The DerivedPackageSignatureOptions property can only contain items of \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail, "%s" given', is_object($commitDetailDerivedPackageSignatureOptionsItem) ? get_class($commitDetailDerivedPackageSignatureOptionsItem) : gettype($commitDetailDerivedPackageSignatureOptionsItem)), __LINE__);
             }
         }
         $this->DerivedPackageSignatureOptions = $derivedPackageSignatureOptions;
@@ -465,21 +465,21 @@ class CommitDetail extends AbstractStructBase
     /**
      * Add item to DerivedPackageSignatureOptions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
-    public function addToDerivedPackageSignatureOptions(\NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $item)
+    public function addToDerivedPackageSignatureOptions(\CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail) {
-            throw new \InvalidArgumentException(sprintf('The DerivedPackageSignatureOptions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail) {
+            throw new \InvalidArgumentException(sprintf('The DerivedPackageSignatureOptions property can only contain items of \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DerivedPackageSignatureOptions[] = $item;
         return $this;
     }
     /**
      * Get DerivedOriginDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail|null
      */
     public function getDerivedOriginDetail()
     {
@@ -487,17 +487,17 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set DerivedOriginDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedOriginDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedOriginDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
-    public function setDerivedOriginDetail(\NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedOriginDetail = null)
+    public function setDerivedOriginDetail(\CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedOriginDetail = null)
     {
         $this->DerivedOriginDetail = $derivedOriginDetail;
         return $this;
     }
     /**
      * Get DerivedDestinationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail|null
      */
     public function getDerivedDestinationDetail()
     {
@@ -505,10 +505,10 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set DerivedDestinationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedDestinationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedDestinationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
-    public function setDerivedDestinationDetail(\NicholasCreativeMedia\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedDestinationDetail = null)
+    public function setDerivedDestinationDetail(\CommerceFedEx\FedExPHP\Structs\CleansedAddressAndLocationDetail $derivedDestinationDetail = null)
     {
         $this->DerivedDestinationDetail = $derivedDestinationDetail;
         return $this;
@@ -524,7 +524,7 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set CommitTimestamp value
      * @param string $commitTimestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setCommitTimestamp($commitTimestamp = null)
     {
@@ -545,17 +545,17 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set DayOfWeek value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $dayOfWeek
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setDayOfWeek($dayOfWeek = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($dayOfWeek)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dayOfWeek, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($dayOfWeek)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dayOfWeek, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->DayOfWeek = $dayOfWeek;
         return $this;
@@ -570,17 +570,17 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set TransitTime value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $transitTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setTransitTime($transitTime = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid($transitTime)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $transitTime, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid($transitTime)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $transitTime, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
         }
         $this->TransitTime = $transitTime;
         return $this;
@@ -595,17 +595,17 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set MaximumTransitTime value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $maximumTransitTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setMaximumTransitTime($maximumTransitTime = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid($maximumTransitTime)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $maximumTransitTime, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid($maximumTransitTime)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $maximumTransitTime, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
         }
         $this->MaximumTransitTime = $maximumTransitTime;
         return $this;
@@ -621,7 +621,7 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set DestinationServiceArea value
      * @param string $destinationServiceArea
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setDestinationServiceArea($destinationServiceArea = null)
     {
@@ -634,7 +634,7 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Get BrokerAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getBrokerAddress()
     {
@@ -642,10 +642,10 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set BrokerAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $brokerAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $brokerAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
-    public function setBrokerAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $brokerAddress = null)
+    public function setBrokerAddress(\CommerceFedEx\FedExPHP\Structs\Address $brokerAddress = null)
     {
         $this->BrokerAddress = $brokerAddress;
         return $this;
@@ -661,7 +661,7 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set BrokerLocationId value
      * @param string $brokerLocationId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setBrokerLocationId($brokerLocationId = null)
     {
@@ -683,7 +683,7 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set BrokerCommitTimestamp value
      * @param string $brokerCommitTimestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setBrokerCommitTimestamp($brokerCommitTimestamp = null)
     {
@@ -704,17 +704,17 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set BrokerCommitDayOfWeek value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $brokerCommitDayOfWeek
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setBrokerCommitDayOfWeek($brokerCommitDayOfWeek = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($brokerCommitDayOfWeek)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $brokerCommitDayOfWeek, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($brokerCommitDayOfWeek)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $brokerCommitDayOfWeek, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->BrokerCommitDayOfWeek = $brokerCommitDayOfWeek;
         return $this;
@@ -730,7 +730,7 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set BrokerToDestinationDays value
      * @param int $brokerToDestinationDays
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setBrokerToDestinationDays($brokerToDestinationDays = null)
     {
@@ -752,7 +752,7 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set ProofOfDeliveryDate value
      * @param string $proofOfDeliveryDate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setProofOfDeliveryDate($proofOfDeliveryDate = null)
     {
@@ -773,24 +773,24 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set ProofOfDeliveryDayOfWeek value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $proofOfDeliveryDayOfWeek
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setProofOfDeliveryDayOfWeek($proofOfDeliveryDayOfWeek = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($proofOfDeliveryDayOfWeek)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $proofOfDeliveryDayOfWeek, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($proofOfDeliveryDayOfWeek)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $proofOfDeliveryDayOfWeek, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->ProofOfDeliveryDayOfWeek = $proofOfDeliveryDayOfWeek;
         return $this;
     }
     /**
      * Get CommitMessages value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]|null
      */
     public function getCommitMessages()
     {
@@ -799,15 +799,15 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set CommitMessages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $commitMessages
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $commitMessages
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setCommitMessages(array $commitMessages = array())
     {
         foreach ($commitMessages as $commitDetailCommitMessagesItem) {
             // validation for constraint: itemType
-            if (!$commitDetailCommitMessagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The CommitMessages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($commitDetailCommitMessagesItem) ? get_class($commitDetailCommitMessagesItem) : gettype($commitDetailCommitMessagesItem)), __LINE__);
+            if (!$commitDetailCommitMessagesItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The CommitMessages property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($commitDetailCommitMessagesItem) ? get_class($commitDetailCommitMessagesItem) : gettype($commitDetailCommitMessagesItem)), __LINE__);
             }
         }
         $this->CommitMessages = $commitMessages;
@@ -816,14 +816,14 @@ class CommitDetail extends AbstractStructBase
     /**
      * Add item to CommitMessages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
-    public function addToCommitMessages(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
+    public function addToCommitMessages(\CommerceFedEx\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The CommitMessages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The CommitMessages property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CommitMessages[] = $item;
         return $this;
@@ -840,7 +840,7 @@ class CommitDetail extends AbstractStructBase
      * Set DeliveryMessages value
      * @throws \InvalidArgumentException
      * @param string[] $deliveryMessages
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setDeliveryMessages(array $deliveryMessages = array())
     {
@@ -857,7 +857,7 @@ class CommitDetail extends AbstractStructBase
      * Add item to DeliveryMessages value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function addToDeliveryMessages($item)
     {
@@ -870,7 +870,7 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Get DelayDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\DelayDetail[]|null
      */
     public function getDelayDetails()
     {
@@ -879,15 +879,15 @@ class CommitDetail extends AbstractStructBase
     /**
      * Set DelayDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail[] $delayDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\DelayDetail[] $delayDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setDelayDetails(array $delayDetails = array())
     {
         foreach ($delayDetails as $commitDetailDelayDetailsItem) {
             // validation for constraint: itemType
-            if (!$commitDetailDelayDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail) {
-                throw new \InvalidArgumentException(sprintf('The DelayDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail, "%s" given', is_object($commitDetailDelayDetailsItem) ? get_class($commitDetailDelayDetailsItem) : gettype($commitDetailDelayDetailsItem)), __LINE__);
+            if (!$commitDetailDelayDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\DelayDetail) {
+                throw new \InvalidArgumentException(sprintf('The DelayDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\DelayDetail, "%s" given', is_object($commitDetailDelayDetailsItem) ? get_class($commitDetailDelayDetailsItem) : gettype($commitDetailDelayDetailsItem)), __LINE__);
             }
         }
         $this->DelayDetails = $delayDetails;
@@ -896,14 +896,14 @@ class CommitDetail extends AbstractStructBase
     /**
      * Add item to DelayDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\DelayDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
-    public function addToDelayDetails(\NicholasCreativeMedia\FedExPHP\Structs\DelayDetail $item)
+    public function addToDelayDetails(\CommerceFedEx\FedExPHP\Structs\DelayDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail) {
-            throw new \InvalidArgumentException(sprintf('The DelayDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\DelayDetail) {
+            throw new \InvalidArgumentException(sprintf('The DelayDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\DelayDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DelayDetails[] = $item;
         return $this;
@@ -918,17 +918,17 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set DocumentContent value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\InternationalDocumentContentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\InternationalDocumentContentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\InternationalDocumentContentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\InternationalDocumentContentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $documentContent
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setDocumentContent($documentContent = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\InternationalDocumentContentType::valueIsValid($documentContent)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentContent, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\InternationalDocumentContentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\InternationalDocumentContentType::valueIsValid($documentContent)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentContent, implode(', ', \CommerceFedEx\FedExPHP\Enums\InternationalDocumentContentType::getValidValues())), __LINE__);
         }
         $this->DocumentContent = $documentContent;
         return $this;
@@ -943,46 +943,46 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set RequiredDocuments value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequiredShippingDocumentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequiredShippingDocumentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RequiredShippingDocumentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RequiredShippingDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $requiredDocuments
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function setRequiredDocuments(array $requiredDocuments = array())
     {
         $invalidValues = array();
         foreach ($requiredDocuments as $commitDetailRequiredDocumentsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\RequiredShippingDocumentType::valueIsValid($commitDetailRequiredDocumentsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\RequiredShippingDocumentType::valueIsValid($commitDetailRequiredDocumentsItem)) {
                 $invalidValues[] = var_export($commitDetailRequiredDocumentsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequiredShippingDocumentType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RequiredShippingDocumentType::getValidValues())), __LINE__);
         }
         $this->RequiredDocuments = $requiredDocuments;
         return $this;
     }
     /**
      * Add item to RequiredDocuments value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequiredShippingDocumentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequiredShippingDocumentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RequiredShippingDocumentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RequiredShippingDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public function addToRequiredDocuments($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RequiredShippingDocumentType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequiredShippingDocumentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RequiredShippingDocumentType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RequiredShippingDocumentType::getValidValues())), __LINE__);
         }
         $this->RequiredDocuments[] = $item;
         return $this;
     }
     /**
      * Get FreightCommitDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightCommitDetail|null
      */
     public function getFreightCommitDetail()
     {
@@ -990,10 +990,10 @@ class CommitDetail extends AbstractStructBase
     }
     /**
      * Set FreightCommitDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail $freightCommitDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightCommitDetail $freightCommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
-    public function setFreightCommitDetail(\NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail $freightCommitDetail = null)
+    public function setFreightCommitDetail(\CommerceFedEx\FedExPHP\Structs\FreightCommitDetail $freightCommitDetail = null)
     {
         $this->FreightCommitDetail = $freightCommitDetail;
         return $this;
@@ -1004,7 +1004,7 @@ class CommitDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail
      */
     public static function __set_state(array $array)
     {

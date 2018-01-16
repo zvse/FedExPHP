@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -58,7 +58,7 @@ class ExpressFreightDetail extends AbstractStructBase
     /**
      * Set PackingListEnclosed value
      * @param bool $packingListEnclosed
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail
      */
     public function setPackingListEnclosed($packingListEnclosed = null)
     {
@@ -76,7 +76,7 @@ class ExpressFreightDetail extends AbstractStructBase
     /**
      * Set ShippersLoadAndCount value
      * @param int $shippersLoadAndCount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail
      */
     public function setShippersLoadAndCount($shippersLoadAndCount = null)
     {
@@ -98,7 +98,7 @@ class ExpressFreightDetail extends AbstractStructBase
     /**
      * Set BookingConfirmationNumber value
      * @param string $bookingConfirmationNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail
      */
     public function setBookingConfirmationNumber($bookingConfirmationNumber = null)
     {
@@ -115,7 +115,7 @@ class ExpressFreightDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail
      */
     public static function __set_state(array $array)
     {

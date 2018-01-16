@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Services;
+namespace CommerceFedEx\FedExPHP\Services;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -23,12 +23,12 @@ class PickupService extends FedExService
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'PickupService_v13.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\PickupClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\PickupClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('disp',13,0,0);
+        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('disp',13,0,0);
     }
     /**
      * Method to call the operation originally named getPickupAvailability
@@ -36,10 +36,10 @@ class PickupService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest $pickupAvailabilityRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest $pickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply|bool
      */
-    public function getPickupAvailability(\NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest $pickupAvailabilityRequest)
+    public function getPickupAvailability(\CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest $pickupAvailabilityRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->getPickupAvailability($pickupAvailabilityRequest));
@@ -55,10 +55,10 @@ class PickupService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupRequest $createPickupRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\CreatePickupRequest $createPickupRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply|bool
      */
-    public function createPickup(\NicholasCreativeMedia\FedExPHP\Structs\CreatePickupRequest $createPickupRequest)
+    public function createPickup(\CommerceFedEx\FedExPHP\Structs\CreatePickupRequest $createPickupRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->createPickup($createPickupRequest));
@@ -74,10 +74,10 @@ class PickupService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest $cancelPickupRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest $cancelPickupRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupReply|bool
      */
-    public function cancelPickup(\NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest $cancelPickupRequest)
+    public function cancelPickup(\CommerceFedEx\FedExPHP\Structs\CancelPickupRequest $cancelPickupRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->cancelPickup($cancelPickupRequest));
@@ -90,7 +90,7 @@ class PickupService extends FedExService
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupReply|\NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply|\NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
+     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupReply|\CommerceFedEx\FedExPHP\Structs\CreatePickupReply|\CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
      */
     public function getResult()
     {

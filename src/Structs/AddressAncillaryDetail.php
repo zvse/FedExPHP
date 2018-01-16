@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -149,7 +149,7 @@ class AddressAncillaryDetail extends AbstractStructBase
     /**
      * Set LocationInCity value
      * @param string $locationInCity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setLocationInCity($locationInCity = null)
     {
@@ -171,7 +171,7 @@ class AddressAncillaryDetail extends AbstractStructBase
     /**
      * Set LocationInProperty value
      * @param string $locationInProperty
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setLocationInProperty($locationInProperty = null)
     {
@@ -192,17 +192,17 @@ class AddressAncillaryDetail extends AbstractStructBase
     }
     /**
      * Set Accessibility value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationAccessibilityType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationAccessibilityType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationAccessibilityType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationAccessibilityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $accessibility
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setAccessibility($accessibility = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LocationAccessibilityType::valueIsValid($accessibility)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $accessibility, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LocationAccessibilityType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LocationAccessibilityType::valueIsValid($accessibility)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $accessibility, implode(', ', \CommerceFedEx\FedExPHP\Enums\LocationAccessibilityType::getValidValues())), __LINE__);
         }
         $this->Accessibility = $accessibility;
         return $this;
@@ -218,7 +218,7 @@ class AddressAncillaryDetail extends AbstractStructBase
     /**
      * Set Building value
      * @param string $building
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setBuilding($building = null)
     {
@@ -240,7 +240,7 @@ class AddressAncillaryDetail extends AbstractStructBase
     /**
      * Set Department value
      * @param string $department
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setDepartment($department = null)
     {
@@ -262,7 +262,7 @@ class AddressAncillaryDetail extends AbstractStructBase
     /**
      * Set RoomFloor value
      * @param string $roomFloor
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setRoomFloor($roomFloor = null)
     {
@@ -284,7 +284,7 @@ class AddressAncillaryDetail extends AbstractStructBase
     /**
      * Set Suite value
      * @param string $suite
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setSuite($suite = null)
     {
@@ -306,7 +306,7 @@ class AddressAncillaryDetail extends AbstractStructBase
     /**
      * Set Apartment value
      * @param string $apartment
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setApartment($apartment = null)
     {
@@ -328,7 +328,7 @@ class AddressAncillaryDetail extends AbstractStructBase
     /**
      * Set Room value
      * @param string $room
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setRoom($room = null)
     {
@@ -350,7 +350,7 @@ class AddressAncillaryDetail extends AbstractStructBase
     /**
      * Set CrossStreet value
      * @param string $crossStreet
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setCrossStreet($crossStreet = null)
     {
@@ -373,7 +373,7 @@ class AddressAncillaryDetail extends AbstractStructBase
      * Set AdditionalDescriptions value
      * @throws \InvalidArgumentException
      * @param string[] $additionalDescriptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function setAdditionalDescriptions(array $additionalDescriptions = array())
     {
@@ -390,7 +390,7 @@ class AddressAncillaryDetail extends AbstractStructBase
      * Add item to AdditionalDescriptions value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public function addToAdditionalDescriptions($item)
     {
@@ -407,7 +407,7 @@ class AddressAncillaryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressAncillaryDetail
      */
     public static function __set_state(array $array)
     {

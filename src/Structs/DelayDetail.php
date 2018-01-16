@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -95,7 +95,7 @@ class DelayDetail extends AbstractStructBase
     /**
      * Set Date value
      * @param string $date
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DelayDetail
      */
     public function setDate($date = null)
     {
@@ -116,17 +116,17 @@ class DelayDetail extends AbstractStructBase
     }
     /**
      * Set DayOfWeek value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $dayOfWeek
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DelayDetail
      */
     public function setDayOfWeek($dayOfWeek = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($dayOfWeek)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dayOfWeek, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($dayOfWeek)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dayOfWeek, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->DayOfWeek = $dayOfWeek;
         return $this;
@@ -141,17 +141,17 @@ class DelayDetail extends AbstractStructBase
     }
     /**
      * Set Level value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DelayLevelType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DelayLevelType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DelayLevelType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DelayLevelType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $level
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DelayDetail
      */
     public function setLevel($level = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DelayLevelType::valueIsValid($level)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $level, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DelayLevelType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DelayLevelType::valueIsValid($level)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $level, implode(', ', \CommerceFedEx\FedExPHP\Enums\DelayLevelType::getValidValues())), __LINE__);
         }
         $this->Level = $level;
         return $this;
@@ -166,17 +166,17 @@ class DelayDetail extends AbstractStructBase
     }
     /**
      * Set Point value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DelayPointType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DelayPointType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DelayPointType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DelayPointType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $point
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DelayDetail
      */
     public function setPoint($point = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DelayPointType::valueIsValid($point)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $point, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DelayPointType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DelayPointType::valueIsValid($point)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $point, implode(', ', \CommerceFedEx\FedExPHP\Enums\DelayPointType::getValidValues())), __LINE__);
         }
         $this->Point = $point;
         return $this;
@@ -191,17 +191,17 @@ class DelayDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CommitmentDelayType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CommitmentDelayType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CommitmentDelayType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CommitmentDelayType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DelayDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CommitmentDelayType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CommitmentDelayType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CommitmentDelayType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\CommitmentDelayType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -217,7 +217,7 @@ class DelayDetail extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DelayDetail
      */
     public function setDescription($description = null)
     {
@@ -234,7 +234,7 @@ class DelayDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DelayDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DelayDetail
      */
     public static function __set_state(array $array)
     {

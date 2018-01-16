@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class Weight extends AbstractStructBase
     }
     /**
      * Set Units value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\WeightUnits::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\WeightUnits::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\WeightUnits::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\WeightUnits::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $units
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public function setUnits($units = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\WeightUnits::valueIsValid($units)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\WeightUnits::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\WeightUnits::valueIsValid($units)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \CommerceFedEx\FedExPHP\Enums\WeightUnits::getValidValues())), __LINE__);
         }
         $this->Units = $units;
         return $this;
@@ -77,7 +77,7 @@ class Weight extends AbstractStructBase
     /**
      * Set Value value
      * @param float $value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public function setValue($value = null)
     {
@@ -90,7 +90,7 @@ class Weight extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public static function __set_state(array $array)
     {

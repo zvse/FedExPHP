@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -48,7 +48,7 @@ class ExpressFreightDetailContact extends AbstractStructBase
     /**
      * Set Name value
      * @param string $name
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetailContact
+     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetailContact
      */
     public function setName($name = null)
     {
@@ -70,7 +70,7 @@ class ExpressFreightDetailContact extends AbstractStructBase
     /**
      * Set Phone value
      * @param string $phone
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetailContact
+     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetailContact
      */
     public function setPhone($phone = null)
     {
@@ -87,7 +87,7 @@ class ExpressFreightDetailContact extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetailContact
+     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetailContact
      */
     public static function __set_state(array $array)
     {

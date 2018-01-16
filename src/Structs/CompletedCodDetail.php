@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,7 +16,7 @@ class CompletedCodDetail extends AbstractStructBase
      * The CollectionAmount
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $CollectionAmount;
     /**
@@ -30,10 +30,10 @@ class CompletedCodDetail extends AbstractStructBase
      * Constructor method for CompletedCodDetail
      * @uses CompletedCodDetail::setCollectionAmount()
      * @uses CompletedCodDetail::setAdjustmentType()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $collectionAmount
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $collectionAmount
      * @param string $adjustmentType
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Money $collectionAmount = null, $adjustmentType = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\Money $collectionAmount = null, $adjustmentType = null)
     {
         $this
             ->setCollectionAmount($collectionAmount)
@@ -41,7 +41,7 @@ class CompletedCodDetail extends AbstractStructBase
     }
     /**
      * Get CollectionAmount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getCollectionAmount()
     {
@@ -49,10 +49,10 @@ class CompletedCodDetail extends AbstractStructBase
     }
     /**
      * Set CollectionAmount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $collectionAmount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedCodDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $collectionAmount
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedCodDetail
      */
-    public function setCollectionAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $collectionAmount = null)
+    public function setCollectionAmount(\CommerceFedEx\FedExPHP\Structs\Money $collectionAmount = null)
     {
         $this->CollectionAmount = $collectionAmount;
         return $this;
@@ -67,17 +67,17 @@ class CompletedCodDetail extends AbstractStructBase
     }
     /**
      * Set AdjustmentType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CodAdjustmentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CodAdjustmentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CodAdjustmentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CodAdjustmentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $adjustmentType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedCodDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedCodDetail
      */
     public function setAdjustmentType($adjustmentType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CodAdjustmentType::valueIsValid($adjustmentType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $adjustmentType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CodAdjustmentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CodAdjustmentType::valueIsValid($adjustmentType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $adjustmentType, implode(', ', \CommerceFedEx\FedExPHP\Enums\CodAdjustmentType::getValidValues())), __LINE__);
         }
         $this->AdjustmentType = $adjustmentType;
         return $this;
@@ -88,7 +88,7 @@ class CompletedCodDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedCodDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedCodDetail
      */
     public static function __set_state(array $array)
     {

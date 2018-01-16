@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,14 +17,14 @@ class DistanceAndLocationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Distance between an address of a geographic location and an address of a FedEx location.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Distance
+     * @var \CommerceFedEx\FedExPHP\Structs\Distance
      */
     public $Distance;
     /**
      * The ReservationAvailabilityDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ReservationAvailabilityDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ReservationAvailabilityDetail
      */
     public $ReservationAvailabilityDetail;
     /**
@@ -40,7 +40,7 @@ class DistanceAndLocationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Details about a FedEx location such as services offered, working hours and pick and drop off times.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\LocationDetail
      */
     public $LocationDetail;
     /**
@@ -49,12 +49,12 @@ class DistanceAndLocationDetail extends AbstractStructBase
      * @uses DistanceAndLocationDetail::setReservationAvailabilityDetail()
      * @uses DistanceAndLocationDetail::setSupportedRedirectToHoldServices()
      * @uses DistanceAndLocationDetail::setLocationDetail()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $distance
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ReservationAvailabilityDetail $reservationAvailabilityDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Distance $distance
+     * @param \CommerceFedEx\FedExPHP\Structs\ReservationAvailabilityDetail $reservationAvailabilityDetail
      * @param string[] $supportedRedirectToHoldServices
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail $locationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationDetail $locationDetail
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Distance $distance = null, \NicholasCreativeMedia\FedExPHP\Structs\ReservationAvailabilityDetail $reservationAvailabilityDetail = null, array $supportedRedirectToHoldServices = array(), \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail $locationDetail = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\Distance $distance = null, \CommerceFedEx\FedExPHP\Structs\ReservationAvailabilityDetail $reservationAvailabilityDetail = null, array $supportedRedirectToHoldServices = array(), \CommerceFedEx\FedExPHP\Structs\LocationDetail $locationDetail = null)
     {
         $this
             ->setDistance($distance)
@@ -64,7 +64,7 @@ class DistanceAndLocationDetail extends AbstractStructBase
     }
     /**
      * Get Distance value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Distance|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Distance|null
      */
     public function getDistance()
     {
@@ -72,17 +72,17 @@ class DistanceAndLocationDetail extends AbstractStructBase
     }
     /**
      * Set Distance value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $distance
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Distance $distance
+     * @return \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail
      */
-    public function setDistance(\NicholasCreativeMedia\FedExPHP\Structs\Distance $distance = null)
+    public function setDistance(\CommerceFedEx\FedExPHP\Structs\Distance $distance = null)
     {
         $this->Distance = $distance;
         return $this;
     }
     /**
      * Get ReservationAvailabilityDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReservationAvailabilityDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ReservationAvailabilityDetail|null
      */
     public function getReservationAvailabilityDetail()
     {
@@ -90,10 +90,10 @@ class DistanceAndLocationDetail extends AbstractStructBase
     }
     /**
      * Set ReservationAvailabilityDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ReservationAvailabilityDetail $reservationAvailabilityDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ReservationAvailabilityDetail $reservationAvailabilityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail
      */
-    public function setReservationAvailabilityDetail(\NicholasCreativeMedia\FedExPHP\Structs\ReservationAvailabilityDetail $reservationAvailabilityDetail = null)
+    public function setReservationAvailabilityDetail(\CommerceFedEx\FedExPHP\Structs\ReservationAvailabilityDetail $reservationAvailabilityDetail = null)
     {
         $this->ReservationAvailabilityDetail = $reservationAvailabilityDetail;
         return $this;
@@ -108,46 +108,46 @@ class DistanceAndLocationDetail extends AbstractStructBase
     }
     /**
      * Set SupportedRedirectToHoldServices value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SupportedRedirectToHoldServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SupportedRedirectToHoldServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SupportedRedirectToHoldServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SupportedRedirectToHoldServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $supportedRedirectToHoldServices
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail
      */
     public function setSupportedRedirectToHoldServices(array $supportedRedirectToHoldServices = array())
     {
         $invalidValues = array();
         foreach ($supportedRedirectToHoldServices as $distanceAndLocationDetailSupportedRedirectToHoldServicesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\SupportedRedirectToHoldServiceType::valueIsValid($distanceAndLocationDetailSupportedRedirectToHoldServicesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\SupportedRedirectToHoldServiceType::valueIsValid($distanceAndLocationDetailSupportedRedirectToHoldServicesItem)) {
                 $invalidValues[] = var_export($distanceAndLocationDetailSupportedRedirectToHoldServicesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SupportedRedirectToHoldServiceType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\SupportedRedirectToHoldServiceType::getValidValues())), __LINE__);
         }
         $this->SupportedRedirectToHoldServices = $supportedRedirectToHoldServices;
         return $this;
     }
     /**
      * Add item to SupportedRedirectToHoldServices value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SupportedRedirectToHoldServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SupportedRedirectToHoldServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SupportedRedirectToHoldServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SupportedRedirectToHoldServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail
      */
     public function addToSupportedRedirectToHoldServices($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\SupportedRedirectToHoldServiceType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SupportedRedirectToHoldServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\SupportedRedirectToHoldServiceType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\SupportedRedirectToHoldServiceType::getValidValues())), __LINE__);
         }
         $this->SupportedRedirectToHoldServices[] = $item;
         return $this;
     }
     /**
      * Get LocationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDetail|null
      */
     public function getLocationDetail()
     {
@@ -155,10 +155,10 @@ class DistanceAndLocationDetail extends AbstractStructBase
     }
     /**
      * Set LocationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationDetail $locationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationDetail $locationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail
      */
-    public function setLocationDetail(\NicholasCreativeMedia\FedExPHP\Structs\LocationDetail $locationDetail = null)
+    public function setLocationDetail(\CommerceFedEx\FedExPHP\Structs\LocationDetail $locationDetail = null)
     {
         $this->LocationDetail = $locationDetail;
         return $this;
@@ -169,7 +169,7 @@ class DistanceAndLocationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail
      */
     public static function __set_state(array $array)
     {

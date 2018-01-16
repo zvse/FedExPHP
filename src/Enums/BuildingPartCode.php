@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Enums;
+namespace CommerceFedEx\FedExPHP\Enums;
 
 /**
  * This class stands for BuildingPartCode Enums

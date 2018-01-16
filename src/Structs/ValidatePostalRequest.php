@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,28 +17,28 @@ class ValidatePostalRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -52,7 +52,7 @@ class ValidatePostalRequest extends AbstractStructBase
      * The Address
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $Address;
     /**
@@ -87,17 +87,17 @@ class ValidatePostalRequest extends AbstractStructBase
      * @uses ValidatePostalRequest::setRoutingCode()
      * @uses ValidatePostalRequest::setCheckForMismatch()
      * @uses ValidatePostalRequest::setCarrierCode()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $shipDateTime
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
      * @param string $routingCode
      * @param bool $checkForMismatch
      * @param string $carrierCode
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $shipDateTime = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $address = null, $routingCode = null, $checkForMismatch = null, $carrierCode = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $shipDateTime = null, \CommerceFedEx\FedExPHP\Structs\Address $address = null, $routingCode = null, $checkForMismatch = null, $carrierCode = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -112,7 +112,7 @@ class ValidatePostalRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -120,17 +120,17 @@ class ValidatePostalRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
-    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -138,17 +138,17 @@ class ValidatePostalRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
-    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -156,17 +156,17 @@ class ValidatePostalRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -174,10 +174,10 @@ class ValidatePostalRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -193,7 +193,7 @@ class ValidatePostalRequest extends AbstractStructBase
     /**
      * Set ShipDateTime value
      * @param string $shipDateTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
     public function setShipDateTime($shipDateTime = null)
     {
@@ -206,7 +206,7 @@ class ValidatePostalRequest extends AbstractStructBase
     }
     /**
      * Get Address value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getAddress()
     {
@@ -214,10 +214,10 @@ class ValidatePostalRequest extends AbstractStructBase
     }
     /**
      * Set Address value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
-    public function setAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $address = null)
+    public function setAddress(\CommerceFedEx\FedExPHP\Structs\Address $address = null)
     {
         $this->Address = $address;
         return $this;
@@ -233,7 +233,7 @@ class ValidatePostalRequest extends AbstractStructBase
     /**
      * Set RoutingCode value
      * @param string $routingCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
     public function setRoutingCode($routingCode = null)
     {
@@ -255,7 +255,7 @@ class ValidatePostalRequest extends AbstractStructBase
     /**
      * Set CheckForMismatch value
      * @param bool $checkForMismatch
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
     public function setCheckForMismatch($checkForMismatch = null)
     {
@@ -272,17 +272,17 @@ class ValidatePostalRequest extends AbstractStructBase
     }
     /**
      * Set CarrierCode value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrierCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
     public function setCarrierCode($carrierCode = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->CarrierCode = $carrierCode;
         return $this;
@@ -293,7 +293,7 @@ class ValidatePostalRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest
      */
     public static function __set_state(array $array)
     {

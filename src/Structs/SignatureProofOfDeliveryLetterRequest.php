@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
@@ -25,7 +25,7 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data identifying the client submitting the transaction.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
@@ -33,7 +33,7 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The version of the request being used.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
@@ -41,7 +41,7 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains a free form field that is echoed back in the reply to match requests with replies and data that governs the data payload language/translations.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -49,7 +49,7 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Tracking number and additional shipment data used to identify a unique shipment for proof of delivery.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber
+     * @var \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber
      */
     public $QualifiedTrackingNumber;
     /**
@@ -73,7 +73,7 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: If provided this information will be print on the letter.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
      */
     public $Consignee;
     /**
@@ -86,16 +86,16 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
      * @uses SignatureProofOfDeliveryLetterRequest::setAdditionalComments()
      * @uses SignatureProofOfDeliveryLetterRequest::setLetterFormat()
      * @uses SignatureProofOfDeliveryLetterRequest::setConsignee()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber
      * @param string $additionalComments
      * @param string $letterFormat
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $consignee
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $consignee
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber = null, $additionalComments = null, $letterFormat = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $consignee = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber = null, $additionalComments = null, $letterFormat = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $consignee = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -109,7 +109,7 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -117,17 +117,17 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
      */
-    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -135,17 +135,17 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
      */
-    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -153,17 +153,17 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -171,17 +171,17 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
     /**
      * Get QualifiedTrackingNumber value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber|null
+     * @return \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber|null
      */
     public function getQualifiedTrackingNumber()
     {
@@ -189,10 +189,10 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
     }
     /**
      * Set QualifiedTrackingNumber value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
      */
-    public function setQualifiedTrackingNumber(\NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber = null)
+    public function setQualifiedTrackingNumber(\CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber = null)
     {
         $this->QualifiedTrackingNumber = $qualifiedTrackingNumber;
         return $this;
@@ -208,7 +208,7 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
     /**
      * Set AdditionalComments value
      * @param string $additionalComments
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
      */
     public function setAdditionalComments($additionalComments = null)
     {
@@ -229,24 +229,24 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
     }
     /**
      * Set LetterFormat value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SignatureProofOfDeliveryImageType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SignatureProofOfDeliveryImageType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SignatureProofOfDeliveryImageType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SignatureProofOfDeliveryImageType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $letterFormat
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
      */
     public function setLetterFormat($letterFormat = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\SignatureProofOfDeliveryImageType::valueIsValid($letterFormat)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $letterFormat, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SignatureProofOfDeliveryImageType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\SignatureProofOfDeliveryImageType::valueIsValid($letterFormat)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $letterFormat, implode(', ', \CommerceFedEx\FedExPHP\Enums\SignatureProofOfDeliveryImageType::getValidValues())), __LINE__);
         }
         $this->LetterFormat = $letterFormat;
         return $this;
     }
     /**
      * Get Consignee value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getConsignee()
     {
@@ -254,10 +254,10 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
     }
     /**
      * Set Consignee value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $consignee
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $consignee
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
      */
-    public function setConsignee(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $consignee = null)
+    public function setConsignee(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $consignee = null)
     {
         $this->Consignee = $consignee;
         return $this;
@@ -268,7 +268,7 @@ class SignatureProofOfDeliveryLetterRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryLetterRequest
      */
     public static function __set_state(array $array)
     {

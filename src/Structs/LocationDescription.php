@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -132,7 +132,7 @@ class LocationDescription extends AbstractStructBase
     /**
      * Set LocationId value
      * @param string $locationId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setLocationId($locationId = null)
     {
@@ -154,7 +154,7 @@ class LocationDescription extends AbstractStructBase
     /**
      * Set LocationNumber value
      * @param int $locationNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setLocationNumber($locationNumber = null)
     {
@@ -176,7 +176,7 @@ class LocationDescription extends AbstractStructBase
     /**
      * Set CountryCode value
      * @param string $countryCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setCountryCode($countryCode = null)
     {
@@ -198,7 +198,7 @@ class LocationDescription extends AbstractStructBase
     /**
      * Set StateOrProvinceCode value
      * @param string $stateOrProvinceCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setStateOrProvinceCode($stateOrProvinceCode = null)
     {
@@ -220,7 +220,7 @@ class LocationDescription extends AbstractStructBase
     /**
      * Set PostalCode value
      * @param string $postalCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setPostalCode($postalCode = null)
     {
@@ -242,7 +242,7 @@ class LocationDescription extends AbstractStructBase
     /**
      * Set ServiceArea value
      * @param string $serviceArea
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setServiceArea($serviceArea = null)
     {
@@ -264,7 +264,7 @@ class LocationDescription extends AbstractStructBase
     /**
      * Set AirportId value
      * @param string $airportId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setAirportId($airportId = null)
     {
@@ -285,39 +285,39 @@ class LocationDescription extends AbstractStructBase
     }
     /**
      * Set RestrictedPackageSpecialServices value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $restrictedPackageSpecialServices
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setRestrictedPackageSpecialServices(array $restrictedPackageSpecialServices = array())
     {
         $invalidValues = array();
         foreach ($restrictedPackageSpecialServices as $locationDescriptionRestrictedPackageSpecialServicesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid($locationDescriptionRestrictedPackageSpecialServicesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid($locationDescriptionRestrictedPackageSpecialServicesItem)) {
                 $invalidValues[] = var_export($locationDescriptionRestrictedPackageSpecialServicesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->RestrictedPackageSpecialServices = $restrictedPackageSpecialServices;
         return $this;
     }
     /**
      * Add item to RestrictedPackageSpecialServices value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function addToRestrictedPackageSpecialServices($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PackageSpecialServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\PackageSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->RestrictedPackageSpecialServices[] = $item;
         return $this;
@@ -332,39 +332,39 @@ class LocationDescription extends AbstractStructBase
     }
     /**
      * Set RestrictedShipmentSpecialServices value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $restrictedShipmentSpecialServices
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setRestrictedShipmentSpecialServices(array $restrictedShipmentSpecialServices = array())
     {
         $invalidValues = array();
         foreach ($restrictedShipmentSpecialServices as $locationDescriptionRestrictedShipmentSpecialServicesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid($locationDescriptionRestrictedShipmentSpecialServicesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid($locationDescriptionRestrictedShipmentSpecialServicesItem)) {
                 $invalidValues[] = var_export($locationDescriptionRestrictedShipmentSpecialServicesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->RestrictedShipmentSpecialServices = $restrictedShipmentSpecialServices;
         return $this;
     }
     /**
      * Add item to RestrictedShipmentSpecialServices value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function addToRestrictedShipmentSpecialServices($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->RestrictedShipmentSpecialServices[] = $item;
         return $this;
@@ -380,7 +380,7 @@ class LocationDescription extends AbstractStructBase
     /**
      * Set FedExEuropeFirstOrigin value
      * @param bool $fedExEuropeFirstOrigin
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public function setFedExEuropeFirstOrigin($fedExEuropeFirstOrigin = null)
     {
@@ -393,7 +393,7 @@ class LocationDescription extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription
      */
     public static function __set_state(array $array)
     {

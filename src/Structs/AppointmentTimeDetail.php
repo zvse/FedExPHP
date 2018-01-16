@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -25,7 +25,7 @@ class AppointmentTimeDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the window of time for an appointment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange
+     * @var \CommerceFedEx\FedExPHP\Structs\LocalTimeRange
      */
     public $Window;
     /**
@@ -41,10 +41,10 @@ class AppointmentTimeDetail extends AbstractStructBase
      * @uses AppointmentTimeDetail::setWindow()
      * @uses AppointmentTimeDetail::setDescription()
      * @param string $type
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange $window
+     * @param \CommerceFedEx\FedExPHP\Structs\LocalTimeRange $window
      * @param string $description
      */
-    public function __construct($type = null, \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange $window = null, $description = null)
+    public function __construct($type = null, \CommerceFedEx\FedExPHP\Structs\LocalTimeRange $window = null, $description = null)
     {
         $this
             ->setType($type)
@@ -61,24 +61,24 @@ class AppointmentTimeDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AppointmentWindowType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AppointmentWindowType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\AppointmentWindowType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\AppointmentWindowType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\AppointmentWindowType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AppointmentWindowType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\AppointmentWindowType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\AppointmentWindowType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
     }
     /**
      * Get Window value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LocalTimeRange|null
      */
     public function getWindow()
     {
@@ -86,10 +86,10 @@ class AppointmentTimeDetail extends AbstractStructBase
     }
     /**
      * Set Window value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange $window
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocalTimeRange $window
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail
      */
-    public function setWindow(\NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange $window = null)
+    public function setWindow(\CommerceFedEx\FedExPHP\Structs\LocalTimeRange $window = null)
     {
         $this->Window = $window;
         return $this;
@@ -105,7 +105,7 @@ class AppointmentTimeDetail extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail
      */
     public function setDescription($description = null)
     {
@@ -122,7 +122,7 @@ class AppointmentTimeDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentTimeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentTimeDetail
      */
     public static function __set_state(array $array)
     {

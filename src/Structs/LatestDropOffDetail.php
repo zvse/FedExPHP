@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -32,7 +32,7 @@ class LatestDropOffDetail extends AbstractStructBase
      * - documentation: Specifies the details about the overlay to the last drop off time for a carrier at a FedEx location.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail[]
      */
     public $Overlays;
     /**
@@ -42,7 +42,7 @@ class LatestDropOffDetail extends AbstractStructBase
      * @uses LatestDropOffDetail::setOverlays()
      * @param string $dayOfWeek
      * @param string $time
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail[] $overlays
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail[] $overlays
      */
     public function __construct($dayOfWeek = null, $time = null, array $overlays = array())
     {
@@ -61,17 +61,17 @@ class LatestDropOffDetail extends AbstractStructBase
     }
     /**
      * Set DayOfWeek value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $dayOfWeek
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail
      */
     public function setDayOfWeek($dayOfWeek = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($dayOfWeek)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dayOfWeek, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($dayOfWeek)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dayOfWeek, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->DayOfWeek = $dayOfWeek;
         return $this;
@@ -87,7 +87,7 @@ class LatestDropOffDetail extends AbstractStructBase
     /**
      * Set Time value
      * @param string $time
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail
      */
     public function setTime($time = null)
     {
@@ -100,7 +100,7 @@ class LatestDropOffDetail extends AbstractStructBase
     }
     /**
      * Get Overlays value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail[]|null
      */
     public function getOverlays()
     {
@@ -109,15 +109,15 @@ class LatestDropOffDetail extends AbstractStructBase
     /**
      * Set Overlays value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail[] $overlays
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail[] $overlays
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail
      */
     public function setOverlays(array $overlays = array())
     {
         foreach ($overlays as $latestDropOffDetailOverlaysItem) {
             // validation for constraint: itemType
-            if (!$latestDropOffDetailOverlaysItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail) {
-                throw new \InvalidArgumentException(sprintf('The Overlays property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail, "%s" given', is_object($latestDropOffDetailOverlaysItem) ? get_class($latestDropOffDetailOverlaysItem) : gettype($latestDropOffDetailOverlaysItem)), __LINE__);
+            if (!$latestDropOffDetailOverlaysItem instanceof \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail) {
+                throw new \InvalidArgumentException(sprintf('The Overlays property can only contain items of \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail, "%s" given', is_object($latestDropOffDetailOverlaysItem) ? get_class($latestDropOffDetailOverlaysItem) : gettype($latestDropOffDetailOverlaysItem)), __LINE__);
             }
         }
         $this->Overlays = $overlays;
@@ -126,14 +126,14 @@ class LatestDropOffDetail extends AbstractStructBase
     /**
      * Add item to Overlays value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail
      */
-    public function addToOverlays(\NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail $item)
+    public function addToOverlays(\CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail) {
-            throw new \InvalidArgumentException(sprintf('The Overlays property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LatestDropoffOverlayDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail) {
+            throw new \InvalidArgumentException(sprintf('The Overlays property can only contain items of \CommerceFedEx\FedExPHP\Structs\LatestDropoffOverlayDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Overlays[] = $item;
         return $this;
@@ -144,7 +144,7 @@ class LatestDropOffDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail
      */
     public static function __set_state(array $array)
     {

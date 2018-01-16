@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -26,7 +26,7 @@ class CustomsDeclarationStatementDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the NAFTA low value statement information.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\NaftaLowValueStatementDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\NaftaLowValueStatementDetail
      */
     public $NaftaLowValueStatementDetail;
     /**
@@ -34,9 +34,9 @@ class CustomsDeclarationStatementDetail extends AbstractStructBase
      * @uses CustomsDeclarationStatementDetail::setTypes()
      * @uses CustomsDeclarationStatementDetail::setNaftaLowValueStatementDetail()
      * @param string[] $types
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\NaftaLowValueStatementDetail $naftaLowValueStatementDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\NaftaLowValueStatementDetail $naftaLowValueStatementDetail
      */
-    public function __construct(array $types = array(), \NicholasCreativeMedia\FedExPHP\Structs\NaftaLowValueStatementDetail $naftaLowValueStatementDetail = null)
+    public function __construct(array $types = array(), \CommerceFedEx\FedExPHP\Structs\NaftaLowValueStatementDetail $naftaLowValueStatementDetail = null)
     {
         $this
             ->setTypes($types)
@@ -52,46 +52,46 @@ class CustomsDeclarationStatementDetail extends AbstractStructBase
     }
     /**
      * Set Types value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomsDeclarationStatementType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomsDeclarationStatementType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomsDeclarationStatementType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomsDeclarationStatementType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $types
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail
      */
     public function setTypes(array $types = array())
     {
         $invalidValues = array();
         foreach ($types as $customsDeclarationStatementDetailTypesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomsDeclarationStatementType::valueIsValid($customsDeclarationStatementDetailTypesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\CustomsDeclarationStatementType::valueIsValid($customsDeclarationStatementDetailTypesItem)) {
                 $invalidValues[] = var_export($customsDeclarationStatementDetailTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomsDeclarationStatementType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomsDeclarationStatementType::getValidValues())), __LINE__);
         }
         $this->Types = $types;
         return $this;
     }
     /**
      * Add item to Types value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomsDeclarationStatementType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomsDeclarationStatementType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomsDeclarationStatementType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomsDeclarationStatementType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail
      */
     public function addToTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomsDeclarationStatementType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomsDeclarationStatementType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CustomsDeclarationStatementType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomsDeclarationStatementType::getValidValues())), __LINE__);
         }
         $this->Types[] = $item;
         return $this;
     }
     /**
      * Get NaftaLowValueStatementDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaLowValueStatementDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\NaftaLowValueStatementDetail|null
      */
     public function getNaftaLowValueStatementDetail()
     {
@@ -99,10 +99,10 @@ class CustomsDeclarationStatementDetail extends AbstractStructBase
     }
     /**
      * Set NaftaLowValueStatementDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\NaftaLowValueStatementDetail $naftaLowValueStatementDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\NaftaLowValueStatementDetail $naftaLowValueStatementDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail
      */
-    public function setNaftaLowValueStatementDetail(\NicholasCreativeMedia\FedExPHP\Structs\NaftaLowValueStatementDetail $naftaLowValueStatementDetail = null)
+    public function setNaftaLowValueStatementDetail(\CommerceFedEx\FedExPHP\Structs\NaftaLowValueStatementDetail $naftaLowValueStatementDetail = null)
     {
         $this->NaftaLowValueStatementDetail = $naftaLowValueStatementDetail;
         return $this;
@@ -113,7 +113,7 @@ class CustomsDeclarationStatementDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail
      */
     public static function __set_state(array $array)
     {

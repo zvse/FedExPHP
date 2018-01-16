@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -21,7 +21,7 @@ class RadionuclideDetail extends AbstractStructBase
      * The Activity
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideActivity
+     * @var \CommerceFedEx\FedExPHP\Structs\RadionuclideActivity
      */
     public $Activity;
     /**
@@ -54,12 +54,12 @@ class RadionuclideDetail extends AbstractStructBase
      * @uses RadionuclideDetail::setPhysicalForm()
      * @uses RadionuclideDetail::setChemicalForm()
      * @param string $radionuclide
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideActivity $activity
+     * @param \CommerceFedEx\FedExPHP\Structs\RadionuclideActivity $activity
      * @param bool $exceptedPackagingIsReportableQuantity
      * @param string $physicalForm
      * @param string $chemicalForm
      */
-    public function __construct($radionuclide = null, \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideActivity $activity = null, $exceptedPackagingIsReportableQuantity = null, $physicalForm = null, $chemicalForm = null)
+    public function __construct($radionuclide = null, \CommerceFedEx\FedExPHP\Structs\RadionuclideActivity $activity = null, $exceptedPackagingIsReportableQuantity = null, $physicalForm = null, $chemicalForm = null)
     {
         $this
             ->setRadionuclide($radionuclide)
@@ -79,7 +79,7 @@ class RadionuclideDetail extends AbstractStructBase
     /**
      * Set Radionuclide value
      * @param string $radionuclide
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail
      */
     public function setRadionuclide($radionuclide = null)
     {
@@ -92,7 +92,7 @@ class RadionuclideDetail extends AbstractStructBase
     }
     /**
      * Get Activity value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideActivity|null
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideActivity|null
      */
     public function getActivity()
     {
@@ -100,10 +100,10 @@ class RadionuclideDetail extends AbstractStructBase
     }
     /**
      * Set Activity value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideActivity $activity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\RadionuclideActivity $activity
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail
      */
-    public function setActivity(\NicholasCreativeMedia\FedExPHP\Structs\RadionuclideActivity $activity = null)
+    public function setActivity(\CommerceFedEx\FedExPHP\Structs\RadionuclideActivity $activity = null)
     {
         $this->Activity = $activity;
         return $this;
@@ -119,7 +119,7 @@ class RadionuclideDetail extends AbstractStructBase
     /**
      * Set ExceptedPackagingIsReportableQuantity value
      * @param bool $exceptedPackagingIsReportableQuantity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail
      */
     public function setExceptedPackagingIsReportableQuantity($exceptedPackagingIsReportableQuantity = null)
     {
@@ -136,17 +136,17 @@ class RadionuclideDetail extends AbstractStructBase
     }
     /**
      * Set PhysicalForm value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalFormType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalFormType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalFormType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalFormType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $physicalForm
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail
      */
     public function setPhysicalForm($physicalForm = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PhysicalFormType::valueIsValid($physicalForm)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $physicalForm, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PhysicalFormType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PhysicalFormType::valueIsValid($physicalForm)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $physicalForm, implode(', ', \CommerceFedEx\FedExPHP\Enums\PhysicalFormType::getValidValues())), __LINE__);
         }
         $this->PhysicalForm = $physicalForm;
         return $this;
@@ -162,7 +162,7 @@ class RadionuclideDetail extends AbstractStructBase
     /**
      * Set ChemicalForm value
      * @param string $chemicalForm
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail
      */
     public function setChemicalForm($chemicalForm = null)
     {
@@ -179,7 +179,7 @@ class RadionuclideDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail
      */
     public static function __set_state(array $array)
     {

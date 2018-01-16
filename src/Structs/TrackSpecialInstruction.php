@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -29,7 +29,7 @@ class TrackSpecialInstruction extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the status and status update time of the track special instructions.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\SpecialInstructionStatusDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\SpecialInstructionStatusDetail
      */
     public $StatusDetail;
     /**
@@ -53,7 +53,7 @@ class TrackSpecialInstruction extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The requested appointment time for delivery.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\AppointmentDetail
      */
     public $RequestedAppointmentTime;
     /**
@@ -66,12 +66,12 @@ class TrackSpecialInstruction extends AbstractStructBase
      * @uses TrackSpecialInstruction::setRequestedAppointmentTime()
      * @param string $description
      * @param string $deliveryOption
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SpecialInstructionStatusDetail $statusDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\SpecialInstructionStatusDetail $statusDetail
      * @param string $originalEstimatedDeliveryTimestamp
      * @param string $originalRequestTime
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail $requestedAppointmentTime
+     * @param \CommerceFedEx\FedExPHP\Structs\AppointmentDetail $requestedAppointmentTime
      */
-    public function __construct($description = null, $deliveryOption = null, \NicholasCreativeMedia\FedExPHP\Structs\SpecialInstructionStatusDetail $statusDetail = null, $originalEstimatedDeliveryTimestamp = null, $originalRequestTime = null, \NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail $requestedAppointmentTime = null)
+    public function __construct($description = null, $deliveryOption = null, \CommerceFedEx\FedExPHP\Structs\SpecialInstructionStatusDetail $statusDetail = null, $originalEstimatedDeliveryTimestamp = null, $originalRequestTime = null, \CommerceFedEx\FedExPHP\Structs\AppointmentDetail $requestedAppointmentTime = null)
     {
         $this
             ->setDescription($description)
@@ -92,7 +92,7 @@ class TrackSpecialInstruction extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction
      */
     public function setDescription($description = null)
     {
@@ -113,24 +113,24 @@ class TrackSpecialInstruction extends AbstractStructBase
     }
     /**
      * Set DeliveryOption value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackDeliveryOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackDeliveryOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackDeliveryOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackDeliveryOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $deliveryOption
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction
      */
     public function setDeliveryOption($deliveryOption = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackDeliveryOptionType::valueIsValid($deliveryOption)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deliveryOption, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackDeliveryOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackDeliveryOptionType::valueIsValid($deliveryOption)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deliveryOption, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackDeliveryOptionType::getValidValues())), __LINE__);
         }
         $this->DeliveryOption = $deliveryOption;
         return $this;
     }
     /**
      * Get StatusDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialInstructionStatusDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\SpecialInstructionStatusDetail|null
      */
     public function getStatusDetail()
     {
@@ -138,10 +138,10 @@ class TrackSpecialInstruction extends AbstractStructBase
     }
     /**
      * Set StatusDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SpecialInstructionStatusDetail $statusDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction
+     * @param \CommerceFedEx\FedExPHP\Structs\SpecialInstructionStatusDetail $statusDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction
      */
-    public function setStatusDetail(\NicholasCreativeMedia\FedExPHP\Structs\SpecialInstructionStatusDetail $statusDetail = null)
+    public function setStatusDetail(\CommerceFedEx\FedExPHP\Structs\SpecialInstructionStatusDetail $statusDetail = null)
     {
         $this->StatusDetail = $statusDetail;
         return $this;
@@ -157,7 +157,7 @@ class TrackSpecialInstruction extends AbstractStructBase
     /**
      * Set OriginalEstimatedDeliveryTimestamp value
      * @param string $originalEstimatedDeliveryTimestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction
      */
     public function setOriginalEstimatedDeliveryTimestamp($originalEstimatedDeliveryTimestamp = null)
     {
@@ -179,7 +179,7 @@ class TrackSpecialInstruction extends AbstractStructBase
     /**
      * Set OriginalRequestTime value
      * @param string $originalRequestTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction
      */
     public function setOriginalRequestTime($originalRequestTime = null)
     {
@@ -192,7 +192,7 @@ class TrackSpecialInstruction extends AbstractStructBase
     }
     /**
      * Get RequestedAppointmentTime value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\AppointmentDetail|null
      */
     public function getRequestedAppointmentTime()
     {
@@ -200,10 +200,10 @@ class TrackSpecialInstruction extends AbstractStructBase
     }
     /**
      * Set RequestedAppointmentTime value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail $requestedAppointmentTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction
+     * @param \CommerceFedEx\FedExPHP\Structs\AppointmentDetail $requestedAppointmentTime
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction
      */
-    public function setRequestedAppointmentTime(\NicholasCreativeMedia\FedExPHP\Structs\AppointmentDetail $requestedAppointmentTime = null)
+    public function setRequestedAppointmentTime(\CommerceFedEx\FedExPHP\Structs\AppointmentDetail $requestedAppointmentTime = null)
     {
         $this->RequestedAppointmentTime = $requestedAppointmentTime;
         return $this;
@@ -214,7 +214,7 @@ class TrackSpecialInstruction extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSpecialInstruction
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSpecialInstruction
      */
     public static function __set_state(array $array)
     {

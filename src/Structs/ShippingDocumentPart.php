@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -52,7 +52,7 @@ class ShippingDocumentPart extends AbstractStructBase
     /**
      * Set DocumentPartSequenceNumber value
      * @param int $documentPartSequenceNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart
      */
     public function setDocumentPartSequenceNumber($documentPartSequenceNumber = null)
     {
@@ -74,7 +74,7 @@ class ShippingDocumentPart extends AbstractStructBase
     /**
      * Set Image value
      * @param string $image
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart
      */
     public function setImage($image = null)
     {
@@ -91,7 +91,7 @@ class ShippingDocumentPart extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart
      */
     public static function __set_state(array $array)
     {

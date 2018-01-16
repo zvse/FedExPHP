@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -49,7 +49,7 @@ class EMailDetail extends AbstractStructBase
     /**
      * Set EmailAddress value
      * @param string $emailAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\EMailDetail
      */
     public function setEmailAddress($emailAddress = null)
     {
@@ -71,7 +71,7 @@ class EMailDetail extends AbstractStructBase
     /**
      * Set Name value
      * @param string $name
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\EMailDetail
      */
     public function setName($name = null)
     {
@@ -88,7 +88,7 @@ class EMailDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\EMailDetail
      */
     public static function __set_state(array $array)
     {

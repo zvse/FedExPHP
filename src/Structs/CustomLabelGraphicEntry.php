@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,7 +16,7 @@ class CustomLabelGraphicEntry extends AbstractStructBase
      * The Position
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public $Position;
     /**
@@ -40,11 +40,11 @@ class CustomLabelGraphicEntry extends AbstractStructBase
      * @uses CustomLabelGraphicEntry::setPosition()
      * @uses CustomLabelGraphicEntry::setPrinterGraphicId()
      * @uses CustomLabelGraphicEntry::setFileGraphicFullName()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position
      * @param string $printerGraphicId
      * @param string $fileGraphicFullName
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position = null, $printerGraphicId = null, $fileGraphicFullName = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position = null, $printerGraphicId = null, $fileGraphicFullName = null)
     {
         $this
             ->setPosition($position)
@@ -53,7 +53,7 @@ class CustomLabelGraphicEntry extends AbstractStructBase
     }
     /**
      * Get Position value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition|null
      */
     public function getPosition()
     {
@@ -61,10 +61,10 @@ class CustomLabelGraphicEntry extends AbstractStructBase
     }
     /**
      * Set Position value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelGraphicEntry
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelGraphicEntry
      */
-    public function setPosition(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position = null)
+    public function setPosition(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position = null)
     {
         $this->Position = $position;
         return $this;
@@ -80,7 +80,7 @@ class CustomLabelGraphicEntry extends AbstractStructBase
     /**
      * Set PrinterGraphicId value
      * @param string $printerGraphicId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelGraphicEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelGraphicEntry
      */
     public function setPrinterGraphicId($printerGraphicId = null)
     {
@@ -102,7 +102,7 @@ class CustomLabelGraphicEntry extends AbstractStructBase
     /**
      * Set FileGraphicFullName value
      * @param string $fileGraphicFullName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelGraphicEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelGraphicEntry
      */
     public function setFileGraphicFullName($fileGraphicFullName = null)
     {
@@ -119,7 +119,7 @@ class CustomLabelGraphicEntry extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelGraphicEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelGraphicEntry
      */
     public static function __set_state(array $array)
     {

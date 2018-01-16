@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -48,7 +48,7 @@ class KeyValueDetail extends AbstractStructBase
     /**
      * Set Key value
      * @param string $key
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\KeyValueDetail
      */
     public function setKey($key = null)
     {
@@ -70,7 +70,7 @@ class KeyValueDetail extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\KeyValueDetail
      */
     public function setValue($value = null)
     {
@@ -87,7 +87,7 @@ class KeyValueDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\KeyValueDetail
      */
     public static function __set_state(array $array)
     {

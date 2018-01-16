@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -37,7 +37,7 @@ class TrackStatusDetail extends AbstractStructBase
      * The Location
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $Location;
     /**
@@ -45,7 +45,7 @@ class TrackStatusDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail[]
      */
     public $AncillaryDetails;
     /**
@@ -58,10 +58,10 @@ class TrackStatusDetail extends AbstractStructBase
      * @param string $creationTime
      * @param string $code
      * @param string $description
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $location
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail[] $ancillaryDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $location
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail[] $ancillaryDetails
      */
-    public function __construct($creationTime = null, $code = null, $description = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $location = null, array $ancillaryDetails = array())
+    public function __construct($creationTime = null, $code = null, $description = null, \CommerceFedEx\FedExPHP\Structs\Address $location = null, array $ancillaryDetails = array())
     {
         $this
             ->setCreationTime($creationTime)
@@ -81,7 +81,7 @@ class TrackStatusDetail extends AbstractStructBase
     /**
      * Set CreationTime value
      * @param string $creationTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail
      */
     public function setCreationTime($creationTime = null)
     {
@@ -103,7 +103,7 @@ class TrackStatusDetail extends AbstractStructBase
     /**
      * Set Code value
      * @param string $code
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail
      */
     public function setCode($code = null)
     {
@@ -125,7 +125,7 @@ class TrackStatusDetail extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail
      */
     public function setDescription($description = null)
     {
@@ -138,7 +138,7 @@ class TrackStatusDetail extends AbstractStructBase
     }
     /**
      * Get Location value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getLocation()
     {
@@ -146,17 +146,17 @@ class TrackStatusDetail extends AbstractStructBase
     }
     /**
      * Set Location value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $location
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $location
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail
      */
-    public function setLocation(\NicholasCreativeMedia\FedExPHP\Structs\Address $location = null)
+    public function setLocation(\CommerceFedEx\FedExPHP\Structs\Address $location = null)
     {
         $this->Location = $location;
         return $this;
     }
     /**
      * Get AncillaryDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail[]|null
      */
     public function getAncillaryDetails()
     {
@@ -165,15 +165,15 @@ class TrackStatusDetail extends AbstractStructBase
     /**
      * Set AncillaryDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail[] $ancillaryDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail[] $ancillaryDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail
      */
     public function setAncillaryDetails(array $ancillaryDetails = array())
     {
         foreach ($ancillaryDetails as $trackStatusDetailAncillaryDetailsItem) {
             // validation for constraint: itemType
-            if (!$trackStatusDetailAncillaryDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail) {
-                throw new \InvalidArgumentException(sprintf('The AncillaryDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail, "%s" given', is_object($trackStatusDetailAncillaryDetailsItem) ? get_class($trackStatusDetailAncillaryDetailsItem) : gettype($trackStatusDetailAncillaryDetailsItem)), __LINE__);
+            if (!$trackStatusDetailAncillaryDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail) {
+                throw new \InvalidArgumentException(sprintf('The AncillaryDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail, "%s" given', is_object($trackStatusDetailAncillaryDetailsItem) ? get_class($trackStatusDetailAncillaryDetailsItem) : gettype($trackStatusDetailAncillaryDetailsItem)), __LINE__);
             }
         }
         $this->AncillaryDetails = $ancillaryDetails;
@@ -182,14 +182,14 @@ class TrackStatusDetail extends AbstractStructBase
     /**
      * Add item to AncillaryDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail
      */
-    public function addToAncillaryDetails(\NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail $item)
+    public function addToAncillaryDetails(\CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail) {
-            throw new \InvalidArgumentException(sprintf('The AncillaryDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail) {
+            throw new \InvalidArgumentException(sprintf('The AncillaryDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AncillaryDetails[] = $item;
         return $this;
@@ -200,7 +200,7 @@ class TrackStatusDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusDetail
      */
     public static function __set_state(array $array)
     {

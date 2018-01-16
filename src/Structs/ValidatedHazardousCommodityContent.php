@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Identifies and describes an individual hazardous commodity.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityDescription
+     * @var \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityDescription
      */
     public $Description;
     /**
@@ -25,7 +25,7 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the amount of the commodity in alternate units.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail
      */
     public $Quantity;
     /**
@@ -41,7 +41,7 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Customer-provided specifications for handling individual commodities.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail
      */
     public $Options;
     /**
@@ -49,7 +49,7 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The total mass of the contained explosive substances, without the mass of any casings, bullets, shells, etc.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail
      */
     public $NetExplosiveDetail;
     /**
@@ -59,13 +59,13 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
      * @uses ValidatedHazardousCommodityContent::setMassPoints()
      * @uses ValidatedHazardousCommodityContent::setOptions()
      * @uses ValidatedHazardousCommodityContent::setNetExplosiveDetail()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityDescription $description
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityDescription $description
+     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
      * @param float $massPoints
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail $options
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail $options
+     * @param \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityDescription $description = null, \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null, $massPoints = null, \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail $options = null, \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityDescription $description = null, \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null, $massPoints = null, \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail $options = null, \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail = null)
     {
         $this
             ->setDescription($description)
@@ -76,7 +76,7 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Get Description value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityDescription|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityDescription|null
      */
     public function getDescription()
     {
@@ -84,17 +84,17 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Set Description value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityDescription $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityDescription $description
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent
      */
-    public function setDescription(\NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityDescription $description = null)
+    public function setDescription(\CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityDescription $description = null)
     {
         $this->Description = $description;
         return $this;
     }
     /**
      * Get Quantity value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail|null
      */
     public function getQuantity()
     {
@@ -102,10 +102,10 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Set Quantity value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent
+     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent
      */
-    public function setQuantity(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null)
+    public function setQuantity(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null)
     {
         $this->Quantity = $quantity;
         return $this;
@@ -121,7 +121,7 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
     /**
      * Set MassPoints value
      * @param float $massPoints
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent
      */
     public function setMassPoints($massPoints = null)
     {
@@ -130,7 +130,7 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Get Options value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail|null
      */
     public function getOptions()
     {
@@ -138,17 +138,17 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail $options
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent
+     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail $options
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent
      */
-    public function setOptions(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail $options = null)
+    public function setOptions(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail $options = null)
     {
         $this->Options = $options;
         return $this;
     }
     /**
      * Get NetExplosiveDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail|null
      */
     public function getNetExplosiveDetail()
     {
@@ -156,10 +156,10 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Set NetExplosiveDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent
+     * @param \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent
      */
-    public function setNetExplosiveDetail(\NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail = null)
+    public function setNetExplosiveDetail(\CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail = null)
     {
         $this->NetExplosiveDetail = $netExplosiveDetail;
         return $this;
@@ -170,7 +170,7 @@ class ValidatedHazardousCommodityContent extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent
      */
     public static function __set_state(array $array)
     {

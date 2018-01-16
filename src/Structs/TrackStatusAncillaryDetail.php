@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -68,7 +68,7 @@ class TrackStatusAncillaryDetail extends AbstractStructBase
     /**
      * Set Reason value
      * @param string $reason
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail
      */
     public function setReason($reason = null)
     {
@@ -90,7 +90,7 @@ class TrackStatusAncillaryDetail extends AbstractStructBase
     /**
      * Set ReasonDescription value
      * @param string $reasonDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail
      */
     public function setReasonDescription($reasonDescription = null)
     {
@@ -112,7 +112,7 @@ class TrackStatusAncillaryDetail extends AbstractStructBase
     /**
      * Set Action value
      * @param string $action
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail
      */
     public function setAction($action = null)
     {
@@ -134,7 +134,7 @@ class TrackStatusAncillaryDetail extends AbstractStructBase
     /**
      * Set ActionDescription value
      * @param string $actionDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail
      */
     public function setActionDescription($actionDescription = null)
     {
@@ -151,7 +151,7 @@ class TrackStatusAncillaryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackStatusAncillaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackStatusAncillaryDetail
      */
     public static function __set_state(array $array)
     {

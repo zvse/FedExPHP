@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -41,7 +41,7 @@ class StorageDetail extends AbstractStructBase
     /**
      * Set Duration value
      * @param string $duration
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\StorageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\StorageDetail
      */
     public function setDuration($duration = null)
     {
@@ -58,7 +58,7 @@ class StorageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\StorageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\StorageDetail
      */
     public static function __set_state(array $array)
     {

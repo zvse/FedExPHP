@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Services;
+namespace CommerceFedEx\FedExPHP\Services;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -23,12 +23,12 @@ class LocationsService extends FedExService
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'LocationsService_v5.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\LocationsClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\LocationsClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('locs',5,0,0);
+        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('locs',5,0,0);
     }
     /**
      * Method to call the operation originally named searchLocations
@@ -36,10 +36,10 @@ class LocationsService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest $searchLocationsRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest $searchLocationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsReply|bool
      */
-    public function searchLocations(\NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest $searchLocationsRequest)
+    public function searchLocations(\CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest $searchLocationsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->searchLocations($searchLocationsRequest));
@@ -52,7 +52,7 @@ class LocationsService extends FedExService
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsReply
      */
     public function getResult()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class TrackRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
@@ -25,7 +25,7 @@ class TrackRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data identifying the client submitting the transaction.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
@@ -33,7 +33,7 @@ class TrackRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The version of the request being used.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
@@ -41,7 +41,7 @@ class TrackRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains a free form field that is echoed back in the reply to match requests with replies and data that governs the data payload language/translations.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -50,7 +50,7 @@ class TrackRequest extends AbstractStructBase
      * - documentation: Specifies the details needed to select the shipment being requested to be tracked.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail[]
      */
     public $SelectionDetails;
     /**
@@ -78,15 +78,15 @@ class TrackRequest extends AbstractStructBase
      * @uses TrackRequest::setSelectionDetails()
      * @uses TrackRequest::setTransactionTimeOutValueInMilliseconds()
      * @uses TrackRequest::setProcessingOptions()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail[] $selectionDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail[] $selectionDetails
      * @param int $transactionTimeOutValueInMilliseconds
      * @param string[] $processingOptions
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, array $selectionDetails = array(), $transactionTimeOutValueInMilliseconds = null, array $processingOptions = array())
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, array $selectionDetails = array(), $transactionTimeOutValueInMilliseconds = null, array $processingOptions = array())
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -99,7 +99,7 @@ class TrackRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -107,17 +107,17 @@ class TrackRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
-    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -125,17 +125,17 @@ class TrackRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
-    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -143,17 +143,17 @@ class TrackRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -161,17 +161,17 @@ class TrackRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
     /**
      * Get SelectionDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail[]|null
      */
     public function getSelectionDetails()
     {
@@ -180,15 +180,15 @@ class TrackRequest extends AbstractStructBase
     /**
      * Set SelectionDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail[] $selectionDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail[] $selectionDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
     public function setSelectionDetails(array $selectionDetails = array())
     {
         foreach ($selectionDetails as $trackRequestSelectionDetailsItem) {
             // validation for constraint: itemType
-            if (!$trackRequestSelectionDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail) {
-                throw new \InvalidArgumentException(sprintf('The SelectionDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail, "%s" given', is_object($trackRequestSelectionDetailsItem) ? get_class($trackRequestSelectionDetailsItem) : gettype($trackRequestSelectionDetailsItem)), __LINE__);
+            if (!$trackRequestSelectionDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail) {
+                throw new \InvalidArgumentException(sprintf('The SelectionDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail, "%s" given', is_object($trackRequestSelectionDetailsItem) ? get_class($trackRequestSelectionDetailsItem) : gettype($trackRequestSelectionDetailsItem)), __LINE__);
             }
         }
         $this->SelectionDetails = $selectionDetails;
@@ -197,14 +197,14 @@ class TrackRequest extends AbstractStructBase
     /**
      * Add item to SelectionDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
-    public function addToSelectionDetails(\NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail $item)
+    public function addToSelectionDetails(\CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail) {
-            throw new \InvalidArgumentException(sprintf('The SelectionDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail) {
+            throw new \InvalidArgumentException(sprintf('The SelectionDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->SelectionDetails[] = $item;
         return $this;
@@ -220,7 +220,7 @@ class TrackRequest extends AbstractStructBase
     /**
      * Set TransactionTimeOutValueInMilliseconds value
      * @param int $transactionTimeOutValueInMilliseconds
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
     public function setTransactionTimeOutValueInMilliseconds($transactionTimeOutValueInMilliseconds = null)
     {
@@ -241,39 +241,39 @@ class TrackRequest extends AbstractStructBase
     }
     /**
      * Set ProcessingOptions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackRequestProcessingOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackRequestProcessingOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackRequestProcessingOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackRequestProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $processingOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
     public function setProcessingOptions(array $processingOptions = array())
     {
         $invalidValues = array();
         foreach ($processingOptions as $trackRequestProcessingOptionsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackRequestProcessingOptionType::valueIsValid($trackRequestProcessingOptionsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\TrackRequestProcessingOptionType::valueIsValid($trackRequestProcessingOptionsItem)) {
                 $invalidValues[] = var_export($trackRequestProcessingOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackRequestProcessingOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackRequestProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->ProcessingOptions = $processingOptions;
         return $this;
     }
     /**
      * Add item to ProcessingOptions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackRequestProcessingOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackRequestProcessingOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackRequestProcessingOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackRequestProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
     public function addToProcessingOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackRequestProcessingOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackRequestProcessingOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackRequestProcessingOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackRequestProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->ProcessingOptions[] = $item;
         return $this;
@@ -284,7 +284,7 @@ class TrackRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackRequest
      */
     public static function __set_state(array $array)
     {

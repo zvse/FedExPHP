@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,7 +51,7 @@ class HazardousCommodityPackingDetail extends AbstractStructBase
     /**
      * Set CargoAircraftOnly value
      * @param bool $cargoAircraftOnly
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackingDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackingDetail
      */
     public function setCargoAircraftOnly($cargoAircraftOnly = null)
     {
@@ -69,7 +69,7 @@ class HazardousCommodityPackingDetail extends AbstractStructBase
     /**
      * Set PackingInstructions value
      * @param string $packingInstructions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackingDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackingDetail
      */
     public function setPackingInstructions($packingInstructions = null)
     {
@@ -86,7 +86,7 @@ class HazardousCommodityPackingDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackingDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackingDetail
      */
     public static function __set_state(array $array)
     {

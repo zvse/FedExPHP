@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -26,7 +26,7 @@ class EtdDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[]
      */
     public $DocumentReferences;
     /**
@@ -34,7 +34,7 @@ class EtdDetail extends AbstractStructBase
      * @uses EtdDetail::setRequestedDocumentCopies()
      * @uses EtdDetail::setDocumentReferences()
      * @param string[] $requestedDocumentCopies
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[] $documentReferences
+     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[] $documentReferences
      */
     public function __construct(array $requestedDocumentCopies = array(), array $documentReferences = array())
     {
@@ -52,46 +52,46 @@ class EtdDetail extends AbstractStructBase
     }
     /**
      * Set RequestedDocumentCopies value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $requestedDocumentCopies
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EtdDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\EtdDetail
      */
     public function setRequestedDocumentCopies(array $requestedDocumentCopies = array())
     {
         $invalidValues = array();
         foreach ($requestedDocumentCopies as $etdDetailRequestedDocumentCopiesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid($etdDetailRequestedDocumentCopiesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid($etdDetailRequestedDocumentCopiesItem)) {
                 $invalidValues[] = var_export($etdDetailRequestedDocumentCopiesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues())), __LINE__);
         }
         $this->RequestedDocumentCopies = $requestedDocumentCopies;
         return $this;
     }
     /**
      * Add item to RequestedDocumentCopies value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EtdDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\EtdDetail
      */
     public function addToRequestedDocumentCopies($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues())), __LINE__);
         }
         $this->RequestedDocumentCopies[] = $item;
         return $this;
     }
     /**
      * Get DocumentReferences value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[]|null
      */
     public function getDocumentReferences()
     {
@@ -100,15 +100,15 @@ class EtdDetail extends AbstractStructBase
     /**
      * Set DocumentReferences value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[] $documentReferences
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EtdDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[] $documentReferences
+     * @return \CommerceFedEx\FedExPHP\Structs\EtdDetail
      */
     public function setDocumentReferences(array $documentReferences = array())
     {
         foreach ($documentReferences as $etdDetailDocumentReferencesItem) {
             // validation for constraint: itemType
-            if (!$etdDetailDocumentReferencesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail) {
-                throw new \InvalidArgumentException(sprintf('The DocumentReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($etdDetailDocumentReferencesItem) ? get_class($etdDetailDocumentReferencesItem) : gettype($etdDetailDocumentReferencesItem)), __LINE__);
+            if (!$etdDetailDocumentReferencesItem instanceof \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail) {
+                throw new \InvalidArgumentException(sprintf('The DocumentReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($etdDetailDocumentReferencesItem) ? get_class($etdDetailDocumentReferencesItem) : gettype($etdDetailDocumentReferencesItem)), __LINE__);
             }
         }
         $this->DocumentReferences = $documentReferences;
@@ -117,14 +117,14 @@ class EtdDetail extends AbstractStructBase
     /**
      * Add item to DocumentReferences value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EtdDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\EtdDetail
      */
-    public function addToDocumentReferences(\NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail $item)
+    public function addToDocumentReferences(\CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail) {
-            throw new \InvalidArgumentException(sprintf('The DocumentReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail) {
+            throw new \InvalidArgumentException(sprintf('The DocumentReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DocumentReferences[] = $item;
         return $this;
@@ -135,7 +135,7 @@ class EtdDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EtdDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\EtdDetail
      */
     public static function __set_state(array $array)
     {

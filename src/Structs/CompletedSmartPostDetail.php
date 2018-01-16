@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class CompletedSmartPostDetail extends AbstractStructBase
     }
     /**
      * Set PickUpCarrier value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $pickUpCarrier
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedSmartPostDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedSmartPostDetail
      */
     public function setPickUpCarrier($pickUpCarrier = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($pickUpCarrier)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickUpCarrier, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($pickUpCarrier)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickUpCarrier, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->PickUpCarrier = $pickUpCarrier;
         return $this;
@@ -77,7 +77,7 @@ class CompletedSmartPostDetail extends AbstractStructBase
     /**
      * Set Machinable value
      * @param bool $machinable
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedSmartPostDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedSmartPostDetail
      */
     public function setMachinable($machinable = null)
     {
@@ -90,7 +90,7 @@ class CompletedSmartPostDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedSmartPostDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedSmartPostDetail
      */
     public static function __set_state(array $array)
     {

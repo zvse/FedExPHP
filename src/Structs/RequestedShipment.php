@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -42,21 +42,21 @@ class RequestedShipment extends AbstractStructBase
      * The Shipper
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
+     * @var \CommerceFedEx\FedExPHP\Structs\Party
      */
     public $Shipper;
     /**
      * The Recipient
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
+     * @var \CommerceFedEx\FedExPHP\Structs\Party
      */
     public $Recipient;
     /**
      * The LabelSpecification
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @var \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
     public $LabelSpecification;
     /**
@@ -72,14 +72,14 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: This specifies information related to the manifest associated with the shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentManifestDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentManifestDetail
      */
     public $ManifestDetail;
     /**
      * The TotalWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public $TotalWeight;
     /**
@@ -88,7 +88,7 @@ class RequestedShipment extends AbstractStructBase
      * - documentation: Specifies the total declared value for carriage of the shipment. The declared value for carriage represents the maximum liability of FedEx in connection with a shipment, including, but not limited to, any loss, damage, delay,
      * mis-delivery, nondelivery, misinformation, any failure to provide information, or mis-delivery of information relating to the shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $TotalInsuredValue;
     /**
@@ -104,7 +104,7 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies details about the entity responsible for the shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAuthorizationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentAuthorizationDetail
      */
     public $ShipmentAuthorizationDetail;
     /**
@@ -119,35 +119,35 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Physical starting address for the shipment, if different from shipper's address.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
      */
     public $Origin;
     /**
      * The SoldTo
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
+     * @var \CommerceFedEx\FedExPHP\Structs\Party
      */
     public $SoldTo;
     /**
      * The ShippingChargesPayment
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payment
+     * @var \CommerceFedEx\FedExPHP\Structs\Payment
      */
     public $ShippingChargesPayment;
     /**
      * The SpecialServicesRequested
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested
      */
     public $SpecialServicesRequested;
     /**
      * The ExpressFreightDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail
      */
     public $ExpressFreightDetail;
     /**
@@ -155,7 +155,7 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Data applicable to shipments using FEDEX_FREIGHT_ECONOMY and FEDEX_FREIGHT_PRIORITY services.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public $FreightShipmentDetail;
     /**
@@ -170,7 +170,7 @@ class RequestedShipment extends AbstractStructBase
      * The VariableHandlingChargeDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail
      */
     public $VariableHandlingChargeDetail;
     /**
@@ -178,7 +178,7 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Customs clearance data, used for both international and intra-country shipping.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public $CustomsClearanceDetail;
     /**
@@ -186,7 +186,7 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: For use in "process tag" transaction.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\PickupDetail
      */
     public $PickupDetail;
     /**
@@ -194,7 +194,7 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the characteristics of a shipment pertaining to SmartPost services.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail
      */
     public $SmartPostDetail;
     /**
@@ -210,7 +210,7 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains data used to create additional (non-label) shipping documents.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification
      */
     public $ShippingDocumentSpecification;
     /**
@@ -235,7 +235,7 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Only used with multiple-transaction shipments, to identify the master package in a multi-piece shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId
      */
     public $MasterTrackingId;
     /**
@@ -243,7 +243,7 @@ class RequestedShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies data structures that may be re-used multiple times with s single shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConfigurationData
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentConfigurationData
      */
     public $ConfigurationData;
     /**
@@ -252,7 +252,7 @@ class RequestedShipment extends AbstractStructBase
      * - documentation: One or more package-attribute descriptions, each of which describes an individual package, a group of identical packages, or (for the total-piece-total-weight case) common characteristics all packages in the shipment.
      * - maxOccurs: 999
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem[]
+     * @var \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem[]
      */
     public $RequestedPackageLineItems;
     /**
@@ -293,36 +293,36 @@ class RequestedShipment extends AbstractStructBase
      * @param string $dropoffType
      * @param string $serviceType
      * @param string $packagingType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $shipper
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $recipient
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $shipper
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $recipient
+     * @param \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification
      * @param int $packageCount
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentManifestDetail $manifestDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentManifestDetail $manifestDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue
      * @param string $preferredCurrency
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAuthorizationDetail $shipmentAuthorizationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentAuthorizationDetail $shipmentAuthorizationDetail
      * @param string $recipientLocationNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $origin
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $soldTo
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail $expressFreightDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail $freightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $origin
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $soldTo
+     * @param \CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested
+     * @param \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail $expressFreightDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail $freightShipmentDetail
      * @param string $deliveryInstructions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail $pickupDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail $smartPostDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PickupDetail $pickupDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail $smartPostDetail
      * @param bool $blockInsightVisibility
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
      * @param string[] $rateRequestTypes
      * @param string $edtRequestType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConfigurationData $configurationData
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem[] $requestedPackageLineItems
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentConfigurationData $configurationData
+     * @param \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem[] $requestedPackageLineItems
      */
-    public function __construct($shipTimestamp = null, $dropoffType = null, $serviceType = null, $packagingType = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $shipper = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $recipient = null, \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification = null, $packageCount = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentManifestDetail $manifestDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue = null, $preferredCurrency = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAuthorizationDetail $shipmentAuthorizationDetail = null, $recipientLocationNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $origin = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $soldTo = null, \NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested = null, \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail $expressFreightDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail $freightShipmentDetail = null, $deliveryInstructions = null, \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail $pickupDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail $smartPostDetail = null, $blockInsightVisibility = null, \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null, array $rateRequestTypes = array(), $edtRequestType = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConfigurationData $configurationData = null, array $requestedPackageLineItems = array())
+    public function __construct($shipTimestamp = null, $dropoffType = null, $serviceType = null, $packagingType = null, \CommerceFedEx\FedExPHP\Structs\Party $shipper = null, \CommerceFedEx\FedExPHP\Structs\Party $recipient = null, \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification = null, $packageCount = null, \CommerceFedEx\FedExPHP\Structs\ShipmentManifestDetail $manifestDetail = null, \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight = null, \CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue = null, $preferredCurrency = null, \CommerceFedEx\FedExPHP\Structs\ShipmentAuthorizationDetail $shipmentAuthorizationDetail = null, $recipientLocationNumber = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $origin = null, \CommerceFedEx\FedExPHP\Structs\Party $soldTo = null, \CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment = null, \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested = null, \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail $expressFreightDetail = null, \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail $freightShipmentDetail = null, $deliveryInstructions = null, \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null, \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail = null, \CommerceFedEx\FedExPHP\Structs\PickupDetail $pickupDetail = null, \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail $smartPostDetail = null, $blockInsightVisibility = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null, array $rateRequestTypes = array(), $edtRequestType = null, \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId = null, \CommerceFedEx\FedExPHP\Structs\ShipmentConfigurationData $configurationData = null, array $requestedPackageLineItems = array())
     {
         $this
             ->setShipTimestamp($shipTimestamp)
@@ -369,7 +369,7 @@ class RequestedShipment extends AbstractStructBase
     /**
      * Set ShipTimestamp value
      * @param string $shipTimestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setShipTimestamp($shipTimestamp = null)
     {
@@ -390,17 +390,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set DropoffType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DropoffType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DropoffType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DropoffType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DropoffType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $dropoffType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setDropoffType($dropoffType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DropoffType::valueIsValid($dropoffType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dropoffType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DropoffType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DropoffType::valueIsValid($dropoffType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dropoffType, implode(', ', \CommerceFedEx\FedExPHP\Enums\DropoffType::getValidValues())), __LINE__);
         }
         $this->DropoffType = $dropoffType;
         return $this;
@@ -415,17 +415,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set ServiceType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $serviceType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setServiceType($serviceType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid($serviceType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid($serviceType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
         }
         $this->ServiceType = $serviceType;
         return $this;
@@ -440,24 +440,24 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set PackagingType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackagingType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackagingType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackagingType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackagingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $packagingType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setPackagingType($packagingType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PackagingType::valueIsValid($packagingType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packagingType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PackagingType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PackagingType::valueIsValid($packagingType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packagingType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PackagingType::getValidValues())), __LINE__);
         }
         $this->PackagingType = $packagingType;
         return $this;
     }
     /**
      * Get Shipper value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party
+     * @return \CommerceFedEx\FedExPHP\Structs\Party
      */
     public function getShipper()
     {
@@ -465,17 +465,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set Shipper value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $shipper
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $shipper
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setShipper(\NicholasCreativeMedia\FedExPHP\Structs\Party $shipper = null)
+    public function setShipper(\CommerceFedEx\FedExPHP\Structs\Party $shipper = null)
     {
         $this->Shipper = $shipper;
         return $this;
     }
     /**
      * Get Recipient value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party
+     * @return \CommerceFedEx\FedExPHP\Structs\Party
      */
     public function getRecipient()
     {
@@ -483,17 +483,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set Recipient value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $recipient
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $recipient
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setRecipient(\NicholasCreativeMedia\FedExPHP\Structs\Party $recipient = null)
+    public function setRecipient(\CommerceFedEx\FedExPHP\Structs\Party $recipient = null)
     {
         $this->Recipient = $recipient;
         return $this;
     }
     /**
      * Get LabelSpecification value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
     public function getLabelSpecification()
     {
@@ -501,10 +501,10 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set LabelSpecification value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setLabelSpecification(\NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification = null)
+    public function setLabelSpecification(\CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification = null)
     {
         $this->LabelSpecification = $labelSpecification;
         return $this;
@@ -520,7 +520,7 @@ class RequestedShipment extends AbstractStructBase
     /**
      * Set PackageCount value
      * @param int $packageCount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setPackageCount($packageCount = null)
     {
@@ -533,7 +533,7 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Get ManifestDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentManifestDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentManifestDetail|null
      */
     public function getManifestDetail()
     {
@@ -541,17 +541,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set ManifestDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentManifestDetail $manifestDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentManifestDetail $manifestDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setManifestDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentManifestDetail $manifestDetail = null)
+    public function setManifestDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentManifestDetail $manifestDetail = null)
     {
         $this->ManifestDetail = $manifestDetail;
         return $this;
     }
     /**
      * Get TotalWeight value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
      */
     public function getTotalWeight()
     {
@@ -559,17 +559,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set TotalWeight value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setTotalWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight = null)
+    public function setTotalWeight(\CommerceFedEx\FedExPHP\Structs\Weight $totalWeight = null)
     {
         $this->TotalWeight = $totalWeight;
         return $this;
     }
     /**
      * Get TotalInsuredValue value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getTotalInsuredValue()
     {
@@ -577,10 +577,10 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set TotalInsuredValue value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setTotalInsuredValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue = null)
+    public function setTotalInsuredValue(\CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue = null)
     {
         $this->TotalInsuredValue = $totalInsuredValue;
         return $this;
@@ -596,7 +596,7 @@ class RequestedShipment extends AbstractStructBase
     /**
      * Set PreferredCurrency value
      * @param string $preferredCurrency
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setPreferredCurrency($preferredCurrency = null)
     {
@@ -609,7 +609,7 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Get ShipmentAuthorizationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAuthorizationDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAuthorizationDetail|null
      */
     public function getShipmentAuthorizationDetail()
     {
@@ -617,10 +617,10 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set ShipmentAuthorizationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAuthorizationDetail $shipmentAuthorizationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentAuthorizationDetail $shipmentAuthorizationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setShipmentAuthorizationDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentAuthorizationDetail $shipmentAuthorizationDetail = null)
+    public function setShipmentAuthorizationDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentAuthorizationDetail $shipmentAuthorizationDetail = null)
     {
         $this->ShipmentAuthorizationDetail = $shipmentAuthorizationDetail;
         return $this;
@@ -636,7 +636,7 @@ class RequestedShipment extends AbstractStructBase
     /**
      * Set RecipientLocationNumber value
      * @param string $recipientLocationNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setRecipientLocationNumber($recipientLocationNumber = null)
     {
@@ -649,7 +649,7 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Get Origin value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getOrigin()
     {
@@ -657,17 +657,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set Origin value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $origin
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $origin
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setOrigin(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $origin = null)
+    public function setOrigin(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $origin = null)
     {
         $this->Origin = $origin;
         return $this;
     }
     /**
      * Get SoldTo value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
      */
     public function getSoldTo()
     {
@@ -675,17 +675,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set SoldTo value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $soldTo
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $soldTo
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setSoldTo(\NicholasCreativeMedia\FedExPHP\Structs\Party $soldTo = null)
+    public function setSoldTo(\CommerceFedEx\FedExPHP\Structs\Party $soldTo = null)
     {
         $this->SoldTo = $soldTo;
         return $this;
     }
     /**
      * Get ShippingChargesPayment value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Payment|null
      */
     public function getShippingChargesPayment()
     {
@@ -693,17 +693,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set ShippingChargesPayment value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setShippingChargesPayment(\NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment = null)
+    public function setShippingChargesPayment(\CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment = null)
     {
         $this->ShippingChargesPayment = $shippingChargesPayment;
         return $this;
     }
     /**
      * Get SpecialServicesRequested value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested|null
      */
     public function getSpecialServicesRequested()
     {
@@ -711,17 +711,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set SpecialServicesRequested value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setSpecialServicesRequested(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested = null)
+    public function setSpecialServicesRequested(\CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested = null)
     {
         $this->SpecialServicesRequested = $specialServicesRequested;
         return $this;
     }
     /**
      * Get ExpressFreightDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail|null
      */
     public function getExpressFreightDetail()
     {
@@ -729,17 +729,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set ExpressFreightDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail $expressFreightDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail $expressFreightDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setExpressFreightDetail(\NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightDetail $expressFreightDetail = null)
+    public function setExpressFreightDetail(\CommerceFedEx\FedExPHP\Structs\ExpressFreightDetail $expressFreightDetail = null)
     {
         $this->ExpressFreightDetail = $expressFreightDetail;
         return $this;
     }
     /**
      * Get FreightShipmentDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail|null
      */
     public function getFreightShipmentDetail()
     {
@@ -747,10 +747,10 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set FreightShipmentDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail $freightShipmentDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail $freightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setFreightShipmentDetail(\NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail $freightShipmentDetail = null)
+    public function setFreightShipmentDetail(\CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail $freightShipmentDetail = null)
     {
         $this->FreightShipmentDetail = $freightShipmentDetail;
         return $this;
@@ -766,7 +766,7 @@ class RequestedShipment extends AbstractStructBase
     /**
      * Set DeliveryInstructions value
      * @param string $deliveryInstructions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setDeliveryInstructions($deliveryInstructions = null)
     {
@@ -779,7 +779,7 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Get VariableHandlingChargeDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail|null
      */
     public function getVariableHandlingChargeDetail()
     {
@@ -787,17 +787,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set VariableHandlingChargeDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setVariableHandlingChargeDetail(\NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null)
+    public function setVariableHandlingChargeDetail(\CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null)
     {
         $this->VariableHandlingChargeDetail = $variableHandlingChargeDetail;
         return $this;
     }
     /**
      * Get CustomsClearanceDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail|null
      */
     public function getCustomsClearanceDetail()
     {
@@ -805,17 +805,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set CustomsClearanceDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setCustomsClearanceDetail(\NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail = null)
+    public function setCustomsClearanceDetail(\CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail = null)
     {
         $this->CustomsClearanceDetail = $customsClearanceDetail;
         return $this;
     }
     /**
      * Get PickupDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupDetail|null
      */
     public function getPickupDetail()
     {
@@ -823,17 +823,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set PickupDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail $pickupDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\PickupDetail $pickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setPickupDetail(\NicholasCreativeMedia\FedExPHP\Structs\PickupDetail $pickupDetail = null)
+    public function setPickupDetail(\CommerceFedEx\FedExPHP\Structs\PickupDetail $pickupDetail = null)
     {
         $this->PickupDetail = $pickupDetail;
         return $this;
     }
     /**
      * Get SmartPostDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail|null
      */
     public function getSmartPostDetail()
     {
@@ -841,10 +841,10 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set SmartPostDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail $smartPostDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail $smartPostDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setSmartPostDetail(\NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail $smartPostDetail = null)
+    public function setSmartPostDetail(\CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail $smartPostDetail = null)
     {
         $this->SmartPostDetail = $smartPostDetail;
         return $this;
@@ -860,7 +860,7 @@ class RequestedShipment extends AbstractStructBase
     /**
      * Set BlockInsightVisibility value
      * @param bool $blockInsightVisibility
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setBlockInsightVisibility($blockInsightVisibility = null)
     {
@@ -869,7 +869,7 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Get ShippingDocumentSpecification value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification|null
      */
     public function getShippingDocumentSpecification()
     {
@@ -877,10 +877,10 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set ShippingDocumentSpecification value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setShippingDocumentSpecification(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null)
+    public function setShippingDocumentSpecification(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null)
     {
         $this->ShippingDocumentSpecification = $shippingDocumentSpecification;
         return $this;
@@ -895,39 +895,39 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set RateRequestTypes value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $rateRequestTypes
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setRateRequestTypes(array $rateRequestTypes = array())
     {
         $invalidValues = array();
         foreach ($rateRequestTypes as $requestedShipmentRateRequestTypesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid($requestedShipmentRateRequestTypesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid($requestedShipmentRateRequestTypesItem)) {
                 $invalidValues[] = var_export($requestedShipmentRateRequestTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
         }
         $this->RateRequestTypes = $rateRequestTypes;
         return $this;
     }
     /**
      * Add item to RateRequestTypes value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function addToRateRequestTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
         }
         $this->RateRequestTypes[] = $item;
         return $this;
@@ -942,24 +942,24 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set EdtRequestType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EdtRequestType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EdtRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $edtRequestType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setEdtRequestType($edtRequestType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::valueIsValid($edtRequestType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $edtRequestType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\EdtRequestType::valueIsValid($edtRequestType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $edtRequestType, implode(', ', \CommerceFedEx\FedExPHP\Enums\EdtRequestType::getValidValues())), __LINE__);
         }
         $this->EdtRequestType = $edtRequestType;
         return $this;
     }
     /**
      * Get MasterTrackingId value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId|null
      */
     public function getMasterTrackingId()
     {
@@ -967,17 +967,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set MasterTrackingId value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setMasterTrackingId(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId = null)
+    public function setMasterTrackingId(\CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId = null)
     {
         $this->MasterTrackingId = $masterTrackingId;
         return $this;
     }
     /**
      * Get ConfigurationData value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConfigurationData|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConfigurationData|null
      */
     public function getConfigurationData()
     {
@@ -985,17 +985,17 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set ConfigurationData value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConfigurationData $configurationData
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentConfigurationData $configurationData
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function setConfigurationData(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentConfigurationData $configurationData = null)
+    public function setConfigurationData(\CommerceFedEx\FedExPHP\Structs\ShipmentConfigurationData $configurationData = null)
     {
         $this->ConfigurationData = $configurationData;
         return $this;
     }
     /**
      * Get RequestedPackageLineItems value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem[]|null
      */
     public function getRequestedPackageLineItems()
     {
@@ -1004,15 +1004,15 @@ class RequestedShipment extends AbstractStructBase
     /**
      * Set RequestedPackageLineItems value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem[] $requestedPackageLineItems
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem[] $requestedPackageLineItems
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setRequestedPackageLineItems(array $requestedPackageLineItems = array())
     {
         foreach ($requestedPackageLineItems as $requestedShipmentRequestedPackageLineItemsItem) {
             // validation for constraint: itemType
-            if (!$requestedShipmentRequestedPackageLineItemsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem) {
-                throw new \InvalidArgumentException(sprintf('The RequestedPackageLineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem, "%s" given', is_object($requestedShipmentRequestedPackageLineItemsItem) ? get_class($requestedShipmentRequestedPackageLineItemsItem) : gettype($requestedShipmentRequestedPackageLineItemsItem)), __LINE__);
+            if (!$requestedShipmentRequestedPackageLineItemsItem instanceof \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem) {
+                throw new \InvalidArgumentException(sprintf('The RequestedPackageLineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem, "%s" given', is_object($requestedShipmentRequestedPackageLineItemsItem) ? get_class($requestedShipmentRequestedPackageLineItemsItem) : gettype($requestedShipmentRequestedPackageLineItemsItem)), __LINE__);
             }
         }
         $this->RequestedPackageLineItems = $requestedPackageLineItems;
@@ -1021,14 +1021,14 @@ class RequestedShipment extends AbstractStructBase
     /**
      * Add item to RequestedPackageLineItems value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @param \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem $item
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
-    public function addToRequestedPackageLineItems(\NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem $item)
+    public function addToRequestedPackageLineItems(\CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem) {
-            throw new \InvalidArgumentException(sprintf('The RequestedPackageLineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem) {
+            throw new \InvalidArgumentException(sprintf('The RequestedPackageLineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->RequestedPackageLineItems[] = $item;
         return $this;
@@ -1039,7 +1039,7 @@ class RequestedShipment extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -22,7 +22,7 @@ class LiabilityCoverageDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the Liability Coverage Amount. For Jan 2010 this value represents coverage amount per pound
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $CoverageAmount;
     /**
@@ -30,9 +30,9 @@ class LiabilityCoverageDetail extends AbstractStructBase
      * @uses LiabilityCoverageDetail::setCoverageType()
      * @uses LiabilityCoverageDetail::setCoverageAmount()
      * @param string $coverageType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $coverageAmount
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $coverageAmount
      */
-    public function __construct($coverageType = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $coverageAmount = null)
+    public function __construct($coverageType = null, \CommerceFedEx\FedExPHP\Structs\Money $coverageAmount = null)
     {
         $this
             ->setCoverageType($coverageType)
@@ -48,24 +48,24 @@ class LiabilityCoverageDetail extends AbstractStructBase
     }
     /**
      * Set CoverageType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LiabilityCoverageType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LiabilityCoverageType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LiabilityCoverageType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LiabilityCoverageType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $coverageType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LiabilityCoverageDetail
      */
     public function setCoverageType($coverageType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LiabilityCoverageType::valueIsValid($coverageType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $coverageType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LiabilityCoverageType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LiabilityCoverageType::valueIsValid($coverageType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $coverageType, implode(', ', \CommerceFedEx\FedExPHP\Enums\LiabilityCoverageType::getValidValues())), __LINE__);
         }
         $this->CoverageType = $coverageType;
         return $this;
     }
     /**
      * Get CoverageAmount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getCoverageAmount()
     {
@@ -73,10 +73,10 @@ class LiabilityCoverageDetail extends AbstractStructBase
     }
     /**
      * Set CoverageAmount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $coverageAmount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $coverageAmount
+     * @return \CommerceFedEx\FedExPHP\Structs\LiabilityCoverageDetail
      */
-    public function setCoverageAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $coverageAmount = null)
+    public function setCoverageAmount(\CommerceFedEx\FedExPHP\Structs\Money $coverageAmount = null)
     {
         $this->CoverageAmount = $coverageAmount;
         return $this;
@@ -87,7 +87,7 @@ class LiabilityCoverageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LiabilityCoverageDetail
      */
     public static function __set_state(array $array)
     {

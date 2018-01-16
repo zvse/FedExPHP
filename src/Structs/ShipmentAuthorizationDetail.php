@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -38,7 +38,7 @@ class ShipmentAuthorizationDetail extends AbstractStructBase
     /**
      * Set AccountNumber value
      * @param string $accountNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAuthorizationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAuthorizationDetail
      */
     public function setAccountNumber($accountNumber = null)
     {
@@ -55,7 +55,7 @@ class ShipmentAuthorizationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAuthorizationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAuthorizationDetail
      */
     public static function __set_state(array $array)
     {

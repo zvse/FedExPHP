@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -48,7 +48,7 @@ class RadionuclideActivity extends AbstractStructBase
     /**
      * Set Value value
      * @param float $value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideActivity
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideActivity
      */
     public function setValue($value = null)
     {
@@ -65,17 +65,17 @@ class RadionuclideActivity extends AbstractStructBase
     }
     /**
      * Set UnitOfMeasure value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RadioactivityUnitOfMeasure::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RadioactivityUnitOfMeasure::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RadioactivityUnitOfMeasure::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RadioactivityUnitOfMeasure::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $unitOfMeasure
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideActivity
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideActivity
      */
     public function setUnitOfMeasure($unitOfMeasure = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RadioactivityUnitOfMeasure::valueIsValid($unitOfMeasure)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $unitOfMeasure, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RadioactivityUnitOfMeasure::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RadioactivityUnitOfMeasure::valueIsValid($unitOfMeasure)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $unitOfMeasure, implode(', ', \CommerceFedEx\FedExPHP\Enums\RadioactivityUnitOfMeasure::getValidValues())), __LINE__);
         }
         $this->UnitOfMeasure = $unitOfMeasure;
         return $this;
@@ -86,7 +86,7 @@ class RadionuclideActivity extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideActivity
+     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideActivity
      */
     public static function __set_state(array $array)
     {

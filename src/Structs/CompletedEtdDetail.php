@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class CompletedEtdDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[]
      */
     public $UploadDocumentReferenceDetails;
     /**
@@ -31,7 +31,7 @@ class CompletedEtdDetail extends AbstractStructBase
      * @uses CompletedEtdDetail::setFolderId()
      * @uses CompletedEtdDetail::setUploadDocumentReferenceDetails()
      * @param string $folderId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[] $uploadDocumentReferenceDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[] $uploadDocumentReferenceDetails
      */
     public function __construct($folderId = null, array $uploadDocumentReferenceDetails = array())
     {
@@ -50,7 +50,7 @@ class CompletedEtdDetail extends AbstractStructBase
     /**
      * Set FolderId value
      * @param string $folderId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedEtdDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedEtdDetail
      */
     public function setFolderId($folderId = null)
     {
@@ -63,7 +63,7 @@ class CompletedEtdDetail extends AbstractStructBase
     }
     /**
      * Get UploadDocumentReferenceDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[]|null
      */
     public function getUploadDocumentReferenceDetails()
     {
@@ -72,15 +72,15 @@ class CompletedEtdDetail extends AbstractStructBase
     /**
      * Set UploadDocumentReferenceDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[] $uploadDocumentReferenceDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedEtdDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[] $uploadDocumentReferenceDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedEtdDetail
      */
     public function setUploadDocumentReferenceDetails(array $uploadDocumentReferenceDetails = array())
     {
         foreach ($uploadDocumentReferenceDetails as $completedEtdDetailUploadDocumentReferenceDetailsItem) {
             // validation for constraint: itemType
-            if (!$completedEtdDetailUploadDocumentReferenceDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail) {
-                throw new \InvalidArgumentException(sprintf('The UploadDocumentReferenceDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($completedEtdDetailUploadDocumentReferenceDetailsItem) ? get_class($completedEtdDetailUploadDocumentReferenceDetailsItem) : gettype($completedEtdDetailUploadDocumentReferenceDetailsItem)), __LINE__);
+            if (!$completedEtdDetailUploadDocumentReferenceDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail) {
+                throw new \InvalidArgumentException(sprintf('The UploadDocumentReferenceDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($completedEtdDetailUploadDocumentReferenceDetailsItem) ? get_class($completedEtdDetailUploadDocumentReferenceDetailsItem) : gettype($completedEtdDetailUploadDocumentReferenceDetailsItem)), __LINE__);
             }
         }
         $this->UploadDocumentReferenceDetails = $uploadDocumentReferenceDetails;
@@ -89,14 +89,14 @@ class CompletedEtdDetail extends AbstractStructBase
     /**
      * Add item to UploadDocumentReferenceDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedEtdDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedEtdDetail
      */
-    public function addToUploadDocumentReferenceDetails(\NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail $item)
+    public function addToUploadDocumentReferenceDetails(\CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail) {
-            throw new \InvalidArgumentException(sprintf('The UploadDocumentReferenceDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail) {
+            throw new \InvalidArgumentException(sprintf('The UploadDocumentReferenceDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->UploadDocumentReferenceDetails[] = $item;
         return $this;
@@ -107,7 +107,7 @@ class CompletedEtdDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedEtdDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedEtdDetail
      */
     public static function __set_state(array $array)
     {

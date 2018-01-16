@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -35,7 +35,7 @@ class RadioactivityDetail extends AbstractStructBase
      * The Dimensions
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
+     * @var \CommerceFedEx\FedExPHP\Structs\Dimensions
      */
     public $Dimensions;
     /**
@@ -47,9 +47,9 @@ class RadioactivityDetail extends AbstractStructBase
      * @param float $transportIndex
      * @param float $surfaceReading
      * @param float $criticalitySafetyIndex
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
+     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
      */
-    public function __construct($transportIndex = null, $surfaceReading = null, $criticalitySafetyIndex = null, \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null)
+    public function __construct($transportIndex = null, $surfaceReading = null, $criticalitySafetyIndex = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null)
     {
         $this
             ->setTransportIndex($transportIndex)
@@ -68,7 +68,7 @@ class RadioactivityDetail extends AbstractStructBase
     /**
      * Set TransportIndex value
      * @param float $transportIndex
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactivityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RadioactivityDetail
      */
     public function setTransportIndex($transportIndex = null)
     {
@@ -86,7 +86,7 @@ class RadioactivityDetail extends AbstractStructBase
     /**
      * Set SurfaceReading value
      * @param float $surfaceReading
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactivityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RadioactivityDetail
      */
     public function setSurfaceReading($surfaceReading = null)
     {
@@ -104,7 +104,7 @@ class RadioactivityDetail extends AbstractStructBase
     /**
      * Set CriticalitySafetyIndex value
      * @param float $criticalitySafetyIndex
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactivityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RadioactivityDetail
      */
     public function setCriticalitySafetyIndex($criticalitySafetyIndex = null)
     {
@@ -113,7 +113,7 @@ class RadioactivityDetail extends AbstractStructBase
     }
     /**
      * Get Dimensions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions|null
      */
     public function getDimensions()
     {
@@ -121,10 +121,10 @@ class RadioactivityDetail extends AbstractStructBase
     }
     /**
      * Set Dimensions value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactivityDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
+     * @return \CommerceFedEx\FedExPHP\Structs\RadioactivityDetail
      */
-    public function setDimensions(\NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null)
+    public function setDimensions(\CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null)
     {
         $this->Dimensions = $dimensions;
         return $this;
@@ -135,7 +135,7 @@ class RadioactivityDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactivityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RadioactivityDetail
      */
     public static function __set_state(array $array)
     {

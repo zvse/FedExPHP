@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class RegulatoryLabelContentDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RegulatoryLabelType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RegulatoryLabelType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RegulatoryLabelType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RegulatoryLabelType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RegulatoryLabelType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RegulatoryLabelType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RegulatoryLabelType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\RegulatoryLabelType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -76,39 +76,39 @@ class RegulatoryLabelContentDetail extends AbstractStructBase
     }
     /**
      * Set GenerationOptions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $generationOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail
      */
     public function setGenerationOptions(array $generationOptions = array())
     {
         $invalidValues = array();
         foreach ($generationOptions as $regulatoryLabelContentDetailGenerationOptionsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::valueIsValid($regulatoryLabelContentDetailGenerationOptionsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::valueIsValid($regulatoryLabelContentDetailGenerationOptionsItem)) {
                 $invalidValues[] = var_export($regulatoryLabelContentDetailGenerationOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::getValidValues())), __LINE__);
         }
         $this->GenerationOptions = $generationOptions;
         return $this;
     }
     /**
      * Add item to GenerationOptions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail
      */
     public function addToGenerationOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomerSpecifiedLabelGenerationOptionType::getValidValues())), __LINE__);
         }
         $this->GenerationOptions[] = $item;
         return $this;
@@ -119,7 +119,7 @@ class RegulatoryLabelContentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail
      */
     public static function __set_state(array $array)
     {

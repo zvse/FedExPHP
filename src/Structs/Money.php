@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -48,7 +48,7 @@ class Money extends AbstractStructBase
     /**
      * Set Currency value
      * @param string $currency
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @return \CommerceFedEx\FedExPHP\Structs\Money
      */
     public function setCurrency($currency = null)
     {
@@ -70,7 +70,7 @@ class Money extends AbstractStructBase
     /**
      * Set Amount value
      * @param float $amount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @return \CommerceFedEx\FedExPHP\Structs\Money
      */
     public function setAmount($amount = null)
     {
@@ -83,7 +83,7 @@ class Money extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @return \CommerceFedEx\FedExPHP\Structs\Money
      */
     public static function __set_state(array $array)
     {

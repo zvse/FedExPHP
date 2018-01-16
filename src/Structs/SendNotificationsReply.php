@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -26,7 +26,7 @@ class SendNotificationsReply extends AbstractStructBase
      * - documentation: Information about the request/reply such was the transaction successful or not, and any additional information relevant to the request and/or reply. There may be multiple Notifications in a reply.
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
@@ -34,7 +34,7 @@ class SendNotificationsReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains the version of the reply being used.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
@@ -42,7 +42,7 @@ class SendNotificationsReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains the CustomerTransactionDetail that is echoed back to the caller for matching requests and replies and a Localization element for defining the language/translation used in the reply data.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -77,7 +77,7 @@ class SendNotificationsReply extends AbstractStructBase
      * subsequent request.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage[]
      */
     public $Packages;
     /**
@@ -91,15 +91,15 @@ class SendNotificationsReply extends AbstractStructBase
      * @uses SendNotificationsReply::setPagingToken()
      * @uses SendNotificationsReply::setPackages()
      * @param string $highestSeverity
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param bool $duplicateWaybill
      * @param bool $moreDataAvailable
      * @param string $pagingToken
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage[] $packages
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage[] $packages
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $duplicateWaybill = null, $moreDataAvailable = null, $pagingToken = null, array $packages = array())
+    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $duplicateWaybill = null, $moreDataAvailable = null, $pagingToken = null, array $packages = array())
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -121,24 +121,24 @@ class SendNotificationsReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -147,15 +147,15 @@ class SendNotificationsReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $sendNotificationsReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$sendNotificationsReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($sendNotificationsReplyNotificationsItem) ? get_class($sendNotificationsReplyNotificationsItem) : gettype($sendNotificationsReplyNotificationsItem)), __LINE__);
+            if (!$sendNotificationsReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($sendNotificationsReplyNotificationsItem) ? get_class($sendNotificationsReplyNotificationsItem) : gettype($sendNotificationsReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -164,21 +164,21 @@ class SendNotificationsReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
-    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -186,17 +186,17 @@ class SendNotificationsReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -204,10 +204,10 @@ class SendNotificationsReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -223,7 +223,7 @@ class SendNotificationsReply extends AbstractStructBase
     /**
      * Set DuplicateWaybill value
      * @param bool $duplicateWaybill
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
     public function setDuplicateWaybill($duplicateWaybill = null)
     {
@@ -241,7 +241,7 @@ class SendNotificationsReply extends AbstractStructBase
     /**
      * Set MoreDataAvailable value
      * @param bool $moreDataAvailable
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
     public function setMoreDataAvailable($moreDataAvailable = null)
     {
@@ -259,7 +259,7 @@ class SendNotificationsReply extends AbstractStructBase
     /**
      * Set PagingToken value
      * @param string $pagingToken
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
     public function setPagingToken($pagingToken = null)
     {
@@ -272,7 +272,7 @@ class SendNotificationsReply extends AbstractStructBase
     }
     /**
      * Get Packages value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage[]|null
      */
     public function getPackages()
     {
@@ -281,15 +281,15 @@ class SendNotificationsReply extends AbstractStructBase
     /**
      * Set Packages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage[] $packages
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage[] $packages
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
     public function setPackages(array $packages = array())
     {
         foreach ($packages as $sendNotificationsReplyPackagesItem) {
             // validation for constraint: itemType
-            if (!$sendNotificationsReplyPackagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage) {
-                throw new \InvalidArgumentException(sprintf('The Packages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage, "%s" given', is_object($sendNotificationsReplyPackagesItem) ? get_class($sendNotificationsReplyPackagesItem) : gettype($sendNotificationsReplyPackagesItem)), __LINE__);
+            if (!$sendNotificationsReplyPackagesItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage) {
+                throw new \InvalidArgumentException(sprintf('The Packages property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage, "%s" given', is_object($sendNotificationsReplyPackagesItem) ? get_class($sendNotificationsReplyPackagesItem) : gettype($sendNotificationsReplyPackagesItem)), __LINE__);
             }
         }
         $this->Packages = $packages;
@@ -298,14 +298,14 @@ class SendNotificationsReply extends AbstractStructBase
     /**
      * Add item to Packages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage $item
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
-    public function addToPackages(\NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage $item)
+    public function addToPackages(\CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage) {
-            throw new \InvalidArgumentException(sprintf('The Packages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage) {
+            throw new \InvalidArgumentException(sprintf('The Packages property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Packages[] = $item;
         return $this;
@@ -316,7 +316,7 @@ class SendNotificationsReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SendNotificationsReply
+     * @return \CommerceFedEx\FedExPHP\Structs\SendNotificationsReply
      */
     public static function __set_state(array $array)
     {

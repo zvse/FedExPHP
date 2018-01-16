@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,7 +16,7 @@ class VariableHandlingChargeDetail extends AbstractStructBase
      * The FixedValue
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $FixedValue;
     /**
@@ -49,12 +49,12 @@ class VariableHandlingChargeDetail extends AbstractStructBase
      * @uses VariableHandlingChargeDetail::setPercentValue()
      * @uses VariableHandlingChargeDetail::setRateElementBasis()
      * @uses VariableHandlingChargeDetail::setRateTypeBasis()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $fixedValue
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $fixedValue
      * @param float $percentValue
      * @param string $rateElementBasis
      * @param string $rateTypeBasis
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Money $fixedValue = null, $percentValue = null, $rateElementBasis = null, $rateTypeBasis = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\Money $fixedValue = null, $percentValue = null, $rateElementBasis = null, $rateTypeBasis = null)
     {
         $this
             ->setFixedValue($fixedValue)
@@ -64,7 +64,7 @@ class VariableHandlingChargeDetail extends AbstractStructBase
     }
     /**
      * Get FixedValue value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getFixedValue()
     {
@@ -72,10 +72,10 @@ class VariableHandlingChargeDetail extends AbstractStructBase
     }
     /**
      * Set FixedValue value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $fixedValue
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $fixedValue
+     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail
      */
-    public function setFixedValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $fixedValue = null)
+    public function setFixedValue(\CommerceFedEx\FedExPHP\Structs\Money $fixedValue = null)
     {
         $this->FixedValue = $fixedValue;
         return $this;
@@ -91,7 +91,7 @@ class VariableHandlingChargeDetail extends AbstractStructBase
     /**
      * Set PercentValue value
      * @param float $percentValue
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail
      */
     public function setPercentValue($percentValue = null)
     {
@@ -108,17 +108,17 @@ class VariableHandlingChargeDetail extends AbstractStructBase
     }
     /**
      * Set RateElementBasis value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateElementBasisType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateElementBasisType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateElementBasisType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateElementBasisType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $rateElementBasis
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail
      */
     public function setRateElementBasis($rateElementBasis = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RateElementBasisType::valueIsValid($rateElementBasis)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateElementBasis, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateElementBasisType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RateElementBasisType::valueIsValid($rateElementBasis)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateElementBasis, implode(', ', \CommerceFedEx\FedExPHP\Enums\RateElementBasisType::getValidValues())), __LINE__);
         }
         $this->RateElementBasis = $rateElementBasis;
         return $this;
@@ -133,17 +133,17 @@ class VariableHandlingChargeDetail extends AbstractStructBase
     }
     /**
      * Set RateTypeBasis value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateTypeBasisType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateTypeBasisType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateTypeBasisType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateTypeBasisType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $rateTypeBasis
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail
      */
     public function setRateTypeBasis($rateTypeBasis = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RateTypeBasisType::valueIsValid($rateTypeBasis)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateTypeBasis, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateTypeBasisType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RateTypeBasisType::valueIsValid($rateTypeBasis)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateTypeBasis, implode(', ', \CommerceFedEx\FedExPHP\Enums\RateTypeBasisType::getValidValues())), __LINE__);
         }
         $this->RateTypeBasis = $rateTypeBasis;
         return $this;
@@ -154,7 +154,7 @@ class VariableHandlingChargeDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail
      */
     public static function __set_state(array $array)
     {

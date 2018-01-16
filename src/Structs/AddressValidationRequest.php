@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,28 +17,28 @@ class AddressValidationRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -53,7 +53,7 @@ class AddressValidationRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate[]
+     * @var \CommerceFedEx\FedExPHP\Structs\AddressToValidate[]
      */
     public $AddressesToValidate;
     /**
@@ -64,14 +64,14 @@ class AddressValidationRequest extends AbstractStructBase
      * @uses AddressValidationRequest::setTransactionDetail()
      * @uses AddressValidationRequest::setInEffectAsOfTimestamp()
      * @uses AddressValidationRequest::setAddressesToValidate()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $inEffectAsOfTimestamp
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate[] $addressesToValidate
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressToValidate[] $addressesToValidate
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $inEffectAsOfTimestamp = null, array $addressesToValidate = array())
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $inEffectAsOfTimestamp = null, array $addressesToValidate = array())
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -83,7 +83,7 @@ class AddressValidationRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -91,17 +91,17 @@ class AddressValidationRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest
      */
-    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -109,17 +109,17 @@ class AddressValidationRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest
      */
-    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -127,17 +127,17 @@ class AddressValidationRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -145,10 +145,10 @@ class AddressValidationRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -164,7 +164,7 @@ class AddressValidationRequest extends AbstractStructBase
     /**
      * Set InEffectAsOfTimestamp value
      * @param string $inEffectAsOfTimestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest
      */
     public function setInEffectAsOfTimestamp($inEffectAsOfTimestamp = null)
     {
@@ -177,7 +177,7 @@ class AddressValidationRequest extends AbstractStructBase
     }
     /**
      * Get AddressesToValidate value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToValidate[]|null
      */
     public function getAddressesToValidate()
     {
@@ -186,15 +186,15 @@ class AddressValidationRequest extends AbstractStructBase
     /**
      * Set AddressesToValidate value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate[] $addressesToValidate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressToValidate[] $addressesToValidate
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest
      */
     public function setAddressesToValidate(array $addressesToValidate = array())
     {
         foreach ($addressesToValidate as $addressValidationRequestAddressesToValidateItem) {
             // validation for constraint: itemType
-            if (!$addressValidationRequestAddressesToValidateItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate) {
-                throw new \InvalidArgumentException(sprintf('The AddressesToValidate property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate, "%s" given', is_object($addressValidationRequestAddressesToValidateItem) ? get_class($addressValidationRequestAddressesToValidateItem) : gettype($addressValidationRequestAddressesToValidateItem)), __LINE__);
+            if (!$addressValidationRequestAddressesToValidateItem instanceof \CommerceFedEx\FedExPHP\Structs\AddressToValidate) {
+                throw new \InvalidArgumentException(sprintf('The AddressesToValidate property can only contain items of \CommerceFedEx\FedExPHP\Structs\AddressToValidate, "%s" given', is_object($addressValidationRequestAddressesToValidateItem) ? get_class($addressValidationRequestAddressesToValidateItem) : gettype($addressValidationRequestAddressesToValidateItem)), __LINE__);
             }
         }
         $this->AddressesToValidate = $addressesToValidate;
@@ -203,14 +203,14 @@ class AddressValidationRequest extends AbstractStructBase
     /**
      * Add item to AddressesToValidate value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressToValidate $item
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest
      */
-    public function addToAddressesToValidate(\NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate $item)
+    public function addToAddressesToValidate(\CommerceFedEx\FedExPHP\Structs\AddressToValidate $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate) {
-            throw new \InvalidArgumentException(sprintf('The AddressesToValidate property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AddressToValidate) {
+            throw new \InvalidArgumentException(sprintf('The AddressesToValidate property can only contain items of \CommerceFedEx\FedExPHP\Structs\AddressToValidate, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AddressesToValidate[] = $item;
         return $this;
@@ -221,7 +221,7 @@ class AddressValidationRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest
      */
     public static function __set_state(array $array)
     {

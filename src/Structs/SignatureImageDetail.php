@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -22,7 +22,7 @@ class SignatureImageDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
@@ -30,7 +30,7 @@ class SignatureImageDetail extends AbstractStructBase
      * @uses SignatureImageDetail::setImage()
      * @uses SignatureImageDetail::setNotifications()
      * @param string $image
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
      */
     public function __construct($image = null, array $notifications = array())
     {
@@ -49,7 +49,7 @@ class SignatureImageDetail extends AbstractStructBase
     /**
      * Set Image value
      * @param string $image
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureImageDetail
      */
     public function setImage($image = null)
     {
@@ -62,7 +62,7 @@ class SignatureImageDetail extends AbstractStructBase
     }
     /**
      * Get Notifications value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]|null
      */
     public function getNotifications()
     {
@@ -71,15 +71,15 @@ class SignatureImageDetail extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureImageDetail
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $signatureImageDetailNotificationsItem) {
             // validation for constraint: itemType
-            if (!$signatureImageDetailNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($signatureImageDetailNotificationsItem) ? get_class($signatureImageDetailNotificationsItem) : gettype($signatureImageDetailNotificationsItem)), __LINE__);
+            if (!$signatureImageDetailNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($signatureImageDetailNotificationsItem) ? get_class($signatureImageDetailNotificationsItem) : gettype($signatureImageDetailNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -88,14 +88,14 @@ class SignatureImageDetail extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureImageDetail
      */
-    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
@@ -106,7 +106,7 @@ class SignatureImageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureImageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureImageDetail
      */
     public static function __set_state(array $array)
     {

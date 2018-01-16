@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -24,21 +24,21 @@ class CreatePickupReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -91,7 +91,7 @@ class CreatePickupReply extends AbstractStructBase
      * The CompletedFreightPickupDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail
      */
     public $CompletedFreightPickupDetail;
     /**
@@ -108,18 +108,18 @@ class CreatePickupReply extends AbstractStructBase
      * @uses CreatePickupReply::setLastAccessTime()
      * @uses CreatePickupReply::setCompletedFreightPickupDetail()
      * @param string $highestSeverity
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $pickupConfirmationNumber
      * @param string $location
      * @param string $messageCode
      * @param string $message
      * @param string $pRPControlNumber
      * @param string $lastAccessTime
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail $completedFreightPickupDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail $completedFreightPickupDetail
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $pickupConfirmationNumber = null, $location = null, $messageCode = null, $message = null, $pRPControlNumber = null, $lastAccessTime = null, \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail $completedFreightPickupDetail = null)
+    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $pickupConfirmationNumber = null, $location = null, $messageCode = null, $message = null, $pRPControlNumber = null, $lastAccessTime = null, \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail $completedFreightPickupDetail = null)
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -144,24 +144,24 @@ class CreatePickupReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -170,15 +170,15 @@ class CreatePickupReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $createPickupReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$createPickupReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($createPickupReplyNotificationsItem) ? get_class($createPickupReplyNotificationsItem) : gettype($createPickupReplyNotificationsItem)), __LINE__);
+            if (!$createPickupReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($createPickupReplyNotificationsItem) ? get_class($createPickupReplyNotificationsItem) : gettype($createPickupReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -187,21 +187,21 @@ class CreatePickupReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
-    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -209,17 +209,17 @@ class CreatePickupReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -227,10 +227,10 @@ class CreatePickupReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -246,7 +246,7 @@ class CreatePickupReply extends AbstractStructBase
     /**
      * Set PickupConfirmationNumber value
      * @param string $pickupConfirmationNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
     public function setPickupConfirmationNumber($pickupConfirmationNumber = null)
     {
@@ -268,7 +268,7 @@ class CreatePickupReply extends AbstractStructBase
     /**
      * Set Location value
      * @param string $location
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
     public function setLocation($location = null)
     {
@@ -290,7 +290,7 @@ class CreatePickupReply extends AbstractStructBase
     /**
      * Set MessageCode value
      * @param string $messageCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
     public function setMessageCode($messageCode = null)
     {
@@ -312,7 +312,7 @@ class CreatePickupReply extends AbstractStructBase
     /**
      * Set Message value
      * @param string $message
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
     public function setMessage($message = null)
     {
@@ -334,7 +334,7 @@ class CreatePickupReply extends AbstractStructBase
     /**
      * Set PRPControlNumber value
      * @param string $pRPControlNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
     public function setPRPControlNumber($pRPControlNumber = null)
     {
@@ -356,7 +356,7 @@ class CreatePickupReply extends AbstractStructBase
     /**
      * Set LastAccessTime value
      * @param string $lastAccessTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
     public function setLastAccessTime($lastAccessTime = null)
     {
@@ -369,7 +369,7 @@ class CreatePickupReply extends AbstractStructBase
     }
     /**
      * Get CompletedFreightPickupDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail|null
      */
     public function getCompletedFreightPickupDetail()
     {
@@ -377,10 +377,10 @@ class CreatePickupReply extends AbstractStructBase
     }
     /**
      * Set CompletedFreightPickupDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail $completedFreightPickupDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @param \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail $completedFreightPickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
-    public function setCompletedFreightPickupDetail(\NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail $completedFreightPickupDetail = null)
+    public function setCompletedFreightPickupDetail(\CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail $completedFreightPickupDetail = null)
     {
         $this->CompletedFreightPickupDetail = $completedFreightPickupDetail;
         return $this;
@@ -391,7 +391,7 @@ class CreatePickupReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreatePickupReply
+     * @return \CommerceFedEx\FedExPHP\Structs\CreatePickupReply
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,14 +16,14 @@ class CompletedHazardousShipmentDetail extends AbstractStructBase
      * The HazardousSummaryDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousSummaryDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CompletedHazardousSummaryDetail
      */
     public $HazardousSummaryDetail;
     /**
      * The DryIceDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail
      */
     public $DryIceDetail;
     /**
@@ -31,7 +31,7 @@ class CompletedHazardousShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: This contains the ADR License information, which identifies the license number and ADR category under which the customer is allowed to ship.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\AdrLicenseDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\AdrLicenseDetail
      */
     public $AdrLicense;
     /**
@@ -39,11 +39,11 @@ class CompletedHazardousShipmentDetail extends AbstractStructBase
      * @uses CompletedHazardousShipmentDetail::setHazardousSummaryDetail()
      * @uses CompletedHazardousShipmentDetail::setDryIceDetail()
      * @uses CompletedHazardousShipmentDetail::setAdrLicense()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousSummaryDetail $hazardousSummaryDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AdrLicenseDetail $adrLicense
+     * @param \CommerceFedEx\FedExPHP\Structs\CompletedHazardousSummaryDetail $hazardousSummaryDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\AdrLicenseDetail $adrLicense
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousSummaryDetail $hazardousSummaryDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\AdrLicenseDetail $adrLicense = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\CompletedHazardousSummaryDetail $hazardousSummaryDetail = null, \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail = null, \CommerceFedEx\FedExPHP\Structs\AdrLicenseDetail $adrLicense = null)
     {
         $this
             ->setHazardousSummaryDetail($hazardousSummaryDetail)
@@ -52,7 +52,7 @@ class CompletedHazardousShipmentDetail extends AbstractStructBase
     }
     /**
      * Get HazardousSummaryDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousSummaryDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousSummaryDetail|null
      */
     public function getHazardousSummaryDetail()
     {
@@ -60,17 +60,17 @@ class CompletedHazardousShipmentDetail extends AbstractStructBase
     }
     /**
      * Set HazardousSummaryDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousSummaryDetail $hazardousSummaryDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CompletedHazardousSummaryDetail $hazardousSummaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousShipmentDetail
      */
-    public function setHazardousSummaryDetail(\NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousSummaryDetail $hazardousSummaryDetail = null)
+    public function setHazardousSummaryDetail(\CommerceFedEx\FedExPHP\Structs\CompletedHazardousSummaryDetail $hazardousSummaryDetail = null)
     {
         $this->HazardousSummaryDetail = $hazardousSummaryDetail;
         return $this;
     }
     /**
      * Get DryIceDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail|null
      */
     public function getDryIceDetail()
     {
@@ -78,17 +78,17 @@ class CompletedHazardousShipmentDetail extends AbstractStructBase
     }
     /**
      * Set DryIceDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousShipmentDetail
      */
-    public function setDryIceDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail = null)
+    public function setDryIceDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail = null)
     {
         $this->DryIceDetail = $dryIceDetail;
         return $this;
     }
     /**
      * Get AdrLicense value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdrLicenseDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\AdrLicenseDetail|null
      */
     public function getAdrLicense()
     {
@@ -96,10 +96,10 @@ class CompletedHazardousShipmentDetail extends AbstractStructBase
     }
     /**
      * Set AdrLicense value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AdrLicenseDetail $adrLicense
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\AdrLicenseDetail $adrLicense
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousShipmentDetail
      */
-    public function setAdrLicense(\NicholasCreativeMedia\FedExPHP\Structs\AdrLicenseDetail $adrLicense = null)
+    public function setAdrLicense(\CommerceFedEx\FedExPHP\Structs\AdrLicenseDetail $adrLicense = null)
     {
         $this->AdrLicense = $adrLicense;
         return $this;
@@ -110,7 +110,7 @@ class CompletedHazardousShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousShipmentDetail
      */
     public static function __set_state(array $array)
     {

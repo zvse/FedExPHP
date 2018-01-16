@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,7 +16,7 @@ class CustomLabelTextEntry extends AbstractStructBase
      * The Position
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public $Position;
     /**
@@ -74,7 +74,7 @@ class CustomLabelTextEntry extends AbstractStructBase
      * @uses CustomLabelTextEntry::setFontName()
      * @uses CustomLabelTextEntry::setFontSize()
      * @uses CustomLabelTextEntry::setRotation()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position
      * @param string $format
      * @param string[] $dataFields
      * @param string $thermalFontId
@@ -82,7 +82,7 @@ class CustomLabelTextEntry extends AbstractStructBase
      * @param int $fontSize
      * @param string $rotation
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position = null, $format = null, array $dataFields = array(), $thermalFontId = null, $fontName = null, $fontSize = null, $rotation = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position = null, $format = null, array $dataFields = array(), $thermalFontId = null, $fontName = null, $fontSize = null, $rotation = null)
     {
         $this
             ->setPosition($position)
@@ -95,7 +95,7 @@ class CustomLabelTextEntry extends AbstractStructBase
     }
     /**
      * Get Position value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public function getPosition()
     {
@@ -103,10 +103,10 @@ class CustomLabelTextEntry extends AbstractStructBase
     }
     /**
      * Set Position value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextEntry
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextEntry
      */
-    public function setPosition(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position = null)
+    public function setPosition(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position = null)
     {
         $this->Position = $position;
         return $this;
@@ -122,7 +122,7 @@ class CustomLabelTextEntry extends AbstractStructBase
     /**
      * Set Format value
      * @param string $format
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextEntry
      */
     public function setFormat($format = null)
     {
@@ -145,7 +145,7 @@ class CustomLabelTextEntry extends AbstractStructBase
      * Set DataFields value
      * @throws \InvalidArgumentException
      * @param string[] $dataFields
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextEntry
      */
     public function setDataFields(array $dataFields = array())
     {
@@ -162,7 +162,7 @@ class CustomLabelTextEntry extends AbstractStructBase
      * Add item to DataFields value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextEntry
      */
     public function addToDataFields($item)
     {
@@ -184,7 +184,7 @@ class CustomLabelTextEntry extends AbstractStructBase
     /**
      * Set ThermalFontId value
      * @param string $thermalFontId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextEntry
      */
     public function setThermalFontId($thermalFontId = null)
     {
@@ -206,7 +206,7 @@ class CustomLabelTextEntry extends AbstractStructBase
     /**
      * Set FontName value
      * @param string $fontName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextEntry
      */
     public function setFontName($fontName = null)
     {
@@ -228,7 +228,7 @@ class CustomLabelTextEntry extends AbstractStructBase
     /**
      * Set FontSize value
      * @param int $fontSize
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextEntry
      */
     public function setFontSize($fontSize = null)
     {
@@ -249,17 +249,17 @@ class CustomLabelTextEntry extends AbstractStructBase
     }
     /**
      * Set Rotation value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RotationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RotationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RotationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RotationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $rotation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextEntry
      */
     public function setRotation($rotation = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RotationType::valueIsValid($rotation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rotation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RotationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RotationType::valueIsValid($rotation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rotation, implode(', ', \CommerceFedEx\FedExPHP\Enums\RotationType::getValidValues())), __LINE__);
         }
         $this->Rotation = $rotation;
         return $this;
@@ -270,7 +270,7 @@ class CustomLabelTextEntry extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextEntry
      */
     public static function __set_state(array $array)
     {

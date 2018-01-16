@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class RecipientCustomsId extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RecipientCustomsIdType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RecipientCustomsIdType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RecipientCustomsIdType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RecipientCustomsIdType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecipientCustomsId
+     * @return \CommerceFedEx\FedExPHP\Structs\RecipientCustomsId
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RecipientCustomsIdType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RecipientCustomsIdType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RecipientCustomsIdType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\RecipientCustomsIdType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -77,7 +77,7 @@ class RecipientCustomsId extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecipientCustomsId
+     * @return \CommerceFedEx\FedExPHP\Structs\RecipientCustomsId
      */
     public function setValue($value = null)
     {
@@ -94,7 +94,7 @@ class RecipientCustomsId extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecipientCustomsId
+     * @return \CommerceFedEx\FedExPHP\Structs\RecipientCustomsId
      */
     public static function __set_state(array $array)
     {

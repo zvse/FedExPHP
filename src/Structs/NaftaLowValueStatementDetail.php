@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -40,17 +40,17 @@ class NaftaLowValueStatementDetail extends AbstractStructBase
     }
     /**
      * Set Role value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomsRoleType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomsRoleType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomsRoleType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CustomsRoleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $role
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaLowValueStatementDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NaftaLowValueStatementDetail
      */
     public function setRole($role = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomsRoleType::valueIsValid($role)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomsRoleType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CustomsRoleType::valueIsValid($role)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomsRoleType::getValidValues())), __LINE__);
         }
         $this->Role = $role;
         return $this;
@@ -61,7 +61,7 @@ class NaftaLowValueStatementDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaLowValueStatementDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NaftaLowValueStatementDetail
      */
     public static function __set_state(array $array)
     {

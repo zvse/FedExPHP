@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -38,7 +38,7 @@ class RateReplyDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Supporting detail for applied options identified in preceding field.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail
      */
     public $AppliedSubOptions;
     /**
@@ -67,7 +67,7 @@ class RateReplyDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\CommitDetail[]
      */
     public $CommitDetails;
     /**
@@ -137,7 +137,7 @@ class RateReplyDetail extends AbstractStructBase
      * - documentation: Each element contains all rate data for a single rate type.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail[]
      */
     public $RatedShipmentDetails;
     /**
@@ -162,11 +162,11 @@ class RateReplyDetail extends AbstractStructBase
      * @param string $serviceType
      * @param string $packagingType
      * @param string[] $appliedOptions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions
+     * @param \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions
      * @param string $deliveryStation
      * @param string $deliveryDayOfWeek
      * @param string $deliveryTimestamp
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail[] $commitDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\CommitDetail[] $commitDetails
      * @param string $destinationAirportId
      * @param bool $ineligibleForMoneyBackGuarantee
      * @param string $originServiceArea
@@ -175,9 +175,9 @@ class RateReplyDetail extends AbstractStructBase
      * @param string $maximumTransitTime
      * @param string $signatureOption
      * @param string $actualRateType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail[] $ratedShipmentDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail[] $ratedShipmentDetails
      */
-    public function __construct($serviceType = null, $packagingType = null, array $appliedOptions = array(), \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions = null, $deliveryStation = null, $deliveryDayOfWeek = null, $deliveryTimestamp = null, array $commitDetails = array(), $destinationAirportId = null, $ineligibleForMoneyBackGuarantee = null, $originServiceArea = null, $destinationServiceArea = null, $transitTime = null, $maximumTransitTime = null, $signatureOption = null, $actualRateType = null, array $ratedShipmentDetails = array())
+    public function __construct($serviceType = null, $packagingType = null, array $appliedOptions = array(), \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions = null, $deliveryStation = null, $deliveryDayOfWeek = null, $deliveryTimestamp = null, array $commitDetails = array(), $destinationAirportId = null, $ineligibleForMoneyBackGuarantee = null, $originServiceArea = null, $destinationServiceArea = null, $transitTime = null, $maximumTransitTime = null, $signatureOption = null, $actualRateType = null, array $ratedShipmentDetails = array())
     {
         $this
             ->setServiceType($serviceType)
@@ -208,17 +208,17 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Set ServiceType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $serviceType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setServiceType($serviceType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid($serviceType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid($serviceType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
         }
         $this->ServiceType = $serviceType;
         return $this;
@@ -233,17 +233,17 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Set PackagingType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackagingType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PackagingType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackagingType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PackagingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $packagingType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setPackagingType($packagingType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PackagingType::valueIsValid($packagingType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packagingType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PackagingType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PackagingType::valueIsValid($packagingType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packagingType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PackagingType::getValidValues())), __LINE__);
         }
         $this->PackagingType = $packagingType;
         return $this;
@@ -258,46 +258,46 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Set AppliedOptions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $appliedOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setAppliedOptions(array $appliedOptions = array())
     {
         $invalidValues = array();
         foreach ($appliedOptions as $rateReplyDetailAppliedOptionsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::valueIsValid($rateReplyDetailAppliedOptionsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\ServiceOptionType::valueIsValid($rateReplyDetailAppliedOptionsItem)) {
                 $invalidValues[] = var_export($rateReplyDetailAppliedOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::getValidValues())), __LINE__);
         }
         $this->AppliedOptions = $appliedOptions;
         return $this;
     }
     /**
      * Add item to AppliedOptions value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function addToAppliedOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ServiceOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceOptionType::getValidValues())), __LINE__);
         }
         $this->AppliedOptions[] = $item;
         return $this;
     }
     /**
      * Get AppliedSubOptions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail|null
      */
     public function getAppliedSubOptions()
     {
@@ -305,10 +305,10 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Set AppliedSubOptions value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
-    public function setAppliedSubOptions(\NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions = null)
+    public function setAppliedSubOptions(\CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail $appliedSubOptions = null)
     {
         $this->AppliedSubOptions = $appliedSubOptions;
         return $this;
@@ -324,7 +324,7 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Set DeliveryStation value
      * @param string $deliveryStation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setDeliveryStation($deliveryStation = null)
     {
@@ -345,17 +345,17 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Set DeliveryDayOfWeek value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $deliveryDayOfWeek
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setDeliveryDayOfWeek($deliveryDayOfWeek = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($deliveryDayOfWeek)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deliveryDayOfWeek, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($deliveryDayOfWeek)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deliveryDayOfWeek, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->DeliveryDayOfWeek = $deliveryDayOfWeek;
         return $this;
@@ -371,7 +371,7 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Set DeliveryTimestamp value
      * @param string $deliveryTimestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setDeliveryTimestamp($deliveryTimestamp = null)
     {
@@ -384,7 +384,7 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Get CommitDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CommitDetail[]|null
      */
     public function getCommitDetails()
     {
@@ -393,15 +393,15 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Set CommitDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail[] $commitDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CommitDetail[] $commitDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setCommitDetails(array $commitDetails = array())
     {
         foreach ($commitDetails as $rateReplyDetailCommitDetailsItem) {
             // validation for constraint: itemType
-            if (!$rateReplyDetailCommitDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail) {
-                throw new \InvalidArgumentException(sprintf('The CommitDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail, "%s" given', is_object($rateReplyDetailCommitDetailsItem) ? get_class($rateReplyDetailCommitDetailsItem) : gettype($rateReplyDetailCommitDetailsItem)), __LINE__);
+            if (!$rateReplyDetailCommitDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\CommitDetail) {
+                throw new \InvalidArgumentException(sprintf('The CommitDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\CommitDetail, "%s" given', is_object($rateReplyDetailCommitDetailsItem) ? get_class($rateReplyDetailCommitDetailsItem) : gettype($rateReplyDetailCommitDetailsItem)), __LINE__);
             }
         }
         $this->CommitDetails = $commitDetails;
@@ -410,14 +410,14 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Add item to CommitDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CommitDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
-    public function addToCommitDetails(\NicholasCreativeMedia\FedExPHP\Structs\CommitDetail $item)
+    public function addToCommitDetails(\CommerceFedEx\FedExPHP\Structs\CommitDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail) {
-            throw new \InvalidArgumentException(sprintf('The CommitDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CommitDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CommitDetail) {
+            throw new \InvalidArgumentException(sprintf('The CommitDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\CommitDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CommitDetails[] = $item;
         return $this;
@@ -433,7 +433,7 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Set DestinationAirportId value
      * @param string $destinationAirportId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setDestinationAirportId($destinationAirportId = null)
     {
@@ -455,7 +455,7 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Set IneligibleForMoneyBackGuarantee value
      * @param bool $ineligibleForMoneyBackGuarantee
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setIneligibleForMoneyBackGuarantee($ineligibleForMoneyBackGuarantee = null)
     {
@@ -473,7 +473,7 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Set OriginServiceArea value
      * @param string $originServiceArea
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setOriginServiceArea($originServiceArea = null)
     {
@@ -495,7 +495,7 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Set DestinationServiceArea value
      * @param string $destinationServiceArea
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setDestinationServiceArea($destinationServiceArea = null)
     {
@@ -516,17 +516,17 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Set TransitTime value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $transitTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setTransitTime($transitTime = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid($transitTime)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $transitTime, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid($transitTime)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $transitTime, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
         }
         $this->TransitTime = $transitTime;
         return $this;
@@ -541,17 +541,17 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Set MaximumTransitTime value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $maximumTransitTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setMaximumTransitTime($maximumTransitTime = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid($maximumTransitTime)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $maximumTransitTime, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid($maximumTransitTime)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $maximumTransitTime, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
         }
         $this->MaximumTransitTime = $maximumTransitTime;
         return $this;
@@ -566,17 +566,17 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Set SignatureOption value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SignatureOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SignatureOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $signatureOption
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setSignatureOption($signatureOption = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::valueIsValid($signatureOption)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $signatureOption, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\SignatureOptionType::valueIsValid($signatureOption)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $signatureOption, implode(', ', \CommerceFedEx\FedExPHP\Enums\SignatureOptionType::getValidValues())), __LINE__);
         }
         $this->SignatureOption = $signatureOption;
         return $this;
@@ -591,24 +591,24 @@ class RateReplyDetail extends AbstractStructBase
     }
     /**
      * Set ActualRateType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnedRateType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnedRateType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $actualRateType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setActualRateType($actualRateType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::valueIsValid($actualRateType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $actualRateType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ReturnedRateType::valueIsValid($actualRateType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $actualRateType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ReturnedRateType::getValidValues())), __LINE__);
         }
         $this->ActualRateType = $actualRateType;
         return $this;
     }
     /**
      * Get RatedShipmentDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail[]|null
      */
     public function getRatedShipmentDetails()
     {
@@ -617,15 +617,15 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Set RatedShipmentDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail[] $ratedShipmentDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail[] $ratedShipmentDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public function setRatedShipmentDetails(array $ratedShipmentDetails = array())
     {
         foreach ($ratedShipmentDetails as $rateReplyDetailRatedShipmentDetailsItem) {
             // validation for constraint: itemType
-            if (!$rateReplyDetailRatedShipmentDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail) {
-                throw new \InvalidArgumentException(sprintf('The RatedShipmentDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail, "%s" given', is_object($rateReplyDetailRatedShipmentDetailsItem) ? get_class($rateReplyDetailRatedShipmentDetailsItem) : gettype($rateReplyDetailRatedShipmentDetailsItem)), __LINE__);
+            if (!$rateReplyDetailRatedShipmentDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail) {
+                throw new \InvalidArgumentException(sprintf('The RatedShipmentDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail, "%s" given', is_object($rateReplyDetailRatedShipmentDetailsItem) ? get_class($rateReplyDetailRatedShipmentDetailsItem) : gettype($rateReplyDetailRatedShipmentDetailsItem)), __LINE__);
             }
         }
         $this->RatedShipmentDetails = $ratedShipmentDetails;
@@ -634,14 +634,14 @@ class RateReplyDetail extends AbstractStructBase
     /**
      * Add item to RatedShipmentDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
-    public function addToRatedShipmentDetails(\NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail $item)
+    public function addToRatedShipmentDetails(\CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail) {
-            throw new \InvalidArgumentException(sprintf('The RatedShipmentDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RatedShipmentDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail) {
+            throw new \InvalidArgumentException(sprintf('The RatedShipmentDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\RatedShipmentDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->RatedShipmentDetails[] = $item;
         return $this;
@@ -652,7 +652,7 @@ class RateReplyDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReplyDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReplyDetail
      */
     public static function __set_state(array $array)
     {

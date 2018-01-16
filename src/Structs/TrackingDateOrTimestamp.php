@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -47,17 +47,17 @@ class TrackingDateOrTimestamp extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackingDateOrTimestampType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackingDateOrTimestampType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackingDateOrTimestampType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackingDateOrTimestampType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackingDateOrTimestampType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackingDateOrTimestampType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackingDateOrTimestampType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackingDateOrTimestampType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -73,7 +73,7 @@ class TrackingDateOrTimestamp extends AbstractStructBase
     /**
      * Set DateOrTimestamp value
      * @param string $dateOrTimestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp
      */
     public function setDateOrTimestamp($dateOrTimestamp = null)
     {
@@ -90,7 +90,7 @@ class TrackingDateOrTimestamp extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingDateOrTimestamp
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackingDateOrTimestamp
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -62,17 +62,17 @@ class ServiceSubOptionDetail extends AbstractStructBase
     }
     /**
      * Set FreightGuarantee value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightGuaranteeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightGuaranteeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightGuaranteeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightGuaranteeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $freightGuarantee
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail
      */
     public function setFreightGuarantee($freightGuarantee = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightGuaranteeType::valueIsValid($freightGuarantee)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $freightGuarantee, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightGuaranteeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FreightGuaranteeType::valueIsValid($freightGuarantee)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $freightGuarantee, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightGuaranteeType::getValidValues())), __LINE__);
         }
         $this->FreightGuarantee = $freightGuarantee;
         return $this;
@@ -88,7 +88,7 @@ class ServiceSubOptionDetail extends AbstractStructBase
     /**
      * Set SmartPostHubId value
      * @param string $smartPostHubId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail
      */
     public function setSmartPostHubId($smartPostHubId = null)
     {
@@ -109,17 +109,17 @@ class ServiceSubOptionDetail extends AbstractStructBase
     }
     /**
      * Set SmartPostIndicia value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostIndiciaType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostIndiciaType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SmartPostIndiciaType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SmartPostIndiciaType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $smartPostIndicia
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail
      */
     public function setSmartPostIndicia($smartPostIndicia = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\SmartPostIndiciaType::valueIsValid($smartPostIndicia)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $smartPostIndicia, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SmartPostIndiciaType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\SmartPostIndiciaType::valueIsValid($smartPostIndicia)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $smartPostIndicia, implode(', ', \CommerceFedEx\FedExPHP\Enums\SmartPostIndiciaType::getValidValues())), __LINE__);
         }
         $this->SmartPostIndicia = $smartPostIndicia;
         return $this;
@@ -130,7 +130,7 @@ class ServiceSubOptionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceSubOptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ServiceSubOptionDetail
      */
     public static function __set_state(array $array)
     {

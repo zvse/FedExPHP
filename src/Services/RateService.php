@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Services;
+namespace CommerceFedEx\FedExPHP\Services;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -23,12 +23,12 @@ class RateService extends FedExService
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'RateService_v20.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\RateClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\RateClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('crs',20,0,0);
+        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('crs',20,0,0);
     }
     /**
      * Method to call the operation originally named getRates
@@ -36,10 +36,10 @@ class RateService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RateRequest $rateRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\RateRequest $rateRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReply|bool
      */
-    public function getRates(\NicholasCreativeMedia\FedExPHP\Structs\RateRequest $rateRequest)
+    public function getRates(\CommerceFedEx\FedExPHP\Structs\RateRequest $rateRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->getRates($rateRequest));
@@ -52,7 +52,7 @@ class RateService extends FedExService
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateReply
+     * @return \CommerceFedEx\FedExPHP\Structs\RateReply
      */
     public function getResult()
     {

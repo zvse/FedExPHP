@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP;
+namespace CommerceFedEx\FedExPHP;
 
 /**
  * Class which returns the class map definition
@@ -16,19 +16,19 @@ class CountryClassMap
     final public static function get()
     {
         return array(
-            'Address' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Address',
-            'ClientDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ClientDetail',
-            'Localization' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Localization',
-            'LocationDescription' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\LocationDescription',
-            'Notification' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Notification',
-            'NotificationParameter' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\NotificationParameter',
-            'PostalDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\PostalDetail',
-            'TransactionDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\TransactionDetail',
-            'ValidatePostalReply' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ValidatePostalReply',
-            'ValidatePostalRequest' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ValidatePostalRequest',
-            'WebAuthenticationDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\WebAuthenticationDetail',
-            'WebAuthenticationCredential' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\WebAuthenticationCredential',
-            'VersionId' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\VersionId',
+            'Address' => '\\CommerceFedEx\\FedExPHP\\Structs\\Address',
+            'ClientDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\ClientDetail',
+            'Localization' => '\\CommerceFedEx\\FedExPHP\\Structs\\Localization',
+            'LocationDescription' => '\\CommerceFedEx\\FedExPHP\\Structs\\LocationDescription',
+            'Notification' => '\\CommerceFedEx\\FedExPHP\\Structs\\Notification',
+            'NotificationParameter' => '\\CommerceFedEx\\FedExPHP\\Structs\\NotificationParameter',
+            'PostalDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\PostalDetail',
+            'TransactionDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\TransactionDetail',
+            'ValidatePostalReply' => '\\CommerceFedEx\\FedExPHP\\Structs\\ValidatePostalReply',
+            'ValidatePostalRequest' => '\\CommerceFedEx\\FedExPHP\\Structs\\ValidatePostalRequest',
+            'WebAuthenticationDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\WebAuthenticationDetail',
+            'WebAuthenticationCredential' => '\\CommerceFedEx\\FedExPHP\\Structs\\WebAuthenticationCredential',
+            'VersionId' => '\\CommerceFedEx\\FedExPHP\\Structs\\VersionId',
         );
     }
 }

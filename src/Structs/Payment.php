@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -21,7 +21,7 @@ class Payment extends AbstractStructBase
      * The Payor
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payor
+     * @var \CommerceFedEx\FedExPHP\Structs\Payor
      */
     public $Payor;
     /**
@@ -29,9 +29,9 @@ class Payment extends AbstractStructBase
      * @uses Payment::setPaymentType()
      * @uses Payment::setPayor()
      * @param string $paymentType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payor $payor
+     * @param \CommerceFedEx\FedExPHP\Structs\Payor $payor
      */
-    public function __construct($paymentType = null, \NicholasCreativeMedia\FedExPHP\Structs\Payor $payor = null)
+    public function __construct($paymentType = null, \CommerceFedEx\FedExPHP\Structs\Payor $payor = null)
     {
         $this
             ->setPaymentType($paymentType)
@@ -47,24 +47,24 @@ class Payment extends AbstractStructBase
     }
     /**
      * Set PaymentType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PaymentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PaymentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PaymentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PaymentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $paymentType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
+     * @return \CommerceFedEx\FedExPHP\Structs\Payment
      */
     public function setPaymentType($paymentType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PaymentType::valueIsValid($paymentType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PaymentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PaymentType::valueIsValid($paymentType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PaymentType::getValidValues())), __LINE__);
         }
         $this->PaymentType = $paymentType;
         return $this;
     }
     /**
      * Get Payor value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payor|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Payor|null
      */
     public function getPayor()
     {
@@ -72,10 +72,10 @@ class Payment extends AbstractStructBase
     }
     /**
      * Set Payor value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payor $payor
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
+     * @param \CommerceFedEx\FedExPHP\Structs\Payor $payor
+     * @return \CommerceFedEx\FedExPHP\Structs\Payment
      */
-    public function setPayor(\NicholasCreativeMedia\FedExPHP\Structs\Payor $payor = null)
+    public function setPayor(\CommerceFedEx\FedExPHP\Structs\Payor $payor = null)
     {
         $this->Payor = $payor;
         return $this;
@@ -86,7 +86,7 @@ class Payment extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
+     * @return \CommerceFedEx\FedExPHP\Structs\Payment
      */
     public static function __set_state(array $array)
     {

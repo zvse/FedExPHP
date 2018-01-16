@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -40,17 +40,17 @@ class AlcoholDetail extends AbstractStructBase
     }
     /**
      * Set RecipientType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AlcoholRecipientType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AlcoholRecipientType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\AlcoholRecipientType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\AlcoholRecipientType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $recipientType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AlcoholDetail
      */
     public function setRecipientType($recipientType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\AlcoholRecipientType::valueIsValid($recipientType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $recipientType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AlcoholRecipientType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\AlcoholRecipientType::valueIsValid($recipientType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $recipientType, implode(', ', \CommerceFedEx\FedExPHP\Enums\AlcoholRecipientType::getValidValues())), __LINE__);
         }
         $this->RecipientType = $recipientType;
         return $this;
@@ -61,7 +61,7 @@ class AlcoholDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AlcoholDetail
      */
     public static function __set_state(array $array)
     {

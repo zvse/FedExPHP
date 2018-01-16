@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
@@ -25,7 +25,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data identifying the client submitting the transaction.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
@@ -33,7 +33,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The version of the request being used.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
@@ -41,7 +41,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains a free form field that is echoed back in the reply to match requests with replies and data that governs the data payload language/translations.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -49,7 +49,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Tracking number and additional shipment data used to identify a unique shipment for proof of delivery.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber
+     * @var \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber
      */
     public $QualifiedTrackingNumber;
     /**
@@ -65,7 +65,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contact and address information about the person requesting the fax to be sent.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
      */
     public $FaxSender;
     /**
@@ -73,7 +73,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contact and address information, including the fax number, about the person to receive the fax.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
      */
     public $FaxRecipient;
     /**
@@ -86,16 +86,16 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
      * @uses SignatureProofOfDeliveryFaxRequest::setAdditionalComments()
      * @uses SignatureProofOfDeliveryFaxRequest::setFaxSender()
      * @uses SignatureProofOfDeliveryFaxRequest::setFaxRecipient()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber
      * @param string $additionalComments
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $faxSender
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $faxRecipient
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $faxSender
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $faxRecipient
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber = null, $additionalComments = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $faxSender = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $faxRecipient = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber = null, $additionalComments = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $faxSender = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $faxRecipient = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -109,7 +109,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -117,17 +117,17 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
      */
-    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -135,17 +135,17 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
      */
-    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -153,17 +153,17 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -171,17 +171,17 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
     /**
      * Get QualifiedTrackingNumber value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber|null
+     * @return \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber|null
      */
     public function getQualifiedTrackingNumber()
     {
@@ -189,10 +189,10 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     }
     /**
      * Set QualifiedTrackingNumber value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
      */
-    public function setQualifiedTrackingNumber(\NicholasCreativeMedia\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber = null)
+    public function setQualifiedTrackingNumber(\CommerceFedEx\FedExPHP\Structs\QualifiedTrackingNumber $qualifiedTrackingNumber = null)
     {
         $this->QualifiedTrackingNumber = $qualifiedTrackingNumber;
         return $this;
@@ -208,7 +208,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     /**
      * Set AdditionalComments value
      * @param string $additionalComments
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
      */
     public function setAdditionalComments($additionalComments = null)
     {
@@ -221,7 +221,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     }
     /**
      * Get FaxSender value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getFaxSender()
     {
@@ -229,17 +229,17 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     }
     /**
      * Set FaxSender value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $faxSender
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $faxSender
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
      */
-    public function setFaxSender(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $faxSender = null)
+    public function setFaxSender(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $faxSender = null)
     {
         $this->FaxSender = $faxSender;
         return $this;
     }
     /**
      * Get FaxRecipient value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getFaxRecipient()
     {
@@ -247,10 +247,10 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
     }
     /**
      * Set FaxRecipient value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $faxRecipient
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $faxRecipient
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
      */
-    public function setFaxRecipient(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $faxRecipient = null)
+    public function setFaxRecipient(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $faxRecipient = null)
     {
         $this->FaxRecipient = $faxRecipient;
         return $this;
@@ -261,7 +261,7 @@ class SignatureProofOfDeliveryFaxRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SignatureProofOfDeliveryFaxRequest
      */
     public static function __set_state(array $array)
     {

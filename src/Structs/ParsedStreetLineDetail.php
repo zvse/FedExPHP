@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -148,7 +148,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set HouseNumber value
      * @param string $houseNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setHouseNumber($houseNumber = null)
     {
@@ -170,7 +170,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set PreStreetType value
      * @param string $preStreetType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setPreStreetType($preStreetType = null)
     {
@@ -192,7 +192,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set LeadingDirectional value
      * @param string $leadingDirectional
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setLeadingDirectional($leadingDirectional = null)
     {
@@ -214,7 +214,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set StreetName value
      * @param string $streetName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setStreetName($streetName = null)
     {
@@ -236,7 +236,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set StreetSuffix value
      * @param string $streetSuffix
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setStreetSuffix($streetSuffix = null)
     {
@@ -258,7 +258,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set TrailingDirectional value
      * @param string $trailingDirectional
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setTrailingDirectional($trailingDirectional = null)
     {
@@ -280,7 +280,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set UnitLabel value
      * @param string $unitLabel
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setUnitLabel($unitLabel = null)
     {
@@ -302,7 +302,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set UnitNumber value
      * @param string $unitNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setUnitNumber($unitNumber = null)
     {
@@ -324,7 +324,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set RuralRoute value
      * @param string $ruralRoute
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setRuralRoute($ruralRoute = null)
     {
@@ -346,7 +346,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set POBox value
      * @param string $pOBox
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setPOBox($pOBox = null)
     {
@@ -368,7 +368,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set Building value
      * @param string $building
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setBuilding($building = null)
     {
@@ -390,7 +390,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
     /**
      * Set Organization value
      * @param string $organization
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public function setOrganization($organization = null)
     {
@@ -407,7 +407,7 @@ class ParsedStreetLineDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -25,14 +25,14 @@ class ShipmentDryIceDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total shipment dry ice weight for all packages.
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public $TotalWeight;
     /**
      * The ProcessingOptions
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested
      */
     public $ProcessingOptions;
     /**
@@ -41,10 +41,10 @@ class ShipmentDryIceDetail extends AbstractStructBase
      * @uses ShipmentDryIceDetail::setTotalWeight()
      * @uses ShipmentDryIceDetail::setProcessingOptions()
      * @param int $packageCount
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested $processingOptions
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested $processingOptions
      */
-    public function __construct($packageCount = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested $processingOptions = null)
+    public function __construct($packageCount = null, \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight = null, \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested $processingOptions = null)
     {
         $this
             ->setPackageCount($packageCount)
@@ -62,7 +62,7 @@ class ShipmentDryIceDetail extends AbstractStructBase
     /**
      * Set PackageCount value
      * @param int $packageCount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail
      */
     public function setPackageCount($packageCount = null)
     {
@@ -75,7 +75,7 @@ class ShipmentDryIceDetail extends AbstractStructBase
     }
     /**
      * Get TotalWeight value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public function getTotalWeight()
     {
@@ -83,17 +83,17 @@ class ShipmentDryIceDetail extends AbstractStructBase
     }
     /**
      * Set TotalWeight value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail
      */
-    public function setTotalWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight = null)
+    public function setTotalWeight(\CommerceFedEx\FedExPHP\Structs\Weight $totalWeight = null)
     {
         $this->TotalWeight = $totalWeight;
         return $this;
     }
     /**
      * Get ProcessingOptions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested|null
      */
     public function getProcessingOptions()
     {
@@ -101,10 +101,10 @@ class ShipmentDryIceDetail extends AbstractStructBase
     }
     /**
      * Set ProcessingOptions value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested $processingOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested $processingOptions
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail
      */
-    public function setProcessingOptions(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested $processingOptions = null)
+    public function setProcessingOptions(\CommerceFedEx\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested $processingOptions = null)
     {
         $this->ProcessingOptions = $processingOptions;
         return $this;
@@ -115,7 +115,7 @@ class ShipmentDryIceDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail
      */
     public static function __set_state(array $array)
     {

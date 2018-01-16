@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class FreightSpecialServicePayment extends AbstractStructBase
     }
     /**
      * Set SpecialService value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $specialService
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment
      */
     public function setSpecialService($specialService = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid($specialService)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $specialService, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid($specialService)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $specialService, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->SpecialService = $specialService;
         return $this;
@@ -76,17 +76,17 @@ class FreightSpecialServicePayment extends AbstractStructBase
     }
     /**
      * Set PaymentType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $paymentType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment
      */
     public function setPaymentType($paymentType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid($paymentType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid($paymentType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::getValidValues())), __LINE__);
         }
         $this->PaymentType = $paymentType;
         return $this;
@@ -97,7 +97,7 @@ class FreightSpecialServicePayment extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment
      */
     public static function __set_state(array $array)
     {

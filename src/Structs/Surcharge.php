@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -14,7 +14,7 @@ class Surcharge extends AbstractStructBase
      * The Amount
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $Amount;
     /**
@@ -44,12 +44,12 @@ class Surcharge extends AbstractStructBase
      * @uses Surcharge::setSurchargeType()
      * @uses Surcharge::setLevel()
      * @uses Surcharge::setDescription()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
      * @param string $surchargeType
      * @param string $level
      * @param string $description
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null, $surchargeType = null, $level = null, $description = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\Money $amount = null, $surchargeType = null, $level = null, $description = null)
     {
         $this
             ->setAmount($amount)
@@ -59,7 +59,7 @@ class Surcharge extends AbstractStructBase
     }
     /**
      * Get Amount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @return \CommerceFedEx\FedExPHP\Structs\Money
      */
     public function getAmount()
     {
@@ -67,10 +67,10 @@ class Surcharge extends AbstractStructBase
     }
     /**
      * Set Amount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Surcharge
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
+     * @return \CommerceFedEx\FedExPHP\Structs\Surcharge
      */
-    public function setAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
+    public function setAmount(\CommerceFedEx\FedExPHP\Structs\Money $amount = null)
     {
         $this->Amount = $amount;
         return $this;
@@ -85,17 +85,17 @@ class Surcharge extends AbstractStructBase
     }
     /**
      * Set SurchargeType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SurchargeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SurchargeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SurchargeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SurchargeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $surchargeType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Surcharge
+     * @return \CommerceFedEx\FedExPHP\Structs\Surcharge
      */
     public function setSurchargeType($surchargeType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\SurchargeType::valueIsValid($surchargeType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $surchargeType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SurchargeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\SurchargeType::valueIsValid($surchargeType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $surchargeType, implode(', ', \CommerceFedEx\FedExPHP\Enums\SurchargeType::getValidValues())), __LINE__);
         }
         $this->SurchargeType = $surchargeType;
         return $this;
@@ -110,17 +110,17 @@ class Surcharge extends AbstractStructBase
     }
     /**
      * Set Level value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SurchargeLevelType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SurchargeLevelType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SurchargeLevelType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SurchargeLevelType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $level
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Surcharge
+     * @return \CommerceFedEx\FedExPHP\Structs\Surcharge
      */
     public function setLevel($level = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\SurchargeLevelType::valueIsValid($level)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $level, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SurchargeLevelType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\SurchargeLevelType::valueIsValid($level)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $level, implode(', ', \CommerceFedEx\FedExPHP\Enums\SurchargeLevelType::getValidValues())), __LINE__);
         }
         $this->Level = $level;
         return $this;
@@ -136,7 +136,7 @@ class Surcharge extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Surcharge
+     * @return \CommerceFedEx\FedExPHP\Structs\Surcharge
      */
     public function setDescription($description = null)
     {
@@ -153,7 +153,7 @@ class Surcharge extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Surcharge
+     * @return \CommerceFedEx\FedExPHP\Structs\Surcharge
      */
     public static function __set_state(array $array)
     {

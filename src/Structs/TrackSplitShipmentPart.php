@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -74,7 +74,7 @@ class TrackSplitShipmentPart extends AbstractStructBase
     /**
      * Set PieceCount value
      * @param int $pieceCount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart
      */
     public function setPieceCount($pieceCount = null)
     {
@@ -96,7 +96,7 @@ class TrackSplitShipmentPart extends AbstractStructBase
     /**
      * Set Timestamp value
      * @param string $timestamp
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart
      */
     public function setTimestamp($timestamp = null)
     {
@@ -118,7 +118,7 @@ class TrackSplitShipmentPart extends AbstractStructBase
     /**
      * Set StatusCode value
      * @param string $statusCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart
      */
     public function setStatusCode($statusCode = null)
     {
@@ -140,7 +140,7 @@ class TrackSplitShipmentPart extends AbstractStructBase
     /**
      * Set StatusDescription value
      * @param string $statusDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart
      */
     public function setStatusDescription($statusDescription = null)
     {
@@ -157,7 +157,7 @@ class TrackSplitShipmentPart extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSplitShipmentPart
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSplitShipmentPart
      */
     public static function __set_state(array $array)
     {

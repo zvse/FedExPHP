@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -49,17 +49,17 @@ class SpecialInstructionStatusDetail extends AbstractStructBase
     }
     /**
      * Set Status value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SpecialInstructionsStatusCode::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SpecialInstructionsStatusCode::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SpecialInstructionsStatusCode::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SpecialInstructionsStatusCode::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $status
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialInstructionStatusDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SpecialInstructionStatusDetail
      */
     public function setStatus($status = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\SpecialInstructionsStatusCode::valueIsValid($status)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SpecialInstructionsStatusCode::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\SpecialInstructionsStatusCode::valueIsValid($status)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \CommerceFedEx\FedExPHP\Enums\SpecialInstructionsStatusCode::getValidValues())), __LINE__);
         }
         $this->Status = $status;
         return $this;
@@ -75,7 +75,7 @@ class SpecialInstructionStatusDetail extends AbstractStructBase
     /**
      * Set StatusCreateTime value
      * @param string $statusCreateTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialInstructionStatusDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SpecialInstructionStatusDetail
      */
     public function setStatusCreateTime($statusCreateTime = null)
     {
@@ -92,7 +92,7 @@ class SpecialInstructionStatusDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialInstructionStatusDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SpecialInstructionStatusDetail
      */
     public static function __set_state(array $array)
     {

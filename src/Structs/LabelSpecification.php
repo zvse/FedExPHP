@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class LabelSpecification extends AbstractStructBase
      * - documentation: Specifies how to create, organize, and return the document.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail[]
      */
     public $Dispositions;
     /**
@@ -59,14 +59,14 @@ class LabelSpecification extends AbstractStructBase
      * The PrintedLabelOrigin
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
      */
     public $PrintedLabelOrigin;
     /**
      * The CustomerSpecifiedDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public $CustomerSpecifiedDetail;
     /**
@@ -80,15 +80,15 @@ class LabelSpecification extends AbstractStructBase
      * @uses LabelSpecification::setPrintedLabelOrigin()
      * @uses LabelSpecification::setCustomerSpecifiedDetail()
      * @param string $labelFormatType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail[] $dispositions
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail[] $dispositions
      * @param string $imageType
      * @param string $labelStockType
      * @param string $labelPrintingOrientation
      * @param string $labelOrder
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $printedLabelOrigin
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail $customerSpecifiedDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $printedLabelOrigin
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail $customerSpecifiedDetail
      */
-    public function __construct($labelFormatType = null, array $dispositions = array(), $imageType = null, $labelStockType = null, $labelPrintingOrientation = null, $labelOrder = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $printedLabelOrigin = null, \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail $customerSpecifiedDetail = null)
+    public function __construct($labelFormatType = null, array $dispositions = array(), $imageType = null, $labelStockType = null, $labelPrintingOrientation = null, $labelOrder = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $printedLabelOrigin = null, \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail $customerSpecifiedDetail = null)
     {
         $this
             ->setLabelFormatType($labelFormatType)
@@ -110,24 +110,24 @@ class LabelSpecification extends AbstractStructBase
     }
     /**
      * Set LabelFormatType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelFormatType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelFormatType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LabelFormatType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LabelFormatType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelFormatType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
     public function setLabelFormatType($labelFormatType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelFormatType::valueIsValid($labelFormatType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelFormatType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelFormatType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LabelFormatType::valueIsValid($labelFormatType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelFormatType, implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelFormatType::getValidValues())), __LINE__);
         }
         $this->LabelFormatType = $labelFormatType;
         return $this;
     }
     /**
      * Get Dispositions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail[]|null
      */
     public function getDispositions()
     {
@@ -136,15 +136,15 @@ class LabelSpecification extends AbstractStructBase
     /**
      * Set Dispositions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail[] $dispositions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail[] $dispositions
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
     public function setDispositions(array $dispositions = array())
     {
         foreach ($dispositions as $labelSpecificationDispositionsItem) {
             // validation for constraint: itemType
-            if (!$labelSpecificationDispositionsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail) {
-                throw new \InvalidArgumentException(sprintf('The Dispositions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail, "%s" given', is_object($labelSpecificationDispositionsItem) ? get_class($labelSpecificationDispositionsItem) : gettype($labelSpecificationDispositionsItem)), __LINE__);
+            if (!$labelSpecificationDispositionsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail) {
+                throw new \InvalidArgumentException(sprintf('The Dispositions property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail, "%s" given', is_object($labelSpecificationDispositionsItem) ? get_class($labelSpecificationDispositionsItem) : gettype($labelSpecificationDispositionsItem)), __LINE__);
             }
         }
         $this->Dispositions = $dispositions;
@@ -153,14 +153,14 @@ class LabelSpecification extends AbstractStructBase
     /**
      * Add item to Dispositions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
-    public function addToDispositions(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail $item)
+    public function addToDispositions(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail) {
-            throw new \InvalidArgumentException(sprintf('The Dispositions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail) {
+            throw new \InvalidArgumentException(sprintf('The Dispositions property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Dispositions[] = $item;
         return $this;
@@ -175,17 +175,17 @@ class LabelSpecification extends AbstractStructBase
     }
     /**
      * Set ImageType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $imageType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
     public function setImageType($imageType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid($imageType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $imageType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid($imageType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $imageType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::getValidValues())), __LINE__);
         }
         $this->ImageType = $imageType;
         return $this;
@@ -200,17 +200,17 @@ class LabelSpecification extends AbstractStructBase
     }
     /**
      * Set LabelStockType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelStockType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelStockType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LabelStockType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LabelStockType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelStockType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
     public function setLabelStockType($labelStockType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelStockType::valueIsValid($labelStockType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelStockType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelStockType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LabelStockType::valueIsValid($labelStockType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelStockType, implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelStockType::getValidValues())), __LINE__);
         }
         $this->LabelStockType = $labelStockType;
         return $this;
@@ -225,17 +225,17 @@ class LabelSpecification extends AbstractStructBase
     }
     /**
      * Set LabelPrintingOrientation value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelPrintingOrientation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
     public function setLabelPrintingOrientation($labelPrintingOrientation = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid($labelPrintingOrientation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelPrintingOrientation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid($labelPrintingOrientation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelPrintingOrientation, implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues())), __LINE__);
         }
         $this->LabelPrintingOrientation = $labelPrintingOrientation;
         return $this;
@@ -250,24 +250,24 @@ class LabelSpecification extends AbstractStructBase
     }
     /**
      * Set LabelOrder value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelOrderType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelOrderType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LabelOrderType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LabelOrderType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelOrder
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
     public function setLabelOrder($labelOrder = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelOrderType::valueIsValid($labelOrder)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelOrder, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelOrderType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LabelOrderType::valueIsValid($labelOrder)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelOrder, implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelOrderType::getValidValues())), __LINE__);
         }
         $this->LabelOrder = $labelOrder;
         return $this;
     }
     /**
      * Get PrintedLabelOrigin value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getPrintedLabelOrigin()
     {
@@ -275,17 +275,17 @@ class LabelSpecification extends AbstractStructBase
     }
     /**
      * Set PrintedLabelOrigin value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $printedLabelOrigin
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $printedLabelOrigin
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
-    public function setPrintedLabelOrigin(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $printedLabelOrigin = null)
+    public function setPrintedLabelOrigin(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $printedLabelOrigin = null)
     {
         $this->PrintedLabelOrigin = $printedLabelOrigin;
         return $this;
     }
     /**
      * Get CustomerSpecifiedDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail|null
      */
     public function getCustomerSpecifiedDetail()
     {
@@ -293,10 +293,10 @@ class LabelSpecification extends AbstractStructBase
     }
     /**
      * Set CustomerSpecifiedDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail $customerSpecifiedDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail $customerSpecifiedDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
-    public function setCustomerSpecifiedDetail(\NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail $customerSpecifiedDetail = null)
+    public function setCustomerSpecifiedDetail(\CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail $customerSpecifiedDetail = null)
     {
         $this->CustomerSpecifiedDetail = $customerSpecifiedDetail;
         return $this;
@@ -307,7 +307,7 @@ class LabelSpecification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification
      */
     public static function __set_state(array $array)
     {

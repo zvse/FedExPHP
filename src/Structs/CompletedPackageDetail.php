@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -22,7 +22,7 @@ class CompletedPackageDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId[]
      */
     public $TrackingIds;
     /**
@@ -45,21 +45,21 @@ class CompletedPackageDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: All package-level rating data for this package, which may include data for multiple rate types.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageRating
+     * @var \CommerceFedEx\FedExPHP\Structs\PackageRating
      */
     public $PackageRating;
     /**
      * The OperationalDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail
      */
     public $OperationalDetail;
     /**
      * The Label
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocument
      */
     public $Label;
     /**
@@ -68,7 +68,7 @@ class CompletedPackageDetail extends AbstractStructBase
      * - documentation: All package-level shipping documents (other than labels and barcodes). For use in loads after January, 2008.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[]
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocument[]
      */
     public $PackageDocuments;
     /**
@@ -76,7 +76,7 @@ class CompletedPackageDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the information associated with this package that has COD special service in a ground shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail
      */
     public $CodReturnDetail;
     /**
@@ -91,7 +91,7 @@ class CompletedPackageDetail extends AbstractStructBase
      * The DryIceWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public $DryIceWeight;
     /**
@@ -99,7 +99,7 @@ class CompletedPackageDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Documents the kinds and quantities of all hazardous commodities in the current package, using updated hazardous commodity description data.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail
      */
     public $HazardousPackageDetail;
     /**
@@ -117,19 +117,19 @@ class CompletedPackageDetail extends AbstractStructBase
      * @uses CompletedPackageDetail::setDryIceWeight()
      * @uses CompletedPackageDetail::setHazardousPackageDetail()
      * @param int $sequenceNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
      * @param int $groupNumber
      * @param string $oversizeClass
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageRating $packageRating
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail $operationalDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[] $packageDocuments
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PackageRating $packageRating
+     * @param \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $operationalDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $packageDocuments
+     * @param \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail
      * @param string $signatureOption
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $dryIceWeight
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight
+     * @param \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail
      */
-    public function __construct($sequenceNumber = null, array $trackingIds = array(), $groupNumber = null, $oversizeClass = null, \NicholasCreativeMedia\FedExPHP\Structs\PackageRating $packageRating = null, \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail $operationalDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label = null, array $packageDocuments = array(), \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail = null, $signatureOption = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $dryIceWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail = null)
+    public function __construct($sequenceNumber = null, array $trackingIds = array(), $groupNumber = null, $oversizeClass = null, \CommerceFedEx\FedExPHP\Structs\PackageRating $packageRating = null, \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $operationalDetail = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label = null, array $packageDocuments = array(), \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail = null, $signatureOption = null, \CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight = null, \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail = null)
     {
         $this
             ->setSequenceNumber($sequenceNumber)
@@ -156,7 +156,7 @@ class CompletedPackageDetail extends AbstractStructBase
     /**
      * Set SequenceNumber value
      * @param int $sequenceNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
     public function setSequenceNumber($sequenceNumber = null)
     {
@@ -169,7 +169,7 @@ class CompletedPackageDetail extends AbstractStructBase
     }
     /**
      * Get TrackingIds value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId[]|null
      */
     public function getTrackingIds()
     {
@@ -178,15 +178,15 @@ class CompletedPackageDetail extends AbstractStructBase
     /**
      * Set TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
     public function setTrackingIds(array $trackingIds = array())
     {
         foreach ($trackingIds as $completedPackageDetailTrackingIdsItem) {
             // validation for constraint: itemType
-            if (!$completedPackageDetailTrackingIdsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
-                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($completedPackageDetailTrackingIdsItem) ? get_class($completedPackageDetailTrackingIdsItem) : gettype($completedPackageDetailTrackingIdsItem)), __LINE__);
+            if (!$completedPackageDetailTrackingIdsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
+                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($completedPackageDetailTrackingIdsItem) ? get_class($completedPackageDetailTrackingIdsItem) : gettype($completedPackageDetailTrackingIdsItem)), __LINE__);
             }
         }
         $this->TrackingIds = $trackingIds;
@@ -195,14 +195,14 @@ class CompletedPackageDetail extends AbstractStructBase
     /**
      * Add item to TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
-    public function addToTrackingIds(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item)
+    public function addToTrackingIds(\CommerceFedEx\FedExPHP\Structs\TrackingId $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
-            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
+            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->TrackingIds[] = $item;
         return $this;
@@ -218,7 +218,7 @@ class CompletedPackageDetail extends AbstractStructBase
     /**
      * Set GroupNumber value
      * @param int $groupNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
     public function setGroupNumber($groupNumber = null)
     {
@@ -239,24 +239,24 @@ class CompletedPackageDetail extends AbstractStructBase
     }
     /**
      * Set OversizeClass value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OversizeClassType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OversizeClassType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OversizeClassType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OversizeClassType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $oversizeClass
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
     public function setOversizeClass($oversizeClass = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\OversizeClassType::valueIsValid($oversizeClass)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $oversizeClass, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\OversizeClassType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\OversizeClassType::valueIsValid($oversizeClass)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $oversizeClass, implode(', ', \CommerceFedEx\FedExPHP\Enums\OversizeClassType::getValidValues())), __LINE__);
         }
         $this->OversizeClass = $oversizeClass;
         return $this;
     }
     /**
      * Get PackageRating value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageRating|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageRating|null
      */
     public function getPackageRating()
     {
@@ -264,17 +264,17 @@ class CompletedPackageDetail extends AbstractStructBase
     }
     /**
      * Set PackageRating value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageRating $packageRating
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PackageRating $packageRating
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
-    public function setPackageRating(\NicholasCreativeMedia\FedExPHP\Structs\PackageRating $packageRating = null)
+    public function setPackageRating(\CommerceFedEx\FedExPHP\Structs\PackageRating $packageRating = null)
     {
         $this->PackageRating = $packageRating;
         return $this;
     }
     /**
      * Get OperationalDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail|null
      */
     public function getOperationalDetail()
     {
@@ -282,17 +282,17 @@ class CompletedPackageDetail extends AbstractStructBase
     }
     /**
      * Set OperationalDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail $operationalDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $operationalDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
-    public function setOperationalDetail(\NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail $operationalDetail = null)
+    public function setOperationalDetail(\CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $operationalDetail = null)
     {
         $this->OperationalDetail = $operationalDetail;
         return $this;
     }
     /**
      * Get Label value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocument|null
      */
     public function getLabel()
     {
@@ -300,17 +300,17 @@ class CompletedPackageDetail extends AbstractStructBase
     }
     /**
      * Set Label value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
-    public function setLabel(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label = null)
+    public function setLabel(\CommerceFedEx\FedExPHP\Structs\ShippingDocument $label = null)
     {
         $this->Label = $label;
         return $this;
     }
     /**
      * Get PackageDocuments value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocument[]|null
      */
     public function getPackageDocuments()
     {
@@ -319,15 +319,15 @@ class CompletedPackageDetail extends AbstractStructBase
     /**
      * Set PackageDocuments value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[] $packageDocuments
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $packageDocuments
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
     public function setPackageDocuments(array $packageDocuments = array())
     {
         foreach ($packageDocuments as $completedPackageDetailPackageDocumentsItem) {
             // validation for constraint: itemType
-            if (!$completedPackageDetailPackageDocumentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument) {
-                throw new \InvalidArgumentException(sprintf('The PackageDocuments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($completedPackageDetailPackageDocumentsItem) ? get_class($completedPackageDetailPackageDocumentsItem) : gettype($completedPackageDetailPackageDocumentsItem)), __LINE__);
+            if (!$completedPackageDetailPackageDocumentsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocument) {
+                throw new \InvalidArgumentException(sprintf('The PackageDocuments property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($completedPackageDetailPackageDocumentsItem) ? get_class($completedPackageDetailPackageDocumentsItem) : gettype($completedPackageDetailPackageDocumentsItem)), __LINE__);
             }
         }
         $this->PackageDocuments = $packageDocuments;
@@ -336,21 +336,21 @@ class CompletedPackageDetail extends AbstractStructBase
     /**
      * Add item to PackageDocuments value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
-    public function addToPackageDocuments(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $item)
+    public function addToPackageDocuments(\CommerceFedEx\FedExPHP\Structs\ShippingDocument $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument) {
-            throw new \InvalidArgumentException(sprintf('The PackageDocuments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocument) {
+            throw new \InvalidArgumentException(sprintf('The PackageDocuments property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->PackageDocuments[] = $item;
         return $this;
     }
     /**
      * Get CodReturnDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail|null
      */
     public function getCodReturnDetail()
     {
@@ -358,10 +358,10 @@ class CompletedPackageDetail extends AbstractStructBase
     }
     /**
      * Set CodReturnDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
-    public function setCodReturnDetail(\NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail = null)
+    public function setCodReturnDetail(\CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail = null)
     {
         $this->CodReturnDetail = $codReturnDetail;
         return $this;
@@ -376,24 +376,24 @@ class CompletedPackageDetail extends AbstractStructBase
     }
     /**
      * Set SignatureOption value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SignatureOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\SignatureOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $signatureOption
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
     public function setSignatureOption($signatureOption = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::valueIsValid($signatureOption)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $signatureOption, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\SignatureOptionType::valueIsValid($signatureOption)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $signatureOption, implode(', ', \CommerceFedEx\FedExPHP\Enums\SignatureOptionType::getValidValues())), __LINE__);
         }
         $this->SignatureOption = $signatureOption;
         return $this;
     }
     /**
      * Get DryIceWeight value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
      */
     public function getDryIceWeight()
     {
@@ -401,17 +401,17 @@ class CompletedPackageDetail extends AbstractStructBase
     }
     /**
      * Set DryIceWeight value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $dryIceWeight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
-    public function setDryIceWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $dryIceWeight = null)
+    public function setDryIceWeight(\CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight = null)
     {
         $this->DryIceWeight = $dryIceWeight;
         return $this;
     }
     /**
      * Get HazardousPackageDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail|null
      */
     public function getHazardousPackageDetail()
     {
@@ -419,10 +419,10 @@ class CompletedPackageDetail extends AbstractStructBase
     }
     /**
      * Set HazardousPackageDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
-    public function setHazardousPackageDetail(\NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail = null)
+    public function setHazardousPackageDetail(\CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail = null)
     {
         $this->HazardousPackageDetail = $hazardousPackageDetail;
         return $this;
@@ -433,7 +433,7 @@ class CompletedPackageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedPackageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
      */
     public static function __set_state(array $array)
     {

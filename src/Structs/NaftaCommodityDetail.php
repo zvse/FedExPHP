@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -46,7 +46,7 @@ class NaftaCommodityDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Date range over which RVC net cost was calculated.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\DateRange
+     * @var \CommerceFedEx\FedExPHP\Structs\DateRange
      */
     public $NetCostDateRange;
     /**
@@ -60,9 +60,9 @@ class NaftaCommodityDetail extends AbstractStructBase
      * @param string $producerDetermination
      * @param string $producerId
      * @param string $netCostMethod
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DateRange $netCostDateRange
+     * @param \CommerceFedEx\FedExPHP\Structs\DateRange $netCostDateRange
      */
-    public function __construct($preferenceCriterion = null, $producerDetermination = null, $producerId = null, $netCostMethod = null, \NicholasCreativeMedia\FedExPHP\Structs\DateRange $netCostDateRange = null)
+    public function __construct($preferenceCriterion = null, $producerDetermination = null, $producerId = null, $netCostMethod = null, \CommerceFedEx\FedExPHP\Structs\DateRange $netCostDateRange = null)
     {
         $this
             ->setPreferenceCriterion($preferenceCriterion)
@@ -81,17 +81,17 @@ class NaftaCommodityDetail extends AbstractStructBase
     }
     /**
      * Set PreferenceCriterion value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaPreferenceCriterionCode::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaPreferenceCriterionCode::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaPreferenceCriterionCode::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaPreferenceCriterionCode::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $preferenceCriterion
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail
      */
     public function setPreferenceCriterion($preferenceCriterion = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NaftaPreferenceCriterionCode::valueIsValid($preferenceCriterion)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $preferenceCriterion, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NaftaPreferenceCriterionCode::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NaftaPreferenceCriterionCode::valueIsValid($preferenceCriterion)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $preferenceCriterion, implode(', ', \CommerceFedEx\FedExPHP\Enums\NaftaPreferenceCriterionCode::getValidValues())), __LINE__);
         }
         $this->PreferenceCriterion = $preferenceCriterion;
         return $this;
@@ -106,17 +106,17 @@ class NaftaCommodityDetail extends AbstractStructBase
     }
     /**
      * Set ProducerDetermination value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaProducerDeterminationCode::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaProducerDeterminationCode::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaProducerDeterminationCode::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaProducerDeterminationCode::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $producerDetermination
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail
      */
     public function setProducerDetermination($producerDetermination = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NaftaProducerDeterminationCode::valueIsValid($producerDetermination)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $producerDetermination, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NaftaProducerDeterminationCode::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NaftaProducerDeterminationCode::valueIsValid($producerDetermination)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $producerDetermination, implode(', ', \CommerceFedEx\FedExPHP\Enums\NaftaProducerDeterminationCode::getValidValues())), __LINE__);
         }
         $this->ProducerDetermination = $producerDetermination;
         return $this;
@@ -132,7 +132,7 @@ class NaftaCommodityDetail extends AbstractStructBase
     /**
      * Set ProducerId value
      * @param string $producerId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail
      */
     public function setProducerId($producerId = null)
     {
@@ -153,24 +153,24 @@ class NaftaCommodityDetail extends AbstractStructBase
     }
     /**
      * Set NetCostMethod value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaNetCostMethodCode::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaNetCostMethodCode::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaNetCostMethodCode::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaNetCostMethodCode::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $netCostMethod
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail
      */
     public function setNetCostMethod($netCostMethod = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NaftaNetCostMethodCode::valueIsValid($netCostMethod)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $netCostMethod, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NaftaNetCostMethodCode::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NaftaNetCostMethodCode::valueIsValid($netCostMethod)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $netCostMethod, implode(', ', \CommerceFedEx\FedExPHP\Enums\NaftaNetCostMethodCode::getValidValues())), __LINE__);
         }
         $this->NetCostMethod = $netCostMethod;
         return $this;
     }
     /**
      * Get NetCostDateRange value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DateRange|null
+     * @return \CommerceFedEx\FedExPHP\Structs\DateRange|null
      */
     public function getNetCostDateRange()
     {
@@ -178,10 +178,10 @@ class NaftaCommodityDetail extends AbstractStructBase
     }
     /**
      * Set NetCostDateRange value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DateRange $netCostDateRange
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\DateRange $netCostDateRange
+     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail
      */
-    public function setNetCostDateRange(\NicholasCreativeMedia\FedExPHP\Structs\DateRange $netCostDateRange = null)
+    public function setNetCostDateRange(\CommerceFedEx\FedExPHP\Structs\DateRange $netCostDateRange = null)
     {
         $this->NetCostDateRange = $netCostDateRange;
         return $this;
@@ -192,7 +192,7 @@ class NaftaCommodityDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail
      */
     public static function __set_state(array $array)
     {

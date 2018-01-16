@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -21,7 +21,7 @@ class TrackChargeDetail extends AbstractStructBase
      * The ChargeAmount
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $ChargeAmount;
     /**
@@ -29,9 +29,9 @@ class TrackChargeDetail extends AbstractStructBase
      * @uses TrackChargeDetail::setType()
      * @uses TrackChargeDetail::setChargeAmount()
      * @param string $type
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $chargeAmount
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $chargeAmount
      */
-    public function __construct($type = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $chargeAmount = null)
+    public function __construct($type = null, \CommerceFedEx\FedExPHP\Structs\Money $chargeAmount = null)
     {
         $this
             ->setType($type)
@@ -47,24 +47,24 @@ class TrackChargeDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackChargeDetailType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackChargeDetailType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackChargeDetailType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TrackChargeDetailType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackChargeDetailType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackChargeDetailType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TrackChargeDetailType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackChargeDetailType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
     }
     /**
      * Get ChargeAmount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getChargeAmount()
     {
@@ -72,10 +72,10 @@ class TrackChargeDetail extends AbstractStructBase
     }
     /**
      * Set ChargeAmount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $chargeAmount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $chargeAmount
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail
      */
-    public function setChargeAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $chargeAmount = null)
+    public function setChargeAmount(\CommerceFedEx\FedExPHP\Structs\Money $chargeAmount = null)
     {
         $this->ChargeAmount = $chargeAmount;
         return $this;
@@ -86,7 +86,7 @@ class TrackChargeDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackChargeDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackChargeDetail
      */
     public static function __set_state(array $array)
     {

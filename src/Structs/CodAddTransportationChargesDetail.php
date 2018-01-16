@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -58,17 +58,17 @@ class CodAddTransportationChargesDetail extends AbstractStructBase
     }
     /**
      * Set RateTypeBasis value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateTypeBasisType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateTypeBasisType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateTypeBasisType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RateTypeBasisType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $rateTypeBasis
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodAddTransportationChargesDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CodAddTransportationChargesDetail
      */
     public function setRateTypeBasis($rateTypeBasis = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RateTypeBasisType::valueIsValid($rateTypeBasis)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateTypeBasis, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateTypeBasisType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RateTypeBasisType::valueIsValid($rateTypeBasis)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateTypeBasis, implode(', ', \CommerceFedEx\FedExPHP\Enums\RateTypeBasisType::getValidValues())), __LINE__);
         }
         $this->RateTypeBasis = $rateTypeBasis;
         return $this;
@@ -83,17 +83,17 @@ class CodAddTransportationChargesDetail extends AbstractStructBase
     }
     /**
      * Set ChargeBasis value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CodAddTransportationChargeBasisType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CodAddTransportationChargeBasisType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CodAddTransportationChargeBasisType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CodAddTransportationChargeBasisType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $chargeBasis
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodAddTransportationChargesDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CodAddTransportationChargesDetail
      */
     public function setChargeBasis($chargeBasis = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CodAddTransportationChargeBasisType::valueIsValid($chargeBasis)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $chargeBasis, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CodAddTransportationChargeBasisType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CodAddTransportationChargeBasisType::valueIsValid($chargeBasis)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $chargeBasis, implode(', ', \CommerceFedEx\FedExPHP\Enums\CodAddTransportationChargeBasisType::getValidValues())), __LINE__);
         }
         $this->ChargeBasis = $chargeBasis;
         return $this;
@@ -108,17 +108,17 @@ class CodAddTransportationChargesDetail extends AbstractStructBase
     }
     /**
      * Set ChargeBasisLevel value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ChargeBasisLevelType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ChargeBasisLevelType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ChargeBasisLevelType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ChargeBasisLevelType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $chargeBasisLevel
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodAddTransportationChargesDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CodAddTransportationChargesDetail
      */
     public function setChargeBasisLevel($chargeBasisLevel = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ChargeBasisLevelType::valueIsValid($chargeBasisLevel)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $chargeBasisLevel, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ChargeBasisLevelType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ChargeBasisLevelType::valueIsValid($chargeBasisLevel)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $chargeBasisLevel, implode(', ', \CommerceFedEx\FedExPHP\Enums\ChargeBasisLevelType::getValidValues())), __LINE__);
         }
         $this->ChargeBasisLevel = $chargeBasisLevel;
         return $this;
@@ -129,7 +129,7 @@ class CodAddTransportationChargesDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodAddTransportationChargesDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CodAddTransportationChargesDetail
      */
     public static function __set_state(array $array)
     {

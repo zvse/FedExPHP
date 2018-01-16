@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class DeliveryOptionEligibilityDetail extends AbstractStructBase
     }
     /**
      * Set Option value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DeliveryOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DeliveryOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DeliveryOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DeliveryOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $option
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail
      */
     public function setOption($option = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DeliveryOptionType::valueIsValid($option)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $option, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DeliveryOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DeliveryOptionType::valueIsValid($option)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $option, implode(', ', \CommerceFedEx\FedExPHP\Enums\DeliveryOptionType::getValidValues())), __LINE__);
         }
         $this->Option = $option;
         return $this;
@@ -76,17 +76,17 @@ class DeliveryOptionEligibilityDetail extends AbstractStructBase
     }
     /**
      * Set Eligibility value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EligibilityType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EligibilityType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EligibilityType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EligibilityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $eligibility
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail
      */
     public function setEligibility($eligibility = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\EligibilityType::valueIsValid($eligibility)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $eligibility, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EligibilityType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\EligibilityType::valueIsValid($eligibility)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $eligibility, implode(', ', \CommerceFedEx\FedExPHP\Enums\EligibilityType::getValidValues())), __LINE__);
         }
         $this->Eligibility = $eligibility;
         return $this;
@@ -97,7 +97,7 @@ class DeliveryOptionEligibilityDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOptionEligibilityDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryOptionEligibilityDetail
      */
     public static function __set_state(array $array)
     {

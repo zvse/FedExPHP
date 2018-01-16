@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -48,7 +48,7 @@ class SmsDetail extends AbstractStructBase
     /**
      * Set PhoneNumber value
      * @param string $phoneNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmsDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SmsDetail
      */
     public function setPhoneNumber($phoneNumber = null)
     {
@@ -70,7 +70,7 @@ class SmsDetail extends AbstractStructBase
     /**
      * Set PhoneNumberCountryCode value
      * @param string $phoneNumberCountryCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmsDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SmsDetail
      */
     public function setPhoneNumberCountryCode($phoneNumberCountryCode = null)
     {
@@ -87,7 +87,7 @@ class SmsDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmsDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SmsDetail
      */
     public static function __set_state(array $array)
     {

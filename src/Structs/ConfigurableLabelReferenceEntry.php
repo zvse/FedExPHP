@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -68,7 +68,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     /**
      * Set ZoneNumber value
      * @param int $zoneNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public function setZoneNumber($zoneNumber = null)
     {
@@ -90,7 +90,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     /**
      * Set Header value
      * @param string $header
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public function setHeader($header = null)
     {
@@ -112,7 +112,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     /**
      * Set DataField value
      * @param string $dataField
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public function setDataField($dataField = null)
     {
@@ -134,7 +134,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     /**
      * Set LiteralValue value
      * @param string $literalValue
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public function setLiteralValue($literalValue = null)
     {
@@ -151,7 +151,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public static function __set_state(array $array)
     {

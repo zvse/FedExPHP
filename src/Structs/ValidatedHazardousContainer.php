@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -26,7 +26,7 @@ class ValidatedHazardousContainer extends AbstractStructBase
      * - documentation: Documents the kinds and quantities of all hazardous commodities in the current package.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent[]
+     * @var \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent[]
      */
     public $HazardousCommodities;
     /**
@@ -34,7 +34,7 @@ class ValidatedHazardousContainer extends AbstractStructBase
      * @uses ValidatedHazardousContainer::setQValue()
      * @uses ValidatedHazardousContainer::setHazardousCommodities()
      * @param float $qValue
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent[] $hazardousCommodities
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent[] $hazardousCommodities
      */
     public function __construct($qValue = null, array $hazardousCommodities = array())
     {
@@ -53,7 +53,7 @@ class ValidatedHazardousContainer extends AbstractStructBase
     /**
      * Set QValue value
      * @param float $qValue
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer
      */
     public function setQValue($qValue = null)
     {
@@ -62,7 +62,7 @@ class ValidatedHazardousContainer extends AbstractStructBase
     }
     /**
      * Get HazardousCommodities value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent[]|null
      */
     public function getHazardousCommodities()
     {
@@ -71,15 +71,15 @@ class ValidatedHazardousContainer extends AbstractStructBase
     /**
      * Set HazardousCommodities value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent[] $hazardousCommodities
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent[] $hazardousCommodities
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer
      */
     public function setHazardousCommodities(array $hazardousCommodities = array())
     {
         foreach ($hazardousCommodities as $validatedHazardousContainerHazardousCommoditiesItem) {
             // validation for constraint: itemType
-            if (!$validatedHazardousContainerHazardousCommoditiesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent) {
-                throw new \InvalidArgumentException(sprintf('The HazardousCommodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent, "%s" given', is_object($validatedHazardousContainerHazardousCommoditiesItem) ? get_class($validatedHazardousContainerHazardousCommoditiesItem) : gettype($validatedHazardousContainerHazardousCommoditiesItem)), __LINE__);
+            if (!$validatedHazardousContainerHazardousCommoditiesItem instanceof \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent) {
+                throw new \InvalidArgumentException(sprintf('The HazardousCommodities property can only contain items of \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent, "%s" given', is_object($validatedHazardousContainerHazardousCommoditiesItem) ? get_class($validatedHazardousContainerHazardousCommoditiesItem) : gettype($validatedHazardousContainerHazardousCommoditiesItem)), __LINE__);
             }
         }
         $this->HazardousCommodities = $hazardousCommodities;
@@ -88,14 +88,14 @@ class ValidatedHazardousContainer extends AbstractStructBase
     /**
      * Add item to HazardousCommodities value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent $item
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer
      */
-    public function addToHazardousCommodities(\NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent $item)
+    public function addToHazardousCommodities(\CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent) {
-            throw new \InvalidArgumentException(sprintf('The HazardousCommodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousCommodityContent, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent) {
+            throw new \InvalidArgumentException(sprintf('The HazardousCommodities property can only contain items of \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousCommodityContent, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->HazardousCommodities[] = $item;
         return $this;
@@ -106,7 +106,7 @@ class ValidatedHazardousContainer extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatedHazardousContainer
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatedHazardousContainer
      */
     public static function __set_state(array $array)
     {

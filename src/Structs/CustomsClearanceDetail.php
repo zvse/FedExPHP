@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,7 +15,7 @@ class CustomsClearanceDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\BrokerDetail[]
      */
     public $Brokers;
     /**
@@ -30,14 +30,14 @@ class CustomsClearanceDetail extends AbstractStructBase
      * The CustomsOptions
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail
      */
     public $CustomsOptions;
     /**
      * The ImporterOfRecord
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
+     * @var \CommerceFedEx\FedExPHP\Structs\Party
      */
     public $ImporterOfRecord;
     /**
@@ -45,14 +45,14 @@ class CustomsClearanceDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies how the recipient is identified for customs purposes; the requirements on this information vary with destination country.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\RecipientCustomsId
+     * @var \CommerceFedEx\FedExPHP\Structs\RecipientCustomsId
      */
     public $RecipientCustomsId;
     /**
      * The DutiesPayment
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payment
+     * @var \CommerceFedEx\FedExPHP\Structs\Payment
      */
     public $DutiesPayment;
     /**
@@ -66,7 +66,7 @@ class CustomsClearanceDetail extends AbstractStructBase
      * The CustomsValue
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $CustomsValue;
     /**
@@ -82,7 +82,7 @@ class CustomsClearanceDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Documents amount paid to third party for coverage of shipment content.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $InsuranceCharges;
     /**
@@ -96,7 +96,7 @@ class CustomsClearanceDetail extends AbstractStructBase
      * The CommercialInvoice
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice
+     * @var \CommerceFedEx\FedExPHP\Structs\CommercialInvoice
      */
     public $CommercialInvoice;
     /**
@@ -104,14 +104,14 @@ class CustomsClearanceDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Commodity[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Commodity[]
      */
     public $Commodities;
     /**
      * The ExportDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ExportDetail
      */
     public $ExportDetail;
     /**
@@ -126,7 +126,7 @@ class CustomsClearanceDetail extends AbstractStructBase
      * The DeclarationStatementDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail
      */
     public $DeclarationStatementDetail;
     /**
@@ -147,24 +147,24 @@ class CustomsClearanceDetail extends AbstractStructBase
      * @uses CustomsClearanceDetail::setExportDetail()
      * @uses CustomsClearanceDetail::setRegulatoryControls()
      * @uses CustomsClearanceDetail::setDeclarationStatementDetail()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail[] $brokers
+     * @param \CommerceFedEx\FedExPHP\Structs\BrokerDetail[] $brokers
      * @param string $clearanceBrokerage
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail $customsOptions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $importerOfRecord
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RecipientCustomsId $recipientCustomsId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $dutiesPayment
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail $customsOptions
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $importerOfRecord
+     * @param \CommerceFedEx\FedExPHP\Structs\RecipientCustomsId $recipientCustomsId
+     * @param \CommerceFedEx\FedExPHP\Structs\Payment $dutiesPayment
      * @param string $documentContent
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $customsValue
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $customsValue
      * @param string $freightOnValue
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $insuranceCharges
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $insuranceCharges
      * @param bool $partiesToTransactionAreRelated
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice $commercialInvoice
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity[] $commodities
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail $exportDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CommercialInvoice $commercialInvoice
+     * @param \CommerceFedEx\FedExPHP\Structs\Commodity[] $commodities
+     * @param \CommerceFedEx\FedExPHP\Structs\ExportDetail $exportDetail
      * @param string[] $regulatoryControls
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail $declarationStatementDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail $declarationStatementDetail
      */
-    public function __construct(array $brokers = array(), $clearanceBrokerage = null, \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail $customsOptions = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $importerOfRecord = null, \NicholasCreativeMedia\FedExPHP\Structs\RecipientCustomsId $recipientCustomsId = null, \NicholasCreativeMedia\FedExPHP\Structs\Payment $dutiesPayment = null, $documentContent = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $customsValue = null, $freightOnValue = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $insuranceCharges = null, $partiesToTransactionAreRelated = null, \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice $commercialInvoice = null, array $commodities = array(), \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail $exportDetail = null, array $regulatoryControls = array(), \NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail $declarationStatementDetail = null)
+    public function __construct(array $brokers = array(), $clearanceBrokerage = null, \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail $customsOptions = null, \CommerceFedEx\FedExPHP\Structs\Party $importerOfRecord = null, \CommerceFedEx\FedExPHP\Structs\RecipientCustomsId $recipientCustomsId = null, \CommerceFedEx\FedExPHP\Structs\Payment $dutiesPayment = null, $documentContent = null, \CommerceFedEx\FedExPHP\Structs\Money $customsValue = null, $freightOnValue = null, \CommerceFedEx\FedExPHP\Structs\Money $insuranceCharges = null, $partiesToTransactionAreRelated = null, \CommerceFedEx\FedExPHP\Structs\CommercialInvoice $commercialInvoice = null, array $commodities = array(), \CommerceFedEx\FedExPHP\Structs\ExportDetail $exportDetail = null, array $regulatoryControls = array(), \CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail $declarationStatementDetail = null)
     {
         $this
             ->setBrokers($brokers)
@@ -186,7 +186,7 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Get Brokers value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\BrokerDetail[]|null
      */
     public function getBrokers()
     {
@@ -195,15 +195,15 @@ class CustomsClearanceDetail extends AbstractStructBase
     /**
      * Set Brokers value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail[] $brokers
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\BrokerDetail[] $brokers
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public function setBrokers(array $brokers = array())
     {
         foreach ($brokers as $customsClearanceDetailBrokersItem) {
             // validation for constraint: itemType
-            if (!$customsClearanceDetailBrokersItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail) {
-                throw new \InvalidArgumentException(sprintf('The Brokers property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail, "%s" given', is_object($customsClearanceDetailBrokersItem) ? get_class($customsClearanceDetailBrokersItem) : gettype($customsClearanceDetailBrokersItem)), __LINE__);
+            if (!$customsClearanceDetailBrokersItem instanceof \CommerceFedEx\FedExPHP\Structs\BrokerDetail) {
+                throw new \InvalidArgumentException(sprintf('The Brokers property can only contain items of \CommerceFedEx\FedExPHP\Structs\BrokerDetail, "%s" given', is_object($customsClearanceDetailBrokersItem) ? get_class($customsClearanceDetailBrokersItem) : gettype($customsClearanceDetailBrokersItem)), __LINE__);
             }
         }
         $this->Brokers = $brokers;
@@ -212,14 +212,14 @@ class CustomsClearanceDetail extends AbstractStructBase
     /**
      * Add item to Brokers value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\BrokerDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function addToBrokers(\NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail $item)
+    public function addToBrokers(\CommerceFedEx\FedExPHP\Structs\BrokerDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail) {
-            throw new \InvalidArgumentException(sprintf('The Brokers property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\BrokerDetail) {
+            throw new \InvalidArgumentException(sprintf('The Brokers property can only contain items of \CommerceFedEx\FedExPHP\Structs\BrokerDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Brokers[] = $item;
         return $this;
@@ -234,24 +234,24 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set ClearanceBrokerage value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ClearanceBrokerageType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ClearanceBrokerageType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ClearanceBrokerageType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ClearanceBrokerageType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $clearanceBrokerage
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public function setClearanceBrokerage($clearanceBrokerage = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ClearanceBrokerageType::valueIsValid($clearanceBrokerage)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $clearanceBrokerage, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ClearanceBrokerageType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ClearanceBrokerageType::valueIsValid($clearanceBrokerage)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $clearanceBrokerage, implode(', ', \CommerceFedEx\FedExPHP\Enums\ClearanceBrokerageType::getValidValues())), __LINE__);
         }
         $this->ClearanceBrokerage = $clearanceBrokerage;
         return $this;
     }
     /**
      * Get CustomsOptions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail|null
      */
     public function getCustomsOptions()
     {
@@ -259,17 +259,17 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set CustomsOptions value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail $customsOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail $customsOptions
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function setCustomsOptions(\NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail $customsOptions = null)
+    public function setCustomsOptions(\CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail $customsOptions = null)
     {
         $this->CustomsOptions = $customsOptions;
         return $this;
     }
     /**
      * Get ImporterOfRecord value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
      */
     public function getImporterOfRecord()
     {
@@ -277,17 +277,17 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set ImporterOfRecord value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $importerOfRecord
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $importerOfRecord
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function setImporterOfRecord(\NicholasCreativeMedia\FedExPHP\Structs\Party $importerOfRecord = null)
+    public function setImporterOfRecord(\CommerceFedEx\FedExPHP\Structs\Party $importerOfRecord = null)
     {
         $this->ImporterOfRecord = $importerOfRecord;
         return $this;
     }
     /**
      * Get RecipientCustomsId value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecipientCustomsId|null
+     * @return \CommerceFedEx\FedExPHP\Structs\RecipientCustomsId|null
      */
     public function getRecipientCustomsId()
     {
@@ -295,17 +295,17 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set RecipientCustomsId value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RecipientCustomsId $recipientCustomsId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\RecipientCustomsId $recipientCustomsId
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function setRecipientCustomsId(\NicholasCreativeMedia\FedExPHP\Structs\RecipientCustomsId $recipientCustomsId = null)
+    public function setRecipientCustomsId(\CommerceFedEx\FedExPHP\Structs\RecipientCustomsId $recipientCustomsId = null)
     {
         $this->RecipientCustomsId = $recipientCustomsId;
         return $this;
     }
     /**
      * Get DutiesPayment value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Payment|null
      */
     public function getDutiesPayment()
     {
@@ -313,10 +313,10 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set DutiesPayment value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $dutiesPayment
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Payment $dutiesPayment
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function setDutiesPayment(\NicholasCreativeMedia\FedExPHP\Structs\Payment $dutiesPayment = null)
+    public function setDutiesPayment(\CommerceFedEx\FedExPHP\Structs\Payment $dutiesPayment = null)
     {
         $this->DutiesPayment = $dutiesPayment;
         return $this;
@@ -331,24 +331,24 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set DocumentContent value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\InternationalDocumentContentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\InternationalDocumentContentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\InternationalDocumentContentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\InternationalDocumentContentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $documentContent
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public function setDocumentContent($documentContent = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\InternationalDocumentContentType::valueIsValid($documentContent)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentContent, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\InternationalDocumentContentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\InternationalDocumentContentType::valueIsValid($documentContent)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentContent, implode(', ', \CommerceFedEx\FedExPHP\Enums\InternationalDocumentContentType::getValidValues())), __LINE__);
         }
         $this->DocumentContent = $documentContent;
         return $this;
     }
     /**
      * Get CustomsValue value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getCustomsValue()
     {
@@ -356,10 +356,10 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set CustomsValue value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $customsValue
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $customsValue
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function setCustomsValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $customsValue = null)
+    public function setCustomsValue(\CommerceFedEx\FedExPHP\Structs\Money $customsValue = null)
     {
         $this->CustomsValue = $customsValue;
         return $this;
@@ -374,24 +374,24 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set FreightOnValue value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightOnValueType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightOnValueType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightOnValueType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightOnValueType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $freightOnValue
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public function setFreightOnValue($freightOnValue = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightOnValueType::valueIsValid($freightOnValue)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $freightOnValue, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightOnValueType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FreightOnValueType::valueIsValid($freightOnValue)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $freightOnValue, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightOnValueType::getValidValues())), __LINE__);
         }
         $this->FreightOnValue = $freightOnValue;
         return $this;
     }
     /**
      * Get InsuranceCharges value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getInsuranceCharges()
     {
@@ -399,10 +399,10 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set InsuranceCharges value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $insuranceCharges
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $insuranceCharges
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function setInsuranceCharges(\NicholasCreativeMedia\FedExPHP\Structs\Money $insuranceCharges = null)
+    public function setInsuranceCharges(\CommerceFedEx\FedExPHP\Structs\Money $insuranceCharges = null)
     {
         $this->InsuranceCharges = $insuranceCharges;
         return $this;
@@ -418,7 +418,7 @@ class CustomsClearanceDetail extends AbstractStructBase
     /**
      * Set PartiesToTransactionAreRelated value
      * @param bool $partiesToTransactionAreRelated
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public function setPartiesToTransactionAreRelated($partiesToTransactionAreRelated = null)
     {
@@ -427,7 +427,7 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Get CommercialInvoice value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoice|null
      */
     public function getCommercialInvoice()
     {
@@ -435,17 +435,17 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set CommercialInvoice value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice $commercialInvoice
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CommercialInvoice $commercialInvoice
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function setCommercialInvoice(\NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoice $commercialInvoice = null)
+    public function setCommercialInvoice(\CommerceFedEx\FedExPHP\Structs\CommercialInvoice $commercialInvoice = null)
     {
         $this->CommercialInvoice = $commercialInvoice;
         return $this;
     }
     /**
      * Get Commodities value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Commodity[]|null
      */
     public function getCommodities()
     {
@@ -454,15 +454,15 @@ class CustomsClearanceDetail extends AbstractStructBase
     /**
      * Set Commodities value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity[] $commodities
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Commodity[] $commodities
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public function setCommodities(array $commodities = array())
     {
         foreach ($commodities as $customsClearanceDetailCommoditiesItem) {
             // validation for constraint: itemType
-            if (!$customsClearanceDetailCommoditiesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Commodity) {
-                throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Commodity, "%s" given', is_object($customsClearanceDetailCommoditiesItem) ? get_class($customsClearanceDetailCommoditiesItem) : gettype($customsClearanceDetailCommoditiesItem)), __LINE__);
+            if (!$customsClearanceDetailCommoditiesItem instanceof \CommerceFedEx\FedExPHP\Structs\Commodity) {
+                throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \CommerceFedEx\FedExPHP\Structs\Commodity, "%s" given', is_object($customsClearanceDetailCommoditiesItem) ? get_class($customsClearanceDetailCommoditiesItem) : gettype($customsClearanceDetailCommoditiesItem)), __LINE__);
             }
         }
         $this->Commodities = $commodities;
@@ -471,21 +471,21 @@ class CustomsClearanceDetail extends AbstractStructBase
     /**
      * Add item to Commodities value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Commodity $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function addToCommodities(\NicholasCreativeMedia\FedExPHP\Structs\Commodity $item)
+    public function addToCommodities(\CommerceFedEx\FedExPHP\Structs\Commodity $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Commodity) {
-            throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Commodity, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Commodity) {
+            throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \CommerceFedEx\FedExPHP\Structs\Commodity, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Commodities[] = $item;
         return $this;
     }
     /**
      * Get ExportDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ExportDetail|null
      */
     public function getExportDetail()
     {
@@ -493,10 +493,10 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set ExportDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail $exportDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ExportDetail $exportDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function setExportDetail(\NicholasCreativeMedia\FedExPHP\Structs\ExportDetail $exportDetail = null)
+    public function setExportDetail(\CommerceFedEx\FedExPHP\Structs\ExportDetail $exportDetail = null)
     {
         $this->ExportDetail = $exportDetail;
         return $this;
@@ -511,46 +511,46 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set RegulatoryControls value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RegulatoryControlType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RegulatoryControlType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RegulatoryControlType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RegulatoryControlType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $regulatoryControls
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public function setRegulatoryControls(array $regulatoryControls = array())
     {
         $invalidValues = array();
         foreach ($regulatoryControls as $customsClearanceDetailRegulatoryControlsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\RegulatoryControlType::valueIsValid($customsClearanceDetailRegulatoryControlsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\RegulatoryControlType::valueIsValid($customsClearanceDetailRegulatoryControlsItem)) {
                 $invalidValues[] = var_export($customsClearanceDetailRegulatoryControlsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RegulatoryControlType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RegulatoryControlType::getValidValues())), __LINE__);
         }
         $this->RegulatoryControls = $regulatoryControls;
         return $this;
     }
     /**
      * Add item to RegulatoryControls value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RegulatoryControlType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RegulatoryControlType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RegulatoryControlType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RegulatoryControlType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public function addToRegulatoryControls($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RegulatoryControlType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RegulatoryControlType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RegulatoryControlType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RegulatoryControlType::getValidValues())), __LINE__);
         }
         $this->RegulatoryControls[] = $item;
         return $this;
     }
     /**
      * Get DeclarationStatementDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail|null
      */
     public function getDeclarationStatementDetail()
     {
@@ -558,10 +558,10 @@ class CustomsClearanceDetail extends AbstractStructBase
     }
     /**
      * Set DeclarationStatementDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail $declarationStatementDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail $declarationStatementDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
-    public function setDeclarationStatementDetail(\NicholasCreativeMedia\FedExPHP\Structs\CustomsDeclarationStatementDetail $declarationStatementDetail = null)
+    public function setDeclarationStatementDetail(\CommerceFedEx\FedExPHP\Structs\CustomsDeclarationStatementDetail $declarationStatementDetail = null)
     {
         $this->DeclarationStatementDetail = $declarationStatementDetail;
         return $this;
@@ -572,7 +572,7 @@ class CustomsClearanceDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP;
+namespace CommerceFedEx\FedExPHP;
 
 /**
  * Class which returns the class map definition
@@ -16,38 +16,38 @@ class LocationsClassMap
     final public static function get()
     {
         return array(
-            'Address' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Address',
-            'AddressAncillaryDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\AddressAncillaryDetail',
-            'AddressToLocationRelationshipDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\AddressToLocationRelationshipDetail',
-            'CarrierDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\CarrierDetail',
-            'ClearanceCountryDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ClearanceCountryDetail',
-            'ClearanceLocationDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ClearanceLocationDetail',
-            'ClientDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ClientDetail',
-            'Contact' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Contact',
-            'Distance' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Distance',
-            'DistanceAndLocationDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\DistanceAndLocationDetail',
-            'Holiday' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Holiday',
-            'LatestDropOffDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\LatestDropOffDetail',
-            'LatestDropoffOverlayDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\LatestDropoffOverlayDetail',
-            'Localization' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Localization',
-            'LocationContactAndAddress' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\LocationContactAndAddress',
-            'LocationDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\LocationDetail',
-            'LocationHours' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\LocationHours',
-            'LocationIdentificationDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\LocationIdentificationDetail',
-            'LocationSortDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\LocationSortDetail',
-            'Notification' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Notification',
-            'NotificationParameter' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\NotificationParameter',
-            'ReservationAvailabilityDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ReservationAvailabilityDetail',
-            'SearchLocationConstraints' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\SearchLocationConstraints',
-            'SearchLocationsReply' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\SearchLocationsReply',
-            'SearchLocationsRequest' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\SearchLocationsRequest',
-            'ShippingHoliday' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ShippingHoliday',
-            'TimeRange' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\TimeRange',
-            'TransactionDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\TransactionDetail',
-            'UniqueTrackingNumber' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\UniqueTrackingNumber',
-            'WebAuthenticationDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\WebAuthenticationDetail',
-            'WebAuthenticationCredential' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\WebAuthenticationCredential',
-            'VersionId' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\VersionId',
+            'Address' => '\\CommerceFedEx\\FedExPHP\\Structs\\Address',
+            'AddressAncillaryDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\AddressAncillaryDetail',
+            'AddressToLocationRelationshipDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\AddressToLocationRelationshipDetail',
+            'CarrierDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\CarrierDetail',
+            'ClearanceCountryDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\ClearanceCountryDetail',
+            'ClearanceLocationDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\ClearanceLocationDetail',
+            'ClientDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\ClientDetail',
+            'Contact' => '\\CommerceFedEx\\FedExPHP\\Structs\\Contact',
+            'Distance' => '\\CommerceFedEx\\FedExPHP\\Structs\\Distance',
+            'DistanceAndLocationDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\DistanceAndLocationDetail',
+            'Holiday' => '\\CommerceFedEx\\FedExPHP\\Structs\\Holiday',
+            'LatestDropOffDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\LatestDropOffDetail',
+            'LatestDropoffOverlayDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\LatestDropoffOverlayDetail',
+            'Localization' => '\\CommerceFedEx\\FedExPHP\\Structs\\Localization',
+            'LocationContactAndAddress' => '\\CommerceFedEx\\FedExPHP\\Structs\\LocationContactAndAddress',
+            'LocationDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\LocationDetail',
+            'LocationHours' => '\\CommerceFedEx\\FedExPHP\\Structs\\LocationHours',
+            'LocationIdentificationDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\LocationIdentificationDetail',
+            'LocationSortDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\LocationSortDetail',
+            'Notification' => '\\CommerceFedEx\\FedExPHP\\Structs\\Notification',
+            'NotificationParameter' => '\\CommerceFedEx\\FedExPHP\\Structs\\NotificationParameter',
+            'ReservationAvailabilityDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\ReservationAvailabilityDetail',
+            'SearchLocationConstraints' => '\\CommerceFedEx\\FedExPHP\\Structs\\SearchLocationConstraints',
+            'SearchLocationsReply' => '\\CommerceFedEx\\FedExPHP\\Structs\\SearchLocationsReply',
+            'SearchLocationsRequest' => '\\CommerceFedEx\\FedExPHP\\Structs\\SearchLocationsRequest',
+            'ShippingHoliday' => '\\CommerceFedEx\\FedExPHP\\Structs\\ShippingHoliday',
+            'TimeRange' => '\\CommerceFedEx\\FedExPHP\\Structs\\TimeRange',
+            'TransactionDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\TransactionDetail',
+            'UniqueTrackingNumber' => '\\CommerceFedEx\\FedExPHP\\Structs\\UniqueTrackingNumber',
+            'WebAuthenticationDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\WebAuthenticationDetail',
+            'WebAuthenticationCredential' => '\\CommerceFedEx\\FedExPHP\\Structs\\WebAuthenticationCredential',
+            'VersionId' => '\\CommerceFedEx\\FedExPHP\\Structs\\VersionId',
         );
     }
 }

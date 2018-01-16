@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class HoldAtLocationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contact and address of FedEx facility at which shipment is to be held.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
      */
     public $LocationContactAndAddress;
     /**
@@ -40,10 +40,10 @@ class HoldAtLocationDetail extends AbstractStructBase
      * @uses HoldAtLocationDetail::setLocationContactAndAddress()
      * @uses HoldAtLocationDetail::setLocationType()
      * @param string $phoneNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress
      * @param string $locationType
      */
-    public function __construct($phoneNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null, $locationType = null)
+    public function __construct($phoneNumber = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null, $locationType = null)
     {
         $this
             ->setPhoneNumber($phoneNumber)
@@ -61,7 +61,7 @@ class HoldAtLocationDetail extends AbstractStructBase
     /**
      * Set PhoneNumber value
      * @param string $phoneNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HoldAtLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HoldAtLocationDetail
      */
     public function setPhoneNumber($phoneNumber = null)
     {
@@ -74,7 +74,7 @@ class HoldAtLocationDetail extends AbstractStructBase
     }
     /**
      * Get LocationContactAndAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getLocationContactAndAddress()
     {
@@ -82,10 +82,10 @@ class HoldAtLocationDetail extends AbstractStructBase
     }
     /**
      * Set LocationContactAndAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HoldAtLocationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\HoldAtLocationDetail
      */
-    public function setLocationContactAndAddress(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null)
+    public function setLocationContactAndAddress(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null)
     {
         $this->LocationContactAndAddress = $locationContactAndAddress;
         return $this;
@@ -100,17 +100,17 @@ class HoldAtLocationDetail extends AbstractStructBase
     }
     /**
      * Set LocationType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FedExLocationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $locationType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HoldAtLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HoldAtLocationDetail
      */
     public function setLocationType($locationType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::valueIsValid($locationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $locationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FedExLocationType::valueIsValid($locationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $locationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
         }
         $this->LocationType = $locationType;
         return $this;
@@ -121,7 +121,7 @@ class HoldAtLocationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\HoldAtLocationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\HoldAtLocationDetail
      */
     public static function __set_state(array $array)
     {

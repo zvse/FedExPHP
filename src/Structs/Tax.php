@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -28,7 +28,7 @@ class Tax extends AbstractStructBase
      * The Amount
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $Amount;
     /**
@@ -38,9 +38,9 @@ class Tax extends AbstractStructBase
      * @uses Tax::setAmount()
      * @param string $taxType
      * @param string $description
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
      */
-    public function __construct($taxType = null, $description = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
+    public function __construct($taxType = null, $description = null, \CommerceFedEx\FedExPHP\Structs\Money $amount = null)
     {
         $this
             ->setTaxType($taxType)
@@ -57,17 +57,17 @@ class Tax extends AbstractStructBase
     }
     /**
      * Set TaxType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TaxType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TaxType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TaxType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\TaxType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $taxType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Tax
+     * @return \CommerceFedEx\FedExPHP\Structs\Tax
      */
     public function setTaxType($taxType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\TaxType::valueIsValid($taxType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $taxType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TaxType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\TaxType::valueIsValid($taxType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $taxType, implode(', ', \CommerceFedEx\FedExPHP\Enums\TaxType::getValidValues())), __LINE__);
         }
         $this->TaxType = $taxType;
         return $this;
@@ -83,7 +83,7 @@ class Tax extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Tax
+     * @return \CommerceFedEx\FedExPHP\Structs\Tax
      */
     public function setDescription($description = null)
     {
@@ -96,7 +96,7 @@ class Tax extends AbstractStructBase
     }
     /**
      * Get Amount value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getAmount()
     {
@@ -104,10 +104,10 @@ class Tax extends AbstractStructBase
     }
     /**
      * Set Amount value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Tax
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
+     * @return \CommerceFedEx\FedExPHP\Structs\Tax
      */
-    public function setAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
+    public function setAmount(\CommerceFedEx\FedExPHP\Structs\Money $amount = null)
     {
         $this->Amount = $amount;
         return $this;
@@ -118,7 +118,7 @@ class Tax extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Tax
+     * @return \CommerceFedEx\FedExPHP\Structs\Tax
      */
     public static function __set_state(array $array)
     {

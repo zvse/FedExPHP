@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -121,7 +121,7 @@ class Address extends AbstractStructBase
      * Set StreetLines value
      * @throws \InvalidArgumentException
      * @param string[] $streetLines
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public function setStreetLines(array $streetLines = array())
     {
@@ -138,7 +138,7 @@ class Address extends AbstractStructBase
      * Add item to StreetLines value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public function addToStreetLines($item)
     {
@@ -160,7 +160,7 @@ class Address extends AbstractStructBase
     /**
      * Set City value
      * @param string $city
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public function setCity($city = null)
     {
@@ -182,7 +182,7 @@ class Address extends AbstractStructBase
     /**
      * Set StateOrProvinceCode value
      * @param string $stateOrProvinceCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public function setStateOrProvinceCode($stateOrProvinceCode = null)
     {
@@ -204,7 +204,7 @@ class Address extends AbstractStructBase
     /**
      * Set PostalCode value
      * @param string $postalCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public function setPostalCode($postalCode = null)
     {
@@ -226,7 +226,7 @@ class Address extends AbstractStructBase
     /**
      * Set UrbanizationCode value
      * @param string $urbanizationCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public function setUrbanizationCode($urbanizationCode = null)
     {
@@ -248,7 +248,7 @@ class Address extends AbstractStructBase
     /**
      * Set CountryCode value
      * @param string $countryCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public function setCountryCode($countryCode = null)
     {
@@ -270,7 +270,7 @@ class Address extends AbstractStructBase
     /**
      * Set CountryName value
      * @param string $countryName
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public function setCountryName($countryName = null)
     {
@@ -292,7 +292,7 @@ class Address extends AbstractStructBase
     /**
      * Set Residential value
      * @param bool $residential
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public function setResidential($residential = null)
     {
@@ -305,7 +305,7 @@ class Address extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
      */
     public static function __set_state(array $array)
     {

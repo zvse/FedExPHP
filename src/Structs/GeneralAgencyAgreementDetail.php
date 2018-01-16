@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,22 +16,22 @@ class GeneralAgencyAgreementDetail extends AbstractStructBase
      * The Format
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
      * Constructor method for GeneralAgencyAgreementDetail
      * @uses GeneralAgencyAgreementDetail::setFormat()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this
             ->setFormat($format);
     }
     /**
      * Get Format value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
      */
     public function getFormat()
     {
@@ -39,10 +39,10 @@ class GeneralAgencyAgreementDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\GeneralAgencyAgreementDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \CommerceFedEx\FedExPHP\Structs\GeneralAgencyAgreementDetail
      */
-    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
@@ -53,7 +53,7 @@ class GeneralAgencyAgreementDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\GeneralAgencyAgreementDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\GeneralAgencyAgreementDetail
      */
     public static function __set_state(array $array)
     {

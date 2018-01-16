@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -25,7 +25,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Used for validating FedEx Freight account number and (optionally) identifying third party payment on the bill of lading.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
+     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
      */
     public $FedExFreightBillingContactAndAddress;
     /**
@@ -33,7 +33,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Used in connection with "Send Bill To" (SBT) identification of customer's account used for billing.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
+     * @var \CommerceFedEx\FedExPHP\Structs\Party
      */
     public $AlternateBilling;
     /**
@@ -42,7 +42,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * - documentation: Identification values to be printed during creation of a Freight bill of lading.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference[]
+     * @var \CommerceFedEx\FedExPHP\Structs\PrintedReference[]
      */
     public $PrintedReferences;
     /**
@@ -66,7 +66,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the declared value for the shipment
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     * @var \CommerceFedEx\FedExPHP\Structs\Money
      */
     public $DeclaredValuePerUnit;
     /**
@@ -81,7 +81,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * The LiabilityCoverageDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\LiabilityCoverageDetail
      */
     public $LiabilityCoverageDetail;
     /**
@@ -114,7 +114,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total weight of pallets used in shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public $PalletWeight;
     /**
@@ -122,7 +122,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Overall shipment dimensions.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
+     * @var \CommerceFedEx\FedExPHP\Structs\Dimensions
      */
     public $ShipmentDimensions;
     /**
@@ -139,7 +139,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * - documentation: Specifies which party will pay surcharges for any special services which support split billing.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment[]
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment[]
      */
     public $SpecialServicePayments;
     /**
@@ -163,7 +163,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * - documentation: Details of the commodities in the shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem[]
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem[]
      */
     public $LineItems;
     /**
@@ -188,26 +188,26 @@ class FreightShipmentDetail extends AbstractStructBase
      * @uses FreightShipmentDetail::setHazardousMaterialsOfferor()
      * @uses FreightShipmentDetail::setLineItems()
      * @param string $fedExFreightAccountNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $fedExFreightBillingContactAndAddress
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $alternateBilling
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference[] $printedReferences
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $fedExFreightBillingContactAndAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $alternateBilling
+     * @param \CommerceFedEx\FedExPHP\Structs\PrintedReference[] $printedReferences
      * @param string $role
      * @param string $collectTermsType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $declaredValuePerUnit
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $declaredValuePerUnit
      * @param string $declaredValueUnits
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail
      * @param string[] $coupons
      * @param int $totalHandlingUnits
      * @param float $clientDiscountPercent
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $palletWeight
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $shipmentDimensions
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $palletWeight
+     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $shipmentDimensions
      * @param string $comment
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment[] $specialServicePayments
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment[] $specialServicePayments
      * @param string $hazardousMaterialsEmergencyContactNumber
      * @param string $hazardousMaterialsOfferor
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem[] $lineItems
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem[] $lineItems
      */
-    public function __construct($fedExFreightAccountNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $fedExFreightBillingContactAndAddress = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $alternateBilling = null, array $printedReferences = array(), $role = null, $collectTermsType = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $declaredValuePerUnit = null, $declaredValueUnits = null, \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail = null, array $coupons = array(), $totalHandlingUnits = null, $clientDiscountPercent = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $palletWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $shipmentDimensions = null, $comment = null, array $specialServicePayments = array(), $hazardousMaterialsEmergencyContactNumber = null, $hazardousMaterialsOfferor = null, array $lineItems = array())
+    public function __construct($fedExFreightAccountNumber = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $fedExFreightBillingContactAndAddress = null, \CommerceFedEx\FedExPHP\Structs\Party $alternateBilling = null, array $printedReferences = array(), $role = null, $collectTermsType = null, \CommerceFedEx\FedExPHP\Structs\Money $declaredValuePerUnit = null, $declaredValueUnits = null, \CommerceFedEx\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail = null, array $coupons = array(), $totalHandlingUnits = null, $clientDiscountPercent = null, \CommerceFedEx\FedExPHP\Structs\Weight $palletWeight = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $shipmentDimensions = null, $comment = null, array $specialServicePayments = array(), $hazardousMaterialsEmergencyContactNumber = null, $hazardousMaterialsOfferor = null, array $lineItems = array())
     {
         $this
             ->setFedExFreightAccountNumber($fedExFreightAccountNumber)
@@ -241,7 +241,7 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set FedExFreightAccountNumber value
      * @param string $fedExFreightAccountNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setFedExFreightAccountNumber($fedExFreightAccountNumber = null)
     {
@@ -254,7 +254,7 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Get FedExFreightBillingContactAndAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getFedExFreightBillingContactAndAddress()
     {
@@ -262,17 +262,17 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Set FedExFreightBillingContactAndAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $fedExFreightBillingContactAndAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $fedExFreightBillingContactAndAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
-    public function setFedExFreightBillingContactAndAddress(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $fedExFreightBillingContactAndAddress = null)
+    public function setFedExFreightBillingContactAndAddress(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $fedExFreightBillingContactAndAddress = null)
     {
         $this->FedExFreightBillingContactAndAddress = $fedExFreightBillingContactAndAddress;
         return $this;
     }
     /**
      * Get AlternateBilling value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
      */
     public function getAlternateBilling()
     {
@@ -280,17 +280,17 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Set AlternateBilling value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $alternateBilling
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $alternateBilling
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
-    public function setAlternateBilling(\NicholasCreativeMedia\FedExPHP\Structs\Party $alternateBilling = null)
+    public function setAlternateBilling(\CommerceFedEx\FedExPHP\Structs\Party $alternateBilling = null)
     {
         $this->AlternateBilling = $alternateBilling;
         return $this;
     }
     /**
      * Get PrintedReferences value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PrintedReference[]|null
      */
     public function getPrintedReferences()
     {
@@ -299,15 +299,15 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set PrintedReferences value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference[] $printedReferences
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PrintedReference[] $printedReferences
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setPrintedReferences(array $printedReferences = array())
     {
         foreach ($printedReferences as $freightShipmentDetailPrintedReferencesItem) {
             // validation for constraint: itemType
-            if (!$freightShipmentDetailPrintedReferencesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference) {
-                throw new \InvalidArgumentException(sprintf('The PrintedReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference, "%s" given', is_object($freightShipmentDetailPrintedReferencesItem) ? get_class($freightShipmentDetailPrintedReferencesItem) : gettype($freightShipmentDetailPrintedReferencesItem)), __LINE__);
+            if (!$freightShipmentDetailPrintedReferencesItem instanceof \CommerceFedEx\FedExPHP\Structs\PrintedReference) {
+                throw new \InvalidArgumentException(sprintf('The PrintedReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\PrintedReference, "%s" given', is_object($freightShipmentDetailPrintedReferencesItem) ? get_class($freightShipmentDetailPrintedReferencesItem) : gettype($freightShipmentDetailPrintedReferencesItem)), __LINE__);
             }
         }
         $this->PrintedReferences = $printedReferences;
@@ -316,14 +316,14 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Add item to PrintedReferences value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PrintedReference $item
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
-    public function addToPrintedReferences(\NicholasCreativeMedia\FedExPHP\Structs\PrintedReference $item)
+    public function addToPrintedReferences(\CommerceFedEx\FedExPHP\Structs\PrintedReference $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference) {
-            throw new \InvalidArgumentException(sprintf('The PrintedReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\PrintedReference) {
+            throw new \InvalidArgumentException(sprintf('The PrintedReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\PrintedReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->PrintedReferences[] = $item;
         return $this;
@@ -338,17 +338,17 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Role value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $role
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setRole($role = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid($role)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid($role)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::getValidValues())), __LINE__);
         }
         $this->Role = $role;
         return $this;
@@ -363,24 +363,24 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Set CollectTermsType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightCollectTermsType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightCollectTermsType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightCollectTermsType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightCollectTermsType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $collectTermsType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setCollectTermsType($collectTermsType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightCollectTermsType::valueIsValid($collectTermsType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $collectTermsType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightCollectTermsType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FreightCollectTermsType::valueIsValid($collectTermsType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $collectTermsType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightCollectTermsType::getValidValues())), __LINE__);
         }
         $this->CollectTermsType = $collectTermsType;
         return $this;
     }
     /**
      * Get DeclaredValuePerUnit value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
      */
     public function getDeclaredValuePerUnit()
     {
@@ -388,10 +388,10 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Set DeclaredValuePerUnit value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $declaredValuePerUnit
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Money $declaredValuePerUnit
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
-    public function setDeclaredValuePerUnit(\NicholasCreativeMedia\FedExPHP\Structs\Money $declaredValuePerUnit = null)
+    public function setDeclaredValuePerUnit(\CommerceFedEx\FedExPHP\Structs\Money $declaredValuePerUnit = null)
     {
         $this->DeclaredValuePerUnit = $declaredValuePerUnit;
         return $this;
@@ -407,7 +407,7 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set DeclaredValueUnits value
      * @param string $declaredValueUnits
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setDeclaredValueUnits($declaredValueUnits = null)
     {
@@ -420,7 +420,7 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Get LiabilityCoverageDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LiabilityCoverageDetail|null
      */
     public function getLiabilityCoverageDetail()
     {
@@ -428,10 +428,10 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Set LiabilityCoverageDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
-    public function setLiabilityCoverageDetail(\NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail = null)
+    public function setLiabilityCoverageDetail(\CommerceFedEx\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail = null)
     {
         $this->LiabilityCoverageDetail = $liabilityCoverageDetail;
         return $this;
@@ -448,7 +448,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * Set Coupons value
      * @throws \InvalidArgumentException
      * @param string[] $coupons
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setCoupons(array $coupons = array())
     {
@@ -465,7 +465,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * Add item to Coupons value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function addToCoupons($item)
     {
@@ -487,7 +487,7 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set TotalHandlingUnits value
      * @param int $totalHandlingUnits
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setTotalHandlingUnits($totalHandlingUnits = null)
     {
@@ -509,7 +509,7 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set ClientDiscountPercent value
      * @param float $clientDiscountPercent
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setClientDiscountPercent($clientDiscountPercent = null)
     {
@@ -518,7 +518,7 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Get PalletWeight value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
      */
     public function getPalletWeight()
     {
@@ -526,17 +526,17 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Set PalletWeight value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $palletWeight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $palletWeight
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
-    public function setPalletWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $palletWeight = null)
+    public function setPalletWeight(\CommerceFedEx\FedExPHP\Structs\Weight $palletWeight = null)
     {
         $this->PalletWeight = $palletWeight;
         return $this;
     }
     /**
      * Get ShipmentDimensions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions|null
      */
     public function getShipmentDimensions()
     {
@@ -544,10 +544,10 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Set ShipmentDimensions value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $shipmentDimensions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $shipmentDimensions
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
-    public function setShipmentDimensions(\NicholasCreativeMedia\FedExPHP\Structs\Dimensions $shipmentDimensions = null)
+    public function setShipmentDimensions(\CommerceFedEx\FedExPHP\Structs\Dimensions $shipmentDimensions = null)
     {
         $this->ShipmentDimensions = $shipmentDimensions;
         return $this;
@@ -563,7 +563,7 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set Comment value
      * @param string $comment
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setComment($comment = null)
     {
@@ -576,7 +576,7 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Get SpecialServicePayments value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment[]|null
      */
     public function getSpecialServicePayments()
     {
@@ -585,15 +585,15 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set SpecialServicePayments value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment[] $specialServicePayments
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment[] $specialServicePayments
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setSpecialServicePayments(array $specialServicePayments = array())
     {
         foreach ($specialServicePayments as $freightShipmentDetailSpecialServicePaymentsItem) {
             // validation for constraint: itemType
-            if (!$freightShipmentDetailSpecialServicePaymentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment) {
-                throw new \InvalidArgumentException(sprintf('The SpecialServicePayments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment, "%s" given', is_object($freightShipmentDetailSpecialServicePaymentsItem) ? get_class($freightShipmentDetailSpecialServicePaymentsItem) : gettype($freightShipmentDetailSpecialServicePaymentsItem)), __LINE__);
+            if (!$freightShipmentDetailSpecialServicePaymentsItem instanceof \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment) {
+                throw new \InvalidArgumentException(sprintf('The SpecialServicePayments property can only contain items of \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment, "%s" given', is_object($freightShipmentDetailSpecialServicePaymentsItem) ? get_class($freightShipmentDetailSpecialServicePaymentsItem) : gettype($freightShipmentDetailSpecialServicePaymentsItem)), __LINE__);
             }
         }
         $this->SpecialServicePayments = $specialServicePayments;
@@ -602,14 +602,14 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Add item to SpecialServicePayments value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment $item
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
-    public function addToSpecialServicePayments(\NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment $item)
+    public function addToSpecialServicePayments(\CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment) {
-            throw new \InvalidArgumentException(sprintf('The SpecialServicePayments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment) {
+            throw new \InvalidArgumentException(sprintf('The SpecialServicePayments property can only contain items of \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->SpecialServicePayments[] = $item;
         return $this;
@@ -625,7 +625,7 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set HazardousMaterialsEmergencyContactNumber value
      * @param string $hazardousMaterialsEmergencyContactNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setHazardousMaterialsEmergencyContactNumber($hazardousMaterialsEmergencyContactNumber = null)
     {
@@ -647,7 +647,7 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set HazardousMaterialsOfferor value
      * @param string $hazardousMaterialsOfferor
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setHazardousMaterialsOfferor($hazardousMaterialsOfferor = null)
     {
@@ -660,7 +660,7 @@ class FreightShipmentDetail extends AbstractStructBase
     }
     /**
      * Get LineItems value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem[]|null
      */
     public function getLineItems()
     {
@@ -669,15 +669,15 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Set LineItems value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem[] $lineItems
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem[] $lineItems
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public function setLineItems(array $lineItems = array())
     {
         foreach ($lineItems as $freightShipmentDetailLineItemsItem) {
             // validation for constraint: itemType
-            if (!$freightShipmentDetailLineItemsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem) {
-                throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem, "%s" given', is_object($freightShipmentDetailLineItemsItem) ? get_class($freightShipmentDetailLineItemsItem) : gettype($freightShipmentDetailLineItemsItem)), __LINE__);
+            if (!$freightShipmentDetailLineItemsItem instanceof \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem) {
+                throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem, "%s" given', is_object($freightShipmentDetailLineItemsItem) ? get_class($freightShipmentDetailLineItemsItem) : gettype($freightShipmentDetailLineItemsItem)), __LINE__);
             }
         }
         $this->LineItems = $lineItems;
@@ -686,14 +686,14 @@ class FreightShipmentDetail extends AbstractStructBase
     /**
      * Add item to LineItems value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem $item
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
-    public function addToLineItems(\NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem $item)
+    public function addToLineItems(\CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem) {
-            throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem) {
+            throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->LineItems[] = $item;
         return $this;
@@ -704,7 +704,7 @@ class FreightShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentDetail
      */
     public static function __set_state(array $array)
     {

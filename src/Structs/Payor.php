@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -14,22 +14,22 @@ class Payor extends AbstractStructBase
      * The ResponsibleParty
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
+     * @var \CommerceFedEx\FedExPHP\Structs\Party
      */
     public $ResponsibleParty;
     /**
      * Constructor method for Payor
      * @uses Payor::setResponsibleParty()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $responsibleParty
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $responsibleParty
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Party $responsibleParty = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\Party $responsibleParty = null)
     {
         $this
             ->setResponsibleParty($responsibleParty);
     }
     /**
      * Get ResponsibleParty value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
      */
     public function getResponsibleParty()
     {
@@ -37,10 +37,10 @@ class Payor extends AbstractStructBase
     }
     /**
      * Set ResponsibleParty value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $responsibleParty
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payor
+     * @param \CommerceFedEx\FedExPHP\Structs\Party $responsibleParty
+     * @return \CommerceFedEx\FedExPHP\Structs\Payor
      */
-    public function setResponsibleParty(\NicholasCreativeMedia\FedExPHP\Structs\Party $responsibleParty = null)
+    public function setResponsibleParty(\CommerceFedEx\FedExPHP\Structs\Party $responsibleParty = null)
     {
         $this->ResponsibleParty = $responsibleParty;
         return $this;
@@ -51,7 +51,7 @@ class Payor extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payor
+     * @return \CommerceFedEx\FedExPHP\Structs\Payor
      */
     public static function __set_state(array $array)
     {

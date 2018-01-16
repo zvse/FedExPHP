@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -14,7 +14,7 @@ class DocTabContentBarcoded extends AbstractStructBase
      * The Specification
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification
+     * @var \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification
      */
     public $Specification;
     /**
@@ -28,10 +28,10 @@ class DocTabContentBarcoded extends AbstractStructBase
      * Constructor method for DocTabContentBarcoded
      * @uses DocTabContentBarcoded::setSpecification()
      * @uses DocTabContentBarcoded::setSymbology()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification $specification
+     * @param \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification $specification
      * @param string $symbology
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification $specification = null, $symbology = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification $specification = null, $symbology = null)
     {
         $this
             ->setSpecification($specification)
@@ -39,7 +39,7 @@ class DocTabContentBarcoded extends AbstractStructBase
     }
     /**
      * Get Specification value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification
      */
     public function getSpecification()
     {
@@ -47,10 +47,10 @@ class DocTabContentBarcoded extends AbstractStructBase
     }
     /**
      * Set Specification value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification $specification
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabContentBarcoded
+     * @param \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification $specification
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabContentBarcoded
      */
-    public function setSpecification(\NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification $specification = null)
+    public function setSpecification(\CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification $specification = null)
     {
         $this->Specification = $specification;
         return $this;
@@ -65,17 +65,17 @@ class DocTabContentBarcoded extends AbstractStructBase
     }
     /**
      * Set Symbology value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BarcodeSymbologyType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BarcodeSymbologyType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\BarcodeSymbologyType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\BarcodeSymbologyType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $symbology
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabContentBarcoded
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabContentBarcoded
      */
     public function setSymbology($symbology = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\BarcodeSymbologyType::valueIsValid($symbology)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $symbology, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\BarcodeSymbologyType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\BarcodeSymbologyType::valueIsValid($symbology)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $symbology, implode(', ', \CommerceFedEx\FedExPHP\Enums\BarcodeSymbologyType::getValidValues())), __LINE__);
         }
         $this->Symbology = $symbology;
         return $this;
@@ -86,7 +86,7 @@ class DocTabContentBarcoded extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabContentBarcoded
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabContentBarcoded
      */
     public static function __set_state(array $array)
     {

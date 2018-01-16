@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -50,7 +50,7 @@ class ReturnEMailDetail extends AbstractStructBase
     /**
      * Set MerchantPhoneNumber value
      * @param string $merchantPhoneNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail
      */
     public function setMerchantPhoneNumber($merchantPhoneNumber = null)
     {
@@ -71,39 +71,39 @@ class ReturnEMailDetail extends AbstractStructBase
     }
     /**
      * Set AllowedSpecialServices value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $allowedSpecialServices
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail
      */
     public function setAllowedSpecialServices(array $allowedSpecialServices = array())
     {
         $invalidValues = array();
         foreach ($allowedSpecialServices as $returnEMailDetailAllowedSpecialServicesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::valueIsValid($returnEMailDetailAllowedSpecialServicesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::valueIsValid($returnEMailDetailAllowedSpecialServicesItem)) {
                 $invalidValues[] = var_export($returnEMailDetailAllowedSpecialServicesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->AllowedSpecialServices = $allowedSpecialServices;
         return $this;
     }
     /**
      * Add item to AllowedSpecialServices value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail
      */
     public function addToAllowedSpecialServices($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ReturnEMailAllowedSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->AllowedSpecialServices[] = $item;
         return $this;
@@ -114,7 +114,7 @@ class ReturnEMailDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail
      */
     public static function __set_state(array $array)
     {

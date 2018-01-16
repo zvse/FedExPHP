@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -40,39 +40,39 @@ class FlatbedTrailerDetail extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FlatbedTrailerOption::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FlatbedTrailerOption::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FlatbedTrailerOption::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FlatbedTrailerOption::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $options
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FlatbedTrailerDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FlatbedTrailerDetail
      */
     public function setOptions(array $options = array())
     {
         $invalidValues = array();
         foreach ($options as $flatbedTrailerDetailOptionsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\FlatbedTrailerOption::valueIsValid($flatbedTrailerDetailOptionsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\FlatbedTrailerOption::valueIsValid($flatbedTrailerDetailOptionsItem)) {
                 $invalidValues[] = var_export($flatbedTrailerDetailOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FlatbedTrailerOption::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\FlatbedTrailerOption::getValidValues())), __LINE__);
         }
         $this->Options = $options;
         return $this;
     }
     /**
      * Add item to Options value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FlatbedTrailerOption::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FlatbedTrailerOption::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FlatbedTrailerOption::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FlatbedTrailerOption::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FlatbedTrailerDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FlatbedTrailerDetail
      */
     public function addToOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FlatbedTrailerOption::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FlatbedTrailerOption::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FlatbedTrailerOption::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\FlatbedTrailerOption::getValidValues())), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
@@ -83,7 +83,7 @@ class FlatbedTrailerDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FlatbedTrailerDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FlatbedTrailerDetail
      */
     public static function __set_state(array $array)
     {

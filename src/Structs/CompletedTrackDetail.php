@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -22,7 +22,7 @@ class CompletedTrackDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
+     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
@@ -63,7 +63,7 @@ class CompletedTrackDetail extends AbstractStructBase
      * - documentation: Contains detailed tracking information for the requested packages(s).
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackDetail[]
      */
     public $TrackDetails;
     /**
@@ -76,12 +76,12 @@ class CompletedTrackDetail extends AbstractStructBase
      * @uses CompletedTrackDetail::setTrackDetailsCount()
      * @uses CompletedTrackDetail::setTrackDetails()
      * @param string $highestSeverity
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
      * @param bool $duplicateWaybill
      * @param bool $moreData
      * @param string $pagingToken
      * @param int $trackDetailsCount
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail[] $trackDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackDetail[] $trackDetails
      */
     public function __construct($highestSeverity = null, array $notifications = array(), $duplicateWaybill = null, $moreData = null, $pagingToken = null, $trackDetailsCount = null, array $trackDetails = array())
     {
@@ -104,24 +104,24 @@ class CompletedTrackDetail extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]|null
      */
     public function getNotifications()
     {
@@ -130,15 +130,15 @@ class CompletedTrackDetail extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $completedTrackDetailNotificationsItem) {
             // validation for constraint: itemType
-            if (!$completedTrackDetailNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($completedTrackDetailNotificationsItem) ? get_class($completedTrackDetailNotificationsItem) : gettype($completedTrackDetailNotificationsItem)), __LINE__);
+            if (!$completedTrackDetailNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($completedTrackDetailNotificationsItem) ? get_class($completedTrackDetailNotificationsItem) : gettype($completedTrackDetailNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -147,14 +147,14 @@ class CompletedTrackDetail extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
-    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
@@ -170,7 +170,7 @@ class CompletedTrackDetail extends AbstractStructBase
     /**
      * Set DuplicateWaybill value
      * @param bool $duplicateWaybill
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
     public function setDuplicateWaybill($duplicateWaybill = null)
     {
@@ -188,7 +188,7 @@ class CompletedTrackDetail extends AbstractStructBase
     /**
      * Set MoreData value
      * @param bool $moreData
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
     public function setMoreData($moreData = null)
     {
@@ -206,7 +206,7 @@ class CompletedTrackDetail extends AbstractStructBase
     /**
      * Set PagingToken value
      * @param string $pagingToken
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
     public function setPagingToken($pagingToken = null)
     {
@@ -228,7 +228,7 @@ class CompletedTrackDetail extends AbstractStructBase
     /**
      * Set TrackDetailsCount value
      * @param int $trackDetailsCount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
     public function setTrackDetailsCount($trackDetailsCount = null)
     {
@@ -241,7 +241,7 @@ class CompletedTrackDetail extends AbstractStructBase
     }
     /**
      * Get TrackDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackDetail[]|null
      */
     public function getTrackDetails()
     {
@@ -250,15 +250,15 @@ class CompletedTrackDetail extends AbstractStructBase
     /**
      * Set TrackDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail[] $trackDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackDetail[] $trackDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
     public function setTrackDetails(array $trackDetails = array())
     {
         foreach ($trackDetails as $completedTrackDetailTrackDetailsItem) {
             // validation for constraint: itemType
-            if (!$completedTrackDetailTrackDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail) {
-                throw new \InvalidArgumentException(sprintf('The TrackDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail, "%s" given', is_object($completedTrackDetailTrackDetailsItem) ? get_class($completedTrackDetailTrackDetailsItem) : gettype($completedTrackDetailTrackDetailsItem)), __LINE__);
+            if (!$completedTrackDetailTrackDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackDetail) {
+                throw new \InvalidArgumentException(sprintf('The TrackDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackDetail, "%s" given', is_object($completedTrackDetailTrackDetailsItem) ? get_class($completedTrackDetailTrackDetailsItem) : gettype($completedTrackDetailTrackDetailsItem)), __LINE__);
             }
         }
         $this->TrackDetails = $trackDetails;
@@ -267,14 +267,14 @@ class CompletedTrackDetail extends AbstractStructBase
     /**
      * Add item to TrackDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
-    public function addToTrackDetails(\NicholasCreativeMedia\FedExPHP\Structs\TrackDetail $item)
+    public function addToTrackDetails(\CommerceFedEx\FedExPHP\Structs\TrackDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail) {
-            throw new \InvalidArgumentException(sprintf('The TrackDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackDetail) {
+            throw new \InvalidArgumentException(sprintf('The TrackDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->TrackDetails[] = $item;
         return $this;
@@ -285,7 +285,7 @@ class CompletedTrackDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTrackDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTrackDetail
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -50,7 +50,7 @@ class TrackInformationNoteDetail extends AbstractStructBase
     /**
      * Set Code value
      * @param string $code
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail
      */
     public function setCode($code = null)
     {
@@ -72,7 +72,7 @@ class TrackInformationNoteDetail extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail
      */
     public function setDescription($description = null)
     {
@@ -89,7 +89,7 @@ class TrackInformationNoteDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackInformationNoteDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackInformationNoteDetail
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -26,7 +26,7 @@ class PackageOperationalDetail extends AbstractStructBase
      * - documentation: Human-readable content for use on a label.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction[]
+     * @var \CommerceFedEx\FedExPHP\Structs\OperationalInstruction[]
      */
     public $OperationalInstructions;
     /**
@@ -34,7 +34,7 @@ class PackageOperationalDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The operational barcodes pertaining to the current package.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes
+     * @var \CommerceFedEx\FedExPHP\Structs\PackageBarcodes
      */
     public $Barcodes;
     /**
@@ -52,11 +52,11 @@ class PackageOperationalDetail extends AbstractStructBase
      * @uses PackageOperationalDetail::setBarcodes()
      * @uses PackageOperationalDetail::setGroundServiceCode()
      * @param string $astraHandlingText
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction[] $operationalInstructions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes $barcodes
+     * @param \CommerceFedEx\FedExPHP\Structs\OperationalInstruction[] $operationalInstructions
+     * @param \CommerceFedEx\FedExPHP\Structs\PackageBarcodes $barcodes
      * @param string $groundServiceCode
      */
-    public function __construct($astraHandlingText = null, array $operationalInstructions = array(), \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes $barcodes = null, $groundServiceCode = null)
+    public function __construct($astraHandlingText = null, array $operationalInstructions = array(), \CommerceFedEx\FedExPHP\Structs\PackageBarcodes $barcodes = null, $groundServiceCode = null)
     {
         $this
             ->setAstraHandlingText($astraHandlingText)
@@ -75,7 +75,7 @@ class PackageOperationalDetail extends AbstractStructBase
     /**
      * Set AstraHandlingText value
      * @param string $astraHandlingText
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail
      */
     public function setAstraHandlingText($astraHandlingText = null)
     {
@@ -88,7 +88,7 @@ class PackageOperationalDetail extends AbstractStructBase
     }
     /**
      * Get OperationalInstructions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\OperationalInstruction[]|null
      */
     public function getOperationalInstructions()
     {
@@ -97,15 +97,15 @@ class PackageOperationalDetail extends AbstractStructBase
     /**
      * Set OperationalInstructions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction[] $operationalInstructions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\OperationalInstruction[] $operationalInstructions
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail
      */
     public function setOperationalInstructions(array $operationalInstructions = array())
     {
         foreach ($operationalInstructions as $packageOperationalDetailOperationalInstructionsItem) {
             // validation for constraint: itemType
-            if (!$packageOperationalDetailOperationalInstructionsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction) {
-                throw new \InvalidArgumentException(sprintf('The OperationalInstructions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction, "%s" given', is_object($packageOperationalDetailOperationalInstructionsItem) ? get_class($packageOperationalDetailOperationalInstructionsItem) : gettype($packageOperationalDetailOperationalInstructionsItem)), __LINE__);
+            if (!$packageOperationalDetailOperationalInstructionsItem instanceof \CommerceFedEx\FedExPHP\Structs\OperationalInstruction) {
+                throw new \InvalidArgumentException(sprintf('The OperationalInstructions property can only contain items of \CommerceFedEx\FedExPHP\Structs\OperationalInstruction, "%s" given', is_object($packageOperationalDetailOperationalInstructionsItem) ? get_class($packageOperationalDetailOperationalInstructionsItem) : gettype($packageOperationalDetailOperationalInstructionsItem)), __LINE__);
             }
         }
         $this->OperationalInstructions = $operationalInstructions;
@@ -114,21 +114,21 @@ class PackageOperationalDetail extends AbstractStructBase
     /**
      * Add item to OperationalInstructions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\OperationalInstruction $item
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail
      */
-    public function addToOperationalInstructions(\NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction $item)
+    public function addToOperationalInstructions(\CommerceFedEx\FedExPHP\Structs\OperationalInstruction $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction) {
-            throw new \InvalidArgumentException(sprintf('The OperationalInstructions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\OperationalInstruction) {
+            throw new \InvalidArgumentException(sprintf('The OperationalInstructions property can only contain items of \CommerceFedEx\FedExPHP\Structs\OperationalInstruction, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->OperationalInstructions[] = $item;
         return $this;
     }
     /**
      * Get Barcodes value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageBarcodes|null
      */
     public function getBarcodes()
     {
@@ -136,10 +136,10 @@ class PackageOperationalDetail extends AbstractStructBase
     }
     /**
      * Set Barcodes value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes $barcodes
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PackageBarcodes $barcodes
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail
      */
-    public function setBarcodes(\NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes $barcodes = null)
+    public function setBarcodes(\CommerceFedEx\FedExPHP\Structs\PackageBarcodes $barcodes = null)
     {
         $this->Barcodes = $barcodes;
         return $this;
@@ -155,7 +155,7 @@ class PackageOperationalDetail extends AbstractStructBase
     /**
      * Set GroundServiceCode value
      * @param string $groundServiceCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail
      */
     public function setGroundServiceCode($groundServiceCode = null)
     {
@@ -172,7 +172,7 @@ class PackageOperationalDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail
      */
     public static function __set_state(array $array)
     {

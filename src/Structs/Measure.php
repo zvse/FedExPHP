@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -48,7 +48,7 @@ class Measure extends AbstractStructBase
     /**
      * Set Quantity value
      * @param float $quantity
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Measure
+     * @return \CommerceFedEx\FedExPHP\Structs\Measure
      */
     public function setQuantity($quantity = null)
     {
@@ -66,7 +66,7 @@ class Measure extends AbstractStructBase
     /**
      * Set Units value
      * @param string $units
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Measure
+     * @return \CommerceFedEx\FedExPHP\Structs\Measure
      */
     public function setUnits($units = null)
     {
@@ -83,7 +83,7 @@ class Measure extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Measure
+     * @return \CommerceFedEx\FedExPHP\Structs\Measure
      */
     public static function __set_state(array $array)
     {

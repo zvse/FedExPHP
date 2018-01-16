@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class NotificationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the email notification details.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\EMailDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\EMailDetail
      */
     public $EmailDetail;
     /**
@@ -31,7 +31,7 @@ class NotificationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the localization for this notification.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Localization
+     * @var \CommerceFedEx\FedExPHP\Structs\Localization
      */
     public $Localization;
     /**
@@ -40,10 +40,10 @@ class NotificationDetail extends AbstractStructBase
      * @uses NotificationDetail::setEmailDetail()
      * @uses NotificationDetail::setLocalization()
      * @param string $notificationType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\EMailDetail $emailDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
+     * @param \CommerceFedEx\FedExPHP\Structs\EMailDetail $emailDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
      */
-    public function __construct($notificationType = null, \NicholasCreativeMedia\FedExPHP\Structs\EMailDetail $emailDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
+    public function __construct($notificationType = null, \CommerceFedEx\FedExPHP\Structs\EMailDetail $emailDetail = null, \CommerceFedEx\FedExPHP\Structs\Localization $localization = null)
     {
         $this
             ->setNotificationType($notificationType)
@@ -60,24 +60,24 @@ class NotificationDetail extends AbstractStructBase
     }
     /**
      * Set NotificationType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $notificationType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NotificationDetail
      */
     public function setNotificationType($notificationType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationType::valueIsValid($notificationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $notificationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NotificationType::valueIsValid($notificationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $notificationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationType::getValidValues())), __LINE__);
         }
         $this->NotificationType = $notificationType;
         return $this;
     }
     /**
      * Get EmailDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\EMailDetail|null
      */
     public function getEmailDetail()
     {
@@ -85,17 +85,17 @@ class NotificationDetail extends AbstractStructBase
     }
     /**
      * Set EmailDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\EMailDetail $emailDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NotificationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\EMailDetail $emailDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NotificationDetail
      */
-    public function setEmailDetail(\NicholasCreativeMedia\FedExPHP\Structs\EMailDetail $emailDetail = null)
+    public function setEmailDetail(\CommerceFedEx\FedExPHP\Structs\EMailDetail $emailDetail = null)
     {
         $this->EmailDetail = $emailDetail;
         return $this;
     }
     /**
      * Get Localization value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Localization|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Localization|null
      */
     public function getLocalization()
     {
@@ -103,10 +103,10 @@ class NotificationDetail extends AbstractStructBase
     }
     /**
      * Set Localization value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NotificationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
+     * @return \CommerceFedEx\FedExPHP\Structs\NotificationDetail
      */
-    public function setLocalization(\NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
+    public function setLocalization(\CommerceFedEx\FedExPHP\Structs\Localization $localization = null)
     {
         $this->Localization = $localization;
         return $this;
@@ -117,7 +117,7 @@ class NotificationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\NotificationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\NotificationDetail
      */
     public static function __set_state(array $array)
     {

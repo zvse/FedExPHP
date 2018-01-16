@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class AdditionalLabelsDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AdditionalLabelsType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AdditionalLabelsType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\AdditionalLabelsType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\AdditionalLabelsType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\AdditionalLabelsType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AdditionalLabelsType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\AdditionalLabelsType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\AdditionalLabelsType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -77,7 +77,7 @@ class AdditionalLabelsDetail extends AbstractStructBase
     /**
      * Set Count value
      * @param int $count
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail
      */
     public function setCount($count = null)
     {
@@ -94,7 +94,7 @@ class AdditionalLabelsDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail
      */
     public static function __set_state(array $array)
     {

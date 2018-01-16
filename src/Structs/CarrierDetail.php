@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -45,7 +45,7 @@ class CarrierDetail extends AbstractStructBase
      * - documentation: Specifies the details about the latest times a drop off can be made at a location most days. These are the normal drop off times.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail[]
      */
     public $NormalLatestDropOffDetails;
     /**
@@ -54,7 +54,7 @@ class CarrierDetail extends AbstractStructBase
      * - documentation: Specifies the details about the exceptional latest times a drop off can be made at a location. These are drop off times that are a variation from the normal drop off times.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail[]
      */
     public $ExceptionalLatestDropOffDetails;
     /**
@@ -63,7 +63,7 @@ class CarrierDetail extends AbstractStructBase
      * - documentation: Specifies the details about the effective latest times drop off can be made at a location on the date requested. These are drop off times that are derived from the normal and exceptional drop off times, depending upon the date
      * requested.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail
      */
     public $EffectiveLatestDropOffDetails;
     /**
@@ -71,7 +71,7 @@ class CarrierDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday[]
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingHoliday[]
      */
     public $ShippingHolidays;
     /**
@@ -88,12 +88,12 @@ class CarrierDetail extends AbstractStructBase
      * @param string $serviceCategory
      * @param string $serviceType
      * @param string $countryRelationship
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail[] $normalLatestDropOffDetails
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail[] $exceptionalLatestDropOffDetails
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail $effectiveLatestDropOffDetails
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday[] $shippingHolidays
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail[] $normalLatestDropOffDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail[] $exceptionalLatestDropOffDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail $effectiveLatestDropOffDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingHoliday[] $shippingHolidays
      */
-    public function __construct($carrier = null, $serviceCategory = null, $serviceType = null, $countryRelationship = null, array $normalLatestDropOffDetails = array(), array $exceptionalLatestDropOffDetails = array(), \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail $effectiveLatestDropOffDetails = null, array $shippingHolidays = array())
+    public function __construct($carrier = null, $serviceCategory = null, $serviceType = null, $countryRelationship = null, array $normalLatestDropOffDetails = array(), array $exceptionalLatestDropOffDetails = array(), \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail $effectiveLatestDropOffDetails = null, array $shippingHolidays = array())
     {
         $this
             ->setCarrier($carrier)
@@ -115,17 +115,17 @@ class CarrierDetail extends AbstractStructBase
     }
     /**
      * Set Carrier value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrier
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
     public function setCarrier($carrier = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrier)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrier, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrier)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrier, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->Carrier = $carrier;
         return $this;
@@ -140,17 +140,17 @@ class CarrierDetail extends AbstractStructBase
     }
     /**
      * Set ServiceCategory value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceCategoryType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceCategoryType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceCategoryType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceCategoryType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $serviceCategory
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
     public function setServiceCategory($serviceCategory = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceCategoryType::valueIsValid($serviceCategory)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceCategory, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceCategoryType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ServiceCategoryType::valueIsValid($serviceCategory)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceCategory, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceCategoryType::getValidValues())), __LINE__);
         }
         $this->ServiceCategory = $serviceCategory;
         return $this;
@@ -165,17 +165,17 @@ class CarrierDetail extends AbstractStructBase
     }
     /**
      * Set ServiceType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $serviceType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
     public function setServiceType($serviceType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid($serviceType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid($serviceType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
         }
         $this->ServiceType = $serviceType;
         return $this;
@@ -190,24 +190,24 @@ class CarrierDetail extends AbstractStructBase
     }
     /**
      * Set CountryRelationship value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CountryRelationshipType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CountryRelationshipType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CountryRelationshipType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CountryRelationshipType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $countryRelationship
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
     public function setCountryRelationship($countryRelationship = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CountryRelationshipType::valueIsValid($countryRelationship)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $countryRelationship, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CountryRelationshipType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CountryRelationshipType::valueIsValid($countryRelationship)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $countryRelationship, implode(', ', \CommerceFedEx\FedExPHP\Enums\CountryRelationshipType::getValidValues())), __LINE__);
         }
         $this->CountryRelationship = $countryRelationship;
         return $this;
     }
     /**
      * Get NormalLatestDropOffDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail[]|null
      */
     public function getNormalLatestDropOffDetails()
     {
@@ -216,15 +216,15 @@ class CarrierDetail extends AbstractStructBase
     /**
      * Set NormalLatestDropOffDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail[] $normalLatestDropOffDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail[] $normalLatestDropOffDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
     public function setNormalLatestDropOffDetails(array $normalLatestDropOffDetails = array())
     {
         foreach ($normalLatestDropOffDetails as $carrierDetailNormalLatestDropOffDetailsItem) {
             // validation for constraint: itemType
-            if (!$carrierDetailNormalLatestDropOffDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail) {
-                throw new \InvalidArgumentException(sprintf('The NormalLatestDropOffDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail, "%s" given', is_object($carrierDetailNormalLatestDropOffDetailsItem) ? get_class($carrierDetailNormalLatestDropOffDetailsItem) : gettype($carrierDetailNormalLatestDropOffDetailsItem)), __LINE__);
+            if (!$carrierDetailNormalLatestDropOffDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail) {
+                throw new \InvalidArgumentException(sprintf('The NormalLatestDropOffDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail, "%s" given', is_object($carrierDetailNormalLatestDropOffDetailsItem) ? get_class($carrierDetailNormalLatestDropOffDetailsItem) : gettype($carrierDetailNormalLatestDropOffDetailsItem)), __LINE__);
             }
         }
         $this->NormalLatestDropOffDetails = $normalLatestDropOffDetails;
@@ -233,21 +233,21 @@ class CarrierDetail extends AbstractStructBase
     /**
      * Add item to NormalLatestDropOffDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
-    public function addToNormalLatestDropOffDetails(\NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail $item)
+    public function addToNormalLatestDropOffDetails(\CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail) {
-            throw new \InvalidArgumentException(sprintf('The NormalLatestDropOffDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail) {
+            throw new \InvalidArgumentException(sprintf('The NormalLatestDropOffDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->NormalLatestDropOffDetails[] = $item;
         return $this;
     }
     /**
      * Get ExceptionalLatestDropOffDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail[]|null
      */
     public function getExceptionalLatestDropOffDetails()
     {
@@ -256,15 +256,15 @@ class CarrierDetail extends AbstractStructBase
     /**
      * Set ExceptionalLatestDropOffDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail[] $exceptionalLatestDropOffDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail[] $exceptionalLatestDropOffDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
     public function setExceptionalLatestDropOffDetails(array $exceptionalLatestDropOffDetails = array())
     {
         foreach ($exceptionalLatestDropOffDetails as $carrierDetailExceptionalLatestDropOffDetailsItem) {
             // validation for constraint: itemType
-            if (!$carrierDetailExceptionalLatestDropOffDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail) {
-                throw new \InvalidArgumentException(sprintf('The ExceptionalLatestDropOffDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail, "%s" given', is_object($carrierDetailExceptionalLatestDropOffDetailsItem) ? get_class($carrierDetailExceptionalLatestDropOffDetailsItem) : gettype($carrierDetailExceptionalLatestDropOffDetailsItem)), __LINE__);
+            if (!$carrierDetailExceptionalLatestDropOffDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail) {
+                throw new \InvalidArgumentException(sprintf('The ExceptionalLatestDropOffDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail, "%s" given', is_object($carrierDetailExceptionalLatestDropOffDetailsItem) ? get_class($carrierDetailExceptionalLatestDropOffDetailsItem) : gettype($carrierDetailExceptionalLatestDropOffDetailsItem)), __LINE__);
             }
         }
         $this->ExceptionalLatestDropOffDetails = $exceptionalLatestDropOffDetails;
@@ -273,21 +273,21 @@ class CarrierDetail extends AbstractStructBase
     /**
      * Add item to ExceptionalLatestDropOffDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
-    public function addToExceptionalLatestDropOffDetails(\NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail $item)
+    public function addToExceptionalLatestDropOffDetails(\CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail) {
-            throw new \InvalidArgumentException(sprintf('The ExceptionalLatestDropOffDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail) {
+            throw new \InvalidArgumentException(sprintf('The ExceptionalLatestDropOffDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ExceptionalLatestDropOffDetails[] = $item;
         return $this;
     }
     /**
      * Get EffectiveLatestDropOffDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail|null
      */
     public function getEffectiveLatestDropOffDetails()
     {
@@ -295,17 +295,17 @@ class CarrierDetail extends AbstractStructBase
     }
     /**
      * Set EffectiveLatestDropOffDetails value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail $effectiveLatestDropOffDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail $effectiveLatestDropOffDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
-    public function setEffectiveLatestDropOffDetails(\NicholasCreativeMedia\FedExPHP\Structs\LatestDropOffDetail $effectiveLatestDropOffDetails = null)
+    public function setEffectiveLatestDropOffDetails(\CommerceFedEx\FedExPHP\Structs\LatestDropOffDetail $effectiveLatestDropOffDetails = null)
     {
         $this->EffectiveLatestDropOffDetails = $effectiveLatestDropOffDetails;
         return $this;
     }
     /**
      * Get ShippingHolidays value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingHoliday[]|null
      */
     public function getShippingHolidays()
     {
@@ -314,15 +314,15 @@ class CarrierDetail extends AbstractStructBase
     /**
      * Set ShippingHolidays value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday[] $shippingHolidays
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingHoliday[] $shippingHolidays
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
     public function setShippingHolidays(array $shippingHolidays = array())
     {
         foreach ($shippingHolidays as $carrierDetailShippingHolidaysItem) {
             // validation for constraint: itemType
-            if (!$carrierDetailShippingHolidaysItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday) {
-                throw new \InvalidArgumentException(sprintf('The ShippingHolidays property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday, "%s" given', is_object($carrierDetailShippingHolidaysItem) ? get_class($carrierDetailShippingHolidaysItem) : gettype($carrierDetailShippingHolidaysItem)), __LINE__);
+            if (!$carrierDetailShippingHolidaysItem instanceof \CommerceFedEx\FedExPHP\Structs\ShippingHoliday) {
+                throw new \InvalidArgumentException(sprintf('The ShippingHolidays property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingHoliday, "%s" given', is_object($carrierDetailShippingHolidaysItem) ? get_class($carrierDetailShippingHolidaysItem) : gettype($carrierDetailShippingHolidaysItem)), __LINE__);
             }
         }
         $this->ShippingHolidays = $shippingHolidays;
@@ -331,14 +331,14 @@ class CarrierDetail extends AbstractStructBase
     /**
      * Add item to ShippingHolidays value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingHoliday $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
-    public function addToShippingHolidays(\NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday $item)
+    public function addToShippingHolidays(\CommerceFedEx\FedExPHP\Structs\ShippingHoliday $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday) {
-            throw new \InvalidArgumentException(sprintf('The ShippingHolidays property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingHoliday, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShippingHoliday) {
+            throw new \InvalidArgumentException(sprintf('The ShippingHolidays property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingHoliday, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ShippingHolidays[] = $item;
         return $this;
@@ -349,7 +349,7 @@ class CarrierDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CarrierDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CarrierDetail
      */
     public static function __set_state(array $array)
     {

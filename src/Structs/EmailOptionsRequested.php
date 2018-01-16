@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -40,39 +40,39 @@ class EmailOptionsRequested extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EmailOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EmailOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EmailOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EmailOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $options
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EmailOptionsRequested
+     * @return \CommerceFedEx\FedExPHP\Structs\EmailOptionsRequested
      */
     public function setOptions(array $options = array())
     {
         $invalidValues = array();
         foreach ($options as $emailOptionsRequestedOptionsItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\EmailOptionType::valueIsValid($emailOptionsRequestedOptionsItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\EmailOptionType::valueIsValid($emailOptionsRequestedOptionsItem)) {
                 $invalidValues[] = var_export($emailOptionsRequestedOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EmailOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\EmailOptionType::getValidValues())), __LINE__);
         }
         $this->Options = $options;
         return $this;
     }
     /**
      * Add item to Options value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EmailOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EmailOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EmailOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EmailOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EmailOptionsRequested
+     * @return \CommerceFedEx\FedExPHP\Structs\EmailOptionsRequested
      */
     public function addToOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\EmailOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EmailOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\EmailOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\EmailOptionType::getValidValues())), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
@@ -83,7 +83,7 @@ class EmailOptionsRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EmailOptionsRequested
+     * @return \CommerceFedEx\FedExPHP\Structs\EmailOptionsRequested
      */
     public static function __set_state(array $array)
     {

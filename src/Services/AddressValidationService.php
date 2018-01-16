@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Services;
+namespace CommerceFedEx\FedExPHP\Services;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -23,12 +23,12 @@ class AddressValidationService extends FedExService
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'AddressValidationService_v4.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\AddressValidationClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\AddressValidationClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('aval',4,0,0);
+        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('aval',4,0,0);
     }
     /**
      * Method to call the operation originally named addressValidation
@@ -36,10 +36,10 @@ class AddressValidationService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest $addressValidationRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest $addressValidationRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply|bool
      */
-    public function addressValidation(\NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest $addressValidationRequest)
+    public function addressValidation(\CommerceFedEx\FedExPHP\Structs\AddressValidationRequest $addressValidationRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->addressValidation($addressValidationRequest));
@@ -52,7 +52,7 @@ class AddressValidationService extends FedExService
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
      */
     public function getResult()
     {

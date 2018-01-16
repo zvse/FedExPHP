@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -31,7 +31,7 @@ class TrackSelectionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The type and value of the package identifier that is to be used to retrieve the tracking information for a package or group of packages.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier
      */
     public $PackageIdentifier;
     /**
@@ -79,7 +79,7 @@ class TrackSelectionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: For tracking by references information either the account number or destination postal code and country must be provided.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $Destination;
     /**
@@ -87,7 +87,7 @@ class TrackSelectionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the details about how to retrieve the subsequent pages when there is more than one page in the TrackReply.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PagingDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\PagingDetail
      */
     public $PagingDetail;
     /**
@@ -113,17 +113,17 @@ class TrackSelectionDetail extends AbstractStructBase
      * @uses TrackSelectionDetail::setCustomerSpecifiedTimeOutValueInMilliseconds()
      * @param string $carrierCode
      * @param string $operatingCompany
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier
      * @param string $trackingNumberUniqueIdentifier
      * @param string $shipDateRangeBegin
      * @param string $shipDateRangeEnd
      * @param string $shipmentAccountNumber
      * @param string $secureSpodAccount
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destination
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PagingDetail $pagingDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $destination
+     * @param \CommerceFedEx\FedExPHP\Structs\PagingDetail $pagingDetail
      * @param int $customerSpecifiedTimeOutValueInMilliseconds
      */
-    public function __construct($carrierCode = null, $operatingCompany = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier = null, $trackingNumberUniqueIdentifier = null, $shipDateRangeBegin = null, $shipDateRangeEnd = null, $shipmentAccountNumber = null, $secureSpodAccount = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $destination = null, \NicholasCreativeMedia\FedExPHP\Structs\PagingDetail $pagingDetail = null, $customerSpecifiedTimeOutValueInMilliseconds = null)
+    public function __construct($carrierCode = null, $operatingCompany = null, \CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier = null, $trackingNumberUniqueIdentifier = null, $shipDateRangeBegin = null, $shipDateRangeEnd = null, $shipmentAccountNumber = null, $secureSpodAccount = null, \CommerceFedEx\FedExPHP\Structs\Address $destination = null, \CommerceFedEx\FedExPHP\Structs\PagingDetail $pagingDetail = null, $customerSpecifiedTimeOutValueInMilliseconds = null)
     {
         $this
             ->setCarrierCode($carrierCode)
@@ -148,17 +148,17 @@ class TrackSelectionDetail extends AbstractStructBase
     }
     /**
      * Set CarrierCode value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrierCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
     public function setCarrierCode($carrierCode = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->CarrierCode = $carrierCode;
         return $this;
@@ -173,24 +173,24 @@ class TrackSelectionDetail extends AbstractStructBase
     }
     /**
      * Set OperatingCompany value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperatingCompanyType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperatingCompanyType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OperatingCompanyType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OperatingCompanyType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $operatingCompany
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
     public function setOperatingCompany($operatingCompany = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\OperatingCompanyType::valueIsValid($operatingCompany)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $operatingCompany, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\OperatingCompanyType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\OperatingCompanyType::valueIsValid($operatingCompany)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $operatingCompany, implode(', ', \CommerceFedEx\FedExPHP\Enums\OperatingCompanyType::getValidValues())), __LINE__);
         }
         $this->OperatingCompany = $operatingCompany;
         return $this;
     }
     /**
      * Get PackageIdentifier value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier|null
      */
     public function getPackageIdentifier()
     {
@@ -198,10 +198,10 @@ class TrackSelectionDetail extends AbstractStructBase
     }
     /**
      * Set PackageIdentifier value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
-    public function setPackageIdentifier(\NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier = null)
+    public function setPackageIdentifier(\CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier = null)
     {
         $this->PackageIdentifier = $packageIdentifier;
         return $this;
@@ -217,7 +217,7 @@ class TrackSelectionDetail extends AbstractStructBase
     /**
      * Set TrackingNumberUniqueIdentifier value
      * @param string $trackingNumberUniqueIdentifier
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
     public function setTrackingNumberUniqueIdentifier($trackingNumberUniqueIdentifier = null)
     {
@@ -239,7 +239,7 @@ class TrackSelectionDetail extends AbstractStructBase
     /**
      * Set ShipDateRangeBegin value
      * @param string $shipDateRangeBegin
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
     public function setShipDateRangeBegin($shipDateRangeBegin = null)
     {
@@ -261,7 +261,7 @@ class TrackSelectionDetail extends AbstractStructBase
     /**
      * Set ShipDateRangeEnd value
      * @param string $shipDateRangeEnd
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
     public function setShipDateRangeEnd($shipDateRangeEnd = null)
     {
@@ -283,7 +283,7 @@ class TrackSelectionDetail extends AbstractStructBase
     /**
      * Set ShipmentAccountNumber value
      * @param string $shipmentAccountNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
     public function setShipmentAccountNumber($shipmentAccountNumber = null)
     {
@@ -305,7 +305,7 @@ class TrackSelectionDetail extends AbstractStructBase
     /**
      * Set SecureSpodAccount value
      * @param string $secureSpodAccount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
     public function setSecureSpodAccount($secureSpodAccount = null)
     {
@@ -318,7 +318,7 @@ class TrackSelectionDetail extends AbstractStructBase
     }
     /**
      * Get Destination value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getDestination()
     {
@@ -326,17 +326,17 @@ class TrackSelectionDetail extends AbstractStructBase
     }
     /**
      * Set Destination value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destination
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $destination
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
-    public function setDestination(\NicholasCreativeMedia\FedExPHP\Structs\Address $destination = null)
+    public function setDestination(\CommerceFedEx\FedExPHP\Structs\Address $destination = null)
     {
         $this->Destination = $destination;
         return $this;
     }
     /**
      * Get PagingDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PagingDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PagingDetail|null
      */
     public function getPagingDetail()
     {
@@ -344,10 +344,10 @@ class TrackSelectionDetail extends AbstractStructBase
     }
     /**
      * Set PagingDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PagingDetail $pagingDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PagingDetail $pagingDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
-    public function setPagingDetail(\NicholasCreativeMedia\FedExPHP\Structs\PagingDetail $pagingDetail = null)
+    public function setPagingDetail(\CommerceFedEx\FedExPHP\Structs\PagingDetail $pagingDetail = null)
     {
         $this->PagingDetail = $pagingDetail;
         return $this;
@@ -363,7 +363,7 @@ class TrackSelectionDetail extends AbstractStructBase
     /**
      * Set CustomerSpecifiedTimeOutValueInMilliseconds value
      * @param int $customerSpecifiedTimeOutValueInMilliseconds
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
     public function setCustomerSpecifiedTimeOutValueInMilliseconds($customerSpecifiedTimeOutValueInMilliseconds = null)
     {
@@ -380,7 +380,7 @@ class TrackSelectionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackSelectionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackSelectionDetail
      */
     public static function __set_state(array $array)
     {

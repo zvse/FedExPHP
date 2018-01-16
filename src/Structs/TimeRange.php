@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -48,7 +48,7 @@ class TimeRange extends AbstractStructBase
     /**
      * Set Begins value
      * @param string $begins
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TimeRange
+     * @return \CommerceFedEx\FedExPHP\Structs\TimeRange
      */
     public function setBegins($begins = null)
     {
@@ -70,7 +70,7 @@ class TimeRange extends AbstractStructBase
     /**
      * Set Ends value
      * @param string $ends
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TimeRange
+     * @return \CommerceFedEx\FedExPHP\Structs\TimeRange
      */
     public function setEnds($ends = null)
     {
@@ -87,7 +87,7 @@ class TimeRange extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TimeRange
+     * @return \CommerceFedEx\FedExPHP\Structs\TimeRange
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -49,17 +49,17 @@ class Volume extends AbstractStructBase
     }
     /**
      * Set Units value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\VolumeUnits::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\VolumeUnits::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\VolumeUnits::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\VolumeUnits::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $units
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Volume
+     * @return \CommerceFedEx\FedExPHP\Structs\Volume
      */
     public function setUnits($units = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\VolumeUnits::valueIsValid($units)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\VolumeUnits::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\VolumeUnits::valueIsValid($units)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \CommerceFedEx\FedExPHP\Enums\VolumeUnits::getValidValues())), __LINE__);
         }
         $this->Units = $units;
         return $this;
@@ -75,7 +75,7 @@ class Volume extends AbstractStructBase
     /**
      * Set Value value
      * @param float $value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Volume
+     * @return \CommerceFedEx\FedExPHP\Structs\Volume
      */
     public function setValue($value = null)
     {
@@ -88,7 +88,7 @@ class Volume extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Volume
+     * @return \CommerceFedEx\FedExPHP\Structs\Volume
      */
     public static function __set_state(array $array)
     {

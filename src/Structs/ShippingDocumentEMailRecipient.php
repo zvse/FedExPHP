@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class ShippingDocumentEMailRecipient extends AbstractStructBase
     }
     /**
      * Set RecipientType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EMailNotificationRecipientType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EMailNotificationRecipientType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EMailNotificationRecipientType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EMailNotificationRecipientType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $recipientType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentEMailRecipient
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailRecipient
      */
     public function setRecipientType($recipientType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\EMailNotificationRecipientType::valueIsValid($recipientType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $recipientType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EMailNotificationRecipientType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\EMailNotificationRecipientType::valueIsValid($recipientType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $recipientType, implode(', ', \CommerceFedEx\FedExPHP\Enums\EMailNotificationRecipientType::getValidValues())), __LINE__);
         }
         $this->RecipientType = $recipientType;
         return $this;
@@ -77,7 +77,7 @@ class ShippingDocumentEMailRecipient extends AbstractStructBase
     /**
      * Set Address value
      * @param string $address
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentEMailRecipient
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailRecipient
      */
     public function setAddress($address = null)
     {
@@ -94,7 +94,7 @@ class ShippingDocumentEMailRecipient extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentEMailRecipient
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailRecipient
      */
     public static function __set_state(array $array)
     {

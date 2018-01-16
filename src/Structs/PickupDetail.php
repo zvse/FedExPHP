@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -80,7 +80,7 @@ class PickupDetail extends AbstractStructBase
     /**
      * Set ReadyDateTime value
      * @param string $readyDateTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupDetail
      */
     public function setReadyDateTime($readyDateTime = null)
     {
@@ -102,7 +102,7 @@ class PickupDetail extends AbstractStructBase
     /**
      * Set LatestPickupDateTime value
      * @param string $latestPickupDateTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupDetail
      */
     public function setLatestPickupDateTime($latestPickupDateTime = null)
     {
@@ -124,7 +124,7 @@ class PickupDetail extends AbstractStructBase
     /**
      * Set CourierInstructions value
      * @param string $courierInstructions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupDetail
      */
     public function setCourierInstructions($courierInstructions = null)
     {
@@ -145,17 +145,17 @@ class PickupDetail extends AbstractStructBase
     }
     /**
      * Set RequestType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $requestType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupDetail
      */
     public function setRequestType($requestType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid($requestType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $requestType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid($requestType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $requestType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
         }
         $this->RequestType = $requestType;
         return $this;
@@ -170,17 +170,17 @@ class PickupDetail extends AbstractStructBase
     }
     /**
      * Set RequestSource value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestSourceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestSourceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestSourceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestSourceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $requestSource
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupDetail
      */
     public function setRequestSource($requestSource = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PickupRequestSourceType::valueIsValid($requestSource)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $requestSource, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestSourceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PickupRequestSourceType::valueIsValid($requestSource)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $requestSource, implode(', ', \CommerceFedEx\FedExPHP\Enums\PickupRequestSourceType::getValidValues())), __LINE__);
         }
         $this->RequestSource = $requestSource;
         return $this;
@@ -191,7 +191,7 @@ class PickupDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupDetail
      */
     public static function __set_state(array $array)
     {

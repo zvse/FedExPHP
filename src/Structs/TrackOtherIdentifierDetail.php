@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -14,7 +14,7 @@ class TrackOtherIdentifierDetail extends AbstractStructBase
      * The PackageIdentifier
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier
      */
     public $PackageIdentifier;
     /**
@@ -36,11 +36,11 @@ class TrackOtherIdentifierDetail extends AbstractStructBase
      * @uses TrackOtherIdentifierDetail::setPackageIdentifier()
      * @uses TrackOtherIdentifierDetail::setTrackingNumberUniqueIdentifier()
      * @uses TrackOtherIdentifierDetail::setCarrierCode()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier
      * @param string $trackingNumberUniqueIdentifier
      * @param string $carrierCode
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier = null, $trackingNumberUniqueIdentifier = null, $carrierCode = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier = null, $trackingNumberUniqueIdentifier = null, $carrierCode = null)
     {
         $this
             ->setPackageIdentifier($packageIdentifier)
@@ -49,7 +49,7 @@ class TrackOtherIdentifierDetail extends AbstractStructBase
     }
     /**
      * Get PackageIdentifier value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier|null
      */
     public function getPackageIdentifier()
     {
@@ -57,10 +57,10 @@ class TrackOtherIdentifierDetail extends AbstractStructBase
     }
     /**
      * Set PackageIdentifier value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail
      */
-    public function setPackageIdentifier(\NicholasCreativeMedia\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier = null)
+    public function setPackageIdentifier(\CommerceFedEx\FedExPHP\Structs\TrackPackageIdentifier $packageIdentifier = null)
     {
         $this->PackageIdentifier = $packageIdentifier;
         return $this;
@@ -76,7 +76,7 @@ class TrackOtherIdentifierDetail extends AbstractStructBase
     /**
      * Set TrackingNumberUniqueIdentifier value
      * @param string $trackingNumberUniqueIdentifier
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail
      */
     public function setTrackingNumberUniqueIdentifier($trackingNumberUniqueIdentifier = null)
     {
@@ -97,17 +97,17 @@ class TrackOtherIdentifierDetail extends AbstractStructBase
     }
     /**
      * Set CarrierCode value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrierCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail
      */
     public function setCarrierCode($carrierCode = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->CarrierCode = $carrierCode;
         return $this;
@@ -118,7 +118,7 @@ class TrackOtherIdentifierDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackOtherIdentifierDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackOtherIdentifierDetail
      */
     public static function __set_state(array $array)
     {

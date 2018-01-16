@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Services;
+namespace CommerceFedEx\FedExPHP\Services;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -23,12 +23,12 @@ class ShipService extends FedExService
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'ShipService_v19.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\ShipClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\ShipClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('ship',19,0,0);
+        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('ship',19,0,0);
     }
     /**
      * Method to call the operation originally named processTag
@@ -36,10 +36,10 @@ class ShipService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ProcessTagRequest $processTagRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProcessTagReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\ProcessTagRequest $processTagRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ProcessTagReply|bool
      */
-    public function processTag(\NicholasCreativeMedia\FedExPHP\Structs\ProcessTagRequest $processTagRequest)
+    public function processTag(\CommerceFedEx\FedExPHP\Structs\ProcessTagRequest $processTagRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->processTag($processTagRequest));
@@ -55,10 +55,10 @@ class ShipService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ProcessShipmentRequest $processShipmentRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProcessShipmentReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\ProcessShipmentRequest $processShipmentRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ProcessShipmentReply|bool
      */
-    public function processShipment(\NicholasCreativeMedia\FedExPHP\Structs\ProcessShipmentRequest $processShipmentRequest)
+    public function processShipment(\CommerceFedEx\FedExPHP\Structs\ProcessShipmentRequest $processShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->processShipment($processShipmentRequest));
@@ -74,10 +74,10 @@ class ShipService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest $deleteTagRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest $deleteTagRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentReply|bool
      */
-    public function deleteTag(\NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest $deleteTagRequest)
+    public function deleteTag(\CommerceFedEx\FedExPHP\Structs\DeleteTagRequest $deleteTagRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->deleteTag($deleteTagRequest));
@@ -93,10 +93,10 @@ class ShipService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest $deleteShipmentRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest $deleteShipmentRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentReply|bool
      */
-    public function deleteShipment(\NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest $deleteShipmentRequest)
+    public function deleteShipment(\CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest $deleteShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->deleteShipment($deleteShipmentRequest));
@@ -112,10 +112,10 @@ class ShipService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidateShipmentRequest $validateShipmentRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidateShipmentRequest $validateShipmentRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentReply|bool
      */
-    public function validateShipment(\NicholasCreativeMedia\FedExPHP\Structs\ValidateShipmentRequest $validateShipmentRequest)
+    public function validateShipment(\CommerceFedEx\FedExPHP\Structs\ValidateShipmentRequest $validateShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->validateShipment($validateShipmentRequest));
@@ -128,7 +128,7 @@ class ShipService extends FedExService
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProcessShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\ProcessTagReply|\NicholasCreativeMedia\FedExPHP\Structs\ShipmentReply
+     * @return \CommerceFedEx\FedExPHP\Structs\ProcessShipmentReply|\CommerceFedEx\FedExPHP\Structs\ProcessTagReply|\CommerceFedEx\FedExPHP\Structs\ShipmentReply
      */
     public function getResult()
     {

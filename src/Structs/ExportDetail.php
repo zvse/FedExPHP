@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -36,7 +36,7 @@ class ExportDetail extends AbstractStructBase
      * The DestinationControlDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail
      */
     public $DestinationControlDetail;
     /**
@@ -48,9 +48,9 @@ class ExportDetail extends AbstractStructBase
      * @param string $b13AFilingOption
      * @param string $exportComplianceStatement
      * @param string $permitNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail $destinationControlDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail $destinationControlDetail
      */
-    public function __construct($b13AFilingOption = null, $exportComplianceStatement = null, $permitNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail $destinationControlDetail = null)
+    public function __construct($b13AFilingOption = null, $exportComplianceStatement = null, $permitNumber = null, \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail $destinationControlDetail = null)
     {
         $this
             ->setB13AFilingOption($b13AFilingOption)
@@ -68,17 +68,17 @@ class ExportDetail extends AbstractStructBase
     }
     /**
      * Set B13AFilingOption value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\B13AFilingOptionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\B13AFilingOptionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\B13AFilingOptionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\B13AFilingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $b13AFilingOption
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExportDetail
      */
     public function setB13AFilingOption($b13AFilingOption = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\B13AFilingOptionType::valueIsValid($b13AFilingOption)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $b13AFilingOption, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\B13AFilingOptionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\B13AFilingOptionType::valueIsValid($b13AFilingOption)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $b13AFilingOption, implode(', ', \CommerceFedEx\FedExPHP\Enums\B13AFilingOptionType::getValidValues())), __LINE__);
         }
         $this->B13AFilingOption = $b13AFilingOption;
         return $this;
@@ -94,7 +94,7 @@ class ExportDetail extends AbstractStructBase
     /**
      * Set ExportComplianceStatement value
      * @param string $exportComplianceStatement
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExportDetail
      */
     public function setExportComplianceStatement($exportComplianceStatement = null)
     {
@@ -116,7 +116,7 @@ class ExportDetail extends AbstractStructBase
     /**
      * Set PermitNumber value
      * @param string $permitNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExportDetail
      */
     public function setPermitNumber($permitNumber = null)
     {
@@ -129,7 +129,7 @@ class ExportDetail extends AbstractStructBase
     }
     /**
      * Get DestinationControlDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail|null
      */
     public function getDestinationControlDetail()
     {
@@ -137,10 +137,10 @@ class ExportDetail extends AbstractStructBase
     }
     /**
      * Set DestinationControlDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail $destinationControlDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail $destinationControlDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExportDetail
      */
-    public function setDestinationControlDetail(\NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail $destinationControlDetail = null)
+    public function setDestinationControlDetail(\CommerceFedEx\FedExPHP\Structs\DestinationControlDetail $destinationControlDetail = null)
     {
         $this->DestinationControlDetail = $destinationControlDetail;
         return $this;
@@ -151,7 +151,7 @@ class ExportDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExportDetail
      */
     public static function __set_state(array $array)
     {

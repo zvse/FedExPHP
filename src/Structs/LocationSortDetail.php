@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -51,17 +51,17 @@ class LocationSortDetail extends AbstractStructBase
     }
     /**
      * Set Criterion value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationSortCriteriaType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationSortCriteriaType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationSortCriteriaType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationSortCriteriaType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $criterion
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationSortDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationSortDetail
      */
     public function setCriterion($criterion = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LocationSortCriteriaType::valueIsValid($criterion)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $criterion, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LocationSortCriteriaType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LocationSortCriteriaType::valueIsValid($criterion)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $criterion, implode(', ', \CommerceFedEx\FedExPHP\Enums\LocationSortCriteriaType::getValidValues())), __LINE__);
         }
         $this->Criterion = $criterion;
         return $this;
@@ -76,17 +76,17 @@ class LocationSortDetail extends AbstractStructBase
     }
     /**
      * Set Order value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationSortOrderType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationSortOrderType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationSortOrderType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationSortOrderType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $order
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationSortDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationSortDetail
      */
     public function setOrder($order = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LocationSortOrderType::valueIsValid($order)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $order, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LocationSortOrderType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LocationSortOrderType::valueIsValid($order)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $order, implode(', ', \CommerceFedEx\FedExPHP\Enums\LocationSortOrderType::getValidValues())), __LINE__);
         }
         $this->Order = $order;
         return $this;
@@ -97,7 +97,7 @@ class LocationSortDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationSortDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationSortDetail
      */
     public static function __set_state(array $array)
     {

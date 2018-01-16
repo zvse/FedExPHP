@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -40,39 +40,39 @@ class RecommendedDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set Types value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RecommendedDocumentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RecommendedDocumentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RecommendedDocumentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RecommendedDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $types
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecommendedDocumentSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\RecommendedDocumentSpecification
      */
     public function setTypes(array $types = array())
     {
         $invalidValues = array();
         foreach ($types as $recommendedDocumentSpecificationTypesItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\RecommendedDocumentType::valueIsValid($recommendedDocumentSpecificationTypesItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\RecommendedDocumentType::valueIsValid($recommendedDocumentSpecificationTypesItem)) {
                 $invalidValues[] = var_export($recommendedDocumentSpecificationTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RecommendedDocumentType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RecommendedDocumentType::getValidValues())), __LINE__);
         }
         $this->Types = $types;
         return $this;
     }
     /**
      * Add item to Types value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RecommendedDocumentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RecommendedDocumentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RecommendedDocumentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\RecommendedDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecommendedDocumentSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\RecommendedDocumentSpecification
      */
     public function addToTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\RecommendedDocumentType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RecommendedDocumentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\RecommendedDocumentType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RecommendedDocumentType::getValidValues())), __LINE__);
         }
         $this->Types[] = $item;
         return $this;
@@ -83,7 +83,7 @@ class RecommendedDocumentSpecification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecommendedDocumentSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\RecommendedDocumentSpecification
      */
     public static function __set_state(array $array)
     {

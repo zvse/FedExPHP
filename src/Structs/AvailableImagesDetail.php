@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -47,17 +47,17 @@ class AvailableImagesDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AvailableImageType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AvailableImageType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\AvailableImageType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\AvailableImageType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\AvailableImageType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AvailableImageType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\AvailableImageType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\AvailableImageType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -72,17 +72,17 @@ class AvailableImagesDetail extends AbstractStructBase
     }
     /**
      * Set Size value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageSizeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageSizeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ImageSizeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ImageSizeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $size
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail
      */
     public function setSize($size = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ImageSizeType::valueIsValid($size)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $size, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ImageSizeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ImageSizeType::valueIsValid($size)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $size, implode(', ', \CommerceFedEx\FedExPHP\Enums\ImageSizeType::getValidValues())), __LINE__);
         }
         $this->Size = $size;
         return $this;
@@ -93,7 +93,7 @@ class AvailableImagesDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AvailableImagesDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AvailableImagesDetail
      */
     public static function __set_state(array $array)
     {

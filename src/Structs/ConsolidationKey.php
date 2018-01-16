@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -62,17 +62,17 @@ class ConsolidationKey extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey
+     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationKey
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -88,7 +88,7 @@ class ConsolidationKey extends AbstractStructBase
     /**
      * Set Index value
      * @param string $index
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey
+     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationKey
      */
     public function setIndex($index = null)
     {
@@ -110,7 +110,7 @@ class ConsolidationKey extends AbstractStructBase
     /**
      * Set Date value
      * @param string $date
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey
+     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationKey
      */
     public function setDate($date = null)
     {
@@ -127,7 +127,7 @@ class ConsolidationKey extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey
+     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationKey
      */
     public static function __set_state(array $array)
     {

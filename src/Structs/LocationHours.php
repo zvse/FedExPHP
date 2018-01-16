@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -31,7 +31,7 @@ class LocationHours extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TimeRange[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TimeRange[]
      */
     public $Hours;
     /**
@@ -41,7 +41,7 @@ class LocationHours extends AbstractStructBase
      * @uses LocationHours::setHours()
      * @param string $dayofWeek
      * @param string $operationalHours
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TimeRange[] $hours
+     * @param \CommerceFedEx\FedExPHP\Structs\TimeRange[] $hours
      */
     public function __construct($dayofWeek = null, $operationalHours = null, array $hours = array())
     {
@@ -60,17 +60,17 @@ class LocationHours extends AbstractStructBase
     }
     /**
      * Set DayofWeek value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $dayofWeek
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationHours
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationHours
      */
     public function setDayofWeek($dayofWeek = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($dayofWeek)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dayofWeek, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($dayofWeek)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dayofWeek, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->DayofWeek = $dayofWeek;
         return $this;
@@ -85,24 +85,24 @@ class LocationHours extends AbstractStructBase
     }
     /**
      * Set OperationalHours value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperationalHoursType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperationalHoursType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OperationalHoursType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\OperationalHoursType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $operationalHours
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationHours
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationHours
      */
     public function setOperationalHours($operationalHours = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\OperationalHoursType::valueIsValid($operationalHours)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $operationalHours, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\OperationalHoursType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\OperationalHoursType::valueIsValid($operationalHours)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $operationalHours, implode(', ', \CommerceFedEx\FedExPHP\Enums\OperationalHoursType::getValidValues())), __LINE__);
         }
         $this->OperationalHours = $operationalHours;
         return $this;
     }
     /**
      * Get Hours value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TimeRange[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TimeRange[]|null
      */
     public function getHours()
     {
@@ -111,15 +111,15 @@ class LocationHours extends AbstractStructBase
     /**
      * Set Hours value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TimeRange[] $hours
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationHours
+     * @param \CommerceFedEx\FedExPHP\Structs\TimeRange[] $hours
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationHours
      */
     public function setHours(array $hours = array())
     {
         foreach ($hours as $locationHoursHoursItem) {
             // validation for constraint: itemType
-            if (!$locationHoursHoursItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TimeRange) {
-                throw new \InvalidArgumentException(sprintf('The Hours property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TimeRange, "%s" given', is_object($locationHoursHoursItem) ? get_class($locationHoursHoursItem) : gettype($locationHoursHoursItem)), __LINE__);
+            if (!$locationHoursHoursItem instanceof \CommerceFedEx\FedExPHP\Structs\TimeRange) {
+                throw new \InvalidArgumentException(sprintf('The Hours property can only contain items of \CommerceFedEx\FedExPHP\Structs\TimeRange, "%s" given', is_object($locationHoursHoursItem) ? get_class($locationHoursHoursItem) : gettype($locationHoursHoursItem)), __LINE__);
             }
         }
         $this->Hours = $hours;
@@ -128,14 +128,14 @@ class LocationHours extends AbstractStructBase
     /**
      * Add item to Hours value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TimeRange $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationHours
+     * @param \CommerceFedEx\FedExPHP\Structs\TimeRange $item
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationHours
      */
-    public function addToHours(\NicholasCreativeMedia\FedExPHP\Structs\TimeRange $item)
+    public function addToHours(\CommerceFedEx\FedExPHP\Structs\TimeRange $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TimeRange) {
-            throw new \InvalidArgumentException(sprintf('The Hours property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TimeRange, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TimeRange) {
+            throw new \InvalidArgumentException(sprintf('The Hours property can only contain items of \CommerceFedEx\FedExPHP\Structs\TimeRange, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Hours[] = $item;
         return $this;
@@ -146,7 +146,7 @@ class LocationHours extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationHours
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationHours
      */
     public static function __set_state(array $array)
     {

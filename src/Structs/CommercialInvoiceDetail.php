@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,7 +16,7 @@ class CommercialInvoiceDetail extends AbstractStructBase
      * The Format
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
@@ -25,17 +25,17 @@ class CommercialInvoiceDetail extends AbstractStructBase
      * - documentation: Specifies the usage and identification of a customer supplied image to be used on this document.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]
      */
     public $CustomerImageUsages;
     /**
      * Constructor method for CommercialInvoiceDetail
      * @uses CommercialInvoiceDetail::setFormat()
      * @uses CommercialInvoiceDetail::setCustomerImageUsages()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null, array $customerImageUsages = array())
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null, array $customerImageUsages = array())
     {
         $this
             ->setFormat($format)
@@ -43,7 +43,7 @@ class CommercialInvoiceDetail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -51,17 +51,17 @@ class CommercialInvoiceDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoiceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoiceDetail
      */
-    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
     }
     /**
      * Get CustomerImageUsages value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]|null
      */
     public function getCustomerImageUsages()
     {
@@ -70,15 +70,15 @@ class CommercialInvoiceDetail extends AbstractStructBase
     /**
      * Set CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoiceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoiceDetail
      */
     public function setCustomerImageUsages(array $customerImageUsages = array())
     {
         foreach ($customerImageUsages as $commercialInvoiceDetailCustomerImageUsagesItem) {
             // validation for constraint: itemType
-            if (!$commercialInvoiceDetailCustomerImageUsagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
-                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($commercialInvoiceDetailCustomerImageUsagesItem) ? get_class($commercialInvoiceDetailCustomerImageUsagesItem) : gettype($commercialInvoiceDetailCustomerImageUsagesItem)), __LINE__);
+            if (!$commercialInvoiceDetailCustomerImageUsagesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
+                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($commercialInvoiceDetailCustomerImageUsagesItem) ? get_class($commercialInvoiceDetailCustomerImageUsagesItem) : gettype($commercialInvoiceDetailCustomerImageUsagesItem)), __LINE__);
             }
         }
         $this->CustomerImageUsages = $customerImageUsages;
@@ -87,14 +87,14 @@ class CommercialInvoiceDetail extends AbstractStructBase
     /**
      * Add item to CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoiceDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoiceDetail
      */
-    public function addToCustomerImageUsages(\NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item)
+    public function addToCustomerImageUsages(\CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
-            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
+            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerImageUsages[] = $item;
         return $this;
@@ -105,7 +105,7 @@ class CommercialInvoiceDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommercialInvoiceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CommercialInvoiceDetail
      */
     public static function __set_state(array $array)
     {

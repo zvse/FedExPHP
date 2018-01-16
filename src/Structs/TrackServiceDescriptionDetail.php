@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -58,17 +58,17 @@ class TrackServiceDescriptionDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -84,7 +84,7 @@ class TrackServiceDescriptionDetail extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail
      */
     public function setDescription($description = null)
     {
@@ -106,7 +106,7 @@ class TrackServiceDescriptionDetail extends AbstractStructBase
     /**
      * Set ShortDescription value
      * @param string $shortDescription
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail
      */
     public function setShortDescription($shortDescription = null)
     {
@@ -123,7 +123,7 @@ class TrackServiceDescriptionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackServiceDescriptionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackServiceDescriptionDetail
      */
     public static function __set_state(array $array)
     {

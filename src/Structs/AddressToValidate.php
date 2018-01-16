@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -22,14 +22,14 @@ class AddressToValidate extends AbstractStructBase
      * The Contact
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Contact
+     * @var \CommerceFedEx\FedExPHP\Structs\Contact
      */
     public $Contact;
     /**
      * The Address
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $Address;
     /**
@@ -38,10 +38,10 @@ class AddressToValidate extends AbstractStructBase
      * @uses AddressToValidate::setContact()
      * @uses AddressToValidate::setAddress()
      * @param string $clientReferenceId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $contact
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $contact
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
      */
-    public function __construct($clientReferenceId = null, \NicholasCreativeMedia\FedExPHP\Structs\Contact $contact = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $address = null)
+    public function __construct($clientReferenceId = null, \CommerceFedEx\FedExPHP\Structs\Contact $contact = null, \CommerceFedEx\FedExPHP\Structs\Address $address = null)
     {
         $this
             ->setClientReferenceId($clientReferenceId)
@@ -59,7 +59,7 @@ class AddressToValidate extends AbstractStructBase
     /**
      * Set ClientReferenceId value
      * @param string $clientReferenceId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToValidate
      */
     public function setClientReferenceId($clientReferenceId = null)
     {
@@ -72,7 +72,7 @@ class AddressToValidate extends AbstractStructBase
     }
     /**
      * Get Contact value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Contact|null
      */
     public function getContact()
     {
@@ -80,17 +80,17 @@ class AddressToValidate extends AbstractStructBase
     }
     /**
      * Set Contact value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $contact
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate
+     * @param \CommerceFedEx\FedExPHP\Structs\Contact $contact
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToValidate
      */
-    public function setContact(\NicholasCreativeMedia\FedExPHP\Structs\Contact $contact = null)
+    public function setContact(\CommerceFedEx\FedExPHP\Structs\Contact $contact = null)
     {
         $this->Contact = $contact;
         return $this;
     }
     /**
      * Get Address value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getAddress()
     {
@@ -98,10 +98,10 @@ class AddressToValidate extends AbstractStructBase
     }
     /**
      * Set Address value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToValidate
      */
-    public function setAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $address = null)
+    public function setAddress(\CommerceFedEx\FedExPHP\Structs\Address $address = null)
     {
         $this->Address = $address;
         return $this;
@@ -112,7 +112,7 @@ class AddressToValidate extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToValidate
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToValidate
      */
     public static function __set_state(array $array)
     {

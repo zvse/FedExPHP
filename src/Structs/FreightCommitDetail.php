@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class FreightCommitDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Information about the origin Freight Service Center.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public $OriginDetail;
     /**
@@ -25,7 +25,7 @@ class FreightCommitDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Information about the destination Freight Service Center.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public $DestinationDetail;
     /**
@@ -33,7 +33,7 @@ class FreightCommitDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The distance between the origin and destination FreightService Centers
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Distance
+     * @var \CommerceFedEx\FedExPHP\Structs\Distance
      */
     public $TotalDistance;
     /**
@@ -41,11 +41,11 @@ class FreightCommitDetail extends AbstractStructBase
      * @uses FreightCommitDetail::setOriginDetail()
      * @uses FreightCommitDetail::setDestinationDetail()
      * @uses FreightCommitDetail::setTotalDistance()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $originDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $destinationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $totalDistance
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $originDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $destinationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Distance $totalDistance
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $originDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $destinationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\Distance $totalDistance = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $originDetail = null, \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $destinationDetail = null, \CommerceFedEx\FedExPHP\Structs\Distance $totalDistance = null)
     {
         $this
             ->setOriginDetail($originDetail)
@@ -54,7 +54,7 @@ class FreightCommitDetail extends AbstractStructBase
     }
     /**
      * Get OriginDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail|null
      */
     public function getOriginDetail()
     {
@@ -62,17 +62,17 @@ class FreightCommitDetail extends AbstractStructBase
     }
     /**
      * Set OriginDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $originDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $originDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightCommitDetail
      */
-    public function setOriginDetail(\NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $originDetail = null)
+    public function setOriginDetail(\CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $originDetail = null)
     {
         $this->OriginDetail = $originDetail;
         return $this;
     }
     /**
      * Get DestinationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail|null
      */
     public function getDestinationDetail()
     {
@@ -80,17 +80,17 @@ class FreightCommitDetail extends AbstractStructBase
     }
     /**
      * Set DestinationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $destinationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $destinationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightCommitDetail
      */
-    public function setDestinationDetail(\NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $destinationDetail = null)
+    public function setDestinationDetail(\CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $destinationDetail = null)
     {
         $this->DestinationDetail = $destinationDetail;
         return $this;
     }
     /**
      * Get TotalDistance value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Distance|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Distance|null
      */
     public function getTotalDistance()
     {
@@ -98,10 +98,10 @@ class FreightCommitDetail extends AbstractStructBase
     }
     /**
      * Set TotalDistance value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $totalDistance
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Distance $totalDistance
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightCommitDetail
      */
-    public function setTotalDistance(\NicholasCreativeMedia\FedExPHP\Structs\Distance $totalDistance = null)
+    public function setTotalDistance(\CommerceFedEx\FedExPHP\Structs\Distance $totalDistance = null)
     {
         $this->TotalDistance = $totalDistance;
         return $this;
@@ -112,7 +112,7 @@ class FreightCommitDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightCommitDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightCommitDetail
      */
     public static function __set_state(array $array)
     {

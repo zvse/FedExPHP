@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -40,39 +40,39 @@ class TrackNotificationRecipientDetail extends AbstractStructBase
     }
     /**
      * Set NotificationEventsAvailable value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationEventType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationEventType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $notificationEventsAvailable
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail
      */
     public function setNotificationEventsAvailable(array $notificationEventsAvailable = array())
     {
         $invalidValues = array();
         foreach ($notificationEventsAvailable as $trackNotificationRecipientDetailNotificationEventsAvailableItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::valueIsValid($trackNotificationRecipientDetailNotificationEventsAvailableItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\NotificationEventType::valueIsValid($trackNotificationRecipientDetailNotificationEventsAvailableItem)) {
                 $invalidValues[] = var_export($trackNotificationRecipientDetailNotificationEventsAvailableItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationEventType::getValidValues())), __LINE__);
         }
         $this->NotificationEventsAvailable = $notificationEventsAvailable;
         return $this;
     }
     /**
      * Add item to NotificationEventsAvailable value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationEventType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationEventType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail
      */
     public function addToNotificationEventsAvailable($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationEventType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\NotificationEventType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationEventType::getValidValues())), __LINE__);
         }
         $this->NotificationEventsAvailable[] = $item;
         return $this;
@@ -83,7 +83,7 @@ class TrackNotificationRecipientDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail
      */
     public static function __set_state(array $array)
     {

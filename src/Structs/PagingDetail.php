@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -50,7 +50,7 @@ class PagingDetail extends AbstractStructBase
     /**
      * Set PagingToken value
      * @param string $pagingToken
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PagingDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PagingDetail
      */
     public function setPagingToken($pagingToken = null)
     {
@@ -72,7 +72,7 @@ class PagingDetail extends AbstractStructBase
     /**
      * Set NumberOfResultsPerPage value
      * @param int $numberOfResultsPerPage
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PagingDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PagingDetail
      */
     public function setNumberOfResultsPerPage($numberOfResultsPerPage = null)
     {
@@ -89,7 +89,7 @@ class PagingDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PagingDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PagingDetail
      */
     public static function __set_state(array $array)
     {

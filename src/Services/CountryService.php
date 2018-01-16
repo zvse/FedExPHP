@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Services;
+namespace CommerceFedEx\FedExPHP\Services;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -23,12 +23,12 @@ class CountryService extends FedExService
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'CountryService_v5.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\CountryClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\CountryClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('cnty',5,0,1);
+        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('cnty',5,0,1);
     }
     /**
      * Method to call the operation originally named validatePostal
@@ -36,10 +36,10 @@ class CountryService extends FedExService
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest $validatePostalRequest
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalReply|bool
+     * @param \CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest $validatePostalRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalReply|bool
      */
-    public function validatePostal(\NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalRequest $validatePostalRequest)
+    public function validatePostal(\CommerceFedEx\FedExPHP\Structs\ValidatePostalRequest $validatePostalRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->validatePostal($validatePostalRequest));
@@ -52,7 +52,7 @@ class CountryService extends FedExService
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidatePostalReply
+     * @return \CommerceFedEx\FedExPHP\Structs\ValidatePostalReply
      */
     public function getResult()
     {

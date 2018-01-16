@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -32,14 +32,14 @@ class PendingShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Only used with type of EMAIL.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\EMailLabelDetail
      */
     public $EmailLabelDetail;
     /**
      * The ProcessingOptions
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested
+     * @var \CommerceFedEx\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested
      */
     public $ProcessingOptions;
     /**
@@ -47,7 +47,7 @@ class PendingShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: These are documents that are recommended to be included with the shipment.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\RecommendedDocumentSpecification
+     * @var \CommerceFedEx\FedExPHP\Structs\RecommendedDocumentSpecification
      */
     public $RecommendedDocumentSpecification;
     /**
@@ -56,7 +56,7 @@ class PendingShipmentDetail extends AbstractStructBase
      * - documentation: Upload document details provided by the initator of the shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[]
      */
     public $DocumentReferences;
     /**
@@ -69,12 +69,12 @@ class PendingShipmentDetail extends AbstractStructBase
      * @uses PendingShipmentDetail::setDocumentReferences()
      * @param string $type
      * @param string $expirationDate
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail $emailLabelDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested $processingOptions
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RecommendedDocumentSpecification $recommendedDocumentSpecification
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[] $documentReferences
+     * @param \CommerceFedEx\FedExPHP\Structs\EMailLabelDetail $emailLabelDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested $processingOptions
+     * @param \CommerceFedEx\FedExPHP\Structs\RecommendedDocumentSpecification $recommendedDocumentSpecification
+     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[] $documentReferences
      */
-    public function __construct($type = null, $expirationDate = null, \NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail $emailLabelDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested $processingOptions = null, \NicholasCreativeMedia\FedExPHP\Structs\RecommendedDocumentSpecification $recommendedDocumentSpecification = null, array $documentReferences = array())
+    public function __construct($type = null, $expirationDate = null, \CommerceFedEx\FedExPHP\Structs\EMailLabelDetail $emailLabelDetail = null, \CommerceFedEx\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested $processingOptions = null, \CommerceFedEx\FedExPHP\Structs\RecommendedDocumentSpecification $recommendedDocumentSpecification = null, array $documentReferences = array())
     {
         $this
             ->setType($type)
@@ -94,17 +94,17 @@ class PendingShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PendingShipmentType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PendingShipmentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PendingShipmentType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PendingShipmentType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\PendingShipmentType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -120,7 +120,7 @@ class PendingShipmentDetail extends AbstractStructBase
     /**
      * Set ExpirationDate value
      * @param string $expirationDate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentDetail
      */
     public function setExpirationDate($expirationDate = null)
     {
@@ -133,7 +133,7 @@ class PendingShipmentDetail extends AbstractStructBase
     }
     /**
      * Get EmailLabelDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\EMailLabelDetail|null
      */
     public function getEmailLabelDetail()
     {
@@ -141,17 +141,17 @@ class PendingShipmentDetail extends AbstractStructBase
     }
     /**
      * Set EmailLabelDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail $emailLabelDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\EMailLabelDetail $emailLabelDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentDetail
      */
-    public function setEmailLabelDetail(\NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail $emailLabelDetail = null)
+    public function setEmailLabelDetail(\CommerceFedEx\FedExPHP\Structs\EMailLabelDetail $emailLabelDetail = null)
     {
         $this->EmailLabelDetail = $emailLabelDetail;
         return $this;
     }
     /**
      * Get ProcessingOptions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested|null
      */
     public function getProcessingOptions()
     {
@@ -159,17 +159,17 @@ class PendingShipmentDetail extends AbstractStructBase
     }
     /**
      * Set ProcessingOptions value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested $processingOptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested $processingOptions
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentDetail
      */
-    public function setProcessingOptions(\NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested $processingOptions = null)
+    public function setProcessingOptions(\CommerceFedEx\FedExPHP\Structs\PendingShipmentProcessingOptionsRequested $processingOptions = null)
     {
         $this->ProcessingOptions = $processingOptions;
         return $this;
     }
     /**
      * Get RecommendedDocumentSpecification value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecommendedDocumentSpecification|null
+     * @return \CommerceFedEx\FedExPHP\Structs\RecommendedDocumentSpecification|null
      */
     public function getRecommendedDocumentSpecification()
     {
@@ -177,17 +177,17 @@ class PendingShipmentDetail extends AbstractStructBase
     }
     /**
      * Set RecommendedDocumentSpecification value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\RecommendedDocumentSpecification $recommendedDocumentSpecification
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\RecommendedDocumentSpecification $recommendedDocumentSpecification
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentDetail
      */
-    public function setRecommendedDocumentSpecification(\NicholasCreativeMedia\FedExPHP\Structs\RecommendedDocumentSpecification $recommendedDocumentSpecification = null)
+    public function setRecommendedDocumentSpecification(\CommerceFedEx\FedExPHP\Structs\RecommendedDocumentSpecification $recommendedDocumentSpecification = null)
     {
         $this->RecommendedDocumentSpecification = $recommendedDocumentSpecification;
         return $this;
     }
     /**
      * Get DocumentReferences value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[]|null
      */
     public function getDocumentReferences()
     {
@@ -196,15 +196,15 @@ class PendingShipmentDetail extends AbstractStructBase
     /**
      * Set DocumentReferences value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail[] $documentReferences
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[] $documentReferences
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentDetail
      */
     public function setDocumentReferences(array $documentReferences = array())
     {
         foreach ($documentReferences as $pendingShipmentDetailDocumentReferencesItem) {
             // validation for constraint: itemType
-            if (!$pendingShipmentDetailDocumentReferencesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail) {
-                throw new \InvalidArgumentException(sprintf('The DocumentReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($pendingShipmentDetailDocumentReferencesItem) ? get_class($pendingShipmentDetailDocumentReferencesItem) : gettype($pendingShipmentDetailDocumentReferencesItem)), __LINE__);
+            if (!$pendingShipmentDetailDocumentReferencesItem instanceof \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail) {
+                throw new \InvalidArgumentException(sprintf('The DocumentReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($pendingShipmentDetailDocumentReferencesItem) ? get_class($pendingShipmentDetailDocumentReferencesItem) : gettype($pendingShipmentDetailDocumentReferencesItem)), __LINE__);
             }
         }
         $this->DocumentReferences = $documentReferences;
@@ -213,14 +213,14 @@ class PendingShipmentDetail extends AbstractStructBase
     /**
      * Add item to DocumentReferences value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentDetail
      */
-    public function addToDocumentReferences(\NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail $item)
+    public function addToDocumentReferences(\CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail) {
-            throw new \InvalidArgumentException(sprintf('The DocumentReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail) {
+            throw new \InvalidArgumentException(sprintf('The DocumentReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DocumentReferences[] = $item;
         return $this;
@@ -231,7 +231,7 @@ class PendingShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentDetail
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,28 +17,28 @@ class PickupAvailabilityRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -53,14 +53,14 @@ class PickupAvailabilityRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the account number for Freight Pickup Availability
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\AssociatedAccount
+     * @var \CommerceFedEx\FedExPHP\Structs\AssociatedAccount
      */
     public $AccountNumber;
     /**
      * The PickupAddress
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $PickupAddress;
     /**
@@ -112,7 +112,7 @@ class PickupAvailabilityRequest extends AbstractStructBase
      * The ShipmentAttributes
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes
+     * @var \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes
      */
     public $ShipmentAttributes;
     /**
@@ -131,22 +131,22 @@ class PickupAvailabilityRequest extends AbstractStructBase
      * @uses PickupAvailabilityRequest::setCustomerCloseTime()
      * @uses PickupAvailabilityRequest::setCarriers()
      * @uses PickupAvailabilityRequest::setShipmentAttributes()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $pickupType
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedAccount $accountNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $pickupAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedAccount $accountNumber
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $pickupAddress
      * @param string[] $pickupRequestType
      * @param string $dispatchDate
      * @param int $numberOfBusinessDays
      * @param string $packageReadyTime
      * @param string $customerCloseTime
      * @param string[] $carriers
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes
+     * @param \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $pickupType = null, \NicholasCreativeMedia\FedExPHP\Structs\AssociatedAccount $accountNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $pickupAddress = null, array $pickupRequestType = array(), $dispatchDate = null, $numberOfBusinessDays = null, $packageReadyTime = null, $customerCloseTime = null, array $carriers = array(), \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $pickupType = null, \CommerceFedEx\FedExPHP\Structs\AssociatedAccount $accountNumber = null, \CommerceFedEx\FedExPHP\Structs\Address $pickupAddress = null, array $pickupRequestType = array(), $dispatchDate = null, $numberOfBusinessDays = null, $packageReadyTime = null, $customerCloseTime = null, array $carriers = array(), \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -166,7 +166,7 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -174,17 +174,17 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
-    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -192,17 +192,17 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
-    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -210,17 +210,17 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -228,10 +228,10 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -246,24 +246,24 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set PickupType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $pickupType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public function setPickupType($pickupType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PickupType::valueIsValid($pickupType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickupType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PickupType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PickupType::valueIsValid($pickupType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickupType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PickupType::getValidValues())), __LINE__);
         }
         $this->PickupType = $pickupType;
         return $this;
     }
     /**
      * Get AccountNumber value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedAccount|null
+     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedAccount|null
      */
     public function getAccountNumber()
     {
@@ -271,17 +271,17 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set AccountNumber value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedAccount $accountNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedAccount $accountNumber
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
-    public function setAccountNumber(\NicholasCreativeMedia\FedExPHP\Structs\AssociatedAccount $accountNumber = null)
+    public function setAccountNumber(\CommerceFedEx\FedExPHP\Structs\AssociatedAccount $accountNumber = null)
     {
         $this->AccountNumber = $accountNumber;
         return $this;
     }
     /**
      * Get PickupAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getPickupAddress()
     {
@@ -289,10 +289,10 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set PickupAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $pickupAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $pickupAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
-    public function setPickupAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $pickupAddress = null)
+    public function setPickupAddress(\CommerceFedEx\FedExPHP\Structs\Address $pickupAddress = null)
     {
         $this->PickupAddress = $pickupAddress;
         return $this;
@@ -307,39 +307,39 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set PickupRequestType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $pickupRequestType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public function setPickupRequestType(array $pickupRequestType = array())
     {
         $invalidValues = array();
         foreach ($pickupRequestType as $pickupAvailabilityRequestPickupRequestTypeItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid($pickupAvailabilityRequestPickupRequestTypeItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid($pickupAvailabilityRequestPickupRequestTypeItem)) {
                 $invalidValues[] = var_export($pickupAvailabilityRequestPickupRequestTypeItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
         }
         $this->PickupRequestType = $pickupRequestType;
         return $this;
     }
     /**
      * Add item to PickupRequestType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public function addToPickupRequestType($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
         }
         $this->PickupRequestType[] = $item;
         return $this;
@@ -355,7 +355,7 @@ class PickupAvailabilityRequest extends AbstractStructBase
     /**
      * Set DispatchDate value
      * @param string $dispatchDate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public function setDispatchDate($dispatchDate = null)
     {
@@ -377,7 +377,7 @@ class PickupAvailabilityRequest extends AbstractStructBase
     /**
      * Set NumberOfBusinessDays value
      * @param int $numberOfBusinessDays
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public function setNumberOfBusinessDays($numberOfBusinessDays = null)
     {
@@ -399,7 +399,7 @@ class PickupAvailabilityRequest extends AbstractStructBase
     /**
      * Set PackageReadyTime value
      * @param string $packageReadyTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public function setPackageReadyTime($packageReadyTime = null)
     {
@@ -421,7 +421,7 @@ class PickupAvailabilityRequest extends AbstractStructBase
     /**
      * Set CustomerCloseTime value
      * @param string $customerCloseTime
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public function setCustomerCloseTime($customerCloseTime = null)
     {
@@ -442,46 +442,46 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set Carriers value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $carriers
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public function setCarriers(array $carriers = array())
     {
         $invalidValues = array();
         foreach ($carriers as $pickupAvailabilityRequestCarriersItem) {
-            if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($pickupAvailabilityRequestCarriersItem)) {
+            if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($pickupAvailabilityRequestCarriersItem)) {
                 $invalidValues[] = var_export($pickupAvailabilityRequestCarriersItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->Carriers = $carriers;
         return $this;
     }
     /**
      * Add item to Carriers value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public function addToCarriers($item)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->Carriers[] = $item;
         return $this;
     }
     /**
      * Get ShipmentAttributes value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes|null
      */
     public function getShipmentAttributes()
     {
@@ -489,10 +489,10 @@ class PickupAvailabilityRequest extends AbstractStructBase
     }
     /**
      * Set ShipmentAttributes value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
-    public function setShipmentAttributes(\NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes = null)
+    public function setShipmentAttributes(\CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes = null)
     {
         $this->ShipmentAttributes = $shipmentAttributes;
         return $this;
@@ -503,7 +503,7 @@ class PickupAvailabilityRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
      */
     public static function __set_state(array $array)
     {

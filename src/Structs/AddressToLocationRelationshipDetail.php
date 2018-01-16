@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Address as provided in the request.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $MatchedAddress;
     /**
@@ -34,7 +34,7 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
      * - documentation: Specifies the distance between the matched address and the addresses of matched FedEx locations. Also specifies the details of the FedEx locations.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail[]
      */
     public $DistanceAndLocationDetails;
     /**
@@ -42,11 +42,11 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
      * @uses AddressToLocationRelationshipDetail::setMatchedAddress()
      * @uses AddressToLocationRelationshipDetail::setMatchedAddressGeographicCoordinates()
      * @uses AddressToLocationRelationshipDetail::setDistanceAndLocationDetails()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $matchedAddress
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $matchedAddress
      * @param string $matchedAddressGeographicCoordinates
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail[] $distanceAndLocationDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail[] $distanceAndLocationDetails
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Address $matchedAddress = null, $matchedAddressGeographicCoordinates = null, array $distanceAndLocationDetails = array())
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\Address $matchedAddress = null, $matchedAddressGeographicCoordinates = null, array $distanceAndLocationDetails = array())
     {
         $this
             ->setMatchedAddress($matchedAddress)
@@ -55,7 +55,7 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
     }
     /**
      * Get MatchedAddress value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getMatchedAddress()
     {
@@ -63,10 +63,10 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
     }
     /**
      * Set MatchedAddress value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $matchedAddress
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToLocationRelationshipDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $matchedAddress
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToLocationRelationshipDetail
      */
-    public function setMatchedAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $matchedAddress = null)
+    public function setMatchedAddress(\CommerceFedEx\FedExPHP\Structs\Address $matchedAddress = null)
     {
         $this->MatchedAddress = $matchedAddress;
         return $this;
@@ -82,7 +82,7 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
     /**
      * Set MatchedAddressGeographicCoordinates value
      * @param string $matchedAddressGeographicCoordinates
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToLocationRelationshipDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToLocationRelationshipDetail
      */
     public function setMatchedAddressGeographicCoordinates($matchedAddressGeographicCoordinates = null)
     {
@@ -95,7 +95,7 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
     }
     /**
      * Get DistanceAndLocationDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail[]|null
      */
     public function getDistanceAndLocationDetails()
     {
@@ -104,15 +104,15 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
     /**
      * Set DistanceAndLocationDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail[] $distanceAndLocationDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToLocationRelationshipDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail[] $distanceAndLocationDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToLocationRelationshipDetail
      */
     public function setDistanceAndLocationDetails(array $distanceAndLocationDetails = array())
     {
         foreach ($distanceAndLocationDetails as $addressToLocationRelationshipDetailDistanceAndLocationDetailsItem) {
             // validation for constraint: itemType
-            if (!$addressToLocationRelationshipDetailDistanceAndLocationDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail) {
-                throw new \InvalidArgumentException(sprintf('The DistanceAndLocationDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail, "%s" given', is_object($addressToLocationRelationshipDetailDistanceAndLocationDetailsItem) ? get_class($addressToLocationRelationshipDetailDistanceAndLocationDetailsItem) : gettype($addressToLocationRelationshipDetailDistanceAndLocationDetailsItem)), __LINE__);
+            if (!$addressToLocationRelationshipDetailDistanceAndLocationDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail) {
+                throw new \InvalidArgumentException(sprintf('The DistanceAndLocationDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail, "%s" given', is_object($addressToLocationRelationshipDetailDistanceAndLocationDetailsItem) ? get_class($addressToLocationRelationshipDetailDistanceAndLocationDetailsItem) : gettype($addressToLocationRelationshipDetailDistanceAndLocationDetailsItem)), __LINE__);
             }
         }
         $this->DistanceAndLocationDetails = $distanceAndLocationDetails;
@@ -121,14 +121,14 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
     /**
      * Add item to DistanceAndLocationDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToLocationRelationshipDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToLocationRelationshipDetail
      */
-    public function addToDistanceAndLocationDetails(\NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail $item)
+    public function addToDistanceAndLocationDetails(\CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail) {
-            throw new \InvalidArgumentException(sprintf('The DistanceAndLocationDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DistanceAndLocationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail) {
+            throw new \InvalidArgumentException(sprintf('The DistanceAndLocationDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\DistanceAndLocationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DistanceAndLocationDetails[] = $item;
         return $this;
@@ -139,7 +139,7 @@ class AddressToLocationRelationshipDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressToLocationRelationshipDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\AddressToLocationRelationshipDetail
      */
     public static function __set_state(array $array)
     {

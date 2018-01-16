@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class TransactionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Governs data payload language/translations (contrasted with ClientDetail.localization, which governs Notification.localizedMessage language selection).
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Localization
+     * @var \CommerceFedEx\FedExPHP\Structs\Localization
      */
     public $Localization;
     /**
@@ -31,9 +31,9 @@ class TransactionDetail extends AbstractStructBase
      * @uses TransactionDetail::setCustomerTransactionId()
      * @uses TransactionDetail::setLocalization()
      * @param string $customerTransactionId
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
+     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
      */
-    public function __construct($customerTransactionId = null, \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
+    public function __construct($customerTransactionId = null, \CommerceFedEx\FedExPHP\Structs\Localization $localization = null)
     {
         $this
             ->setCustomerTransactionId($customerTransactionId)
@@ -50,7 +50,7 @@ class TransactionDetail extends AbstractStructBase
     /**
      * Set CustomerTransactionId value
      * @param string $customerTransactionId
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public function setCustomerTransactionId($customerTransactionId = null)
     {
@@ -63,7 +63,7 @@ class TransactionDetail extends AbstractStructBase
     }
     /**
      * Get Localization value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Localization|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Localization|null
      */
     public function getLocalization()
     {
@@ -71,10 +71,10 @@ class TransactionDetail extends AbstractStructBase
     }
     /**
      * Set Localization value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
-    public function setLocalization(\NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
+    public function setLocalization(\CommerceFedEx\FedExPHP\Structs\Localization $localization = null)
     {
         $this->Localization = $localization;
         return $this;
@@ -85,7 +85,7 @@ class TransactionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public static function __set_state(array $array)
     {

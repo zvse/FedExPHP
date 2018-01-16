@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -41,7 +41,7 @@ class ExtraLaborDetail extends AbstractStructBase
     /**
      * Set Duration value
      * @param string $duration
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExtraLaborDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExtraLaborDetail
      */
     public function setDuration($duration = null)
     {
@@ -58,7 +58,7 @@ class ExtraLaborDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExtraLaborDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ExtraLaborDetail
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class DangerousGoodsShippersDeclarationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies characteristics of a shipping document to be produced.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
@@ -26,17 +26,17 @@ class DangerousGoodsShippersDeclarationDetail extends AbstractStructBase
      * - documentation: Specifies the usage and identification of customer supplied images to be used on this document.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]
      */
     public $CustomerImageUsages;
     /**
      * Constructor method for DangerousGoodsShippersDeclarationDetail
      * @uses DangerousGoodsShippersDeclarationDetail::setFormat()
      * @uses DangerousGoodsShippersDeclarationDetail::setCustomerImageUsages()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null, array $customerImageUsages = array())
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null, array $customerImageUsages = array())
     {
         $this
             ->setFormat($format)
@@ -44,7 +44,7 @@ class DangerousGoodsShippersDeclarationDetail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -52,17 +52,17 @@ class DangerousGoodsShippersDeclarationDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail
      */
-    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
     }
     /**
      * Get CustomerImageUsages value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]|null
      */
     public function getCustomerImageUsages()
     {
@@ -71,15 +71,15 @@ class DangerousGoodsShippersDeclarationDetail extends AbstractStructBase
     /**
      * Set CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail
      */
     public function setCustomerImageUsages(array $customerImageUsages = array())
     {
         foreach ($customerImageUsages as $dangerousGoodsShippersDeclarationDetailCustomerImageUsagesItem) {
             // validation for constraint: itemType
-            if (!$dangerousGoodsShippersDeclarationDetailCustomerImageUsagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
-                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($dangerousGoodsShippersDeclarationDetailCustomerImageUsagesItem) ? get_class($dangerousGoodsShippersDeclarationDetailCustomerImageUsagesItem) : gettype($dangerousGoodsShippersDeclarationDetailCustomerImageUsagesItem)), __LINE__);
+            if (!$dangerousGoodsShippersDeclarationDetailCustomerImageUsagesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
+                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($dangerousGoodsShippersDeclarationDetailCustomerImageUsagesItem) ? get_class($dangerousGoodsShippersDeclarationDetailCustomerImageUsagesItem) : gettype($dangerousGoodsShippersDeclarationDetailCustomerImageUsagesItem)), __LINE__);
             }
         }
         $this->CustomerImageUsages = $customerImageUsages;
@@ -88,14 +88,14 @@ class DangerousGoodsShippersDeclarationDetail extends AbstractStructBase
     /**
      * Add item to CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item
+     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail
      */
-    public function addToCustomerImageUsages(\NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item)
+    public function addToCustomerImageUsages(\CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
-            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
+            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerImageUsages[] = $item;
         return $this;
@@ -106,7 +106,7 @@ class DangerousGoodsShippersDeclarationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail
      */
     public static function __set_state(array $array)
     {

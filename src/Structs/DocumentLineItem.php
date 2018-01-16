@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,13 +17,13 @@ class DocumentLineItem extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\KeyValueDetail[]
      */
     public $Values;
     /**
      * Constructor method for DocumentLineItem
      * @uses DocumentLineItem::setValues()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail[] $values
+     * @param \CommerceFedEx\FedExPHP\Structs\KeyValueDetail[] $values
      */
     public function __construct(array $values = array())
     {
@@ -32,7 +32,7 @@ class DocumentLineItem extends AbstractStructBase
     }
     /**
      * Get Values value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\KeyValueDetail[]|null
      */
     public function getValues()
     {
@@ -41,15 +41,15 @@ class DocumentLineItem extends AbstractStructBase
     /**
      * Set Values value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail[] $values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentLineItem
+     * @param \CommerceFedEx\FedExPHP\Structs\KeyValueDetail[] $values
+     * @return \CommerceFedEx\FedExPHP\Structs\DocumentLineItem
      */
     public function setValues(array $values = array())
     {
         foreach ($values as $documentLineItemValuesItem) {
             // validation for constraint: itemType
-            if (!$documentLineItemValuesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail) {
-                throw new \InvalidArgumentException(sprintf('The Values property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail, "%s" given', is_object($documentLineItemValuesItem) ? get_class($documentLineItemValuesItem) : gettype($documentLineItemValuesItem)), __LINE__);
+            if (!$documentLineItemValuesItem instanceof \CommerceFedEx\FedExPHP\Structs\KeyValueDetail) {
+                throw new \InvalidArgumentException(sprintf('The Values property can only contain items of \CommerceFedEx\FedExPHP\Structs\KeyValueDetail, "%s" given', is_object($documentLineItemValuesItem) ? get_class($documentLineItemValuesItem) : gettype($documentLineItemValuesItem)), __LINE__);
             }
         }
         $this->Values = $values;
@@ -58,14 +58,14 @@ class DocumentLineItem extends AbstractStructBase
     /**
      * Add item to Values value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentLineItem
+     * @param \CommerceFedEx\FedExPHP\Structs\KeyValueDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\DocumentLineItem
      */
-    public function addToValues(\NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail $item)
+    public function addToValues(\CommerceFedEx\FedExPHP\Structs\KeyValueDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail) {
-            throw new \InvalidArgumentException(sprintf('The Values property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\KeyValueDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\KeyValueDetail) {
+            throw new \InvalidArgumentException(sprintf('The Values property can only contain items of \CommerceFedEx\FedExPHP\Structs\KeyValueDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Values[] = $item;
         return $this;
@@ -76,7 +76,7 @@ class DocumentLineItem extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentLineItem
+     * @return \CommerceFedEx\FedExPHP\Structs\DocumentLineItem
      */
     public static function __set_state(array $array)
     {

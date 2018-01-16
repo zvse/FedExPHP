@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -42,7 +42,7 @@ class FreightRateDetail extends AbstractStructBase
      * - documentation: Freight charges which accumulate to the total base charge for the shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge[]
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge[]
      */
     public $BaseCharges;
     /**
@@ -51,7 +51,7 @@ class FreightRateDetail extends AbstractStructBase
      * - documentation: Human-readable descriptions of additional information on this shipment rating.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation[]
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightRateNotation[]
      */
     public $Notations;
     /**
@@ -64,8 +64,8 @@ class FreightRateDetail extends AbstractStructBase
      * @param string $quoteNumber
      * @param string $quoteType
      * @param string $baseChargeCalculation
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge[] $baseCharges
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation[] $notations
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge[] $baseCharges
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightRateNotation[] $notations
      */
     public function __construct($quoteNumber = null, $quoteType = null, $baseChargeCalculation = null, array $baseCharges = array(), array $notations = array())
     {
@@ -87,7 +87,7 @@ class FreightRateDetail extends AbstractStructBase
     /**
      * Set QuoteNumber value
      * @param string $quoteNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateDetail
      */
     public function setQuoteNumber($quoteNumber = null)
     {
@@ -108,17 +108,17 @@ class FreightRateDetail extends AbstractStructBase
     }
     /**
      * Set QuoteType value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightRateQuoteType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightRateQuoteType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightRateQuoteType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightRateQuoteType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $quoteType
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateDetail
      */
     public function setQuoteType($quoteType = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightRateQuoteType::valueIsValid($quoteType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $quoteType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightRateQuoteType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FreightRateQuoteType::valueIsValid($quoteType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $quoteType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightRateQuoteType::getValidValues())), __LINE__);
         }
         $this->QuoteType = $quoteType;
         return $this;
@@ -133,24 +133,24 @@ class FreightRateDetail extends AbstractStructBase
     }
     /**
      * Set BaseChargeCalculation value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightBaseChargeCalculationType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightBaseChargeCalculationType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightBaseChargeCalculationType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\FreightBaseChargeCalculationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $baseChargeCalculation
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateDetail
      */
     public function setBaseChargeCalculation($baseChargeCalculation = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightBaseChargeCalculationType::valueIsValid($baseChargeCalculation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $baseChargeCalculation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightBaseChargeCalculationType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\FreightBaseChargeCalculationType::valueIsValid($baseChargeCalculation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $baseChargeCalculation, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightBaseChargeCalculationType::getValidValues())), __LINE__);
         }
         $this->BaseChargeCalculation = $baseChargeCalculation;
         return $this;
     }
     /**
      * Get BaseCharges value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge[]|null
      */
     public function getBaseCharges()
     {
@@ -159,15 +159,15 @@ class FreightRateDetail extends AbstractStructBase
     /**
      * Set BaseCharges value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge[] $baseCharges
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge[] $baseCharges
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateDetail
      */
     public function setBaseCharges(array $baseCharges = array())
     {
         foreach ($baseCharges as $freightRateDetailBaseChargesItem) {
             // validation for constraint: itemType
-            if (!$freightRateDetailBaseChargesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge) {
-                throw new \InvalidArgumentException(sprintf('The BaseCharges property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge, "%s" given', is_object($freightRateDetailBaseChargesItem) ? get_class($freightRateDetailBaseChargesItem) : gettype($freightRateDetailBaseChargesItem)), __LINE__);
+            if (!$freightRateDetailBaseChargesItem instanceof \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge) {
+                throw new \InvalidArgumentException(sprintf('The BaseCharges property can only contain items of \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge, "%s" given', is_object($freightRateDetailBaseChargesItem) ? get_class($freightRateDetailBaseChargesItem) : gettype($freightRateDetailBaseChargesItem)), __LINE__);
             }
         }
         $this->BaseCharges = $baseCharges;
@@ -176,21 +176,21 @@ class FreightRateDetail extends AbstractStructBase
     /**
      * Add item to BaseCharges value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge $item
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateDetail
      */
-    public function addToBaseCharges(\NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge $item)
+    public function addToBaseCharges(\CommerceFedEx\FedExPHP\Structs\FreightBaseCharge $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge) {
-            throw new \InvalidArgumentException(sprintf('The BaseCharges property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge) {
+            throw new \InvalidArgumentException(sprintf('The BaseCharges property can only contain items of \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->BaseCharges[] = $item;
         return $this;
     }
     /**
      * Get Notations value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateNotation[]|null
      */
     public function getNotations()
     {
@@ -199,15 +199,15 @@ class FreightRateDetail extends AbstractStructBase
     /**
      * Set Notations value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation[] $notations
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightRateNotation[] $notations
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateDetail
      */
     public function setNotations(array $notations = array())
     {
         foreach ($notations as $freightRateDetailNotationsItem) {
             // validation for constraint: itemType
-            if (!$freightRateDetailNotationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation) {
-                throw new \InvalidArgumentException(sprintf('The Notations property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation, "%s" given', is_object($freightRateDetailNotationsItem) ? get_class($freightRateDetailNotationsItem) : gettype($freightRateDetailNotationsItem)), __LINE__);
+            if (!$freightRateDetailNotationsItem instanceof \CommerceFedEx\FedExPHP\Structs\FreightRateNotation) {
+                throw new \InvalidArgumentException(sprintf('The Notations property can only contain items of \CommerceFedEx\FedExPHP\Structs\FreightRateNotation, "%s" given', is_object($freightRateDetailNotationsItem) ? get_class($freightRateDetailNotationsItem) : gettype($freightRateDetailNotationsItem)), __LINE__);
             }
         }
         $this->Notations = $notations;
@@ -216,14 +216,14 @@ class FreightRateDetail extends AbstractStructBase
     /**
      * Add item to Notations value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightRateNotation $item
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateDetail
      */
-    public function addToNotations(\NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation $item)
+    public function addToNotations(\CommerceFedEx\FedExPHP\Structs\FreightRateNotation $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation) {
-            throw new \InvalidArgumentException(sprintf('The Notations property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\FreightRateNotation, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\FreightRateNotation) {
+            throw new \InvalidArgumentException(sprintf('The Notations property can only contain items of \CommerceFedEx\FedExPHP\Structs\FreightRateNotation, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notations[] = $item;
         return $this;
@@ -234,7 +234,7 @@ class FreightRateDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateDetail
      */
     public static function __set_state(array $array)
     {

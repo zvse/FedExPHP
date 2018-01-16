@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -40,7 +40,7 @@ class Rma extends AbstractStructBase
     /**
      * Set Reason value
      * @param string $reason
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rma
+     * @return \CommerceFedEx\FedExPHP\Structs\Rma
      */
     public function setReason($reason = null)
     {
@@ -57,7 +57,7 @@ class Rma extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rma
+     * @return \CommerceFedEx\FedExPHP\Structs\Rma
      */
     public static function __set_state(array $array)
     {

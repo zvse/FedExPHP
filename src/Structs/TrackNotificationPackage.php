@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -48,7 +48,7 @@ class TrackNotificationPackage extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The destination address of this package. Only city, state/province, and country are returned.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $Destination;
     /**
@@ -57,7 +57,7 @@ class TrackNotificationPackage extends AbstractStructBase
      * - documentation: Options available for a tracking notification recipient.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail[]
+     * @var \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail[]
      */
     public $RecipientDetails;
     /**
@@ -72,10 +72,10 @@ class TrackNotificationPackage extends AbstractStructBase
      * @param string $trackingNumberUniqueIdentifiers
      * @param string $carrierCode
      * @param string $shipDate
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destination
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail[] $recipientDetails
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $destination
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail[] $recipientDetails
      */
-    public function __construct($trackingNumber = null, $trackingNumberUniqueIdentifiers = null, $carrierCode = null, $shipDate = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $destination = null, array $recipientDetails = array())
+    public function __construct($trackingNumber = null, $trackingNumberUniqueIdentifiers = null, $carrierCode = null, $shipDate = null, \CommerceFedEx\FedExPHP\Structs\Address $destination = null, array $recipientDetails = array())
     {
         $this
             ->setTrackingNumber($trackingNumber)
@@ -96,7 +96,7 @@ class TrackNotificationPackage extends AbstractStructBase
     /**
      * Set TrackingNumber value
      * @param string $trackingNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage
      */
     public function setTrackingNumber($trackingNumber = null)
     {
@@ -118,7 +118,7 @@ class TrackNotificationPackage extends AbstractStructBase
     /**
      * Set TrackingNumberUniqueIdentifiers value
      * @param string $trackingNumberUniqueIdentifiers
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage
      */
     public function setTrackingNumberUniqueIdentifiers($trackingNumberUniqueIdentifiers = null)
     {
@@ -139,17 +139,17 @@ class TrackNotificationPackage extends AbstractStructBase
     }
     /**
      * Set CarrierCode value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrierCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage
      */
     public function setCarrierCode($carrierCode = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->CarrierCode = $carrierCode;
         return $this;
@@ -165,7 +165,7 @@ class TrackNotificationPackage extends AbstractStructBase
     /**
      * Set ShipDate value
      * @param string $shipDate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage
      */
     public function setShipDate($shipDate = null)
     {
@@ -178,7 +178,7 @@ class TrackNotificationPackage extends AbstractStructBase
     }
     /**
      * Get Destination value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getDestination()
     {
@@ -186,17 +186,17 @@ class TrackNotificationPackage extends AbstractStructBase
     }
     /**
      * Set Destination value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destination
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $destination
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage
      */
-    public function setDestination(\NicholasCreativeMedia\FedExPHP\Structs\Address $destination = null)
+    public function setDestination(\CommerceFedEx\FedExPHP\Structs\Address $destination = null)
     {
         $this->Destination = $destination;
         return $this;
     }
     /**
      * Get RecipientDetails value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail[]|null
      */
     public function getRecipientDetails()
     {
@@ -205,15 +205,15 @@ class TrackNotificationPackage extends AbstractStructBase
     /**
      * Set RecipientDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail[] $recipientDetails
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail[] $recipientDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage
      */
     public function setRecipientDetails(array $recipientDetails = array())
     {
         foreach ($recipientDetails as $trackNotificationPackageRecipientDetailsItem) {
             // validation for constraint: itemType
-            if (!$trackNotificationPackageRecipientDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail) {
-                throw new \InvalidArgumentException(sprintf('The RecipientDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail, "%s" given', is_object($trackNotificationPackageRecipientDetailsItem) ? get_class($trackNotificationPackageRecipientDetailsItem) : gettype($trackNotificationPackageRecipientDetailsItem)), __LINE__);
+            if (!$trackNotificationPackageRecipientDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail) {
+                throw new \InvalidArgumentException(sprintf('The RecipientDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail, "%s" given', is_object($trackNotificationPackageRecipientDetailsItem) ? get_class($trackNotificationPackageRecipientDetailsItem) : gettype($trackNotificationPackageRecipientDetailsItem)), __LINE__);
             }
         }
         $this->RecipientDetails = $recipientDetails;
@@ -222,14 +222,14 @@ class TrackNotificationPackage extends AbstractStructBase
     /**
      * Add item to RecipientDetails value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage
+     * @param \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage
      */
-    public function addToRecipientDetails(\NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail $item)
+    public function addToRecipientDetails(\CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail) {
-            throw new \InvalidArgumentException(sprintf('The RecipientDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationRecipientDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail) {
+            throw new \InvalidArgumentException(sprintf('The RecipientDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackNotificationRecipientDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->RecipientDetails[] = $item;
         return $this;
@@ -240,7 +240,7 @@ class TrackNotificationPackage extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackNotificationPackage
+     * @return \CommerceFedEx\FedExPHP\Structs\TrackNotificationPackage
      */
     public static function __set_state(array $array)
     {

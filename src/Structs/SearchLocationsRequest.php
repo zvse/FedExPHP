@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,28 +17,28 @@ class SearchLocationsRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -61,14 +61,14 @@ class SearchLocationsRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Tracking number to be used when searching for locations. This tracking number, along with other location search constraints, help to narrow the search for locations.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber
+     * @var \CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber
      */
     public $UniqueTrackingNumber;
     /**
      * The Address
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     * @var \CommerceFedEx\FedExPHP\Structs\Address
      */
     public $Address;
     /**
@@ -98,7 +98,7 @@ class SearchLocationsRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the details on how the location search results be sorted in the reply.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LocationSortDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\LocationSortDetail
      */
     public $SortDetail;
     /**
@@ -106,7 +106,7 @@ class SearchLocationsRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contraints to be applied to location attributes.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationConstraints
+     * @var \CommerceFedEx\FedExPHP\Structs\SearchLocationConstraints
      */
     public $Constraints;
     /**
@@ -124,21 +124,21 @@ class SearchLocationsRequest extends AbstractStructBase
      * @uses SearchLocationsRequest::setMultipleMatchesAction()
      * @uses SearchLocationsRequest::setSortDetail()
      * @uses SearchLocationsRequest::setConstraints()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $effectiveDate
      * @param string $locationsSearchCriterion
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber $uniqueTrackingNumber
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
+     * @param \CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber $uniqueTrackingNumber
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
      * @param string $phoneNumber
      * @param string $geographicCoordinates
      * @param string $multipleMatchesAction
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationSortDetail $sortDetail
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationConstraints $constraints
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationSortDetail $sortDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\SearchLocationConstraints $constraints
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $effectiveDate = null, $locationsSearchCriterion = null, \NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber $uniqueTrackingNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $address = null, $phoneNumber = null, $geographicCoordinates = null, $multipleMatchesAction = null, \NicholasCreativeMedia\FedExPHP\Structs\LocationSortDetail $sortDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationConstraints $constraints = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $effectiveDate = null, $locationsSearchCriterion = null, \CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber $uniqueTrackingNumber = null, \CommerceFedEx\FedExPHP\Structs\Address $address = null, $phoneNumber = null, $geographicCoordinates = null, $multipleMatchesAction = null, \CommerceFedEx\FedExPHP\Structs\LocationSortDetail $sortDetail = null, \CommerceFedEx\FedExPHP\Structs\SearchLocationConstraints $constraints = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -157,7 +157,7 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -165,17 +165,17 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
-    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -183,17 +183,17 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
-    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
+     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -201,17 +201,17 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
-    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -219,10 +219,10 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
-    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -238,7 +238,7 @@ class SearchLocationsRequest extends AbstractStructBase
     /**
      * Set EffectiveDate value
      * @param string $effectiveDate
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
     public function setEffectiveDate($effectiveDate = null)
     {
@@ -259,24 +259,24 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set LocationsSearchCriterion value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationsSearchCriteriaType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LocationsSearchCriteriaType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationsSearchCriteriaType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\LocationsSearchCriteriaType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $locationsSearchCriterion
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
     public function setLocationsSearchCriterion($locationsSearchCriterion = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\LocationsSearchCriteriaType::valueIsValid($locationsSearchCriterion)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $locationsSearchCriterion, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LocationsSearchCriteriaType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\LocationsSearchCriteriaType::valueIsValid($locationsSearchCriterion)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $locationsSearchCriterion, implode(', ', \CommerceFedEx\FedExPHP\Enums\LocationsSearchCriteriaType::getValidValues())), __LINE__);
         }
         $this->LocationsSearchCriterion = $locationsSearchCriterion;
         return $this;
     }
     /**
      * Get UniqueTrackingNumber value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber|null
+     * @return \CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber|null
      */
     public function getUniqueTrackingNumber()
     {
@@ -284,17 +284,17 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set UniqueTrackingNumber value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber $uniqueTrackingNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber $uniqueTrackingNumber
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
-    public function setUniqueTrackingNumber(\NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber $uniqueTrackingNumber = null)
+    public function setUniqueTrackingNumber(\CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber $uniqueTrackingNumber = null)
     {
         $this->UniqueTrackingNumber = $uniqueTrackingNumber;
         return $this;
     }
     /**
      * Get Address value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
      */
     public function getAddress()
     {
@@ -302,10 +302,10 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set Address value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
-    public function setAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $address = null)
+    public function setAddress(\CommerceFedEx\FedExPHP\Structs\Address $address = null)
     {
         $this->Address = $address;
         return $this;
@@ -321,7 +321,7 @@ class SearchLocationsRequest extends AbstractStructBase
     /**
      * Set PhoneNumber value
      * @param string $phoneNumber
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
     public function setPhoneNumber($phoneNumber = null)
     {
@@ -343,7 +343,7 @@ class SearchLocationsRequest extends AbstractStructBase
     /**
      * Set GeographicCoordinates value
      * @param string $geographicCoordinates
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
     public function setGeographicCoordinates($geographicCoordinates = null)
     {
@@ -364,24 +364,24 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set MultipleMatchesAction value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\MultipleMatchesActionType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\MultipleMatchesActionType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\MultipleMatchesActionType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\MultipleMatchesActionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $multipleMatchesAction
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
     public function setMultipleMatchesAction($multipleMatchesAction = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\MultipleMatchesActionType::valueIsValid($multipleMatchesAction)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $multipleMatchesAction, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\MultipleMatchesActionType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\MultipleMatchesActionType::valueIsValid($multipleMatchesAction)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $multipleMatchesAction, implode(', ', \CommerceFedEx\FedExPHP\Enums\MultipleMatchesActionType::getValidValues())), __LINE__);
         }
         $this->MultipleMatchesAction = $multipleMatchesAction;
         return $this;
     }
     /**
      * Get SortDetail value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationSortDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationSortDetail|null
      */
     public function getSortDetail()
     {
@@ -389,17 +389,17 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set SortDetail value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationSortDetail $sortDetail
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationSortDetail $sortDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
-    public function setSortDetail(\NicholasCreativeMedia\FedExPHP\Structs\LocationSortDetail $sortDetail = null)
+    public function setSortDetail(\CommerceFedEx\FedExPHP\Structs\LocationSortDetail $sortDetail = null)
     {
         $this->SortDetail = $sortDetail;
         return $this;
     }
     /**
      * Get Constraints value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationConstraints|null
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationConstraints|null
      */
     public function getConstraints()
     {
@@ -407,10 +407,10 @@ class SearchLocationsRequest extends AbstractStructBase
     }
     /**
      * Set Constraints value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationConstraints $constraints
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @param \CommerceFedEx\FedExPHP\Structs\SearchLocationConstraints $constraints
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
-    public function setConstraints(\NicholasCreativeMedia\FedExPHP\Structs\SearchLocationConstraints $constraints = null)
+    public function setConstraints(\CommerceFedEx\FedExPHP\Structs\SearchLocationConstraints $constraints = null)
     {
         $this->Constraints = $constraints;
         return $this;
@@ -421,7 +421,7 @@ class SearchLocationsRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\SearchLocationsRequest
+     * @return \CommerceFedEx\FedExPHP\Structs\SearchLocationsRequest
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -39,7 +39,7 @@ class CompletedHazardousSummaryDetail extends AbstractStructBase
     /**
      * Set SmallQuantityExceptionPackageCount value
      * @param int $smallQuantityExceptionPackageCount
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousSummaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousSummaryDetail
      */
     public function setSmallQuantityExceptionPackageCount($smallQuantityExceptionPackageCount = null)
     {
@@ -56,7 +56,7 @@ class CompletedHazardousSummaryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHazardousSummaryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHazardousSummaryDetail
      */
     public static function __set_state(array $array)
     {

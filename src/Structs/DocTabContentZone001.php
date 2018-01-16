@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,13 +15,13 @@ class DocTabContentZone001 extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 12
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification[]
+     * @var \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification[]
      */
     public $DocTabZoneSpecifications;
     /**
      * Constructor method for DocTabContentZone001
      * @uses DocTabContentZone001::setDocTabZoneSpecifications()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification[] $docTabZoneSpecifications
+     * @param \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification[] $docTabZoneSpecifications
      */
     public function __construct(array $docTabZoneSpecifications = array())
     {
@@ -30,7 +30,7 @@ class DocTabContentZone001 extends AbstractStructBase
     }
     /**
      * Get DocTabZoneSpecifications value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification[]
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification[]
      */
     public function getDocTabZoneSpecifications()
     {
@@ -39,15 +39,15 @@ class DocTabContentZone001 extends AbstractStructBase
     /**
      * Set DocTabZoneSpecifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification[] $docTabZoneSpecifications
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabContentZone001
+     * @param \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification[] $docTabZoneSpecifications
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabContentZone001
      */
     public function setDocTabZoneSpecifications(array $docTabZoneSpecifications = array())
     {
         foreach ($docTabZoneSpecifications as $docTabContentZone001DocTabZoneSpecificationsItem) {
             // validation for constraint: itemType
-            if (!$docTabContentZone001DocTabZoneSpecificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification) {
-                throw new \InvalidArgumentException(sprintf('The DocTabZoneSpecifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification, "%s" given', is_object($docTabContentZone001DocTabZoneSpecificationsItem) ? get_class($docTabContentZone001DocTabZoneSpecificationsItem) : gettype($docTabContentZone001DocTabZoneSpecificationsItem)), __LINE__);
+            if (!$docTabContentZone001DocTabZoneSpecificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification) {
+                throw new \InvalidArgumentException(sprintf('The DocTabZoneSpecifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification, "%s" given', is_object($docTabContentZone001DocTabZoneSpecificationsItem) ? get_class($docTabContentZone001DocTabZoneSpecificationsItem) : gettype($docTabContentZone001DocTabZoneSpecificationsItem)), __LINE__);
             }
         }
         $this->DocTabZoneSpecifications = $docTabZoneSpecifications;
@@ -56,14 +56,14 @@ class DocTabContentZone001 extends AbstractStructBase
     /**
      * Add item to DocTabZoneSpecifications value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabContentZone001
+     * @param \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification $item
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabContentZone001
      */
-    public function addToDocTabZoneSpecifications(\NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification $item)
+    public function addToDocTabZoneSpecifications(\CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification) {
-            throw new \InvalidArgumentException(sprintf('The DocTabZoneSpecifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DocTabZoneSpecification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification) {
+            throw new \InvalidArgumentException(sprintf('The DocTabZoneSpecifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\DocTabZoneSpecification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DocTabZoneSpecifications[] = $item;
         return $this;
@@ -74,7 +74,7 @@ class DocTabContentZone001 extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabContentZone001
+     * @return \CommerceFedEx\FedExPHP\Structs\DocTabContentZone001
      */
     public static function __set_state(array $array)
     {

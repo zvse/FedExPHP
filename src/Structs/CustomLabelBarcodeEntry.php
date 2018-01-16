@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -16,7 +16,7 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
      * The Position
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public $Position;
     /**
@@ -64,14 +64,14 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
      * @uses CustomLabelBarcodeEntry::setDataFields()
      * @uses CustomLabelBarcodeEntry::setBarHeight()
      * @uses CustomLabelBarcodeEntry::setThinBarWidth()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position
      * @param string $barcodeSymbology
      * @param string $format
      * @param string[] $dataFields
      * @param int $barHeight
      * @param int $thinBarWidth
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position = null, $barcodeSymbology = null, $format = null, array $dataFields = array(), $barHeight = null, $thinBarWidth = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position = null, $barcodeSymbology = null, $format = null, array $dataFields = array(), $barHeight = null, $thinBarWidth = null)
     {
         $this
             ->setPosition($position)
@@ -83,7 +83,7 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
     }
     /**
      * Get Position value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
      */
     public function getPosition()
     {
@@ -91,10 +91,10 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
     }
     /**
      * Set Position value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBarcodeEntry
+     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBarcodeEntry
      */
-    public function setPosition(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position = null)
+    public function setPosition(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position = null)
     {
         $this->Position = $position;
         return $this;
@@ -109,17 +109,17 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
     }
     /**
      * Set BarcodeSymbology value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BarcodeSymbologyType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BarcodeSymbologyType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\BarcodeSymbologyType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\BarcodeSymbologyType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $barcodeSymbology
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBarcodeEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBarcodeEntry
      */
     public function setBarcodeSymbology($barcodeSymbology = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\BarcodeSymbologyType::valueIsValid($barcodeSymbology)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $barcodeSymbology, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\BarcodeSymbologyType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\BarcodeSymbologyType::valueIsValid($barcodeSymbology)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $barcodeSymbology, implode(', ', \CommerceFedEx\FedExPHP\Enums\BarcodeSymbologyType::getValidValues())), __LINE__);
         }
         $this->BarcodeSymbology = $barcodeSymbology;
         return $this;
@@ -135,7 +135,7 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
     /**
      * Set Format value
      * @param string $format
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBarcodeEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBarcodeEntry
      */
     public function setFormat($format = null)
     {
@@ -158,7 +158,7 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
      * Set DataFields value
      * @throws \InvalidArgumentException
      * @param string[] $dataFields
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBarcodeEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBarcodeEntry
      */
     public function setDataFields(array $dataFields = array())
     {
@@ -175,7 +175,7 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
      * Add item to DataFields value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBarcodeEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBarcodeEntry
      */
     public function addToDataFields($item)
     {
@@ -197,7 +197,7 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
     /**
      * Set BarHeight value
      * @param int $barHeight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBarcodeEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBarcodeEntry
      */
     public function setBarHeight($barHeight = null)
     {
@@ -219,7 +219,7 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
     /**
      * Set ThinBarWidth value
      * @param int $thinBarWidth
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBarcodeEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBarcodeEntry
      */
     public function setThinBarWidth($thinBarWidth = null)
     {
@@ -236,7 +236,7 @@ class CustomLabelBarcodeEntry extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelBarcodeEntry
+     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelBarcodeEntry
      */
     public static function __set_state(array $array)
     {

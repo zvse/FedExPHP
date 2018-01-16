@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,7 +17,7 @@ class CompletedFreightPickupDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Describes the origin service center handling the pickup.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public $Origin;
     /**
@@ -26,7 +26,7 @@ class CompletedFreightPickupDetail extends AbstractStructBase
      * - documentation: Describes the results for each line item in the original request.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem[]
+     * @var \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem[]
      */
     public $LineItems;
     /**
@@ -42,7 +42,7 @@ class CompletedFreightPickupDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total weight from all line items from request.
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
      */
     public $TotalWeight;
     /**
@@ -69,14 +69,14 @@ class CompletedFreightPickupDetail extends AbstractStructBase
      * @uses CompletedFreightPickupDetail::setTotalWeight()
      * @uses CompletedFreightPickupDetail::setTotalHandlingUnits()
      * @uses CompletedFreightPickupDetail::setStatus()
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $origin
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem[] $lineItems
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $origin
+     * @param \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem[] $lineItems
      * @param int $totalPieces
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight
      * @param int $totalHandlingUnits
      * @param string $status
      */
-    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $origin = null, array $lineItems = array(), $totalPieces = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight = null, $totalHandlingUnits = null, $status = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $origin = null, array $lineItems = array(), $totalPieces = null, \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight = null, $totalHandlingUnits = null, $status = null)
     {
         $this
             ->setOrigin($origin)
@@ -88,7 +88,7 @@ class CompletedFreightPickupDetail extends AbstractStructBase
     }
     /**
      * Get Origin value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail|null
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail|null
      */
     public function getOrigin()
     {
@@ -96,17 +96,17 @@ class CompletedFreightPickupDetail extends AbstractStructBase
     }
     /**
      * Set Origin value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $origin
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $origin
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail
      */
-    public function setOrigin(\NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $origin = null)
+    public function setOrigin(\CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $origin = null)
     {
         $this->Origin = $origin;
         return $this;
     }
     /**
      * Get LineItems value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem[]|null
      */
     public function getLineItems()
     {
@@ -115,15 +115,15 @@ class CompletedFreightPickupDetail extends AbstractStructBase
     /**
      * Set LineItems value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem[] $lineItems
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem[] $lineItems
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail
      */
     public function setLineItems(array $lineItems = array())
     {
         foreach ($lineItems as $completedFreightPickupDetailLineItemsItem) {
             // validation for constraint: itemType
-            if (!$completedFreightPickupDetailLineItemsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem) {
-                throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem, "%s" given', is_object($completedFreightPickupDetailLineItemsItem) ? get_class($completedFreightPickupDetailLineItemsItem) : gettype($completedFreightPickupDetailLineItemsItem)), __LINE__);
+            if (!$completedFreightPickupDetailLineItemsItem instanceof \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem) {
+                throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem, "%s" given', is_object($completedFreightPickupDetailLineItemsItem) ? get_class($completedFreightPickupDetailLineItemsItem) : gettype($completedFreightPickupDetailLineItemsItem)), __LINE__);
             }
         }
         $this->LineItems = $lineItems;
@@ -132,14 +132,14 @@ class CompletedFreightPickupDetail extends AbstractStructBase
     /**
      * Add item to LineItems value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail
      */
-    public function addToLineItems(\NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem $item)
+    public function addToLineItems(\CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem) {
-            throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem) {
+            throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->LineItems[] = $item;
         return $this;
@@ -155,7 +155,7 @@ class CompletedFreightPickupDetail extends AbstractStructBase
     /**
      * Set TotalPieces value
      * @param int $totalPieces
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail
      */
     public function setTotalPieces($totalPieces = null)
     {
@@ -168,7 +168,7 @@ class CompletedFreightPickupDetail extends AbstractStructBase
     }
     /**
      * Get TotalWeight value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
      */
     public function getTotalWeight()
     {
@@ -176,10 +176,10 @@ class CompletedFreightPickupDetail extends AbstractStructBase
     }
     /**
      * Set TotalWeight value
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail
      */
-    public function setTotalWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight = null)
+    public function setTotalWeight(\CommerceFedEx\FedExPHP\Structs\Weight $totalWeight = null)
     {
         $this->TotalWeight = $totalWeight;
         return $this;
@@ -195,7 +195,7 @@ class CompletedFreightPickupDetail extends AbstractStructBase
     /**
      * Set TotalHandlingUnits value
      * @param int $totalHandlingUnits
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail
      */
     public function setTotalHandlingUnits($totalHandlingUnits = null)
     {
@@ -216,17 +216,17 @@ class CompletedFreightPickupDetail extends AbstractStructBase
     }
     /**
      * Set Status value
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupEventType::valueIsValid()
-     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupEventType::getValidValues()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupEventType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\PickupEventType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $status
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail
      */
     public function setStatus($status = null)
     {
         // validation for constraint: enumeration
-        if (!\NicholasCreativeMedia\FedExPHP\Enums\PickupEventType::valueIsValid($status)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PickupEventType::getValidValues())), __LINE__);
+        if (!\CommerceFedEx\FedExPHP\Enums\PickupEventType::valueIsValid($status)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \CommerceFedEx\FedExPHP\Enums\PickupEventType::getValidValues())), __LINE__);
         }
         $this->Status = $status;
         return $this;
@@ -237,7 +237,7 @@ class CompletedFreightPickupDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupDetail
      */
     public static function __set_state(array $array)
     {

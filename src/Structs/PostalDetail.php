@@ -1,6 +1,6 @@
 <?php
 
-namespace NicholasCreativeMedia\FedExPHP\Structs;
+namespace CommerceFedEx\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -43,7 +43,7 @@ class PostalDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription[]
+     * @var \CommerceFedEx\FedExPHP\Structs\LocationDescription[]
      */
     public $LocationDescriptions;
     /**
@@ -57,7 +57,7 @@ class PostalDetail extends AbstractStructBase
      * @param string $stateOrProvinceCode
      * @param string $cityFirstInitials
      * @param string $cleanedPostalCode
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription[] $locationDescriptions
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationDescription[] $locationDescriptions
      */
     public function __construct($countryCode = null, $stateOrProvinceCode = null, $cityFirstInitials = null, $cleanedPostalCode = null, array $locationDescriptions = array())
     {
@@ -79,7 +79,7 @@ class PostalDetail extends AbstractStructBase
     /**
      * Set CountryCode value
      * @param string $countryCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostalDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PostalDetail
      */
     public function setCountryCode($countryCode = null)
     {
@@ -101,7 +101,7 @@ class PostalDetail extends AbstractStructBase
     /**
      * Set StateOrProvinceCode value
      * @param string $stateOrProvinceCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostalDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PostalDetail
      */
     public function setStateOrProvinceCode($stateOrProvinceCode = null)
     {
@@ -123,7 +123,7 @@ class PostalDetail extends AbstractStructBase
     /**
      * Set CityFirstInitials value
      * @param string $cityFirstInitials
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostalDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PostalDetail
      */
     public function setCityFirstInitials($cityFirstInitials = null)
     {
@@ -145,7 +145,7 @@ class PostalDetail extends AbstractStructBase
     /**
      * Set CleanedPostalCode value
      * @param string $cleanedPostalCode
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostalDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PostalDetail
      */
     public function setCleanedPostalCode($cleanedPostalCode = null)
     {
@@ -158,7 +158,7 @@ class PostalDetail extends AbstractStructBase
     }
     /**
      * Get LocationDescriptions value
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription[]|null
+     * @return \CommerceFedEx\FedExPHP\Structs\LocationDescription[]|null
      */
     public function getLocationDescriptions()
     {
@@ -167,15 +167,15 @@ class PostalDetail extends AbstractStructBase
     /**
      * Set LocationDescriptions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription[] $locationDescriptions
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostalDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationDescription[] $locationDescriptions
+     * @return \CommerceFedEx\FedExPHP\Structs\PostalDetail
      */
     public function setLocationDescriptions(array $locationDescriptions = array())
     {
         foreach ($locationDescriptions as $postalDetailLocationDescriptionsItem) {
             // validation for constraint: itemType
-            if (!$postalDetailLocationDescriptionsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription) {
-                throw new \InvalidArgumentException(sprintf('The LocationDescriptions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription, "%s" given', is_object($postalDetailLocationDescriptionsItem) ? get_class($postalDetailLocationDescriptionsItem) : gettype($postalDetailLocationDescriptionsItem)), __LINE__);
+            if (!$postalDetailLocationDescriptionsItem instanceof \CommerceFedEx\FedExPHP\Structs\LocationDescription) {
+                throw new \InvalidArgumentException(sprintf('The LocationDescriptions property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationDescription, "%s" given', is_object($postalDetailLocationDescriptionsItem) ? get_class($postalDetailLocationDescriptionsItem) : gettype($postalDetailLocationDescriptionsItem)), __LINE__);
             }
         }
         $this->LocationDescriptions = $locationDescriptions;
@@ -184,14 +184,14 @@ class PostalDetail extends AbstractStructBase
     /**
      * Add item to LocationDescriptions value
      * @throws \InvalidArgumentException
-     * @param \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription $item
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostalDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\LocationDescription $item
+     * @return \CommerceFedEx\FedExPHP\Structs\PostalDetail
      */
-    public function addToLocationDescriptions(\NicholasCreativeMedia\FedExPHP\Structs\LocationDescription $item)
+    public function addToLocationDescriptions(\CommerceFedEx\FedExPHP\Structs\LocationDescription $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription) {
-            throw new \InvalidArgumentException(sprintf('The LocationDescriptions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\LocationDescription, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\LocationDescription) {
+            throw new \InvalidArgumentException(sprintf('The LocationDescriptions property can only contain items of \CommerceFedEx\FedExPHP\Structs\LocationDescription, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->LocationDescriptions[] = $item;
         return $this;
@@ -202,7 +202,7 @@ class PostalDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostalDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\PostalDetail
      */
     public static function __set_state(array $array)
     {
