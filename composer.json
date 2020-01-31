@@ -1,5 +1,5 @@
 {
-  "name": "commercefedex/fedexphp",
+  "name": "nicholascreativemedia/fedexphp",
   "type": "library",
   "homepage": "https://github.com/CommerceFedEx/FedExPHP",
   "description": "FedEx PHP package. Classes generated using wsdltophp/packagegenerator",
