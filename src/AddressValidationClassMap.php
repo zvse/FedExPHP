@@ -1,6 +1,6 @@
 <?php
 
-namespace CommerceFedEx\FedExPHP;
+namespace NicholasCreativeMedia\FedExPHP;
 
 /**
  * Class which returns the class map definition

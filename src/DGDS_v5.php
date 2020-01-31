@@ -1,12 +1,12 @@
 <?php
 
-namespace CommerceFedEx\FedExPHP;
+namespace NicholasCreativeMedia\FedExPHP;
 
 /**
  * Class which returns the class map definition
  * @package
  */
-class DGDS_v5.wsdlClassMap
+class DGDS_v5
 {
     /**
      * Returns the mapping between the WSDL Structs and generated Structs' classes

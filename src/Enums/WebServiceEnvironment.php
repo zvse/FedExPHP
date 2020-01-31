@@ -1,6 +1,6 @@
 <?php
 
-namespace CommerceFedEx\FedExPHP\Enums;
+namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
  * This class stands for WebServiceEnvironment Enums

@@ -1,6 +1,6 @@
 <?php
 
-namespace CommerceFedEx\FedExPHP\Structs;
+namespace NicholasCreativeMedia\FedExPHP\Structs;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 

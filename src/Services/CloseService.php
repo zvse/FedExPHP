@@ -1,6 +1,6 @@
 <?php
 
-namespace CommerceFedEx\FedExPHP\Services;
+namespace NicholasCreativeMedia\FedExPHP\Services;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
