@@ -16,7 +16,7 @@ class Weight extends AbstractStructBase
      * The Units
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the unit of measure associated with a weight value.
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var string
      */
     public $Units;
@@ -24,7 +24,7 @@ class Weight extends AbstractStructBase
      * The Value
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the weight value of a package/shipment.
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var float
      */
     public $Value;
@@ -43,7 +43,7 @@ class Weight extends AbstractStructBase
     }
     /**
      * Get Units value
-     * @return string|null
+     * @return string
      */
     public function getUnits()
     {
@@ -68,7 +68,7 @@ class Weight extends AbstractStructBase
     }
     /**
      * Get Value value
-     * @return float|null
+     * @return float
      */
     public function getValue()
     {

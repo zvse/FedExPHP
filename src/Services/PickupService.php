@@ -8,7 +8,7 @@ use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
  * This class stands for all operations
  * @subpackage Services
  */
-class PickupService extends FedExService
+class Service extends AbstractSoapClientBase
 {
 
     /**
@@ -22,13 +22,13 @@ class PickupService extends FedExService
         if ($mode === false) $mode = 'test';
         if ($mode === true) $mode = 'live';
         $default_options = [
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'PickupService_v13.wsdl',
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'PickupService_v20.wsdl',
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\PickupClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('disp',13,0,0);
+        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('disp',20,0,0);
     }
     /**
      * Method to call the operation originally named getPickupAvailability

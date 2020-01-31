@@ -13,14 +13,14 @@ class Money extends AbstractStructBase
     /**
      * The Currency
      * Meta informations extracted from the WSDL
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var string
      */
     public $Currency;
     /**
      * The Amount
      * Meta informations extracted from the WSDL
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var float
      */
     public $Amount;
@@ -39,7 +39,7 @@ class Money extends AbstractStructBase
     }
     /**
      * Get Currency value
-     * @return string|null
+     * @return string
      */
     public function getCurrency()
     {
@@ -61,7 +61,7 @@ class Money extends AbstractStructBase
     }
     /**
      * Get Amount value
-     * @return float|null
+     * @return float
      */
     public function getAmount()
     {

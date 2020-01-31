@@ -29,11 +29,6 @@ class UploadDocumentType
      */
     const VALUE_NAFTA_CERTIFICATE_OF_ORIGIN = 'NAFTA_CERTIFICATE_OF_ORIGIN';
     /**
-     * Constant for value 'NET_RATE_SHEET'
-     * @return string 'NET_RATE_SHEET'
-     */
-    const VALUE_NET_RATE_SHEET = 'NET_RATE_SHEET';
-    /**
      * Constant for value 'OTHER'
      * @return string 'OTHER'
      */
@@ -59,7 +54,6 @@ class UploadDocumentType
      * @uses self::VALUE_COMMERCIAL_INVOICE
      * @uses self::VALUE_ETD_LABEL
      * @uses self::VALUE_NAFTA_CERTIFICATE_OF_ORIGIN
-     * @uses self::VALUE_NET_RATE_SHEET
      * @uses self::VALUE_OTHER
      * @uses self::VALUE_PRO_FORMA_INVOICE
      * @return string[]
@@ -71,7 +65,6 @@ class UploadDocumentType
             self::VALUE_COMMERCIAL_INVOICE,
             self::VALUE_ETD_LABEL,
             self::VALUE_NAFTA_CERTIFICATE_OF_ORIGIN,
-            self::VALUE_NET_RATE_SHEET,
             self::VALUE_OTHER,
             self::VALUE_PRO_FORMA_INVOICE,
         );

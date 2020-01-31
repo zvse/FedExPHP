@@ -170,17 +170,14 @@ class FreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Set Service value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues()
-     * @throws \InvalidArgumentException
      * @param string $service
      * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setService($service = null)
     {
-        // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid($service)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $service, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
+        // validation for constraint: string
+        if (!is_null($service) && !is_string($service)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($service)), __LINE__);
         }
         $this->Service = $service;
         return $this;

@@ -99,6 +99,13 @@ class ShippingDocumentSpecification extends AbstractStructBase
      */
     public $FreightAddressLabelDetail;
     /**
+     * The FreightBillOfLadingDetail
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\FreightBillOfLadingDetail
+     */
+    public $FreightBillOfLadingDetail;
+    /**
      * The ReturnInstructionsDetail
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the production of the return instructions document.
@@ -119,6 +126,7 @@ class ShippingDocumentSpecification extends AbstractStructBase
      * @uses ShippingDocumentSpecification::setOp900Detail()
      * @uses ShippingDocumentSpecification::setDangerousGoodsShippersDeclarationDetail()
      * @uses ShippingDocumentSpecification::setFreightAddressLabelDetail()
+     * @uses ShippingDocumentSpecification::setFreightBillOfLadingDetail()
      * @uses ShippingDocumentSpecification::setReturnInstructionsDetail()
      * @param string[] $shippingDocumentTypes
      * @param \CommerceFedEx\FedExPHP\Structs\CertificateOfOriginDetail $certificateOfOrigin
@@ -131,9 +139,10 @@ class ShippingDocumentSpecification extends AbstractStructBase
      * @param \CommerceFedEx\FedExPHP\Structs\Op900Detail $op900Detail
      * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail $dangerousGoodsShippersDeclarationDetail
      * @param \CommerceFedEx\FedExPHP\Structs\FreightAddressLabelDetail $freightAddressLabelDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightBillOfLadingDetail $freightBillOfLadingDetail
      * @param \CommerceFedEx\FedExPHP\Structs\ReturnInstructionsDetail $returnInstructionsDetail
      */
-    public function __construct(array $shippingDocumentTypes = array(), \CommerceFedEx\FedExPHP\Structs\CertificateOfOriginDetail $certificateOfOrigin = null, \CommerceFedEx\FedExPHP\Structs\CommercialInvoiceDetail $commercialInvoiceDetail = null, array $customPackageDocumentDetail = array(), array $customShipmentDocumentDetail = array(), \CommerceFedEx\FedExPHP\Structs\ExportDeclarationDetail $exportDeclarationDetail = null, \CommerceFedEx\FedExPHP\Structs\GeneralAgencyAgreementDetail $generalAgencyAgreementDetail = null, \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail $naftaCertificateOfOriginDetail = null, \CommerceFedEx\FedExPHP\Structs\Op900Detail $op900Detail = null, \CommerceFedEx\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail $dangerousGoodsShippersDeclarationDetail = null, \CommerceFedEx\FedExPHP\Structs\FreightAddressLabelDetail $freightAddressLabelDetail = null, \CommerceFedEx\FedExPHP\Structs\ReturnInstructionsDetail $returnInstructionsDetail = null)
+    public function __construct(array $shippingDocumentTypes = array(), \CommerceFedEx\FedExPHP\Structs\CertificateOfOriginDetail $certificateOfOrigin = null, \CommerceFedEx\FedExPHP\Structs\CommercialInvoiceDetail $commercialInvoiceDetail = null, array $customPackageDocumentDetail = array(), array $customShipmentDocumentDetail = array(), \CommerceFedEx\FedExPHP\Structs\ExportDeclarationDetail $exportDeclarationDetail = null, \CommerceFedEx\FedExPHP\Structs\GeneralAgencyAgreementDetail $generalAgencyAgreementDetail = null, \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail $naftaCertificateOfOriginDetail = null, \CommerceFedEx\FedExPHP\Structs\Op900Detail $op900Detail = null, \CommerceFedEx\FedExPHP\Structs\DangerousGoodsShippersDeclarationDetail $dangerousGoodsShippersDeclarationDetail = null, \CommerceFedEx\FedExPHP\Structs\FreightAddressLabelDetail $freightAddressLabelDetail = null, \CommerceFedEx\FedExPHP\Structs\FreightBillOfLadingDetail $freightBillOfLadingDetail = null, \CommerceFedEx\FedExPHP\Structs\ReturnInstructionsDetail $returnInstructionsDetail = null)
     {
         $this
             ->setShippingDocumentTypes($shippingDocumentTypes)
@@ -147,6 +156,7 @@ class ShippingDocumentSpecification extends AbstractStructBase
             ->setOp900Detail($op900Detail)
             ->setDangerousGoodsShippersDeclarationDetail($dangerousGoodsShippersDeclarationDetail)
             ->setFreightAddressLabelDetail($freightAddressLabelDetail)
+            ->setFreightBillOfLadingDetail($freightBillOfLadingDetail)
             ->setReturnInstructionsDetail($returnInstructionsDetail);
     }
     /**
@@ -418,6 +428,24 @@ class ShippingDocumentSpecification extends AbstractStructBase
     public function setFreightAddressLabelDetail(\CommerceFedEx\FedExPHP\Structs\FreightAddressLabelDetail $freightAddressLabelDetail = null)
     {
         $this->FreightAddressLabelDetail = $freightAddressLabelDetail;
+        return $this;
+    }
+    /**
+     * Get FreightBillOfLadingDetail value
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightBillOfLadingDetail|null
+     */
+    public function getFreightBillOfLadingDetail()
+    {
+        return $this->FreightBillOfLadingDetail;
+    }
+    /**
+     * Set FreightBillOfLadingDetail value
+     * @param \CommerceFedEx\FedExPHP\Structs\FreightBillOfLadingDetail $freightBillOfLadingDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification
+     */
+    public function setFreightBillOfLadingDetail(\CommerceFedEx\FedExPHP\Structs\FreightBillOfLadingDetail $freightBillOfLadingDetail = null)
+    {
+        $this->FreightBillOfLadingDetail = $freightBillOfLadingDetail;
         return $this;
     }
     /**

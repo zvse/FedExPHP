@@ -154,6 +154,11 @@ class ServiceType
      */
     const VALUE_FEDEX_GROUND = 'FEDEX_GROUND';
     /**
+     * Constant for value 'FEDEX_INTERNATIONAL_PRIORITY_PLUS'
+     * @return string 'FEDEX_INTERNATIONAL_PRIORITY_PLUS'
+     */
+    const VALUE_FEDEX_INTERNATIONAL_PRIORITY_PLUS = 'FEDEX_INTERNATIONAL_PRIORITY_PLUS';
+    /**
      * Constant for value 'FEDEX_NEXT_DAY_AFTERNOON'
      * @return string 'FEDEX_NEXT_DAY_AFTERNOON'
      */
@@ -244,6 +249,21 @@ class ServiceType
      */
     const VALUE_SAME_DAY_CITY = 'SAME_DAY_CITY';
     /**
+     * Constant for value 'SAME_DAY_METRO_AFTERNOON'
+     * @return string 'SAME_DAY_METRO_AFTERNOON'
+     */
+    const VALUE_SAME_DAY_METRO_AFTERNOON = 'SAME_DAY_METRO_AFTERNOON';
+    /**
+     * Constant for value 'SAME_DAY_METRO_MORNING'
+     * @return string 'SAME_DAY_METRO_MORNING'
+     */
+    const VALUE_SAME_DAY_METRO_MORNING = 'SAME_DAY_METRO_MORNING';
+    /**
+     * Constant for value 'SAME_DAY_METRO_RUSH'
+     * @return string 'SAME_DAY_METRO_RUSH'
+     */
+    const VALUE_SAME_DAY_METRO_RUSH = 'SAME_DAY_METRO_RUSH';
+    /**
      * Constant for value 'SMART_POST'
      * @return string 'SMART_POST'
      */
@@ -299,6 +319,7 @@ class ServiceType
      * @uses self::VALUE_FEDEX_FREIGHT_ECONOMY
      * @uses self::VALUE_FEDEX_FREIGHT_PRIORITY
      * @uses self::VALUE_FEDEX_GROUND
+     * @uses self::VALUE_FEDEX_INTERNATIONAL_PRIORITY_PLUS
      * @uses self::VALUE_FEDEX_NEXT_DAY_AFTERNOON
      * @uses self::VALUE_FEDEX_NEXT_DAY_EARLY_MORNING
      * @uses self::VALUE_FEDEX_NEXT_DAY_END_OF_DAY
@@ -317,6 +338,9 @@ class ServiceType
      * @uses self::VALUE_PRIORITY_OVERNIGHT
      * @uses self::VALUE_SAME_DAY
      * @uses self::VALUE_SAME_DAY_CITY
+     * @uses self::VALUE_SAME_DAY_METRO_AFTERNOON
+     * @uses self::VALUE_SAME_DAY_METRO_MORNING
+     * @uses self::VALUE_SAME_DAY_METRO_RUSH
      * @uses self::VALUE_SMART_POST
      * @uses self::VALUE_STANDARD_OVERNIGHT
      * @uses self::VALUE_TRANSBORDER_DISTRIBUTION_CONSOLIDATION
@@ -354,6 +378,7 @@ class ServiceType
             self::VALUE_FEDEX_FREIGHT_ECONOMY,
             self::VALUE_FEDEX_FREIGHT_PRIORITY,
             self::VALUE_FEDEX_GROUND,
+            self::VALUE_FEDEX_INTERNATIONAL_PRIORITY_PLUS,
             self::VALUE_FEDEX_NEXT_DAY_AFTERNOON,
             self::VALUE_FEDEX_NEXT_DAY_EARLY_MORNING,
             self::VALUE_FEDEX_NEXT_DAY_END_OF_DAY,
@@ -372,6 +397,9 @@ class ServiceType
             self::VALUE_PRIORITY_OVERNIGHT,
             self::VALUE_SAME_DAY,
             self::VALUE_SAME_DAY_CITY,
+            self::VALUE_SAME_DAY_METRO_AFTERNOON,
+            self::VALUE_SAME_DAY_METRO_MORNING,
+            self::VALUE_SAME_DAY_METRO_RUSH,
             self::VALUE_SMART_POST,
             self::VALUE_STANDARD_OVERNIGHT,
             self::VALUE_TRANSBORDER_DISTRIBUTION_CONSOLIDATION,

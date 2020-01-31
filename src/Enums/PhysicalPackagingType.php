@@ -41,11 +41,6 @@ class PhysicalPackagingType
      */
     const VALUE_BUNDLE = 'BUNDLE';
     /**
-     * Constant for value 'CAGE'
-     * @return string 'CAGE'
-     */
-    const VALUE_CAGE = 'CAGE';
-    /**
      * Constant for value 'CARTON'
      * @return string 'CARTON'
      */
@@ -55,11 +50,6 @@ class PhysicalPackagingType
      * @return string 'CASE'
      */
     const VALUE_CASE = 'CASE';
-    /**
-     * Constant for value 'CHEST'
-     * @return string 'CHEST'
-     */
-    const VALUE_CHEST = 'CHEST';
     /**
      * Constant for value 'CONTAINER'
      * @return string 'CONTAINER'
@@ -96,11 +86,6 @@ class PhysicalPackagingType
      */
     const VALUE_OTHER = 'OTHER';
     /**
-     * Constant for value 'PACKAGE'
-     * @return string 'PACKAGE'
-     */
-    const VALUE_PACKAGE = 'PACKAGE';
-    /**
      * Constant for value 'PAIL'
      * @return string 'PAIL'
      */
@@ -110,11 +95,6 @@ class PhysicalPackagingType
      * @return string 'PALLET'
      */
     const VALUE_PALLET = 'PALLET';
-    /**
-     * Constant for value 'PARCEL'
-     * @return string 'PARCEL'
-     */
-    const VALUE_PARCEL = 'PARCEL';
     /**
      * Constant for value 'PIECE'
      * @return string 'PIECE'
@@ -131,16 +111,6 @@ class PhysicalPackagingType
      */
     const VALUE_ROLL = 'ROLL';
     /**
-     * Constant for value 'SACK'
-     * @return string 'SACK'
-     */
-    const VALUE_SACK = 'SACK';
-    /**
-     * Constant for value 'SHRINK_WRAPPED'
-     * @return string 'SHRINK_WRAPPED'
-     */
-    const VALUE_SHRINK_WRAPPED = 'SHRINK_WRAPPED';
-    /**
      * Constant for value 'SKID'
      * @return string 'SKID'
      */
@@ -151,20 +121,10 @@ class PhysicalPackagingType
      */
     const VALUE_TANK = 'TANK';
     /**
-     * Constant for value 'TOTE_BIN'
-     * @return string 'TOTE_BIN'
-     */
-    const VALUE_TOTE_BIN = 'TOTE_BIN';
-    /**
      * Constant for value 'TUBE'
      * @return string 'TUBE'
      */
     const VALUE_TUBE = 'TUBE';
-    /**
-     * Constant for value 'UNIT'
-     * @return string 'UNIT'
-     */
-    const VALUE_UNIT = 'UNIT';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -183,10 +143,8 @@ class PhysicalPackagingType
      * @uses self::VALUE_BOX
      * @uses self::VALUE_BUCKET
      * @uses self::VALUE_BUNDLE
-     * @uses self::VALUE_CAGE
      * @uses self::VALUE_CARTON
      * @uses self::VALUE_CASE
-     * @uses self::VALUE_CHEST
      * @uses self::VALUE_CONTAINER
      * @uses self::VALUE_CRATE
      * @uses self::VALUE_CYLINDER
@@ -194,20 +152,14 @@ class PhysicalPackagingType
      * @uses self::VALUE_ENVELOPE
      * @uses self::VALUE_HAMPER
      * @uses self::VALUE_OTHER
-     * @uses self::VALUE_PACKAGE
      * @uses self::VALUE_PAIL
      * @uses self::VALUE_PALLET
-     * @uses self::VALUE_PARCEL
      * @uses self::VALUE_PIECE
      * @uses self::VALUE_REEL
      * @uses self::VALUE_ROLL
-     * @uses self::VALUE_SACK
-     * @uses self::VALUE_SHRINK_WRAPPED
      * @uses self::VALUE_SKID
      * @uses self::VALUE_TANK
-     * @uses self::VALUE_TOTE_BIN
      * @uses self::VALUE_TUBE
-     * @uses self::VALUE_UNIT
      * @return string[]
      */
     public static function getValidValues()
@@ -219,10 +171,8 @@ class PhysicalPackagingType
             self::VALUE_BOX,
             self::VALUE_BUCKET,
             self::VALUE_BUNDLE,
-            self::VALUE_CAGE,
             self::VALUE_CARTON,
             self::VALUE_CASE,
-            self::VALUE_CHEST,
             self::VALUE_CONTAINER,
             self::VALUE_CRATE,
             self::VALUE_CYLINDER,
@@ -230,20 +180,14 @@ class PhysicalPackagingType
             self::VALUE_ENVELOPE,
             self::VALUE_HAMPER,
             self::VALUE_OTHER,
-            self::VALUE_PACKAGE,
             self::VALUE_PAIL,
             self::VALUE_PALLET,
-            self::VALUE_PARCEL,
             self::VALUE_PIECE,
             self::VALUE_REEL,
             self::VALUE_ROLL,
-            self::VALUE_SACK,
-            self::VALUE_SHRINK_WRAPPED,
             self::VALUE_SKID,
             self::VALUE_TANK,
-            self::VALUE_TOTE_BIN,
             self::VALUE_TUBE,
-            self::VALUE_UNIT,
         );
     }
     /**

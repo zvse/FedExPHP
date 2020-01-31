@@ -11,30 +11,38 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 class Commodity extends AbstractStructBase
 {
     /**
-     * The CommodityId
+     * The NumberOfPieces
      * Meta informations extracted from the WSDL
-     * - documentation: Value used to identify a commodity description; must be unique within the containing shipment.
-     * - minOccurs: 0
+     * - minOccurs: 1
+     * @var int
+     */
+    public $NumberOfPieces;
+    /**
+     * The CountryOfManufacture
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 1
      * @var string
      */
-    public $CommodityId;
+    public $CountryOfManufacture;
+    /**
+     * The Weight
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 1
+     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     */
+    public $Weight;
     /**
      * The Name
      * Meta informations extracted from the WSDL
+     * - documentation: FedEx internal commodity identifier
      * - minOccurs: 0
      * @var string
      */
     public $Name;
     /**
-     * The NumberOfPieces
-     * Meta informations extracted from the WSDL
-     * - minOccurs: 0
-     * @var int
-     */
-    public $NumberOfPieces;
-    /**
      * The Description
      * Meta informations extracted from the WSDL
+     * - documentation: A free-form description of the commodity, which could be used for customs clearance documentation.
      * - minOccurs: 0
      * @var string
      */
@@ -47,26 +55,12 @@ class Commodity extends AbstractStructBase
      */
     public $Purpose;
     /**
-     * The CountryOfManufacture
-     * Meta informations extracted from the WSDL
-     * - minOccurs: 0
-     * @var string
-     */
-    public $CountryOfManufacture;
-    /**
      * The HarmonizedCode
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
      * @var string
      */
     public $HarmonizedCode;
-    /**
-     * The Weight
-     * Meta informations extracted from the WSDL
-     * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
-     */
-    public $Weight;
     /**
      * The Quantity
      * Meta informations extracted from the WSDL
@@ -151,14 +145,13 @@ class Commodity extends AbstractStructBase
     public $NaftaDetail;
     /**
      * Constructor method for Commodity
-     * @uses Commodity::setCommodityId()
-     * @uses Commodity::setName()
      * @uses Commodity::setNumberOfPieces()
+     * @uses Commodity::setCountryOfManufacture()
+     * @uses Commodity::setWeight()
+     * @uses Commodity::setName()
      * @uses Commodity::setDescription()
      * @uses Commodity::setPurpose()
-     * @uses Commodity::setCountryOfManufacture()
      * @uses Commodity::setHarmonizedCode()
-     * @uses Commodity::setWeight()
      * @uses Commodity::setQuantity()
      * @uses Commodity::setQuantityUnits()
      * @uses Commodity::setAdditionalMeasures()
@@ -170,14 +163,13 @@ class Commodity extends AbstractStructBase
      * @uses Commodity::setCIMarksAndNumbers()
      * @uses Commodity::setPartNumber()
      * @uses Commodity::setNaftaDetail()
-     * @param string $commodityId
-     * @param string $name
      * @param int $numberOfPieces
+     * @param string $countryOfManufacture
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
+     * @param string $name
      * @param string $description
      * @param string $purpose
-     * @param string $countryOfManufacture
      * @param string $harmonizedCode
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
      * @param float $quantity
      * @param string $quantityUnits
      * @param \CommerceFedEx\FedExPHP\Structs\Measure[] $additionalMeasures
@@ -190,17 +182,16 @@ class Commodity extends AbstractStructBase
      * @param string $partNumber
      * @param \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail
      */
-    public function __construct($commodityId = null, $name = null, $numberOfPieces = null, $description = null, $purpose = null, $countryOfManufacture = null, $harmonizedCode = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, $quantity = null, $quantityUnits = null, array $additionalMeasures = array(), \CommerceFedEx\FedExPHP\Structs\Money $unitPrice = null, \CommerceFedEx\FedExPHP\Structs\Money $customsValue = null, array $exciseConditions = array(), $exportLicenseNumber = null, $exportLicenseExpirationDate = null, $cIMarksAndNumbers = null, $partNumber = null, \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail = null)
+    public function __construct($numberOfPieces = null, $countryOfManufacture = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, $name = null, $description = null, $purpose = null, $harmonizedCode = null, $quantity = null, $quantityUnits = null, array $additionalMeasures = array(), \CommerceFedEx\FedExPHP\Structs\Money $unitPrice = null, \CommerceFedEx\FedExPHP\Structs\Money $customsValue = null, array $exciseConditions = array(), $exportLicenseNumber = null, $exportLicenseExpirationDate = null, $cIMarksAndNumbers = null, $partNumber = null, \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail = null)
     {
         $this
-            ->setCommodityId($commodityId)
-            ->setName($name)
             ->setNumberOfPieces($numberOfPieces)
+            ->setCountryOfManufacture($countryOfManufacture)
+            ->setWeight($weight)
+            ->setName($name)
             ->setDescription($description)
             ->setPurpose($purpose)
-            ->setCountryOfManufacture($countryOfManufacture)
             ->setHarmonizedCode($harmonizedCode)
-            ->setWeight($weight)
             ->setQuantity($quantity)
             ->setQuantityUnits($quantityUnits)
             ->setAdditionalMeasures($additionalMeasures)
@@ -214,25 +205,65 @@ class Commodity extends AbstractStructBase
             ->setNaftaDetail($naftaDetail);
     }
     /**
-     * Get CommodityId value
-     * @return string|null
+     * Get NumberOfPieces value
+     * @return int
      */
-    public function getCommodityId()
+    public function getNumberOfPieces()
     {
-        return $this->CommodityId;
+        return $this->NumberOfPieces;
     }
     /**
-     * Set CommodityId value
-     * @param string $commodityId
+     * Set NumberOfPieces value
+     * @param int $numberOfPieces
      * @return \CommerceFedEx\FedExPHP\Structs\Commodity
      */
-    public function setCommodityId($commodityId = null)
+    public function setNumberOfPieces($numberOfPieces = null)
+    {
+        // validation for constraint: int
+        if (!is_null($numberOfPieces) && !is_numeric($numberOfPieces)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a numeric value, "%s" given', gettype($numberOfPieces)), __LINE__);
+        }
+        $this->NumberOfPieces = $numberOfPieces;
+        return $this;
+    }
+    /**
+     * Get CountryOfManufacture value
+     * @return string
+     */
+    public function getCountryOfManufacture()
+    {
+        return $this->CountryOfManufacture;
+    }
+    /**
+     * Set CountryOfManufacture value
+     * @param string $countryOfManufacture
+     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     */
+    public function setCountryOfManufacture($countryOfManufacture = null)
     {
         // validation for constraint: string
-        if (!is_null($commodityId) && !is_string($commodityId)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($commodityId)), __LINE__);
+        if (!is_null($countryOfManufacture) && !is_string($countryOfManufacture)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($countryOfManufacture)), __LINE__);
         }
-        $this->CommodityId = $commodityId;
+        $this->CountryOfManufacture = $countryOfManufacture;
+        return $this;
+    }
+    /**
+     * Get Weight value
+     * @return \CommerceFedEx\FedExPHP\Structs\Weight
+     */
+    public function getWeight()
+    {
+        return $this->Weight;
+    }
+    /**
+     * Set Weight value
+     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
+     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     */
+    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    {
+        $this->Weight = $weight;
         return $this;
     }
     /**
@@ -255,28 +286,6 @@ class Commodity extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($name)), __LINE__);
         }
         $this->Name = $name;
-        return $this;
-    }
-    /**
-     * Get NumberOfPieces value
-     * @return int|null
-     */
-    public function getNumberOfPieces()
-    {
-        return $this->NumberOfPieces;
-    }
-    /**
-     * Set NumberOfPieces value
-     * @param int $numberOfPieces
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
-     */
-    public function setNumberOfPieces($numberOfPieces = null)
-    {
-        // validation for constraint: int
-        if (!is_null($numberOfPieces) && !is_numeric($numberOfPieces)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a numeric value, "%s" given', gettype($numberOfPieces)), __LINE__);
-        }
-        $this->NumberOfPieces = $numberOfPieces;
         return $this;
     }
     /**
@@ -327,28 +336,6 @@ class Commodity extends AbstractStructBase
         return $this;
     }
     /**
-     * Get CountryOfManufacture value
-     * @return string|null
-     */
-    public function getCountryOfManufacture()
-    {
-        return $this->CountryOfManufacture;
-    }
-    /**
-     * Set CountryOfManufacture value
-     * @param string $countryOfManufacture
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
-     */
-    public function setCountryOfManufacture($countryOfManufacture = null)
-    {
-        // validation for constraint: string
-        if (!is_null($countryOfManufacture) && !is_string($countryOfManufacture)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($countryOfManufacture)), __LINE__);
-        }
-        $this->CountryOfManufacture = $countryOfManufacture;
-        return $this;
-    }
-    /**
      * Get HarmonizedCode value
      * @return string|null
      */
@@ -368,24 +355,6 @@ class Commodity extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($harmonizedCode)), __LINE__);
         }
         $this->HarmonizedCode = $harmonizedCode;
-        return $this;
-    }
-    /**
-     * Get Weight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
-     */
-    public function getWeight()
-    {
-        return $this->Weight;
-    }
-    /**
-     * Set Weight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
-     */
-    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
-    {
-        $this->Weight = $weight;
         return $this;
     }
     /**

@@ -77,6 +77,14 @@ class RequestedPackageLineItem extends AbstractStructBase
      */
     public $PhysicalPackaging;
     /**
+     * The AssociatedFreightLineItems
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: unbounded
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail[]
+     */
+    public $AssociatedFreightLineItems;
+    /**
      * The ItemDescription
      * Meta informations extracted from the WSDL
      * - documentation: Human-readable text describing the package.
@@ -117,6 +125,13 @@ class RequestedPackageLineItem extends AbstractStructBase
      */
     public $ContentRecords;
     /**
+     * The ConveyanceDetail
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail
+     */
+    public $ConveyanceDetail;
+    /**
      * Constructor method for RequestedPackageLineItem
      * @uses RequestedPackageLineItem::setSequenceNumber()
      * @uses RequestedPackageLineItem::setGroupNumber()
@@ -126,11 +141,13 @@ class RequestedPackageLineItem extends AbstractStructBase
      * @uses RequestedPackageLineItem::setWeight()
      * @uses RequestedPackageLineItem::setDimensions()
      * @uses RequestedPackageLineItem::setPhysicalPackaging()
+     * @uses RequestedPackageLineItem::setAssociatedFreightLineItems()
      * @uses RequestedPackageLineItem::setItemDescription()
      * @uses RequestedPackageLineItem::setItemDescriptionForClearance()
      * @uses RequestedPackageLineItem::setCustomerReferences()
      * @uses RequestedPackageLineItem::setSpecialServicesRequested()
      * @uses RequestedPackageLineItem::setContentRecords()
+     * @uses RequestedPackageLineItem::setConveyanceDetail()
      * @param int $sequenceNumber
      * @param int $groupNumber
      * @param int $groupPackageCount
@@ -139,13 +156,15 @@ class RequestedPackageLineItem extends AbstractStructBase
      * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
      * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
      * @param string $physicalPackaging
+     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail[] $associatedFreightLineItems
      * @param string $itemDescription
      * @param string $itemDescriptionForClearance
      * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference[] $customerReferences
      * @param \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested
      * @param \CommerceFedEx\FedExPHP\Structs\ContentRecord[] $contentRecords
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail
      */
-    public function __construct($sequenceNumber = null, $groupNumber = null, $groupPackageCount = null, \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null, \CommerceFedEx\FedExPHP\Structs\Money $insuredValue = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null, $physicalPackaging = null, $itemDescription = null, $itemDescriptionForClearance = null, array $customerReferences = array(), \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested = null, array $contentRecords = array())
+    public function __construct($sequenceNumber = null, $groupNumber = null, $groupPackageCount = null, \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null, \CommerceFedEx\FedExPHP\Structs\Money $insuredValue = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null, $physicalPackaging = null, array $associatedFreightLineItems = array(), $itemDescription = null, $itemDescriptionForClearance = null, array $customerReferences = array(), \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested = null, array $contentRecords = array(), \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail = null)
     {
         $this
             ->setSequenceNumber($sequenceNumber)
@@ -156,11 +175,13 @@ class RequestedPackageLineItem extends AbstractStructBase
             ->setWeight($weight)
             ->setDimensions($dimensions)
             ->setPhysicalPackaging($physicalPackaging)
+            ->setAssociatedFreightLineItems($associatedFreightLineItems)
             ->setItemDescription($itemDescription)
             ->setItemDescriptionForClearance($itemDescriptionForClearance)
             ->setCustomerReferences($customerReferences)
             ->setSpecialServicesRequested($specialServicesRequested)
-            ->setContentRecords($contentRecords);
+            ->setContentRecords($contentRecords)
+            ->setConveyanceDetail($conveyanceDetail);
     }
     /**
      * Get SequenceNumber value
@@ -326,6 +347,46 @@ class RequestedPackageLineItem extends AbstractStructBase
         return $this;
     }
     /**
+     * Get AssociatedFreightLineItems value
+     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail[]|null
+     */
+    public function getAssociatedFreightLineItems()
+    {
+        return $this->AssociatedFreightLineItems;
+    }
+    /**
+     * Set AssociatedFreightLineItems value
+     * @throws \InvalidArgumentException
+     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail[] $associatedFreightLineItems
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     */
+    public function setAssociatedFreightLineItems(array $associatedFreightLineItems = array())
+    {
+        foreach ($associatedFreightLineItems as $requestedPackageLineItemAssociatedFreightLineItemsItem) {
+            // validation for constraint: itemType
+            if (!$requestedPackageLineItemAssociatedFreightLineItemsItem instanceof \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail) {
+                throw new \InvalidArgumentException(sprintf('The AssociatedFreightLineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail, "%s" given', is_object($requestedPackageLineItemAssociatedFreightLineItemsItem) ? get_class($requestedPackageLineItemAssociatedFreightLineItemsItem) : gettype($requestedPackageLineItemAssociatedFreightLineItemsItem)), __LINE__);
+            }
+        }
+        $this->AssociatedFreightLineItems = $associatedFreightLineItems;
+        return $this;
+    }
+    /**
+     * Add item to AssociatedFreightLineItems value
+     * @throws \InvalidArgumentException
+     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     */
+    public function addToAssociatedFreightLineItems(\CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail $item)
+    {
+        // validation for constraint: itemType
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail) {
+            throw new \InvalidArgumentException(sprintf('The AssociatedFreightLineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        }
+        $this->AssociatedFreightLineItems[] = $item;
+        return $this;
+    }
+    /**
      * Get ItemDescription value
      * @return string|null
      */
@@ -465,6 +526,24 @@ class RequestedPackageLineItem extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('The ContentRecords property can only contain items of \CommerceFedEx\FedExPHP\Structs\ContentRecord, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ContentRecords[] = $item;
+        return $this;
+    }
+    /**
+     * Get ConveyanceDetail value
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail|null
+     */
+    public function getConveyanceDetail()
+    {
+        return $this->ConveyanceDetail;
+    }
+    /**
+     * Set ConveyanceDetail value
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     */
+    public function setConveyanceDetail(\CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail = null)
+    {
+        $this->ConveyanceDetail = $conveyanceDetail;
         return $this;
     }
     /**

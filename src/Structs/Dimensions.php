@@ -13,28 +13,28 @@ class Dimensions extends AbstractStructBase
     /**
      * The Length
      * Meta informations extracted from the WSDL
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var int
      */
     public $Length;
     /**
      * The Width
      * Meta informations extracted from the WSDL
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var int
      */
     public $Width;
     /**
      * The Height
      * Meta informations extracted from the WSDL
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var int
      */
     public $Height;
     /**
      * The Units
      * Meta informations extracted from the WSDL
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var string
      */
     public $Units;
@@ -59,7 +59,7 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Get Length value
-     * @return int|null
+     * @return int
      */
     public function getLength()
     {
@@ -81,7 +81,7 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Get Width value
-     * @return int|null
+     * @return int
      */
     public function getWidth()
     {
@@ -103,7 +103,7 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Get Height value
-     * @return int|null
+     * @return int
      */
     public function getHeight()
     {
@@ -125,7 +125,7 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Get Units value
-     * @return string|null
+     * @return string
      */
     public function getUnits()
     {

@@ -13,6 +13,14 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 class Contact extends AbstractStructBase
 {
     /**
+     * The ContactId
+     * Meta informations extracted from the WSDL
+     * - documentation: Client provided identifier corresponding to this contact information.
+     * - minOccurs: 0
+     * @var string
+     */
+    public $ContactId;
+    /**
      * The PersonName
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the contact person's name.
@@ -86,6 +94,7 @@ class Contact extends AbstractStructBase
     public $EMailAddress;
     /**
      * Constructor method for Contact
+     * @uses Contact::setContactId()
      * @uses Contact::setPersonName()
      * @uses Contact::setTitle()
      * @uses Contact::setCompanyName()
@@ -95,6 +104,7 @@ class Contact extends AbstractStructBase
      * @uses Contact::setPagerNumber()
      * @uses Contact::setFaxNumber()
      * @uses Contact::setEMailAddress()
+     * @param string $contactId
      * @param string $personName
      * @param string $title
      * @param string $companyName
@@ -105,9 +115,10 @@ class Contact extends AbstractStructBase
      * @param string $faxNumber
      * @param string $eMailAddress
      */
-    public function __construct($personName = null, $title = null, $companyName = null, $phoneNumber = null, $phoneExtension = null, $tollFreePhoneNumber = null, $pagerNumber = null, $faxNumber = null, $eMailAddress = null)
+    public function __construct($contactId = null, $personName = null, $title = null, $companyName = null, $phoneNumber = null, $phoneExtension = null, $tollFreePhoneNumber = null, $pagerNumber = null, $faxNumber = null, $eMailAddress = null)
     {
         $this
+            ->setContactId($contactId)
             ->setPersonName($personName)
             ->setTitle($title)
             ->setCompanyName($companyName)
@@ -117,6 +128,28 @@ class Contact extends AbstractStructBase
             ->setPagerNumber($pagerNumber)
             ->setFaxNumber($faxNumber)
             ->setEMailAddress($eMailAddress);
+    }
+    /**
+     * Get ContactId value
+     * @return string|null
+     */
+    public function getContactId()
+    {
+        return $this->ContactId;
+    }
+    /**
+     * Set ContactId value
+     * @param string $contactId
+     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     */
+    public function setContactId($contactId = null)
+    {
+        // validation for constraint: string
+        if (!is_null($contactId) && !is_string($contactId)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($contactId)), __LINE__);
+        }
+        $this->ContactId = $contactId;
+        return $this;
     }
     /**
      * Get PersonName value

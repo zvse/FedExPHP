@@ -8,7 +8,7 @@ use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
  * This class stands for all operations
  * @subpackage Services
  */
-class ShipService extends FedExService
+class Service extends AbstractSoapClientBase
 {
 
     /**
@@ -22,13 +22,13 @@ class ShipService extends FedExService
         if ($mode === false) $mode = 'test';
         if ($mode === true) $mode = 'live';
         $default_options = [
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'ShipService_v19.wsdl',
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'ShipService_v25.wsdl',
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\ShipClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('ship',19,0,0);
+        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('ship',25,0,0);
     }
     /**
      * Method to call the operation originally named processTag

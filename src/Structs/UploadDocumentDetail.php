@@ -25,13 +25,6 @@ class UploadDocumentDetail extends AbstractStructBase
      */
     public $CustomerReference;
     /**
-     * The DocumentProducer
-     * Meta informations extracted from the WSDL
-     * - minOccurs: 0
-     * @var string
-     */
-    public $DocumentProducer;
-    /**
      * The DocumentType
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
@@ -64,25 +57,22 @@ class UploadDocumentDetail extends AbstractStructBase
      * Constructor method for UploadDocumentDetail
      * @uses UploadDocumentDetail::setLineNumber()
      * @uses UploadDocumentDetail::setCustomerReference()
-     * @uses UploadDocumentDetail::setDocumentProducer()
      * @uses UploadDocumentDetail::setDocumentType()
      * @uses UploadDocumentDetail::setFileName()
      * @uses UploadDocumentDetail::setDocumentContent()
      * @uses UploadDocumentDetail::setExpirationDate()
      * @param int $lineNumber
      * @param string $customerReference
-     * @param string $documentProducer
      * @param string $documentType
      * @param string $fileName
      * @param string $documentContent
      * @param string $expirationDate
      */
-    public function __construct($lineNumber = null, $customerReference = null, $documentProducer = null, $documentType = null, $fileName = null, $documentContent = null, $expirationDate = null)
+    public function __construct($lineNumber = null, $customerReference = null, $documentType = null, $fileName = null, $documentContent = null, $expirationDate = null)
     {
         $this
             ->setLineNumber($lineNumber)
             ->setCustomerReference($customerReference)
-            ->setDocumentProducer($documentProducer)
             ->setDocumentType($documentType)
             ->setFileName($fileName)
             ->setDocumentContent($documentContent)
@@ -130,31 +120,6 @@ class UploadDocumentDetail extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($customerReference)), __LINE__);
         }
         $this->CustomerReference = $customerReference;
-        return $this;
-    }
-    /**
-     * Get DocumentProducer value
-     * @return string|null
-     */
-    public function getDocumentProducer()
-    {
-        return $this->DocumentProducer;
-    }
-    /**
-     * Set DocumentProducer value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::getValidValues()
-     * @throws \InvalidArgumentException
-     * @param string $documentProducer
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentDetail
-     */
-    public function setDocumentProducer($documentProducer = null)
-    {
-        // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid($documentProducer)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentProducer, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::getValidValues())), __LINE__);
-        }
-        $this->DocumentProducer = $documentProducer;
         return $this;
     }
     /**

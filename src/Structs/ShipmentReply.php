@@ -42,23 +42,33 @@ class ShipmentReply extends AbstractStructBase
      */
     public $TransactionDetail;
     /**
+     * The AdvisoryDetail
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail
+     */
+    public $AdvisoryDetail;
+    /**
      * Constructor method for ShipmentReply
      * @uses ShipmentReply::setHighestSeverity()
      * @uses ShipmentReply::setNotifications()
      * @uses ShipmentReply::setVersion()
      * @uses ShipmentReply::setTransactionDetail()
+     * @uses ShipmentReply::setAdvisoryDetail()
      * @param string $highestSeverity
      * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
      * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
      * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail = null)
     {
         $this
             ->setHighestSeverity($highestSeverity)
             ->setNotifications($notifications)
             ->setVersion($version)
-            ->setTransactionDetail($transactionDetail);
+            ->setTransactionDetail($transactionDetail)
+            ->setAdvisoryDetail($advisoryDetail);
     }
     /**
      * Get HighestSeverity value
@@ -159,6 +169,24 @@ class ShipmentReply extends AbstractStructBase
     public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
+        return $this;
+    }
+    /**
+     * Get AdvisoryDetail value
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail|null
+     */
+    public function getAdvisoryDetail()
+    {
+        return $this->AdvisoryDetail;
+    }
+    /**
+     * Set AdvisoryDetail value
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentReply
+     */
+    public function setAdvisoryDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail = null)
+    {
+        $this->AdvisoryDetail = $advisoryDetail;
         return $this;
     }
     /**

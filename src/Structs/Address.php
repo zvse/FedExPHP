@@ -17,7 +17,7 @@ class Address extends AbstractStructBase
      * The StreetLines
      * Meta informations extracted from the WSDL
      * - documentation: Combination of number, street name, etc. At least one line is required for a valid physical address; empty lines should not be included.
-     * - maxOccurs: unbounded
+     * - maxOccurs: 2
      * - minOccurs: 0
      * @var string[]
      */
@@ -79,6 +79,14 @@ class Address extends AbstractStructBase
      */
     public $Residential;
     /**
+     * The GeographicCoordinates
+     * Meta informations extracted from the WSDL
+     * - documentation: The geographic coordinates cooresponding to this address.
+     * - minOccurs: 0
+     * @var string
+     */
+    public $GeographicCoordinates;
+    /**
      * Constructor method for Address
      * @uses Address::setStreetLines()
      * @uses Address::setCity()
@@ -88,6 +96,7 @@ class Address extends AbstractStructBase
      * @uses Address::setCountryCode()
      * @uses Address::setCountryName()
      * @uses Address::setResidential()
+     * @uses Address::setGeographicCoordinates()
      * @param string[] $streetLines
      * @param string $city
      * @param string $stateOrProvinceCode
@@ -96,8 +105,9 @@ class Address extends AbstractStructBase
      * @param string $countryCode
      * @param string $countryName
      * @param bool $residential
+     * @param string $geographicCoordinates
      */
-    public function __construct(array $streetLines = array(), $city = null, $stateOrProvinceCode = null, $postalCode = null, $urbanizationCode = null, $countryCode = null, $countryName = null, $residential = null)
+    public function __construct(array $streetLines = array(), $city = null, $stateOrProvinceCode = null, $postalCode = null, $urbanizationCode = null, $countryCode = null, $countryName = null, $residential = null, $geographicCoordinates = null)
     {
         $this
             ->setStreetLines($streetLines)
@@ -107,7 +117,8 @@ class Address extends AbstractStructBase
             ->setUrbanizationCode($urbanizationCode)
             ->setCountryCode($countryCode)
             ->setCountryName($countryName)
-            ->setResidential($residential);
+            ->setResidential($residential)
+            ->setGeographicCoordinates($geographicCoordinates);
     }
     /**
      * Get StreetLines value
@@ -297,6 +308,28 @@ class Address extends AbstractStructBase
     public function setResidential($residential = null)
     {
         $this->Residential = $residential;
+        return $this;
+    }
+    /**
+     * Get GeographicCoordinates value
+     * @return string|null
+     */
+    public function getGeographicCoordinates()
+    {
+        return $this->GeographicCoordinates;
+    }
+    /**
+     * Set GeographicCoordinates value
+     * @param string $geographicCoordinates
+     * @return \CommerceFedEx\FedExPHP\Structs\Address
+     */
+    public function setGeographicCoordinates($geographicCoordinates = null)
+    {
+        // validation for constraint: string
+        if (!is_null($geographicCoordinates) && !is_string($geographicCoordinates)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($geographicCoordinates)), __LINE__);
+        }
+        $this->GeographicCoordinates = $geographicCoordinates;
         return $this;
     }
     /**

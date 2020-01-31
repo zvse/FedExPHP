@@ -46,6 +46,11 @@ class FedExLocationType
      */
     const VALUE_FEDEX_OFFICE = 'FEDEX_OFFICE';
     /**
+     * Constant for value 'FEDEX_ONSITE'
+     * @return string 'FEDEX_ONSITE'
+     */
+    const VALUE_FEDEX_ONSITE = 'FEDEX_ONSITE';
+    /**
      * Constant for value 'FEDEX_SELF_SERVICE_LOCATION'
      * @return string 'FEDEX_SELF_SERVICE_LOCATION'
      */
@@ -55,6 +60,11 @@ class FedExLocationType
      * @return string 'FEDEX_SHIPSITE'
      */
     const VALUE_FEDEX_SHIPSITE = 'FEDEX_SHIPSITE';
+    /**
+     * Constant for value 'FEDEX_SHIP_AND_GET'
+     * @return string 'FEDEX_SHIP_AND_GET'
+     */
+    const VALUE_FEDEX_SHIP_AND_GET = 'FEDEX_SHIP_AND_GET';
     /**
      * Constant for value 'FEDEX_SMART_POST_HUB'
      * @return string 'FEDEX_SMART_POST_HUB'
@@ -79,8 +89,10 @@ class FedExLocationType
      * @uses self::VALUE_FEDEX_GROUND_TERMINAL
      * @uses self::VALUE_FEDEX_HOME_DELIVERY_STATION
      * @uses self::VALUE_FEDEX_OFFICE
+     * @uses self::VALUE_FEDEX_ONSITE
      * @uses self::VALUE_FEDEX_SELF_SERVICE_LOCATION
      * @uses self::VALUE_FEDEX_SHIPSITE
+     * @uses self::VALUE_FEDEX_SHIP_AND_GET
      * @uses self::VALUE_FEDEX_SMART_POST_HUB
      * @return string[]
      */
@@ -94,8 +106,10 @@ class FedExLocationType
             self::VALUE_FEDEX_GROUND_TERMINAL,
             self::VALUE_FEDEX_HOME_DELIVERY_STATION,
             self::VALUE_FEDEX_OFFICE,
+            self::VALUE_FEDEX_ONSITE,
             self::VALUE_FEDEX_SELF_SERVICE_LOCATION,
             self::VALUE_FEDEX_SHIPSITE,
+            self::VALUE_FEDEX_SHIP_AND_GET,
             self::VALUE_FEDEX_SMART_POST_HUB,
         );
     }

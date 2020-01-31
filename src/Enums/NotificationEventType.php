@@ -24,6 +24,26 @@ class NotificationEventType
      */
     const VALUE_ON_EXCEPTION = 'ON_EXCEPTION';
     /**
+     * Constant for value 'ON_PICKUP_DRIVER_ARRIVED'
+     * @return string 'ON_PICKUP_DRIVER_ARRIVED'
+     */
+    const VALUE_ON_PICKUP_DRIVER_ARRIVED = 'ON_PICKUP_DRIVER_ARRIVED';
+    /**
+     * Constant for value 'ON_PICKUP_DRIVER_ASSIGNED'
+     * @return string 'ON_PICKUP_DRIVER_ASSIGNED'
+     */
+    const VALUE_ON_PICKUP_DRIVER_ASSIGNED = 'ON_PICKUP_DRIVER_ASSIGNED';
+    /**
+     * Constant for value 'ON_PICKUP_DRIVER_DEPARTED'
+     * @return string 'ON_PICKUP_DRIVER_DEPARTED'
+     */
+    const VALUE_ON_PICKUP_DRIVER_DEPARTED = 'ON_PICKUP_DRIVER_DEPARTED';
+    /**
+     * Constant for value 'ON_PICKUP_DRIVER_EN_ROUTE'
+     * @return string 'ON_PICKUP_DRIVER_EN_ROUTE'
+     */
+    const VALUE_ON_PICKUP_DRIVER_EN_ROUTE = 'ON_PICKUP_DRIVER_EN_ROUTE';
+    /**
      * Constant for value 'ON_SHIPMENT'
      * @return string 'ON_SHIPMENT'
      */
@@ -48,6 +68,10 @@ class NotificationEventType
      * @uses self::VALUE_ON_DELIVERY
      * @uses self::VALUE_ON_ESTIMATED_DELIVERY
      * @uses self::VALUE_ON_EXCEPTION
+     * @uses self::VALUE_ON_PICKUP_DRIVER_ARRIVED
+     * @uses self::VALUE_ON_PICKUP_DRIVER_ASSIGNED
+     * @uses self::VALUE_ON_PICKUP_DRIVER_DEPARTED
+     * @uses self::VALUE_ON_PICKUP_DRIVER_EN_ROUTE
      * @uses self::VALUE_ON_SHIPMENT
      * @uses self::VALUE_ON_TENDER
      * @return string[]
@@ -58,6 +82,10 @@ class NotificationEventType
             self::VALUE_ON_DELIVERY,
             self::VALUE_ON_ESTIMATED_DELIVERY,
             self::VALUE_ON_EXCEPTION,
+            self::VALUE_ON_PICKUP_DRIVER_ARRIVED,
+            self::VALUE_ON_PICKUP_DRIVER_ASSIGNED,
+            self::VALUE_ON_PICKUP_DRIVER_DEPARTED,
+            self::VALUE_ON_PICKUP_DRIVER_EN_ROUTE,
             self::VALUE_ON_SHIPMENT,
             self::VALUE_ON_TENDER,
         );

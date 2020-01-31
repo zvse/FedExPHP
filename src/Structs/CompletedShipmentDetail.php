@@ -32,19 +32,27 @@ class CompletedShipmentDetail extends AbstractStructBase
      */
     public $MasterTrackingId;
     /**
-     * The ServiceTypeDescription
+     * The ServiceDescription
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var string
+     * @var \CommerceFedEx\FedExPHP\Structs\ServiceDescription
      */
-    public $ServiceTypeDescription;
+    public $ServiceDescription;
     /**
      * The PackagingDescription
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var string
+     * @var \CommerceFedEx\FedExPHP\Structs\PackagingDescription
      */
     public $PackagingDescription;
+    /**
+     * The SpecialServiceDescriptions
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: unbounded
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription[]
+     */
+    public $SpecialServiceDescriptions;
     /**
      * The OperationalDetail
      * Meta informations extracted from the WSDL
@@ -108,6 +116,14 @@ class CompletedShipmentDetail extends AbstractStructBase
      */
     public $ExportComplianceStatement;
     /**
+     * The DocumentRequirements
+     * Meta informations extracted from the WSDL
+     * - documentation: This specifies what rules or requirements for documents are applicable for this shipment. This may identify required or prohibited documents.
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail
+     */
+    public $DocumentRequirements;
+    /**
      * The CompletedEtdDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
@@ -151,8 +167,9 @@ class CompletedShipmentDetail extends AbstractStructBase
      * @uses CompletedShipmentDetail::setUsDomestic()
      * @uses CompletedShipmentDetail::setCarrierCode()
      * @uses CompletedShipmentDetail::setMasterTrackingId()
-     * @uses CompletedShipmentDetail::setServiceTypeDescription()
+     * @uses CompletedShipmentDetail::setServiceDescription()
      * @uses CompletedShipmentDetail::setPackagingDescription()
+     * @uses CompletedShipmentDetail::setSpecialServiceDescriptions()
      * @uses CompletedShipmentDetail::setOperationalDetail()
      * @uses CompletedShipmentDetail::setAccessDetail()
      * @uses CompletedShipmentDetail::setTagDetail()
@@ -161,6 +178,7 @@ class CompletedShipmentDetail extends AbstractStructBase
      * @uses CompletedShipmentDetail::setShipmentRating()
      * @uses CompletedShipmentDetail::setCompletedHoldAtLocationDetail()
      * @uses CompletedShipmentDetail::setExportComplianceStatement()
+     * @uses CompletedShipmentDetail::setDocumentRequirements()
      * @uses CompletedShipmentDetail::setCompletedEtdDetail()
      * @uses CompletedShipmentDetail::setShipmentDocuments()
      * @uses CompletedShipmentDetail::setAssociatedShipments()
@@ -169,8 +187,9 @@ class CompletedShipmentDetail extends AbstractStructBase
      * @param bool $usDomestic
      * @param string $carrierCode
      * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId
-     * @param string $serviceTypeDescription
-     * @param string $packagingDescription
+     * @param \CommerceFedEx\FedExPHP\Structs\ServiceDescription $serviceDescription
+     * @param \CommerceFedEx\FedExPHP\Structs\PackagingDescription $packagingDescription
+     * @param \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription[] $specialServiceDescriptions
      * @param \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail $operationalDetail
      * @param \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessDetail $accessDetail
      * @param \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail $tagDetail
@@ -179,20 +198,22 @@ class CompletedShipmentDetail extends AbstractStructBase
      * @param \CommerceFedEx\FedExPHP\Structs\ShipmentRating $shipmentRating
      * @param \CommerceFedEx\FedExPHP\Structs\CompletedHoldAtLocationDetail $completedHoldAtLocationDetail
      * @param string $exportComplianceStatement
+     * @param \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail $documentRequirements
      * @param \CommerceFedEx\FedExPHP\Structs\CompletedEtdDetail $completedEtdDetail
      * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $shipmentDocuments
      * @param \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail[] $associatedShipments
      * @param \CommerceFedEx\FedExPHP\Structs\CompletedCodDetail $completedCodDetail
      * @param \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail[] $completedPackageDetails
      */
-    public function __construct($usDomestic = null, $carrierCode = null, \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId = null, $serviceTypeDescription = null, $packagingDescription = null, \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail $operationalDetail = null, \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessDetail $accessDetail = null, \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail $tagDetail = null, \CommerceFedEx\FedExPHP\Structs\CompletedSmartPostDetail $smartPostDetail = null, \CommerceFedEx\FedExPHP\Structs\CompletedHazardousShipmentDetail $hazardousShipmentDetail = null, \CommerceFedEx\FedExPHP\Structs\ShipmentRating $shipmentRating = null, \CommerceFedEx\FedExPHP\Structs\CompletedHoldAtLocationDetail $completedHoldAtLocationDetail = null, $exportComplianceStatement = null, \CommerceFedEx\FedExPHP\Structs\CompletedEtdDetail $completedEtdDetail = null, array $shipmentDocuments = array(), array $associatedShipments = array(), \CommerceFedEx\FedExPHP\Structs\CompletedCodDetail $completedCodDetail = null, array $completedPackageDetails = array())
+    public function __construct($usDomestic = null, $carrierCode = null, \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId = null, \CommerceFedEx\FedExPHP\Structs\ServiceDescription $serviceDescription = null, \CommerceFedEx\FedExPHP\Structs\PackagingDescription $packagingDescription = null, array $specialServiceDescriptions = array(), \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail $operationalDetail = null, \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessDetail $accessDetail = null, \CommerceFedEx\FedExPHP\Structs\CompletedTagDetail $tagDetail = null, \CommerceFedEx\FedExPHP\Structs\CompletedSmartPostDetail $smartPostDetail = null, \CommerceFedEx\FedExPHP\Structs\CompletedHazardousShipmentDetail $hazardousShipmentDetail = null, \CommerceFedEx\FedExPHP\Structs\ShipmentRating $shipmentRating = null, \CommerceFedEx\FedExPHP\Structs\CompletedHoldAtLocationDetail $completedHoldAtLocationDetail = null, $exportComplianceStatement = null, \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail $documentRequirements = null, \CommerceFedEx\FedExPHP\Structs\CompletedEtdDetail $completedEtdDetail = null, array $shipmentDocuments = array(), array $associatedShipments = array(), \CommerceFedEx\FedExPHP\Structs\CompletedCodDetail $completedCodDetail = null, array $completedPackageDetails = array())
     {
         $this
             ->setUsDomestic($usDomestic)
             ->setCarrierCode($carrierCode)
             ->setMasterTrackingId($masterTrackingId)
-            ->setServiceTypeDescription($serviceTypeDescription)
+            ->setServiceDescription($serviceDescription)
             ->setPackagingDescription($packagingDescription)
+            ->setSpecialServiceDescriptions($specialServiceDescriptions)
             ->setOperationalDetail($operationalDetail)
             ->setAccessDetail($accessDetail)
             ->setTagDetail($tagDetail)
@@ -201,6 +222,7 @@ class CompletedShipmentDetail extends AbstractStructBase
             ->setShipmentRating($shipmentRating)
             ->setCompletedHoldAtLocationDetail($completedHoldAtLocationDetail)
             ->setExportComplianceStatement($exportComplianceStatement)
+            ->setDocumentRequirements($documentRequirements)
             ->setCompletedEtdDetail($completedEtdDetail)
             ->setShipmentDocuments($shipmentDocuments)
             ->setAssociatedShipments($associatedShipments)
@@ -269,30 +291,26 @@ class CompletedShipmentDetail extends AbstractStructBase
         return $this;
     }
     /**
-     * Get ServiceTypeDescription value
-     * @return string|null
+     * Get ServiceDescription value
+     * @return \CommerceFedEx\FedExPHP\Structs\ServiceDescription|null
      */
-    public function getServiceTypeDescription()
+    public function getServiceDescription()
     {
-        return $this->ServiceTypeDescription;
+        return $this->ServiceDescription;
     }
     /**
-     * Set ServiceTypeDescription value
-     * @param string $serviceTypeDescription
+     * Set ServiceDescription value
+     * @param \CommerceFedEx\FedExPHP\Structs\ServiceDescription $serviceDescription
      * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail
      */
-    public function setServiceTypeDescription($serviceTypeDescription = null)
+    public function setServiceDescription(\CommerceFedEx\FedExPHP\Structs\ServiceDescription $serviceDescription = null)
     {
-        // validation for constraint: string
-        if (!is_null($serviceTypeDescription) && !is_string($serviceTypeDescription)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($serviceTypeDescription)), __LINE__);
-        }
-        $this->ServiceTypeDescription = $serviceTypeDescription;
+        $this->ServiceDescription = $serviceDescription;
         return $this;
     }
     /**
      * Get PackagingDescription value
-     * @return string|null
+     * @return \CommerceFedEx\FedExPHP\Structs\PackagingDescription|null
      */
     public function getPackagingDescription()
     {
@@ -300,16 +318,52 @@ class CompletedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set PackagingDescription value
-     * @param string $packagingDescription
+     * @param \CommerceFedEx\FedExPHP\Structs\PackagingDescription $packagingDescription
      * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail
      */
-    public function setPackagingDescription($packagingDescription = null)
+    public function setPackagingDescription(\CommerceFedEx\FedExPHP\Structs\PackagingDescription $packagingDescription = null)
     {
-        // validation for constraint: string
-        if (!is_null($packagingDescription) && !is_string($packagingDescription)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($packagingDescription)), __LINE__);
-        }
         $this->PackagingDescription = $packagingDescription;
+        return $this;
+    }
+    /**
+     * Get SpecialServiceDescriptions value
+     * @return \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription[]|null
+     */
+    public function getSpecialServiceDescriptions()
+    {
+        return $this->SpecialServiceDescriptions;
+    }
+    /**
+     * Set SpecialServiceDescriptions value
+     * @throws \InvalidArgumentException
+     * @param \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription[] $specialServiceDescriptions
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail
+     */
+    public function setSpecialServiceDescriptions(array $specialServiceDescriptions = array())
+    {
+        foreach ($specialServiceDescriptions as $completedShipmentDetailSpecialServiceDescriptionsItem) {
+            // validation for constraint: itemType
+            if (!$completedShipmentDetailSpecialServiceDescriptionsItem instanceof \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription) {
+                throw new \InvalidArgumentException(sprintf('The SpecialServiceDescriptions property can only contain items of \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription, "%s" given', is_object($completedShipmentDetailSpecialServiceDescriptionsItem) ? get_class($completedShipmentDetailSpecialServiceDescriptionsItem) : gettype($completedShipmentDetailSpecialServiceDescriptionsItem)), __LINE__);
+            }
+        }
+        $this->SpecialServiceDescriptions = $specialServiceDescriptions;
+        return $this;
+    }
+    /**
+     * Add item to SpecialServiceDescriptions value
+     * @throws \InvalidArgumentException
+     * @param \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail
+     */
+    public function addToSpecialServiceDescriptions(\CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription $item)
+    {
+        // validation for constraint: itemType
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription) {
+            throw new \InvalidArgumentException(sprintf('The SpecialServiceDescriptions property can only contain items of \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        }
+        $this->SpecialServiceDescriptions[] = $item;
         return $this;
     }
     /**
@@ -458,6 +512,24 @@ class CompletedShipmentDetail extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($exportComplianceStatement)), __LINE__);
         }
         $this->ExportComplianceStatement = $exportComplianceStatement;
+        return $this;
+    }
+    /**
+     * Get DocumentRequirements value
+     * @return \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail|null
+     */
+    public function getDocumentRequirements()
+    {
+        return $this->DocumentRequirements;
+    }
+    /**
+     * Set DocumentRequirements value
+     * @param \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail $documentRequirements
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail
+     */
+    public function setDocumentRequirements(\CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail $documentRequirements = null)
+    {
+        $this->DocumentRequirements = $documentRequirements;
         return $this;
     }
     /**

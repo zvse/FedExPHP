@@ -13,6 +13,14 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 class EtdDetail extends AbstractStructBase
 {
     /**
+     * The Attributes
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: unbounded
+     * - minOccurs: 0
+     * @var string[]
+     */
+    public $Attributes;
+    /**
      * The RequestedDocumentCopies
      * Meta informations extracted from the WSDL
      * - documentation: Indicates the types of shipping documents produced for the shipper by FedEx (see ShippingDocumentSpecification) which should be copied back to the shipper in the shipment result data.
@@ -31,16 +39,66 @@ class EtdDetail extends AbstractStructBase
     public $DocumentReferences;
     /**
      * Constructor method for EtdDetail
+     * @uses EtdDetail::setAttributes()
      * @uses EtdDetail::setRequestedDocumentCopies()
      * @uses EtdDetail::setDocumentReferences()
+     * @param string[] $attributes
      * @param string[] $requestedDocumentCopies
      * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[] $documentReferences
      */
-    public function __construct(array $requestedDocumentCopies = array(), array $documentReferences = array())
+    public function __construct(array $attributes = array(), array $requestedDocumentCopies = array(), array $documentReferences = array())
     {
         $this
+            ->setAttributes($attributes)
             ->setRequestedDocumentCopies($requestedDocumentCopies)
             ->setDocumentReferences($documentReferences);
+    }
+    /**
+     * Get Attributes value
+     * @return string[]|null
+     */
+    public function getAttributes()
+    {
+        return $this->Attributes;
+    }
+    /**
+     * Set Attributes value
+     * @uses \CommerceFedEx\FedExPHP\Enums\EtdAttributeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EtdAttributeType::getValidValues()
+     * @throws \InvalidArgumentException
+     * @param string[] $attributes
+     * @return \CommerceFedEx\FedExPHP\Structs\EtdDetail
+     */
+    public function setAttributes(array $attributes = array())
+    {
+        $invalidValues = array();
+        foreach ($attributes as $etdDetailAttributesItem) {
+            if (!\CommerceFedEx\FedExPHP\Enums\EtdAttributeType::valueIsValid($etdDetailAttributesItem)) {
+                $invalidValues[] = var_export($etdDetailAttributesItem);
+            }
+        }
+        if (!empty($invalidValues)) {
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\EtdAttributeType::getValidValues())), __LINE__);
+        }
+        $this->Attributes = $attributes;
+        return $this;
+    }
+    /**
+     * Add item to Attributes value
+     * @uses \CommerceFedEx\FedExPHP\Enums\EtdAttributeType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\EtdAttributeType::getValidValues()
+     * @throws \InvalidArgumentException
+     * @param string $item
+     * @return \CommerceFedEx\FedExPHP\Structs\EtdDetail
+     */
+    public function addToAttributes($item)
+    {
+        // validation for constraint: enumeration
+        if (!\CommerceFedEx\FedExPHP\Enums\EtdAttributeType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\EtdAttributeType::getValidValues())), __LINE__);
+        }
+        $this->Attributes[] = $item;
+        return $this;
     }
     /**
      * Get RequestedDocumentCopies value

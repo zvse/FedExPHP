@@ -9,10 +9,20 @@ namespace CommerceFedEx\FedExPHP\Enums;
 class SurchargeType
 {
     /**
+     * Constant for value 'ACCOUNT_NUMBER_PROCESSING_FEE'
+     * @return string 'ACCOUNT_NUMBER_PROCESSING_FEE'
+     */
+    const VALUE_ACCOUNT_NUMBER_PROCESSING_FEE = 'ACCOUNT_NUMBER_PROCESSING_FEE';
+    /**
      * Constant for value 'ADDITIONAL_HANDLING'
      * @return string 'ADDITIONAL_HANDLING'
      */
     const VALUE_ADDITIONAL_HANDLING = 'ADDITIONAL_HANDLING';
+    /**
+     * Constant for value 'ADDRESS_CORRECTION'
+     * @return string 'ADDRESS_CORRECTION'
+     */
+    const VALUE_ADDRESS_CORRECTION = 'ADDRESS_CORRECTION';
     /**
      * Constant for value 'ANCILLARY_FEE'
      * @return string 'ANCILLARY_FEE'
@@ -239,6 +249,11 @@ class SurchargeType
      */
     const VALUE_ON_CALL_PICKUP = 'ON_CALL_PICKUP';
     /**
+     * Constant for value 'ON_DEMAND_CARE'
+     * @return string 'ON_DEMAND_CARE'
+     */
+    const VALUE_ON_DEMAND_CARE = 'ON_DEMAND_CARE';
+    /**
      * Constant for value 'OTHER'
      * @return string 'OTHER'
      */
@@ -263,6 +278,31 @@ class SurchargeType
      * @return string 'OVER_DIMENSION'
      */
     const VALUE_OVER_DIMENSION = 'OVER_DIMENSION';
+    /**
+     * Constant for value 'OVER_LENGTH'
+     * @return string 'OVER_LENGTH'
+     */
+    const VALUE_OVER_LENGTH = 'OVER_LENGTH';
+    /**
+     * Constant for value 'PEAK'
+     * @return string 'PEAK'
+     */
+    const VALUE_PEAK = 'PEAK';
+    /**
+     * Constant for value 'PEAK_ADDITIONAL_HANDLING'
+     * @return string 'PEAK_ADDITIONAL_HANDLING'
+     */
+    const VALUE_PEAK_ADDITIONAL_HANDLING = 'PEAK_ADDITIONAL_HANDLING';
+    /**
+     * Constant for value 'PEAK_OVERSIZE'
+     * @return string 'PEAK_OVERSIZE'
+     */
+    const VALUE_PEAK_OVERSIZE = 'PEAK_OVERSIZE';
+    /**
+     * Constant for value 'PEAK_RESIDENTIAL_DELIVERY'
+     * @return string 'PEAK_RESIDENTIAL_DELIVERY'
+     */
+    const VALUE_PEAK_RESIDENTIAL_DELIVERY = 'PEAK_RESIDENTIAL_DELIVERY';
     /**
      * Constant for value 'PIECE_COUNT_VERIFICATION'
      * @return string 'PIECE_COUNT_VERIFICATION'
@@ -360,7 +400,9 @@ class SurchargeType
     }
     /**
      * Return allowed values
+     * @uses self::VALUE_ACCOUNT_NUMBER_PROCESSING_FEE
      * @uses self::VALUE_ADDITIONAL_HANDLING
+     * @uses self::VALUE_ADDRESS_CORRECTION
      * @uses self::VALUE_ANCILLARY_FEE
      * @uses self::VALUE_APPOINTMENT_DELIVERY
      * @uses self::VALUE_BROKER_SELECT_OPTION
@@ -406,11 +448,17 @@ class SurchargeType
      * @uses self::VALUE_NON_MACHINABLE
      * @uses self::VALUE_OFFSHORE
      * @uses self::VALUE_ON_CALL_PICKUP
+     * @uses self::VALUE_ON_DEMAND_CARE
      * @uses self::VALUE_OTHER
      * @uses self::VALUE_OUT_OF_DELIVERY_AREA
      * @uses self::VALUE_OUT_OF_PICKUP_AREA
      * @uses self::VALUE_OVERSIZE
      * @uses self::VALUE_OVER_DIMENSION
+     * @uses self::VALUE_OVER_LENGTH
+     * @uses self::VALUE_PEAK
+     * @uses self::VALUE_PEAK_ADDITIONAL_HANDLING
+     * @uses self::VALUE_PEAK_OVERSIZE
+     * @uses self::VALUE_PEAK_RESIDENTIAL_DELIVERY
      * @uses self::VALUE_PIECE_COUNT_VERIFICATION
      * @uses self::VALUE_PRE_DELIVERY_NOTIFICATION
      * @uses self::VALUE_PRIORITY_ALERT
@@ -433,7 +481,9 @@ class SurchargeType
     public static function getValidValues()
     {
         return array(
+            self::VALUE_ACCOUNT_NUMBER_PROCESSING_FEE,
             self::VALUE_ADDITIONAL_HANDLING,
+            self::VALUE_ADDRESS_CORRECTION,
             self::VALUE_ANCILLARY_FEE,
             self::VALUE_APPOINTMENT_DELIVERY,
             self::VALUE_BROKER_SELECT_OPTION,
@@ -479,11 +529,17 @@ class SurchargeType
             self::VALUE_NON_MACHINABLE,
             self::VALUE_OFFSHORE,
             self::VALUE_ON_CALL_PICKUP,
+            self::VALUE_ON_DEMAND_CARE,
             self::VALUE_OTHER,
             self::VALUE_OUT_OF_DELIVERY_AREA,
             self::VALUE_OUT_OF_PICKUP_AREA,
             self::VALUE_OVERSIZE,
             self::VALUE_OVER_DIMENSION,
+            self::VALUE_OVER_LENGTH,
+            self::VALUE_PEAK,
+            self::VALUE_PEAK_ADDITIONAL_HANDLING,
+            self::VALUE_PEAK_OVERSIZE,
+            self::VALUE_PEAK_RESIDENTIAL_DELIVERY,
             self::VALUE_PIECE_COUNT_VERIFICATION,
             self::VALUE_PRE_DELIVERY_NOTIFICATION,
             self::VALUE_PRIORITY_ALERT,

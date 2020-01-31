@@ -29,6 +29,14 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
      */
     public $Grouping;
     /**
+     * The StorageDetail
+     * Meta informations extracted from the WSDL
+     * - documentation: Specifies how to store document images.
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail
+     */
+    public $StorageDetail;
+    /**
      * The EMailDetail
      * Meta informations extracted from the WSDL
      * - documentation: Specifies how to e-mail document images.
@@ -48,18 +56,21 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
      * Constructor method for ShippingDocumentDispositionDetail
      * @uses ShippingDocumentDispositionDetail::setDispositionType()
      * @uses ShippingDocumentDispositionDetail::setGrouping()
+     * @uses ShippingDocumentDispositionDetail::setStorageDetail()
      * @uses ShippingDocumentDispositionDetail::setEMailDetail()
      * @uses ShippingDocumentDispositionDetail::setPrintDetail()
      * @param string $dispositionType
      * @param string $grouping
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail
      * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail
      * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail
      */
-    public function __construct($dispositionType = null, $grouping = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail = null)
+    public function __construct($dispositionType = null, $grouping = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail = null)
     {
         $this
             ->setDispositionType($dispositionType)
             ->setGrouping($grouping)
+            ->setStorageDetail($storageDetail)
             ->setEMailDetail($eMailDetail)
             ->setPrintDetail($printDetail);
     }
@@ -111,6 +122,24 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $grouping, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentGroupingType::getValidValues())), __LINE__);
         }
         $this->Grouping = $grouping;
+        return $this;
+    }
+    /**
+     * Get StorageDetail value
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail|null
+     */
+    public function getStorageDetail()
+    {
+        return $this->StorageDetail;
+    }
+    /**
+     * Set StorageDetail value
+     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail
+     */
+    public function setStorageDetail(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail = null)
+    {
+        $this->StorageDetail = $storageDetail;
         return $this;
     }
     /**

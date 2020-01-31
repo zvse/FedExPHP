@@ -19,6 +19,11 @@ class ServiceCategoryType
      */
     const VALUE_EXPRESS_PARCEL = 'EXPRESS_PARCEL';
     /**
+     * Constant for value 'GROUND_HOME_DELIVERY'
+     * @return string 'GROUND_HOME_DELIVERY'
+     */
+    const VALUE_GROUND_HOME_DELIVERY = 'GROUND_HOME_DELIVERY';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -32,6 +37,7 @@ class ServiceCategoryType
      * Return allowed values
      * @uses self::VALUE_EXPRESS_FREIGHT
      * @uses self::VALUE_EXPRESS_PARCEL
+     * @uses self::VALUE_GROUND_HOME_DELIVERY
      * @return string[]
      */
     public static function getValidValues()
@@ -39,6 +45,7 @@ class ServiceCategoryType
         return array(
             self::VALUE_EXPRESS_FREIGHT,
             self::VALUE_EXPRESS_PARCEL,
+            self::VALUE_GROUND_HOME_DELIVERY,
         );
     }
     /**

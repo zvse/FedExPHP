@@ -27,17 +27,27 @@ class CompletedHoldAtLocationDetail extends AbstractStructBase
      */
     public $HoldingLocationType;
     /**
+     * The HoldingLocationTypeForDisplay
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var string
+     */
+    public $HoldingLocationTypeForDisplay;
+    /**
      * Constructor method for CompletedHoldAtLocationDetail
      * @uses CompletedHoldAtLocationDetail::setHoldingLocation()
      * @uses CompletedHoldAtLocationDetail::setHoldingLocationType()
+     * @uses CompletedHoldAtLocationDetail::setHoldingLocationTypeForDisplay()
      * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocation
      * @param string $holdingLocationType
+     * @param string $holdingLocationTypeForDisplay
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocation = null, $holdingLocationType = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocation = null, $holdingLocationType = null, $holdingLocationTypeForDisplay = null)
     {
         $this
             ->setHoldingLocation($holdingLocation)
-            ->setHoldingLocationType($holdingLocationType);
+            ->setHoldingLocationType($holdingLocationType)
+            ->setHoldingLocationTypeForDisplay($holdingLocationTypeForDisplay);
     }
     /**
      * Get HoldingLocation value
@@ -80,6 +90,28 @@ class CompletedHoldAtLocationDetail extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $holdingLocationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
         }
         $this->HoldingLocationType = $holdingLocationType;
+        return $this;
+    }
+    /**
+     * Get HoldingLocationTypeForDisplay value
+     * @return string|null
+     */
+    public function getHoldingLocationTypeForDisplay()
+    {
+        return $this->HoldingLocationTypeForDisplay;
+    }
+    /**
+     * Set HoldingLocationTypeForDisplay value
+     * @param string $holdingLocationTypeForDisplay
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHoldAtLocationDetail
+     */
+    public function setHoldingLocationTypeForDisplay($holdingLocationTypeForDisplay = null)
+    {
+        // validation for constraint: string
+        if (!is_null($holdingLocationTypeForDisplay) && !is_string($holdingLocationTypeForDisplay)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($holdingLocationTypeForDisplay)), __LINE__);
+        }
+        $this->HoldingLocationTypeForDisplay = $holdingLocationTypeForDisplay;
         return $this;
     }
     /**

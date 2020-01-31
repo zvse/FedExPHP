@@ -44,10 +44,10 @@ class RequestedShippingDocumentType
      */
     const VALUE_EXPORT_DECLARATION = 'EXPORT_DECLARATION';
     /**
-     * Constant for value 'FREIGHT_ADDRESS_LABEL'
-     * @return string 'FREIGHT_ADDRESS_LABEL'
+     * Constant for value 'FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING'
+     * @return string 'FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING'
      */
-    const VALUE_FREIGHT_ADDRESS_LABEL = 'FREIGHT_ADDRESS_LABEL';
+    const VALUE_FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING = 'FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING';
     /**
      * Constant for value 'GENERAL_AGENCY_AGREEMENT'
      * @return string 'GENERAL_AGENCY_AGREEMENT'
@@ -79,6 +79,11 @@ class RequestedShippingDocumentType
      */
     const VALUE_RETURN_INSTRUCTIONS = 'RETURN_INSTRUCTIONS';
     /**
+     * Constant for value 'VICS_BILL_OF_LADING'
+     * @return string 'VICS_BILL_OF_LADING'
+     */
+    const VALUE_VICS_BILL_OF_LADING = 'VICS_BILL_OF_LADING';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -97,13 +102,14 @@ class RequestedShippingDocumentType
      * @uses self::VALUE_CUSTOM_SHIPMENT_DOCUMENT
      * @uses self::VALUE_DANGEROUS_GOODS_SHIPPERS_DECLARATION
      * @uses self::VALUE_EXPORT_DECLARATION
-     * @uses self::VALUE_FREIGHT_ADDRESS_LABEL
+     * @uses self::VALUE_FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING
      * @uses self::VALUE_GENERAL_AGENCY_AGREEMENT
      * @uses self::VALUE_LABEL
      * @uses self::VALUE_NAFTA_CERTIFICATE_OF_ORIGIN
      * @uses self::VALUE_OP_900
      * @uses self::VALUE_PRO_FORMA_INVOICE
      * @uses self::VALUE_RETURN_INSTRUCTIONS
+     * @uses self::VALUE_VICS_BILL_OF_LADING
      * @return string[]
      */
     public static function getValidValues()
@@ -116,13 +122,14 @@ class RequestedShippingDocumentType
             self::VALUE_CUSTOM_SHIPMENT_DOCUMENT,
             self::VALUE_DANGEROUS_GOODS_SHIPPERS_DECLARATION,
             self::VALUE_EXPORT_DECLARATION,
-            self::VALUE_FREIGHT_ADDRESS_LABEL,
+            self::VALUE_FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING,
             self::VALUE_GENERAL_AGENCY_AGREEMENT,
             self::VALUE_LABEL,
             self::VALUE_NAFTA_CERTIFICATE_OF_ORIGIN,
             self::VALUE_OP_900,
             self::VALUE_PRO_FORMA_INVOICE,
             self::VALUE_RETURN_INSTRUCTIONS,
+            self::VALUE_VICS_BILL_OF_LADING,
         );
     }
     /**

@@ -39,7 +39,6 @@ class FreightServiceCenterDetail extends AbstractStructBase
     /**
      * The LocalService
      * Meta informations extracted from the WSDL
-     * - documentation: Service branding which may be used for local pickup or delivery, distinct from service used for line-haul of customer's shipment.
      * - minOccurs: 0
      * @var string
      */
@@ -217,17 +216,14 @@ class FreightServiceCenterDetail extends AbstractStructBase
     }
     /**
      * Set LocalService value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues()
-     * @throws \InvalidArgumentException
      * @param string $localService
      * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setLocalService($localService = null)
     {
-        // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid($localService)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $localService, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
+        // validation for constraint: string
+        if (!is_null($localService) && !is_string($localService)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($localService)), __LINE__);
         }
         $this->LocalService = $localService;
         return $this;

@@ -73,6 +73,13 @@ class PickupAvailabilityReply extends AbstractStructBase
      */
     public $CloseTime;
     /**
+     * The OpenTime
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var string
+     */
+    public $OpenTime;
+    /**
      * The LocalTime
      * Meta informations extracted from the WSDL
      * - documentation: Local time of the service center that will service the pickup
@@ -90,6 +97,7 @@ class PickupAvailabilityReply extends AbstractStructBase
      * @uses PickupAvailabilityReply::setOptions()
      * @uses PickupAvailabilityReply::setCloseTimeType()
      * @uses PickupAvailabilityReply::setCloseTime()
+     * @uses PickupAvailabilityReply::setOpenTime()
      * @uses PickupAvailabilityReply::setLocalTime()
      * @param string $highestSeverity
      * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
@@ -99,9 +107,10 @@ class PickupAvailabilityReply extends AbstractStructBase
      * @param \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption[] $options
      * @param string $closeTimeType
      * @param string $closeTime
+     * @param string $openTime
      * @param string $localTime
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $requestTimestamp = null, array $options = array(), $closeTimeType = null, $closeTime = null, $localTime = null)
+    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $requestTimestamp = null, array $options = array(), $closeTimeType = null, $closeTime = null, $openTime = null, $localTime = null)
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -112,6 +121,7 @@ class PickupAvailabilityReply extends AbstractStructBase
             ->setOptions($options)
             ->setCloseTimeType($closeTimeType)
             ->setCloseTime($closeTime)
+            ->setOpenTime($openTime)
             ->setLocalTime($localTime);
     }
     /**
@@ -322,6 +332,28 @@ class PickupAvailabilityReply extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($closeTime)), __LINE__);
         }
         $this->CloseTime = $closeTime;
+        return $this;
+    }
+    /**
+     * Get OpenTime value
+     * @return string|null
+     */
+    public function getOpenTime()
+    {
+        return $this->OpenTime;
+    }
+    /**
+     * Set OpenTime value
+     * @param string $openTime
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     */
+    public function setOpenTime($openTime = null)
+    {
+        // validation for constraint: string
+        if (!is_null($openTime) && !is_string($openTime)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($openTime)), __LINE__);
+        }
+        $this->OpenTime = $openTime;
         return $this;
     }
     /**

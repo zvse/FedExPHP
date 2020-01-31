@@ -13,6 +13,14 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 class FreightShipmentLineItem extends AbstractStructBase
 {
     /**
+     * The Id
+     * Meta informations extracted from the WSDL
+     * - documentation: A unique identifier assigned to this line item.
+     * - minOccurs: 0
+     * @var string
+     */
+    public $Id;
+    /**
      * The FreightClass
      * Meta informations extracted from the WSDL
      * - documentation: Freight class for this line item.
@@ -109,6 +117,7 @@ class FreightShipmentLineItem extends AbstractStructBase
     public $Volume;
     /**
      * Constructor method for FreightShipmentLineItem
+     * @uses FreightShipmentLineItem::setId()
      * @uses FreightShipmentLineItem::setFreightClass()
      * @uses FreightShipmentLineItem::setClassProvidedByCustomer()
      * @uses FreightShipmentLineItem::setHandlingUnits()
@@ -121,6 +130,7 @@ class FreightShipmentLineItem extends AbstractStructBase
      * @uses FreightShipmentLineItem::setWeight()
      * @uses FreightShipmentLineItem::setDimensions()
      * @uses FreightShipmentLineItem::setVolume()
+     * @param string $id
      * @param string $freightClass
      * @param bool $classProvidedByCustomer
      * @param int $handlingUnits
@@ -134,9 +144,10 @@ class FreightShipmentLineItem extends AbstractStructBase
      * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
      * @param \CommerceFedEx\FedExPHP\Structs\Volume $volume
      */
-    public function __construct($freightClass = null, $classProvidedByCustomer = null, $handlingUnits = null, $packaging = null, $pieces = null, $nmfcCode = null, $hazardousMaterials = null, $purchaseOrderNumber = null, $description = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null, \CommerceFedEx\FedExPHP\Structs\Volume $volume = null)
+    public function __construct($id = null, $freightClass = null, $classProvidedByCustomer = null, $handlingUnits = null, $packaging = null, $pieces = null, $nmfcCode = null, $hazardousMaterials = null, $purchaseOrderNumber = null, $description = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null, \CommerceFedEx\FedExPHP\Structs\Volume $volume = null)
     {
         $this
+            ->setId($id)
             ->setFreightClass($freightClass)
             ->setClassProvidedByCustomer($classProvidedByCustomer)
             ->setHandlingUnits($handlingUnits)
@@ -149,6 +160,28 @@ class FreightShipmentLineItem extends AbstractStructBase
             ->setWeight($weight)
             ->setDimensions($dimensions)
             ->setVolume($volume);
+    }
+    /**
+     * Get Id value
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->Id;
+    }
+    /**
+     * Set Id value
+     * @param string $id
+     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     */
+    public function setId($id = null)
+    {
+        // validation for constraint: string
+        if (!is_null($id) && !is_string($id)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($id)), __LINE__);
+        }
+        $this->Id = $id;
+        return $this;
     }
     /**
      * Get FreightClass value

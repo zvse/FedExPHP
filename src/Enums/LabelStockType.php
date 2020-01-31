@@ -14,6 +14,11 @@ class LabelStockType
      */
     const VALUE_PAPER_4_X_6 = 'PAPER_4X6';
     /**
+     * Constant for value 'PAPER_4X6.75'
+     * @return string 'PAPER_4X6.75'
+     */
+    const VALUE_PAPER_4_X_6_75 = 'PAPER_4X6.75';
+    /**
      * Constant for value 'PAPER_4X8'
      * @return string 'PAPER_4X8'
      */
@@ -49,6 +54,11 @@ class LabelStockType
      */
     const VALUE_STOCK_4_X_6 = 'STOCK_4X6';
     /**
+     * Constant for value 'STOCK_4X6.75'
+     * @return string 'STOCK_4X6.75'
+     */
+    const VALUE_STOCK_4_X_6_75 = 'STOCK_4X6.75';
+    /**
      * Constant for value 'STOCK_4X6.75_LEADING_DOC_TAB'
      * @return string 'STOCK_4X6.75_LEADING_DOC_TAB'
      */
@@ -63,6 +73,11 @@ class LabelStockType
      * @return string 'STOCK_4X8'
      */
     const VALUE_STOCK_4_X_8 = 'STOCK_4X8';
+    /**
+     * Constant for value 'STOCK_4X9'
+     * @return string 'STOCK_4X9'
+     */
+    const VALUE_STOCK_4_X_9 = 'STOCK_4X9';
     /**
      * Constant for value 'STOCK_4X9_LEADING_DOC_TAB'
      * @return string 'STOCK_4X9_LEADING_DOC_TAB'
@@ -86,6 +101,7 @@ class LabelStockType
     /**
      * Return allowed values
      * @uses self::VALUE_PAPER_4_X_6
+     * @uses self::VALUE_PAPER_4_X_6_75
      * @uses self::VALUE_PAPER_4_X_8
      * @uses self::VALUE_PAPER_4_X_9
      * @uses self::VALUE_PAPER_7_X_4_75
@@ -93,9 +109,11 @@ class LabelStockType
      * @uses self::VALUE_PAPER_8_5_X_11_TOP_HALF_LABEL
      * @uses self::VALUE_PAPER_LETTER
      * @uses self::VALUE_STOCK_4_X_6
+     * @uses self::VALUE_STOCK_4_X_6_75
      * @uses self::VALUE_STOCK_4_X_6_75_LEADING_DOC_TAB
      * @uses self::VALUE_STOCK_4_X_6_75_TRAILING_DOC_TAB
      * @uses self::VALUE_STOCK_4_X_8
+     * @uses self::VALUE_STOCK_4_X_9
      * @uses self::VALUE_STOCK_4_X_9_LEADING_DOC_TAB
      * @uses self::VALUE_STOCK_4_X_9_TRAILING_DOC_TAB
      * @return string[]
@@ -104,6 +122,7 @@ class LabelStockType
     {
         return array(
             self::VALUE_PAPER_4_X_6,
+            self::VALUE_PAPER_4_X_6_75,
             self::VALUE_PAPER_4_X_8,
             self::VALUE_PAPER_4_X_9,
             self::VALUE_PAPER_7_X_4_75,
@@ -111,9 +130,11 @@ class LabelStockType
             self::VALUE_PAPER_8_5_X_11_TOP_HALF_LABEL,
             self::VALUE_PAPER_LETTER,
             self::VALUE_STOCK_4_X_6,
+            self::VALUE_STOCK_4_X_6_75,
             self::VALUE_STOCK_4_X_6_75_LEADING_DOC_TAB,
             self::VALUE_STOCK_4_X_6_75_TRAILING_DOC_TAB,
             self::VALUE_STOCK_4_X_8,
+            self::VALUE_STOCK_4_X_9,
             self::VALUE_STOCK_4_X_9_LEADING_DOC_TAB,
             self::VALUE_STOCK_4_X_9_TRAILING_DOC_TAB,
         );

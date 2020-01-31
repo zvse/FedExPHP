@@ -18,7 +18,7 @@ class Notification extends AbstractStructBase
      * - documentation: The severity of this notification. This can indicate success or failure or some other information about the request. The values that can be returned are SUCCESS - Your transaction succeeded with no other applicable information. NOTE
      * - Additional information that may be of interest to you about your transaction. WARNING - Additional information that you need to know about your transaction that you may need to take action on. ERROR - Information about an error that occurred while
      * processing your transaction. FAILURE - FedEx was unable to process your transaction at this time due to a system failure. Please try again later
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $Severity;
@@ -26,7 +26,7 @@ class Notification extends AbstractStructBase
      * The Source
      * Meta informations extracted from the WSDL
      * - documentation: Indicates the source of this notification. Combined with the Code it uniquely identifies this notification
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $Source;
@@ -90,7 +90,7 @@ class Notification extends AbstractStructBase
     }
     /**
      * Get Severity value
-     * @return string
+     * @return string|null
      */
     public function getSeverity()
     {
@@ -115,7 +115,7 @@ class Notification extends AbstractStructBase
     }
     /**
      * Get Source value
-     * @return string
+     * @return string|null
      */
     public function getSource()
     {

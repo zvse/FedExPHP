@@ -27,6 +27,7 @@ class RequestedShipment extends AbstractStructBase
     /**
      * The ServiceType
      * Meta informations extracted from the WSDL
+     * - documentation: This field contains the service type values, like PRIORITY_OVERNIGHT and FEDEX_GROUND.
      * - minOccurs: 1
      * @var string
      */
@@ -34,6 +35,7 @@ class RequestedShipment extends AbstractStructBase
     /**
      * The PackagingType
      * Meta informations extracted from the WSDL
+     * - documentation: This field contains the packaging type values, like YOUR_PACKAGING and FEDEX_ENVELOPE.
      * - minOccurs: 1
      * @var string
      */
@@ -125,6 +127,7 @@ class RequestedShipment extends AbstractStructBase
     /**
      * The SoldTo
      * Meta informations extracted from the WSDL
+     * - documentation: The sold-to party is used for customs clearance; for example, in support of US import customs rules. The need for this field could vary based on whether a sold-to party was specified on a consolidation.
      * - minOccurs: 0
      * @var \CommerceFedEx\FedExPHP\Structs\Party
      */
@@ -415,17 +418,14 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set ServiceType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues()
-     * @throws \InvalidArgumentException
      * @param string $serviceType
      * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setServiceType($serviceType = null)
     {
-        // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ServiceType::valueIsValid($serviceType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceType::getValidValues())), __LINE__);
+        // validation for constraint: string
+        if (!is_null($serviceType) && !is_string($serviceType)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($serviceType)), __LINE__);
         }
         $this->ServiceType = $serviceType;
         return $this;
@@ -440,17 +440,14 @@ class RequestedShipment extends AbstractStructBase
     }
     /**
      * Set PackagingType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\PackagingType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\PackagingType::getValidValues()
-     * @throws \InvalidArgumentException
      * @param string $packagingType
      * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment
      */
     public function setPackagingType($packagingType = null)
     {
-        // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\PackagingType::valueIsValid($packagingType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packagingType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PackagingType::getValidValues())), __LINE__);
+        // validation for constraint: string
+        if (!is_null($packagingType) && !is_string($packagingType)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($packagingType)), __LINE__);
         }
         $this->PackagingType = $packagingType;
         return $this;

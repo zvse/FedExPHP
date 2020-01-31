@@ -13,7 +13,7 @@ class ContactAndAddress extends AbstractStructBase
     /**
      * The Contact
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var \CommerceFedEx\FedExPHP\Structs\Contact
      */
     public $Contact;
@@ -39,7 +39,7 @@ class ContactAndAddress extends AbstractStructBase
     }
     /**
      * Get Contact value
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \CommerceFedEx\FedExPHP\Structs\Contact|null
      */
     public function getContact()
     {

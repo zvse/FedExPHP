@@ -79,6 +79,11 @@ class ReturnedShippingDocumentType
      */
     const VALUE_EXPORT_DECLARATION = 'EXPORT_DECLARATION';
     /**
+     * Constant for value 'FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING'
+     * @return string 'FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING'
+     */
+    const VALUE_FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING = 'FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING';
+    /**
      * Constant for value 'FREIGHT_ADDRESS_LABEL'
      * @return string 'FREIGHT_ADDRESS_LABEL'
      */
@@ -144,6 +149,11 @@ class ReturnedShippingDocumentType
      */
     const VALUE_USPS_BARCODE = 'USPS_BARCODE';
     /**
+     * Constant for value 'VICS_BILL_OF_LADING'
+     * @return string 'VICS_BILL_OF_LADING'
+     */
+    const VALUE_VICS_BILL_OF_LADING = 'VICS_BILL_OF_LADING';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -169,6 +179,7 @@ class ReturnedShippingDocumentType
      * @uses self::VALUE_DELIVERY_ON_INVOICE_ACCEPTANCE_RETURN_LABEL
      * @uses self::VALUE_ETD_LABEL
      * @uses self::VALUE_EXPORT_DECLARATION
+     * @uses self::VALUE_FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING
      * @uses self::VALUE_FREIGHT_ADDRESS_LABEL
      * @uses self::VALUE_GENERAL_AGENCY_AGREEMENT
      * @uses self::VALUE_GROUND_BARCODE
@@ -182,6 +193,7 @@ class ReturnedShippingDocumentType
      * @uses self::VALUE_RETURN_INSTRUCTIONS
      * @uses self::VALUE_TERMS_AND_CONDITIONS
      * @uses self::VALUE_USPS_BARCODE
+     * @uses self::VALUE_VICS_BILL_OF_LADING
      * @return string[]
      */
     public static function getValidValues()
@@ -201,6 +213,7 @@ class ReturnedShippingDocumentType
             self::VALUE_DELIVERY_ON_INVOICE_ACCEPTANCE_RETURN_LABEL,
             self::VALUE_ETD_LABEL,
             self::VALUE_EXPORT_DECLARATION,
+            self::VALUE_FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING,
             self::VALUE_FREIGHT_ADDRESS_LABEL,
             self::VALUE_GENERAL_AGENCY_AGREEMENT,
             self::VALUE_GROUND_BARCODE,
@@ -214,6 +227,7 @@ class ReturnedShippingDocumentType
             self::VALUE_RETURN_INSTRUCTIONS,
             self::VALUE_TERMS_AND_CONDITIONS,
             self::VALUE_USPS_BARCODE,
+            self::VALUE_VICS_BILL_OF_LADING,
         );
     }
     /**

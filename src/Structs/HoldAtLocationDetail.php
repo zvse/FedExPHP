@@ -35,20 +35,31 @@ class HoldAtLocationDetail extends AbstractStructBase
      */
     public $LocationType;
     /**
+     * The LocationId
+     * Meta informations extracted from the WSDL
+     * - documentation: Location identification (for facilities identified by an alphanumeric location code).
+     * - minOccurs: 0
+     * @var string
+     */
+    public $LocationId;
+    /**
      * Constructor method for HoldAtLocationDetail
      * @uses HoldAtLocationDetail::setPhoneNumber()
      * @uses HoldAtLocationDetail::setLocationContactAndAddress()
      * @uses HoldAtLocationDetail::setLocationType()
+     * @uses HoldAtLocationDetail::setLocationId()
      * @param string $phoneNumber
      * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress
      * @param string $locationType
+     * @param string $locationId
      */
-    public function __construct($phoneNumber = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null, $locationType = null)
+    public function __construct($phoneNumber = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null, $locationType = null, $locationId = null)
     {
         $this
             ->setPhoneNumber($phoneNumber)
             ->setLocationContactAndAddress($locationContactAndAddress)
-            ->setLocationType($locationType);
+            ->setLocationType($locationType)
+            ->setLocationId($locationId);
     }
     /**
      * Get PhoneNumber value
@@ -113,6 +124,28 @@ class HoldAtLocationDetail extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $locationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
         }
         $this->LocationType = $locationType;
+        return $this;
+    }
+    /**
+     * Get LocationId value
+     * @return string|null
+     */
+    public function getLocationId()
+    {
+        return $this->LocationId;
+    }
+    /**
+     * Set LocationId value
+     * @param string $locationId
+     * @return \CommerceFedEx\FedExPHP\Structs\HoldAtLocationDetail
+     */
+    public function setLocationId($locationId = null)
+    {
+        // validation for constraint: string
+        if (!is_null($locationId) && !is_string($locationId)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($locationId)), __LINE__);
+        }
+        $this->LocationId = $locationId;
         return $this;
     }
     /**

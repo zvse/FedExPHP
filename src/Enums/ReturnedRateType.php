@@ -17,6 +17,11 @@ class ReturnedRateType
      */
     const VALUE_INCENTIVE = 'INCENTIVE';
     /**
+     * Constant for value 'NEGOTIATED'
+     * @return string 'NEGOTIATED'
+     */
+    const VALUE_NEGOTIATED = 'NEGOTIATED';
+    /**
      * Constant for value 'PAYOR_ACCOUNT_PACKAGE'
      * @return string 'PAYOR_ACCOUNT_PACKAGE'
      */
@@ -57,6 +62,11 @@ class ReturnedRateType
      */
     const VALUE_PREFERRED_LIST_SHIPMENT = 'PREFERRED_LIST_SHIPMENT';
     /**
+     * Constant for value 'PREFERRED_NEGOTIATED'
+     * @return string 'PREFERRED_NEGOTIATED'
+     */
+    const VALUE_PREFERRED_NEGOTIATED = 'PREFERRED_NEGOTIATED';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -69,6 +79,7 @@ class ReturnedRateType
     /**
      * Return allowed values
      * @uses self::VALUE_INCENTIVE
+     * @uses self::VALUE_NEGOTIATED
      * @uses self::VALUE_PAYOR_ACCOUNT_PACKAGE
      * @uses self::VALUE_PAYOR_ACCOUNT_SHIPMENT
      * @uses self::VALUE_PAYOR_LIST_PACKAGE
@@ -77,12 +88,14 @@ class ReturnedRateType
      * @uses self::VALUE_PREFERRED_ACCOUNT_SHIPMENT
      * @uses self::VALUE_PREFERRED_LIST_PACKAGE
      * @uses self::VALUE_PREFERRED_LIST_SHIPMENT
+     * @uses self::VALUE_PREFERRED_NEGOTIATED
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
             self::VALUE_INCENTIVE,
+            self::VALUE_NEGOTIATED,
             self::VALUE_PAYOR_ACCOUNT_PACKAGE,
             self::VALUE_PAYOR_ACCOUNT_SHIPMENT,
             self::VALUE_PAYOR_LIST_PACKAGE,
@@ -91,6 +104,7 @@ class ReturnedRateType
             self::VALUE_PREFERRED_ACCOUNT_SHIPMENT,
             self::VALUE_PREFERRED_LIST_PACKAGE,
             self::VALUE_PREFERRED_LIST_SHIPMENT,
+            self::VALUE_PREFERRED_NEGOTIATED,
         );
     }
     /**

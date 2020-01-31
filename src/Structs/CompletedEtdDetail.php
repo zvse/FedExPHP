@@ -19,6 +19,13 @@ class CompletedEtdDetail extends AbstractStructBase
      */
     public $FolderId;
     /**
+     * The Type
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var string
+     */
+    public $Type;
+    /**
      * The UploadDocumentReferenceDetails
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
@@ -29,14 +36,17 @@ class CompletedEtdDetail extends AbstractStructBase
     /**
      * Constructor method for CompletedEtdDetail
      * @uses CompletedEtdDetail::setFolderId()
+     * @uses CompletedEtdDetail::setType()
      * @uses CompletedEtdDetail::setUploadDocumentReferenceDetails()
      * @param string $folderId
+     * @param string $type
      * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentReferenceDetail[] $uploadDocumentReferenceDetails
      */
-    public function __construct($folderId = null, array $uploadDocumentReferenceDetails = array())
+    public function __construct($folderId = null, $type = null, array $uploadDocumentReferenceDetails = array())
     {
         $this
             ->setFolderId($folderId)
+            ->setType($type)
             ->setUploadDocumentReferenceDetails($uploadDocumentReferenceDetails);
     }
     /**
@@ -59,6 +69,31 @@ class CompletedEtdDetail extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($folderId)), __LINE__);
         }
         $this->FolderId = $folderId;
+        return $this;
+    }
+    /**
+     * Get Type value
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->Type;
+    }
+    /**
+     * Set Type value
+     * @uses \CommerceFedEx\FedExPHP\Enums\CompletedEtdType::valueIsValid()
+     * @uses \CommerceFedEx\FedExPHP\Enums\CompletedEtdType::getValidValues()
+     * @throws \InvalidArgumentException
+     * @param string $type
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedEtdDetail
+     */
+    public function setType($type = null)
+    {
+        // validation for constraint: enumeration
+        if (!\CommerceFedEx\FedExPHP\Enums\CompletedEtdType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\CompletedEtdType::getValidValues())), __LINE__);
+        }
+        $this->Type = $type;
         return $this;
     }
     /**

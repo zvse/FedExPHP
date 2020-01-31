@@ -116,6 +116,14 @@ class PickupAvailabilityRequest extends AbstractStructBase
      */
     public $ShipmentAttributes;
     /**
+     * The PackageDetails
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: unbounded
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail[]
+     */
+    public $PackageDetails;
+    /**
      * Constructor method for PickupAvailabilityRequest
      * @uses PickupAvailabilityRequest::setWebAuthenticationDetail()
      * @uses PickupAvailabilityRequest::setClientDetail()
@@ -131,6 +139,7 @@ class PickupAvailabilityRequest extends AbstractStructBase
      * @uses PickupAvailabilityRequest::setCustomerCloseTime()
      * @uses PickupAvailabilityRequest::setCarriers()
      * @uses PickupAvailabilityRequest::setShipmentAttributes()
+     * @uses PickupAvailabilityRequest::setPackageDetails()
      * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
      * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
      * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
@@ -145,8 +154,9 @@ class PickupAvailabilityRequest extends AbstractStructBase
      * @param string $customerCloseTime
      * @param string[] $carriers
      * @param \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes
+     * @param \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail[] $packageDetails
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $pickupType = null, \CommerceFedEx\FedExPHP\Structs\AssociatedAccount $accountNumber = null, \CommerceFedEx\FedExPHP\Structs\Address $pickupAddress = null, array $pickupRequestType = array(), $dispatchDate = null, $numberOfBusinessDays = null, $packageReadyTime = null, $customerCloseTime = null, array $carriers = array(), \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes = null)
+    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $pickupType = null, \CommerceFedEx\FedExPHP\Structs\AssociatedAccount $accountNumber = null, \CommerceFedEx\FedExPHP\Structs\Address $pickupAddress = null, array $pickupRequestType = array(), $dispatchDate = null, $numberOfBusinessDays = null, $packageReadyTime = null, $customerCloseTime = null, array $carriers = array(), \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes = null, array $packageDetails = array())
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -162,7 +172,8 @@ class PickupAvailabilityRequest extends AbstractStructBase
             ->setPackageReadyTime($packageReadyTime)
             ->setCustomerCloseTime($customerCloseTime)
             ->setCarriers($carriers)
-            ->setShipmentAttributes($shipmentAttributes);
+            ->setShipmentAttributes($shipmentAttributes)
+            ->setPackageDetails($packageDetails);
     }
     /**
      * Get WebAuthenticationDetail value
@@ -495,6 +506,46 @@ class PickupAvailabilityRequest extends AbstractStructBase
     public function setShipmentAttributes(\CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes $shipmentAttributes = null)
     {
         $this->ShipmentAttributes = $shipmentAttributes;
+        return $this;
+    }
+    /**
+     * Get PackageDetails value
+     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail[]|null
+     */
+    public function getPackageDetails()
+    {
+        return $this->PackageDetails;
+    }
+    /**
+     * Set PackageDetails value
+     * @throws \InvalidArgumentException
+     * @param \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail[] $packageDetails
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
+     */
+    public function setPackageDetails(array $packageDetails = array())
+    {
+        foreach ($packageDetails as $pickupAvailabilityRequestPackageDetailsItem) {
+            // validation for constraint: itemType
+            if (!$pickupAvailabilityRequestPackageDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail) {
+                throw new \InvalidArgumentException(sprintf('The PackageDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail, "%s" given', is_object($pickupAvailabilityRequestPackageDetailsItem) ? get_class($pickupAvailabilityRequestPackageDetailsItem) : gettype($pickupAvailabilityRequestPackageDetailsItem)), __LINE__);
+            }
+        }
+        $this->PackageDetails = $packageDetails;
+        return $this;
+    }
+    /**
+     * Add item to PackageDetails value
+     * @throws \InvalidArgumentException
+     * @param \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail $item
+     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityRequest
+     */
+    public function addToPackageDetails(\CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail $item)
+    {
+        // validation for constraint: itemType
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail) {
+            throw new \InvalidArgumentException(sprintf('The PackageDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        }
+        $this->PackageDetails[] = $item;
         return $this;
     }
     /**

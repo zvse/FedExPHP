@@ -19,6 +19,21 @@ class PickupEventType
      */
     const VALUE_CANCELED = 'CANCELED';
     /**
+     * Constant for value 'DRIVER_ARRIVED'
+     * @return string 'DRIVER_ARRIVED'
+     */
+    const VALUE_DRIVER_ARRIVED = 'DRIVER_ARRIVED';
+    /**
+     * Constant for value 'DRIVER_DEPARTED'
+     * @return string 'DRIVER_DEPARTED'
+     */
+    const VALUE_DRIVER_DEPARTED = 'DRIVER_DEPARTED';
+    /**
+     * Constant for value 'DRIVER_EN_ROUTE'
+     * @return string 'DRIVER_EN_ROUTE'
+     */
+    const VALUE_DRIVER_EN_ROUTE = 'DRIVER_EN_ROUTE';
+    /**
      * Constant for value 'EXCEPTION'
      * @return string 'EXCEPTION'
      */
@@ -47,6 +62,9 @@ class PickupEventType
      * Return allowed values
      * @uses self::VALUE_ASSIGNED_TO_DRIVER
      * @uses self::VALUE_CANCELED
+     * @uses self::VALUE_DRIVER_ARRIVED
+     * @uses self::VALUE_DRIVER_DEPARTED
+     * @uses self::VALUE_DRIVER_EN_ROUTE
      * @uses self::VALUE_EXCEPTION
      * @uses self::VALUE_PICKED_UP
      * @uses self::VALUE_SCHEDULED
@@ -57,6 +75,9 @@ class PickupEventType
         return array(
             self::VALUE_ASSIGNED_TO_DRIVER,
             self::VALUE_CANCELED,
+            self::VALUE_DRIVER_ARRIVED,
+            self::VALUE_DRIVER_DEPARTED,
+            self::VALUE_DRIVER_EN_ROUTE,
             self::VALUE_EXCEPTION,
             self::VALUE_PICKED_UP,
             self::VALUE_SCHEDULED,

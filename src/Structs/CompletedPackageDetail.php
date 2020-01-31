@@ -49,6 +49,14 @@ class CompletedPackageDetail extends AbstractStructBase
      */
     public $PackageRating;
     /**
+     * The SpecialServiceDescriptions
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: unbounded
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription[]
+     */
+    public $SpecialServiceDescriptions;
+    /**
      * The OperationalDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
@@ -109,6 +117,7 @@ class CompletedPackageDetail extends AbstractStructBase
      * @uses CompletedPackageDetail::setGroupNumber()
      * @uses CompletedPackageDetail::setOversizeClass()
      * @uses CompletedPackageDetail::setPackageRating()
+     * @uses CompletedPackageDetail::setSpecialServiceDescriptions()
      * @uses CompletedPackageDetail::setOperationalDetail()
      * @uses CompletedPackageDetail::setLabel()
      * @uses CompletedPackageDetail::setPackageDocuments()
@@ -121,6 +130,7 @@ class CompletedPackageDetail extends AbstractStructBase
      * @param int $groupNumber
      * @param string $oversizeClass
      * @param \CommerceFedEx\FedExPHP\Structs\PackageRating $packageRating
+     * @param \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription[] $specialServiceDescriptions
      * @param \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $operationalDetail
      * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label
      * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $packageDocuments
@@ -129,7 +139,7 @@ class CompletedPackageDetail extends AbstractStructBase
      * @param \CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight
      * @param \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail
      */
-    public function __construct($sequenceNumber = null, array $trackingIds = array(), $groupNumber = null, $oversizeClass = null, \CommerceFedEx\FedExPHP\Structs\PackageRating $packageRating = null, \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $operationalDetail = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label = null, array $packageDocuments = array(), \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail = null, $signatureOption = null, \CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight = null, \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail = null)
+    public function __construct($sequenceNumber = null, array $trackingIds = array(), $groupNumber = null, $oversizeClass = null, \CommerceFedEx\FedExPHP\Structs\PackageRating $packageRating = null, array $specialServiceDescriptions = array(), \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $operationalDetail = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label = null, array $packageDocuments = array(), \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail $codReturnDetail = null, $signatureOption = null, \CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight = null, \CommerceFedEx\FedExPHP\Structs\CompletedHazardousPackageDetail $hazardousPackageDetail = null)
     {
         $this
             ->setSequenceNumber($sequenceNumber)
@@ -137,6 +147,7 @@ class CompletedPackageDetail extends AbstractStructBase
             ->setGroupNumber($groupNumber)
             ->setOversizeClass($oversizeClass)
             ->setPackageRating($packageRating)
+            ->setSpecialServiceDescriptions($specialServiceDescriptions)
             ->setOperationalDetail($operationalDetail)
             ->setLabel($label)
             ->setPackageDocuments($packageDocuments)
@@ -270,6 +281,46 @@ class CompletedPackageDetail extends AbstractStructBase
     public function setPackageRating(\CommerceFedEx\FedExPHP\Structs\PackageRating $packageRating = null)
     {
         $this->PackageRating = $packageRating;
+        return $this;
+    }
+    /**
+     * Get SpecialServiceDescriptions value
+     * @return \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription[]|null
+     */
+    public function getSpecialServiceDescriptions()
+    {
+        return $this->SpecialServiceDescriptions;
+    }
+    /**
+     * Set SpecialServiceDescriptions value
+     * @throws \InvalidArgumentException
+     * @param \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription[] $specialServiceDescriptions
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
+     */
+    public function setSpecialServiceDescriptions(array $specialServiceDescriptions = array())
+    {
+        foreach ($specialServiceDescriptions as $completedPackageDetailSpecialServiceDescriptionsItem) {
+            // validation for constraint: itemType
+            if (!$completedPackageDetailSpecialServiceDescriptionsItem instanceof \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription) {
+                throw new \InvalidArgumentException(sprintf('The SpecialServiceDescriptions property can only contain items of \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription, "%s" given', is_object($completedPackageDetailSpecialServiceDescriptionsItem) ? get_class($completedPackageDetailSpecialServiceDescriptionsItem) : gettype($completedPackageDetailSpecialServiceDescriptionsItem)), __LINE__);
+            }
+        }
+        $this->SpecialServiceDescriptions = $specialServiceDescriptions;
+        return $this;
+    }
+    /**
+     * Add item to SpecialServiceDescriptions value
+     * @throws \InvalidArgumentException
+     * @param \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription $item
+     * @return \CommerceFedEx\FedExPHP\Structs\CompletedPackageDetail
+     */
+    public function addToSpecialServiceDescriptions(\CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription $item)
+    {
+        // validation for constraint: itemType
+        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription) {
+            throw new \InvalidArgumentException(sprintf('The SpecialServiceDescriptions property can only contain items of \CommerceFedEx\FedExPHP\Structs\SpecialServiceDescription, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        }
+        $this->SpecialServiceDescriptions[] = $item;
         return $this;
     }
     /**

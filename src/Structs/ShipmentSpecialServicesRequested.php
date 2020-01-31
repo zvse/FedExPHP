@@ -16,7 +16,8 @@ class ShipmentSpecialServicesRequested extends AbstractStructBase
     /**
      * The SpecialServiceTypes
      * Meta informations extracted from the WSDL
-     * - documentation: The types of all special services requested for the enclosing shipment (or other shipment-level transaction).
+     * - documentation: Indicates the shipment special service types that are requested on this shipment. For a list of the valid shipment special service types, please consult your integration documentation or get the list of the available special services
+     * from the getAllSpecialServices method of the Validation Availability and Commitment service.
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var string[]
@@ -176,39 +177,32 @@ class ShipmentSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set SpecialServiceTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $specialServiceTypes
      * @return \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested
      */
     public function setSpecialServiceTypes(array $specialServiceTypes = array())
     {
-        $invalidValues = array();
         foreach ($specialServiceTypes as $shipmentSpecialServicesRequestedSpecialServiceTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid($shipmentSpecialServicesRequestedSpecialServiceTypesItem)) {
-                $invalidValues[] = var_export($shipmentSpecialServicesRequestedSpecialServiceTypesItem);
+            // validation for constraint: itemType
+            if (!is_string($shipmentSpecialServicesRequestedSpecialServiceTypesItem)) {
+                throw new \InvalidArgumentException(sprintf('The SpecialServiceTypes property can only contain items of string, "%s" given', is_object($shipmentSpecialServicesRequestedSpecialServiceTypesItem) ? get_class($shipmentSpecialServicesRequestedSpecialServiceTypesItem) : gettype($shipmentSpecialServicesRequestedSpecialServiceTypesItem)), __LINE__);
             }
-        }
-        if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->SpecialServiceTypes = $specialServiceTypes;
         return $this;
     }
     /**
      * Add item to SpecialServiceTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
      * @return \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested
      */
     public function addToSpecialServiceTypes($item)
     {
-        // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues())), __LINE__);
+        // validation for constraint: itemType
+        if (!is_string($item)) {
+            throw new \InvalidArgumentException(sprintf('The SpecialServiceTypes property can only contain items of string, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->SpecialServiceTypes[] = $item;
         return $this;

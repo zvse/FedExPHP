@@ -65,6 +65,13 @@ class ProcessShipmentReply extends AbstractStructBase
      */
     public $ErrorLabels;
     /**
+     * The AdvisoryDetail
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail
+     */
+    public $AdvisoryDetail;
+    /**
      * Constructor method for ProcessShipmentReply
      * @uses ProcessShipmentReply::setHighestSeverity()
      * @uses ProcessShipmentReply::setNotifications()
@@ -73,6 +80,7 @@ class ProcessShipmentReply extends AbstractStructBase
      * @uses ProcessShipmentReply::setJobId()
      * @uses ProcessShipmentReply::setCompletedShipmentDetail()
      * @uses ProcessShipmentReply::setErrorLabels()
+     * @uses ProcessShipmentReply::setAdvisoryDetail()
      * @param string $highestSeverity
      * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
      * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
@@ -80,8 +88,9 @@ class ProcessShipmentReply extends AbstractStructBase
      * @param string $jobId
      * @param \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail
      * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $errorLabels
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $jobId = null, \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null, array $errorLabels = array())
+    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $jobId = null, \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null, array $errorLabels = array(), \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail = null)
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -90,7 +99,8 @@ class ProcessShipmentReply extends AbstractStructBase
             ->setTransactionDetail($transactionDetail)
             ->setJobId($jobId)
             ->setCompletedShipmentDetail($completedShipmentDetail)
-            ->setErrorLabels($errorLabels);
+            ->setErrorLabels($errorLabels)
+            ->setAdvisoryDetail($advisoryDetail);
     }
     /**
      * Get HighestSeverity value
@@ -271,6 +281,24 @@ class ProcessShipmentReply extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('The ErrorLabels property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ErrorLabels[] = $item;
+        return $this;
+    }
+    /**
+     * Get AdvisoryDetail value
+     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail|null
+     */
+    public function getAdvisoryDetail()
+    {
+        return $this->AdvisoryDetail;
+    }
+    /**
+     * Set AdvisoryDetail value
+     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail
+     * @return \CommerceFedEx\FedExPHP\Structs\ProcessShipmentReply
+     */
+    public function setAdvisoryDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail = null)
+    {
+        $this->AdvisoryDetail = $advisoryDetail;
         return $this;
     }
     /**

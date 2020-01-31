@@ -9,11 +9,6 @@ namespace CommerceFedEx\FedExPHP\Enums;
 class RegulatoryControlType
 {
     /**
-     * Constant for value 'EU_CIRCULATION'
-     * @return string 'EU_CIRCULATION'
-     */
-    const VALUE_EU_CIRCULATION = 'EU_CIRCULATION';
-    /**
      * Constant for value 'FOOD_OR_PERISHABLE'
      * @return string 'FOOD_OR_PERISHABLE'
      */
@@ -29,6 +24,11 @@ class RegulatoryControlType
      */
     const VALUE_NOT_APPLICABLE_FOR_LOW_CUSTOMS_VALUE_EXCEPTION = 'NOT_APPLICABLE_FOR_LOW_CUSTOMS_VALUE_EXCEPTION';
     /**
+     * Constant for value 'NOT_IN_FREE_CIRCULATION'
+     * @return string 'NOT_IN_FREE_CIRCULATION'
+     */
+    const VALUE_NOT_IN_FREE_CIRCULATION = 'NOT_IN_FREE_CIRCULATION';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -40,19 +40,19 @@ class RegulatoryControlType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_EU_CIRCULATION
      * @uses self::VALUE_FOOD_OR_PERISHABLE
      * @uses self::VALUE_NAFTA
      * @uses self::VALUE_NOT_APPLICABLE_FOR_LOW_CUSTOMS_VALUE_EXCEPTION
+     * @uses self::VALUE_NOT_IN_FREE_CIRCULATION
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_EU_CIRCULATION,
             self::VALUE_FOOD_OR_PERISHABLE,
             self::VALUE_NAFTA,
             self::VALUE_NOT_APPLICABLE_FOR_LOW_CUSTOMS_VALUE_EXCEPTION,
+            self::VALUE_NOT_IN_FREE_CIRCULATION,
         );
     }
     /**

@@ -51,17 +51,14 @@ class FreightSpecialServicePayment extends AbstractStructBase
     }
     /**
      * Set SpecialService value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues()
-     * @throws \InvalidArgumentException
      * @param string $specialService
      * @return \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment
      */
     public function setSpecialService($specialService = null)
     {
-        // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::valueIsValid($specialService)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $specialService, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentSpecialServiceType::getValidValues())), __LINE__);
+        // validation for constraint: string
+        if (!is_null($specialService) && !is_string($specialService)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($specialService)), __LINE__);
         }
         $this->SpecialService = $specialService;
         return $this;
