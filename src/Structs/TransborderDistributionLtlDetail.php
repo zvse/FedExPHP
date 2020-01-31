@@ -17,7 +17,7 @@ class TransborderDistributionLtlDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Payment for LTL transportation.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Payment
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payment
      */
     public $Payment;
     /**
@@ -32,10 +32,10 @@ class TransborderDistributionLtlDetail extends AbstractStructBase
      * Constructor method for TransborderDistributionLtlDetail
      * @uses TransborderDistributionLtlDetail::setPayment()
      * @uses TransborderDistributionLtlDetail::setLtlScacCode()
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $payment
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $payment
      * @param string $ltlScacCode
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\Payment $payment = null, $ltlScacCode = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Payment $payment = null, $ltlScacCode = null)
     {
         $this
             ->setPayment($payment)
@@ -43,7 +43,7 @@ class TransborderDistributionLtlDetail extends AbstractStructBase
     }
     /**
      * Get Payment value
-     * @return \CommerceFedEx\FedExPHP\Structs\Payment|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment|null
      */
     public function getPayment()
     {
@@ -51,10 +51,10 @@ class TransborderDistributionLtlDetail extends AbstractStructBase
     }
     /**
      * Set Payment value
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $payment
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionLtlDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $payment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionLtlDetail
      */
-    public function setPayment(\CommerceFedEx\FedExPHP\Structs\Payment $payment = null)
+    public function setPayment(\NicholasCreativeMedia\FedExPHP\Structs\Payment $payment = null)
     {
         $this->Payment = $payment;
         return $this;
@@ -70,7 +70,7 @@ class TransborderDistributionLtlDetail extends AbstractStructBase
     /**
      * Set LtlScacCode value
      * @param string $ltlScacCode
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionLtlDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionLtlDetail
      */
     public function setLtlScacCode($ltlScacCode = null)
     {
@@ -87,7 +87,7 @@ class TransborderDistributionLtlDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionLtlDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionLtlDetail
      */
     public static function __set_state(array $array)
     {

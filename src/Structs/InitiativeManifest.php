@@ -43,7 +43,7 @@ class InitiativeManifest extends AbstractStructBase
      * Set Content value
      * @throws \InvalidArgumentException
      * @param string[] $content
-     * @return \CommerceFedEx\FedExPHP\Structs\InitiativeManifest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InitiativeManifest
      */
     public function setContent(array $content = array())
     {
@@ -60,7 +60,7 @@ class InitiativeManifest extends AbstractStructBase
      * Add item to Content value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\InitiativeManifest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InitiativeManifest
      */
     public function addToContent($item)
     {
@@ -77,7 +77,7 @@ class InitiativeManifest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\InitiativeManifest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InitiativeManifest
      */
     public static function __set_state(array $array)
     {

@@ -23,7 +23,7 @@ class UploadedDangerousGoodsHandlingUnit extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the radioactive information required for a handling unit.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
      */
     public $RadioactiveDetail;
     /**
@@ -33,7 +33,7 @@ class UploadedDangerousGoodsHandlingUnit extends AbstractStructBase
      * necessarily the same concept as a requested package line item in the shipping domain.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup[]
      */
     public $ContainerGroups;
     /**
@@ -42,10 +42,10 @@ class UploadedDangerousGoodsHandlingUnit extends AbstractStructBase
      * @uses UploadedDangerousGoodsHandlingUnit::setRadioactiveDetail()
      * @uses UploadedDangerousGoodsHandlingUnit::setContainerGroups()
      * @param string[] $attributes
-     * @param \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail $radioactiveDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup[] $containerGroups
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail $radioactiveDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup[] $containerGroups
      */
-    public function __construct(array $attributes = array(), \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail $radioactiveDetail = null, array $containerGroups = array())
+    public function __construct(array $attributes = array(), \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail $radioactiveDetail = null, array $containerGroups = array())
     {
         $this
             ->setAttributes($attributes)
@@ -62,46 +62,46 @@ class UploadedDangerousGoodsHandlingUnit extends AbstractStructBase
     }
     /**
      * Set Attributes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $attributes
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
      */
     public function setAttributes(array $attributes = array())
     {
         $invalidValues = array();
         foreach ($attributes as $uploadedDangerousGoodsHandlingUnitAttributesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::valueIsValid($uploadedDangerousGoodsHandlingUnitAttributesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::valueIsValid($uploadedDangerousGoodsHandlingUnitAttributesItem)) {
                 $invalidValues[] = var_export($uploadedDangerousGoodsHandlingUnitAttributesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::getValidValues())), __LINE__);
         }
         $this->Attributes = $attributes;
         return $this;
     }
     /**
      * Add item to Attributes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
      */
     public function addToAttributes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsHandlingUnitAttributeType::getValidValues())), __LINE__);
         }
         $this->Attributes[] = $item;
         return $this;
     }
     /**
      * Get RadioactiveDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail|null
      */
     public function getRadioactiveDetail()
     {
@@ -109,17 +109,17 @@ class UploadedDangerousGoodsHandlingUnit extends AbstractStructBase
     }
     /**
      * Set RadioactiveDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail $radioactiveDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail $radioactiveDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
      */
-    public function setRadioactiveDetail(\CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail $radioactiveDetail = null)
+    public function setRadioactiveDetail(\NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail $radioactiveDetail = null)
     {
         $this->RadioactiveDetail = $radioactiveDetail;
         return $this;
     }
     /**
      * Get ContainerGroups value
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup[]|null
      */
     public function getContainerGroups()
     {
@@ -128,15 +128,15 @@ class UploadedDangerousGoodsHandlingUnit extends AbstractStructBase
     /**
      * Set ContainerGroups value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup[] $containerGroups
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup[] $containerGroups
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
      */
     public function setContainerGroups(array $containerGroups = array())
     {
         foreach ($containerGroups as $uploadedDangerousGoodsHandlingUnitContainerGroupsItem) {
             // validation for constraint: itemType
-            if (!$uploadedDangerousGoodsHandlingUnitContainerGroupsItem instanceof \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup) {
-                throw new \InvalidArgumentException(sprintf('The ContainerGroups property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup, "%s" given', is_object($uploadedDangerousGoodsHandlingUnitContainerGroupsItem) ? get_class($uploadedDangerousGoodsHandlingUnitContainerGroupsItem) : gettype($uploadedDangerousGoodsHandlingUnitContainerGroupsItem)), __LINE__);
+            if (!$uploadedDangerousGoodsHandlingUnitContainerGroupsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup) {
+                throw new \InvalidArgumentException(sprintf('The ContainerGroups property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup, "%s" given', is_object($uploadedDangerousGoodsHandlingUnitContainerGroupsItem) ? get_class($uploadedDangerousGoodsHandlingUnitContainerGroupsItem) : gettype($uploadedDangerousGoodsHandlingUnitContainerGroupsItem)), __LINE__);
             }
         }
         $this->ContainerGroups = $containerGroups;
@@ -145,14 +145,14 @@ class UploadedDangerousGoodsHandlingUnit extends AbstractStructBase
     /**
      * Add item to ContainerGroups value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup $item
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
      */
-    public function addToContainerGroups(\CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup $item)
+    public function addToContainerGroups(\NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup) {
-            throw new \InvalidArgumentException(sprintf('The ContainerGroups property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup) {
+            throw new \InvalidArgumentException(sprintf('The ContainerGroups property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ContainerGroups[] = $item;
         return $this;
@@ -163,7 +163,7 @@ class UploadedDangerousGoodsHandlingUnit extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnit
      */
     public static function __set_state(array $array)
     {

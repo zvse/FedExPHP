@@ -40,7 +40,7 @@ class Rma extends AbstractStructBase
     /**
      * Set Reason value
      * @param string $reason
-     * @return \CommerceFedEx\FedExPHP\Structs\Rma
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rma
      */
     public function setReason($reason = null)
     {
@@ -57,7 +57,7 @@ class Rma extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Rma
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rma
      */
     public static function __set_state(array $array)
     {

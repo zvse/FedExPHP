@@ -49,7 +49,7 @@ class FreightBaseCharge extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Weight for this commodity or class line.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $Weight;
     /**
@@ -57,7 +57,7 @@ class FreightBaseCharge extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Rate or factor applied to this line item.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $ChargeRate;
     /**
@@ -73,7 +73,7 @@ class FreightBaseCharge extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The net or extended charge for this line item.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $ExtendedAmount;
     /**
@@ -90,12 +90,12 @@ class FreightBaseCharge extends AbstractStructBase
      * @param string $ratedAsClass
      * @param string $nmfcCode
      * @param string $description
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $chargeRate
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $chargeRate
      * @param string $chargeBasis
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $extendedAmount
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $extendedAmount
      */
-    public function __construct($freightClass = null, $ratedAsClass = null, $nmfcCode = null, $description = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, \CommerceFedEx\FedExPHP\Structs\Money $chargeRate = null, $chargeBasis = null, \CommerceFedEx\FedExPHP\Structs\Money $extendedAmount = null)
+    public function __construct($freightClass = null, $ratedAsClass = null, $nmfcCode = null, $description = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $chargeRate = null, $chargeBasis = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $extendedAmount = null)
     {
         $this
             ->setFreightClass($freightClass)
@@ -117,17 +117,17 @@ class FreightBaseCharge extends AbstractStructBase
     }
     /**
      * Set FreightClass value
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightClassType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightClassType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $freightClass
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge
      */
     public function setFreightClass($freightClass = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\FreightClassType::valueIsValid($freightClass)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $freightClass, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightClassType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::valueIsValid($freightClass)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $freightClass, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::getValidValues())), __LINE__);
         }
         $this->FreightClass = $freightClass;
         return $this;
@@ -142,17 +142,17 @@ class FreightBaseCharge extends AbstractStructBase
     }
     /**
      * Set RatedAsClass value
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightClassType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightClassType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $ratedAsClass
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge
      */
     public function setRatedAsClass($ratedAsClass = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\FreightClassType::valueIsValid($ratedAsClass)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $ratedAsClass, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightClassType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::valueIsValid($ratedAsClass)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $ratedAsClass, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::getValidValues())), __LINE__);
         }
         $this->RatedAsClass = $ratedAsClass;
         return $this;
@@ -168,7 +168,7 @@ class FreightBaseCharge extends AbstractStructBase
     /**
      * Set NmfcCode value
      * @param string $nmfcCode
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge
      */
     public function setNmfcCode($nmfcCode = null)
     {
@@ -190,7 +190,7 @@ class FreightBaseCharge extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge
      */
     public function setDescription($description = null)
     {
@@ -203,7 +203,7 @@ class FreightBaseCharge extends AbstractStructBase
     }
     /**
      * Get Weight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getWeight()
     {
@@ -211,17 +211,17 @@ class FreightBaseCharge extends AbstractStructBase
     }
     /**
      * Set Weight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge
      */
-    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function setWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this->Weight = $weight;
         return $this;
     }
     /**
      * Get ChargeRate value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getChargeRate()
     {
@@ -229,10 +229,10 @@ class FreightBaseCharge extends AbstractStructBase
     }
     /**
      * Set ChargeRate value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $chargeRate
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $chargeRate
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge
      */
-    public function setChargeRate(\CommerceFedEx\FedExPHP\Structs\Money $chargeRate = null)
+    public function setChargeRate(\NicholasCreativeMedia\FedExPHP\Structs\Money $chargeRate = null)
     {
         $this->ChargeRate = $chargeRate;
         return $this;
@@ -247,24 +247,24 @@ class FreightBaseCharge extends AbstractStructBase
     }
     /**
      * Set ChargeBasis value
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightChargeBasisType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightChargeBasisType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightChargeBasisType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightChargeBasisType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $chargeBasis
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge
      */
     public function setChargeBasis($chargeBasis = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\FreightChargeBasisType::valueIsValid($chargeBasis)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $chargeBasis, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightChargeBasisType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightChargeBasisType::valueIsValid($chargeBasis)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $chargeBasis, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightChargeBasisType::getValidValues())), __LINE__);
         }
         $this->ChargeBasis = $chargeBasis;
         return $this;
     }
     /**
      * Get ExtendedAmount value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getExtendedAmount()
     {
@@ -272,10 +272,10 @@ class FreightBaseCharge extends AbstractStructBase
     }
     /**
      * Set ExtendedAmount value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $extendedAmount
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $extendedAmount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge
      */
-    public function setExtendedAmount(\CommerceFedEx\FedExPHP\Structs\Money $extendedAmount = null)
+    public function setExtendedAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $extendedAmount = null)
     {
         $this->ExtendedAmount = $extendedAmount;
         return $this;
@@ -286,7 +286,7 @@ class FreightBaseCharge extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightBaseCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightBaseCharge
      */
     public static function __set_state(array $array)
     {

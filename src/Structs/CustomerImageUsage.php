@@ -25,17 +25,39 @@ class CustomerImageUsage extends AbstractStructBase
      */
     public $Id;
     /**
+     * The InternalId
+     * Meta informations extracted from the WSDL
+     * - documentation: Internal Id used by INET to identify customer provided images during documents generation. Ex COO etc ...
+     * - minOccurs: 0
+     * @var string
+     */
+    public $InternalId;
+    /**
+     * The InternalImageType
+     * Meta informations extracted from the WSDL
+     * - documentation: Internal image type used by INET to identify customer provided images during documents generation. Ex COO etc ..
+     * - minOccurs: 0
+     * @var string
+     */
+    public $InternalImageType;
+    /**
      * Constructor method for CustomerImageUsage
      * @uses CustomerImageUsage::setType()
      * @uses CustomerImageUsage::setId()
+     * @uses CustomerImageUsage::setInternalId()
+     * @uses CustomerImageUsage::setInternalImageType()
      * @param string $type
      * @param string $id
+     * @param string $internalId
+     * @param string $internalImageType
      */
-    public function __construct($type = null, $id = null)
+    public function __construct($type = null, $id = null, $internalId = null, $internalImageType = null)
     {
         $this
             ->setType($type)
-            ->setId($id);
+            ->setId($id)
+            ->setInternalId($internalId)
+            ->setInternalImageType($internalImageType);
     }
     /**
      * Get Type value
@@ -47,17 +69,17 @@ class CustomerImageUsage extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerImageUsageType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerImageUsageType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerImageUsageType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerImageUsageType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CustomerImageUsageType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomerImageUsageType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomerImageUsageType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomerImageUsageType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -72,19 +94,66 @@ class CustomerImageUsage extends AbstractStructBase
     }
     /**
      * Set Id value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ImageId::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ImageId::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageId::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageId::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage
      */
     public function setId($id = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ImageId::valueIsValid($id)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $id, implode(', ', \CommerceFedEx\FedExPHP\Enums\ImageId::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ImageId::valueIsValid($id)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $id, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ImageId::getValidValues())), __LINE__);
         }
         $this->Id = $id;
+        return $this;
+    }
+    /**
+     * Get InternalId value
+     * @return string|null
+     */
+    public function getInternalId()
+    {
+        return $this->InternalId;
+    }
+    /**
+     * Set InternalId value
+     * @param string $internalId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage
+     */
+    public function setInternalId($internalId = null)
+    {
+        // validation for constraint: string
+        if (!is_null($internalId) && !is_string($internalId)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($internalId)), __LINE__);
+        }
+        $this->InternalId = $internalId;
+        return $this;
+    }
+    /**
+     * Get InternalImageType value
+     * @return string|null
+     */
+    public function getInternalImageType()
+    {
+        return $this->InternalImageType;
+    }
+    /**
+     * Set InternalImageType value
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\InternalImageType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\InternalImageType::getValidValues()
+     * @throws \InvalidArgumentException
+     * @param string $internalImageType
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage
+     */
+    public function setInternalImageType($internalImageType = null)
+    {
+        // validation for constraint: enumeration
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\InternalImageType::valueIsValid($internalImageType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $internalImageType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\InternalImageType::getValidValues())), __LINE__);
+        }
+        $this->InternalImageType = $internalImageType;
         return $this;
     }
     /**
@@ -93,7 +162,7 @@ class CustomerImageUsage extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage
      */
     public static function __set_state(array $array)
     {

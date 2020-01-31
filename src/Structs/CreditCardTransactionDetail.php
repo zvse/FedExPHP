@@ -37,7 +37,7 @@ class CreditCardTransactionDetail extends AbstractStructBase
      * The FraudDetectionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail
      */
     public $FraudDetectionDetail;
     /**
@@ -53,7 +53,7 @@ class CreditCardTransactionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies details about the credit card transaction that drive decisions about credit card processing.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionAttributesDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionAttributesDetail
      */
     public $AttributesDetail;
     /**
@@ -67,11 +67,11 @@ class CreditCardTransactionDetail extends AbstractStructBase
      * @param string $authorizationId
      * @param string $authorizationType
      * @param string $settlementScheduleType
-     * @param \CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail $fraudDetectionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail $fraudDetectionDetail
      * @param string $payorAuthenticationCode
-     * @param \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionAttributesDetail $attributesDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionAttributesDetail $attributesDetail
      */
-    public function __construct($authorizationId = null, $authorizationType = null, $settlementScheduleType = null, \CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail $fraudDetectionDetail = null, $payorAuthenticationCode = null, \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionAttributesDetail $attributesDetail = null)
+    public function __construct($authorizationId = null, $authorizationType = null, $settlementScheduleType = null, \NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail $fraudDetectionDetail = null, $payorAuthenticationCode = null, \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionAttributesDetail $attributesDetail = null)
     {
         $this
             ->setAuthorizationId($authorizationId)
@@ -92,7 +92,7 @@ class CreditCardTransactionDetail extends AbstractStructBase
     /**
      * Set AuthorizationId value
      * @param string $authorizationId
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail
      */
     public function setAuthorizationId($authorizationId = null)
     {
@@ -113,17 +113,17 @@ class CreditCardTransactionDetail extends AbstractStructBase
     }
     /**
      * Set AuthorizationType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardAuthorizationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardAuthorizationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardAuthorizationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardAuthorizationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $authorizationType
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail
      */
     public function setAuthorizationType($authorizationType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CreditCardAuthorizationType::valueIsValid($authorizationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $authorizationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\CreditCardAuthorizationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CreditCardAuthorizationType::valueIsValid($authorizationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $authorizationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CreditCardAuthorizationType::getValidValues())), __LINE__);
         }
         $this->AuthorizationType = $authorizationType;
         return $this;
@@ -138,24 +138,24 @@ class CreditCardTransactionDetail extends AbstractStructBase
     }
     /**
      * Set SettlementScheduleType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardSettlementScheduleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardSettlementScheduleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardSettlementScheduleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardSettlementScheduleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $settlementScheduleType
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail
      */
     public function setSettlementScheduleType($settlementScheduleType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CreditCardSettlementScheduleType::valueIsValid($settlementScheduleType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $settlementScheduleType, implode(', ', \CommerceFedEx\FedExPHP\Enums\CreditCardSettlementScheduleType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CreditCardSettlementScheduleType::valueIsValid($settlementScheduleType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $settlementScheduleType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CreditCardSettlementScheduleType::getValidValues())), __LINE__);
         }
         $this->SettlementScheduleType = $settlementScheduleType;
         return $this;
     }
     /**
      * Get FraudDetectionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail|null
      */
     public function getFraudDetectionDetail()
     {
@@ -163,10 +163,10 @@ class CreditCardTransactionDetail extends AbstractStructBase
     }
     /**
      * Set FraudDetectionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail $fraudDetectionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail $fraudDetectionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail
      */
-    public function setFraudDetectionDetail(\CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail $fraudDetectionDetail = null)
+    public function setFraudDetectionDetail(\NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail $fraudDetectionDetail = null)
     {
         $this->FraudDetectionDetail = $fraudDetectionDetail;
         return $this;
@@ -182,7 +182,7 @@ class CreditCardTransactionDetail extends AbstractStructBase
     /**
      * Set PayorAuthenticationCode value
      * @param string $payorAuthenticationCode
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail
      */
     public function setPayorAuthenticationCode($payorAuthenticationCode = null)
     {
@@ -195,7 +195,7 @@ class CreditCardTransactionDetail extends AbstractStructBase
     }
     /**
      * Get AttributesDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionAttributesDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionAttributesDetail|null
      */
     public function getAttributesDetail()
     {
@@ -203,10 +203,10 @@ class CreditCardTransactionDetail extends AbstractStructBase
     }
     /**
      * Set AttributesDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionAttributesDetail $attributesDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionAttributesDetail $attributesDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail
      */
-    public function setAttributesDetail(\CommerceFedEx\FedExPHP\Structs\CreditCardTransactionAttributesDetail $attributesDetail = null)
+    public function setAttributesDetail(\NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionAttributesDetail $attributesDetail = null)
     {
         $this->AttributesDetail = $attributesDetail;
         return $this;
@@ -217,7 +217,7 @@ class CreditCardTransactionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail
      */
     public static function __set_state(array $array)
     {

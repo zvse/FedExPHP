@@ -22,14 +22,14 @@ class PickupPackageSpecialServicesRequested extends AbstractStructBase
      * The DangerousGoodsDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PickupDangerousGoodsDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PickupDangerousGoodsDetail
      */
     public $DangerousGoodsDetail;
     /**
      * The PriorityAlertDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail
      */
     public $PriorityAlertDetail;
     /**
@@ -38,10 +38,10 @@ class PickupPackageSpecialServicesRequested extends AbstractStructBase
      * @uses PickupPackageSpecialServicesRequested::setDangerousGoodsDetail()
      * @uses PickupPackageSpecialServicesRequested::setPriorityAlertDetail()
      * @param string[] $specialServiceTypes
-     * @param \CommerceFedEx\FedExPHP\Structs\PickupDangerousGoodsDetail $dangerousGoodsDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupDangerousGoodsDetail $dangerousGoodsDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
      */
-    public function __construct(array $specialServiceTypes = array(), \CommerceFedEx\FedExPHP\Structs\PickupDangerousGoodsDetail $dangerousGoodsDetail = null, \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
+    public function __construct(array $specialServiceTypes = array(), \NicholasCreativeMedia\FedExPHP\Structs\PickupDangerousGoodsDetail $dangerousGoodsDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
     {
         $this
             ->setSpecialServiceTypes($specialServiceTypes)
@@ -60,7 +60,7 @@ class PickupPackageSpecialServicesRequested extends AbstractStructBase
      * Set SpecialServiceTypes value
      * @throws \InvalidArgumentException
      * @param string[] $specialServiceTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested
      */
     public function setSpecialServiceTypes(array $specialServiceTypes = array())
     {
@@ -77,7 +77,7 @@ class PickupPackageSpecialServicesRequested extends AbstractStructBase
      * Add item to SpecialServiceTypes value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested
      */
     public function addToSpecialServiceTypes($item)
     {
@@ -90,7 +90,7 @@ class PickupPackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Get DangerousGoodsDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupDangerousGoodsDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupDangerousGoodsDetail|null
      */
     public function getDangerousGoodsDetail()
     {
@@ -98,17 +98,17 @@ class PickupPackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set DangerousGoodsDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\PickupDangerousGoodsDetail $dangerousGoodsDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupDangerousGoodsDetail $dangerousGoodsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested
      */
-    public function setDangerousGoodsDetail(\CommerceFedEx\FedExPHP\Structs\PickupDangerousGoodsDetail $dangerousGoodsDetail = null)
+    public function setDangerousGoodsDetail(\NicholasCreativeMedia\FedExPHP\Structs\PickupDangerousGoodsDetail $dangerousGoodsDetail = null)
     {
         $this->DangerousGoodsDetail = $dangerousGoodsDetail;
         return $this;
     }
     /**
      * Get PriorityAlertDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail|null
      */
     public function getPriorityAlertDetail()
     {
@@ -116,10 +116,10 @@ class PickupPackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set PriorityAlertDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested
      */
-    public function setPriorityAlertDetail(\CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
+    public function setPriorityAlertDetail(\NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
     {
         $this->PriorityAlertDetail = $priorityAlertDetail;
         return $this;
@@ -130,7 +130,7 @@ class PickupPackageSpecialServicesRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested
      */
     public static function __set_state(array $array)
     {

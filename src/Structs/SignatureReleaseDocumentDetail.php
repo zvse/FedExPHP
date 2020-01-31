@@ -17,7 +17,7 @@ class SignatureReleaseDocumentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Common information controlling document production.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
@@ -31,10 +31,10 @@ class SignatureReleaseDocumentDetail extends AbstractStructBase
      * Constructor method for SignatureReleaseDocumentDetail
      * @uses SignatureReleaseDocumentDetail::setFormat()
      * @uses SignatureReleaseDocumentDetail::setId()
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
      * @param string $id
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null, $id = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null, $id = null)
     {
         $this
             ->setFormat($format)
@@ -42,7 +42,7 @@ class SignatureReleaseDocumentDetail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -50,10 +50,10 @@ class SignatureReleaseDocumentDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \CommerceFedEx\FedExPHP\Structs\SignatureReleaseDocumentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureReleaseDocumentDetail
      */
-    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
@@ -69,7 +69,7 @@ class SignatureReleaseDocumentDetail extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\SignatureReleaseDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureReleaseDocumentDetail
      */
     public function setId($id = null)
     {
@@ -86,7 +86,7 @@ class SignatureReleaseDocumentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\SignatureReleaseDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureReleaseDocumentDetail
      */
     public static function __set_state(array $array)
     {

@@ -22,7 +22,7 @@ class EdtCommodityTax extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail[]
      */
     public $Taxes;
     /**
@@ -30,7 +30,7 @@ class EdtCommodityTax extends AbstractStructBase
      * @uses EdtCommodityTax::setHarmonizedCode()
      * @uses EdtCommodityTax::setTaxes()
      * @param string $harmonizedCode
-     * @param \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail[] $taxes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail[] $taxes
      */
     public function __construct($harmonizedCode = null, array $taxes = array())
     {
@@ -49,7 +49,7 @@ class EdtCommodityTax extends AbstractStructBase
     /**
      * Set HarmonizedCode value
      * @param string $harmonizedCode
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax
      */
     public function setHarmonizedCode($harmonizedCode = null)
     {
@@ -62,7 +62,7 @@ class EdtCommodityTax extends AbstractStructBase
     }
     /**
      * Get Taxes value
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail[]|null
      */
     public function getTaxes()
     {
@@ -71,15 +71,15 @@ class EdtCommodityTax extends AbstractStructBase
     /**
      * Set Taxes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail[] $taxes
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail[] $taxes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax
      */
     public function setTaxes(array $taxes = array())
     {
         foreach ($taxes as $edtCommodityTaxTaxesItem) {
             // validation for constraint: itemType
-            if (!$edtCommodityTaxTaxesItem instanceof \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail) {
-                throw new \InvalidArgumentException(sprintf('The Taxes property can only contain items of \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail, "%s" given', is_object($edtCommodityTaxTaxesItem) ? get_class($edtCommodityTaxTaxesItem) : gettype($edtCommodityTaxTaxesItem)), __LINE__);
+            if (!$edtCommodityTaxTaxesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail) {
+                throw new \InvalidArgumentException(sprintf('The Taxes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail, "%s" given', is_object($edtCommodityTaxTaxesItem) ? get_class($edtCommodityTaxTaxesItem) : gettype($edtCommodityTaxTaxesItem)), __LINE__);
             }
         }
         $this->Taxes = $taxes;
@@ -88,14 +88,14 @@ class EdtCommodityTax extends AbstractStructBase
     /**
      * Add item to Taxes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax
      */
-    public function addToTaxes(\CommerceFedEx\FedExPHP\Structs\EdtTaxDetail $item)
+    public function addToTaxes(\NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail) {
-            throw new \InvalidArgumentException(sprintf('The Taxes property can only contain items of \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail) {
+            throw new \InvalidArgumentException(sprintf('The Taxes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Taxes[] = $item;
         return $this;
@@ -106,7 +106,7 @@ class EdtCommodityTax extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax
      */
     public static function __set_state(array $array)
     {

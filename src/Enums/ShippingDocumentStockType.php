@@ -11,10 +11,20 @@ namespace NicholasCreativeMedia\FedExPHP\Enums;
 class ShippingDocumentStockType
 {
     /**
+     * Constant for value 'OP_900_LG'
+     * @return string 'OP_900_LG'
+     */
+    const VALUE_OP_900_LG = 'OP_900_LG';
+    /**
      * Constant for value 'OP_900_LG_B'
      * @return string 'OP_900_LG_B'
      */
     const VALUE_OP_900_LG_B = 'OP_900_LG_B';
+    /**
+     * Constant for value 'OP_900_LL'
+     * @return string 'OP_900_LL'
+     */
+    const VALUE_OP_900_LL = 'OP_900_LL';
     /**
      * Constant for value 'OP_900_LL_B'
      * @return string 'OP_900_LL_B'
@@ -82,7 +92,9 @@ class ShippingDocumentStockType
     }
     /**
      * Return allowed values
+     * @uses self::VALUE_OP_900_LG
      * @uses self::VALUE_OP_900_LG_B
+     * @uses self::VALUE_OP_900_LL
      * @uses self::VALUE_OP_900_LL_B
      * @uses self::VALUE_OP_950
      * @uses self::VALUE_PAPER_4_X_6
@@ -99,7 +111,9 @@ class ShippingDocumentStockType
     public static function getValidValues()
     {
         return array(
+            self::VALUE_OP_900_LG,
             self::VALUE_OP_900_LG_B,
+            self::VALUE_OP_900_LL,
             self::VALUE_OP_900_LL_B,
             self::VALUE_OP_950,
             self::VALUE_PAPER_4_X_6,

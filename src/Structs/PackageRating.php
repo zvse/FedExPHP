@@ -25,7 +25,7 @@ class PackageRating extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The "list" net charge minus "actual" net charge.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $EffectiveNetDiscount;
     /**
@@ -34,7 +34,7 @@ class PackageRating extends AbstractStructBase
      * - documentation: Each element of this field provides package-level rate data for a specific rate type.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PackageRateDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail[]
      */
     public $PackageRateDetails;
     /**
@@ -43,10 +43,10 @@ class PackageRating extends AbstractStructBase
      * @uses PackageRating::setEffectiveNetDiscount()
      * @uses PackageRating::setPackageRateDetails()
      * @param string $actualRateType
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageRateDetail[] $packageRateDetails
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail[] $packageRateDetails
      */
-    public function __construct($actualRateType = null, \CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount = null, array $packageRateDetails = array())
+    public function __construct($actualRateType = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount = null, array $packageRateDetails = array())
     {
         $this
             ->setActualRateType($actualRateType)
@@ -63,24 +63,24 @@ class PackageRating extends AbstractStructBase
     }
     /**
      * Set ActualRateType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnedRateType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnedRateType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $actualRateType
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageRating
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageRating
      */
     public function setActualRateType($actualRateType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ReturnedRateType::valueIsValid($actualRateType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $actualRateType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ReturnedRateType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::valueIsValid($actualRateType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $actualRateType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::getValidValues())), __LINE__);
         }
         $this->ActualRateType = $actualRateType;
         return $this;
     }
     /**
      * Get EffectiveNetDiscount value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getEffectiveNetDiscount()
     {
@@ -88,17 +88,17 @@ class PackageRating extends AbstractStructBase
     }
     /**
      * Set EffectiveNetDiscount value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageRating
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageRating
      */
-    public function setEffectiveNetDiscount(\CommerceFedEx\FedExPHP\Structs\Money $effectiveNetDiscount = null)
+    public function setEffectiveNetDiscount(\NicholasCreativeMedia\FedExPHP\Structs\Money $effectiveNetDiscount = null)
     {
         $this->EffectiveNetDiscount = $effectiveNetDiscount;
         return $this;
     }
     /**
      * Get PackageRateDetails value
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageRateDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail[]|null
      */
     public function getPackageRateDetails()
     {
@@ -107,15 +107,15 @@ class PackageRating extends AbstractStructBase
     /**
      * Set PackageRateDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageRateDetail[] $packageRateDetails
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageRating
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail[] $packageRateDetails
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageRating
      */
     public function setPackageRateDetails(array $packageRateDetails = array())
     {
         foreach ($packageRateDetails as $packageRatingPackageRateDetailsItem) {
             // validation for constraint: itemType
-            if (!$packageRatingPackageRateDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\PackageRateDetail) {
-                throw new \InvalidArgumentException(sprintf('The PackageRateDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\PackageRateDetail, "%s" given', is_object($packageRatingPackageRateDetailsItem) ? get_class($packageRatingPackageRateDetailsItem) : gettype($packageRatingPackageRateDetailsItem)), __LINE__);
+            if (!$packageRatingPackageRateDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail) {
+                throw new \InvalidArgumentException(sprintf('The PackageRateDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail, "%s" given', is_object($packageRatingPackageRateDetailsItem) ? get_class($packageRatingPackageRateDetailsItem) : gettype($packageRatingPackageRateDetailsItem)), __LINE__);
             }
         }
         $this->PackageRateDetails = $packageRateDetails;
@@ -124,14 +124,14 @@ class PackageRating extends AbstractStructBase
     /**
      * Add item to PackageRateDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageRateDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageRating
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageRating
      */
-    public function addToPackageRateDetails(\CommerceFedEx\FedExPHP\Structs\PackageRateDetail $item)
+    public function addToPackageRateDetails(\NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\PackageRateDetail) {
-            throw new \InvalidArgumentException(sprintf('The PackageRateDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\PackageRateDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail) {
+            throw new \InvalidArgumentException(sprintf('The PackageRateDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PackageRateDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->PackageRateDetails[] = $item;
         return $this;
@@ -142,7 +142,7 @@ class PackageRating extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageRating
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageRating
      */
     public static function __set_state(array $array)
     {

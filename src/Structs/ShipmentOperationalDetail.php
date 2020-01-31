@@ -321,7 +321,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set UrsaPrefixCode value
      * @param string $ursaPrefixCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setUrsaPrefixCode($ursaPrefixCode = null)
     {
@@ -343,7 +343,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set UrsaSuffixCode value
      * @param string $ursaSuffixCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setUrsaSuffixCode($ursaSuffixCode = null)
     {
@@ -365,7 +365,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set OriginLocationId value
      * @param string $originLocationId
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setOriginLocationId($originLocationId = null)
     {
@@ -387,7 +387,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set OriginLocationNumber value
      * @param int $originLocationNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setOriginLocationNumber($originLocationNumber = null)
     {
@@ -409,7 +409,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set OriginServiceArea value
      * @param string $originServiceArea
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setOriginServiceArea($originServiceArea = null)
     {
@@ -431,7 +431,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set DestinationLocationId value
      * @param string $destinationLocationId
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setDestinationLocationId($destinationLocationId = null)
     {
@@ -453,7 +453,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set DestinationLocationNumber value
      * @param int $destinationLocationNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setDestinationLocationNumber($destinationLocationNumber = null)
     {
@@ -475,7 +475,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set DestinationServiceArea value
      * @param string $destinationServiceArea
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setDestinationServiceArea($destinationServiceArea = null)
     {
@@ -497,7 +497,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set DestinationLocationStateOrProvinceCode value
      * @param string $destinationLocationStateOrProvinceCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setDestinationLocationStateOrProvinceCode($destinationLocationStateOrProvinceCode = null)
     {
@@ -519,7 +519,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set DeliveryDate value
      * @param string $deliveryDate
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setDeliveryDate($deliveryDate = null)
     {
@@ -540,17 +540,17 @@ class ShipmentOperationalDetail extends AbstractStructBase
     }
     /**
      * Set DeliveryDay value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $deliveryDay
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setDeliveryDay($deliveryDay = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($deliveryDay)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deliveryDay, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($deliveryDay)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deliveryDay, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->DeliveryDay = $deliveryDay;
         return $this;
@@ -566,7 +566,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set PublishedDeliveryTime value
      * @param string $publishedDeliveryTime
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setPublishedDeliveryTime($publishedDeliveryTime = null)
     {
@@ -588,7 +588,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set CommitDate value
      * @param string $commitDate
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setCommitDate($commitDate = null)
     {
@@ -609,17 +609,17 @@ class ShipmentOperationalDetail extends AbstractStructBase
     }
     /**
      * Set CommitDay value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $commitDay
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setCommitDay($commitDay = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($commitDay)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $commitDay, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($commitDay)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $commitDay, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->CommitDay = $commitDay;
         return $this;
@@ -634,17 +634,17 @@ class ShipmentOperationalDetail extends AbstractStructBase
     }
     /**
      * Set TransitTime value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $transitTime
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setTransitTime($transitTime = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid($transitTime)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $transitTime, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid($transitTime)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $transitTime, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
         }
         $this->TransitTime = $transitTime;
         return $this;
@@ -659,17 +659,17 @@ class ShipmentOperationalDetail extends AbstractStructBase
     }
     /**
      * Set MaximumTransitTime value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $maximumTransitTime
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setMaximumTransitTime($maximumTransitTime = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid($maximumTransitTime)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $maximumTransitTime, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid($maximumTransitTime)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $maximumTransitTime, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
         }
         $this->MaximumTransitTime = $maximumTransitTime;
         return $this;
@@ -684,17 +684,17 @@ class ShipmentOperationalDetail extends AbstractStructBase
     }
     /**
      * Set CustomTransitTime value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $customTransitTime
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setCustomTransitTime($customTransitTime = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid($customTransitTime)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $customTransitTime, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid($customTransitTime)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $customTransitTime, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
         }
         $this->CustomTransitTime = $customTransitTime;
         return $this;
@@ -710,7 +710,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set IneligibleForMoneyBackGuarantee value
      * @param bool $ineligibleForMoneyBackGuarantee
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setIneligibleForMoneyBackGuarantee($ineligibleForMoneyBackGuarantee = null)
     {
@@ -727,39 +727,39 @@ class ShipmentOperationalDetail extends AbstractStructBase
     }
     /**
      * Set DeliveryEligibilities value
-     * @uses \CommerceFedEx\FedExPHP\Enums\GroundDeliveryEligibilityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\GroundDeliveryEligibilityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\GroundDeliveryEligibilityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\GroundDeliveryEligibilityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $deliveryEligibilities
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setDeliveryEligibilities(array $deliveryEligibilities = array())
     {
         $invalidValues = array();
         foreach ($deliveryEligibilities as $shipmentOperationalDetailDeliveryEligibilitiesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\GroundDeliveryEligibilityType::valueIsValid($shipmentOperationalDetailDeliveryEligibilitiesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\GroundDeliveryEligibilityType::valueIsValid($shipmentOperationalDetailDeliveryEligibilitiesItem)) {
                 $invalidValues[] = var_export($shipmentOperationalDetailDeliveryEligibilitiesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\GroundDeliveryEligibilityType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\GroundDeliveryEligibilityType::getValidValues())), __LINE__);
         }
         $this->DeliveryEligibilities = $deliveryEligibilities;
         return $this;
     }
     /**
      * Add item to DeliveryEligibilities value
-     * @uses \CommerceFedEx\FedExPHP\Enums\GroundDeliveryEligibilityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\GroundDeliveryEligibilityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\GroundDeliveryEligibilityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\GroundDeliveryEligibilityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function addToDeliveryEligibilities($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\GroundDeliveryEligibilityType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\GroundDeliveryEligibilityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\GroundDeliveryEligibilityType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\GroundDeliveryEligibilityType::getValidValues())), __LINE__);
         }
         $this->DeliveryEligibilities[] = $item;
         return $this;
@@ -775,7 +775,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set AstraPlannedServiceLevel value
      * @param string $astraPlannedServiceLevel
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setAstraPlannedServiceLevel($astraPlannedServiceLevel = null)
     {
@@ -797,7 +797,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set AstraDescription value
      * @param string $astraDescription
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setAstraDescription($astraDescription = null)
     {
@@ -819,7 +819,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set PostalCode value
      * @param string $postalCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setPostalCode($postalCode = null)
     {
@@ -841,7 +841,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set StateOrProvinceCode value
      * @param string $stateOrProvinceCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setStateOrProvinceCode($stateOrProvinceCode = null)
     {
@@ -863,7 +863,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set CountryCode value
      * @param string $countryCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setCountryCode($countryCode = null)
     {
@@ -885,7 +885,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set AirportId value
      * @param string $airportId
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setAirportId($airportId = null)
     {
@@ -907,7 +907,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set ServiceCode value
      * @param string $serviceCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setServiceCode($serviceCode = null)
     {
@@ -929,7 +929,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set PackagingCode value
      * @param string $packagingCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setPackagingCode($packagingCode = null)
     {
@@ -951,7 +951,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
     /**
      * Set Scac value
      * @param string $scac
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public function setScac($scac = null)
     {
@@ -968,7 +968,7 @@ class ShipmentOperationalDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public static function __set_state(array $array)
     {

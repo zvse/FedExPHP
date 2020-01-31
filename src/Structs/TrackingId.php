@@ -68,17 +68,17 @@ class TrackingId extends AbstractStructBase
     }
     /**
      * Set TrackingIdType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TrackingIdType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TrackingIdType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackingIdType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrackingIdType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $trackingIdType
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public function setTrackingIdType($trackingIdType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TrackingIdType::valueIsValid($trackingIdType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $trackingIdType, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrackingIdType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrackingIdType::valueIsValid($trackingIdType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $trackingIdType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrackingIdType::getValidValues())), __LINE__);
         }
         $this->TrackingIdType = $trackingIdType;
         return $this;
@@ -94,7 +94,7 @@ class TrackingId extends AbstractStructBase
     /**
      * Set FormId value
      * @param string $formId
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public function setFormId($formId = null)
     {
@@ -116,7 +116,7 @@ class TrackingId extends AbstractStructBase
     /**
      * Set UspsApplicationId value
      * @param string $uspsApplicationId
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public function setUspsApplicationId($uspsApplicationId = null)
     {
@@ -138,7 +138,7 @@ class TrackingId extends AbstractStructBase
     /**
      * Set TrackingNumber value
      * @param string $trackingNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public function setTrackingNumber($trackingNumber = null)
     {
@@ -155,7 +155,7 @@ class TrackingId extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public static function __set_state(array $array)
     {

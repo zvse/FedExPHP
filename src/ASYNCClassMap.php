@@ -16,19 +16,19 @@ class ASYNCClassMap
     final public static function get()
     {
         return array(
-            'ArtifactPart' => '\\CommerceFedEx\\FedExPHP\\Structs\\ArtifactPart',
-            'ArtifactRetrievalFilter' => '\\CommerceFedEx\\FedExPHP\\Structs\\ArtifactRetrievalFilter',
-            'ClientDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\ClientDetail',
-            'Localization' => '\\CommerceFedEx\\FedExPHP\\Structs\\Localization',
-            'Notification' => '\\CommerceFedEx\\FedExPHP\\Structs\\Notification',
-            'NotificationParameter' => '\\CommerceFedEx\\FedExPHP\\Structs\\NotificationParameter',
-            'RetrieveJobResultsReply' => '\\CommerceFedEx\\FedExPHP\\Structs\\RetrieveJobResultsReply',
-            'RetrieveJobResultsRequest' => '\\CommerceFedEx\\FedExPHP\\Structs\\RetrieveJobResultsRequest',
-            'RetrievedArtifact' => '\\CommerceFedEx\\FedExPHP\\Structs\\RetrievedArtifact',
-            'TransactionDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\TransactionDetail',
-            'WebAuthenticationDetail' => '\\CommerceFedEx\\FedExPHP\\Structs\\WebAuthenticationDetail',
-            'WebAuthenticationCredential' => '\\CommerceFedEx\\FedExPHP\\Structs\\WebAuthenticationCredential',
-            'VersionId' => '\\CommerceFedEx\\FedExPHP\\Structs\\VersionId',
+            'ArtifactPart' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ArtifactPart',
+            'ArtifactRetrievalFilter' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ArtifactRetrievalFilter',
+            'ClientDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\ClientDetail',
+            'Localization' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Localization',
+            'Notification' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\Notification',
+            'NotificationParameter' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\NotificationParameter',
+            'RetrieveJobResultsReply' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\RetrieveJobResultsReply',
+            'RetrieveJobResultsRequest' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\RetrieveJobResultsRequest',
+            'RetrievedArtifact' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\RetrievedArtifact',
+            'TransactionDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\TransactionDetail',
+            'WebAuthenticationDetail' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\WebAuthenticationDetail',
+            'WebAuthenticationCredential' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\WebAuthenticationCredential',
+            'VersionId' => '\\NicholasCreativeMedia\\FedExPHP\\Structs\\VersionId',
         );
     }
 }

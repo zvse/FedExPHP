@@ -52,7 +52,7 @@ class Distance extends AbstractStructBase
     /**
      * Set Value value
      * @param float $value
-     * @return \CommerceFedEx\FedExPHP\Structs\Distance
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Distance
      */
     public function setValue($value = null)
     {
@@ -69,17 +69,17 @@ class Distance extends AbstractStructBase
     }
     /**
      * Set Units value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DistanceUnits::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DistanceUnits::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DistanceUnits::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DistanceUnits::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $units
-     * @return \CommerceFedEx\FedExPHP\Structs\Distance
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Distance
      */
     public function setUnits($units = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DistanceUnits::valueIsValid($units)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \CommerceFedEx\FedExPHP\Enums\DistanceUnits::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DistanceUnits::valueIsValid($units)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DistanceUnits::getValidValues())), __LINE__);
         }
         $this->Units = $units;
         return $this;
@@ -90,7 +90,7 @@ class Distance extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Distance
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Distance
      */
     public static function __set_state(array $array)
     {

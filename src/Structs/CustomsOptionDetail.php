@@ -48,17 +48,17 @@ class CustomsOptionDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomsOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomsOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomsOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomsOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CustomsOptionType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomsOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomsOptionType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomsOptionType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -74,7 +74,7 @@ class CustomsOptionDetail extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail
      */
     public function setDescription($description = null)
     {
@@ -91,7 +91,7 @@ class CustomsOptionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomsOptionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsOptionDetail
      */
     public static function __set_state(array $array)
     {

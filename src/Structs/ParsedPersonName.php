@@ -93,7 +93,7 @@ class ParsedPersonName extends AbstractStructBase
     /**
      * Set Prefix value
      * @param string $prefix
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPersonName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName
      */
     public function setPrefix($prefix = null)
     {
@@ -115,7 +115,7 @@ class ParsedPersonName extends AbstractStructBase
     /**
      * Set Title value
      * @param string $title
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPersonName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName
      */
     public function setTitle($title = null)
     {
@@ -137,7 +137,7 @@ class ParsedPersonName extends AbstractStructBase
     /**
      * Set FirstName value
      * @param string $firstName
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPersonName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName
      */
     public function setFirstName($firstName = null)
     {
@@ -159,7 +159,7 @@ class ParsedPersonName extends AbstractStructBase
     /**
      * Set MiddleName value
      * @param string $middleName
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPersonName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName
      */
     public function setMiddleName($middleName = null)
     {
@@ -181,7 +181,7 @@ class ParsedPersonName extends AbstractStructBase
     /**
      * Set LastName value
      * @param string $lastName
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPersonName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName
      */
     public function setLastName($lastName = null)
     {
@@ -203,7 +203,7 @@ class ParsedPersonName extends AbstractStructBase
     /**
      * Set Suffix value
      * @param string $suffix
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPersonName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName
      */
     public function setSuffix($suffix = null)
     {
@@ -220,7 +220,7 @@ class ParsedPersonName extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPersonName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName
      */
     public static function __set_state(array $array)
     {

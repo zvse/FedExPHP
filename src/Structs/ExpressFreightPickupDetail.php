@@ -29,7 +29,7 @@ class ExpressFreightPickupDetail extends AbstractStructBase
      * The Dimensions
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public $Dimensions;
     /**
@@ -55,11 +55,11 @@ class ExpressFreightPickupDetail extends AbstractStructBase
      * @uses ExpressFreightPickupDetail::setTrailerSize()
      * @param string $service
      * @param string $bookingNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
      * @param string $truckType
      * @param string $trailerSize
      */
-    public function __construct($service = null, $bookingNumber = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null, $truckType = null, $trailerSize = null)
+    public function __construct($service = null, $bookingNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null, $truckType = null, $trailerSize = null)
     {
         $this
             ->setService($service)
@@ -79,7 +79,7 @@ class ExpressFreightPickupDetail extends AbstractStructBase
     /**
      * Set Service value
      * @param string $service
-     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightPickupDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightPickupDetail
      */
     public function setService($service = null)
     {
@@ -101,7 +101,7 @@ class ExpressFreightPickupDetail extends AbstractStructBase
     /**
      * Set BookingNumber value
      * @param string $bookingNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightPickupDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightPickupDetail
      */
     public function setBookingNumber($bookingNumber = null)
     {
@@ -114,7 +114,7 @@ class ExpressFreightPickupDetail extends AbstractStructBase
     }
     /**
      * Get Dimensions value
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions|null
      */
     public function getDimensions()
     {
@@ -122,10 +122,10 @@ class ExpressFreightPickupDetail extends AbstractStructBase
     }
     /**
      * Set Dimensions value
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
-     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightPickupDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightPickupDetail
      */
-    public function setDimensions(\CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null)
+    public function setDimensions(\NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null)
     {
         $this->Dimensions = $dimensions;
         return $this;
@@ -140,17 +140,17 @@ class ExpressFreightPickupDetail extends AbstractStructBase
     }
     /**
      * Set TruckType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TruckType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TruckType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TruckType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TruckType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $truckType
-     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightPickupDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightPickupDetail
      */
     public function setTruckType($truckType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TruckType::valueIsValid($truckType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $truckType, implode(', ', \CommerceFedEx\FedExPHP\Enums\TruckType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TruckType::valueIsValid($truckType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $truckType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TruckType::getValidValues())), __LINE__);
         }
         $this->TruckType = $truckType;
         return $this;
@@ -165,17 +165,17 @@ class ExpressFreightPickupDetail extends AbstractStructBase
     }
     /**
      * Set TrailerSize value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TrailerSizeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TrailerSizeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrailerSizeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TrailerSizeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $trailerSize
-     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightPickupDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightPickupDetail
      */
     public function setTrailerSize($trailerSize = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TrailerSizeType::valueIsValid($trailerSize)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $trailerSize, implode(', ', \CommerceFedEx\FedExPHP\Enums\TrailerSizeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TrailerSizeType::valueIsValid($trailerSize)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $trailerSize, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TrailerSizeType::getValidValues())), __LINE__);
         }
         $this->TrailerSize = $trailerSize;
         return $this;
@@ -186,7 +186,7 @@ class ExpressFreightPickupDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ExpressFreightPickupDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExpressFreightPickupDetail
      */
     public static function __set_state(array $array)
     {

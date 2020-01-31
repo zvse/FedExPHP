@@ -42,7 +42,7 @@ class ShipmentConsolidationDetail extends AbstractStructBase
      * - documentation: Identifies other tracking IDs related to this shipment within the same consolidation.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId[]
      */
     public $AssociatedTrackingIds;
     /**
@@ -50,15 +50,23 @@ class ShipmentConsolidationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the consolidation-level special services to be performed for this shipment.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested
      */
     public $SpecialServicesRequested;
+    /**
+     * The ConsolidationOriginAddress
+     * Meta informations extracted from the WSDL
+     * - documentation: This is the origin address of the consolidation.
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
+     */
+    public $ConsolidationOriginAddress;
     /**
      * The InternationalDistributionDetail
      * Meta informations extracted from the WSDL
      * - documentation: Specifies attributes of a shipment within an international distribution.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail
      */
     public $InternationalDistributionDetail;
     /**
@@ -66,18 +74,9 @@ class ShipmentConsolidationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies attributes of a shipment within a transborder distribution.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentTransborderDistributionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentTransborderDistributionDetail
      */
     public $TransborderDistributionDetail;
-    /**
-     * The DistributionLocations
-     * Meta informations extracted from the WSDL
-     * - documentation: FOR INTERNAL FEDEX USE ONLY: Identifies the distribution facility where this shipment will be de-consolidated and distributed.
-     * - maxOccurs: unbounded
-     * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[]
-     */
-    public $DistributionLocations;
     /**
      * Constructor method for ShipmentConsolidationDetail
      * @uses ShipmentConsolidationDetail::setRelationshipTimestamp()
@@ -85,19 +84,19 @@ class ShipmentConsolidationDetail extends AbstractStructBase
      * @uses ShipmentConsolidationDetail::setRole()
      * @uses ShipmentConsolidationDetail::setAssociatedTrackingIds()
      * @uses ShipmentConsolidationDetail::setSpecialServicesRequested()
+     * @uses ShipmentConsolidationDetail::setConsolidationOriginAddress()
      * @uses ShipmentConsolidationDetail::setInternationalDistributionDetail()
      * @uses ShipmentConsolidationDetail::setTransborderDistributionDetail()
-     * @uses ShipmentConsolidationDetail::setDistributionLocations()
      * @param string $relationshipTimestamp
      * @param string $type
      * @param string $role
-     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId[] $associatedTrackingIds
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail $internationalDistributionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentTransborderDistributionDetail $transborderDistributionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[] $distributionLocations
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId[] $associatedTrackingIds
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $consolidationOriginAddress
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail $internationalDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentTransborderDistributionDetail $transborderDistributionDetail
      */
-    public function __construct($relationshipTimestamp = null, $type = null, $role = null, array $associatedTrackingIds = array(), \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested = null, \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail $internationalDistributionDetail = null, \CommerceFedEx\FedExPHP\Structs\ShipmentTransborderDistributionDetail $transborderDistributionDetail = null, array $distributionLocations = array())
+    public function __construct($relationshipTimestamp = null, $type = null, $role = null, array $associatedTrackingIds = array(), \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $consolidationOriginAddress = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail $internationalDistributionDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentTransborderDistributionDetail $transborderDistributionDetail = null)
     {
         $this
             ->setRelationshipTimestamp($relationshipTimestamp)
@@ -105,9 +104,9 @@ class ShipmentConsolidationDetail extends AbstractStructBase
             ->setRole($role)
             ->setAssociatedTrackingIds($associatedTrackingIds)
             ->setSpecialServicesRequested($specialServicesRequested)
+            ->setConsolidationOriginAddress($consolidationOriginAddress)
             ->setInternationalDistributionDetail($internationalDistributionDetail)
-            ->setTransborderDistributionDetail($transborderDistributionDetail)
-            ->setDistributionLocations($distributionLocations);
+            ->setTransborderDistributionDetail($transborderDistributionDetail);
     }
     /**
      * Get RelationshipTimestamp value
@@ -120,7 +119,7 @@ class ShipmentConsolidationDetail extends AbstractStructBase
     /**
      * Set RelationshipTimestamp value
      * @param string $relationshipTimestamp
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
      */
     public function setRelationshipTimestamp($relationshipTimestamp = null)
     {
@@ -141,17 +140,17 @@ class ShipmentConsolidationDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -166,24 +165,24 @@ class ShipmentConsolidationDetail extends AbstractStructBase
     }
     /**
      * Set Role value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $role
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
      */
     public function setRole($role = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid($role)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid($role)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues())), __LINE__);
         }
         $this->Role = $role;
         return $this;
     }
     /**
      * Get AssociatedTrackingIds value
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId[]|null
      */
     public function getAssociatedTrackingIds()
     {
@@ -192,15 +191,15 @@ class ShipmentConsolidationDetail extends AbstractStructBase
     /**
      * Set AssociatedTrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId[] $associatedTrackingIds
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId[] $associatedTrackingIds
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
      */
     public function setAssociatedTrackingIds(array $associatedTrackingIds = array())
     {
         foreach ($associatedTrackingIds as $shipmentConsolidationDetailAssociatedTrackingIdsItem) {
             // validation for constraint: itemType
-            if (!$shipmentConsolidationDetailAssociatedTrackingIdsItem instanceof \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId) {
-                throw new \InvalidArgumentException(sprintf('The AssociatedTrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId, "%s" given', is_object($shipmentConsolidationDetailAssociatedTrackingIdsItem) ? get_class($shipmentConsolidationDetailAssociatedTrackingIdsItem) : gettype($shipmentConsolidationDetailAssociatedTrackingIdsItem)), __LINE__);
+            if (!$shipmentConsolidationDetailAssociatedTrackingIdsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId) {
+                throw new \InvalidArgumentException(sprintf('The AssociatedTrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId, "%s" given', is_object($shipmentConsolidationDetailAssociatedTrackingIdsItem) ? get_class($shipmentConsolidationDetailAssociatedTrackingIdsItem) : gettype($shipmentConsolidationDetailAssociatedTrackingIdsItem)), __LINE__);
             }
         }
         $this->AssociatedTrackingIds = $associatedTrackingIds;
@@ -209,21 +208,21 @@ class ShipmentConsolidationDetail extends AbstractStructBase
     /**
      * Add item to AssociatedTrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
      */
-    public function addToAssociatedTrackingIds(\CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId $item)
+    public function addToAssociatedTrackingIds(\NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId) {
-            throw new \InvalidArgumentException(sprintf('The AssociatedTrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId) {
+            throw new \InvalidArgumentException(sprintf('The AssociatedTrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AssociatedTrackingIds[] = $item;
         return $this;
     }
     /**
      * Get SpecialServicesRequested value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested|null
      */
     public function getSpecialServicesRequested()
     {
@@ -231,17 +230,35 @@ class ShipmentConsolidationDetail extends AbstractStructBase
     }
     /**
      * Set SpecialServicesRequested value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
      */
-    public function setSpecialServicesRequested(\CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested = null)
+    public function setSpecialServicesRequested(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested = null)
     {
         $this->SpecialServicesRequested = $specialServicesRequested;
         return $this;
     }
     /**
+     * Get ConsolidationOriginAddress value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
+     */
+    public function getConsolidationOriginAddress()
+    {
+        return $this->ConsolidationOriginAddress;
+    }
+    /**
+     * Set ConsolidationOriginAddress value
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $consolidationOriginAddress
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
+     */
+    public function setConsolidationOriginAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $consolidationOriginAddress = null)
+    {
+        $this->ConsolidationOriginAddress = $consolidationOriginAddress;
+        return $this;
+    }
+    /**
      * Get InternationalDistributionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail|null
      */
     public function getInternationalDistributionDetail()
     {
@@ -249,17 +266,17 @@ class ShipmentConsolidationDetail extends AbstractStructBase
     }
     /**
      * Set InternationalDistributionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail $internationalDistributionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail $internationalDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
      */
-    public function setInternationalDistributionDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail $internationalDistributionDetail = null)
+    public function setInternationalDistributionDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail $internationalDistributionDetail = null)
     {
         $this->InternationalDistributionDetail = $internationalDistributionDetail;
         return $this;
     }
     /**
      * Get TransborderDistributionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentTransborderDistributionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentTransborderDistributionDetail|null
      */
     public function getTransborderDistributionDetail()
     {
@@ -267,52 +284,12 @@ class ShipmentConsolidationDetail extends AbstractStructBase
     }
     /**
      * Set TransborderDistributionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentTransborderDistributionDetail $transborderDistributionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentTransborderDistributionDetail $transborderDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
      */
-    public function setTransborderDistributionDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentTransborderDistributionDetail $transborderDistributionDetail = null)
+    public function setTransborderDistributionDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentTransborderDistributionDetail $transborderDistributionDetail = null)
     {
         $this->TransborderDistributionDetail = $transborderDistributionDetail;
-        return $this;
-    }
-    /**
-     * Get DistributionLocations value
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[]|null
-     */
-    public function getDistributionLocations()
-    {
-        return $this->DistributionLocations;
-    }
-    /**
-     * Set DistributionLocations value
-     * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[] $distributionLocations
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
-     */
-    public function setDistributionLocations(array $distributionLocations = array())
-    {
-        foreach ($distributionLocations as $shipmentConsolidationDetailDistributionLocationsItem) {
-            // validation for constraint: itemType
-            if (!$shipmentConsolidationDetailDistributionLocationsItem instanceof \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation) {
-                throw new \InvalidArgumentException(sprintf('The DistributionLocations property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($shipmentConsolidationDetailDistributionLocationsItem) ? get_class($shipmentConsolidationDetailDistributionLocationsItem) : gettype($shipmentConsolidationDetailDistributionLocationsItem)), __LINE__);
-            }
-        }
-        $this->DistributionLocations = $distributionLocations;
-        return $this;
-    }
-    /**
-     * Add item to DistributionLocations value
-     * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
-     */
-    public function addToDistributionLocations(\CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation $item)
-    {
-        // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation) {
-            throw new \InvalidArgumentException(sprintf('The DistributionLocations property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
-        }
-        $this->DistributionLocations[] = $item;
         return $this;
     }
     /**
@@ -321,7 +298,7 @@ class ShipmentConsolidationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConsolidationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConsolidationDetail
      */
     public static function __set_state(array $array)
     {

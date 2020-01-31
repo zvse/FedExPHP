@@ -25,7 +25,7 @@ class ShipmentAssemblyDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total weight of pieces or packages to be assembled
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $Weight;
     /**
@@ -33,9 +33,9 @@ class ShipmentAssemblyDetail extends AbstractStructBase
      * @uses ShipmentAssemblyDetail::setPieceCount()
      * @uses ShipmentAssemblyDetail::setWeight()
      * @param int $pieceCount
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
      */
-    public function __construct($pieceCount = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function __construct($pieceCount = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this
             ->setPieceCount($pieceCount)
@@ -52,7 +52,7 @@ class ShipmentAssemblyDetail extends AbstractStructBase
     /**
      * Set PieceCount value
      * @param int $pieceCount
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAssemblyDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAssemblyDetail
      */
     public function setPieceCount($pieceCount = null)
     {
@@ -65,7 +65,7 @@ class ShipmentAssemblyDetail extends AbstractStructBase
     }
     /**
      * Get Weight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getWeight()
     {
@@ -73,10 +73,10 @@ class ShipmentAssemblyDetail extends AbstractStructBase
     }
     /**
      * Set Weight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAssemblyDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAssemblyDetail
      */
-    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function setWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this->Weight = $weight;
         return $this;
@@ -87,7 +87,7 @@ class ShipmentAssemblyDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAssemblyDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAssemblyDetail
      */
     public static function __set_state(array $array)
     {

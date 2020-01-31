@@ -48,7 +48,7 @@ class AssociatedEnterpriseDocumentDetail extends AbstractStructBase
     /**
      * Set DocumentId value
      * @param string $documentId
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedEnterpriseDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedEnterpriseDocumentDetail
      */
     public function setDocumentId($documentId = null)
     {
@@ -70,7 +70,7 @@ class AssociatedEnterpriseDocumentDetail extends AbstractStructBase
     /**
      * Set TrackingNumber value
      * @param string $trackingNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedEnterpriseDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedEnterpriseDocumentDetail
      */
     public function setTrackingNumber($trackingNumber = null)
     {
@@ -87,7 +87,7 @@ class AssociatedEnterpriseDocumentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedEnterpriseDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedEnterpriseDocumentDetail
      */
     public static function __set_state(array $array)
     {

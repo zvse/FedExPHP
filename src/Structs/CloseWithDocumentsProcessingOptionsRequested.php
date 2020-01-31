@@ -38,39 +38,39 @@ class CloseWithDocumentsProcessingOptionsRequested extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $options
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsProcessingOptionsRequested
      */
     public function setOptions(array $options = array())
     {
         $invalidValues = array();
         foreach ($options as $closeWithDocumentsProcessingOptionsRequestedOptionsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::valueIsValid($closeWithDocumentsProcessingOptionsRequestedOptionsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::valueIsValid($closeWithDocumentsProcessingOptionsRequestedOptionsItem)) {
                 $invalidValues[] = var_export($closeWithDocumentsProcessingOptionsRequestedOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options = $options;
         return $this;
     }
     /**
      * Add item to Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsProcessingOptionsRequested
      */
     public function addToOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CloseWithDocumentsProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
@@ -81,7 +81,7 @@ class CloseWithDocumentsProcessingOptionsRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsProcessingOptionsRequested
      */
     public static function __set_state(array $array)
     {

@@ -17,7 +17,7 @@ class Op950Detail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies characteristics of a shipping document to be produced.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat
      */
     public $Format;
     /**
@@ -26,7 +26,7 @@ class Op950Detail extends AbstractStructBase
      * - documentation: Specifies the usage and identification of a customer supplied image to be used on this document.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]
      */
     public $CustomerImageUsages;
     /**
@@ -42,11 +42,11 @@ class Op950Detail extends AbstractStructBase
      * @uses Op950Detail::setFormat()
      * @uses Op950Detail::setCustomerImageUsages()
      * @uses Op950Detail::setSignatureName()
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat $format
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat $format
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
      * @param string $signatureName
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat $format = null, array $customerImageUsages = array(), $signatureName = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat $format = null, array $customerImageUsages = array(), $signatureName = null)
     {
         $this
             ->setFormat($format)
@@ -55,7 +55,7 @@ class Op950Detail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat|null
      */
     public function getFormat()
     {
@@ -63,17 +63,17 @@ class Op950Detail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat $format
-     * @return \CommerceFedEx\FedExPHP\Structs\Op950Detail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat $format
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op950Detail
      */
-    public function setFormat(\CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat $format = null)
+    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
     }
     /**
      * Get CustomerImageUsages value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]|null
      */
     public function getCustomerImageUsages()
     {
@@ -82,15 +82,15 @@ class Op950Detail extends AbstractStructBase
     /**
      * Set CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
-     * @return \CommerceFedEx\FedExPHP\Structs\Op950Detail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op950Detail
      */
     public function setCustomerImageUsages(array $customerImageUsages = array())
     {
         foreach ($customerImageUsages as $op950DetailCustomerImageUsagesItem) {
             // validation for constraint: itemType
-            if (!$op950DetailCustomerImageUsagesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($op950DetailCustomerImageUsagesItem) ? get_class($op950DetailCustomerImageUsagesItem) : gettype($op950DetailCustomerImageUsagesItem)), __LINE__);
+            if (!$op950DetailCustomerImageUsagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($op950DetailCustomerImageUsagesItem) ? get_class($op950DetailCustomerImageUsagesItem) : gettype($op950DetailCustomerImageUsagesItem)), __LINE__);
             }
         }
         $this->CustomerImageUsages = $customerImageUsages;
@@ -99,14 +99,14 @@ class Op950Detail extends AbstractStructBase
     /**
      * Add item to CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item
-     * @return \CommerceFedEx\FedExPHP\Structs\Op950Detail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op950Detail
      */
-    public function addToCustomerImageUsages(\CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item)
+    public function addToCustomerImageUsages(\NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerImageUsages[] = $item;
         return $this;
@@ -122,7 +122,7 @@ class Op950Detail extends AbstractStructBase
     /**
      * Set SignatureName value
      * @param string $signatureName
-     * @return \CommerceFedEx\FedExPHP\Structs\Op950Detail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op950Detail
      */
     public function setSignatureName($signatureName = null)
     {
@@ -139,7 +139,7 @@ class Op950Detail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Op950Detail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Op950Detail
      */
     public static function __set_state(array $array)
     {

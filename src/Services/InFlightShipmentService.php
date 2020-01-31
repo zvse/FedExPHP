@@ -23,12 +23,12 @@ class Service extends AbstractSoapClientBase
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'InFlightShipmentService_v1.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\InFlightShipmentClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\InFlightShipmentClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('ifss',1,0,0);
+        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('ifss',1,0,0);
     }
     /**
      * Method to call the operation originally named validateDelivery
@@ -36,10 +36,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ValidateDeliveryRequest $validateDeliveryRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ValidateDeliveryReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidateDeliveryRequest $validateDeliveryRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidateDeliveryReply|bool
      */
-    public function validateDelivery(\CommerceFedEx\FedExPHP\Structs\ValidateDeliveryRequest $validateDeliveryRequest)
+    public function validateDelivery(\NicholasCreativeMedia\FedExPHP\Structs\ValidateDeliveryRequest $validateDeliveryRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->validateDelivery($validateDeliveryRequest));
@@ -55,10 +55,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ProcessDeliveryRequest $processDeliveryRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ProcessDeliveryReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ProcessDeliveryRequest $processDeliveryRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProcessDeliveryReply|bool
      */
-    public function processDelivery(\CommerceFedEx\FedExPHP\Structs\ProcessDeliveryRequest $processDeliveryRequest)
+    public function processDelivery(\NicholasCreativeMedia\FedExPHP\Structs\ProcessDeliveryRequest $processDeliveryRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->processDelivery($processDeliveryRequest));
@@ -71,7 +71,7 @@ class Service extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \CommerceFedEx\FedExPHP\Structs\ProcessDeliveryReply|\CommerceFedEx\FedExPHP\Structs\ValidateDeliveryReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProcessDeliveryReply|\NicholasCreativeMedia\FedExPHP\Structs\ValidateDeliveryReply
      */
     public function getResult()
     {

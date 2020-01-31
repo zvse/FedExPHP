@@ -21,14 +21,14 @@ class InternationalDistributionDetail extends AbstractStructBase
      * The TotalDimensions
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public $TotalDimensions;
     /**
      * The TotalInsuredValue
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalInsuredValue;
     /**
@@ -43,7 +43,7 @@ class InternationalDistributionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency[]
      */
     public $DeclarationCurrencies;
     /**
@@ -62,13 +62,13 @@ class InternationalDistributionDetail extends AbstractStructBase
      * @uses InternationalDistributionDetail::setDeclarationCurrencies()
      * @uses InternationalDistributionDetail::setClearanceFacilityLocationId()
      * @param string $dropoffType
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $totalDimensions
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $totalDimensions
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue
      * @param string $unitSystem
-     * @param \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency[] $declarationCurrencies
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency[] $declarationCurrencies
      * @param string $clearanceFacilityLocationId
      */
-    public function __construct($dropoffType = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $totalDimensions = null, \CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue = null, $unitSystem = null, array $declarationCurrencies = array(), $clearanceFacilityLocationId = null)
+    public function __construct($dropoffType = null, \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $totalDimensions = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue = null, $unitSystem = null, array $declarationCurrencies = array(), $clearanceFacilityLocationId = null)
     {
         $this
             ->setDropoffType($dropoffType)
@@ -88,24 +88,24 @@ class InternationalDistributionDetail extends AbstractStructBase
     }
     /**
      * Set DropoffType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DropoffType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DropoffType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DropoffType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DropoffType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $dropoffType
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail
      */
     public function setDropoffType($dropoffType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DropoffType::valueIsValid($dropoffType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dropoffType, implode(', ', \CommerceFedEx\FedExPHP\Enums\DropoffType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DropoffType::valueIsValid($dropoffType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dropoffType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DropoffType::getValidValues())), __LINE__);
         }
         $this->DropoffType = $dropoffType;
         return $this;
     }
     /**
      * Get TotalDimensions value
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions|null
      */
     public function getTotalDimensions()
     {
@@ -113,17 +113,17 @@ class InternationalDistributionDetail extends AbstractStructBase
     }
     /**
      * Set TotalDimensions value
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $totalDimensions
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $totalDimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail
      */
-    public function setTotalDimensions(\CommerceFedEx\FedExPHP\Structs\Dimensions $totalDimensions = null)
+    public function setTotalDimensions(\NicholasCreativeMedia\FedExPHP\Structs\Dimensions $totalDimensions = null)
     {
         $this->TotalDimensions = $totalDimensions;
         return $this;
     }
     /**
      * Get TotalInsuredValue value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalInsuredValue()
     {
@@ -131,10 +131,10 @@ class InternationalDistributionDetail extends AbstractStructBase
     }
     /**
      * Set TotalInsuredValue value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail
      */
-    public function setTotalInsuredValue(\CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue = null)
+    public function setTotalInsuredValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue = null)
     {
         $this->TotalInsuredValue = $totalInsuredValue;
         return $this;
@@ -149,24 +149,24 @@ class InternationalDistributionDetail extends AbstractStructBase
     }
     /**
      * Set UnitSystem value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UnitSystemType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UnitSystemType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UnitSystemType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UnitSystemType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $unitSystem
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail
      */
     public function setUnitSystem($unitSystem = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UnitSystemType::valueIsValid($unitSystem)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $unitSystem, implode(', ', \CommerceFedEx\FedExPHP\Enums\UnitSystemType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UnitSystemType::valueIsValid($unitSystem)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $unitSystem, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UnitSystemType::getValidValues())), __LINE__);
         }
         $this->UnitSystem = $unitSystem;
         return $this;
     }
     /**
      * Get DeclarationCurrencies value
-     * @return \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency[]|null
      */
     public function getDeclarationCurrencies()
     {
@@ -175,15 +175,15 @@ class InternationalDistributionDetail extends AbstractStructBase
     /**
      * Set DeclarationCurrencies value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency[] $declarationCurrencies
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency[] $declarationCurrencies
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail
      */
     public function setDeclarationCurrencies(array $declarationCurrencies = array())
     {
         foreach ($declarationCurrencies as $internationalDistributionDetailDeclarationCurrenciesItem) {
             // validation for constraint: itemType
-            if (!$internationalDistributionDetailDeclarationCurrenciesItem instanceof \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency) {
-                throw new \InvalidArgumentException(sprintf('The DeclarationCurrencies property can only contain items of \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency, "%s" given', is_object($internationalDistributionDetailDeclarationCurrenciesItem) ? get_class($internationalDistributionDetailDeclarationCurrenciesItem) : gettype($internationalDistributionDetailDeclarationCurrenciesItem)), __LINE__);
+            if (!$internationalDistributionDetailDeclarationCurrenciesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency) {
+                throw new \InvalidArgumentException(sprintf('The DeclarationCurrencies property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency, "%s" given', is_object($internationalDistributionDetailDeclarationCurrenciesItem) ? get_class($internationalDistributionDetailDeclarationCurrenciesItem) : gettype($internationalDistributionDetailDeclarationCurrenciesItem)), __LINE__);
             }
         }
         $this->DeclarationCurrencies = $declarationCurrencies;
@@ -192,14 +192,14 @@ class InternationalDistributionDetail extends AbstractStructBase
     /**
      * Add item to DeclarationCurrencies value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency $item
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail
      */
-    public function addToDeclarationCurrencies(\CommerceFedEx\FedExPHP\Structs\DeclarationCurrency $item)
+    public function addToDeclarationCurrencies(\NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency) {
-            throw new \InvalidArgumentException(sprintf('The DeclarationCurrencies property can only contain items of \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency) {
+            throw new \InvalidArgumentException(sprintf('The DeclarationCurrencies property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DeclarationCurrencies[] = $item;
         return $this;
@@ -215,7 +215,7 @@ class InternationalDistributionDetail extends AbstractStructBase
     /**
      * Set ClearanceFacilityLocationId value
      * @param string $clearanceFacilityLocationId
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail
      */
     public function setClearanceFacilityLocationId($clearanceFacilityLocationId = null)
     {
@@ -232,7 +232,7 @@ class InternationalDistributionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail
      */
     public static function __set_state(array $array)
     {

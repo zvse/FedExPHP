@@ -17,7 +17,7 @@ class ExportDeclarationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies characteristics of a shipping document to be produced.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $DocumentFormat;
     /**
@@ -26,17 +26,17 @@ class ExportDeclarationDetail extends AbstractStructBase
      * - documentation: Specifies the usage and identification of customer supplied images to be used on this document.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]
      */
     public $CustomerImageUsages;
     /**
      * Constructor method for ExportDeclarationDetail
      * @uses ExportDeclarationDetail::setDocumentFormat()
      * @uses ExportDeclarationDetail::setCustomerImageUsages()
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $documentFormat
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $documentFormat
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $documentFormat = null, array $customerImageUsages = array())
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $documentFormat = null, array $customerImageUsages = array())
     {
         $this
             ->setDocumentFormat($documentFormat)
@@ -44,7 +44,7 @@ class ExportDeclarationDetail extends AbstractStructBase
     }
     /**
      * Get DocumentFormat value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getDocumentFormat()
     {
@@ -52,17 +52,17 @@ class ExportDeclarationDetail extends AbstractStructBase
     }
     /**
      * Set DocumentFormat value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $documentFormat
-     * @return \CommerceFedEx\FedExPHP\Structs\ExportDeclarationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $documentFormat
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDeclarationDetail
      */
-    public function setDocumentFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $documentFormat = null)
+    public function setDocumentFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $documentFormat = null)
     {
         $this->DocumentFormat = $documentFormat;
         return $this;
     }
     /**
      * Get CustomerImageUsages value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]|null
      */
     public function getCustomerImageUsages()
     {
@@ -71,15 +71,15 @@ class ExportDeclarationDetail extends AbstractStructBase
     /**
      * Set CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
-     * @return \CommerceFedEx\FedExPHP\Structs\ExportDeclarationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDeclarationDetail
      */
     public function setCustomerImageUsages(array $customerImageUsages = array())
     {
         foreach ($customerImageUsages as $exportDeclarationDetailCustomerImageUsagesItem) {
             // validation for constraint: itemType
-            if (!$exportDeclarationDetailCustomerImageUsagesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($exportDeclarationDetailCustomerImageUsagesItem) ? get_class($exportDeclarationDetailCustomerImageUsagesItem) : gettype($exportDeclarationDetailCustomerImageUsagesItem)), __LINE__);
+            if (!$exportDeclarationDetailCustomerImageUsagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($exportDeclarationDetailCustomerImageUsagesItem) ? get_class($exportDeclarationDetailCustomerImageUsagesItem) : gettype($exportDeclarationDetailCustomerImageUsagesItem)), __LINE__);
             }
         }
         $this->CustomerImageUsages = $customerImageUsages;
@@ -88,14 +88,14 @@ class ExportDeclarationDetail extends AbstractStructBase
     /**
      * Add item to CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ExportDeclarationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDeclarationDetail
      */
-    public function addToCustomerImageUsages(\CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item)
+    public function addToCustomerImageUsages(\NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerImageUsages[] = $item;
         return $this;
@@ -106,7 +106,7 @@ class ExportDeclarationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ExportDeclarationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ExportDeclarationDetail
      */
     public static function __set_state(array $array)
     {

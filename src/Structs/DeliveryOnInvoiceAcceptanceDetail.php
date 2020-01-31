@@ -14,7 +14,7 @@ class DeliveryOnInvoiceAcceptanceDetail extends AbstractStructBase
      * The Recipient
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Party
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public $Recipient;
     /**
@@ -22,17 +22,17 @@ class DeliveryOnInvoiceAcceptanceDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the tracking id for the return, if preassigned.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public $TrackingId;
     /**
      * Constructor method for DeliveryOnInvoiceAcceptanceDetail
      * @uses DeliveryOnInvoiceAcceptanceDetail::setRecipient()
      * @uses DeliveryOnInvoiceAcceptanceDetail::setTrackingId()
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $recipient
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $recipient
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\Party $recipient = null, \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Party $recipient = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId = null)
     {
         $this
             ->setRecipient($recipient)
@@ -40,7 +40,7 @@ class DeliveryOnInvoiceAcceptanceDetail extends AbstractStructBase
     }
     /**
      * Get Recipient value
-     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
      */
     public function getRecipient()
     {
@@ -48,17 +48,17 @@ class DeliveryOnInvoiceAcceptanceDetail extends AbstractStructBase
     }
     /**
      * Set Recipient value
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $recipient
-     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryOnInvoiceAcceptanceDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $recipient
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOnInvoiceAcceptanceDetail
      */
-    public function setRecipient(\CommerceFedEx\FedExPHP\Structs\Party $recipient = null)
+    public function setRecipient(\NicholasCreativeMedia\FedExPHP\Structs\Party $recipient = null)
     {
         $this->Recipient = $recipient;
         return $this;
     }
     /**
      * Get TrackingId value
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId|null
      */
     public function getTrackingId()
     {
@@ -66,10 +66,10 @@ class DeliveryOnInvoiceAcceptanceDetail extends AbstractStructBase
     }
     /**
      * Set TrackingId value
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId
-     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryOnInvoiceAcceptanceDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOnInvoiceAcceptanceDetail
      */
-    public function setTrackingId(\CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId = null)
+    public function setTrackingId(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId = null)
     {
         $this->TrackingId = $trackingId;
         return $this;
@@ -80,7 +80,7 @@ class DeliveryOnInvoiceAcceptanceDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryOnInvoiceAcceptanceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryOnInvoiceAcceptanceDetail
      */
     public static function __set_state(array $array)
     {

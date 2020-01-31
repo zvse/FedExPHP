@@ -29,7 +29,7 @@ class ShipmentEventNotificationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification[]
      */
     public $EventNotifications;
     /**
@@ -39,7 +39,7 @@ class ShipmentEventNotificationDetail extends AbstractStructBase
      * @uses ShipmentEventNotificationDetail::setEventNotifications()
      * @param string $aggregationType
      * @param string $personalMessage
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification[] $eventNotifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification[] $eventNotifications
      */
     public function __construct($aggregationType = null, $personalMessage = null, array $eventNotifications = array())
     {
@@ -58,17 +58,17 @@ class ShipmentEventNotificationDetail extends AbstractStructBase
     }
     /**
      * Set AggregationType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentNotificationAggregationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentNotificationAggregationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentNotificationAggregationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentNotificationAggregationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $aggregationType
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail
      */
     public function setAggregationType($aggregationType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShipmentNotificationAggregationType::valueIsValid($aggregationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $aggregationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentNotificationAggregationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShipmentNotificationAggregationType::valueIsValid($aggregationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $aggregationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShipmentNotificationAggregationType::getValidValues())), __LINE__);
         }
         $this->AggregationType = $aggregationType;
         return $this;
@@ -84,7 +84,7 @@ class ShipmentEventNotificationDetail extends AbstractStructBase
     /**
      * Set PersonalMessage value
      * @param string $personalMessage
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail
      */
     public function setPersonalMessage($personalMessage = null)
     {
@@ -97,7 +97,7 @@ class ShipmentEventNotificationDetail extends AbstractStructBase
     }
     /**
      * Get EventNotifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification[]|null
      */
     public function getEventNotifications()
     {
@@ -106,15 +106,15 @@ class ShipmentEventNotificationDetail extends AbstractStructBase
     /**
      * Set EventNotifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification[] $eventNotifications
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification[] $eventNotifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail
      */
     public function setEventNotifications(array $eventNotifications = array())
     {
         foreach ($eventNotifications as $shipmentEventNotificationDetailEventNotificationsItem) {
             // validation for constraint: itemType
-            if (!$shipmentEventNotificationDetailEventNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification) {
-                throw new \InvalidArgumentException(sprintf('The EventNotifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification, "%s" given', is_object($shipmentEventNotificationDetailEventNotificationsItem) ? get_class($shipmentEventNotificationDetailEventNotificationsItem) : gettype($shipmentEventNotificationDetailEventNotificationsItem)), __LINE__);
+            if (!$shipmentEventNotificationDetailEventNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification) {
+                throw new \InvalidArgumentException(sprintf('The EventNotifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification, "%s" given', is_object($shipmentEventNotificationDetailEventNotificationsItem) ? get_class($shipmentEventNotificationDetailEventNotificationsItem) : gettype($shipmentEventNotificationDetailEventNotificationsItem)), __LINE__);
             }
         }
         $this->EventNotifications = $eventNotifications;
@@ -123,14 +123,14 @@ class ShipmentEventNotificationDetail extends AbstractStructBase
     /**
      * Add item to EventNotifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail
      */
-    public function addToEventNotifications(\CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification $item)
+    public function addToEventNotifications(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification) {
-            throw new \InvalidArgumentException(sprintf('The EventNotifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationSpecification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification) {
+            throw new \InvalidArgumentException(sprintf('The EventNotifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationSpecification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->EventNotifications[] = $item;
         return $this;
@@ -141,7 +141,7 @@ class ShipmentEventNotificationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentEventNotificationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentEventNotificationDetail
      */
     public static function __set_state(array $array)
     {

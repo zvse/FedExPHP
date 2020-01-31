@@ -16,14 +16,14 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
      * The Format
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
      * The BlanketPeriod
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DateRange
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DateRange
      */
     public $BlanketPeriod;
     /**
@@ -39,7 +39,7 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contact information for "Authorized Signature" area of form.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Contact
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public $SignatureContact;
     /**
@@ -54,7 +54,7 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\NaftaProducer[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer[]
      */
     public $Producers;
     /**
@@ -62,7 +62,7 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]
      */
     public $CustomerImageUsages;
     /**
@@ -74,15 +74,15 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
      * @uses NaftaCertificateOfOriginDetail::setProducerSpecification()
      * @uses NaftaCertificateOfOriginDetail::setProducers()
      * @uses NaftaCertificateOfOriginDetail::setCustomerImageUsages()
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @param \CommerceFedEx\FedExPHP\Structs\DateRange $blanketPeriod
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DateRange $blanketPeriod
      * @param string $importerSpecification
-     * @param \CommerceFedEx\FedExPHP\Structs\Contact $signatureContact
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $signatureContact
      * @param string $producerSpecification
-     * @param \CommerceFedEx\FedExPHP\Structs\NaftaProducer[] $producers
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer[] $producers
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null, \CommerceFedEx\FedExPHP\Structs\DateRange $blanketPeriod = null, $importerSpecification = null, \CommerceFedEx\FedExPHP\Structs\Contact $signatureContact = null, $producerSpecification = null, array $producers = array(), array $customerImageUsages = array())
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null, \NicholasCreativeMedia\FedExPHP\Structs\DateRange $blanketPeriod = null, $importerSpecification = null, \NicholasCreativeMedia\FedExPHP\Structs\Contact $signatureContact = null, $producerSpecification = null, array $producers = array(), array $customerImageUsages = array())
     {
         $this
             ->setFormat($format)
@@ -95,7 +95,7 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -103,17 +103,17 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
-    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
     }
     /**
      * Get BlanketPeriod value
-     * @return \CommerceFedEx\FedExPHP\Structs\DateRange|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DateRange|null
      */
     public function getBlanketPeriod()
     {
@@ -121,10 +121,10 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     }
     /**
      * Set BlanketPeriod value
-     * @param \CommerceFedEx\FedExPHP\Structs\DateRange $blanketPeriod
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DateRange $blanketPeriod
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
-    public function setBlanketPeriod(\CommerceFedEx\FedExPHP\Structs\DateRange $blanketPeriod = null)
+    public function setBlanketPeriod(\NicholasCreativeMedia\FedExPHP\Structs\DateRange $blanketPeriod = null)
     {
         $this->BlanketPeriod = $blanketPeriod;
         return $this;
@@ -139,24 +139,24 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     }
     /**
      * Set ImporterSpecification value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaImporterSpecificationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaImporterSpecificationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaImporterSpecificationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaImporterSpecificationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $importerSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
     public function setImporterSpecification($importerSpecification = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NaftaImporterSpecificationType::valueIsValid($importerSpecification)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $importerSpecification, implode(', ', \CommerceFedEx\FedExPHP\Enums\NaftaImporterSpecificationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NaftaImporterSpecificationType::valueIsValid($importerSpecification)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $importerSpecification, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NaftaImporterSpecificationType::getValidValues())), __LINE__);
         }
         $this->ImporterSpecification = $importerSpecification;
         return $this;
     }
     /**
      * Get SignatureContact value
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact|null
      */
     public function getSignatureContact()
     {
@@ -164,10 +164,10 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     }
     /**
      * Set SignatureContact value
-     * @param \CommerceFedEx\FedExPHP\Structs\Contact $signatureContact
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $signatureContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
-    public function setSignatureContact(\CommerceFedEx\FedExPHP\Structs\Contact $signatureContact = null)
+    public function setSignatureContact(\NicholasCreativeMedia\FedExPHP\Structs\Contact $signatureContact = null)
     {
         $this->SignatureContact = $signatureContact;
         return $this;
@@ -182,24 +182,24 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     }
     /**
      * Set ProducerSpecification value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaProducerSpecificationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NaftaProducerSpecificationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaProducerSpecificationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NaftaProducerSpecificationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $producerSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
     public function setProducerSpecification($producerSpecification = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NaftaProducerSpecificationType::valueIsValid($producerSpecification)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $producerSpecification, implode(', ', \CommerceFedEx\FedExPHP\Enums\NaftaProducerSpecificationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NaftaProducerSpecificationType::valueIsValid($producerSpecification)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $producerSpecification, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NaftaProducerSpecificationType::getValidValues())), __LINE__);
         }
         $this->ProducerSpecification = $producerSpecification;
         return $this;
     }
     /**
      * Get Producers value
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaProducer[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer[]|null
      */
     public function getProducers()
     {
@@ -208,15 +208,15 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     /**
      * Set Producers value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\NaftaProducer[] $producers
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer[] $producers
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
     public function setProducers(array $producers = array())
     {
         foreach ($producers as $naftaCertificateOfOriginDetailProducersItem) {
             // validation for constraint: itemType
-            if (!$naftaCertificateOfOriginDetailProducersItem instanceof \CommerceFedEx\FedExPHP\Structs\NaftaProducer) {
-                throw new \InvalidArgumentException(sprintf('The Producers property can only contain items of \CommerceFedEx\FedExPHP\Structs\NaftaProducer, "%s" given', is_object($naftaCertificateOfOriginDetailProducersItem) ? get_class($naftaCertificateOfOriginDetailProducersItem) : gettype($naftaCertificateOfOriginDetailProducersItem)), __LINE__);
+            if (!$naftaCertificateOfOriginDetailProducersItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer) {
+                throw new \InvalidArgumentException(sprintf('The Producers property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer, "%s" given', is_object($naftaCertificateOfOriginDetailProducersItem) ? get_class($naftaCertificateOfOriginDetailProducersItem) : gettype($naftaCertificateOfOriginDetailProducersItem)), __LINE__);
             }
         }
         $this->Producers = $producers;
@@ -225,21 +225,21 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     /**
      * Add item to Producers value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\NaftaProducer $item
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
-    public function addToProducers(\CommerceFedEx\FedExPHP\Structs\NaftaProducer $item)
+    public function addToProducers(\NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\NaftaProducer) {
-            throw new \InvalidArgumentException(sprintf('The Producers property can only contain items of \CommerceFedEx\FedExPHP\Structs\NaftaProducer, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer) {
+            throw new \InvalidArgumentException(sprintf('The Producers property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Producers[] = $item;
         return $this;
     }
     /**
      * Get CustomerImageUsages value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]|null
      */
     public function getCustomerImageUsages()
     {
@@ -248,15 +248,15 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     /**
      * Set CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
     public function setCustomerImageUsages(array $customerImageUsages = array())
     {
         foreach ($customerImageUsages as $naftaCertificateOfOriginDetailCustomerImageUsagesItem) {
             // validation for constraint: itemType
-            if (!$naftaCertificateOfOriginDetailCustomerImageUsagesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($naftaCertificateOfOriginDetailCustomerImageUsagesItem) ? get_class($naftaCertificateOfOriginDetailCustomerImageUsagesItem) : gettype($naftaCertificateOfOriginDetailCustomerImageUsagesItem)), __LINE__);
+            if (!$naftaCertificateOfOriginDetailCustomerImageUsagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($naftaCertificateOfOriginDetailCustomerImageUsagesItem) ? get_class($naftaCertificateOfOriginDetailCustomerImageUsagesItem) : gettype($naftaCertificateOfOriginDetailCustomerImageUsagesItem)), __LINE__);
             }
         }
         $this->CustomerImageUsages = $customerImageUsages;
@@ -265,14 +265,14 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
     /**
      * Add item to CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
-    public function addToCustomerImageUsages(\CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item)
+    public function addToCustomerImageUsages(\NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerImageUsages[] = $item;
         return $this;
@@ -283,7 +283,7 @@ class NaftaCertificateOfOriginDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCertificateOfOriginDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCertificateOfOriginDetail
      */
     public static function __set_state(array $array)
     {

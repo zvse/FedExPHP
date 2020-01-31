@@ -48,7 +48,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Distance between customer address (pickup or delivery) and the supporting Freight / National Freight service center.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Distance
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Distance
      */
     public $LocalDistance;
     /**
@@ -97,7 +97,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Freight service center Contact and Address
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
      */
     public $ContactAndAddress;
     /**
@@ -117,15 +117,15 @@ class FreightServiceCenterDetail extends AbstractStructBase
      * @param string $interlineCarrierName
      * @param int $additionalDays
      * @param string $localService
-     * @param \CommerceFedEx\FedExPHP\Structs\Distance $localDistance
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $localDistance
      * @param string $localDuration
      * @param string $localServiceScheduling
      * @param string[] $limitedServiceDays
      * @param string $gatewayLocationId
      * @param string $location
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $contactAndAddress
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $contactAndAddress
      */
-    public function __construct($interlineCarrierCode = null, $interlineCarrierName = null, $additionalDays = null, $localService = null, \CommerceFedEx\FedExPHP\Structs\Distance $localDistance = null, $localDuration = null, $localServiceScheduling = null, array $limitedServiceDays = array(), $gatewayLocationId = null, $location = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $contactAndAddress = null)
+    public function __construct($interlineCarrierCode = null, $interlineCarrierName = null, $additionalDays = null, $localService = null, \NicholasCreativeMedia\FedExPHP\Structs\Distance $localDistance = null, $localDuration = null, $localServiceScheduling = null, array $limitedServiceDays = array(), $gatewayLocationId = null, $location = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $contactAndAddress = null)
     {
         $this
             ->setInterlineCarrierCode($interlineCarrierCode)
@@ -151,7 +151,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
     /**
      * Set InterlineCarrierCode value
      * @param string $interlineCarrierCode
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setInterlineCarrierCode($interlineCarrierCode = null)
     {
@@ -173,7 +173,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
     /**
      * Set InterlineCarrierName value
      * @param string $interlineCarrierName
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setInterlineCarrierName($interlineCarrierName = null)
     {
@@ -195,7 +195,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
     /**
      * Set AdditionalDays value
      * @param int $additionalDays
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setAdditionalDays($additionalDays = null)
     {
@@ -217,7 +217,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
     /**
      * Set LocalService value
      * @param string $localService
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setLocalService($localService = null)
     {
@@ -230,7 +230,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
     }
     /**
      * Get LocalDistance value
-     * @return \CommerceFedEx\FedExPHP\Structs\Distance|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Distance|null
      */
     public function getLocalDistance()
     {
@@ -238,10 +238,10 @@ class FreightServiceCenterDetail extends AbstractStructBase
     }
     /**
      * Set LocalDistance value
-     * @param \CommerceFedEx\FedExPHP\Structs\Distance $localDistance
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Distance $localDistance
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
-    public function setLocalDistance(\CommerceFedEx\FedExPHP\Structs\Distance $localDistance = null)
+    public function setLocalDistance(\NicholasCreativeMedia\FedExPHP\Structs\Distance $localDistance = null)
     {
         $this->LocalDistance = $localDistance;
         return $this;
@@ -257,7 +257,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
     /**
      * Set LocalDuration value
      * @param string $localDuration
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setLocalDuration($localDuration = null)
     {
@@ -278,17 +278,17 @@ class FreightServiceCenterDetail extends AbstractStructBase
     }
     /**
      * Set LocalServiceScheduling value
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightServiceSchedulingType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightServiceSchedulingType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightServiceSchedulingType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightServiceSchedulingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $localServiceScheduling
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setLocalServiceScheduling($localServiceScheduling = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\FreightServiceSchedulingType::valueIsValid($localServiceScheduling)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $localServiceScheduling, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightServiceSchedulingType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightServiceSchedulingType::valueIsValid($localServiceScheduling)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $localServiceScheduling, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightServiceSchedulingType::getValidValues())), __LINE__);
         }
         $this->LocalServiceScheduling = $localServiceScheduling;
         return $this;
@@ -303,39 +303,39 @@ class FreightServiceCenterDetail extends AbstractStructBase
     }
     /**
      * Set LimitedServiceDays value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $limitedServiceDays
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setLimitedServiceDays(array $limitedServiceDays = array())
     {
         $invalidValues = array();
         foreach ($limitedServiceDays as $freightServiceCenterDetailLimitedServiceDaysItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($freightServiceCenterDetailLimitedServiceDaysItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($freightServiceCenterDetailLimitedServiceDaysItem)) {
                 $invalidValues[] = var_export($freightServiceCenterDetailLimitedServiceDaysItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->LimitedServiceDays = $limitedServiceDays;
         return $this;
     }
     /**
      * Add item to LimitedServiceDays value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function addToLimitedServiceDays($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DayOfWeekType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DayOfWeekType::getValidValues())), __LINE__);
         }
         $this->LimitedServiceDays[] = $item;
         return $this;
@@ -351,7 +351,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
     /**
      * Set GatewayLocationId value
      * @param string $gatewayLocationId
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setGatewayLocationId($gatewayLocationId = null)
     {
@@ -373,7 +373,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
     /**
      * Set Location value
      * @param string $location
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public function setLocation($location = null)
     {
@@ -386,7 +386,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
     }
     /**
      * Get ContactAndAddress value
-     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getContactAndAddress()
     {
@@ -394,10 +394,10 @@ class FreightServiceCenterDetail extends AbstractStructBase
     }
     /**
      * Set ContactAndAddress value
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $contactAndAddress
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $contactAndAddress
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
-    public function setContactAndAddress(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $contactAndAddress = null)
+    public function setContactAndAddress(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $contactAndAddress = null)
     {
         $this->ContactAndAddress = $contactAndAddress;
         return $this;
@@ -408,7 +408,7 @@ class FreightServiceCenterDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public static function __set_state(array $array)
     {

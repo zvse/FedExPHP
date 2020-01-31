@@ -17,21 +17,21 @@ class DeleteShipmentRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
@@ -45,7 +45,7 @@ class DeleteShipmentRequest extends AbstractStructBase
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -59,7 +59,7 @@ class DeleteShipmentRequest extends AbstractStructBase
      * The TrackingId
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public $TrackingId;
     /**
@@ -71,15 +71,15 @@ class DeleteShipmentRequest extends AbstractStructBase
      * @uses DeleteShipmentRequest::setTransactionDetail()
      * @uses DeleteShipmentRequest::setShipTimestamp()
      * @uses DeleteShipmentRequest::setTrackingId()
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
      * @param string $deletionControl
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $shipTimestamp
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, $deletionControl = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $shipTimestamp = null, \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, $deletionControl = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $shipTimestamp = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -92,7 +92,7 @@ class DeleteShipmentRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -100,17 +100,17 @@ class DeleteShipmentRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest
      */
-    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -118,17 +118,17 @@ class DeleteShipmentRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest
      */
-    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -136,10 +136,10 @@ class DeleteShipmentRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
@@ -154,24 +154,24 @@ class DeleteShipmentRequest extends AbstractStructBase
     }
     /**
      * Set DeletionControl value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DeletionControlType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DeletionControlType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DeletionControlType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DeletionControlType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $deletionControl
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest
      */
     public function setDeletionControl($deletionControl = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DeletionControlType::valueIsValid($deletionControl)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deletionControl, implode(', ', \CommerceFedEx\FedExPHP\Enums\DeletionControlType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DeletionControlType::valueIsValid($deletionControl)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $deletionControl, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DeletionControlType::getValidValues())), __LINE__);
         }
         $this->DeletionControl = $deletionControl;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -179,10 +179,10 @@ class DeleteShipmentRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -198,7 +198,7 @@ class DeleteShipmentRequest extends AbstractStructBase
     /**
      * Set ShipTimestamp value
      * @param string $shipTimestamp
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest
      */
     public function setShipTimestamp($shipTimestamp = null)
     {
@@ -211,7 +211,7 @@ class DeleteShipmentRequest extends AbstractStructBase
     }
     /**
      * Get TrackingId value
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId|null
      */
     public function getTrackingId()
     {
@@ -219,10 +219,10 @@ class DeleteShipmentRequest extends AbstractStructBase
     }
     /**
      * Set TrackingId value
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest
      */
-    public function setTrackingId(\CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId = null)
+    public function setTrackingId(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId = null)
     {
         $this->TrackingId = $trackingId;
         return $this;
@@ -233,7 +233,7 @@ class DeleteShipmentRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest
      */
     public static function __set_state(array $array)
     {

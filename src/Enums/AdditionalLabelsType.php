@@ -29,6 +29,11 @@ class AdditionalLabelsType
      */
     const VALUE_DESTINATION = 'DESTINATION';
     /**
+     * Constant for value 'DESTINATION_CONTROL_STATEMENT'
+     * @return string 'DESTINATION_CONTROL_STATEMENT'
+     */
+    const VALUE_DESTINATION_CONTROL_STATEMENT = 'DESTINATION_CONTROL_STATEMENT';
+    /**
      * Constant for value 'FREIGHT_REFERENCE'
      * @return string 'FREIGHT_REFERENCE'
      */
@@ -48,6 +53,11 @@ class AdditionalLabelsType
      * @return string 'RECIPIENT'
      */
     const VALUE_RECIPIENT = 'RECIPIENT';
+    /**
+     * Constant for value 'SECOND_ADDRESS'
+     * @return string 'SECOND_ADDRESS'
+     */
+    const VALUE_SECOND_ADDRESS = 'SECOND_ADDRESS';
     /**
      * Constant for value 'SHIPPER'
      * @return string 'SHIPPER'
@@ -69,10 +79,12 @@ class AdditionalLabelsType
      * @uses self::VALUE_CONSIGNEE
      * @uses self::VALUE_CUSTOMS
      * @uses self::VALUE_DESTINATION
+     * @uses self::VALUE_DESTINATION_CONTROL_STATEMENT
      * @uses self::VALUE_FREIGHT_REFERENCE
      * @uses self::VALUE_MANIFEST
      * @uses self::VALUE_ORIGIN
      * @uses self::VALUE_RECIPIENT
+     * @uses self::VALUE_SECOND_ADDRESS
      * @uses self::VALUE_SHIPPER
      * @return string[]
      */
@@ -83,10 +95,12 @@ class AdditionalLabelsType
             self::VALUE_CONSIGNEE,
             self::VALUE_CUSTOMS,
             self::VALUE_DESTINATION,
+            self::VALUE_DESTINATION_CONTROL_STATEMENT,
             self::VALUE_FREIGHT_REFERENCE,
             self::VALUE_MANIFEST,
             self::VALUE_ORIGIN,
             self::VALUE_RECIPIENT,
+            self::VALUE_SECOND_ADDRESS,
             self::VALUE_SHIPPER,
         );
     }

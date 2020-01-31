@@ -51,17 +51,17 @@ class SpecialEquipmentLineItem extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\SpecialEquipmentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\SpecialEquipmentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SpecialEquipmentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SpecialEquipmentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\SpecialEquipmentType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\SpecialEquipmentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\SpecialEquipmentType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SpecialEquipmentType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -77,7 +77,7 @@ class SpecialEquipmentLineItem extends AbstractStructBase
     /**
      * Set Duration value
      * @param string $duration
-     * @return \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem
      */
     public function setDuration($duration = null)
     {
@@ -94,7 +94,7 @@ class SpecialEquipmentLineItem extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem
      */
     public static function __set_state(array $array)
     {

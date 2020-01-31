@@ -49,6 +49,11 @@ class RequestedShippingDocumentType
      */
     const VALUE_FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING = 'FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING';
     /**
+     * Constant for value 'FREIGHT_ADDRESS_LABEL'
+     * @return string 'FREIGHT_ADDRESS_LABEL'
+     */
+    const VALUE_FREIGHT_ADDRESS_LABEL = 'FREIGHT_ADDRESS_LABEL';
+    /**
      * Constant for value 'GENERAL_AGENCY_AGREEMENT'
      * @return string 'GENERAL_AGENCY_AGREEMENT'
      */
@@ -68,6 +73,11 @@ class RequestedShippingDocumentType
      * @return string 'OP_900'
      */
     const VALUE_OP_900 = 'OP_900';
+    /**
+     * Constant for value 'PENDING_SHIPMENT_EMAIL_NOTIFICATION'
+     * @return string 'PENDING_SHIPMENT_EMAIL_NOTIFICATION'
+     */
+    const VALUE_PENDING_SHIPMENT_EMAIL_NOTIFICATION = 'PENDING_SHIPMENT_EMAIL_NOTIFICATION';
     /**
      * Constant for value 'PRO_FORMA_INVOICE'
      * @return string 'PRO_FORMA_INVOICE'
@@ -103,10 +113,12 @@ class RequestedShippingDocumentType
      * @uses self::VALUE_DANGEROUS_GOODS_SHIPPERS_DECLARATION
      * @uses self::VALUE_EXPORT_DECLARATION
      * @uses self::VALUE_FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING
+     * @uses self::VALUE_FREIGHT_ADDRESS_LABEL
      * @uses self::VALUE_GENERAL_AGENCY_AGREEMENT
      * @uses self::VALUE_LABEL
      * @uses self::VALUE_NAFTA_CERTIFICATE_OF_ORIGIN
      * @uses self::VALUE_OP_900
+     * @uses self::VALUE_PENDING_SHIPMENT_EMAIL_NOTIFICATION
      * @uses self::VALUE_PRO_FORMA_INVOICE
      * @uses self::VALUE_RETURN_INSTRUCTIONS
      * @uses self::VALUE_VICS_BILL_OF_LADING
@@ -123,10 +135,12 @@ class RequestedShippingDocumentType
             self::VALUE_DANGEROUS_GOODS_SHIPPERS_DECLARATION,
             self::VALUE_EXPORT_DECLARATION,
             self::VALUE_FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING,
+            self::VALUE_FREIGHT_ADDRESS_LABEL,
             self::VALUE_GENERAL_AGENCY_AGREEMENT,
             self::VALUE_LABEL,
             self::VALUE_NAFTA_CERTIFICATE_OF_ORIGIN,
             self::VALUE_OP_900,
+            self::VALUE_PENDING_SHIPMENT_EMAIL_NOTIFICATION,
             self::VALUE_PRO_FORMA_INVOICE,
             self::VALUE_RETURN_INSTRUCTIONS,
             self::VALUE_VICS_BILL_OF_LADING,

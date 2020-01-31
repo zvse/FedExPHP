@@ -67,17 +67,17 @@ class DocumentGenerationDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -93,7 +93,7 @@ class DocumentGenerationDetail extends AbstractStructBase
     /**
      * Set MinimumCopiesRequired value
      * @param int $minimumCopiesRequired
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail
      */
     public function setMinimumCopiesRequired($minimumCopiesRequired = null)
     {
@@ -114,17 +114,17 @@ class DocumentGenerationDetail extends AbstractStructBase
     }
     /**
      * Set Letterhead value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequirementType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequirementType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequirementType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequirementType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $letterhead
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail
      */
     public function setLetterhead($letterhead = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RequirementType::valueIsValid($letterhead)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $letterhead, implode(', ', \CommerceFedEx\FedExPHP\Enums\RequirementType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RequirementType::valueIsValid($letterhead)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $letterhead, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequirementType::getValidValues())), __LINE__);
         }
         $this->Letterhead = $letterhead;
         return $this;
@@ -139,17 +139,17 @@ class DocumentGenerationDetail extends AbstractStructBase
     }
     /**
      * Set ElectronicSignature value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequirementType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequirementType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequirementType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequirementType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $electronicSignature
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail
      */
     public function setElectronicSignature($electronicSignature = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RequirementType::valueIsValid($electronicSignature)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $electronicSignature, implode(', ', \CommerceFedEx\FedExPHP\Enums\RequirementType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RequirementType::valueIsValid($electronicSignature)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $electronicSignature, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequirementType::getValidValues())), __LINE__);
         }
         $this->ElectronicSignature = $electronicSignature;
         return $this;
@@ -160,7 +160,7 @@ class DocumentGenerationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail
      */
     public static function __set_state(array $array)
     {

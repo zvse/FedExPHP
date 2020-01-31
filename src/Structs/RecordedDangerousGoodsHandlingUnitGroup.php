@@ -14,24 +14,24 @@ class RecordedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
      * The UploadedHandlingUnitGroup
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup
      */
     public $UploadedHandlingUnitGroup;
     /**
      * The HandlingUnitShippingDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail
      */
     public $HandlingUnitShippingDetail;
     /**
      * Constructor method for RecordedDangerousGoodsHandlingUnitGroup
      * @uses RecordedDangerousGoodsHandlingUnitGroup::setUploadedHandlingUnitGroup()
      * @uses RecordedDangerousGoodsHandlingUnitGroup::setHandlingUnitShippingDetail()
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup $uploadedHandlingUnitGroup
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup $uploadedHandlingUnitGroup
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup $uploadedHandlingUnitGroup = null, \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup $uploadedHandlingUnitGroup = null, \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail = null)
     {
         $this
             ->setUploadedHandlingUnitGroup($uploadedHandlingUnitGroup)
@@ -39,7 +39,7 @@ class RecordedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
     }
     /**
      * Get UploadedHandlingUnitGroup value
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup|null
      */
     public function getUploadedHandlingUnitGroup()
     {
@@ -47,17 +47,17 @@ class RecordedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
     }
     /**
      * Set UploadedHandlingUnitGroup value
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup $uploadedHandlingUnitGroup
-     * @return \CommerceFedEx\FedExPHP\Structs\RecordedDangerousGoodsHandlingUnitGroup
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup $uploadedHandlingUnitGroup
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecordedDangerousGoodsHandlingUnitGroup
      */
-    public function setUploadedHandlingUnitGroup(\CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup $uploadedHandlingUnitGroup = null)
+    public function setUploadedHandlingUnitGroup(\NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsHandlingUnitGroup $uploadedHandlingUnitGroup = null)
     {
         $this->UploadedHandlingUnitGroup = $uploadedHandlingUnitGroup;
         return $this;
     }
     /**
      * Get HandlingUnitShippingDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail|null
      */
     public function getHandlingUnitShippingDetail()
     {
@@ -65,10 +65,10 @@ class RecordedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
     }
     /**
      * Set HandlingUnitShippingDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RecordedDangerousGoodsHandlingUnitGroup
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecordedDangerousGoodsHandlingUnitGroup
      */
-    public function setHandlingUnitShippingDetail(\CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail = null)
+    public function setHandlingUnitShippingDetail(\NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail = null)
     {
         $this->HandlingUnitShippingDetail = $handlingUnitShippingDetail;
         return $this;
@@ -79,7 +79,7 @@ class RecordedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RecordedDangerousGoodsHandlingUnitGroup
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecordedDangerousGoodsHandlingUnitGroup
      */
     public static function __set_state(array $array)
     {

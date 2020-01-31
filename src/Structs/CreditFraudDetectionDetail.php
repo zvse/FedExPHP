@@ -60,7 +60,7 @@ class CreditFraudDetectionDetail extends AbstractStructBase
     /**
      * Set IpAddress value
      * @param string $ipAddress
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail
      */
     public function setIpAddress($ipAddress = null)
     {
@@ -82,7 +82,7 @@ class CreditFraudDetectionDetail extends AbstractStructBase
     /**
      * Set ClientCookiesEnabled value
      * @param bool $clientCookiesEnabled
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail
      */
     public function setClientCookiesEnabled($clientCookiesEnabled = null)
     {
@@ -100,7 +100,7 @@ class CreditFraudDetectionDetail extends AbstractStructBase
     /**
      * Set DevicePrint value
      * @param string $devicePrint
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail
      */
     public function setDevicePrint($devicePrint = null)
     {
@@ -117,7 +117,7 @@ class CreditFraudDetectionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditFraudDetectionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditFraudDetectionDetail
      */
     public static function __set_state(array $array)
     {

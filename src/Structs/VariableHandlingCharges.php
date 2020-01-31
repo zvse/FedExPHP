@@ -14,28 +14,28 @@ class VariableHandlingCharges extends AbstractStructBase
      * The VariableHandlingCharge
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $VariableHandlingCharge;
     /**
      * The FixedVariableHandlingCharge
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $FixedVariableHandlingCharge;
     /**
      * The PercentVariableHandlingCharge
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $PercentVariableHandlingCharge;
     /**
      * The TotalCustomerCharge
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalCustomerCharge;
     /**
@@ -44,12 +44,12 @@ class VariableHandlingCharges extends AbstractStructBase
      * @uses VariableHandlingCharges::setFixedVariableHandlingCharge()
      * @uses VariableHandlingCharges::setPercentVariableHandlingCharge()
      * @uses VariableHandlingCharges::setTotalCustomerCharge()
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $variableHandlingCharge
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $fixedVariableHandlingCharge
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $percentVariableHandlingCharge
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalCustomerCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $variableHandlingCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $fixedVariableHandlingCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $percentVariableHandlingCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalCustomerCharge
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\Money $variableHandlingCharge = null, \CommerceFedEx\FedExPHP\Structs\Money $fixedVariableHandlingCharge = null, \CommerceFedEx\FedExPHP\Structs\Money $percentVariableHandlingCharge = null, \CommerceFedEx\FedExPHP\Structs\Money $totalCustomerCharge = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Money $variableHandlingCharge = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $fixedVariableHandlingCharge = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $percentVariableHandlingCharge = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalCustomerCharge = null)
     {
         $this
             ->setVariableHandlingCharge($variableHandlingCharge)
@@ -59,7 +59,7 @@ class VariableHandlingCharges extends AbstractStructBase
     }
     /**
      * Get VariableHandlingCharge value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getVariableHandlingCharge()
     {
@@ -67,17 +67,17 @@ class VariableHandlingCharges extends AbstractStructBase
     }
     /**
      * Set VariableHandlingCharge value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $variableHandlingCharge
-     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $variableHandlingCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges
      */
-    public function setVariableHandlingCharge(\CommerceFedEx\FedExPHP\Structs\Money $variableHandlingCharge = null)
+    public function setVariableHandlingCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $variableHandlingCharge = null)
     {
         $this->VariableHandlingCharge = $variableHandlingCharge;
         return $this;
     }
     /**
      * Get FixedVariableHandlingCharge value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getFixedVariableHandlingCharge()
     {
@@ -85,17 +85,17 @@ class VariableHandlingCharges extends AbstractStructBase
     }
     /**
      * Set FixedVariableHandlingCharge value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $fixedVariableHandlingCharge
-     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $fixedVariableHandlingCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges
      */
-    public function setFixedVariableHandlingCharge(\CommerceFedEx\FedExPHP\Structs\Money $fixedVariableHandlingCharge = null)
+    public function setFixedVariableHandlingCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $fixedVariableHandlingCharge = null)
     {
         $this->FixedVariableHandlingCharge = $fixedVariableHandlingCharge;
         return $this;
     }
     /**
      * Get PercentVariableHandlingCharge value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getPercentVariableHandlingCharge()
     {
@@ -103,17 +103,17 @@ class VariableHandlingCharges extends AbstractStructBase
     }
     /**
      * Set PercentVariableHandlingCharge value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $percentVariableHandlingCharge
-     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $percentVariableHandlingCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges
      */
-    public function setPercentVariableHandlingCharge(\CommerceFedEx\FedExPHP\Structs\Money $percentVariableHandlingCharge = null)
+    public function setPercentVariableHandlingCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $percentVariableHandlingCharge = null)
     {
         $this->PercentVariableHandlingCharge = $percentVariableHandlingCharge;
         return $this;
     }
     /**
      * Get TotalCustomerCharge value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalCustomerCharge()
     {
@@ -121,10 +121,10 @@ class VariableHandlingCharges extends AbstractStructBase
     }
     /**
      * Set TotalCustomerCharge value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalCustomerCharge
-     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalCustomerCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges
      */
-    public function setTotalCustomerCharge(\CommerceFedEx\FedExPHP\Structs\Money $totalCustomerCharge = null)
+    public function setTotalCustomerCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalCustomerCharge = null)
     {
         $this->TotalCustomerCharge = $totalCustomerCharge;
         return $this;
@@ -135,7 +135,7 @@ class VariableHandlingCharges extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges
      */
     public static function __set_state(array $array)
     {

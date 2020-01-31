@@ -63,7 +63,7 @@ class HazardousCommodityQuantityDetail extends AbstractStructBase
     /**
      * Set Amount value
      * @param float $amount
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail
      */
     public function setAmount($amount = null)
     {
@@ -81,7 +81,7 @@ class HazardousCommodityQuantityDetail extends AbstractStructBase
     /**
      * Set Units value
      * @param string $units
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail
      */
     public function setUnits($units = null)
     {
@@ -102,17 +102,17 @@ class HazardousCommodityQuantityDetail extends AbstractStructBase
     }
     /**
      * Set QuantityType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityQuantityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityQuantityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityQuantityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityQuantityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $quantityType
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail
      */
     public function setQuantityType($quantityType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityQuantityType::valueIsValid($quantityType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $quantityType, implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityQuantityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityQuantityType::valueIsValid($quantityType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $quantityType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityQuantityType::getValidValues())), __LINE__);
         }
         $this->QuantityType = $quantityType;
         return $this;
@@ -123,7 +123,7 @@ class HazardousCommodityQuantityDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail
      */
     public static function __set_state(array $array)
     {

@@ -11,26 +11,13 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 class Commodity extends AbstractStructBase
 {
     /**
-     * The NumberOfPieces
+     * The CommodityId
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
-     * @var int
-     */
-    public $NumberOfPieces;
-    /**
-     * The CountryOfManufacture
-     * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - documentation: Value used to identify a commodity description; must be unique within the containing shipment.
+     * - minOccurs: 0
      * @var string
      */
-    public $CountryOfManufacture;
-    /**
-     * The Weight
-     * Meta informations extracted from the WSDL
-     * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
-     */
-    public $Weight;
+    public $CommodityId;
     /**
      * The Name
      * Meta informations extracted from the WSDL
@@ -39,6 +26,13 @@ class Commodity extends AbstractStructBase
      * @var string
      */
     public $Name;
+    /**
+     * The NumberOfPieces
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var int
+     */
+    public $NumberOfPieces;
     /**
      * The Description
      * Meta informations extracted from the WSDL
@@ -55,12 +49,26 @@ class Commodity extends AbstractStructBase
      */
     public $Purpose;
     /**
+     * The CountryOfManufacture
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var string
+     */
+    public $CountryOfManufacture;
+    /**
      * The HarmonizedCode
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
      * @var string
      */
     public $HarmonizedCode;
+    /**
+     * The Weight
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
+     */
+    public $Weight;
     /**
      * The Quantity
      * Meta informations extracted from the WSDL
@@ -81,21 +89,21 @@ class Commodity extends AbstractStructBase
      * - documentation: Contains only additional quantitative information other than weight and quantity to calculate duties and taxes.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Measure[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Measure[]
      */
     public $AdditionalMeasures;
     /**
      * The UnitPrice
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $UnitPrice;
     /**
      * The CustomsValue
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $CustomsValue;
     /**
@@ -104,7 +112,7 @@ class Commodity extends AbstractStructBase
      * - documentation: Defines additional characteristic of commodity used to calculate duties and taxes
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition[]
      */
     public $ExciseConditions;
     /**
@@ -140,18 +148,19 @@ class Commodity extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: All data required for this commodity in NAFTA Certificate of Origin.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail
      */
     public $NaftaDetail;
     /**
      * Constructor method for Commodity
-     * @uses Commodity::setNumberOfPieces()
-     * @uses Commodity::setCountryOfManufacture()
-     * @uses Commodity::setWeight()
+     * @uses Commodity::setCommodityId()
      * @uses Commodity::setName()
+     * @uses Commodity::setNumberOfPieces()
      * @uses Commodity::setDescription()
      * @uses Commodity::setPurpose()
+     * @uses Commodity::setCountryOfManufacture()
      * @uses Commodity::setHarmonizedCode()
+     * @uses Commodity::setWeight()
      * @uses Commodity::setQuantity()
      * @uses Commodity::setQuantityUnits()
      * @uses Commodity::setAdditionalMeasures()
@@ -163,35 +172,37 @@ class Commodity extends AbstractStructBase
      * @uses Commodity::setCIMarksAndNumbers()
      * @uses Commodity::setPartNumber()
      * @uses Commodity::setNaftaDetail()
-     * @param int $numberOfPieces
-     * @param string $countryOfManufacture
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
+     * @param string $commodityId
      * @param string $name
+     * @param int $numberOfPieces
      * @param string $description
      * @param string $purpose
+     * @param string $countryOfManufacture
      * @param string $harmonizedCode
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
      * @param float $quantity
      * @param string $quantityUnits
-     * @param \CommerceFedEx\FedExPHP\Structs\Measure[] $additionalMeasures
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $unitPrice
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $customsValue
-     * @param \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition[] $exciseConditions
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Measure[] $additionalMeasures
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $unitPrice
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $customsValue
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition[] $exciseConditions
      * @param string $exportLicenseNumber
      * @param string $exportLicenseExpirationDate
      * @param string $cIMarksAndNumbers
      * @param string $partNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail
      */
-    public function __construct($numberOfPieces = null, $countryOfManufacture = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, $name = null, $description = null, $purpose = null, $harmonizedCode = null, $quantity = null, $quantityUnits = null, array $additionalMeasures = array(), \CommerceFedEx\FedExPHP\Structs\Money $unitPrice = null, \CommerceFedEx\FedExPHP\Structs\Money $customsValue = null, array $exciseConditions = array(), $exportLicenseNumber = null, $exportLicenseExpirationDate = null, $cIMarksAndNumbers = null, $partNumber = null, \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail = null)
+    public function __construct($commodityId = null, $name = null, $numberOfPieces = null, $description = null, $purpose = null, $countryOfManufacture = null, $harmonizedCode = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null, $quantity = null, $quantityUnits = null, array $additionalMeasures = array(), \NicholasCreativeMedia\FedExPHP\Structs\Money $unitPrice = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $customsValue = null, array $exciseConditions = array(), $exportLicenseNumber = null, $exportLicenseExpirationDate = null, $cIMarksAndNumbers = null, $partNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail = null)
     {
         $this
-            ->setNumberOfPieces($numberOfPieces)
-            ->setCountryOfManufacture($countryOfManufacture)
-            ->setWeight($weight)
+            ->setCommodityId($commodityId)
             ->setName($name)
+            ->setNumberOfPieces($numberOfPieces)
             ->setDescription($description)
             ->setPurpose($purpose)
+            ->setCountryOfManufacture($countryOfManufacture)
             ->setHarmonizedCode($harmonizedCode)
+            ->setWeight($weight)
             ->setQuantity($quantity)
             ->setQuantityUnits($quantityUnits)
             ->setAdditionalMeasures($additionalMeasures)
@@ -205,65 +216,25 @@ class Commodity extends AbstractStructBase
             ->setNaftaDetail($naftaDetail);
     }
     /**
-     * Get NumberOfPieces value
-     * @return int
+     * Get CommodityId value
+     * @return string|null
      */
-    public function getNumberOfPieces()
+    public function getCommodityId()
     {
-        return $this->NumberOfPieces;
+        return $this->CommodityId;
     }
     /**
-     * Set NumberOfPieces value
-     * @param int $numberOfPieces
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * Set CommodityId value
+     * @param string $commodityId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
-    public function setNumberOfPieces($numberOfPieces = null)
-    {
-        // validation for constraint: int
-        if (!is_null($numberOfPieces) && !is_numeric($numberOfPieces)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a numeric value, "%s" given', gettype($numberOfPieces)), __LINE__);
-        }
-        $this->NumberOfPieces = $numberOfPieces;
-        return $this;
-    }
-    /**
-     * Get CountryOfManufacture value
-     * @return string
-     */
-    public function getCountryOfManufacture()
-    {
-        return $this->CountryOfManufacture;
-    }
-    /**
-     * Set CountryOfManufacture value
-     * @param string $countryOfManufacture
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
-     */
-    public function setCountryOfManufacture($countryOfManufacture = null)
+    public function setCommodityId($commodityId = null)
     {
         // validation for constraint: string
-        if (!is_null($countryOfManufacture) && !is_string($countryOfManufacture)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($countryOfManufacture)), __LINE__);
+        if (!is_null($commodityId) && !is_string($commodityId)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($commodityId)), __LINE__);
         }
-        $this->CountryOfManufacture = $countryOfManufacture;
-        return $this;
-    }
-    /**
-     * Get Weight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight
-     */
-    public function getWeight()
-    {
-        return $this->Weight;
-    }
-    /**
-     * Set Weight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
-     */
-    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
-    {
-        $this->Weight = $weight;
+        $this->CommodityId = $commodityId;
         return $this;
     }
     /**
@@ -277,7 +248,7 @@ class Commodity extends AbstractStructBase
     /**
      * Set Name value
      * @param string $name
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setName($name = null)
     {
@@ -286,6 +257,28 @@ class Commodity extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($name)), __LINE__);
         }
         $this->Name = $name;
+        return $this;
+    }
+    /**
+     * Get NumberOfPieces value
+     * @return int|null
+     */
+    public function getNumberOfPieces()
+    {
+        return $this->NumberOfPieces;
+    }
+    /**
+     * Set NumberOfPieces value
+     * @param int $numberOfPieces
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
+     */
+    public function setNumberOfPieces($numberOfPieces = null)
+    {
+        // validation for constraint: int
+        if (!is_null($numberOfPieces) && !is_numeric($numberOfPieces)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a numeric value, "%s" given', gettype($numberOfPieces)), __LINE__);
+        }
+        $this->NumberOfPieces = $numberOfPieces;
         return $this;
     }
     /**
@@ -299,7 +292,7 @@ class Commodity extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setDescription($description = null)
     {
@@ -320,19 +313,41 @@ class Commodity extends AbstractStructBase
     }
     /**
      * Set Purpose value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CommodityPurposeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CommodityPurposeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CommodityPurposeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CommodityPurposeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $purpose
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setPurpose($purpose = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CommodityPurposeType::valueIsValid($purpose)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $purpose, implode(', ', \CommerceFedEx\FedExPHP\Enums\CommodityPurposeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CommodityPurposeType::valueIsValid($purpose)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $purpose, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CommodityPurposeType::getValidValues())), __LINE__);
         }
         $this->Purpose = $purpose;
+        return $this;
+    }
+    /**
+     * Get CountryOfManufacture value
+     * @return string|null
+     */
+    public function getCountryOfManufacture()
+    {
+        return $this->CountryOfManufacture;
+    }
+    /**
+     * Set CountryOfManufacture value
+     * @param string $countryOfManufacture
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
+     */
+    public function setCountryOfManufacture($countryOfManufacture = null)
+    {
+        // validation for constraint: string
+        if (!is_null($countryOfManufacture) && !is_string($countryOfManufacture)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($countryOfManufacture)), __LINE__);
+        }
+        $this->CountryOfManufacture = $countryOfManufacture;
         return $this;
     }
     /**
@@ -346,7 +361,7 @@ class Commodity extends AbstractStructBase
     /**
      * Set HarmonizedCode value
      * @param string $harmonizedCode
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setHarmonizedCode($harmonizedCode = null)
     {
@@ -355,6 +370,24 @@ class Commodity extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($harmonizedCode)), __LINE__);
         }
         $this->HarmonizedCode = $harmonizedCode;
+        return $this;
+    }
+    /**
+     * Get Weight value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
+     */
+    public function getWeight()
+    {
+        return $this->Weight;
+    }
+    /**
+     * Set Weight value
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
+     */
+    public function setWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
+    {
+        $this->Weight = $weight;
         return $this;
     }
     /**
@@ -368,7 +401,7 @@ class Commodity extends AbstractStructBase
     /**
      * Set Quantity value
      * @param float $quantity
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setQuantity($quantity = null)
     {
@@ -386,7 +419,7 @@ class Commodity extends AbstractStructBase
     /**
      * Set QuantityUnits value
      * @param string $quantityUnits
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setQuantityUnits($quantityUnits = null)
     {
@@ -399,7 +432,7 @@ class Commodity extends AbstractStructBase
     }
     /**
      * Get AdditionalMeasures value
-     * @return \CommerceFedEx\FedExPHP\Structs\Measure[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Measure[]|null
      */
     public function getAdditionalMeasures()
     {
@@ -408,15 +441,15 @@ class Commodity extends AbstractStructBase
     /**
      * Set AdditionalMeasures value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Measure[] $additionalMeasures
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Measure[] $additionalMeasures
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setAdditionalMeasures(array $additionalMeasures = array())
     {
         foreach ($additionalMeasures as $commodityAdditionalMeasuresItem) {
             // validation for constraint: itemType
-            if (!$commodityAdditionalMeasuresItem instanceof \CommerceFedEx\FedExPHP\Structs\Measure) {
-                throw new \InvalidArgumentException(sprintf('The AdditionalMeasures property can only contain items of \CommerceFedEx\FedExPHP\Structs\Measure, "%s" given', is_object($commodityAdditionalMeasuresItem) ? get_class($commodityAdditionalMeasuresItem) : gettype($commodityAdditionalMeasuresItem)), __LINE__);
+            if (!$commodityAdditionalMeasuresItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Measure) {
+                throw new \InvalidArgumentException(sprintf('The AdditionalMeasures property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Measure, "%s" given', is_object($commodityAdditionalMeasuresItem) ? get_class($commodityAdditionalMeasuresItem) : gettype($commodityAdditionalMeasuresItem)), __LINE__);
             }
         }
         $this->AdditionalMeasures = $additionalMeasures;
@@ -425,21 +458,21 @@ class Commodity extends AbstractStructBase
     /**
      * Add item to AdditionalMeasures value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Measure $item
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Measure $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
-    public function addToAdditionalMeasures(\CommerceFedEx\FedExPHP\Structs\Measure $item)
+    public function addToAdditionalMeasures(\NicholasCreativeMedia\FedExPHP\Structs\Measure $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Measure) {
-            throw new \InvalidArgumentException(sprintf('The AdditionalMeasures property can only contain items of \CommerceFedEx\FedExPHP\Structs\Measure, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Measure) {
+            throw new \InvalidArgumentException(sprintf('The AdditionalMeasures property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Measure, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AdditionalMeasures[] = $item;
         return $this;
     }
     /**
      * Get UnitPrice value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getUnitPrice()
     {
@@ -447,17 +480,17 @@ class Commodity extends AbstractStructBase
     }
     /**
      * Set UnitPrice value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $unitPrice
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $unitPrice
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
-    public function setUnitPrice(\CommerceFedEx\FedExPHP\Structs\Money $unitPrice = null)
+    public function setUnitPrice(\NicholasCreativeMedia\FedExPHP\Structs\Money $unitPrice = null)
     {
         $this->UnitPrice = $unitPrice;
         return $this;
     }
     /**
      * Get CustomsValue value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getCustomsValue()
     {
@@ -465,17 +498,17 @@ class Commodity extends AbstractStructBase
     }
     /**
      * Set CustomsValue value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $customsValue
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $customsValue
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
-    public function setCustomsValue(\CommerceFedEx\FedExPHP\Structs\Money $customsValue = null)
+    public function setCustomsValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $customsValue = null)
     {
         $this->CustomsValue = $customsValue;
         return $this;
     }
     /**
      * Get ExciseConditions value
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition[]|null
      */
     public function getExciseConditions()
     {
@@ -484,15 +517,15 @@ class Commodity extends AbstractStructBase
     /**
      * Set ExciseConditions value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition[] $exciseConditions
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition[] $exciseConditions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setExciseConditions(array $exciseConditions = array())
     {
         foreach ($exciseConditions as $commodityExciseConditionsItem) {
             // validation for constraint: itemType
-            if (!$commodityExciseConditionsItem instanceof \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition) {
-                throw new \InvalidArgumentException(sprintf('The ExciseConditions property can only contain items of \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition, "%s" given', is_object($commodityExciseConditionsItem) ? get_class($commodityExciseConditionsItem) : gettype($commodityExciseConditionsItem)), __LINE__);
+            if (!$commodityExciseConditionsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition) {
+                throw new \InvalidArgumentException(sprintf('The ExciseConditions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition, "%s" given', is_object($commodityExciseConditionsItem) ? get_class($commodityExciseConditionsItem) : gettype($commodityExciseConditionsItem)), __LINE__);
             }
         }
         $this->ExciseConditions = $exciseConditions;
@@ -501,14 +534,14 @@ class Commodity extends AbstractStructBase
     /**
      * Add item to ExciseConditions value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition $item
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
-    public function addToExciseConditions(\CommerceFedEx\FedExPHP\Structs\EdtExciseCondition $item)
+    public function addToExciseConditions(\NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition) {
-            throw new \InvalidArgumentException(sprintf('The ExciseConditions property can only contain items of \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition) {
+            throw new \InvalidArgumentException(sprintf('The ExciseConditions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ExciseConditions[] = $item;
         return $this;
@@ -524,7 +557,7 @@ class Commodity extends AbstractStructBase
     /**
      * Set ExportLicenseNumber value
      * @param string $exportLicenseNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setExportLicenseNumber($exportLicenseNumber = null)
     {
@@ -546,7 +579,7 @@ class Commodity extends AbstractStructBase
     /**
      * Set ExportLicenseExpirationDate value
      * @param string $exportLicenseExpirationDate
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setExportLicenseExpirationDate($exportLicenseExpirationDate = null)
     {
@@ -568,7 +601,7 @@ class Commodity extends AbstractStructBase
     /**
      * Set CIMarksAndNumbers value
      * @param string $cIMarksAndNumbers
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setCIMarksAndNumbers($cIMarksAndNumbers = null)
     {
@@ -590,7 +623,7 @@ class Commodity extends AbstractStructBase
     /**
      * Set PartNumber value
      * @param string $partNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public function setPartNumber($partNumber = null)
     {
@@ -603,7 +636,7 @@ class Commodity extends AbstractStructBase
     }
     /**
      * Get NaftaDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail|null
      */
     public function getNaftaDetail()
     {
@@ -611,10 +644,10 @@ class Commodity extends AbstractStructBase
     }
     /**
      * Set NaftaDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
-    public function setNaftaDetail(\CommerceFedEx\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail = null)
+    public function setNaftaDetail(\NicholasCreativeMedia\FedExPHP\Structs\NaftaCommodityDetail $naftaDetail = null)
     {
         $this->NaftaDetail = $naftaDetail;
         return $this;
@@ -625,7 +658,7 @@ class Commodity extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public static function __set_state(array $array)
     {

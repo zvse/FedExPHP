@@ -23,12 +23,12 @@ class Service extends AbstractSoapClientBase
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'OpenshipService_v17.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\OpenshipClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\OpenshipClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('ship',17,0,0);
+        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('ship',17,0,0);
     }
     /**
      * Method to call the operation originally named modifyConsolidation
@@ -36,10 +36,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ModifyConsolidationRequest $modifyConsolidationRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyConsolidationReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationRequest $modifyConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationReply|bool
      */
-    public function modifyConsolidation(\CommerceFedEx\FedExPHP\Structs\ModifyConsolidationRequest $modifyConsolidationRequest)
+    public function modifyConsolidation(\NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationRequest $modifyConsolidationRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->modifyConsolidation($modifyConsolidationRequest));
@@ -55,10 +55,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ValidateOpenShipmentRequest $validateOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ValidateOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ValidateOpenShipmentRequest $validateOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidateOpenShipmentReply|bool
      */
-    public function validateOpenShipment(\CommerceFedEx\FedExPHP\Structs\ValidateOpenShipmentRequest $validateOpenShipmentRequest)
+    public function validateOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\ValidateOpenShipmentRequest $validateOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->validateOpenShipment($validateOpenShipmentRequest));
@@ -74,10 +74,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\RetrieveOpenShipmentRequest $retrieveOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RetrieveOpenShipmentRequest $retrieveOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveOpenShipmentReply|bool
      */
-    public function retrieveOpenShipment(\CommerceFedEx\FedExPHP\Structs\RetrieveOpenShipmentRequest $retrieveOpenShipmentRequest)
+    public function retrieveOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\RetrieveOpenShipmentRequest $retrieveOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->retrieveOpenShipment($retrieveOpenShipmentRequest));
@@ -93,10 +93,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\DeleteOpenConsolidationRequest $deleteOpenConsolidationRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteOpenConsolidationReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenConsolidationRequest $deleteOpenConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenConsolidationReply|bool
      */
-    public function deleteOpenConsolidation(\CommerceFedEx\FedExPHP\Structs\DeleteOpenConsolidationRequest $deleteOpenConsolidationRequest)
+    public function deleteOpenConsolidation(\NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenConsolidationRequest $deleteOpenConsolidationRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->deleteOpenConsolidation($deleteOpenConsolidationRequest));
@@ -112,10 +112,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\CreateConsolidationRequest $createConsolidationRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationRequest $createConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply|bool
      */
-    public function createConsolidation(\CommerceFedEx\FedExPHP\Structs\CreateConsolidationRequest $createConsolidationRequest)
+    public function createConsolidation(\NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationRequest $createConsolidationRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->createConsolidation($createConsolidationRequest));
@@ -131,10 +131,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\RetrievePackageInOpenShipmentRequest $retrievePackageInOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievePackageInOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RetrievePackageInOpenShipmentRequest $retrievePackageInOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievePackageInOpenShipmentReply|bool
      */
-    public function retrievePackageInOpenShipment(\CommerceFedEx\FedExPHP\Structs\RetrievePackageInOpenShipmentRequest $retrievePackageInOpenShipmentRequest)
+    public function retrievePackageInOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\RetrievePackageInOpenShipmentRequest $retrievePackageInOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->retrievePackageInOpenShipment($retrievePackageInOpenShipmentRequest));
@@ -150,10 +150,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\RetrieveConsolidatedCommoditiesRequest $retrieveConsolidatedCommoditiesRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveConsolidatedCommoditiesReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RetrieveConsolidatedCommoditiesRequest $retrieveConsolidatedCommoditiesRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveConsolidatedCommoditiesReply|bool
      */
-    public function retrieveConsolidatedCommodities(\CommerceFedEx\FedExPHP\Structs\RetrieveConsolidatedCommoditiesRequest $retrieveConsolidatedCommoditiesRequest)
+    public function retrieveConsolidatedCommodities(\NicholasCreativeMedia\FedExPHP\Structs\RetrieveConsolidatedCommoditiesRequest $retrieveConsolidatedCommoditiesRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->retrieveConsolidatedCommodities($retrieveConsolidatedCommoditiesRequest));
@@ -169,10 +169,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ModifyPackageInOpenShipmentRequest $modifyPackageInOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyPackageInOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ModifyPackageInOpenShipmentRequest $modifyPackageInOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyPackageInOpenShipmentReply|bool
      */
-    public function modifyPackageInOpenShipment(\CommerceFedEx\FedExPHP\Structs\ModifyPackageInOpenShipmentRequest $modifyPackageInOpenShipmentRequest)
+    public function modifyPackageInOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\ModifyPackageInOpenShipmentRequest $modifyPackageInOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->modifyPackageInOpenShipment($modifyPackageInOpenShipmentRequest));
@@ -188,10 +188,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest $deleteShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest $deleteShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentReply|bool
      */
-    public function deleteShipment(\CommerceFedEx\FedExPHP\Structs\DeleteShipmentRequest $deleteShipmentRequest)
+    public function deleteShipment(\NicholasCreativeMedia\FedExPHP\Structs\DeleteShipmentRequest $deleteShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->deleteShipment($deleteShipmentRequest));
@@ -207,10 +207,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentRequest $createOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentRequest $createOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply|bool
      */
-    public function createOpenShipment(\CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentRequest $createOpenShipmentRequest)
+    public function createOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentRequest $createOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->createOpenShipment($createOpenShipmentRequest));
@@ -226,10 +226,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\DeletePendingShipmentRequest $deletePendingShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\DeletePendingShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeletePendingShipmentRequest $deletePendingShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeletePendingShipmentReply|bool
      */
-    public function deletePendingShipment(\CommerceFedEx\FedExPHP\Structs\DeletePendingShipmentRequest $deletePendingShipmentRequest)
+    public function deletePendingShipment(\NicholasCreativeMedia\FedExPHP\Structs\DeletePendingShipmentRequest $deletePendingShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->deletePendingShipment($deletePendingShipmentRequest));
@@ -245,10 +245,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest $confirmOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest $confirmOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentReply|bool
      */
-    public function confirmOpenShipment(\CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest $confirmOpenShipmentRequest)
+    public function confirmOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest $confirmOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->confirmOpenShipment($confirmOpenShipmentRequest));
@@ -264,10 +264,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\GetConfirmOpenShipmentResultsRequest $getConfirmOpenShipmentResultsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\GetConfirmOpenShipmentResultsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\GetConfirmOpenShipmentResultsRequest $getConfirmOpenShipmentResultsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GetConfirmOpenShipmentResultsReply|bool
      */
-    public function getConfirmOpenShipmentResults(\CommerceFedEx\FedExPHP\Structs\GetConfirmOpenShipmentResultsRequest $getConfirmOpenShipmentResultsRequest)
+    public function getConfirmOpenShipmentResults(\NicholasCreativeMedia\FedExPHP\Structs\GetConfirmOpenShipmentResultsRequest $getConfirmOpenShipmentResultsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->getConfirmOpenShipmentResults($getConfirmOpenShipmentResultsRequest));
@@ -283,10 +283,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\GetConfirmConsolidationResultsRequest $getConfirmConsolidationResultsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\GetConfirmConsolidationResultsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\GetConfirmConsolidationResultsRequest $getConfirmConsolidationResultsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GetConfirmConsolidationResultsReply|bool
      */
-    public function getConfirmConsolidationResults(\CommerceFedEx\FedExPHP\Structs\GetConfirmConsolidationResultsRequest $getConfirmConsolidationResultsRequest)
+    public function getConfirmConsolidationResults(\NicholasCreativeMedia\FedExPHP\Structs\GetConfirmConsolidationResultsRequest $getConfirmConsolidationResultsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->getConfirmConsolidationResults($getConfirmConsolidationResultsRequest));
@@ -302,10 +302,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ModifyOpenShipmentRequest $modifyOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ModifyOpenShipmentRequest $modifyOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyOpenShipmentReply|bool
      */
-    public function modifyOpenShipment(\CommerceFedEx\FedExPHP\Structs\ModifyOpenShipmentRequest $modifyOpenShipmentRequest)
+    public function modifyOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\ModifyOpenShipmentRequest $modifyOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->modifyOpenShipment($modifyOpenShipmentRequest));
@@ -321,10 +321,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest $confirmConsolidationRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest $confirmConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationReply|bool
      */
-    public function confirmConsolidation(\CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest $confirmConsolidationRequest)
+    public function confirmConsolidation(\NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest $confirmConsolidationRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->confirmConsolidation($confirmConsolidationRequest));
@@ -340,10 +340,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentRequest $createPendingShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentRequest $createPendingShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply|bool
      */
-    public function createPendingShipment(\CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentRequest $createPendingShipmentRequest)
+    public function createPendingShipment(\NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentRequest $createPendingShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->createPendingShipment($createPendingShipmentRequest));
@@ -359,10 +359,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\GetModifyOpenShipmentResultsRequest $getModifyOpenShipmentResultsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\GetModifyOpenShipmentResultsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\GetModifyOpenShipmentResultsRequest $getModifyOpenShipmentResultsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GetModifyOpenShipmentResultsReply|bool
      */
-    public function getModifyOpenShipmentResults(\CommerceFedEx\FedExPHP\Structs\GetModifyOpenShipmentResultsRequest $getModifyOpenShipmentResultsRequest)
+    public function getModifyOpenShipmentResults(\NicholasCreativeMedia\FedExPHP\Structs\GetModifyOpenShipmentResultsRequest $getModifyOpenShipmentResultsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->getModifyOpenShipmentResults($getModifyOpenShipmentResultsRequest));
@@ -378,10 +378,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\DeletePackagesFromOpenShipmentRequest $deletePackagesFromOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\DeletePackagesFromOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeletePackagesFromOpenShipmentRequest $deletePackagesFromOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeletePackagesFromOpenShipmentReply|bool
      */
-    public function deletePackagesFromOpenShipment(\CommerceFedEx\FedExPHP\Structs\DeletePackagesFromOpenShipmentRequest $deletePackagesFromOpenShipmentRequest)
+    public function deletePackagesFromOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\DeletePackagesFromOpenShipmentRequest $deletePackagesFromOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->deletePackagesFromOpenShipment($deletePackagesFromOpenShipmentRequest));
@@ -397,10 +397,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsRequest $reprintShippingDocumentsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsRequest $reprintShippingDocumentsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply|bool
      */
-    public function reprintShippingDocuments(\CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsRequest $reprintShippingDocumentsRequest)
+    public function reprintShippingDocuments(\NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsRequest $reprintShippingDocumentsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->reprintShippingDocuments($reprintShippingDocumentsRequest));
@@ -416,10 +416,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\AddPackagesToOpenShipmentRequest $addPackagesToOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\AddPackagesToOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddPackagesToOpenShipmentRequest $addPackagesToOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddPackagesToOpenShipmentReply|bool
      */
-    public function addPackagesToOpenShipment(\CommerceFedEx\FedExPHP\Structs\AddPackagesToOpenShipmentRequest $addPackagesToOpenShipmentRequest)
+    public function addPackagesToOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\AddPackagesToOpenShipmentRequest $addPackagesToOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->addPackagesToOpenShipment($addPackagesToOpenShipmentRequest));
@@ -435,10 +435,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\GetCreateOpenShipmentResultsRequest $getCreateOpenShipmentResultsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\GetCreateOpenShipmentResultsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\GetCreateOpenShipmentResultsRequest $getCreateOpenShipmentResultsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GetCreateOpenShipmentResultsReply|bool
      */
-    public function getCreateOpenShipmentResults(\CommerceFedEx\FedExPHP\Structs\GetCreateOpenShipmentResultsRequest $getCreateOpenShipmentResultsRequest)
+    public function getCreateOpenShipmentResults(\NicholasCreativeMedia\FedExPHP\Structs\GetCreateOpenShipmentResultsRequest $getCreateOpenShipmentResultsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->getCreateOpenShipmentResults($getCreateOpenShipmentResultsRequest));
@@ -454,10 +454,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\RetrieveConsolidationRequest $retrieveConsolidationRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveConsolidationReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RetrieveConsolidationRequest $retrieveConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveConsolidationReply|bool
      */
-    public function retrieveConsolidation(\CommerceFedEx\FedExPHP\Structs\RetrieveConsolidationRequest $retrieveConsolidationRequest)
+    public function retrieveConsolidation(\NicholasCreativeMedia\FedExPHP\Structs\RetrieveConsolidationRequest $retrieveConsolidationRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->retrieveConsolidation($retrieveConsolidationRequest));
@@ -473,10 +473,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentRequest $deleteOpenShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentRequest $deleteOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentReply|bool
      */
-    public function deleteOpenShipment(\CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentRequest $deleteOpenShipmentRequest)
+    public function deleteOpenShipment(\NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentRequest $deleteOpenShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->deleteOpenShipment($deleteOpenShipmentRequest));
@@ -489,7 +489,7 @@ class Service extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \CommerceFedEx\FedExPHP\Structs\AddPackagesToOpenShipmentReply|\CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationReply|\CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentReply|\CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply|\CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply|\CommerceFedEx\FedExPHP\Structs\DeleteOpenConsolidationReply|\CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentReply|\CommerceFedEx\FedExPHP\Structs\DeletePackagesFromOpenShipmentReply|\CommerceFedEx\FedExPHP\Structs\DeletePendingShipmentReply|\CommerceFedEx\FedExPHP\Structs\GetConfirmConsolidationResultsReply|\CommerceFedEx\FedExPHP\Structs\GetConfirmOpenShipmentResultsReply|\CommerceFedEx\FedExPHP\Structs\GetCreateOpenShipmentResultsReply|\CommerceFedEx\FedExPHP\Structs\GetModifyOpenShipmentResultsReply|\CommerceFedEx\FedExPHP\Structs\ModifyConsolidationReply|\CommerceFedEx\FedExPHP\Structs\ModifyOpenShipmentReply|\CommerceFedEx\FedExPHP\Structs\ModifyPackageInOpenShipmentReply|\CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply|\CommerceFedEx\FedExPHP\Structs\RetrieveConsolidatedCommoditiesReply|\CommerceFedEx\FedExPHP\Structs\RetrieveConsolidationReply|\CommerceFedEx\FedExPHP\Structs\RetrieveOpenShipmentReply|\CommerceFedEx\FedExPHP\Structs\RetrievePackageInOpenShipmentReply|\CommerceFedEx\FedExPHP\Structs\ShipmentReply|\CommerceFedEx\FedExPHP\Structs\ValidateOpenShipmentReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddPackagesToOpenShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationReply|\NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply|\NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenConsolidationReply|\NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\DeletePackagesFromOpenShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\DeletePendingShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\GetConfirmConsolidationResultsReply|\NicholasCreativeMedia\FedExPHP\Structs\GetConfirmOpenShipmentResultsReply|\NicholasCreativeMedia\FedExPHP\Structs\GetCreateOpenShipmentResultsReply|\NicholasCreativeMedia\FedExPHP\Structs\GetModifyOpenShipmentResultsReply|\NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationReply|\NicholasCreativeMedia\FedExPHP\Structs\ModifyOpenShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\ModifyPackageInOpenShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply|\NicholasCreativeMedia\FedExPHP\Structs\RetrieveConsolidatedCommoditiesReply|\NicholasCreativeMedia\FedExPHP\Structs\RetrieveConsolidationReply|\NicholasCreativeMedia\FedExPHP\Structs\RetrieveOpenShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\RetrievePackageInOpenShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\ShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\ValidateOpenShipmentReply
      */
     public function getResult()
     {

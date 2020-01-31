@@ -63,17 +63,17 @@ class BatteryClassificationDetail extends AbstractStructBase
     }
     /**
      * Set Material value
-     * @uses \CommerceFedEx\FedExPHP\Enums\BatteryMaterialType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\BatteryMaterialType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BatteryMaterialType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BatteryMaterialType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $material
-     * @return \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail
      */
     public function setMaterial($material = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\BatteryMaterialType::valueIsValid($material)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $material, implode(', ', \CommerceFedEx\FedExPHP\Enums\BatteryMaterialType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\BatteryMaterialType::valueIsValid($material)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $material, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\BatteryMaterialType::getValidValues())), __LINE__);
         }
         $this->Material = $material;
         return $this;
@@ -88,17 +88,17 @@ class BatteryClassificationDetail extends AbstractStructBase
     }
     /**
      * Set Packing value
-     * @uses \CommerceFedEx\FedExPHP\Enums\BatteryPackingType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\BatteryPackingType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BatteryPackingType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BatteryPackingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $packing
-     * @return \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail
      */
     public function setPacking($packing = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\BatteryPackingType::valueIsValid($packing)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packing, implode(', ', \CommerceFedEx\FedExPHP\Enums\BatteryPackingType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\BatteryPackingType::valueIsValid($packing)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packing, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\BatteryPackingType::getValidValues())), __LINE__);
         }
         $this->Packing = $packing;
         return $this;
@@ -113,17 +113,17 @@ class BatteryClassificationDetail extends AbstractStructBase
     }
     /**
      * Set RegulatorySubType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\BatteryRegulatorySubType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\BatteryRegulatorySubType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BatteryRegulatorySubType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BatteryRegulatorySubType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $regulatorySubType
-     * @return \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail
      */
     public function setRegulatorySubType($regulatorySubType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\BatteryRegulatorySubType::valueIsValid($regulatorySubType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $regulatorySubType, implode(', ', \CommerceFedEx\FedExPHP\Enums\BatteryRegulatorySubType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\BatteryRegulatorySubType::valueIsValid($regulatorySubType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $regulatorySubType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\BatteryRegulatorySubType::getValidValues())), __LINE__);
         }
         $this->RegulatorySubType = $regulatorySubType;
         return $this;
@@ -134,7 +134,7 @@ class BatteryClassificationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail
      */
     public static function __set_state(array $array)
     {

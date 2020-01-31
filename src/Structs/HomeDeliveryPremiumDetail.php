@@ -13,7 +13,7 @@ class HomeDeliveryPremiumDetail extends AbstractStructBase
     /**
      * The HomeDeliveryPremiumType
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $HomeDeliveryPremiumType;
@@ -49,7 +49,7 @@ class HomeDeliveryPremiumDetail extends AbstractStructBase
     }
     /**
      * Get HomeDeliveryPremiumType value
-     * @return string
+     * @return string|null
      */
     public function getHomeDeliveryPremiumType()
     {
@@ -57,17 +57,17 @@ class HomeDeliveryPremiumDetail extends AbstractStructBase
     }
     /**
      * Set HomeDeliveryPremiumType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\HomeDeliveryPremiumType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\HomeDeliveryPremiumType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HomeDeliveryPremiumType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HomeDeliveryPremiumType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $homeDeliveryPremiumType
-     * @return \CommerceFedEx\FedExPHP\Structs\HomeDeliveryPremiumDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HomeDeliveryPremiumDetail
      */
     public function setHomeDeliveryPremiumType($homeDeliveryPremiumType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\HomeDeliveryPremiumType::valueIsValid($homeDeliveryPremiumType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $homeDeliveryPremiumType, implode(', ', \CommerceFedEx\FedExPHP\Enums\HomeDeliveryPremiumType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\HomeDeliveryPremiumType::valueIsValid($homeDeliveryPremiumType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $homeDeliveryPremiumType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HomeDeliveryPremiumType::getValidValues())), __LINE__);
         }
         $this->HomeDeliveryPremiumType = $homeDeliveryPremiumType;
         return $this;
@@ -83,7 +83,7 @@ class HomeDeliveryPremiumDetail extends AbstractStructBase
     /**
      * Set Date value
      * @param string $date
-     * @return \CommerceFedEx\FedExPHP\Structs\HomeDeliveryPremiumDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HomeDeliveryPremiumDetail
      */
     public function setDate($date = null)
     {
@@ -105,7 +105,7 @@ class HomeDeliveryPremiumDetail extends AbstractStructBase
     /**
      * Set PhoneNumber value
      * @param string $phoneNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\HomeDeliveryPremiumDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HomeDeliveryPremiumDetail
      */
     public function setPhoneNumber($phoneNumber = null)
     {
@@ -122,7 +122,7 @@ class HomeDeliveryPremiumDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\HomeDeliveryPremiumDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HomeDeliveryPremiumDetail
      */
     public static function __set_state(array $array)
     {

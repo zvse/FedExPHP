@@ -67,17 +67,17 @@ class ImageUploadStatusDetail extends AbstractStructBase
     }
     /**
      * Set Id value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ImageId::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ImageId::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageId::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageId::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\ImageUploadStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ImageUploadStatusDetail
      */
     public function setId($id = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ImageId::valueIsValid($id)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $id, implode(', ', \CommerceFedEx\FedExPHP\Enums\ImageId::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ImageId::valueIsValid($id)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $id, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ImageId::getValidValues())), __LINE__);
         }
         $this->Id = $id;
         return $this;
@@ -92,17 +92,17 @@ class ImageUploadStatusDetail extends AbstractStructBase
     }
     /**
      * Set Status value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadImageStatusType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadImageStatusType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadImageStatusType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadImageStatusType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $status
-     * @return \CommerceFedEx\FedExPHP\Structs\ImageUploadStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ImageUploadStatusDetail
      */
     public function setStatus($status = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadImageStatusType::valueIsValid($status)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadImageStatusType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadImageStatusType::valueIsValid($status)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadImageStatusType::getValidValues())), __LINE__);
         }
         $this->Status = $status;
         return $this;
@@ -117,17 +117,17 @@ class ImageUploadStatusDetail extends AbstractStructBase
     }
     /**
      * Set StatusInfo value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadImageStatusInfoType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadImageStatusInfoType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadImageStatusInfoType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadImageStatusInfoType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $statusInfo
-     * @return \CommerceFedEx\FedExPHP\Structs\ImageUploadStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ImageUploadStatusDetail
      */
     public function setStatusInfo($statusInfo = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadImageStatusInfoType::valueIsValid($statusInfo)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $statusInfo, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadImageStatusInfoType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadImageStatusInfoType::valueIsValid($statusInfo)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $statusInfo, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadImageStatusInfoType::getValidValues())), __LINE__);
         }
         $this->StatusInfo = $statusInfo;
         return $this;
@@ -143,7 +143,7 @@ class ImageUploadStatusDetail extends AbstractStructBase
     /**
      * Set Message value
      * @param string $message
-     * @return \CommerceFedEx\FedExPHP\Structs\ImageUploadStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ImageUploadStatusDetail
      */
     public function setMessage($message = null)
     {
@@ -160,7 +160,7 @@ class ImageUploadStatusDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ImageUploadStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ImageUploadStatusDetail
      */
     public static function __set_state(array $array)
     {

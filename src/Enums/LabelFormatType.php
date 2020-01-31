@@ -14,10 +14,35 @@ class LabelFormatType
      */
     const VALUE_COMMON_2_D = 'COMMON2D';
     /**
+     * Constant for value 'ERROR'
+     * @return string 'ERROR'
+     */
+    const VALUE_ERROR = 'ERROR';
+    /**
      * Constant for value 'LABEL_DATA_ONLY'
      * @return string 'LABEL_DATA_ONLY'
      */
     const VALUE_LABEL_DATA_ONLY = 'LABEL_DATA_ONLY';
+    /**
+     * Constant for value 'MAILROOM'
+     * @return string 'MAILROOM'
+     */
+    const VALUE_MAILROOM = 'MAILROOM';
+    /**
+     * Constant for value 'NO_LABEL'
+     * @return string 'NO_LABEL'
+     */
+    const VALUE_NO_LABEL = 'NO_LABEL';
+    /**
+     * Constant for value 'OPERATIONAL_LABEL'
+     * @return string 'OPERATIONAL_LABEL'
+     */
+    const VALUE_OPERATIONAL_LABEL = 'OPERATIONAL_LABEL';
+    /**
+     * Constant for value 'PRE_COMMON2D'
+     * @return string 'PRE_COMMON2D'
+     */
+    const VALUE_PRE_COMMON_2_D = 'PRE_COMMON2D';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -31,14 +56,24 @@ class LabelFormatType
     /**
      * Return allowed values
      * @uses self::VALUE_COMMON_2_D
+     * @uses self::VALUE_ERROR
      * @uses self::VALUE_LABEL_DATA_ONLY
+     * @uses self::VALUE_MAILROOM
+     * @uses self::VALUE_NO_LABEL
+     * @uses self::VALUE_OPERATIONAL_LABEL
+     * @uses self::VALUE_PRE_COMMON_2_D
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
             self::VALUE_COMMON_2_D,
+            self::VALUE_ERROR,
             self::VALUE_LABEL_DATA_ONLY,
+            self::VALUE_MAILROOM,
+            self::VALUE_NO_LABEL,
+            self::VALUE_OPERATIONAL_LABEL,
+            self::VALUE_PRE_COMMON_2_D,
         );
     }
     /**

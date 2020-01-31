@@ -16,7 +16,7 @@ class ReturnInstructionsDetail extends AbstractStructBase
      * The Format
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
@@ -31,10 +31,10 @@ class ReturnInstructionsDetail extends AbstractStructBase
      * Constructor method for ReturnInstructionsDetail
      * @uses ReturnInstructionsDetail::setFormat()
      * @uses ReturnInstructionsDetail::setCustomText()
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
      * @param string $customText
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null, $customText = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null, $customText = null)
     {
         $this
             ->setFormat($format)
@@ -42,7 +42,7 @@ class ReturnInstructionsDetail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -50,10 +50,10 @@ class ReturnInstructionsDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnInstructionsDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnInstructionsDetail
      */
-    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
@@ -69,7 +69,7 @@ class ReturnInstructionsDetail extends AbstractStructBase
     /**
      * Set CustomText value
      * @param string $customText
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnInstructionsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnInstructionsDetail
      */
     public function setCustomText($customText = null)
     {
@@ -86,7 +86,7 @@ class ReturnInstructionsDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnInstructionsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnInstructionsDetail
      */
     public static function __set_state(array $array)
     {

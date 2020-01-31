@@ -16,7 +16,7 @@ class DestinationControlDetail extends AbstractStructBase
      * The StatementTypes
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string[]
      */
     public $StatementTypes;
@@ -54,7 +54,7 @@ class DestinationControlDetail extends AbstractStructBase
     }
     /**
      * Get StatementTypes value
-     * @return string[]
+     * @return string[]|null
      */
     public function getStatementTypes()
     {
@@ -62,39 +62,39 @@ class DestinationControlDetail extends AbstractStructBase
     }
     /**
      * Set StatementTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DestinationControlStatementType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DestinationControlStatementType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DestinationControlStatementType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DestinationControlStatementType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $statementTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail
      */
     public function setStatementTypes(array $statementTypes = array())
     {
         $invalidValues = array();
         foreach ($statementTypes as $destinationControlDetailStatementTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\DestinationControlStatementType::valueIsValid($destinationControlDetailStatementTypesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\DestinationControlStatementType::valueIsValid($destinationControlDetailStatementTypesItem)) {
                 $invalidValues[] = var_export($destinationControlDetailStatementTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\DestinationControlStatementType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DestinationControlStatementType::getValidValues())), __LINE__);
         }
         $this->StatementTypes = $statementTypes;
         return $this;
     }
     /**
      * Add item to StatementTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DestinationControlStatementType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DestinationControlStatementType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DestinationControlStatementType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DestinationControlStatementType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail
      */
     public function addToStatementTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DestinationControlStatementType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\DestinationControlStatementType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DestinationControlStatementType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DestinationControlStatementType::getValidValues())), __LINE__);
         }
         $this->StatementTypes[] = $item;
         return $this;
@@ -110,7 +110,7 @@ class DestinationControlDetail extends AbstractStructBase
     /**
      * Set DestinationCountries value
      * @param string $destinationCountries
-     * @return \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail
      */
     public function setDestinationCountries($destinationCountries = null)
     {
@@ -132,7 +132,7 @@ class DestinationControlDetail extends AbstractStructBase
     /**
      * Set EndUser value
      * @param string $endUser
-     * @return \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail
      */
     public function setEndUser($endUser = null)
     {
@@ -149,7 +149,7 @@ class DestinationControlDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DestinationControlDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DestinationControlDetail
      */
     public static function __set_state(array $array)
     {

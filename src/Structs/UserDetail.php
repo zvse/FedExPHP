@@ -58,7 +58,7 @@ class UserDetail extends AbstractStructBase
     /**
      * Set UserId value
      * @param string $userId
-     * @return \CommerceFedEx\FedExPHP\Structs\UserDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UserDetail
      */
     public function setUserId($userId = null)
     {
@@ -80,7 +80,7 @@ class UserDetail extends AbstractStructBase
     /**
      * Set Password value
      * @param string $password
-     * @return \CommerceFedEx\FedExPHP\Structs\UserDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UserDetail
      */
     public function setPassword($password = null)
     {
@@ -102,7 +102,7 @@ class UserDetail extends AbstractStructBase
     /**
      * Set UniqueUserId value
      * @param string $uniqueUserId
-     * @return \CommerceFedEx\FedExPHP\Structs\UserDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UserDetail
      */
     public function setUniqueUserId($uniqueUserId = null)
     {
@@ -119,7 +119,7 @@ class UserDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UserDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UserDetail
      */
     public static function __set_state(array $array)
     {

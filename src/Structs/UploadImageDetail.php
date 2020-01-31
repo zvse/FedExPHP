@@ -47,17 +47,17 @@ class UploadImageDetail extends AbstractStructBase
     }
     /**
      * Set Id value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ImageId::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ImageId::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageId::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ImageId::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail
      */
     public function setId($id = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ImageId::valueIsValid($id)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $id, implode(', ', \CommerceFedEx\FedExPHP\Enums\ImageId::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ImageId::valueIsValid($id)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $id, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ImageId::getValidValues())), __LINE__);
         }
         $this->Id = $id;
         return $this;
@@ -73,7 +73,7 @@ class UploadImageDetail extends AbstractStructBase
     /**
      * Set Image value
      * @param string $image
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail
      */
     public function setImage($image = null)
     {
@@ -90,7 +90,7 @@ class UploadImageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail
      */
     public static function __set_state(array $array)
     {

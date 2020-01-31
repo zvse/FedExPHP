@@ -38,39 +38,39 @@ class ShipmentDryIceProcessingOptionsRequested extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $options
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested
      */
     public function setOptions(array $options = array())
     {
         $invalidValues = array();
         foreach ($options as $shipmentDryIceProcessingOptionsRequestedOptionsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::valueIsValid($shipmentDryIceProcessingOptionsRequestedOptionsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::valueIsValid($shipmentDryIceProcessingOptionsRequestedOptionsItem)) {
                 $invalidValues[] = var_export($shipmentDryIceProcessingOptionsRequestedOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options = $options;
         return $this;
     }
     /**
      * Add item to Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested
      */
     public function addToOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShipmentDryIceProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
@@ -81,7 +81,7 @@ class ShipmentDryIceProcessingOptionsRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceProcessingOptionsRequested
      */
     public static function __set_state(array $array)
     {

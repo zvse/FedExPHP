@@ -18,7 +18,7 @@ class ShippingDocumentFormat extends AbstractStructBase
      * - documentation: Specifies how to create, organize, and return the document.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail[]
      */
     public $Dispositions;
     /**
@@ -26,7 +26,7 @@ class ShippingDocumentFormat extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies how far down the page to move the beginning of the image; allows for printing on letterhead and other pre-printed stock.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\LinearMeasure
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\LinearMeasure
      */
     public $TopOfPageOffset;
     /**
@@ -55,7 +55,7 @@ class ShippingDocumentFormat extends AbstractStructBase
      * The OptionsRequested
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DocumentFormatOptionsRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DocumentFormatOptionsRequested
      */
     public $OptionsRequested;
     /**
@@ -63,7 +63,7 @@ class ShippingDocumentFormat extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Governs the language to be used for this individual document, independently from other content returned for the same shipment.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Localization
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Localization
      */
     public $Localization;
     /**
@@ -84,16 +84,16 @@ class ShippingDocumentFormat extends AbstractStructBase
      * @uses ShippingDocumentFormat::setOptionsRequested()
      * @uses ShippingDocumentFormat::setLocalization()
      * @uses ShippingDocumentFormat::setCustomDocumentIdentifier()
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail[] $dispositions
-     * @param \CommerceFedEx\FedExPHP\Structs\LinearMeasure $topOfPageOffset
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail[] $dispositions
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LinearMeasure $topOfPageOffset
      * @param string $imageType
      * @param string $stockType
      * @param bool $provideInstructions
-     * @param \CommerceFedEx\FedExPHP\Structs\DocumentFormatOptionsRequested $optionsRequested
-     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocumentFormatOptionsRequested $optionsRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
      * @param string $customDocumentIdentifier
      */
-    public function __construct(array $dispositions = array(), \CommerceFedEx\FedExPHP\Structs\LinearMeasure $topOfPageOffset = null, $imageType = null, $stockType = null, $provideInstructions = null, \CommerceFedEx\FedExPHP\Structs\DocumentFormatOptionsRequested $optionsRequested = null, \CommerceFedEx\FedExPHP\Structs\Localization $localization = null, $customDocumentIdentifier = null)
+    public function __construct(array $dispositions = array(), \NicholasCreativeMedia\FedExPHP\Structs\LinearMeasure $topOfPageOffset = null, $imageType = null, $stockType = null, $provideInstructions = null, \NicholasCreativeMedia\FedExPHP\Structs\DocumentFormatOptionsRequested $optionsRequested = null, \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null, $customDocumentIdentifier = null)
     {
         $this
             ->setDispositions($dispositions)
@@ -107,7 +107,7 @@ class ShippingDocumentFormat extends AbstractStructBase
     }
     /**
      * Get Dispositions value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail[]|null
      */
     public function getDispositions()
     {
@@ -116,15 +116,15 @@ class ShippingDocumentFormat extends AbstractStructBase
     /**
      * Set Dispositions value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail[] $dispositions
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail[] $dispositions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public function setDispositions(array $dispositions = array())
     {
         foreach ($dispositions as $shippingDocumentFormatDispositionsItem) {
             // validation for constraint: itemType
-            if (!$shippingDocumentFormatDispositionsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail) {
-                throw new \InvalidArgumentException(sprintf('The Dispositions property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail, "%s" given', is_object($shippingDocumentFormatDispositionsItem) ? get_class($shippingDocumentFormatDispositionsItem) : gettype($shippingDocumentFormatDispositionsItem)), __LINE__);
+            if (!$shippingDocumentFormatDispositionsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail) {
+                throw new \InvalidArgumentException(sprintf('The Dispositions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail, "%s" given', is_object($shippingDocumentFormatDispositionsItem) ? get_class($shippingDocumentFormatDispositionsItem) : gettype($shippingDocumentFormatDispositionsItem)), __LINE__);
             }
         }
         $this->Dispositions = $dispositions;
@@ -133,21 +133,21 @@ class ShippingDocumentFormat extends AbstractStructBase
     /**
      * Add item to Dispositions value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
-    public function addToDispositions(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail $item)
+    public function addToDispositions(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail) {
-            throw new \InvalidArgumentException(sprintf('The Dispositions property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail) {
+            throw new \InvalidArgumentException(sprintf('The Dispositions property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Dispositions[] = $item;
         return $this;
     }
     /**
      * Get TopOfPageOffset value
-     * @return \CommerceFedEx\FedExPHP\Structs\LinearMeasure|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LinearMeasure|null
      */
     public function getTopOfPageOffset()
     {
@@ -155,10 +155,10 @@ class ShippingDocumentFormat extends AbstractStructBase
     }
     /**
      * Set TopOfPageOffset value
-     * @param \CommerceFedEx\FedExPHP\Structs\LinearMeasure $topOfPageOffset
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LinearMeasure $topOfPageOffset
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
-    public function setTopOfPageOffset(\CommerceFedEx\FedExPHP\Structs\LinearMeasure $topOfPageOffset = null)
+    public function setTopOfPageOffset(\NicholasCreativeMedia\FedExPHP\Structs\LinearMeasure $topOfPageOffset = null)
     {
         $this->TopOfPageOffset = $topOfPageOffset;
         return $this;
@@ -173,17 +173,17 @@ class ShippingDocumentFormat extends AbstractStructBase
     }
     /**
      * Set ImageType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $imageType
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public function setImageType($imageType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid($imageType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $imageType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid($imageType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $imageType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::getValidValues())), __LINE__);
         }
         $this->ImageType = $imageType;
         return $this;
@@ -198,17 +198,17 @@ class ShippingDocumentFormat extends AbstractStructBase
     }
     /**
      * Set StockType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentStockType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentStockType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentStockType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentStockType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $stockType
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public function setStockType($stockType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShippingDocumentStockType::valueIsValid($stockType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $stockType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentStockType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentStockType::valueIsValid($stockType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $stockType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentStockType::getValidValues())), __LINE__);
         }
         $this->StockType = $stockType;
         return $this;
@@ -224,7 +224,7 @@ class ShippingDocumentFormat extends AbstractStructBase
     /**
      * Set ProvideInstructions value
      * @param bool $provideInstructions
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public function setProvideInstructions($provideInstructions = null)
     {
@@ -233,7 +233,7 @@ class ShippingDocumentFormat extends AbstractStructBase
     }
     /**
      * Get OptionsRequested value
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentFormatOptionsRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentFormatOptionsRequested|null
      */
     public function getOptionsRequested()
     {
@@ -241,17 +241,17 @@ class ShippingDocumentFormat extends AbstractStructBase
     }
     /**
      * Set OptionsRequested value
-     * @param \CommerceFedEx\FedExPHP\Structs\DocumentFormatOptionsRequested $optionsRequested
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocumentFormatOptionsRequested $optionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
-    public function setOptionsRequested(\CommerceFedEx\FedExPHP\Structs\DocumentFormatOptionsRequested $optionsRequested = null)
+    public function setOptionsRequested(\NicholasCreativeMedia\FedExPHP\Structs\DocumentFormatOptionsRequested $optionsRequested = null)
     {
         $this->OptionsRequested = $optionsRequested;
         return $this;
     }
     /**
      * Get Localization value
-     * @return \CommerceFedEx\FedExPHP\Structs\Localization|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Localization|null
      */
     public function getLocalization()
     {
@@ -259,10 +259,10 @@ class ShippingDocumentFormat extends AbstractStructBase
     }
     /**
      * Set Localization value
-     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
-    public function setLocalization(\CommerceFedEx\FedExPHP\Structs\Localization $localization = null)
+    public function setLocalization(\NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
     {
         $this->Localization = $localization;
         return $this;
@@ -278,7 +278,7 @@ class ShippingDocumentFormat extends AbstractStructBase
     /**
      * Set CustomDocumentIdentifier value
      * @param string $customDocumentIdentifier
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public function setCustomDocumentIdentifier($customDocumentIdentifier = null)
     {
@@ -295,7 +295,7 @@ class ShippingDocumentFormat extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public static function __set_state(array $array)
     {

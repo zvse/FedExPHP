@@ -32,7 +32,7 @@ class CompletedShipmentConsolidationDetail extends AbstractStructBase
      * The CompletedTransborderDistributionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CompletedTransborderDistributionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedTransborderDistributionDetail
      */
     public $CompletedTransborderDistributionDetail;
     /**
@@ -41,7 +41,7 @@ class CompletedShipmentConsolidationDetail extends AbstractStructBase
      * - documentation: Identifies other tracking IDs associated with this shipment in the same consolidation.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId[]
      */
     public $AssociatedTrackingIds;
     /**
@@ -52,10 +52,10 @@ class CompletedShipmentConsolidationDetail extends AbstractStructBase
      * @uses CompletedShipmentConsolidationDetail::setAssociatedTrackingIds()
      * @param string $type
      * @param string $role
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedTransborderDistributionDetail $completedTransborderDistributionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId[] $associatedTrackingIds
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedTransborderDistributionDetail $completedTransborderDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId[] $associatedTrackingIds
      */
-    public function __construct($type = null, $role = null, \CommerceFedEx\FedExPHP\Structs\CompletedTransborderDistributionDetail $completedTransborderDistributionDetail = null, array $associatedTrackingIds = array())
+    public function __construct($type = null, $role = null, \NicholasCreativeMedia\FedExPHP\Structs\CompletedTransborderDistributionDetail $completedTransborderDistributionDetail = null, array $associatedTrackingIds = array())
     {
         $this
             ->setType($type)
@@ -73,17 +73,17 @@ class CompletedShipmentConsolidationDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentConsolidationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentConsolidationDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -98,24 +98,24 @@ class CompletedShipmentConsolidationDetail extends AbstractStructBase
     }
     /**
      * Set Role value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $role
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentConsolidationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentConsolidationDetail
      */
     public function setRole($role = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid($role)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid($role)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues())), __LINE__);
         }
         $this->Role = $role;
         return $this;
     }
     /**
      * Get CompletedTransborderDistributionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTransborderDistributionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTransborderDistributionDetail|null
      */
     public function getCompletedTransborderDistributionDetail()
     {
@@ -123,17 +123,17 @@ class CompletedShipmentConsolidationDetail extends AbstractStructBase
     }
     /**
      * Set CompletedTransborderDistributionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedTransborderDistributionDetail $completedTransborderDistributionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedTransborderDistributionDetail $completedTransborderDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentConsolidationDetail
      */
-    public function setCompletedTransborderDistributionDetail(\CommerceFedEx\FedExPHP\Structs\CompletedTransborderDistributionDetail $completedTransborderDistributionDetail = null)
+    public function setCompletedTransborderDistributionDetail(\NicholasCreativeMedia\FedExPHP\Structs\CompletedTransborderDistributionDetail $completedTransborderDistributionDetail = null)
     {
         $this->CompletedTransborderDistributionDetail = $completedTransborderDistributionDetail;
         return $this;
     }
     /**
      * Get AssociatedTrackingIds value
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId[]|null
      */
     public function getAssociatedTrackingIds()
     {
@@ -142,15 +142,15 @@ class CompletedShipmentConsolidationDetail extends AbstractStructBase
     /**
      * Set AssociatedTrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId[] $associatedTrackingIds
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId[] $associatedTrackingIds
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentConsolidationDetail
      */
     public function setAssociatedTrackingIds(array $associatedTrackingIds = array())
     {
         foreach ($associatedTrackingIds as $completedShipmentConsolidationDetailAssociatedTrackingIdsItem) {
             // validation for constraint: itemType
-            if (!$completedShipmentConsolidationDetailAssociatedTrackingIdsItem instanceof \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId) {
-                throw new \InvalidArgumentException(sprintf('The AssociatedTrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId, "%s" given', is_object($completedShipmentConsolidationDetailAssociatedTrackingIdsItem) ? get_class($completedShipmentConsolidationDetailAssociatedTrackingIdsItem) : gettype($completedShipmentConsolidationDetailAssociatedTrackingIdsItem)), __LINE__);
+            if (!$completedShipmentConsolidationDetailAssociatedTrackingIdsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId) {
+                throw new \InvalidArgumentException(sprintf('The AssociatedTrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId, "%s" given', is_object($completedShipmentConsolidationDetailAssociatedTrackingIdsItem) ? get_class($completedShipmentConsolidationDetailAssociatedTrackingIdsItem) : gettype($completedShipmentConsolidationDetailAssociatedTrackingIdsItem)), __LINE__);
             }
         }
         $this->AssociatedTrackingIds = $associatedTrackingIds;
@@ -159,14 +159,14 @@ class CompletedShipmentConsolidationDetail extends AbstractStructBase
     /**
      * Add item to AssociatedTrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentConsolidationDetail
      */
-    public function addToAssociatedTrackingIds(\CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId $item)
+    public function addToAssociatedTrackingIds(\NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId) {
-            throw new \InvalidArgumentException(sprintf('The AssociatedTrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId) {
+            throw new \InvalidArgumentException(sprintf('The AssociatedTrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AssociatedTrackingIds[] = $item;
         return $this;
@@ -177,7 +177,7 @@ class CompletedShipmentConsolidationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentConsolidationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentConsolidationDetail
      */
     public static function __set_state(array $array)
     {

@@ -21,6 +21,11 @@ class BatteryMaterialType
      */
     const VALUE_LITHIUM_METAL = 'LITHIUM_METAL';
     /**
+     * Constant for value 'UNKNOWN'
+     * @return string 'UNKNOWN'
+     */
+    const VALUE_UNKNOWN = 'UNKNOWN';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -34,6 +39,7 @@ class BatteryMaterialType
      * Return allowed values
      * @uses self::VALUE_LITHIUM_ION
      * @uses self::VALUE_LITHIUM_METAL
+     * @uses self::VALUE_UNKNOWN
      * @return string[]
      */
     public static function getValidValues()
@@ -41,6 +47,7 @@ class BatteryMaterialType
         return array(
             self::VALUE_LITHIUM_ION,
             self::VALUE_LITHIUM_METAL,
+            self::VALUE_UNKNOWN,
         );
     }
     /**

@@ -21,6 +21,16 @@ class PrintedReferenceType
      */
     const VALUE_CONSIGNEE_ID_NUMBER = 'CONSIGNEE_ID_NUMBER';
     /**
+     * Constant for value 'INTERLINE_PRO_NUMBER'
+     * @return string 'INTERLINE_PRO_NUMBER'
+     */
+    const VALUE_INTERLINE_PRO_NUMBER = 'INTERLINE_PRO_NUMBER';
+    /**
+     * Constant for value 'PO_NUMBER'
+     * @return string 'PO_NUMBER'
+     */
+    const VALUE_PO_NUMBER = 'PO_NUMBER';
+    /**
      * Constant for value 'SHIPPER_ID_NUMBER'
      * @return string 'SHIPPER_ID_NUMBER'
      */
@@ -39,6 +49,8 @@ class PrintedReferenceType
      * Return allowed values
      * @uses self::VALUE_BILL_OF_LADING
      * @uses self::VALUE_CONSIGNEE_ID_NUMBER
+     * @uses self::VALUE_INTERLINE_PRO_NUMBER
+     * @uses self::VALUE_PO_NUMBER
      * @uses self::VALUE_SHIPPER_ID_NUMBER
      * @return string[]
      */
@@ -47,6 +59,8 @@ class PrintedReferenceType
         return array(
             self::VALUE_BILL_OF_LADING,
             self::VALUE_CONSIGNEE_ID_NUMBER,
+            self::VALUE_INTERLINE_PRO_NUMBER,
+            self::VALUE_PO_NUMBER,
             self::VALUE_SHIPPER_ID_NUMBER,
         );
     }

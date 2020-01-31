@@ -14,6 +14,16 @@ class NotificationType
      */
     const VALUE_EMAIL = 'EMAIL';
     /**
+     * Constant for value 'FAX'
+     * @return string 'FAX'
+     */
+    const VALUE_FAX = 'FAX';
+    /**
+     * Constant for value 'SMS_TEXT_MESSAGE'
+     * @return string 'SMS_TEXT_MESSAGE'
+     */
+    const VALUE_SMS_TEXT_MESSAGE = 'SMS_TEXT_MESSAGE';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -26,12 +36,16 @@ class NotificationType
     /**
      * Return allowed values
      * @uses self::VALUE_EMAIL
+     * @uses self::VALUE_FAX
+     * @uses self::VALUE_SMS_TEXT_MESSAGE
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
             self::VALUE_EMAIL,
+            self::VALUE_FAX,
+            self::VALUE_SMS_TEXT_MESSAGE,
         );
     }
     /**

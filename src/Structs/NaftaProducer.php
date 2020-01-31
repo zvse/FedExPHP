@@ -21,7 +21,7 @@ class NaftaProducer extends AbstractStructBase
      * The Producer
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Party
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public $Producer;
     /**
@@ -29,9 +29,9 @@ class NaftaProducer extends AbstractStructBase
      * @uses NaftaProducer::setId()
      * @uses NaftaProducer::setProducer()
      * @param string $id
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $producer
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $producer
      */
-    public function __construct($id = null, \CommerceFedEx\FedExPHP\Structs\Party $producer = null)
+    public function __construct($id = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $producer = null)
     {
         $this
             ->setId($id)
@@ -48,7 +48,7 @@ class NaftaProducer extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaProducer
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer
      */
     public function setId($id = null)
     {
@@ -61,7 +61,7 @@ class NaftaProducer extends AbstractStructBase
     }
     /**
      * Get Producer value
-     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
      */
     public function getProducer()
     {
@@ -69,10 +69,10 @@ class NaftaProducer extends AbstractStructBase
     }
     /**
      * Set Producer value
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $producer
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaProducer
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $producer
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer
      */
-    public function setProducer(\CommerceFedEx\FedExPHP\Structs\Party $producer = null)
+    public function setProducer(\NicholasCreativeMedia\FedExPHP\Structs\Party $producer = null)
     {
         $this->Producer = $producer;
         return $this;
@@ -83,7 +83,7 @@ class NaftaProducer extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\NaftaProducer
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NaftaProducer
      */
     public static function __set_state(array $array)
     {

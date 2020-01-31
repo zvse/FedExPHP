@@ -29,13 +29,21 @@ class FreightShipmentLineItem extends AbstractStructBase
      */
     public $FreightClass;
     /**
-     * The ClassProvidedByCustomer
+     * The BillingMaskName
      * Meta informations extracted from the WSDL
-     * - documentation: FEDEX INTERNAL USE ONLY: for FedEx system that estimate freight class from customer-provided dimensions and weight.
+     * - documentation: Identifies billing mask, if used to populate this line item.
      * - minOccurs: 0
-     * @var bool
+     * @var string
      */
-    public $ClassProvidedByCustomer;
+    public $BillingMaskName;
+    /**
+     * The LiabilityCoverageDetail
+     * Meta informations extracted from the WSDL
+     * - documentation: Specifies line item level liability coverage.
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail
+     */
+    public $LiabilityCoverageDetail;
     /**
      * The HandlingUnits
      * Meta informations extracted from the WSDL
@@ -97,14 +105,14 @@ class FreightShipmentLineItem extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Weight for this commodity or class line.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $Weight;
     /**
      * The Dimensions
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public $Dimensions;
     /**
@@ -112,14 +120,15 @@ class FreightShipmentLineItem extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Volume (cubic measure) for this commodity or class line.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Volume
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Volume
      */
     public $Volume;
     /**
      * Constructor method for FreightShipmentLineItem
      * @uses FreightShipmentLineItem::setId()
      * @uses FreightShipmentLineItem::setFreightClass()
-     * @uses FreightShipmentLineItem::setClassProvidedByCustomer()
+     * @uses FreightShipmentLineItem::setBillingMaskName()
+     * @uses FreightShipmentLineItem::setLiabilityCoverageDetail()
      * @uses FreightShipmentLineItem::setHandlingUnits()
      * @uses FreightShipmentLineItem::setPackaging()
      * @uses FreightShipmentLineItem::setPieces()
@@ -132,7 +141,8 @@ class FreightShipmentLineItem extends AbstractStructBase
      * @uses FreightShipmentLineItem::setVolume()
      * @param string $id
      * @param string $freightClass
-     * @param bool $classProvidedByCustomer
+     * @param string $billingMaskName
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail
      * @param int $handlingUnits
      * @param string $packaging
      * @param int $pieces
@@ -140,16 +150,17 @@ class FreightShipmentLineItem extends AbstractStructBase
      * @param string $hazardousMaterials
      * @param string $purchaseOrderNumber
      * @param string $description
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
-     * @param \CommerceFedEx\FedExPHP\Structs\Volume $volume
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Volume $volume
      */
-    public function __construct($id = null, $freightClass = null, $classProvidedByCustomer = null, $handlingUnits = null, $packaging = null, $pieces = null, $nmfcCode = null, $hazardousMaterials = null, $purchaseOrderNumber = null, $description = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null, \CommerceFedEx\FedExPHP\Structs\Volume $volume = null)
+    public function __construct($id = null, $freightClass = null, $billingMaskName = null, \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail = null, $handlingUnits = null, $packaging = null, $pieces = null, $nmfcCode = null, $hazardousMaterials = null, $purchaseOrderNumber = null, $description = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null, \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null, \NicholasCreativeMedia\FedExPHP\Structs\Volume $volume = null)
     {
         $this
             ->setId($id)
             ->setFreightClass($freightClass)
-            ->setClassProvidedByCustomer($classProvidedByCustomer)
+            ->setBillingMaskName($billingMaskName)
+            ->setLiabilityCoverageDetail($liabilityCoverageDetail)
             ->setHandlingUnits($handlingUnits)
             ->setPackaging($packaging)
             ->setPieces($pieces)
@@ -172,7 +183,7 @@ class FreightShipmentLineItem extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public function setId($id = null)
     {
@@ -193,37 +204,59 @@ class FreightShipmentLineItem extends AbstractStructBase
     }
     /**
      * Set FreightClass value
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightClassType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightClassType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $freightClass
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public function setFreightClass($freightClass = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\FreightClassType::valueIsValid($freightClass)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $freightClass, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightClassType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::valueIsValid($freightClass)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $freightClass, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightClassType::getValidValues())), __LINE__);
         }
         $this->FreightClass = $freightClass;
         return $this;
     }
     /**
-     * Get ClassProvidedByCustomer value
-     * @return bool|null
+     * Get BillingMaskName value
+     * @return string|null
      */
-    public function getClassProvidedByCustomer()
+    public function getBillingMaskName()
     {
-        return $this->ClassProvidedByCustomer;
+        return $this->BillingMaskName;
     }
     /**
-     * Set ClassProvidedByCustomer value
-     * @param bool $classProvidedByCustomer
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * Set BillingMaskName value
+     * @param string $billingMaskName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
-    public function setClassProvidedByCustomer($classProvidedByCustomer = null)
+    public function setBillingMaskName($billingMaskName = null)
     {
-        $this->ClassProvidedByCustomer = $classProvidedByCustomer;
+        // validation for constraint: string
+        if (!is_null($billingMaskName) && !is_string($billingMaskName)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($billingMaskName)), __LINE__);
+        }
+        $this->BillingMaskName = $billingMaskName;
+        return $this;
+    }
+    /**
+     * Get LiabilityCoverageDetail value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail|null
+     */
+    public function getLiabilityCoverageDetail()
+    {
+        return $this->LiabilityCoverageDetail;
+    }
+    /**
+     * Set LiabilityCoverageDetail value
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
+     */
+    public function setLiabilityCoverageDetail(\NicholasCreativeMedia\FedExPHP\Structs\LiabilityCoverageDetail $liabilityCoverageDetail = null)
+    {
+        $this->LiabilityCoverageDetail = $liabilityCoverageDetail;
         return $this;
     }
     /**
@@ -237,7 +270,7 @@ class FreightShipmentLineItem extends AbstractStructBase
     /**
      * Set HandlingUnits value
      * @param int $handlingUnits
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public function setHandlingUnits($handlingUnits = null)
     {
@@ -258,17 +291,17 @@ class FreightShipmentLineItem extends AbstractStructBase
     }
     /**
      * Set Packaging value
-     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $packaging
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public function setPackaging($packaging = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::valueIsValid($packaging)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packaging, implode(', ', \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::valueIsValid($packaging)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packaging, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::getValidValues())), __LINE__);
         }
         $this->Packaging = $packaging;
         return $this;
@@ -284,7 +317,7 @@ class FreightShipmentLineItem extends AbstractStructBase
     /**
      * Set Pieces value
      * @param int $pieces
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public function setPieces($pieces = null)
     {
@@ -306,7 +339,7 @@ class FreightShipmentLineItem extends AbstractStructBase
     /**
      * Set NmfcCode value
      * @param string $nmfcCode
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public function setNmfcCode($nmfcCode = null)
     {
@@ -327,17 +360,17 @@ class FreightShipmentLineItem extends AbstractStructBase
     }
     /**
      * Set HazardousMaterials value
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $hazardousMaterials
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public function setHazardousMaterials($hazardousMaterials = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid($hazardousMaterials)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $hazardousMaterials, implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid($hazardousMaterials)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $hazardousMaterials, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues())), __LINE__);
         }
         $this->HazardousMaterials = $hazardousMaterials;
         return $this;
@@ -353,7 +386,7 @@ class FreightShipmentLineItem extends AbstractStructBase
     /**
      * Set PurchaseOrderNumber value
      * @param string $purchaseOrderNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public function setPurchaseOrderNumber($purchaseOrderNumber = null)
     {
@@ -375,7 +408,7 @@ class FreightShipmentLineItem extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public function setDescription($description = null)
     {
@@ -388,7 +421,7 @@ class FreightShipmentLineItem extends AbstractStructBase
     }
     /**
      * Get Weight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getWeight()
     {
@@ -396,17 +429,17 @@ class FreightShipmentLineItem extends AbstractStructBase
     }
     /**
      * Set Weight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
-    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function setWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this->Weight = $weight;
         return $this;
     }
     /**
      * Get Dimensions value
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions|null
      */
     public function getDimensions()
     {
@@ -414,17 +447,17 @@ class FreightShipmentLineItem extends AbstractStructBase
     }
     /**
      * Set Dimensions value
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
-    public function setDimensions(\CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null)
+    public function setDimensions(\NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null)
     {
         $this->Dimensions = $dimensions;
         return $this;
     }
     /**
      * Get Volume value
-     * @return \CommerceFedEx\FedExPHP\Structs\Volume|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Volume|null
      */
     public function getVolume()
     {
@@ -432,10 +465,10 @@ class FreightShipmentLineItem extends AbstractStructBase
     }
     /**
      * Set Volume value
-     * @param \CommerceFedEx\FedExPHP\Structs\Volume $volume
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Volume $volume
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
-    public function setVolume(\CommerceFedEx\FedExPHP\Structs\Volume $volume = null)
+    public function setVolume(\NicholasCreativeMedia\FedExPHP\Structs\Volume $volume = null)
     {
         $this->Volume = $volume;
         return $this;
@@ -446,7 +479,7 @@ class FreightShipmentLineItem extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightShipmentLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightShipmentLineItem
      */
     public static function __set_state(array $array)
     {

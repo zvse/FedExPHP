@@ -13,14 +13,14 @@ class CustomerReference extends AbstractStructBase
     /**
      * The CustomerReferenceType
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $CustomerReferenceType;
     /**
      * The Value
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $Value;
@@ -39,7 +39,7 @@ class CustomerReference extends AbstractStructBase
     }
     /**
      * Get CustomerReferenceType value
-     * @return string
+     * @return string|null
      */
     public function getCustomerReferenceType()
     {
@@ -47,24 +47,24 @@ class CustomerReference extends AbstractStructBase
     }
     /**
      * Set CustomerReferenceType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $customerReferenceType
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference
      */
     public function setCustomerReferenceType($customerReferenceType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid($customerReferenceType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $customerReferenceType, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid($customerReferenceType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $customerReferenceType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
         }
         $this->CustomerReferenceType = $customerReferenceType;
         return $this;
     }
     /**
      * Get Value value
-     * @return string
+     * @return string|null
      */
     public function getValue()
     {
@@ -73,7 +73,7 @@ class CustomerReference extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference
      */
     public function setValue($value = null)
     {
@@ -90,7 +90,7 @@ class CustomerReference extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference
      */
     public static function __set_state(array $array)
     {

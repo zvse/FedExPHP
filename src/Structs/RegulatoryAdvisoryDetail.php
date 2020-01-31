@@ -45,7 +45,7 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Message[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Message[]
      */
     public $Advisories;
     /**
@@ -59,7 +59,7 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
      * @param string[] $categories
      * @param int $commodityIndex
      * @param string $derivedHarmonizedCode
-     * @param \CommerceFedEx\FedExPHP\Structs\Message[] $advisories
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Message[] $advisories
      */
     public function __construct($type = null, array $categories = array(), $commodityIndex = null, $derivedHarmonizedCode = null, array $advisories = array())
     {
@@ -80,17 +80,17 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ProhibitionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ProhibitionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ProhibitionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ProhibitionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ProhibitionType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\ProhibitionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ProhibitionType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ProhibitionType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -105,39 +105,39 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
     }
     /**
      * Set Categories value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentRuleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentRuleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentRuleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentRuleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $categories
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail
      */
     public function setCategories(array $categories = array())
     {
         $invalidValues = array();
         foreach ($categories as $regulatoryAdvisoryDetailCategoriesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\ShipmentRuleType::valueIsValid($regulatoryAdvisoryDetailCategoriesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\ShipmentRuleType::valueIsValid($regulatoryAdvisoryDetailCategoriesItem)) {
                 $invalidValues[] = var_export($regulatoryAdvisoryDetailCategoriesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentRuleType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShipmentRuleType::getValidValues())), __LINE__);
         }
         $this->Categories = $categories;
         return $this;
     }
     /**
      * Add item to Categories value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentRuleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShipmentRuleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentRuleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShipmentRuleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail
      */
     public function addToCategories($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShipmentRuleType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShipmentRuleType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShipmentRuleType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShipmentRuleType::getValidValues())), __LINE__);
         }
         $this->Categories[] = $item;
         return $this;
@@ -153,7 +153,7 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
     /**
      * Set CommodityIndex value
      * @param int $commodityIndex
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail
      */
     public function setCommodityIndex($commodityIndex = null)
     {
@@ -175,7 +175,7 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
     /**
      * Set DerivedHarmonizedCode value
      * @param string $derivedHarmonizedCode
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail
      */
     public function setDerivedHarmonizedCode($derivedHarmonizedCode = null)
     {
@@ -188,7 +188,7 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
     }
     /**
      * Get Advisories value
-     * @return \CommerceFedEx\FedExPHP\Structs\Message[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Message[]|null
      */
     public function getAdvisories()
     {
@@ -197,15 +197,15 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
     /**
      * Set Advisories value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Message[] $advisories
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Message[] $advisories
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail
      */
     public function setAdvisories(array $advisories = array())
     {
         foreach ($advisories as $regulatoryAdvisoryDetailAdvisoriesItem) {
             // validation for constraint: itemType
-            if (!$regulatoryAdvisoryDetailAdvisoriesItem instanceof \CommerceFedEx\FedExPHP\Structs\Message) {
-                throw new \InvalidArgumentException(sprintf('The Advisories property can only contain items of \CommerceFedEx\FedExPHP\Structs\Message, "%s" given', is_object($regulatoryAdvisoryDetailAdvisoriesItem) ? get_class($regulatoryAdvisoryDetailAdvisoriesItem) : gettype($regulatoryAdvisoryDetailAdvisoriesItem)), __LINE__);
+            if (!$regulatoryAdvisoryDetailAdvisoriesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Message) {
+                throw new \InvalidArgumentException(sprintf('The Advisories property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Message, "%s" given', is_object($regulatoryAdvisoryDetailAdvisoriesItem) ? get_class($regulatoryAdvisoryDetailAdvisoriesItem) : gettype($regulatoryAdvisoryDetailAdvisoriesItem)), __LINE__);
             }
         }
         $this->Advisories = $advisories;
@@ -214,14 +214,14 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
     /**
      * Add item to Advisories value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Message $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Message $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail
      */
-    public function addToAdvisories(\CommerceFedEx\FedExPHP\Structs\Message $item)
+    public function addToAdvisories(\NicholasCreativeMedia\FedExPHP\Structs\Message $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Message) {
-            throw new \InvalidArgumentException(sprintf('The Advisories property can only contain items of \CommerceFedEx\FedExPHP\Structs\Message, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Message) {
+            throw new \InvalidArgumentException(sprintf('The Advisories property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Message, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Advisories[] = $item;
         return $this;
@@ -232,7 +232,7 @@ class RegulatoryAdvisoryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail
      */
     public static function __set_state(array $array)
     {

@@ -48,7 +48,7 @@ class DateRange extends AbstractStructBase
     /**
      * Set Begins value
      * @param string $begins
-     * @return \CommerceFedEx\FedExPHP\Structs\DateRange
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DateRange
      */
     public function setBegins($begins = null)
     {
@@ -70,7 +70,7 @@ class DateRange extends AbstractStructBase
     /**
      * Set Ends value
      * @param string $ends
-     * @return \CommerceFedEx\FedExPHP\Structs\DateRange
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DateRange
      */
     public function setEnds($ends = null)
     {
@@ -87,7 +87,7 @@ class DateRange extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DateRange
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DateRange
      */
     public static function __set_state(array $array)
     {

@@ -23,12 +23,12 @@ class Service extends AbstractSoapClientBase
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'CloseService_v5.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\CloseClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\CloseClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('clos',5,0,0);
+        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('clos',5,0,0);
     }
     /**
      * Method to call the operation originally named closeWithDocuments
@@ -36,10 +36,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsRequest $closeWithDocumentsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsRequest $closeWithDocumentsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply|bool
      */
-    public function closeWithDocuments(\CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsRequest $closeWithDocumentsRequest)
+    public function closeWithDocuments(\NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsRequest $closeWithDocumentsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->closeWithDocuments($closeWithDocumentsRequest));
@@ -55,10 +55,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest $smartPostCloseRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest $smartPostCloseRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseReply|bool
      */
-    public function smartPostClose(\CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest $smartPostCloseRequest)
+    public function smartPostClose(\NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest $smartPostCloseRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->smartPostClose($smartPostCloseRequest));
@@ -74,10 +74,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\GroundCloseRequest $groundCloseRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\GroundCloseReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\GroundCloseRequest $groundCloseRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GroundCloseReply|bool
      */
-    public function groundClose(\CommerceFedEx\FedExPHP\Structs\GroundCloseRequest $groundCloseRequest)
+    public function groundClose(\NicholasCreativeMedia\FedExPHP\Structs\GroundCloseRequest $groundCloseRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->groundClose($groundCloseRequest));
@@ -93,10 +93,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\GroundCloseWithDocumentsRequest $groundCloseWithDocumentsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\GroundCloseDocumentsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\GroundCloseWithDocumentsRequest $groundCloseWithDocumentsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GroundCloseDocumentsReply|bool
      */
-    public function groundCloseWithDocuments(\CommerceFedEx\FedExPHP\Structs\GroundCloseWithDocumentsRequest $groundCloseWithDocumentsRequest)
+    public function groundCloseWithDocuments(\NicholasCreativeMedia\FedExPHP\Structs\GroundCloseWithDocumentsRequest $groundCloseWithDocumentsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->groundCloseWithDocuments($groundCloseWithDocumentsRequest));
@@ -112,10 +112,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ReprintGroundCloseDocumentsRequest $reprintGroundCloseDocumentsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\GroundCloseDocumentsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ReprintGroundCloseDocumentsRequest $reprintGroundCloseDocumentsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GroundCloseDocumentsReply|bool
      */
-    public function reprintGroundCloseDocuments(\CommerceFedEx\FedExPHP\Structs\ReprintGroundCloseDocumentsRequest $reprintGroundCloseDocumentsRequest)
+    public function reprintGroundCloseDocuments(\NicholasCreativeMedia\FedExPHP\Structs\ReprintGroundCloseDocumentsRequest $reprintGroundCloseDocumentsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->reprintGroundCloseDocuments($reprintGroundCloseDocumentsRequest));
@@ -131,10 +131,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\GroundCloseReportsReprintRequest $groundCloseReportsReprintRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\GroundCloseReportsReprintReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\GroundCloseReportsReprintRequest $groundCloseReportsReprintRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GroundCloseReportsReprintReply|bool
      */
-    public function groundCloseReportsReprint(\CommerceFedEx\FedExPHP\Structs\GroundCloseReportsReprintRequest $groundCloseReportsReprintRequest)
+    public function groundCloseReportsReprint(\NicholasCreativeMedia\FedExPHP\Structs\GroundCloseReportsReprintRequest $groundCloseReportsReprintRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->groundCloseReportsReprint($groundCloseReportsReprintRequest));
@@ -147,7 +147,7 @@ class Service extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply|\CommerceFedEx\FedExPHP\Structs\GroundCloseDocumentsReply|\CommerceFedEx\FedExPHP\Structs\GroundCloseReply|\CommerceFedEx\FedExPHP\Structs\GroundCloseReportsReprintReply|\CommerceFedEx\FedExPHP\Structs\SmartPostCloseReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply|\NicholasCreativeMedia\FedExPHP\Structs\GroundCloseDocumentsReply|\NicholasCreativeMedia\FedExPHP\Structs\GroundCloseReply|\NicholasCreativeMedia\FedExPHP\Structs\GroundCloseReportsReprintReply|\NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseReply
      */
     public function getResult()
     {

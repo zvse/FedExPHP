@@ -18,13 +18,13 @@ class ShipmentConfigurationData extends AbstractStructBase
      * - documentation: Specifies the data that is common to dangerous goods packages in the shipment. This is populated when the shipment contains packages with identical dangerous goods commodities.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail[]
      */
     public $DangerousGoodsPackageConfigurations;
     /**
      * Constructor method for ShipmentConfigurationData
      * @uses ShipmentConfigurationData::setDangerousGoodsPackageConfigurations()
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail[] $dangerousGoodsPackageConfigurations
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail[] $dangerousGoodsPackageConfigurations
      */
     public function __construct(array $dangerousGoodsPackageConfigurations = array())
     {
@@ -33,7 +33,7 @@ class ShipmentConfigurationData extends AbstractStructBase
     }
     /**
      * Get DangerousGoodsPackageConfigurations value
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail[]|null
      */
     public function getDangerousGoodsPackageConfigurations()
     {
@@ -42,15 +42,15 @@ class ShipmentConfigurationData extends AbstractStructBase
     /**
      * Set DangerousGoodsPackageConfigurations value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail[] $dangerousGoodsPackageConfigurations
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConfigurationData
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail[] $dangerousGoodsPackageConfigurations
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConfigurationData
      */
     public function setDangerousGoodsPackageConfigurations(array $dangerousGoodsPackageConfigurations = array())
     {
         foreach ($dangerousGoodsPackageConfigurations as $shipmentConfigurationDataDangerousGoodsPackageConfigurationsItem) {
             // validation for constraint: itemType
-            if (!$shipmentConfigurationDataDangerousGoodsPackageConfigurationsItem instanceof \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail) {
-                throw new \InvalidArgumentException(sprintf('The DangerousGoodsPackageConfigurations property can only contain items of \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail, "%s" given', is_object($shipmentConfigurationDataDangerousGoodsPackageConfigurationsItem) ? get_class($shipmentConfigurationDataDangerousGoodsPackageConfigurationsItem) : gettype($shipmentConfigurationDataDangerousGoodsPackageConfigurationsItem)), __LINE__);
+            if (!$shipmentConfigurationDataDangerousGoodsPackageConfigurationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail) {
+                throw new \InvalidArgumentException(sprintf('The DangerousGoodsPackageConfigurations property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail, "%s" given', is_object($shipmentConfigurationDataDangerousGoodsPackageConfigurationsItem) ? get_class($shipmentConfigurationDataDangerousGoodsPackageConfigurationsItem) : gettype($shipmentConfigurationDataDangerousGoodsPackageConfigurationsItem)), __LINE__);
             }
         }
         $this->DangerousGoodsPackageConfigurations = $dangerousGoodsPackageConfigurations;
@@ -59,14 +59,14 @@ class ShipmentConfigurationData extends AbstractStructBase
     /**
      * Add item to DangerousGoodsPackageConfigurations value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConfigurationData
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConfigurationData
      */
-    public function addToDangerousGoodsPackageConfigurations(\CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail $item)
+    public function addToDangerousGoodsPackageConfigurations(\NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail) {
-            throw new \InvalidArgumentException(sprintf('The DangerousGoodsPackageConfigurations property can only contain items of \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail) {
+            throw new \InvalidArgumentException(sprintf('The DangerousGoodsPackageConfigurations property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DangerousGoodsPackageConfigurations[] = $item;
         return $this;
@@ -77,7 +77,7 @@ class ShipmentConfigurationData extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentConfigurationData
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentConfigurationData
      */
     public static function __set_state(array $array)
     {

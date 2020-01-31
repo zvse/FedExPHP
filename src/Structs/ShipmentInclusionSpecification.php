@@ -48,17 +48,17 @@ class ShipmentInclusionSpecification extends AbstractStructBase
     }
     /**
      * Set CarrierCode value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrierCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification
      */
     public function setCarrierCode($carrierCode = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->CarrierCode = $carrierCode;
         return $this;
@@ -73,17 +73,17 @@ class ShipmentInclusionSpecification extends AbstractStructBase
     }
     /**
      * Set ServiceCategory value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceCategoryType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ServiceCategoryType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceCategoryType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ServiceCategoryType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $serviceCategory
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification
      */
     public function setServiceCategory($serviceCategory = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ServiceCategoryType::valueIsValid($serviceCategory)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceCategory, implode(', ', \CommerceFedEx\FedExPHP\Enums\ServiceCategoryType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ServiceCategoryType::valueIsValid($serviceCategory)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $serviceCategory, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ServiceCategoryType::getValidValues())), __LINE__);
         }
         $this->ServiceCategory = $serviceCategory;
         return $this;
@@ -94,7 +94,7 @@ class ShipmentInclusionSpecification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification
      */
     public static function __set_state(array $array)
     {

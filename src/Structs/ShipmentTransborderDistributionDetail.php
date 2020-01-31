@@ -17,7 +17,7 @@ class ShipmentTransborderDistributionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies special services to be performed on this shipment as part of a transborder distribution.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
      */
     public $SpecialServicesRequested;
     /**
@@ -25,17 +25,17 @@ class ShipmentTransborderDistributionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Provides summary totals across all CRNs in a distribution.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
     public $SummaryDetail;
     /**
      * Constructor method for ShipmentTransborderDistributionDetail
      * @uses ShipmentTransborderDistributionDetail::setSpecialServicesRequested()
      * @uses ShipmentTransborderDistributionDetail::setSummaryDetail()
-     * @param \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested
-     * @param \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail $summaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail $summaryDetail
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested = null, \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail $summaryDetail = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested = null, \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail $summaryDetail = null)
     {
         $this
             ->setSpecialServicesRequested($specialServicesRequested)
@@ -43,7 +43,7 @@ class ShipmentTransborderDistributionDetail extends AbstractStructBase
     }
     /**
      * Get SpecialServicesRequested value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested|null
      */
     public function getSpecialServicesRequested()
     {
@@ -51,17 +51,17 @@ class ShipmentTransborderDistributionDetail extends AbstractStructBase
     }
     /**
      * Set SpecialServicesRequested value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentTransborderDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentTransborderDistributionDetail
      */
-    public function setSpecialServicesRequested(\CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested = null)
+    public function setSpecialServicesRequested(\NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested = null)
     {
         $this->SpecialServicesRequested = $specialServicesRequested;
         return $this;
     }
     /**
      * Get SummaryDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail|null
      */
     public function getSummaryDetail()
     {
@@ -69,10 +69,10 @@ class ShipmentTransborderDistributionDetail extends AbstractStructBase
     }
     /**
      * Set SummaryDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail $summaryDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentTransborderDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail $summaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentTransborderDistributionDetail
      */
-    public function setSummaryDetail(\CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail $summaryDetail = null)
+    public function setSummaryDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail $summaryDetail = null)
     {
         $this->SummaryDetail = $summaryDetail;
         return $this;
@@ -83,7 +83,7 @@ class ShipmentTransborderDistributionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentTransborderDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentTransborderDistributionDetail
      */
     public static function __set_state(array $array)
     {

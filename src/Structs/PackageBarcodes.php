@@ -18,7 +18,7 @@ class PackageBarcodes extends AbstractStructBase
      * - documentation: Binary-style barcodes for this package.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\BinaryBarcode[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode[]
      */
     public $BinaryBarcodes;
     /**
@@ -27,15 +27,15 @@ class PackageBarcodes extends AbstractStructBase
      * - documentation: String-style barcodes for this package.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\StringBarcode[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode[]
      */
     public $StringBarcodes;
     /**
      * Constructor method for PackageBarcodes
      * @uses PackageBarcodes::setBinaryBarcodes()
      * @uses PackageBarcodes::setStringBarcodes()
-     * @param \CommerceFedEx\FedExPHP\Structs\BinaryBarcode[] $binaryBarcodes
-     * @param \CommerceFedEx\FedExPHP\Structs\StringBarcode[] $stringBarcodes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode[] $binaryBarcodes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode[] $stringBarcodes
      */
     public function __construct(array $binaryBarcodes = array(), array $stringBarcodes = array())
     {
@@ -45,7 +45,7 @@ class PackageBarcodes extends AbstractStructBase
     }
     /**
      * Get BinaryBarcodes value
-     * @return \CommerceFedEx\FedExPHP\Structs\BinaryBarcode[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode[]|null
      */
     public function getBinaryBarcodes()
     {
@@ -54,15 +54,15 @@ class PackageBarcodes extends AbstractStructBase
     /**
      * Set BinaryBarcodes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\BinaryBarcode[] $binaryBarcodes
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageBarcodes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode[] $binaryBarcodes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes
      */
     public function setBinaryBarcodes(array $binaryBarcodes = array())
     {
         foreach ($binaryBarcodes as $packageBarcodesBinaryBarcodesItem) {
             // validation for constraint: itemType
-            if (!$packageBarcodesBinaryBarcodesItem instanceof \CommerceFedEx\FedExPHP\Structs\BinaryBarcode) {
-                throw new \InvalidArgumentException(sprintf('The BinaryBarcodes property can only contain items of \CommerceFedEx\FedExPHP\Structs\BinaryBarcode, "%s" given', is_object($packageBarcodesBinaryBarcodesItem) ? get_class($packageBarcodesBinaryBarcodesItem) : gettype($packageBarcodesBinaryBarcodesItem)), __LINE__);
+            if (!$packageBarcodesBinaryBarcodesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode) {
+                throw new \InvalidArgumentException(sprintf('The BinaryBarcodes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode, "%s" given', is_object($packageBarcodesBinaryBarcodesItem) ? get_class($packageBarcodesBinaryBarcodesItem) : gettype($packageBarcodesBinaryBarcodesItem)), __LINE__);
             }
         }
         $this->BinaryBarcodes = $binaryBarcodes;
@@ -71,21 +71,21 @@ class PackageBarcodes extends AbstractStructBase
     /**
      * Add item to BinaryBarcodes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\BinaryBarcode $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageBarcodes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes
      */
-    public function addToBinaryBarcodes(\CommerceFedEx\FedExPHP\Structs\BinaryBarcode $item)
+    public function addToBinaryBarcodes(\NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\BinaryBarcode) {
-            throw new \InvalidArgumentException(sprintf('The BinaryBarcodes property can only contain items of \CommerceFedEx\FedExPHP\Structs\BinaryBarcode, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode) {
+            throw new \InvalidArgumentException(sprintf('The BinaryBarcodes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\BinaryBarcode, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->BinaryBarcodes[] = $item;
         return $this;
     }
     /**
      * Get StringBarcodes value
-     * @return \CommerceFedEx\FedExPHP\Structs\StringBarcode[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode[]|null
      */
     public function getStringBarcodes()
     {
@@ -94,15 +94,15 @@ class PackageBarcodes extends AbstractStructBase
     /**
      * Set StringBarcodes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\StringBarcode[] $stringBarcodes
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageBarcodes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode[] $stringBarcodes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes
      */
     public function setStringBarcodes(array $stringBarcodes = array())
     {
         foreach ($stringBarcodes as $packageBarcodesStringBarcodesItem) {
             // validation for constraint: itemType
-            if (!$packageBarcodesStringBarcodesItem instanceof \CommerceFedEx\FedExPHP\Structs\StringBarcode) {
-                throw new \InvalidArgumentException(sprintf('The StringBarcodes property can only contain items of \CommerceFedEx\FedExPHP\Structs\StringBarcode, "%s" given', is_object($packageBarcodesStringBarcodesItem) ? get_class($packageBarcodesStringBarcodesItem) : gettype($packageBarcodesStringBarcodesItem)), __LINE__);
+            if (!$packageBarcodesStringBarcodesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode) {
+                throw new \InvalidArgumentException(sprintf('The StringBarcodes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode, "%s" given', is_object($packageBarcodesStringBarcodesItem) ? get_class($packageBarcodesStringBarcodesItem) : gettype($packageBarcodesStringBarcodesItem)), __LINE__);
             }
         }
         $this->StringBarcodes = $stringBarcodes;
@@ -111,14 +111,14 @@ class PackageBarcodes extends AbstractStructBase
     /**
      * Add item to StringBarcodes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\StringBarcode $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageBarcodes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes
      */
-    public function addToStringBarcodes(\CommerceFedEx\FedExPHP\Structs\StringBarcode $item)
+    public function addToStringBarcodes(\NicholasCreativeMedia\FedExPHP\Structs\StringBarcode $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\StringBarcode) {
-            throw new \InvalidArgumentException(sprintf('The StringBarcodes property can only contain items of \CommerceFedEx\FedExPHP\Structs\StringBarcode, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode) {
+            throw new \InvalidArgumentException(sprintf('The StringBarcodes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->StringBarcodes[] = $item;
         return $this;
@@ -129,7 +129,7 @@ class PackageBarcodes extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageBarcodes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes
      */
     public static function __set_state(array $array)
     {

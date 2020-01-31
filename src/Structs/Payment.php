@@ -13,7 +13,7 @@ class Payment extends AbstractStructBase
     /**
      * The PaymentType
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $PaymentType;
@@ -21,25 +21,55 @@ class Payment extends AbstractStructBase
      * The Payor
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Payor
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payor
      */
     public $Payor;
+    /**
+     * The CreditCard
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
+     */
+    public $CreditCard;
+    /**
+     * The CreditCardTransactionDetail
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail
+     */
+    public $CreditCardTransactionDetail;
+    /**
+     * The Amount
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
+     */
+    public $Amount;
     /**
      * Constructor method for Payment
      * @uses Payment::setPaymentType()
      * @uses Payment::setPayor()
+     * @uses Payment::setCreditCard()
+     * @uses Payment::setCreditCardTransactionDetail()
+     * @uses Payment::setAmount()
      * @param string $paymentType
-     * @param \CommerceFedEx\FedExPHP\Structs\Payor $payor
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payor $payor
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreditCard $creditCard
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail $creditCardTransactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
      */
-    public function __construct($paymentType = null, \CommerceFedEx\FedExPHP\Structs\Payor $payor = null)
+    public function __construct($paymentType = null, \NicholasCreativeMedia\FedExPHP\Structs\Payor $payor = null, \NicholasCreativeMedia\FedExPHP\Structs\CreditCard $creditCard = null, \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail $creditCardTransactionDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
     {
         $this
             ->setPaymentType($paymentType)
-            ->setPayor($payor);
+            ->setPayor($payor)
+            ->setCreditCard($creditCard)
+            ->setCreditCardTransactionDetail($creditCardTransactionDetail)
+            ->setAmount($amount);
     }
     /**
      * Get PaymentType value
-     * @return string
+     * @return string|null
      */
     public function getPaymentType()
     {
@@ -47,24 +77,24 @@ class Payment extends AbstractStructBase
     }
     /**
      * Set PaymentType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\PaymentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\PaymentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PaymentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PaymentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $paymentType
-     * @return \CommerceFedEx\FedExPHP\Structs\Payment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
      */
     public function setPaymentType($paymentType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\PaymentType::valueIsValid($paymentType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \CommerceFedEx\FedExPHP\Enums\PaymentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\PaymentType::valueIsValid($paymentType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PaymentType::getValidValues())), __LINE__);
         }
         $this->PaymentType = $paymentType;
         return $this;
     }
     /**
      * Get Payor value
-     * @return \CommerceFedEx\FedExPHP\Structs\Payor|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payor|null
      */
     public function getPayor()
     {
@@ -72,12 +102,66 @@ class Payment extends AbstractStructBase
     }
     /**
      * Set Payor value
-     * @param \CommerceFedEx\FedExPHP\Structs\Payor $payor
-     * @return \CommerceFedEx\FedExPHP\Structs\Payment
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payor $payor
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
      */
-    public function setPayor(\CommerceFedEx\FedExPHP\Structs\Payor $payor = null)
+    public function setPayor(\NicholasCreativeMedia\FedExPHP\Structs\Payor $payor = null)
     {
         $this->Payor = $payor;
+        return $this;
+    }
+    /**
+     * Get CreditCard value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard|null
+     */
+    public function getCreditCard()
+    {
+        return $this->CreditCard;
+    }
+    /**
+     * Set CreditCard value
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreditCard $creditCard
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
+     */
+    public function setCreditCard(\NicholasCreativeMedia\FedExPHP\Structs\CreditCard $creditCard = null)
+    {
+        $this->CreditCard = $creditCard;
+        return $this;
+    }
+    /**
+     * Get CreditCardTransactionDetail value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail|null
+     */
+    public function getCreditCardTransactionDetail()
+    {
+        return $this->CreditCardTransactionDetail;
+    }
+    /**
+     * Set CreditCardTransactionDetail value
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail $creditCardTransactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
+     */
+    public function setCreditCardTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionDetail $creditCardTransactionDetail = null)
+    {
+        $this->CreditCardTransactionDetail = $creditCardTransactionDetail;
+        return $this;
+    }
+    /**
+     * Get Amount value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
+     */
+    public function getAmount()
+    {
+        return $this->Amount;
+    }
+    /**
+     * Set Amount value
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
+     */
+    public function setAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
+    {
+        $this->Amount = $amount;
         return $this;
     }
     /**
@@ -86,7 +170,7 @@ class Payment extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Payment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
      */
     public static function __set_state(array $array)
     {

@@ -24,21 +24,21 @@ class CloseWithDocumentsReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -46,7 +46,7 @@ class CloseWithDocumentsReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CloseDocument[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CloseDocument[]
      */
     public $Documents;
     /**
@@ -57,12 +57,12 @@ class CloseWithDocumentsReply extends AbstractStructBase
      * @uses CloseWithDocumentsReply::setTransactionDetail()
      * @uses CloseWithDocumentsReply::setDocuments()
      * @param string $highestSeverity
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseDocument[] $documents
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseDocument[] $documents
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, array $documents = array())
+    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, array $documents = array())
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -81,24 +81,24 @@ class CloseWithDocumentsReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -107,15 +107,15 @@ class CloseWithDocumentsReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $closeWithDocumentsReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$closeWithDocumentsReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($closeWithDocumentsReplyNotificationsItem) ? get_class($closeWithDocumentsReplyNotificationsItem) : gettype($closeWithDocumentsReplyNotificationsItem)), __LINE__);
+            if (!$closeWithDocumentsReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($closeWithDocumentsReplyNotificationsItem) ? get_class($closeWithDocumentsReplyNotificationsItem) : gettype($closeWithDocumentsReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -124,21 +124,21 @@ class CloseWithDocumentsReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply
      */
-    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -146,17 +146,17 @@ class CloseWithDocumentsReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -164,17 +164,17 @@ class CloseWithDocumentsReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
     /**
      * Get Documents value
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseDocument[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseDocument[]|null
      */
     public function getDocuments()
     {
@@ -183,15 +183,15 @@ class CloseWithDocumentsReply extends AbstractStructBase
     /**
      * Set Documents value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseDocument[] $documents
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseDocument[] $documents
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply
      */
     public function setDocuments(array $documents = array())
     {
         foreach ($documents as $closeWithDocumentsReplyDocumentsItem) {
             // validation for constraint: itemType
-            if (!$closeWithDocumentsReplyDocumentsItem instanceof \CommerceFedEx\FedExPHP\Structs\CloseDocument) {
-                throw new \InvalidArgumentException(sprintf('The Documents property can only contain items of \CommerceFedEx\FedExPHP\Structs\CloseDocument, "%s" given', is_object($closeWithDocumentsReplyDocumentsItem) ? get_class($closeWithDocumentsReplyDocumentsItem) : gettype($closeWithDocumentsReplyDocumentsItem)), __LINE__);
+            if (!$closeWithDocumentsReplyDocumentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CloseDocument) {
+                throw new \InvalidArgumentException(sprintf('The Documents property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CloseDocument, "%s" given', is_object($closeWithDocumentsReplyDocumentsItem) ? get_class($closeWithDocumentsReplyDocumentsItem) : gettype($closeWithDocumentsReplyDocumentsItem)), __LINE__);
             }
         }
         $this->Documents = $documents;
@@ -200,14 +200,14 @@ class CloseWithDocumentsReply extends AbstractStructBase
     /**
      * Add item to Documents value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseDocument $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseDocument $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply
      */
-    public function addToDocuments(\CommerceFedEx\FedExPHP\Structs\CloseDocument $item)
+    public function addToDocuments(\NicholasCreativeMedia\FedExPHP\Structs\CloseDocument $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CloseDocument) {
-            throw new \InvalidArgumentException(sprintf('The Documents property can only contain items of \CommerceFedEx\FedExPHP\Structs\CloseDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CloseDocument) {
+            throw new \InvalidArgumentException(sprintf('The Documents property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CloseDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Documents[] = $item;
         return $this;
@@ -218,7 +218,7 @@ class CloseWithDocumentsReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseWithDocumentsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseWithDocumentsReply
      */
     public static function __set_state(array $array)
     {

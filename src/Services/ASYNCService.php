@@ -23,12 +23,12 @@ class Service extends AbstractSoapClientBase
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'ASYNCService_v4.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\ASYNCClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\ASYNCClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('async',4,0,0);
+        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('async',4,0,0);
     }
     /**
      * Method to call the operation originally named retrieveJobResults
@@ -36,10 +36,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest $retrieveJobResultsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest $retrieveJobResultsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsReply|bool
      */
-    public function retrieveJobResults(\CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest $retrieveJobResultsRequest)
+    public function retrieveJobResults(\NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest $retrieveJobResultsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->retrieveJobResults($retrieveJobResultsRequest));
@@ -52,7 +52,7 @@ class Service extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsReply
      */
     public function getResult()
     {

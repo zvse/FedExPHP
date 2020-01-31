@@ -166,7 +166,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set IdType value
      * @param string $idType
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setIdType($idType = null)
     {
@@ -188,7 +188,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setId($id = null)
     {
@@ -210,7 +210,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set SequenceNumber value
      * @param int $sequenceNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setSequenceNumber($sequenceNumber = null)
     {
@@ -231,17 +231,17 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     }
     /**
      * Set PackingGroup value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsPackingGroupType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsPackingGroupType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsPackingGroupType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsPackingGroupType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $packingGroup
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setPackingGroup($packingGroup = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsPackingGroupType::valueIsValid($packingGroup)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packingGroup, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsPackingGroupType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsPackingGroupType::valueIsValid($packingGroup)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packingGroup, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsPackingGroupType::getValidValues())), __LINE__);
         }
         $this->PackingGroup = $packingGroup;
         return $this;
@@ -257,7 +257,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set PackingInstructions value
      * @param string $packingInstructions
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setPackingInstructions($packingInstructions = null)
     {
@@ -278,17 +278,17 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     }
     /**
      * Set AircraftCategoryType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $aircraftCategoryType
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setAircraftCategoryType($aircraftCategoryType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid($aircraftCategoryType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $aircraftCategoryType, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid($aircraftCategoryType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $aircraftCategoryType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues())), __LINE__);
         }
         $this->AircraftCategoryType = $aircraftCategoryType;
         return $this;
@@ -304,7 +304,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set ProperShippingName value
      * @param string $properShippingName
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setProperShippingName($properShippingName = null)
     {
@@ -326,7 +326,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set TechnicalName value
      * @param string $technicalName
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setTechnicalName($technicalName = null)
     {
@@ -348,7 +348,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set PrimaryClass value
      * @param string $primaryClass
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setPrimaryClass($primaryClass = null)
     {
@@ -371,7 +371,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
      * Set SubsidiaryClasses value
      * @throws \InvalidArgumentException
      * @param string[] $subsidiaryClasses
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setSubsidiaryClasses(array $subsidiaryClasses = array())
     {
@@ -388,7 +388,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
      * Add item to SubsidiaryClasses value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function addToSubsidiaryClasses($item)
     {
@@ -410,7 +410,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set ReportableQuantity value
      * @param bool $reportableQuantity
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setReportableQuantity($reportableQuantity = null)
     {
@@ -428,7 +428,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set Percentage value
      * @param float $percentage
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setPercentage($percentage = null)
     {
@@ -446,7 +446,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
     /**
      * Set AuthorizationInformation value
      * @param string $authorizationInformation
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public function setAuthorizationInformation($authorizationInformation = null)
     {
@@ -463,7 +463,7 @@ class UploadedDangerousGoodsCommodityDescription extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsCommodityDescription
      */
     public static function __set_state(array $array)
     {

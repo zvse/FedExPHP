@@ -50,7 +50,7 @@ class OperationalInstruction extends AbstractStructBase
     /**
      * Set Number value
      * @param int $number
-     * @return \CommerceFedEx\FedExPHP\Structs\OperationalInstruction
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction
      */
     public function setNumber($number = null)
     {
@@ -72,7 +72,7 @@ class OperationalInstruction extends AbstractStructBase
     /**
      * Set Content value
      * @param string $content
-     * @return \CommerceFedEx\FedExPHP\Structs\OperationalInstruction
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction
      */
     public function setContent($content = null)
     {
@@ -89,7 +89,7 @@ class OperationalInstruction extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\OperationalInstruction
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OperationalInstruction
      */
     public static function __set_state(array $array)
     {

@@ -46,7 +46,7 @@ class RequestedDistributionLocation extends AbstractStructBase
      * The LocationContactAndAddress
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
      */
     public $LocationContactAndAddress;
     /**
@@ -63,7 +63,7 @@ class RequestedDistributionLocation extends AbstractStructBase
      * - documentation: Specifies which kinds of shipments will be processed by this distribution location.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification[]
      */
     public $InclusionSpecifications;
     /**
@@ -79,11 +79,11 @@ class RequestedDistributionLocation extends AbstractStructBase
      * @param string $type
      * @param string $locationId
      * @param int $locationNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress
      * @param string $clearanceNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification[] $inclusionSpecifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification[] $inclusionSpecifications
      */
-    public function __construct($id = null, $type = null, $locationId = null, $locationNumber = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null, $clearanceNumber = null, array $inclusionSpecifications = array())
+    public function __construct($id = null, $type = null, $locationId = null, $locationNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null, $clearanceNumber = null, array $inclusionSpecifications = array())
     {
         $this
             ->setId($id)
@@ -105,7 +105,7 @@ class RequestedDistributionLocation extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation
      */
     public function setId($id = null)
     {
@@ -126,17 +126,17 @@ class RequestedDistributionLocation extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\FedExDistributionLocationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\FedExDistributionLocationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExDistributionLocationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExDistributionLocationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\FedExDistributionLocationType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\FedExDistributionLocationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\FedExDistributionLocationType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FedExDistributionLocationType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -152,7 +152,7 @@ class RequestedDistributionLocation extends AbstractStructBase
     /**
      * Set LocationId value
      * @param string $locationId
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation
      */
     public function setLocationId($locationId = null)
     {
@@ -174,7 +174,7 @@ class RequestedDistributionLocation extends AbstractStructBase
     /**
      * Set LocationNumber value
      * @param int $locationNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation
      */
     public function setLocationNumber($locationNumber = null)
     {
@@ -187,7 +187,7 @@ class RequestedDistributionLocation extends AbstractStructBase
     }
     /**
      * Get LocationContactAndAddress value
-     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getLocationContactAndAddress()
     {
@@ -195,10 +195,10 @@ class RequestedDistributionLocation extends AbstractStructBase
     }
     /**
      * Set LocationContactAndAddress value
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation
      */
-    public function setLocationContactAndAddress(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null)
+    public function setLocationContactAndAddress(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $locationContactAndAddress = null)
     {
         $this->LocationContactAndAddress = $locationContactAndAddress;
         return $this;
@@ -214,7 +214,7 @@ class RequestedDistributionLocation extends AbstractStructBase
     /**
      * Set ClearanceNumber value
      * @param string $clearanceNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation
      */
     public function setClearanceNumber($clearanceNumber = null)
     {
@@ -227,7 +227,7 @@ class RequestedDistributionLocation extends AbstractStructBase
     }
     /**
      * Get InclusionSpecifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification[]|null
      */
     public function getInclusionSpecifications()
     {
@@ -236,15 +236,15 @@ class RequestedDistributionLocation extends AbstractStructBase
     /**
      * Set InclusionSpecifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification[] $inclusionSpecifications
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification[] $inclusionSpecifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation
      */
     public function setInclusionSpecifications(array $inclusionSpecifications = array())
     {
         foreach ($inclusionSpecifications as $requestedDistributionLocationInclusionSpecificationsItem) {
             // validation for constraint: itemType
-            if (!$requestedDistributionLocationInclusionSpecificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification) {
-                throw new \InvalidArgumentException(sprintf('The InclusionSpecifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification, "%s" given', is_object($requestedDistributionLocationInclusionSpecificationsItem) ? get_class($requestedDistributionLocationInclusionSpecificationsItem) : gettype($requestedDistributionLocationInclusionSpecificationsItem)), __LINE__);
+            if (!$requestedDistributionLocationInclusionSpecificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification) {
+                throw new \InvalidArgumentException(sprintf('The InclusionSpecifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification, "%s" given', is_object($requestedDistributionLocationInclusionSpecificationsItem) ? get_class($requestedDistributionLocationInclusionSpecificationsItem) : gettype($requestedDistributionLocationInclusionSpecificationsItem)), __LINE__);
             }
         }
         $this->InclusionSpecifications = $inclusionSpecifications;
@@ -253,14 +253,14 @@ class RequestedDistributionLocation extends AbstractStructBase
     /**
      * Add item to InclusionSpecifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation
      */
-    public function addToInclusionSpecifications(\CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification $item)
+    public function addToInclusionSpecifications(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification) {
-            throw new \InvalidArgumentException(sprintf('The InclusionSpecifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShipmentInclusionSpecification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification) {
+            throw new \InvalidArgumentException(sprintf('The InclusionSpecifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInclusionSpecification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->InclusionSpecifications[] = $item;
         return $this;
@@ -271,7 +271,7 @@ class RequestedDistributionLocation extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation
      */
     public static function __set_state(array $array)
     {

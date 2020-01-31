@@ -11,15 +11,30 @@ namespace NicholasCreativeMedia\FedExPHP\Enums;
 class ShippingDocumentImageType
 {
     /**
+     * Constant for value 'DIB'
+     * @return string 'DIB'
+     */
+    const VALUE_DIB = 'DIB';
+    /**
      * Constant for value 'DOC'
      * @return string 'DOC'
      */
     const VALUE_DOC = 'DOC';
     /**
+     * Constant for value 'DPL'
+     * @return string 'DPL'
+     */
+    const VALUE_DPL = 'DPL';
+    /**
      * Constant for value 'EPL2'
      * @return string 'EPL2'
      */
     const VALUE_EPL_2 = 'EPL2';
+    /**
+     * Constant for value 'GIF'
+     * @return string 'GIF'
+     */
+    const VALUE_GIF = 'GIF';
     /**
      * Constant for value 'PDF'
      * @return string 'PDF'
@@ -57,8 +72,11 @@ class ShippingDocumentImageType
     }
     /**
      * Return allowed values
+     * @uses self::VALUE_DIB
      * @uses self::VALUE_DOC
+     * @uses self::VALUE_DPL
      * @uses self::VALUE_EPL_2
+     * @uses self::VALUE_GIF
      * @uses self::VALUE_PDF
      * @uses self::VALUE_PNG
      * @uses self::VALUE_RTF
@@ -69,8 +87,11 @@ class ShippingDocumentImageType
     public static function getValidValues()
     {
         return array(
+            self::VALUE_DIB,
             self::VALUE_DOC,
+            self::VALUE_DPL,
             self::VALUE_EPL_2,
+            self::VALUE_GIF,
             self::VALUE_PDF,
             self::VALUE_PNG,
             self::VALUE_RTF,

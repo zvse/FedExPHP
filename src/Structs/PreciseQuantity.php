@@ -48,7 +48,7 @@ class PreciseQuantity extends AbstractStructBase
     /**
      * Set Amount value
      * @param float $amount
-     * @return \CommerceFedEx\FedExPHP\Structs\PreciseQuantity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PreciseQuantity
      */
     public function setAmount($amount = null)
     {
@@ -66,7 +66,7 @@ class PreciseQuantity extends AbstractStructBase
     /**
      * Set Units value
      * @param string $units
-     * @return \CommerceFedEx\FedExPHP\Structs\PreciseQuantity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PreciseQuantity
      */
     public function setUnits($units = null)
     {
@@ -83,7 +83,7 @@ class PreciseQuantity extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PreciseQuantity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PreciseQuantity
      */
     public static function __set_state(array $array)
     {

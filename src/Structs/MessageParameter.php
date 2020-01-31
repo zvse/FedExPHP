@@ -48,7 +48,7 @@ class MessageParameter extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\MessageParameter
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter
      */
     public function setId($id = null)
     {
@@ -70,7 +70,7 @@ class MessageParameter extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \CommerceFedEx\FedExPHP\Structs\MessageParameter
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter
      */
     public function setValue($value = null)
     {
@@ -87,7 +87,7 @@ class MessageParameter extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\MessageParameter
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter
      */
     public static function __set_state(array $array)
     {

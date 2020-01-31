@@ -23,7 +23,7 @@ class DocumentRequirementsDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail[]
      */
     public $GenerationDetails;
     /**
@@ -41,7 +41,7 @@ class DocumentRequirementsDetail extends AbstractStructBase
      * @uses DocumentRequirementsDetail::setGenerationDetails()
      * @uses DocumentRequirementsDetail::setProhibitedDocuments()
      * @param string[] $requiredDocuments
-     * @param \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail[] $generationDetails
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail[] $generationDetails
      * @param string[] $prohibitedDocuments
      */
     public function __construct(array $requiredDocuments = array(), array $generationDetails = array(), array $prohibitedDocuments = array())
@@ -61,46 +61,46 @@ class DocumentRequirementsDetail extends AbstractStructBase
     }
     /**
      * Set RequiredDocuments value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequiredDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequiredDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequiredDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequiredDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $requiredDocuments
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentRequirementsDetail
      */
     public function setRequiredDocuments(array $requiredDocuments = array())
     {
         $invalidValues = array();
         foreach ($requiredDocuments as $documentRequirementsDetailRequiredDocumentsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\RequiredDocumentType::valueIsValid($documentRequirementsDetailRequiredDocumentsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\RequiredDocumentType::valueIsValid($documentRequirementsDetailRequiredDocumentsItem)) {
                 $invalidValues[] = var_export($documentRequirementsDetailRequiredDocumentsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RequiredDocumentType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequiredDocumentType::getValidValues())), __LINE__);
         }
         $this->RequiredDocuments = $requiredDocuments;
         return $this;
     }
     /**
      * Add item to RequiredDocuments value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequiredDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequiredDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequiredDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequiredDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentRequirementsDetail
      */
     public function addToRequiredDocuments($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RequiredDocumentType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RequiredDocumentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RequiredDocumentType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequiredDocumentType::getValidValues())), __LINE__);
         }
         $this->RequiredDocuments[] = $item;
         return $this;
     }
     /**
      * Get GenerationDetails value
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail[]|null
      */
     public function getGenerationDetails()
     {
@@ -109,15 +109,15 @@ class DocumentRequirementsDetail extends AbstractStructBase
     /**
      * Set GenerationDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail[] $generationDetails
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail[] $generationDetails
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentRequirementsDetail
      */
     public function setGenerationDetails(array $generationDetails = array())
     {
         foreach ($generationDetails as $documentRequirementsDetailGenerationDetailsItem) {
             // validation for constraint: itemType
-            if (!$documentRequirementsDetailGenerationDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail) {
-                throw new \InvalidArgumentException(sprintf('The GenerationDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail, "%s" given', is_object($documentRequirementsDetailGenerationDetailsItem) ? get_class($documentRequirementsDetailGenerationDetailsItem) : gettype($documentRequirementsDetailGenerationDetailsItem)), __LINE__);
+            if (!$documentRequirementsDetailGenerationDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail) {
+                throw new \InvalidArgumentException(sprintf('The GenerationDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail, "%s" given', is_object($documentRequirementsDetailGenerationDetailsItem) ? get_class($documentRequirementsDetailGenerationDetailsItem) : gettype($documentRequirementsDetailGenerationDetailsItem)), __LINE__);
             }
         }
         $this->GenerationDetails = $generationDetails;
@@ -126,14 +126,14 @@ class DocumentRequirementsDetail extends AbstractStructBase
     /**
      * Add item to GenerationDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentRequirementsDetail
      */
-    public function addToGenerationDetails(\CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail $item)
+    public function addToGenerationDetails(\NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail) {
-            throw new \InvalidArgumentException(sprintf('The GenerationDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\DocumentGenerationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail) {
+            throw new \InvalidArgumentException(sprintf('The GenerationDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\DocumentGenerationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->GenerationDetails[] = $item;
         return $this;
@@ -148,39 +148,39 @@ class DocumentRequirementsDetail extends AbstractStructBase
     }
     /**
      * Set ProhibitedDocuments value
-     * @uses \CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $prohibitedDocuments
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentRequirementsDetail
      */
     public function setProhibitedDocuments(array $prohibitedDocuments = array())
     {
         $invalidValues = array();
         foreach ($prohibitedDocuments as $documentRequirementsDetailProhibitedDocumentsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid($documentRequirementsDetailProhibitedDocumentsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid($documentRequirementsDetailProhibitedDocumentsItem)) {
                 $invalidValues[] = var_export($documentRequirementsDetailProhibitedDocumentsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::getValidValues())), __LINE__);
         }
         $this->ProhibitedDocuments = $prohibitedDocuments;
         return $this;
     }
     /**
      * Add item to ProhibitedDocuments value
-     * @uses \CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentRequirementsDetail
      */
     public function addToProhibitedDocuments($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\EnterpriseDocumentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EnterpriseDocumentType::getValidValues())), __LINE__);
         }
         $this->ProhibitedDocuments[] = $item;
         return $this;
@@ -191,7 +191,7 @@ class DocumentRequirementsDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentRequirementsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentRequirementsDetail
      */
     public static function __set_state(array $array)
     {

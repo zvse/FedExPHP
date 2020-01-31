@@ -21,6 +21,11 @@ class BatteryPackingType
      */
     const VALUE_PACKED_WITH_EQUIPMENT = 'PACKED_WITH_EQUIPMENT';
     /**
+     * Constant for value 'UNKNOWN'
+     * @return string 'UNKNOWN'
+     */
+    const VALUE_UNKNOWN = 'UNKNOWN';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -34,6 +39,7 @@ class BatteryPackingType
      * Return allowed values
      * @uses self::VALUE_CONTAINED_IN_EQUIPMENT
      * @uses self::VALUE_PACKED_WITH_EQUIPMENT
+     * @uses self::VALUE_UNKNOWN
      * @return string[]
      */
     public static function getValidValues()
@@ -41,6 +47,7 @@ class BatteryPackingType
         return array(
             self::VALUE_CONTAINED_IN_EQUIPMENT,
             self::VALUE_PACKED_WITH_EQUIPMENT,
+            self::VALUE_UNKNOWN,
         );
     }
     /**

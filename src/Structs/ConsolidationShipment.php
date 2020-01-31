@@ -25,7 +25,7 @@ class ConsolidationShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains requested shipment data for a single shipment role in the consolidation.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RequestedShipment
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment
      */
     public $RequestedShipment;
     /**
@@ -33,7 +33,7 @@ class ConsolidationShipment extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains completed shipment data for a single shipment role in the consolidation.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail
      */
     public $CompletedShipmentDetail;
     /**
@@ -42,10 +42,10 @@ class ConsolidationShipment extends AbstractStructBase
      * @uses ConsolidationShipment::setRequestedShipment()
      * @uses ConsolidationShipment::setCompletedShipmentDetail()
      * @param string $shipmentRoleType
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedShipment $requestedShipment
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment $requestedShipment
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail
      */
-    public function __construct($shipmentRoleType = null, \CommerceFedEx\FedExPHP\Structs\RequestedShipment $requestedShipment = null, \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null)
+    public function __construct($shipmentRoleType = null, \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment $requestedShipment = null, \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null)
     {
         $this
             ->setShipmentRoleType($shipmentRoleType)
@@ -62,24 +62,24 @@ class ConsolidationShipment extends AbstractStructBase
     }
     /**
      * Set ShipmentRoleType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $shipmentRoleType
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment
      */
     public function setShipmentRoleType($shipmentRoleType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid($shipmentRoleType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $shipmentRoleType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::valueIsValid($shipmentRoleType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $shipmentRoleType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationShipmentRoleType::getValidValues())), __LINE__);
         }
         $this->ShipmentRoleType = $shipmentRoleType;
         return $this;
     }
     /**
      * Get RequestedShipment value
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedShipment|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment|null
      */
     public function getRequestedShipment()
     {
@@ -87,17 +87,17 @@ class ConsolidationShipment extends AbstractStructBase
     }
     /**
      * Set RequestedShipment value
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedShipment $requestedShipment
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment $requestedShipment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment
      */
-    public function setRequestedShipment(\CommerceFedEx\FedExPHP\Structs\RequestedShipment $requestedShipment = null)
+    public function setRequestedShipment(\NicholasCreativeMedia\FedExPHP\Structs\RequestedShipment $requestedShipment = null)
     {
         $this->RequestedShipment = $requestedShipment;
         return $this;
     }
     /**
      * Get CompletedShipmentDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail|null
      */
     public function getCompletedShipmentDetail()
     {
@@ -105,10 +105,10 @@ class ConsolidationShipment extends AbstractStructBase
     }
     /**
      * Set CompletedShipmentDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment
      */
-    public function setCompletedShipmentDetail(\CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null)
+    public function setCompletedShipmentDetail(\NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null)
     {
         $this->CompletedShipmentDetail = $completedShipmentDetail;
         return $this;
@@ -119,7 +119,7 @@ class ConsolidationShipment extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment
      */
     public static function __set_state(array $array)
     {

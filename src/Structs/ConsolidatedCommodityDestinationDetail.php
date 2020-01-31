@@ -58,7 +58,7 @@ class ConsolidatedCommodityDestinationDetail extends AbstractStructBase
     /**
      * Set CountryCode value
      * @param string $countryCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
      */
     public function setCountryCode($countryCode = null)
     {
@@ -80,7 +80,7 @@ class ConsolidatedCommodityDestinationDetail extends AbstractStructBase
     /**
      * Set StateOrProvinceCode value
      * @param string $stateOrProvinceCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
      */
     public function setStateOrProvinceCode($stateOrProvinceCode = null)
     {
@@ -102,7 +102,7 @@ class ConsolidatedCommodityDestinationDetail extends AbstractStructBase
     /**
      * Set Residential value
      * @param bool $residential
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
      */
     public function setResidential($residential = null)
     {
@@ -115,7 +115,7 @@ class ConsolidatedCommodityDestinationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
      */
     public static function __set_state(array $array)
     {

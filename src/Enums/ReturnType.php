@@ -14,6 +14,11 @@ class ReturnType
      */
     const VALUE_FEDEX_TAG = 'FEDEX_TAG';
     /**
+     * Constant for value 'NET_RETURN'
+     * @return string 'NET_RETURN'
+     */
+    const VALUE_NET_RETURN = 'NET_RETURN';
+    /**
      * Constant for value 'PENDING'
      * @return string 'PENDING'
      */
@@ -23,6 +28,11 @@ class ReturnType
      * @return string 'PRINT_RETURN_LABEL'
      */
     const VALUE_PRINT_RETURN_LABEL = 'PRINT_RETURN_LABEL';
+    /**
+     * Constant for value 'VOICE_CALL_TAG'
+     * @return string 'VOICE_CALL_TAG'
+     */
+    const VALUE_VOICE_CALL_TAG = 'VOICE_CALL_TAG';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -36,16 +46,20 @@ class ReturnType
     /**
      * Return allowed values
      * @uses self::VALUE_FEDEX_TAG
+     * @uses self::VALUE_NET_RETURN
      * @uses self::VALUE_PENDING
      * @uses self::VALUE_PRINT_RETURN_LABEL
+     * @uses self::VALUE_VOICE_CALL_TAG
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
             self::VALUE_FEDEX_TAG,
+            self::VALUE_NET_RETURN,
             self::VALUE_PENDING,
             self::VALUE_PRINT_RETURN_LABEL,
+            self::VALUE_VOICE_CALL_TAG,
         );
     }
     /**

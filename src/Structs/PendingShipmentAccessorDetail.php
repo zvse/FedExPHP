@@ -70,17 +70,17 @@ class PendingShipmentAccessorDetail extends AbstractStructBase
     }
     /**
      * Set Role value
-     * @uses \CommerceFedEx\FedExPHP\Enums\AccessorRoleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\AccessorRoleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AccessorRoleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AccessorRoleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $role
-     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail
      */
     public function setRole($role = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\AccessorRoleType::valueIsValid($role)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \CommerceFedEx\FedExPHP\Enums\AccessorRoleType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\AccessorRoleType::valueIsValid($role)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AccessorRoleType::getValidValues())), __LINE__);
         }
         $this->Role = $role;
         return $this;
@@ -96,7 +96,7 @@ class PendingShipmentAccessorDetail extends AbstractStructBase
     /**
      * Set UserId value
      * @param string $userId
-     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail
      */
     public function setUserId($userId = null)
     {
@@ -118,7 +118,7 @@ class PendingShipmentAccessorDetail extends AbstractStructBase
     /**
      * Set Password value
      * @param string $password
-     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail
      */
     public function setPassword($password = null)
     {
@@ -140,7 +140,7 @@ class PendingShipmentAccessorDetail extends AbstractStructBase
     /**
      * Set EmailLabelUrl value
      * @param string $emailLabelUrl
-     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail
      */
     public function setEmailLabelUrl($emailLabelUrl = null)
     {
@@ -157,7 +157,7 @@ class PendingShipmentAccessorDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail
      */
     public static function __set_state(array $array)
     {

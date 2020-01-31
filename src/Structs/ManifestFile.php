@@ -48,7 +48,7 @@ class ManifestFile extends AbstractStructBase
     /**
      * Set FileName value
      * @param string $fileName
-     * @return \CommerceFedEx\FedExPHP\Structs\ManifestFile
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ManifestFile
      */
     public function setFileName($fileName = null)
     {
@@ -70,7 +70,7 @@ class ManifestFile extends AbstractStructBase
     /**
      * Set File value
      * @param string $file
-     * @return \CommerceFedEx\FedExPHP\Structs\ManifestFile
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ManifestFile
      */
     public function setFile($file = null)
     {
@@ -87,7 +87,7 @@ class ManifestFile extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ManifestFile
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ManifestFile
      */
     public static function __set_state(array $array)
     {

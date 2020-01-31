@@ -16,7 +16,7 @@ class ParsedContact extends AbstractStructBase
      * The PersonName
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ParsedPersonName
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName
      */
     public $PersonName;
     /**
@@ -96,7 +96,7 @@ class ParsedContact extends AbstractStructBase
      * @uses ParsedContact::setPagerNumber()
      * @uses ParsedContact::setFaxNumber()
      * @uses ParsedContact::setEMailAddress()
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedPersonName $personName
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName $personName
      * @param string $title
      * @param string $companyName
      * @param string $phoneNumberCountryCode
@@ -107,7 +107,7 @@ class ParsedContact extends AbstractStructBase
      * @param string $faxNumber
      * @param string $eMailAddress
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ParsedPersonName $personName = null, $title = null, $companyName = null, $phoneNumberCountryCode = null, $phoneNumberAreaCode = null, $phoneNumber = null, $phoneExtension = null, $pagerNumber = null, $faxNumber = null, $eMailAddress = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName $personName = null, $title = null, $companyName = null, $phoneNumberCountryCode = null, $phoneNumberAreaCode = null, $phoneNumber = null, $phoneExtension = null, $pagerNumber = null, $faxNumber = null, $eMailAddress = null)
     {
         $this
             ->setPersonName($personName)
@@ -123,7 +123,7 @@ class ParsedContact extends AbstractStructBase
     }
     /**
      * Get PersonName value
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPersonName|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName|null
      */
     public function getPersonName()
     {
@@ -131,10 +131,10 @@ class ParsedContact extends AbstractStructBase
     }
     /**
      * Set PersonName value
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedPersonName $personName
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName $personName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
-    public function setPersonName(\CommerceFedEx\FedExPHP\Structs\ParsedPersonName $personName = null)
+    public function setPersonName(\NicholasCreativeMedia\FedExPHP\Structs\ParsedPersonName $personName = null)
     {
         $this->PersonName = $personName;
         return $this;
@@ -150,7 +150,7 @@ class ParsedContact extends AbstractStructBase
     /**
      * Set Title value
      * @param string $title
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public function setTitle($title = null)
     {
@@ -172,7 +172,7 @@ class ParsedContact extends AbstractStructBase
     /**
      * Set CompanyName value
      * @param string $companyName
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public function setCompanyName($companyName = null)
     {
@@ -194,7 +194,7 @@ class ParsedContact extends AbstractStructBase
     /**
      * Set PhoneNumberCountryCode value
      * @param string $phoneNumberCountryCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public function setPhoneNumberCountryCode($phoneNumberCountryCode = null)
     {
@@ -216,7 +216,7 @@ class ParsedContact extends AbstractStructBase
     /**
      * Set PhoneNumberAreaCode value
      * @param string $phoneNumberAreaCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public function setPhoneNumberAreaCode($phoneNumberAreaCode = null)
     {
@@ -238,7 +238,7 @@ class ParsedContact extends AbstractStructBase
     /**
      * Set PhoneNumber value
      * @param string $phoneNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public function setPhoneNumber($phoneNumber = null)
     {
@@ -260,7 +260,7 @@ class ParsedContact extends AbstractStructBase
     /**
      * Set PhoneExtension value
      * @param string $phoneExtension
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public function setPhoneExtension($phoneExtension = null)
     {
@@ -282,7 +282,7 @@ class ParsedContact extends AbstractStructBase
     /**
      * Set PagerNumber value
      * @param string $pagerNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public function setPagerNumber($pagerNumber = null)
     {
@@ -304,7 +304,7 @@ class ParsedContact extends AbstractStructBase
     /**
      * Set FaxNumber value
      * @param string $faxNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public function setFaxNumber($faxNumber = null)
     {
@@ -326,7 +326,7 @@ class ParsedContact extends AbstractStructBase
     /**
      * Set EMailAddress value
      * @param string $eMailAddress
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public function setEMailAddress($eMailAddress = null)
     {
@@ -343,7 +343,7 @@ class ParsedContact extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public static function __set_state(array $array)
     {

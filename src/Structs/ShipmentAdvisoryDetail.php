@@ -15,13 +15,13 @@ class ShipmentAdvisoryDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail[]
      */
     public $RegulatoryAdvisories;
     /**
      * Constructor method for ShipmentAdvisoryDetail
      * @uses ShipmentAdvisoryDetail::setRegulatoryAdvisories()
-     * @param \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail[] $regulatoryAdvisories
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail[] $regulatoryAdvisories
      */
     public function __construct(array $regulatoryAdvisories = array())
     {
@@ -30,7 +30,7 @@ class ShipmentAdvisoryDetail extends AbstractStructBase
     }
     /**
      * Get RegulatoryAdvisories value
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail[]|null
      */
     public function getRegulatoryAdvisories()
     {
@@ -39,15 +39,15 @@ class ShipmentAdvisoryDetail extends AbstractStructBase
     /**
      * Set RegulatoryAdvisories value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail[] $regulatoryAdvisories
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail[] $regulatoryAdvisories
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAdvisoryDetail
      */
     public function setRegulatoryAdvisories(array $regulatoryAdvisories = array())
     {
         foreach ($regulatoryAdvisories as $shipmentAdvisoryDetailRegulatoryAdvisoriesItem) {
             // validation for constraint: itemType
-            if (!$shipmentAdvisoryDetailRegulatoryAdvisoriesItem instanceof \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail) {
-                throw new \InvalidArgumentException(sprintf('The RegulatoryAdvisories property can only contain items of \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail, "%s" given', is_object($shipmentAdvisoryDetailRegulatoryAdvisoriesItem) ? get_class($shipmentAdvisoryDetailRegulatoryAdvisoriesItem) : gettype($shipmentAdvisoryDetailRegulatoryAdvisoriesItem)), __LINE__);
+            if (!$shipmentAdvisoryDetailRegulatoryAdvisoriesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail) {
+                throw new \InvalidArgumentException(sprintf('The RegulatoryAdvisories property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail, "%s" given', is_object($shipmentAdvisoryDetailRegulatoryAdvisoriesItem) ? get_class($shipmentAdvisoryDetailRegulatoryAdvisoriesItem) : gettype($shipmentAdvisoryDetailRegulatoryAdvisoriesItem)), __LINE__);
             }
         }
         $this->RegulatoryAdvisories = $regulatoryAdvisories;
@@ -56,14 +56,14 @@ class ShipmentAdvisoryDetail extends AbstractStructBase
     /**
      * Add item to RegulatoryAdvisories value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAdvisoryDetail
      */
-    public function addToRegulatoryAdvisories(\CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail $item)
+    public function addToRegulatoryAdvisories(\NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail) {
-            throw new \InvalidArgumentException(sprintf('The RegulatoryAdvisories property can only contain items of \CommerceFedEx\FedExPHP\Structs\RegulatoryAdvisoryDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail) {
+            throw new \InvalidArgumentException(sprintf('The RegulatoryAdvisories property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryAdvisoryDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->RegulatoryAdvisories[] = $item;
         return $this;
@@ -74,7 +74,7 @@ class ShipmentAdvisoryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAdvisoryDetail
      */
     public static function __set_state(array $array)
     {

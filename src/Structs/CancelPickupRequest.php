@@ -17,28 +17,28 @@ class CancelPickupRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -88,7 +88,7 @@ class CancelPickupRequest extends AbstractStructBase
      * The ShippingChargesPayment
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Payment
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payment
      */
     public $ShippingChargesPayment;
     /**
@@ -140,23 +140,23 @@ class CancelPickupRequest extends AbstractStructBase
      * @uses CancelPickupRequest::setContactName()
      * @uses CancelPickupRequest::setPhoneNumber()
      * @uses CancelPickupRequest::setPhoneExtension()
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $carrierCode
      * @param string $pickupConfirmationNumber
      * @param string $scheduledDate
      * @param string $endDate
      * @param string $location
      * @param string $remarks
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment
      * @param string $reason
      * @param string $contactName
      * @param string $phoneNumber
      * @param string $phoneExtension
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $carrierCode = null, $pickupConfirmationNumber = null, $scheduledDate = null, $endDate = null, $location = null, $remarks = null, \CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment = null, $reason = null, $contactName = null, $phoneNumber = null, $phoneExtension = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $carrierCode = null, $pickupConfirmationNumber = null, $scheduledDate = null, $endDate = null, $location = null, $remarks = null, \NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment = null, $reason = null, $contactName = null, $phoneNumber = null, $phoneExtension = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -177,7 +177,7 @@ class CancelPickupRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -185,17 +185,17 @@ class CancelPickupRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
-    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -203,17 +203,17 @@ class CancelPickupRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
-    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -221,17 +221,17 @@ class CancelPickupRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -239,10 +239,10 @@ class CancelPickupRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -257,17 +257,17 @@ class CancelPickupRequest extends AbstractStructBase
     }
     /**
      * Set CarrierCode value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrierCode
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setCarrierCode($carrierCode = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->CarrierCode = $carrierCode;
         return $this;
@@ -283,7 +283,7 @@ class CancelPickupRequest extends AbstractStructBase
     /**
      * Set PickupConfirmationNumber value
      * @param string $pickupConfirmationNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setPickupConfirmationNumber($pickupConfirmationNumber = null)
     {
@@ -305,7 +305,7 @@ class CancelPickupRequest extends AbstractStructBase
     /**
      * Set ScheduledDate value
      * @param string $scheduledDate
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setScheduledDate($scheduledDate = null)
     {
@@ -327,7 +327,7 @@ class CancelPickupRequest extends AbstractStructBase
     /**
      * Set EndDate value
      * @param string $endDate
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setEndDate($endDate = null)
     {
@@ -349,7 +349,7 @@ class CancelPickupRequest extends AbstractStructBase
     /**
      * Set Location value
      * @param string $location
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setLocation($location = null)
     {
@@ -371,7 +371,7 @@ class CancelPickupRequest extends AbstractStructBase
     /**
      * Set Remarks value
      * @param string $remarks
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setRemarks($remarks = null)
     {
@@ -384,7 +384,7 @@ class CancelPickupRequest extends AbstractStructBase
     }
     /**
      * Get ShippingChargesPayment value
-     * @return \CommerceFedEx\FedExPHP\Structs\Payment|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment|null
      */
     public function getShippingChargesPayment()
     {
@@ -392,10 +392,10 @@ class CancelPickupRequest extends AbstractStructBase
     }
     /**
      * Set ShippingChargesPayment value
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
-    public function setShippingChargesPayment(\CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment = null)
+    public function setShippingChargesPayment(\NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment = null)
     {
         $this->ShippingChargesPayment = $shippingChargesPayment;
         return $this;
@@ -411,7 +411,7 @@ class CancelPickupRequest extends AbstractStructBase
     /**
      * Set Reason value
      * @param string $reason
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setReason($reason = null)
     {
@@ -433,7 +433,7 @@ class CancelPickupRequest extends AbstractStructBase
     /**
      * Set ContactName value
      * @param string $contactName
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setContactName($contactName = null)
     {
@@ -455,7 +455,7 @@ class CancelPickupRequest extends AbstractStructBase
     /**
      * Set PhoneNumber value
      * @param string $phoneNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setPhoneNumber($phoneNumber = null)
     {
@@ -477,7 +477,7 @@ class CancelPickupRequest extends AbstractStructBase
     /**
      * Set PhoneExtension value
      * @param string $phoneExtension
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public function setPhoneExtension($phoneExtension = null)
     {
@@ -494,7 +494,7 @@ class CancelPickupRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CancelPickupRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CancelPickupRequest
      */
     public static function __set_state(array $array)
     {

@@ -40,17 +40,17 @@ class WeighingDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\WeighingScaleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\WeighingScaleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\WeighingScaleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\WeighingScaleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\WeighingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WeighingDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\WeighingScaleType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\WeighingScaleType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\WeighingScaleType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\WeighingScaleType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -61,7 +61,7 @@ class WeighingDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\WeighingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WeighingDetail
      */
     public static function __set_state(array $array)
     {

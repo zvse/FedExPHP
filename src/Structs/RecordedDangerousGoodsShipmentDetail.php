@@ -14,24 +14,24 @@ class RecordedDangerousGoodsShipmentDetail extends AbstractStructBase
      * The UploadedShipmentDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public $UploadedShipmentDetail;
     /**
      * The CompletedShipmentDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public $CompletedShipmentDetail;
     /**
      * Constructor method for RecordedDangerousGoodsShipmentDetail
      * @uses RecordedDangerousGoodsShipmentDetail::setUploadedShipmentDetail()
      * @uses RecordedDangerousGoodsShipmentDetail::setCompletedShipmentDetail()
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail $uploadedShipmentDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail $uploadedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail $uploadedShipmentDetail = null, \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail $uploadedShipmentDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail = null)
     {
         $this
             ->setUploadedShipmentDetail($uploadedShipmentDetail)
@@ -39,7 +39,7 @@ class RecordedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Get UploadedShipmentDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail|null
      */
     public function getUploadedShipmentDetail()
     {
@@ -47,17 +47,17 @@ class RecordedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set UploadedShipmentDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail $uploadedShipmentDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RecordedDangerousGoodsShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail $uploadedShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecordedDangerousGoodsShipmentDetail
      */
-    public function setUploadedShipmentDetail(\CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail $uploadedShipmentDetail = null)
+    public function setUploadedShipmentDetail(\NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail $uploadedShipmentDetail = null)
     {
         $this->UploadedShipmentDetail = $uploadedShipmentDetail;
         return $this;
     }
     /**
      * Get CompletedShipmentDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail|null
      */
     public function getCompletedShipmentDetail()
     {
@@ -65,10 +65,10 @@ class RecordedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set CompletedShipmentDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RecordedDangerousGoodsShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecordedDangerousGoodsShipmentDetail
      */
-    public function setCompletedShipmentDetail(\CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail = null)
+    public function setCompletedShipmentDetail(\NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail = null)
     {
         $this->CompletedShipmentDetail = $completedShipmentDetail;
         return $this;
@@ -79,7 +79,7 @@ class RecordedDangerousGoodsShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RecordedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RecordedDangerousGoodsShipmentDetail
      */
     public static function __set_state(array $array)
     {

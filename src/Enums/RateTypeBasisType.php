@@ -16,6 +16,21 @@ class RateTypeBasisType
      */
     const VALUE_ACCOUNT = 'ACCOUNT';
     /**
+     * Constant for value 'ACTUAL'
+     * @return string 'ACTUAL'
+     */
+    const VALUE_ACTUAL = 'ACTUAL';
+    /**
+     * Constant for value 'CURRENT'
+     * @return string 'CURRENT'
+     */
+    const VALUE_CURRENT = 'CURRENT';
+    /**
+     * Constant for value 'CUSTOM'
+     * @return string 'CUSTOM'
+     */
+    const VALUE_CUSTOM = 'CUSTOM';
+    /**
      * Constant for value 'LIST'
      * @return string 'LIST'
      */
@@ -33,6 +48,9 @@ class RateTypeBasisType
     /**
      * Return allowed values
      * @uses self::VALUE_ACCOUNT
+     * @uses self::VALUE_ACTUAL
+     * @uses self::VALUE_CURRENT
+     * @uses self::VALUE_CUSTOM
      * @uses self::VALUE_LIST
      * @return string[]
      */
@@ -40,6 +58,9 @@ class RateTypeBasisType
     {
         return array(
             self::VALUE_ACCOUNT,
+            self::VALUE_ACTUAL,
+            self::VALUE_CURRENT,
+            self::VALUE_CUSTOM,
             self::VALUE_LIST,
         );
     }

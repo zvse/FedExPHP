@@ -24,7 +24,7 @@ class TrackingNumberUnit extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]
      */
     public $TrackingIds;
     /**
@@ -32,7 +32,7 @@ class TrackingNumberUnit extends AbstractStructBase
      * @uses TrackingNumberUnit::setSequenceNumber()
      * @uses TrackingNumberUnit::setTrackingIds()
      * @param int $sequenceNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
      */
     public function __construct($sequenceNumber = null, array $trackingIds = array())
     {
@@ -51,7 +51,7 @@ class TrackingNumberUnit extends AbstractStructBase
     /**
      * Set SequenceNumber value
      * @param int $sequenceNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingNumberUnit
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingNumberUnit
      */
     public function setSequenceNumber($sequenceNumber = null)
     {
@@ -64,7 +64,7 @@ class TrackingNumberUnit extends AbstractStructBase
     }
     /**
      * Get TrackingIds value
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]|null
      */
     public function getTrackingIds()
     {
@@ -73,15 +73,15 @@ class TrackingNumberUnit extends AbstractStructBase
     /**
      * Set TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingNumberUnit
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingNumberUnit
      */
     public function setTrackingIds(array $trackingIds = array())
     {
         foreach ($trackingIds as $trackingNumberUnitTrackingIdsItem) {
             // validation for constraint: itemType
-            if (!$trackingNumberUnitTrackingIdsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
-                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($trackingNumberUnitTrackingIdsItem) ? get_class($trackingNumberUnitTrackingIdsItem) : gettype($trackingNumberUnitTrackingIdsItem)), __LINE__);
+            if (!$trackingNumberUnitTrackingIdsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
+                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($trackingNumberUnitTrackingIdsItem) ? get_class($trackingNumberUnitTrackingIdsItem) : gettype($trackingNumberUnitTrackingIdsItem)), __LINE__);
             }
         }
         $this->TrackingIds = $trackingIds;
@@ -90,14 +90,14 @@ class TrackingNumberUnit extends AbstractStructBase
     /**
      * Add item to TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $item
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingNumberUnit
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingNumberUnit
      */
-    public function addToTrackingIds(\CommerceFedEx\FedExPHP\Structs\TrackingId $item)
+    public function addToTrackingIds(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
-            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
+            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->TrackingIds[] = $item;
         return $this;
@@ -108,7 +108,7 @@ class TrackingNumberUnit extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingNumberUnit
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingNumberUnit
      */
     public static function __set_state(array $array)
     {

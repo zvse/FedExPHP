@@ -14,24 +14,24 @@ class ConsolidatedCommodity extends AbstractStructBase
      * The DestinationDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail
      */
     public $DestinationDetail;
     /**
      * The Commodity
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Commodity
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Commodity
      */
     public $Commodity;
     /**
      * Constructor method for ConsolidatedCommodity
      * @uses ConsolidatedCommodity::setDestinationDetail()
      * @uses ConsolidatedCommodity::setCommodity()
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail $destinationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\Commodity $commodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail $destinationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity $commodity
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail $destinationDetail = null, \CommerceFedEx\FedExPHP\Structs\Commodity $commodity = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail $destinationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\Commodity $commodity = null)
     {
         $this
             ->setDestinationDetail($destinationDetail)
@@ -39,7 +39,7 @@ class ConsolidatedCommodity extends AbstractStructBase
     }
     /**
      * Get DestinationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail|null
      */
     public function getDestinationDetail()
     {
@@ -47,17 +47,17 @@ class ConsolidatedCommodity extends AbstractStructBase
     }
     /**
      * Set DestinationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail $destinationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail $destinationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity
      */
-    public function setDestinationDetail(\CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail $destinationDetail = null)
+    public function setDestinationDetail(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDestinationDetail $destinationDetail = null)
     {
         $this->DestinationDetail = $destinationDetail;
         return $this;
     }
     /**
      * Get Commodity value
-     * @return \CommerceFedEx\FedExPHP\Structs\Commodity|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity|null
      */
     public function getCommodity()
     {
@@ -65,10 +65,10 @@ class ConsolidatedCommodity extends AbstractStructBase
     }
     /**
      * Set Commodity value
-     * @param \CommerceFedEx\FedExPHP\Structs\Commodity $commodity
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity $commodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity
      */
-    public function setCommodity(\CommerceFedEx\FedExPHP\Structs\Commodity $commodity = null)
+    public function setCommodity(\NicholasCreativeMedia\FedExPHP\Structs\Commodity $commodity = null)
     {
         $this->Commodity = $commodity;
         return $this;
@@ -79,7 +79,7 @@ class ConsolidatedCommodity extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity
      */
     public static function __set_state(array $array)
     {

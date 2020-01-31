@@ -17,28 +17,28 @@ class ConfirmConsolidationRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -46,7 +46,7 @@ class ConfirmConsolidationRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: This is used to specify processing options related to synchronous or asynchronous processing.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested
      */
     public $AsynchronousProcessingOptions;
     /**
@@ -54,14 +54,14 @@ class ConfirmConsolidationRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the consolidation containing the open shipment which contains the desired package.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationKey
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey
      */
     public $ConsolidationKey;
     /**
      * The LabelSpecification
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\LabelSpecification
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
      */
     public $LabelSpecification;
     /**
@@ -69,7 +69,7 @@ class ConfirmConsolidationRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains data used to create additional (non-label) shipping documents.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification
      */
     public $ShippingDocumentSpecification;
     /**
@@ -77,7 +77,7 @@ class ConfirmConsolidationRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains data used to create additional (non-label) consolidation documents.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
     public $ConsolidationDocumentSpecification;
     /**
@@ -110,19 +110,19 @@ class ConfirmConsolidationRequest extends AbstractStructBase
      * @uses ConfirmConsolidationRequest::setConsolidationDocumentSpecification()
      * @uses ConfirmConsolidationRequest::setRateRequestTypes()
      * @uses ConfirmConsolidationRequest::setEdtRequestType()
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey
-     * @param \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification
      * @param string[] $rateRequestTypes
      * @param string $edtRequestType
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions = null, \CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey = null, \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null, \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification = null, array $rateRequestTypes = array(), $edtRequestType = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions = null, \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey = null, \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification = null, \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null, \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification = null, array $rateRequestTypes = array(), $edtRequestType = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -139,7 +139,7 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -147,17 +147,17 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
-    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -165,17 +165,17 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
-    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -183,17 +183,17 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -201,17 +201,17 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
     /**
      * Get AsynchronousProcessingOptions value
-     * @return \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested|null
      */
     public function getAsynchronousProcessingOptions()
     {
@@ -219,17 +219,17 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set AsynchronousProcessingOptions value
-     * @param \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
-    public function setAsynchronousProcessingOptions(\CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions = null)
+    public function setAsynchronousProcessingOptions(\NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions = null)
     {
         $this->AsynchronousProcessingOptions = $asynchronousProcessingOptions;
         return $this;
     }
     /**
      * Get ConsolidationKey value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationKey|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey|null
      */
     public function getConsolidationKey()
     {
@@ -237,17 +237,17 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set ConsolidationKey value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
-    public function setConsolidationKey(\CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey = null)
+    public function setConsolidationKey(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey = null)
     {
         $this->ConsolidationKey = $consolidationKey;
         return $this;
     }
     /**
      * Get LabelSpecification value
-     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification|null
      */
     public function getLabelSpecification()
     {
@@ -255,17 +255,17 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set LabelSpecification value
-     * @param \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
-    public function setLabelSpecification(\CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification = null)
+    public function setLabelSpecification(\NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification = null)
     {
         $this->LabelSpecification = $labelSpecification;
         return $this;
     }
     /**
      * Get ShippingDocumentSpecification value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification|null
      */
     public function getShippingDocumentSpecification()
     {
@@ -273,17 +273,17 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set ShippingDocumentSpecification value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
-    public function setShippingDocumentSpecification(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null)
+    public function setShippingDocumentSpecification(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null)
     {
         $this->ShippingDocumentSpecification = $shippingDocumentSpecification;
         return $this;
     }
     /**
      * Get ConsolidationDocumentSpecification value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification|null
      */
     public function getConsolidationDocumentSpecification()
     {
@@ -291,10 +291,10 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set ConsolidationDocumentSpecification value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
-    public function setConsolidationDocumentSpecification(\CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification = null)
+    public function setConsolidationDocumentSpecification(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification = null)
     {
         $this->ConsolidationDocumentSpecification = $consolidationDocumentSpecification;
         return $this;
@@ -309,39 +309,39 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set RateRequestTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $rateRequestTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
     public function setRateRequestTypes(array $rateRequestTypes = array())
     {
         $invalidValues = array();
         foreach ($rateRequestTypes as $confirmConsolidationRequestRateRequestTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid($confirmConsolidationRequestRateRequestTypesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid($confirmConsolidationRequestRateRequestTypesItem)) {
                 $invalidValues[] = var_export($confirmConsolidationRequestRateRequestTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
         }
         $this->RateRequestTypes = $rateRequestTypes;
         return $this;
     }
     /**
      * Add item to RateRequestTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
     public function addToRateRequestTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
         }
         $this->RateRequestTypes[] = $item;
         return $this;
@@ -356,17 +356,17 @@ class ConfirmConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set EdtRequestType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\EdtRequestType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\EdtRequestType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $edtRequestType
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
     public function setEdtRequestType($edtRequestType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\EdtRequestType::valueIsValid($edtRequestType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $edtRequestType, implode(', ', \CommerceFedEx\FedExPHP\Enums\EdtRequestType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::valueIsValid($edtRequestType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $edtRequestType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::getValidValues())), __LINE__);
         }
         $this->EdtRequestType = $edtRequestType;
         return $this;
@@ -377,7 +377,7 @@ class ConfirmConsolidationRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmConsolidationRequest
      */
     public static function __set_state(array $array)
     {

@@ -16,22 +16,22 @@ class AdrLicenseDetail extends AbstractStructBase
      * The LicenseOrPermitDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail
      */
     public $LicenseOrPermitDetail;
     /**
      * Constructor method for AdrLicenseDetail
      * @uses AdrLicenseDetail::setLicenseOrPermitDetail()
-     * @param \CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail $licenseOrPermitDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail $licenseOrPermitDetail
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail $licenseOrPermitDetail = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail $licenseOrPermitDetail = null)
     {
         $this
             ->setLicenseOrPermitDetail($licenseOrPermitDetail);
     }
     /**
      * Get LicenseOrPermitDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail|null
      */
     public function getLicenseOrPermitDetail()
     {
@@ -39,10 +39,10 @@ class AdrLicenseDetail extends AbstractStructBase
     }
     /**
      * Set LicenseOrPermitDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail $licenseOrPermitDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\AdrLicenseDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail $licenseOrPermitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdrLicenseDetail
      */
-    public function setLicenseOrPermitDetail(\CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail $licenseOrPermitDetail = null)
+    public function setLicenseOrPermitDetail(\NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail $licenseOrPermitDetail = null)
     {
         $this->LicenseOrPermitDetail = $licenseOrPermitDetail;
         return $this;
@@ -53,7 +53,7 @@ class AdrLicenseDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\AdrLicenseDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdrLicenseDetail
      */
     public static function __set_state(array $array)
     {

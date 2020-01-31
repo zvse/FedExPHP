@@ -17,7 +17,7 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: If omitted, no doc tab will be produced (i.e. default is former NONE type).
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DocTabContent
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent
      */
     public $DocTabContent;
     /**
@@ -32,7 +32,7 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
      * The CustomContent
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail
      */
     public $CustomContent;
     /**
@@ -40,7 +40,7 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry[]
      */
     public $ConfigurableReferenceEntries;
     /**
@@ -64,7 +64,7 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
      * The TermsAndConditionsLocalization
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Localization
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Localization
      */
     public $TermsAndConditionsLocalization;
     /**
@@ -72,7 +72,7 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail[]
      */
     public $RegulatoryLabels;
     /**
@@ -81,7 +81,7 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
      * - documentation: Controls the number of additional copies of supplemental labels.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail[]
      */
     public $AdditionalLabels;
     /**
@@ -104,18 +104,18 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
      * @uses CustomerSpecifiedLabelDetail::setRegulatoryLabels()
      * @uses CustomerSpecifiedLabelDetail::setAdditionalLabels()
      * @uses CustomerSpecifiedLabelDetail::setAirWaybillSuppressionCount()
-     * @param \CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent
      * @param string $customContentPosition
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail $customContent
-     * @param \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry[] $configurableReferenceEntries
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail $customContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry[] $configurableReferenceEntries
      * @param string[] $maskedData
      * @param string $secondaryBarcode
-     * @param \CommerceFedEx\FedExPHP\Structs\Localization $termsAndConditionsLocalization
-     * @param \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail[] $regulatoryLabels
-     * @param \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail[] $additionalLabels
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $termsAndConditionsLocalization
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail[] $regulatoryLabels
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail[] $additionalLabels
      * @param int $airWaybillSuppressionCount
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent = null, $customContentPosition = null, \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail $customContent = null, array $configurableReferenceEntries = array(), array $maskedData = array(), $secondaryBarcode = null, \CommerceFedEx\FedExPHP\Structs\Localization $termsAndConditionsLocalization = null, array $regulatoryLabels = array(), array $additionalLabels = array(), $airWaybillSuppressionCount = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent = null, $customContentPosition = null, \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail $customContent = null, array $configurableReferenceEntries = array(), array $maskedData = array(), $secondaryBarcode = null, \NicholasCreativeMedia\FedExPHP\Structs\Localization $termsAndConditionsLocalization = null, array $regulatoryLabels = array(), array $additionalLabels = array(), $airWaybillSuppressionCount = null)
     {
         $this
             ->setDocTabContent($docTabContent)
@@ -131,7 +131,7 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     }
     /**
      * Get DocTabContent value
-     * @return \CommerceFedEx\FedExPHP\Structs\DocTabContent|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent|null
      */
     public function getDocTabContent()
     {
@@ -139,10 +139,10 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     }
     /**
      * Set DocTabContent value
-     * @param \CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
-    public function setDocTabContent(\CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent = null)
+    public function setDocTabContent(\NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent = null)
     {
         $this->DocTabContent = $docTabContent;
         return $this;
@@ -157,24 +157,24 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     }
     /**
      * Set CustomContentPosition value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RelativeVerticalPositionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RelativeVerticalPositionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RelativeVerticalPositionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RelativeVerticalPositionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $customContentPosition
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public function setCustomContentPosition($customContentPosition = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RelativeVerticalPositionType::valueIsValid($customContentPosition)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $customContentPosition, implode(', ', \CommerceFedEx\FedExPHP\Enums\RelativeVerticalPositionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RelativeVerticalPositionType::valueIsValid($customContentPosition)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $customContentPosition, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RelativeVerticalPositionType::getValidValues())), __LINE__);
         }
         $this->CustomContentPosition = $customContentPosition;
         return $this;
     }
     /**
      * Get CustomContent value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail|null
      */
     public function getCustomContent()
     {
@@ -182,17 +182,17 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     }
     /**
      * Set CustomContent value
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail $customContent
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail $customContent
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
-    public function setCustomContent(\CommerceFedEx\FedExPHP\Structs\CustomLabelDetail $customContent = null)
+    public function setCustomContent(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail $customContent = null)
     {
         $this->CustomContent = $customContent;
         return $this;
     }
     /**
      * Get ConfigurableReferenceEntries value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry[]|null
      */
     public function getConfigurableReferenceEntries()
     {
@@ -201,15 +201,15 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     /**
      * Set ConfigurableReferenceEntries value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry[] $configurableReferenceEntries
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry[] $configurableReferenceEntries
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public function setConfigurableReferenceEntries(array $configurableReferenceEntries = array())
     {
         foreach ($configurableReferenceEntries as $customerSpecifiedLabelDetailConfigurableReferenceEntriesItem) {
             // validation for constraint: itemType
-            if (!$customerSpecifiedLabelDetailConfigurableReferenceEntriesItem instanceof \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry) {
-                throw new \InvalidArgumentException(sprintf('The ConfigurableReferenceEntries property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry, "%s" given', is_object($customerSpecifiedLabelDetailConfigurableReferenceEntriesItem) ? get_class($customerSpecifiedLabelDetailConfigurableReferenceEntriesItem) : gettype($customerSpecifiedLabelDetailConfigurableReferenceEntriesItem)), __LINE__);
+            if (!$customerSpecifiedLabelDetailConfigurableReferenceEntriesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry) {
+                throw new \InvalidArgumentException(sprintf('The ConfigurableReferenceEntries property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry, "%s" given', is_object($customerSpecifiedLabelDetailConfigurableReferenceEntriesItem) ? get_class($customerSpecifiedLabelDetailConfigurableReferenceEntriesItem) : gettype($customerSpecifiedLabelDetailConfigurableReferenceEntriesItem)), __LINE__);
             }
         }
         $this->ConfigurableReferenceEntries = $configurableReferenceEntries;
@@ -218,14 +218,14 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     /**
      * Add item to ConfigurableReferenceEntries value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
-    public function addToConfigurableReferenceEntries(\CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry $item)
+    public function addToConfigurableReferenceEntries(\NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry) {
-            throw new \InvalidArgumentException(sprintf('The ConfigurableReferenceEntries property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry) {
+            throw new \InvalidArgumentException(sprintf('The ConfigurableReferenceEntries property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ConfigurableReferenceEntries[] = $item;
         return $this;
@@ -240,39 +240,39 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     }
     /**
      * Set MaskedData value
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelMaskableDataType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelMaskableDataType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelMaskableDataType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelMaskableDataType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $maskedData
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public function setMaskedData(array $maskedData = array())
     {
         $invalidValues = array();
         foreach ($maskedData as $customerSpecifiedLabelDetailMaskedDataItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\LabelMaskableDataType::valueIsValid($customerSpecifiedLabelDetailMaskedDataItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelMaskableDataType::valueIsValid($customerSpecifiedLabelDetailMaskedDataItem)) {
                 $invalidValues[] = var_export($customerSpecifiedLabelDetailMaskedDataItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelMaskableDataType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelMaskableDataType::getValidValues())), __LINE__);
         }
         $this->MaskedData = $maskedData;
         return $this;
     }
     /**
      * Add item to MaskedData value
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelMaskableDataType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelMaskableDataType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelMaskableDataType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelMaskableDataType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public function addToMaskedData($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\LabelMaskableDataType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelMaskableDataType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelMaskableDataType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelMaskableDataType::getValidValues())), __LINE__);
         }
         $this->MaskedData[] = $item;
         return $this;
@@ -287,24 +287,24 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     }
     /**
      * Set SecondaryBarcode value
-     * @uses \CommerceFedEx\FedExPHP\Enums\SecondaryBarcodeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\SecondaryBarcodeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SecondaryBarcodeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SecondaryBarcodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $secondaryBarcode
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public function setSecondaryBarcode($secondaryBarcode = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\SecondaryBarcodeType::valueIsValid($secondaryBarcode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $secondaryBarcode, implode(', ', \CommerceFedEx\FedExPHP\Enums\SecondaryBarcodeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\SecondaryBarcodeType::valueIsValid($secondaryBarcode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $secondaryBarcode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SecondaryBarcodeType::getValidValues())), __LINE__);
         }
         $this->SecondaryBarcode = $secondaryBarcode;
         return $this;
     }
     /**
      * Get TermsAndConditionsLocalization value
-     * @return \CommerceFedEx\FedExPHP\Structs\Localization|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Localization|null
      */
     public function getTermsAndConditionsLocalization()
     {
@@ -312,17 +312,17 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     }
     /**
      * Set TermsAndConditionsLocalization value
-     * @param \CommerceFedEx\FedExPHP\Structs\Localization $termsAndConditionsLocalization
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $termsAndConditionsLocalization
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
-    public function setTermsAndConditionsLocalization(\CommerceFedEx\FedExPHP\Structs\Localization $termsAndConditionsLocalization = null)
+    public function setTermsAndConditionsLocalization(\NicholasCreativeMedia\FedExPHP\Structs\Localization $termsAndConditionsLocalization = null)
     {
         $this->TermsAndConditionsLocalization = $termsAndConditionsLocalization;
         return $this;
     }
     /**
      * Get RegulatoryLabels value
-     * @return \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail[]|null
      */
     public function getRegulatoryLabels()
     {
@@ -331,15 +331,15 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     /**
      * Set RegulatoryLabels value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail[] $regulatoryLabels
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail[] $regulatoryLabels
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public function setRegulatoryLabels(array $regulatoryLabels = array())
     {
         foreach ($regulatoryLabels as $customerSpecifiedLabelDetailRegulatoryLabelsItem) {
             // validation for constraint: itemType
-            if (!$customerSpecifiedLabelDetailRegulatoryLabelsItem instanceof \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail) {
-                throw new \InvalidArgumentException(sprintf('The RegulatoryLabels property can only contain items of \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail, "%s" given', is_object($customerSpecifiedLabelDetailRegulatoryLabelsItem) ? get_class($customerSpecifiedLabelDetailRegulatoryLabelsItem) : gettype($customerSpecifiedLabelDetailRegulatoryLabelsItem)), __LINE__);
+            if (!$customerSpecifiedLabelDetailRegulatoryLabelsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail) {
+                throw new \InvalidArgumentException(sprintf('The RegulatoryLabels property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail, "%s" given', is_object($customerSpecifiedLabelDetailRegulatoryLabelsItem) ? get_class($customerSpecifiedLabelDetailRegulatoryLabelsItem) : gettype($customerSpecifiedLabelDetailRegulatoryLabelsItem)), __LINE__);
             }
         }
         $this->RegulatoryLabels = $regulatoryLabels;
@@ -348,21 +348,21 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     /**
      * Add item to RegulatoryLabels value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
-    public function addToRegulatoryLabels(\CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail $item)
+    public function addToRegulatoryLabels(\NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail) {
-            throw new \InvalidArgumentException(sprintf('The RegulatoryLabels property can only contain items of \CommerceFedEx\FedExPHP\Structs\RegulatoryLabelContentDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail) {
+            throw new \InvalidArgumentException(sprintf('The RegulatoryLabels property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RegulatoryLabelContentDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->RegulatoryLabels[] = $item;
         return $this;
     }
     /**
      * Get AdditionalLabels value
-     * @return \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail[]|null
      */
     public function getAdditionalLabels()
     {
@@ -371,15 +371,15 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     /**
      * Set AdditionalLabels value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail[] $additionalLabels
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail[] $additionalLabels
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public function setAdditionalLabels(array $additionalLabels = array())
     {
         foreach ($additionalLabels as $customerSpecifiedLabelDetailAdditionalLabelsItem) {
             // validation for constraint: itemType
-            if (!$customerSpecifiedLabelDetailAdditionalLabelsItem instanceof \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail) {
-                throw new \InvalidArgumentException(sprintf('The AdditionalLabels property can only contain items of \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail, "%s" given', is_object($customerSpecifiedLabelDetailAdditionalLabelsItem) ? get_class($customerSpecifiedLabelDetailAdditionalLabelsItem) : gettype($customerSpecifiedLabelDetailAdditionalLabelsItem)), __LINE__);
+            if (!$customerSpecifiedLabelDetailAdditionalLabelsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail) {
+                throw new \InvalidArgumentException(sprintf('The AdditionalLabels property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail, "%s" given', is_object($customerSpecifiedLabelDetailAdditionalLabelsItem) ? get_class($customerSpecifiedLabelDetailAdditionalLabelsItem) : gettype($customerSpecifiedLabelDetailAdditionalLabelsItem)), __LINE__);
             }
         }
         $this->AdditionalLabels = $additionalLabels;
@@ -388,14 +388,14 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     /**
      * Add item to AdditionalLabels value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
-    public function addToAdditionalLabels(\CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail $item)
+    public function addToAdditionalLabels(\NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail) {
-            throw new \InvalidArgumentException(sprintf('The AdditionalLabels property can only contain items of \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail) {
+            throw new \InvalidArgumentException(sprintf('The AdditionalLabels property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AdditionalLabels[] = $item;
         return $this;
@@ -411,7 +411,7 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
     /**
      * Set AirWaybillSuppressionCount value
      * @param int $airWaybillSuppressionCount
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public function setAirWaybillSuppressionCount($airWaybillSuppressionCount = null)
     {
@@ -428,7 +428,7 @@ class CustomerSpecifiedLabelDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerSpecifiedLabelDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerSpecifiedLabelDetail
      */
     public static function __set_state(array $array)
     {

@@ -58,7 +58,7 @@ class ParsedPostalCodeDetail extends AbstractStructBase
     /**
      * Set Base value
      * @param string $base
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail
      */
     public function setBase($base = null)
     {
@@ -80,7 +80,7 @@ class ParsedPostalCodeDetail extends AbstractStructBase
     /**
      * Set AddOn value
      * @param string $addOn
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail
      */
     public function setAddOn($addOn = null)
     {
@@ -102,7 +102,7 @@ class ParsedPostalCodeDetail extends AbstractStructBase
     /**
      * Set DeliveryPoint value
      * @param string $deliveryPoint
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail
      */
     public function setDeliveryPoint($deliveryPoint = null)
     {
@@ -119,7 +119,7 @@ class ParsedPostalCodeDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail
      */
     public static function __set_state(array $array)
     {

@@ -16,7 +16,7 @@ class CodReturnPackageDetail extends AbstractStructBase
      * The CollectionAmount
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $CollectionAmount;
     /**
@@ -37,14 +37,14 @@ class CodReturnPackageDetail extends AbstractStructBase
      * The Barcodes
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PackageBarcodes
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes
      */
     public $Barcodes;
     /**
      * The Label
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocument
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument
      */
     public $Label;
     /**
@@ -54,13 +54,13 @@ class CodReturnPackageDetail extends AbstractStructBase
      * @uses CodReturnPackageDetail::setElectronic()
      * @uses CodReturnPackageDetail::setBarcodes()
      * @uses CodReturnPackageDetail::setLabel()
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $collectionAmount
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $collectionAmount
      * @param string $adjustmentType
      * @param bool $electronic
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageBarcodes $barcodes
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes $barcodes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\Money $collectionAmount = null, $adjustmentType = null, $electronic = null, \CommerceFedEx\FedExPHP\Structs\PackageBarcodes $barcodes = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Money $collectionAmount = null, $adjustmentType = null, $electronic = null, \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes $barcodes = null, \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label = null)
     {
         $this
             ->setCollectionAmount($collectionAmount)
@@ -71,7 +71,7 @@ class CodReturnPackageDetail extends AbstractStructBase
     }
     /**
      * Get CollectionAmount value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getCollectionAmount()
     {
@@ -79,10 +79,10 @@ class CodReturnPackageDetail extends AbstractStructBase
     }
     /**
      * Set CollectionAmount value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $collectionAmount
-     * @return \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $collectionAmount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail
      */
-    public function setCollectionAmount(\CommerceFedEx\FedExPHP\Structs\Money $collectionAmount = null)
+    public function setCollectionAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $collectionAmount = null)
     {
         $this->CollectionAmount = $collectionAmount;
         return $this;
@@ -97,17 +97,17 @@ class CodReturnPackageDetail extends AbstractStructBase
     }
     /**
      * Set AdjustmentType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CodAdjustmentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CodAdjustmentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CodAdjustmentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CodAdjustmentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $adjustmentType
-     * @return \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail
      */
     public function setAdjustmentType($adjustmentType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CodAdjustmentType::valueIsValid($adjustmentType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $adjustmentType, implode(', ', \CommerceFedEx\FedExPHP\Enums\CodAdjustmentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CodAdjustmentType::valueIsValid($adjustmentType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $adjustmentType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CodAdjustmentType::getValidValues())), __LINE__);
         }
         $this->AdjustmentType = $adjustmentType;
         return $this;
@@ -123,7 +123,7 @@ class CodReturnPackageDetail extends AbstractStructBase
     /**
      * Set Electronic value
      * @param bool $electronic
-     * @return \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail
      */
     public function setElectronic($electronic = null)
     {
@@ -132,7 +132,7 @@ class CodReturnPackageDetail extends AbstractStructBase
     }
     /**
      * Get Barcodes value
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageBarcodes|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes|null
      */
     public function getBarcodes()
     {
@@ -140,17 +140,17 @@ class CodReturnPackageDetail extends AbstractStructBase
     }
     /**
      * Set Barcodes value
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageBarcodes $barcodes
-     * @return \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes $barcodes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail
      */
-    public function setBarcodes(\CommerceFedEx\FedExPHP\Structs\PackageBarcodes $barcodes = null)
+    public function setBarcodes(\NicholasCreativeMedia\FedExPHP\Structs\PackageBarcodes $barcodes = null)
     {
         $this->Barcodes = $barcodes;
         return $this;
     }
     /**
      * Get Label value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocument|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument|null
      */
     public function getLabel()
     {
@@ -158,10 +158,10 @@ class CodReturnPackageDetail extends AbstractStructBase
     }
     /**
      * Set Label value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label
-     * @return \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail
      */
-    public function setLabel(\CommerceFedEx\FedExPHP\Structs\ShippingDocument $label = null)
+    public function setLabel(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label = null)
     {
         $this->Label = $label;
         return $this;
@@ -172,7 +172,7 @@ class CodReturnPackageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CodReturnPackageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodReturnPackageDetail
      */
     public static function __set_state(array $array)
     {

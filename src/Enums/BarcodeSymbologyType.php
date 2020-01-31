@@ -51,6 +51,11 @@ class BarcodeSymbologyType
      */
     const VALUE_I_2_OF_5 = 'I2OF5';
     /**
+     * Constant for value 'MANUAL'
+     * @return string 'MANUAL'
+     */
+    const VALUE_MANUAL = 'MANUAL';
+    /**
      * Constant for value 'PDF417'
      * @return string 'PDF417'
      */
@@ -90,6 +95,7 @@ class BarcodeSymbologyType
      * @uses self::VALUE_CODE_39
      * @uses self::VALUE_CODE_93
      * @uses self::VALUE_I_2_OF_5
+     * @uses self::VALUE_MANUAL
      * @uses self::VALUE_PDF_417
      * @uses self::VALUE_POSTNET
      * @uses self::VALUE_QR_CODE
@@ -107,6 +113,7 @@ class BarcodeSymbologyType
             self::VALUE_CODE_39,
             self::VALUE_CODE_93,
             self::VALUE_I_2_OF_5,
+            self::VALUE_MANUAL,
             self::VALUE_PDF_417,
             self::VALUE_POSTNET,
             self::VALUE_QR_CODE,

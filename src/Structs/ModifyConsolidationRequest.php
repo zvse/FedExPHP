@@ -17,28 +17,28 @@ class ModifyConsolidationRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -46,14 +46,14 @@ class ModifyConsolidationRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: If provided, identifies the consolidation to which this open shipment belongs.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationKey
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey
      */
     public $ConsolidationKey;
     /**
      * The RequestedConsolidation
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public $RequestedConsolidation;
     /**
@@ -64,14 +64,14 @@ class ModifyConsolidationRequest extends AbstractStructBase
      * @uses ModifyConsolidationRequest::setTransactionDetail()
      * @uses ModifyConsolidationRequest::setConsolidationKey()
      * @uses ModifyConsolidationRequest::setRequestedConsolidation()
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation $requestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation $requestedConsolidation
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey = null, \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation $requestedConsolidation = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey = null, \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation $requestedConsolidation = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -83,7 +83,7 @@ class ModifyConsolidationRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -91,17 +91,17 @@ class ModifyConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationRequest
      */
-    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -109,17 +109,17 @@ class ModifyConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationRequest
      */
-    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -127,17 +127,17 @@ class ModifyConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationRequest
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -145,17 +145,17 @@ class ModifyConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationRequest
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
     /**
      * Get ConsolidationKey value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationKey|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey|null
      */
     public function getConsolidationKey()
     {
@@ -163,17 +163,17 @@ class ModifyConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set ConsolidationKey value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationRequest
      */
-    public function setConsolidationKey(\CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey = null)
+    public function setConsolidationKey(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey = null)
     {
         $this->ConsolidationKey = $consolidationKey;
         return $this;
     }
     /**
      * Get RequestedConsolidation value
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation|null
      */
     public function getRequestedConsolidation()
     {
@@ -181,10 +181,10 @@ class ModifyConsolidationRequest extends AbstractStructBase
     }
     /**
      * Set RequestedConsolidation value
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation $requestedConsolidation
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyConsolidationRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation $requestedConsolidation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationRequest
      */
-    public function setRequestedConsolidation(\CommerceFedEx\FedExPHP\Structs\RequestedConsolidation $requestedConsolidation = null)
+    public function setRequestedConsolidation(\NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation $requestedConsolidation = null)
     {
         $this->RequestedConsolidation = $requestedConsolidation;
         return $this;
@@ -195,7 +195,7 @@ class ModifyConsolidationRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyConsolidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyConsolidationRequest
      */
     public static function __set_state(array $array)
     {

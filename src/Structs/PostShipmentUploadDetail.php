@@ -40,7 +40,7 @@ class PostShipmentUploadDetail extends AbstractStructBase
     /**
      * Set TrackingNumber value
      * @param string $trackingNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\PostShipmentUploadDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostShipmentUploadDetail
      */
     public function setTrackingNumber($trackingNumber = null)
     {
@@ -57,7 +57,7 @@ class PostShipmentUploadDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PostShipmentUploadDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostShipmentUploadDetail
      */
     public static function __set_state(array $array)
     {

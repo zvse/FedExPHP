@@ -25,7 +25,7 @@ class SplitPaymentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the form of payment to be used.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Payment
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payment
      */
     public $Payment;
     /**
@@ -33,9 +33,9 @@ class SplitPaymentDetail extends AbstractStructBase
      * @uses SplitPaymentDetail::setType()
      * @uses SplitPaymentDetail::setPayment()
      * @param string $type
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $payment
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $payment
      */
-    public function __construct($type = null, \CommerceFedEx\FedExPHP\Structs\Payment $payment = null)
+    public function __construct($type = null, \NicholasCreativeMedia\FedExPHP\Structs\Payment $payment = null)
     {
         $this
             ->setType($type)
@@ -51,24 +51,24 @@ class SplitPaymentDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\SplitPaymentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\SplitPaymentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SplitPaymentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SplitPaymentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\SplitPaymentType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\SplitPaymentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\SplitPaymentType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SplitPaymentType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
     }
     /**
      * Get Payment value
-     * @return \CommerceFedEx\FedExPHP\Structs\Payment|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment|null
      */
     public function getPayment()
     {
@@ -76,10 +76,10 @@ class SplitPaymentDetail extends AbstractStructBase
     }
     /**
      * Set Payment value
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $payment
-     * @return \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $payment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail
      */
-    public function setPayment(\CommerceFedEx\FedExPHP\Structs\Payment $payment = null)
+    public function setPayment(\NicholasCreativeMedia\FedExPHP\Structs\Payment $payment = null)
     {
         $this->Payment = $payment;
         return $this;
@@ -90,7 +90,7 @@ class SplitPaymentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail
      */
     public static function __set_state(array $array)
     {

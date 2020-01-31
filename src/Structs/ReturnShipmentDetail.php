@@ -13,7 +13,7 @@ class ReturnShipmentDetail extends AbstractStructBase
     /**
      * The ReturnType
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $ReturnType;
@@ -21,21 +21,21 @@ class ReturnShipmentDetail extends AbstractStructBase
      * The Rma
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Rma
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Rma
      */
     public $Rma;
     /**
      * The ReturnEMailDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail
      */
     public $ReturnEMailDetail;
     /**
      * The ReturnAssociation
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ReturnAssociationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ReturnAssociationDetail
      */
     public $ReturnAssociation;
     /**
@@ -45,11 +45,11 @@ class ReturnShipmentDetail extends AbstractStructBase
      * @uses ReturnShipmentDetail::setReturnEMailDetail()
      * @uses ReturnShipmentDetail::setReturnAssociation()
      * @param string $returnType
-     * @param \CommerceFedEx\FedExPHP\Structs\Rma $rma
-     * @param \CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail $returnEMailDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ReturnAssociationDetail $returnAssociation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Rma $rma
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail $returnEMailDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ReturnAssociationDetail $returnAssociation
      */
-    public function __construct($returnType = null, \CommerceFedEx\FedExPHP\Structs\Rma $rma = null, \CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail $returnEMailDetail = null, \CommerceFedEx\FedExPHP\Structs\ReturnAssociationDetail $returnAssociation = null)
+    public function __construct($returnType = null, \NicholasCreativeMedia\FedExPHP\Structs\Rma $rma = null, \NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail $returnEMailDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ReturnAssociationDetail $returnAssociation = null)
     {
         $this
             ->setReturnType($returnType)
@@ -59,7 +59,7 @@ class ReturnShipmentDetail extends AbstractStructBase
     }
     /**
      * Get ReturnType value
-     * @return string
+     * @return string|null
      */
     public function getReturnType()
     {
@@ -67,24 +67,24 @@ class ReturnShipmentDetail extends AbstractStructBase
     }
     /**
      * Set ReturnType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $returnType
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnShipmentDetail
      */
     public function setReturnType($returnType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ReturnType::valueIsValid($returnType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $returnType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ReturnType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ReturnType::valueIsValid($returnType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $returnType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ReturnType::getValidValues())), __LINE__);
         }
         $this->ReturnType = $returnType;
         return $this;
     }
     /**
      * Get Rma value
-     * @return \CommerceFedEx\FedExPHP\Structs\Rma|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rma|null
      */
     public function getRma()
     {
@@ -92,17 +92,17 @@ class ReturnShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Rma value
-     * @param \CommerceFedEx\FedExPHP\Structs\Rma $rma
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Rma $rma
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnShipmentDetail
      */
-    public function setRma(\CommerceFedEx\FedExPHP\Structs\Rma $rma = null)
+    public function setRma(\NicholasCreativeMedia\FedExPHP\Structs\Rma $rma = null)
     {
         $this->Rma = $rma;
         return $this;
     }
     /**
      * Get ReturnEMailDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail|null
      */
     public function getReturnEMailDetail()
     {
@@ -110,17 +110,17 @@ class ReturnShipmentDetail extends AbstractStructBase
     }
     /**
      * Set ReturnEMailDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail $returnEMailDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail $returnEMailDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnShipmentDetail
      */
-    public function setReturnEMailDetail(\CommerceFedEx\FedExPHP\Structs\ReturnEMailDetail $returnEMailDetail = null)
+    public function setReturnEMailDetail(\NicholasCreativeMedia\FedExPHP\Structs\ReturnEMailDetail $returnEMailDetail = null)
     {
         $this->ReturnEMailDetail = $returnEMailDetail;
         return $this;
     }
     /**
      * Get ReturnAssociation value
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnAssociationDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnAssociationDetail|null
      */
     public function getReturnAssociation()
     {
@@ -128,10 +128,10 @@ class ReturnShipmentDetail extends AbstractStructBase
     }
     /**
      * Set ReturnAssociation value
-     * @param \CommerceFedEx\FedExPHP\Structs\ReturnAssociationDetail $returnAssociation
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ReturnAssociationDetail $returnAssociation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnShipmentDetail
      */
-    public function setReturnAssociation(\CommerceFedEx\FedExPHP\Structs\ReturnAssociationDetail $returnAssociation = null)
+    public function setReturnAssociation(\NicholasCreativeMedia\FedExPHP\Structs\ReturnAssociationDetail $returnAssociation = null)
     {
         $this->ReturnAssociation = $returnAssociation;
         return $this;
@@ -142,7 +142,7 @@ class ReturnShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnShipmentDetail
      */
     public static function __set_state(array $array)
     {

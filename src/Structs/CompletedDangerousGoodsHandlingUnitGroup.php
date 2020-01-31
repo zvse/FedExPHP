@@ -28,7 +28,7 @@ class CompletedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
      * The HandlingUnitShippingDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail
      */
     public $HandlingUnitShippingDetail;
     /**
@@ -38,9 +38,9 @@ class CompletedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
      * @uses CompletedDangerousGoodsHandlingUnitGroup::setHandlingUnitShippingDetail()
      * @param string $id
      * @param int $numberOfHandlingUnits
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail
      */
-    public function __construct($id = null, $numberOfHandlingUnits = null, \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail = null)
+    public function __construct($id = null, $numberOfHandlingUnits = null, \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail = null)
     {
         $this
             ->setId($id)
@@ -58,7 +58,7 @@ class CompletedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup
      */
     public function setId($id = null)
     {
@@ -80,7 +80,7 @@ class CompletedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
     /**
      * Set NumberOfHandlingUnits value
      * @param int $numberOfHandlingUnits
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup
      */
     public function setNumberOfHandlingUnits($numberOfHandlingUnits = null)
     {
@@ -93,7 +93,7 @@ class CompletedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
     }
     /**
      * Get HandlingUnitShippingDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail|null
      */
     public function getHandlingUnitShippingDetail()
     {
@@ -101,10 +101,10 @@ class CompletedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
     }
     /**
      * Set HandlingUnitShippingDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup
      */
-    public function setHandlingUnitShippingDetail(\CommerceFedEx\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail = null)
+    public function setHandlingUnitShippingDetail(\NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsHandlingUnitShippingDetail $handlingUnitShippingDetail = null)
     {
         $this->HandlingUnitShippingDetail = $handlingUnitShippingDetail;
         return $this;
@@ -115,7 +115,7 @@ class CompletedDangerousGoodsHandlingUnitGroup extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup
      */
     public static function __set_state(array $array)
     {

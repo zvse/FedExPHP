@@ -38,39 +38,39 @@ class DocumentFormatOptionsRequested extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DocumentFormatOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DocumentFormatOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DocumentFormatOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DocumentFormatOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $options
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentFormatOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentFormatOptionsRequested
      */
     public function setOptions(array $options = array())
     {
         $invalidValues = array();
         foreach ($options as $documentFormatOptionsRequestedOptionsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\DocumentFormatOptionType::valueIsValid($documentFormatOptionsRequestedOptionsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\DocumentFormatOptionType::valueIsValid($documentFormatOptionsRequestedOptionsItem)) {
                 $invalidValues[] = var_export($documentFormatOptionsRequestedOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\DocumentFormatOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DocumentFormatOptionType::getValidValues())), __LINE__);
         }
         $this->Options = $options;
         return $this;
     }
     /**
      * Add item to Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DocumentFormatOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DocumentFormatOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DocumentFormatOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DocumentFormatOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentFormatOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentFormatOptionsRequested
      */
     public function addToOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DocumentFormatOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\DocumentFormatOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DocumentFormatOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DocumentFormatOptionType::getValidValues())), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
@@ -81,7 +81,7 @@ class DocumentFormatOptionsRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DocumentFormatOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocumentFormatOptionsRequested
      */
     public static function __set_state(array $array)
     {

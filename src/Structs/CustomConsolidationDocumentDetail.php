@@ -16,7 +16,7 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
      * The Format
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
@@ -56,7 +56,7 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: If provided, thermal documents will include specified doc tab content. If omitted, document will be produced without doc tab content.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DocTabContent
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent
      */
     public $DocTabContent;
     /**
@@ -65,7 +65,7 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
      * - documentation: Specifies the usage and identification of a customer supplied image to be used on this document.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]
      */
     public $CustomerImageUsages;
     /**
@@ -86,16 +86,16 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
      * @uses CustomConsolidationDocumentDetail::setDocTabContent()
      * @uses CustomConsolidationDocumentDetail::setCustomerImageUsages()
      * @uses CustomConsolidationDocumentDetail::setSignatureName()
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
      * @param string $labelPrintingOrientation
      * @param string $labelRotation
      * @param string $specificationId
      * @param string $customDocumentIdentifier
-     * @param \CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
      * @param string $signatureName
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null, $labelPrintingOrientation = null, $labelRotation = null, $specificationId = null, $customDocumentIdentifier = null, \CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent = null, array $customerImageUsages = array(), $signatureName = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null, $labelPrintingOrientation = null, $labelRotation = null, $specificationId = null, $customDocumentIdentifier = null, \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent = null, array $customerImageUsages = array(), $signatureName = null)
     {
         $this
             ->setFormat($format)
@@ -109,7 +109,7 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -117,10 +117,10 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
-    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
@@ -135,17 +135,17 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     }
     /**
      * Set LabelPrintingOrientation value
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelPrintingOrientation
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
     public function setLabelPrintingOrientation($labelPrintingOrientation = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid($labelPrintingOrientation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelPrintingOrientation, implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid($labelPrintingOrientation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelPrintingOrientation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues())), __LINE__);
         }
         $this->LabelPrintingOrientation = $labelPrintingOrientation;
         return $this;
@@ -160,17 +160,17 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     }
     /**
      * Set LabelRotation value
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelRotationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelRotationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelRotationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelRotationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelRotation
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
     public function setLabelRotation($labelRotation = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\LabelRotationType::valueIsValid($labelRotation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelRotation, implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelRotationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelRotationType::valueIsValid($labelRotation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelRotation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelRotationType::getValidValues())), __LINE__);
         }
         $this->LabelRotation = $labelRotation;
         return $this;
@@ -186,7 +186,7 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     /**
      * Set SpecificationId value
      * @param string $specificationId
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
     public function setSpecificationId($specificationId = null)
     {
@@ -208,7 +208,7 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     /**
      * Set CustomDocumentIdentifier value
      * @param string $customDocumentIdentifier
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
     public function setCustomDocumentIdentifier($customDocumentIdentifier = null)
     {
@@ -221,7 +221,7 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     }
     /**
      * Get DocTabContent value
-     * @return \CommerceFedEx\FedExPHP\Structs\DocTabContent|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent|null
      */
     public function getDocTabContent()
     {
@@ -229,17 +229,17 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     }
     /**
      * Set DocTabContent value
-     * @param \CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
-    public function setDocTabContent(\CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent = null)
+    public function setDocTabContent(\NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent = null)
     {
         $this->DocTabContent = $docTabContent;
         return $this;
     }
     /**
      * Get CustomerImageUsages value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]|null
      */
     public function getCustomerImageUsages()
     {
@@ -248,15 +248,15 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     /**
      * Set CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
     public function setCustomerImageUsages(array $customerImageUsages = array())
     {
         foreach ($customerImageUsages as $customConsolidationDocumentDetailCustomerImageUsagesItem) {
             // validation for constraint: itemType
-            if (!$customConsolidationDocumentDetailCustomerImageUsagesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($customConsolidationDocumentDetailCustomerImageUsagesItem) ? get_class($customConsolidationDocumentDetailCustomerImageUsagesItem) : gettype($customConsolidationDocumentDetailCustomerImageUsagesItem)), __LINE__);
+            if (!$customConsolidationDocumentDetailCustomerImageUsagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($customConsolidationDocumentDetailCustomerImageUsagesItem) ? get_class($customConsolidationDocumentDetailCustomerImageUsagesItem) : gettype($customConsolidationDocumentDetailCustomerImageUsagesItem)), __LINE__);
             }
         }
         $this->CustomerImageUsages = $customerImageUsages;
@@ -265,14 +265,14 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     /**
      * Add item to CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
-    public function addToCustomerImageUsages(\CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item)
+    public function addToCustomerImageUsages(\NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerImageUsages[] = $item;
         return $this;
@@ -288,7 +288,7 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
     /**
      * Set SignatureName value
      * @param string $signatureName
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
     public function setSignatureName($signatureName = null)
     {
@@ -305,7 +305,7 @@ class CustomConsolidationDocumentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail
      */
     public static function __set_state(array $array)
     {

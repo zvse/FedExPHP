@@ -14,24 +14,24 @@ class RequestedPickupPackageDetail extends AbstractStructBase
      * The PackageSpecialServices
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested
      */
     public $PackageSpecialServices;
     /**
      * The Weight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $Weight;
     /**
      * Constructor method for RequestedPickupPackageDetail
      * @uses RequestedPickupPackageDetail::setPackageSpecialServices()
      * @uses RequestedPickupPackageDetail::setWeight()
-     * @param \CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested $packageSpecialServices
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested $packageSpecialServices
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested $packageSpecialServices = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested $packageSpecialServices = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this
             ->setPackageSpecialServices($packageSpecialServices)
@@ -39,7 +39,7 @@ class RequestedPickupPackageDetail extends AbstractStructBase
     }
     /**
      * Get PackageSpecialServices value
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested|null
      */
     public function getPackageSpecialServices()
     {
@@ -47,17 +47,17 @@ class RequestedPickupPackageDetail extends AbstractStructBase
     }
     /**
      * Set PackageSpecialServices value
-     * @param \CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested $packageSpecialServices
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested $packageSpecialServices
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPickupPackageDetail
      */
-    public function setPackageSpecialServices(\CommerceFedEx\FedExPHP\Structs\PickupPackageSpecialServicesRequested $packageSpecialServices = null)
+    public function setPackageSpecialServices(\NicholasCreativeMedia\FedExPHP\Structs\PickupPackageSpecialServicesRequested $packageSpecialServices = null)
     {
         $this->PackageSpecialServices = $packageSpecialServices;
         return $this;
     }
     /**
      * Get Weight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getWeight()
     {
@@ -65,10 +65,10 @@ class RequestedPickupPackageDetail extends AbstractStructBase
     }
     /**
      * Set Weight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPickupPackageDetail
      */
-    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function setWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this->Weight = $weight;
         return $this;
@@ -79,7 +79,7 @@ class RequestedPickupPackageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPickupPackageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPickupPackageDetail
      */
     public static function __set_state(array $array)
     {

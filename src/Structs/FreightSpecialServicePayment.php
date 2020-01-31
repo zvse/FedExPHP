@@ -52,7 +52,7 @@ class FreightSpecialServicePayment extends AbstractStructBase
     /**
      * Set SpecialService value
      * @param string $specialService
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment
      */
     public function setSpecialService($specialService = null)
     {
@@ -73,17 +73,17 @@ class FreightSpecialServicePayment extends AbstractStructBase
     }
     /**
      * Set PaymentType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $paymentType
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment
      */
     public function setPaymentType($paymentType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid($paymentType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightShipmentRoleType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::valueIsValid($paymentType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $paymentType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightShipmentRoleType::getValidValues())), __LINE__);
         }
         $this->PaymentType = $paymentType;
         return $this;
@@ -94,7 +94,7 @@ class FreightSpecialServicePayment extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightSpecialServicePayment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightSpecialServicePayment
      */
     public static function __set_state(array $array)
     {

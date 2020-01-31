@@ -23,7 +23,7 @@ class EMailLabelDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\EMailRecipient[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient[]
      */
     public $Recipients;
     /**
@@ -31,7 +31,7 @@ class EMailLabelDetail extends AbstractStructBase
      * @uses EMailLabelDetail::setMessage()
      * @uses EMailLabelDetail::setRecipients()
      * @param string $message
-     * @param \CommerceFedEx\FedExPHP\Structs\EMailRecipient[] $recipients
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient[] $recipients
      */
     public function __construct($message = null, array $recipients = array())
     {
@@ -50,7 +50,7 @@ class EMailLabelDetail extends AbstractStructBase
     /**
      * Set Message value
      * @param string $message
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailLabelDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail
      */
     public function setMessage($message = null)
     {
@@ -63,7 +63,7 @@ class EMailLabelDetail extends AbstractStructBase
     }
     /**
      * Get Recipients value
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailRecipient[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient[]|null
      */
     public function getRecipients()
     {
@@ -72,15 +72,15 @@ class EMailLabelDetail extends AbstractStructBase
     /**
      * Set Recipients value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\EMailRecipient[] $recipients
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient[] $recipients
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail
      */
     public function setRecipients(array $recipients = array())
     {
         foreach ($recipients as $eMailLabelDetailRecipientsItem) {
             // validation for constraint: itemType
-            if (!$eMailLabelDetailRecipientsItem instanceof \CommerceFedEx\FedExPHP\Structs\EMailRecipient) {
-                throw new \InvalidArgumentException(sprintf('The Recipients property can only contain items of \CommerceFedEx\FedExPHP\Structs\EMailRecipient, "%s" given', is_object($eMailLabelDetailRecipientsItem) ? get_class($eMailLabelDetailRecipientsItem) : gettype($eMailLabelDetailRecipientsItem)), __LINE__);
+            if (!$eMailLabelDetailRecipientsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient) {
+                throw new \InvalidArgumentException(sprintf('The Recipients property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient, "%s" given', is_object($eMailLabelDetailRecipientsItem) ? get_class($eMailLabelDetailRecipientsItem) : gettype($eMailLabelDetailRecipientsItem)), __LINE__);
             }
         }
         $this->Recipients = $recipients;
@@ -89,14 +89,14 @@ class EMailLabelDetail extends AbstractStructBase
     /**
      * Add item to Recipients value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\EMailRecipient $item
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailLabelDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail
      */
-    public function addToRecipients(\CommerceFedEx\FedExPHP\Structs\EMailRecipient $item)
+    public function addToRecipients(\NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\EMailRecipient) {
-            throw new \InvalidArgumentException(sprintf('The Recipients property can only contain items of \CommerceFedEx\FedExPHP\Structs\EMailRecipient, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient) {
+            throw new \InvalidArgumentException(sprintf('The Recipients property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Recipients[] = $item;
         return $this;
@@ -107,7 +107,7 @@ class EMailLabelDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailLabelDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailLabelDetail
      */
     public static function __set_state(array $array)
     {

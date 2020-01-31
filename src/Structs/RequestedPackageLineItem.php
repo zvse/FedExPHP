@@ -37,10 +37,26 @@ class RequestedPackageLineItem extends AbstractStructBase
      */
     public $GroupPackageCount;
     /**
+     * The StatusDetail
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageStatusDetail
+     */
+    public $StatusDetail;
+    /**
+     * The TrackingIds
+     * Meta informations extracted from the WSDL
+     * - documentation: Only used for INDIVIDUAL_PACKAGES.
+     * - maxOccurs: unbounded
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]
+     */
+    public $TrackingIds;
+    /**
      * The VariableHandlingChargeDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail
      */
     public $VariableHandlingChargeDetail;
     /**
@@ -50,7 +66,7 @@ class RequestedPackageLineItem extends AbstractStructBase
      * nondelivery, misinformation, any failure to provide information, or mis-delivery of information relating to the package. This field is only used for INDIVIDUAL_PACKAGES and PACKAGE_GROUPS. Ignored for PACKAGE_SUMMARY, in which case totalInsuredValue
      * and packageCount on the shipment will be used to determine this value.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $InsuredValue;
     /**
@@ -58,14 +74,14 @@ class RequestedPackageLineItem extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Only used for INDIVIDUAL_PACKAGES and PACKAGE_GROUPS. Ignored for PACKAGE_SUMMARY, in which case total weight and packageCount on the shipment will be used to determine this value.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $Weight;
     /**
      * The Dimensions
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public $Dimensions;
     /**
@@ -81,7 +97,7 @@ class RequestedPackageLineItem extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail[]
      */
     public $AssociatedFreightLineItems;
     /**
@@ -103,32 +119,47 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * The CustomerReferences
      * Meta informations extracted from the WSDL
-     * - maxOccurs: 10
+     * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomerReference[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[]
      */
     public $CustomerReferences;
     /**
      * The SpecialServicesRequested
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
     public $SpecialServicesRequested;
+    /**
+     * The SpecialHandlingDetail
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialHandlingDetail
+     */
+    public $SpecialHandlingDetail;
     /**
      * The ContentRecords
      * Meta informations extracted from the WSDL
      * - documentation: Only used for INDIVIDUAL_PACKAGES and PACKAGE_GROUPS.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ContentRecord[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord[]
      */
     public $ContentRecords;
+    /**
+     * The Commodities
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: unbounded
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Commodity[]
+     */
+    public $Commodities;
     /**
      * The ConveyanceDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipperConveyanceDetail
      */
     public $ConveyanceDetail;
     /**
@@ -136,6 +167,8 @@ class RequestedPackageLineItem extends AbstractStructBase
      * @uses RequestedPackageLineItem::setSequenceNumber()
      * @uses RequestedPackageLineItem::setGroupNumber()
      * @uses RequestedPackageLineItem::setGroupPackageCount()
+     * @uses RequestedPackageLineItem::setStatusDetail()
+     * @uses RequestedPackageLineItem::setTrackingIds()
      * @uses RequestedPackageLineItem::setVariableHandlingChargeDetail()
      * @uses RequestedPackageLineItem::setInsuredValue()
      * @uses RequestedPackageLineItem::setWeight()
@@ -146,30 +179,38 @@ class RequestedPackageLineItem extends AbstractStructBase
      * @uses RequestedPackageLineItem::setItemDescriptionForClearance()
      * @uses RequestedPackageLineItem::setCustomerReferences()
      * @uses RequestedPackageLineItem::setSpecialServicesRequested()
+     * @uses RequestedPackageLineItem::setSpecialHandlingDetail()
      * @uses RequestedPackageLineItem::setContentRecords()
+     * @uses RequestedPackageLineItem::setCommodities()
      * @uses RequestedPackageLineItem::setConveyanceDetail()
      * @param int $sequenceNumber
      * @param int $groupNumber
      * @param int $groupPackageCount
-     * @param \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $insuredValue
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageStatusDetail $statusDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $insuredValue
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
      * @param string $physicalPackaging
-     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail[] $associatedFreightLineItems
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail[] $associatedFreightLineItems
      * @param string $itemDescription
      * @param string $itemDescriptionForClearance
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference[] $customerReferences
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested
-     * @param \CommerceFedEx\FedExPHP\Structs\ContentRecord[] $contentRecords
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[] $customerReferences
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialHandlingDetail $specialHandlingDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord[] $contentRecords
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity[] $commodities
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail
      */
-    public function __construct($sequenceNumber = null, $groupNumber = null, $groupPackageCount = null, \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null, \CommerceFedEx\FedExPHP\Structs\Money $insuredValue = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null, $physicalPackaging = null, array $associatedFreightLineItems = array(), $itemDescription = null, $itemDescriptionForClearance = null, array $customerReferences = array(), \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested = null, array $contentRecords = array(), \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail = null)
+    public function __construct($sequenceNumber = null, $groupNumber = null, $groupPackageCount = null, \NicholasCreativeMedia\FedExPHP\Structs\PackageStatusDetail $statusDetail = null, array $trackingIds = array(), \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $insuredValue = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null, \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null, $physicalPackaging = null, array $associatedFreightLineItems = array(), $itemDescription = null, $itemDescriptionForClearance = null, array $customerReferences = array(), \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested = null, \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialHandlingDetail $specialHandlingDetail = null, array $contentRecords = array(), array $commodities = array(), \NicholasCreativeMedia\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail = null)
     {
         $this
             ->setSequenceNumber($sequenceNumber)
             ->setGroupNumber($groupNumber)
             ->setGroupPackageCount($groupPackageCount)
+            ->setStatusDetail($statusDetail)
+            ->setTrackingIds($trackingIds)
             ->setVariableHandlingChargeDetail($variableHandlingChargeDetail)
             ->setInsuredValue($insuredValue)
             ->setWeight($weight)
@@ -180,7 +221,9 @@ class RequestedPackageLineItem extends AbstractStructBase
             ->setItemDescriptionForClearance($itemDescriptionForClearance)
             ->setCustomerReferences($customerReferences)
             ->setSpecialServicesRequested($specialServicesRequested)
+            ->setSpecialHandlingDetail($specialHandlingDetail)
             ->setContentRecords($contentRecords)
+            ->setCommodities($commodities)
             ->setConveyanceDetail($conveyanceDetail);
     }
     /**
@@ -194,7 +237,7 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Set SequenceNumber value
      * @param int $sequenceNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public function setSequenceNumber($sequenceNumber = null)
     {
@@ -216,7 +259,7 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Set GroupNumber value
      * @param int $groupNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public function setGroupNumber($groupNumber = null)
     {
@@ -238,7 +281,7 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Set GroupPackageCount value
      * @param int $groupPackageCount
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public function setGroupPackageCount($groupPackageCount = null)
     {
@@ -250,8 +293,66 @@ class RequestedPackageLineItem extends AbstractStructBase
         return $this;
     }
     /**
+     * Get StatusDetail value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageStatusDetail|null
+     */
+    public function getStatusDetail()
+    {
+        return $this->StatusDetail;
+    }
+    /**
+     * Set StatusDetail value
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageStatusDetail $statusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
+     */
+    public function setStatusDetail(\NicholasCreativeMedia\FedExPHP\Structs\PackageStatusDetail $statusDetail = null)
+    {
+        $this->StatusDetail = $statusDetail;
+        return $this;
+    }
+    /**
+     * Get TrackingIds value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]|null
+     */
+    public function getTrackingIds()
+    {
+        return $this->TrackingIds;
+    }
+    /**
+     * Set TrackingIds value
+     * @throws \InvalidArgumentException
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
+     */
+    public function setTrackingIds(array $trackingIds = array())
+    {
+        foreach ($trackingIds as $requestedPackageLineItemTrackingIdsItem) {
+            // validation for constraint: itemType
+            if (!$requestedPackageLineItemTrackingIdsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
+                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($requestedPackageLineItemTrackingIdsItem) ? get_class($requestedPackageLineItemTrackingIdsItem) : gettype($requestedPackageLineItemTrackingIdsItem)), __LINE__);
+            }
+        }
+        $this->TrackingIds = $trackingIds;
+        return $this;
+    }
+    /**
+     * Add item to TrackingIds value
+     * @throws \InvalidArgumentException
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
+     */
+    public function addToTrackingIds(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item)
+    {
+        // validation for constraint: itemType
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
+            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        }
+        $this->TrackingIds[] = $item;
+        return $this;
+    }
+    /**
      * Get VariableHandlingChargeDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail|null
      */
     public function getVariableHandlingChargeDetail()
     {
@@ -259,17 +360,17 @@ class RequestedPackageLineItem extends AbstractStructBase
     }
     /**
      * Set VariableHandlingChargeDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
-    public function setVariableHandlingChargeDetail(\CommerceFedEx\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null)
+    public function setVariableHandlingChargeDetail(\NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingChargeDetail $variableHandlingChargeDetail = null)
     {
         $this->VariableHandlingChargeDetail = $variableHandlingChargeDetail;
         return $this;
     }
     /**
      * Get InsuredValue value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getInsuredValue()
     {
@@ -277,17 +378,17 @@ class RequestedPackageLineItem extends AbstractStructBase
     }
     /**
      * Set InsuredValue value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $insuredValue
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $insuredValue
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
-    public function setInsuredValue(\CommerceFedEx\FedExPHP\Structs\Money $insuredValue = null)
+    public function setInsuredValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $insuredValue = null)
     {
         $this->InsuredValue = $insuredValue;
         return $this;
     }
     /**
      * Get Weight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getWeight()
     {
@@ -295,17 +396,17 @@ class RequestedPackageLineItem extends AbstractStructBase
     }
     /**
      * Set Weight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
-    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function setWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this->Weight = $weight;
         return $this;
     }
     /**
      * Get Dimensions value
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions|null
      */
     public function getDimensions()
     {
@@ -313,10 +414,10 @@ class RequestedPackageLineItem extends AbstractStructBase
     }
     /**
      * Set Dimensions value
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
-    public function setDimensions(\CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null)
+    public function setDimensions(\NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null)
     {
         $this->Dimensions = $dimensions;
         return $this;
@@ -331,24 +432,24 @@ class RequestedPackageLineItem extends AbstractStructBase
     }
     /**
      * Set PhysicalPackaging value
-     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $physicalPackaging
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public function setPhysicalPackaging($physicalPackaging = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::valueIsValid($physicalPackaging)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $physicalPackaging, implode(', ', \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::valueIsValid($physicalPackaging)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $physicalPackaging, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::getValidValues())), __LINE__);
         }
         $this->PhysicalPackaging = $physicalPackaging;
         return $this;
     }
     /**
      * Get AssociatedFreightLineItems value
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail[]|null
      */
     public function getAssociatedFreightLineItems()
     {
@@ -357,15 +458,15 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Set AssociatedFreightLineItems value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail[] $associatedFreightLineItems
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail[] $associatedFreightLineItems
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public function setAssociatedFreightLineItems(array $associatedFreightLineItems = array())
     {
         foreach ($associatedFreightLineItems as $requestedPackageLineItemAssociatedFreightLineItemsItem) {
             // validation for constraint: itemType
-            if (!$requestedPackageLineItemAssociatedFreightLineItemsItem instanceof \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail) {
-                throw new \InvalidArgumentException(sprintf('The AssociatedFreightLineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail, "%s" given', is_object($requestedPackageLineItemAssociatedFreightLineItemsItem) ? get_class($requestedPackageLineItemAssociatedFreightLineItemsItem) : gettype($requestedPackageLineItemAssociatedFreightLineItemsItem)), __LINE__);
+            if (!$requestedPackageLineItemAssociatedFreightLineItemsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail) {
+                throw new \InvalidArgumentException(sprintf('The AssociatedFreightLineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail, "%s" given', is_object($requestedPackageLineItemAssociatedFreightLineItemsItem) ? get_class($requestedPackageLineItemAssociatedFreightLineItemsItem) : gettype($requestedPackageLineItemAssociatedFreightLineItemsItem)), __LINE__);
             }
         }
         $this->AssociatedFreightLineItems = $associatedFreightLineItems;
@@ -374,14 +475,14 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Add item to AssociatedFreightLineItems value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
-    public function addToAssociatedFreightLineItems(\CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail $item)
+    public function addToAssociatedFreightLineItems(\NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail) {
-            throw new \InvalidArgumentException(sprintf('The AssociatedFreightLineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail) {
+            throw new \InvalidArgumentException(sprintf('The AssociatedFreightLineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AssociatedFreightLineItems[] = $item;
         return $this;
@@ -397,7 +498,7 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Set ItemDescription value
      * @param string $itemDescription
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public function setItemDescription($itemDescription = null)
     {
@@ -419,7 +520,7 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Set ItemDescriptionForClearance value
      * @param string $itemDescriptionForClearance
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public function setItemDescriptionForClearance($itemDescriptionForClearance = null)
     {
@@ -432,7 +533,7 @@ class RequestedPackageLineItem extends AbstractStructBase
     }
     /**
      * Get CustomerReferences value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[]|null
      */
     public function getCustomerReferences()
     {
@@ -441,15 +542,15 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Set CustomerReferences value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference[] $customerReferences
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[] $customerReferences
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public function setCustomerReferences(array $customerReferences = array())
     {
         foreach ($customerReferences as $requestedPackageLineItemCustomerReferencesItem) {
             // validation for constraint: itemType
-            if (!$requestedPackageLineItemCustomerReferencesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerReference) {
-                throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerReference, "%s" given', is_object($requestedPackageLineItemCustomerReferencesItem) ? get_class($requestedPackageLineItemCustomerReferencesItem) : gettype($requestedPackageLineItemCustomerReferencesItem)), __LINE__);
+            if (!$requestedPackageLineItemCustomerReferencesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference) {
+                throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference, "%s" given', is_object($requestedPackageLineItemCustomerReferencesItem) ? get_class($requestedPackageLineItemCustomerReferencesItem) : gettype($requestedPackageLineItemCustomerReferencesItem)), __LINE__);
             }
         }
         $this->CustomerReferences = $customerReferences;
@@ -458,21 +559,21 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Add item to CustomerReferences value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
-    public function addToCustomerReferences(\CommerceFedEx\FedExPHP\Structs\CustomerReference $item)
+    public function addToCustomerReferences(\NicholasCreativeMedia\FedExPHP\Structs\CustomerReference $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerReference) {
-            throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference) {
+            throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerReferences[] = $item;
         return $this;
     }
     /**
      * Get SpecialServicesRequested value
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested|null
      */
     public function getSpecialServicesRequested()
     {
@@ -480,17 +581,35 @@ class RequestedPackageLineItem extends AbstractStructBase
     }
     /**
      * Set SpecialServicesRequested value
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
-    public function setSpecialServicesRequested(\CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested = null)
+    public function setSpecialServicesRequested(\NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested $specialServicesRequested = null)
     {
         $this->SpecialServicesRequested = $specialServicesRequested;
         return $this;
     }
     /**
+     * Get SpecialHandlingDetail value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialHandlingDetail|null
+     */
+    public function getSpecialHandlingDetail()
+    {
+        return $this->SpecialHandlingDetail;
+    }
+    /**
+     * Set SpecialHandlingDetail value
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialHandlingDetail $specialHandlingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
+     */
+    public function setSpecialHandlingDetail(\NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialHandlingDetail $specialHandlingDetail = null)
+    {
+        $this->SpecialHandlingDetail = $specialHandlingDetail;
+        return $this;
+    }
+    /**
      * Get ContentRecords value
-     * @return \CommerceFedEx\FedExPHP\Structs\ContentRecord[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord[]|null
      */
     public function getContentRecords()
     {
@@ -499,15 +618,15 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Set ContentRecords value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ContentRecord[] $contentRecords
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord[] $contentRecords
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public function setContentRecords(array $contentRecords = array())
     {
         foreach ($contentRecords as $requestedPackageLineItemContentRecordsItem) {
             // validation for constraint: itemType
-            if (!$requestedPackageLineItemContentRecordsItem instanceof \CommerceFedEx\FedExPHP\Structs\ContentRecord) {
-                throw new \InvalidArgumentException(sprintf('The ContentRecords property can only contain items of \CommerceFedEx\FedExPHP\Structs\ContentRecord, "%s" given', is_object($requestedPackageLineItemContentRecordsItem) ? get_class($requestedPackageLineItemContentRecordsItem) : gettype($requestedPackageLineItemContentRecordsItem)), __LINE__);
+            if (!$requestedPackageLineItemContentRecordsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord) {
+                throw new \InvalidArgumentException(sprintf('The ContentRecords property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord, "%s" given', is_object($requestedPackageLineItemContentRecordsItem) ? get_class($requestedPackageLineItemContentRecordsItem) : gettype($requestedPackageLineItemContentRecordsItem)), __LINE__);
             }
         }
         $this->ContentRecords = $contentRecords;
@@ -516,21 +635,61 @@ class RequestedPackageLineItem extends AbstractStructBase
     /**
      * Add item to ContentRecords value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ContentRecord $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
-    public function addToContentRecords(\CommerceFedEx\FedExPHP\Structs\ContentRecord $item)
+    public function addToContentRecords(\NicholasCreativeMedia\FedExPHP\Structs\ContentRecord $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ContentRecord) {
-            throw new \InvalidArgumentException(sprintf('The ContentRecords property can only contain items of \CommerceFedEx\FedExPHP\Structs\ContentRecord, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord) {
+            throw new \InvalidArgumentException(sprintf('The ContentRecords property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ContentRecords[] = $item;
         return $this;
     }
     /**
+     * Get Commodities value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Commodity[]|null
+     */
+    public function getCommodities()
+    {
+        return $this->Commodities;
+    }
+    /**
+     * Set Commodities value
+     * @throws \InvalidArgumentException
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity[] $commodities
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
+     */
+    public function setCommodities(array $commodities = array())
+    {
+        foreach ($commodities as $requestedPackageLineItemCommoditiesItem) {
+            // validation for constraint: itemType
+            if (!$requestedPackageLineItemCommoditiesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Commodity) {
+                throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Commodity, "%s" given', is_object($requestedPackageLineItemCommoditiesItem) ? get_class($requestedPackageLineItemCommoditiesItem) : gettype($requestedPackageLineItemCommoditiesItem)), __LINE__);
+            }
+        }
+        $this->Commodities = $commodities;
+        return $this;
+    }
+    /**
+     * Add item to Commodities value
+     * @throws \InvalidArgumentException
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Commodity $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
+     */
+    public function addToCommodities(\NicholasCreativeMedia\FedExPHP\Structs\Commodity $item)
+    {
+        // validation for constraint: itemType
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Commodity) {
+            throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Commodity, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        }
+        $this->Commodities[] = $item;
+        return $this;
+    }
+    /**
      * Get ConveyanceDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipperConveyanceDetail|null
      */
     public function getConveyanceDetail()
     {
@@ -538,10 +697,10 @@ class RequestedPackageLineItem extends AbstractStructBase
     }
     /**
      * Set ConveyanceDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
-    public function setConveyanceDetail(\CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail = null)
+    public function setConveyanceDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipperConveyanceDetail $conveyanceDetail = null)
     {
         $this->ConveyanceDetail = $conveyanceDetail;
         return $this;
@@ -552,7 +711,7 @@ class RequestedPackageLineItem extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedPackageLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedPackageLineItem
      */
     public static function __set_state(array $array)
     {

@@ -9,6 +9,11 @@ namespace NicholasCreativeMedia\FedExPHP\Enums;
 class EmailOptionType
 {
     /**
+     * Constant for value 'PRODUCE_PAPERLESS_SHIPPING_FORMAT'
+     * @return string 'PRODUCE_PAPERLESS_SHIPPING_FORMAT'
+     */
+    const VALUE_PRODUCE_PAPERLESS_SHIPPING_FORMAT = 'PRODUCE_PAPERLESS_SHIPPING_FORMAT';
+    /**
      * Constant for value 'SUPPRESS_ACCESS_EMAILS'
      * @return string 'SUPPRESS_ACCESS_EMAILS'
      */
@@ -30,6 +35,7 @@ class EmailOptionType
     }
     /**
      * Return allowed values
+     * @uses self::VALUE_PRODUCE_PAPERLESS_SHIPPING_FORMAT
      * @uses self::VALUE_SUPPRESS_ACCESS_EMAILS
      * @uses self::VALUE_SUPPRESS_ADDITIONAL_LANGUAGES
      * @return string[]
@@ -37,6 +43,7 @@ class EmailOptionType
     public static function getValidValues()
     {
         return array(
+            self::VALUE_PRODUCE_PAPERLESS_SHIPPING_FORMAT,
             self::VALUE_SUPPRESS_ACCESS_EMAILS,
             self::VALUE_SUPPRESS_ADDITIONAL_LANGUAGES,
         );

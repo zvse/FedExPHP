@@ -13,7 +13,7 @@ class SignatureOptionDetail extends AbstractStructBase
     /**
      * The OptionType
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $OptionType;
@@ -39,7 +39,7 @@ class SignatureOptionDetail extends AbstractStructBase
     }
     /**
      * Get OptionType value
-     * @return string
+     * @return string|null
      */
     public function getOptionType()
     {
@@ -47,17 +47,17 @@ class SignatureOptionDetail extends AbstractStructBase
     }
     /**
      * Set OptionType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\SignatureOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\SignatureOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $optionType
-     * @return \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail
      */
     public function setOptionType($optionType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\SignatureOptionType::valueIsValid($optionType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $optionType, implode(', ', \CommerceFedEx\FedExPHP\Enums\SignatureOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::valueIsValid($optionType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $optionType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SignatureOptionType::getValidValues())), __LINE__);
         }
         $this->OptionType = $optionType;
         return $this;
@@ -73,7 +73,7 @@ class SignatureOptionDetail extends AbstractStructBase
     /**
      * Set SignatureReleaseNumber value
      * @param string $signatureReleaseNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail
      */
     public function setSignatureReleaseNumber($signatureReleaseNumber = null)
     {
@@ -90,7 +90,7 @@ class SignatureOptionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail
      */
     public static function __set_state(array $array)
     {

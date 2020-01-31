@@ -24,21 +24,21 @@ class PickupAvailabilityReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -53,7 +53,7 @@ class PickupAvailabilityReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption[]
      */
     public $Options;
     /**
@@ -100,17 +100,17 @@ class PickupAvailabilityReply extends AbstractStructBase
      * @uses PickupAvailabilityReply::setOpenTime()
      * @uses PickupAvailabilityReply::setLocalTime()
      * @param string $highestSeverity
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $requestTimestamp
-     * @param \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption[] $options
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption[] $options
      * @param string $closeTimeType
      * @param string $closeTime
      * @param string $openTime
      * @param string $localTime
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $requestTimestamp = null, array $options = array(), $closeTimeType = null, $closeTime = null, $openTime = null, $localTime = null)
+    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $requestTimestamp = null, array $options = array(), $closeTimeType = null, $closeTime = null, $openTime = null, $localTime = null)
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -134,24 +134,24 @@ class PickupAvailabilityReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -160,15 +160,15 @@ class PickupAvailabilityReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $pickupAvailabilityReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$pickupAvailabilityReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($pickupAvailabilityReplyNotificationsItem) ? get_class($pickupAvailabilityReplyNotificationsItem) : gettype($pickupAvailabilityReplyNotificationsItem)), __LINE__);
+            if (!$pickupAvailabilityReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($pickupAvailabilityReplyNotificationsItem) ? get_class($pickupAvailabilityReplyNotificationsItem) : gettype($pickupAvailabilityReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -177,21 +177,21 @@ class PickupAvailabilityReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
-    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -199,17 +199,17 @@ class PickupAvailabilityReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -217,10 +217,10 @@ class PickupAvailabilityReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -236,7 +236,7 @@ class PickupAvailabilityReply extends AbstractStructBase
     /**
      * Set RequestTimestamp value
      * @param string $requestTimestamp
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
     public function setRequestTimestamp($requestTimestamp = null)
     {
@@ -249,7 +249,7 @@ class PickupAvailabilityReply extends AbstractStructBase
     }
     /**
      * Get Options value
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption[]|null
      */
     public function getOptions()
     {
@@ -258,15 +258,15 @@ class PickupAvailabilityReply extends AbstractStructBase
     /**
      * Set Options value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption[] $options
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption[] $options
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
     public function setOptions(array $options = array())
     {
         foreach ($options as $pickupAvailabilityReplyOptionsItem) {
             // validation for constraint: itemType
-            if (!$pickupAvailabilityReplyOptionsItem instanceof \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption) {
-                throw new \InvalidArgumentException(sprintf('The Options property can only contain items of \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption, "%s" given', is_object($pickupAvailabilityReplyOptionsItem) ? get_class($pickupAvailabilityReplyOptionsItem) : gettype($pickupAvailabilityReplyOptionsItem)), __LINE__);
+            if (!$pickupAvailabilityReplyOptionsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption) {
+                throw new \InvalidArgumentException(sprintf('The Options property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption, "%s" given', is_object($pickupAvailabilityReplyOptionsItem) ? get_class($pickupAvailabilityReplyOptionsItem) : gettype($pickupAvailabilityReplyOptionsItem)), __LINE__);
             }
         }
         $this->Options = $options;
@@ -275,14 +275,14 @@ class PickupAvailabilityReply extends AbstractStructBase
     /**
      * Add item to Options value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
-    public function addToOptions(\CommerceFedEx\FedExPHP\Structs\PickupScheduleOption $item)
+    public function addToOptions(\NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption) {
-            throw new \InvalidArgumentException(sprintf('The Options property can only contain items of \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption) {
+            throw new \InvalidArgumentException(sprintf('The Options property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
@@ -297,17 +297,17 @@ class PickupAvailabilityReply extends AbstractStructBase
     }
     /**
      * Set CloseTimeType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CloseTimeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CloseTimeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CloseTimeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CloseTimeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $closeTimeType
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
     public function setCloseTimeType($closeTimeType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CloseTimeType::valueIsValid($closeTimeType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $closeTimeType, implode(', ', \CommerceFedEx\FedExPHP\Enums\CloseTimeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CloseTimeType::valueIsValid($closeTimeType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $closeTimeType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CloseTimeType::getValidValues())), __LINE__);
         }
         $this->CloseTimeType = $closeTimeType;
         return $this;
@@ -323,7 +323,7 @@ class PickupAvailabilityReply extends AbstractStructBase
     /**
      * Set CloseTime value
      * @param string $closeTime
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
     public function setCloseTime($closeTime = null)
     {
@@ -345,7 +345,7 @@ class PickupAvailabilityReply extends AbstractStructBase
     /**
      * Set OpenTime value
      * @param string $openTime
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
     public function setOpenTime($openTime = null)
     {
@@ -367,7 +367,7 @@ class PickupAvailabilityReply extends AbstractStructBase
     /**
      * Set LocalTime value
      * @param string $localTime
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
     public function setLocalTime($localTime = null)
     {
@@ -384,7 +384,7 @@ class PickupAvailabilityReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupAvailabilityReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupAvailabilityReply
      */
     public static function __set_state(array $array)
     {

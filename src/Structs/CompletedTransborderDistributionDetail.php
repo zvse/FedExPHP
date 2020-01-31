@@ -41,7 +41,7 @@ class CompletedTransborderDistributionDetail extends AbstractStructBase
     /**
      * Set DeconsolidationLocationPostalCode value
      * @param string $deconsolidationLocationPostalCode
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTransborderDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTransborderDistributionDetail
      */
     public function setDeconsolidationLocationPostalCode($deconsolidationLocationPostalCode = null)
     {
@@ -58,7 +58,7 @@ class CompletedTransborderDistributionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedTransborderDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedTransborderDistributionDetail
      */
     public static function __set_state(array $array)
     {

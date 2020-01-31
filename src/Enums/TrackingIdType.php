@@ -29,6 +29,16 @@ class TrackingIdType
      */
     const VALUE_GROUND = 'GROUND';
     /**
+     * Constant for value 'INTERNAL'
+     * @return string 'INTERNAL'
+     */
+    const VALUE_INTERNAL = 'INTERNAL';
+    /**
+     * Constant for value 'UNKNOWN'
+     * @return string 'UNKNOWN'
+     */
+    const VALUE_UNKNOWN = 'UNKNOWN';
+    /**
      * Constant for value 'USPS'
      * @return string 'USPS'
      */
@@ -49,6 +59,8 @@ class TrackingIdType
      * @uses self::VALUE_FEDEX
      * @uses self::VALUE_FREIGHT
      * @uses self::VALUE_GROUND
+     * @uses self::VALUE_INTERNAL
+     * @uses self::VALUE_UNKNOWN
      * @uses self::VALUE_USPS
      * @return string[]
      */
@@ -59,6 +71,8 @@ class TrackingIdType
             self::VALUE_FEDEX,
             self::VALUE_FREIGHT,
             self::VALUE_GROUND,
+            self::VALUE_INTERNAL,
+            self::VALUE_UNKNOWN,
             self::VALUE_USPS,
         );
     }

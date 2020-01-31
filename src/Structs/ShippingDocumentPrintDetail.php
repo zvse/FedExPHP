@@ -41,7 +41,7 @@ class ShippingDocumentPrintDetail extends AbstractStructBase
     /**
      * Set PrinterId value
      * @param string $printerId
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPrintDetail
      */
     public function setPrinterId($printerId = null)
     {
@@ -58,7 +58,7 @@ class ShippingDocumentPrintDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPrintDetail
      */
     public static function __set_state(array $array)
     {

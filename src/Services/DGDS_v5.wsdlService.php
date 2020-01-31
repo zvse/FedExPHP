@@ -23,12 +23,12 @@ class Service extends AbstractSoapClientBase
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'DGDS_v5.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\DGDS_v5.wsdlClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\DGDS_v5.wsdlClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('dgds',5,0,0);
+        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('dgds',5,0,0);
     }
     /**
      * Method to call the operation originally named addDangerousGoodsHandlingUnit
@@ -36,10 +36,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\AddDangerousGoodsHandlingUnitRequest $addDangerousGoodsHandlingUnitRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\AddDangerousGoodsHandlingUnitReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddDangerousGoodsHandlingUnitRequest $addDangerousGoodsHandlingUnitRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddDangerousGoodsHandlingUnitReply|bool
      */
-    public function addDangerousGoodsHandlingUnit(\CommerceFedEx\FedExPHP\Structs\AddDangerousGoodsHandlingUnitRequest $addDangerousGoodsHandlingUnitRequest)
+    public function addDangerousGoodsHandlingUnit(\NicholasCreativeMedia\FedExPHP\Structs\AddDangerousGoodsHandlingUnitRequest $addDangerousGoodsHandlingUnitRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->addDangerousGoodsHandlingUnit($addDangerousGoodsHandlingUnitRequest));
@@ -55,10 +55,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ModifyDangerousGoodsShipmentRequest $modifyDangerousGoodsShipmentRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyDangerousGoodsShipmentReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ModifyDangerousGoodsShipmentRequest $modifyDangerousGoodsShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyDangerousGoodsShipmentReply|bool
      */
-    public function modifyDangerousGoodsShipment(\CommerceFedEx\FedExPHP\Structs\ModifyDangerousGoodsShipmentRequest $modifyDangerousGoodsShipmentRequest)
+    public function modifyDangerousGoodsShipment(\NicholasCreativeMedia\FedExPHP\Structs\ModifyDangerousGoodsShipmentRequest $modifyDangerousGoodsShipmentRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->modifyDangerousGoodsShipment($modifyDangerousGoodsShipmentRequest));
@@ -74,10 +74,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsRequest $uploadDangerousGoodsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsRequest $uploadDangerousGoodsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply|bool
      */
-    public function uploadDangerousGoods(\CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsRequest $uploadDangerousGoodsRequest)
+    public function uploadDangerousGoods(\NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsRequest $uploadDangerousGoodsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->uploadDangerousGoods($uploadDangerousGoodsRequest));
@@ -93,10 +93,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ModifyDangerousGoodsHandlingUnitRequest $modifyDangerousGoodsHandlingUnitRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ModifyDangerousGoodsHandlingUnitReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ModifyDangerousGoodsHandlingUnitRequest $modifyDangerousGoodsHandlingUnitRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ModifyDangerousGoodsHandlingUnitReply|bool
      */
-    public function modifyDangerousGoodsHandlingUnit(\CommerceFedEx\FedExPHP\Structs\ModifyDangerousGoodsHandlingUnitRequest $modifyDangerousGoodsHandlingUnitRequest)
+    public function modifyDangerousGoodsHandlingUnit(\NicholasCreativeMedia\FedExPHP\Structs\ModifyDangerousGoodsHandlingUnitRequest $modifyDangerousGoodsHandlingUnitRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->modifyDangerousGoodsHandlingUnit($modifyDangerousGoodsHandlingUnitRequest));
@@ -112,10 +112,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\DeleteDangerousGoodsHandlingUnitRequest $deleteDangerousGoodsHandlingUnitRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteDangerousGoodsHandlingUnitReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeleteDangerousGoodsHandlingUnitRequest $deleteDangerousGoodsHandlingUnitRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteDangerousGoodsHandlingUnitReply|bool
      */
-    public function deleteDangerousGoodsHandlingUnit(\CommerceFedEx\FedExPHP\Structs\DeleteDangerousGoodsHandlingUnitRequest $deleteDangerousGoodsHandlingUnitRequest)
+    public function deleteDangerousGoodsHandlingUnit(\NicholasCreativeMedia\FedExPHP\Structs\DeleteDangerousGoodsHandlingUnitRequest $deleteDangerousGoodsHandlingUnitRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->deleteDangerousGoodsHandlingUnit($deleteDangerousGoodsHandlingUnitRequest));
@@ -131,10 +131,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\DeleteDangerousGoodsRequest $deleteDangerousGoodsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteDangerousGoodsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DeleteDangerousGoodsRequest $deleteDangerousGoodsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteDangerousGoodsReply|bool
      */
-    public function deleteDangerousGoods(\CommerceFedEx\FedExPHP\Structs\DeleteDangerousGoodsRequest $deleteDangerousGoodsRequest)
+    public function deleteDangerousGoods(\NicholasCreativeMedia\FedExPHP\Structs\DeleteDangerousGoodsRequest $deleteDangerousGoodsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->deleteDangerousGoods($deleteDangerousGoodsRequest));
@@ -152,10 +152,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\RetrieveDangerousGoodsRequest $retrieveDangerousGoodsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveDangerousGoodsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RetrieveDangerousGoodsRequest $retrieveDangerousGoodsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveDangerousGoodsReply|bool
      */
-    public function retrieveDangerousGoods(\CommerceFedEx\FedExPHP\Structs\RetrieveDangerousGoodsRequest $retrieveDangerousGoodsRequest)
+    public function retrieveDangerousGoods(\NicholasCreativeMedia\FedExPHP\Structs\RetrieveDangerousGoodsRequest $retrieveDangerousGoodsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->retrieveDangerousGoods($retrieveDangerousGoodsRequest));
@@ -175,7 +175,7 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::saveLastError()
      * @param string $validateDangerousGoodsReply
      * @param string $validateDangerousGoodsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ValidateDangerousGoodsReply|bool
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidateDangerousGoodsReply|bool
      */
     public function retrieveDangerousGoods_c46545f679278b0badc9822394654cb4($validateDangerousGoodsReply, $validateDangerousGoodsRequest)
     {
@@ -190,7 +190,7 @@ class Service extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \CommerceFedEx\FedExPHP\Structs\AddDangerousGoodsHandlingUnitReply|\CommerceFedEx\FedExPHP\Structs\DeleteDangerousGoodsHandlingUnitReply|\CommerceFedEx\FedExPHP\Structs\DeleteDangerousGoodsReply|\CommerceFedEx\FedExPHP\Structs\ModifyDangerousGoodsHandlingUnitReply|\CommerceFedEx\FedExPHP\Structs\ModifyDangerousGoodsShipmentReply|\CommerceFedEx\FedExPHP\Structs\RetrieveDangerousGoodsReply|\CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply|\CommerceFedEx\FedExPHP\Structs\ValidateDangerousGoodsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddDangerousGoodsHandlingUnitReply|\NicholasCreativeMedia\FedExPHP\Structs\DeleteDangerousGoodsHandlingUnitReply|\NicholasCreativeMedia\FedExPHP\Structs\DeleteDangerousGoodsReply|\NicholasCreativeMedia\FedExPHP\Structs\ModifyDangerousGoodsHandlingUnitReply|\NicholasCreativeMedia\FedExPHP\Structs\ModifyDangerousGoodsShipmentReply|\NicholasCreativeMedia\FedExPHP\Structs\RetrieveDangerousGoodsReply|\NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply|\NicholasCreativeMedia\FedExPHP\Structs\ValidateDangerousGoodsReply
      */
     public function getResult()
     {

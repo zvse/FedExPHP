@@ -13,7 +13,7 @@ class InternationalControlledExportDetail extends AbstractStructBase
     /**
      * The Type
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $Type;
@@ -69,7 +69,7 @@ class InternationalControlledExportDetail extends AbstractStructBase
     }
     /**
      * Get Type value
-     * @return string
+     * @return string|null
      */
     public function getType()
     {
@@ -77,17 +77,17 @@ class InternationalControlledExportDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\InternationalControlledExportType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\InternationalControlledExportType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\InternationalControlledExportType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\InternationalControlledExportType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalControlledExportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalControlledExportDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\InternationalControlledExportType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\InternationalControlledExportType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\InternationalControlledExportType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\InternationalControlledExportType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -103,7 +103,7 @@ class InternationalControlledExportDetail extends AbstractStructBase
     /**
      * Set ForeignTradeZoneCode value
      * @param string $foreignTradeZoneCode
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalControlledExportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalControlledExportDetail
      */
     public function setForeignTradeZoneCode($foreignTradeZoneCode = null)
     {
@@ -125,7 +125,7 @@ class InternationalControlledExportDetail extends AbstractStructBase
     /**
      * Set EntryNumber value
      * @param string $entryNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalControlledExportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalControlledExportDetail
      */
     public function setEntryNumber($entryNumber = null)
     {
@@ -147,7 +147,7 @@ class InternationalControlledExportDetail extends AbstractStructBase
     /**
      * Set LicenseOrPermitNumber value
      * @param string $licenseOrPermitNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalControlledExportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalControlledExportDetail
      */
     public function setLicenseOrPermitNumber($licenseOrPermitNumber = null)
     {
@@ -169,7 +169,7 @@ class InternationalControlledExportDetail extends AbstractStructBase
     /**
      * Set LicenseOrPermitExpirationDate value
      * @param string $licenseOrPermitExpirationDate
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalControlledExportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalControlledExportDetail
      */
     public function setLicenseOrPermitExpirationDate($licenseOrPermitExpirationDate = null)
     {
@@ -186,7 +186,7 @@ class InternationalControlledExportDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalControlledExportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalControlledExportDetail
      */
     public static function __set_state(array $array)
     {

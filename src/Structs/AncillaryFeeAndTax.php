@@ -28,7 +28,7 @@ class AncillaryFeeAndTax extends AbstractStructBase
      * The Amount
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $Amount;
     /**
@@ -38,9 +38,9 @@ class AncillaryFeeAndTax extends AbstractStructBase
      * @uses AncillaryFeeAndTax::setAmount()
      * @param string $type
      * @param string $description
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
      */
-    public function __construct($type = null, $description = null, \CommerceFedEx\FedExPHP\Structs\Money $amount = null)
+    public function __construct($type = null, $description = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
     {
         $this
             ->setType($type)
@@ -57,17 +57,17 @@ class AncillaryFeeAndTax extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\AncillaryFeeAndTaxType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\AncillaryFeeAndTaxType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AncillaryFeeAndTaxType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AncillaryFeeAndTaxType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\AncillaryFeeAndTaxType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\AncillaryFeeAndTaxType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\AncillaryFeeAndTaxType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AncillaryFeeAndTaxType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -83,7 +83,7 @@ class AncillaryFeeAndTax extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax
      */
     public function setDescription($description = null)
     {
@@ -96,7 +96,7 @@ class AncillaryFeeAndTax extends AbstractStructBase
     }
     /**
      * Get Amount value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getAmount()
     {
@@ -104,10 +104,10 @@ class AncillaryFeeAndTax extends AbstractStructBase
     }
     /**
      * Set Amount value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
-     * @return \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax
      */
-    public function setAmount(\CommerceFedEx\FedExPHP\Structs\Money $amount = null)
+    public function setAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
     {
         $this->Amount = $amount;
         return $this;
@@ -118,7 +118,7 @@ class AncillaryFeeAndTax extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax
      */
     public static function __set_state(array $array)
     {

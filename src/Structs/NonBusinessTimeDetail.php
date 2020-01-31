@@ -52,7 +52,7 @@ class NonBusinessTimeDetail extends AbstractStructBase
     /**
      * Set PersonDays value
      * @param int $personDays
-     * @return \CommerceFedEx\FedExPHP\Structs\NonBusinessTimeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NonBusinessTimeDetail
      */
     public function setPersonDays($personDays = null)
     {
@@ -74,7 +74,7 @@ class NonBusinessTimeDetail extends AbstractStructBase
     /**
      * Set PersonHours value
      * @param int $personHours
-     * @return \CommerceFedEx\FedExPHP\Structs\NonBusinessTimeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NonBusinessTimeDetail
      */
     public function setPersonHours($personHours = null)
     {
@@ -91,7 +91,7 @@ class NonBusinessTimeDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\NonBusinessTimeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NonBusinessTimeDetail
      */
     public static function __set_state(array $array)
     {

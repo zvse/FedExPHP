@@ -26,7 +26,7 @@ class ConsolidationSpecialServicesRequested extends AbstractStructBase
      * The PriorityAlertDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail
      */
     public $PriorityAlertDetail;
     /**
@@ -34,9 +34,9 @@ class ConsolidationSpecialServicesRequested extends AbstractStructBase
      * @uses ConsolidationSpecialServicesRequested::setSpecialServiceTypes()
      * @uses ConsolidationSpecialServicesRequested::setPriorityAlertDetail()
      * @param string[] $specialServiceTypes
-     * @param \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
      */
-    public function __construct(array $specialServiceTypes = array(), \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
+    public function __construct(array $specialServiceTypes = array(), \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
     {
         $this
             ->setSpecialServiceTypes($specialServiceTypes)
@@ -52,46 +52,46 @@ class ConsolidationSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set SpecialServiceTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationSpecialServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationSpecialServiceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationSpecialServiceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $specialServiceTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested
      */
     public function setSpecialServiceTypes(array $specialServiceTypes = array())
     {
         $invalidValues = array();
         foreach ($specialServiceTypes as $consolidationSpecialServicesRequestedSpecialServiceTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationSpecialServiceType::valueIsValid($consolidationSpecialServicesRequestedSpecialServiceTypesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationSpecialServiceType::valueIsValid($consolidationSpecialServicesRequestedSpecialServiceTypesItem)) {
                 $invalidValues[] = var_export($consolidationSpecialServicesRequestedSpecialServiceTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationSpecialServiceType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->SpecialServiceTypes = $specialServiceTypes;
         return $this;
     }
     /**
      * Add item to SpecialServiceTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationSpecialServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationSpecialServiceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationSpecialServiceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested
      */
     public function addToSpecialServiceTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationSpecialServiceType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationSpecialServiceType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationSpecialServiceType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->SpecialServiceTypes[] = $item;
         return $this;
     }
     /**
      * Get PriorityAlertDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail|null
      */
     public function getPriorityAlertDetail()
     {
@@ -99,10 +99,10 @@ class ConsolidationSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set PriorityAlertDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested
      */
-    public function setPriorityAlertDetail(\CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
+    public function setPriorityAlertDetail(\NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
     {
         $this->PriorityAlertDetail = $priorityAlertDetail;
         return $this;
@@ -113,7 +113,7 @@ class ConsolidationSpecialServicesRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested
      */
     public static function __set_state(array $array)
     {

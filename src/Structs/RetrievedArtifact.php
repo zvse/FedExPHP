@@ -29,7 +29,7 @@ class RetrievedArtifact extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
@@ -69,7 +69,7 @@ class RetrievedArtifact extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ArtifactPart[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart[]
      */
     public $Parts;
     /**
@@ -84,12 +84,12 @@ class RetrievedArtifact extends AbstractStructBase
      * @uses RetrievedArtifact::setParts()
      * @param string $accessReference
      * @param string $highestSeverity
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
      * @param string $type
      * @param string $format
      * @param string $formatSpecification
      * @param string $referenceId
-     * @param \CommerceFedEx\FedExPHP\Structs\ArtifactPart[] $parts
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart[] $parts
      */
     public function __construct($accessReference = null, $highestSeverity = null, array $notifications = array(), $type = null, $format = null, $formatSpecification = null, $referenceId = null, array $parts = array())
     {
@@ -114,7 +114,7 @@ class RetrievedArtifact extends AbstractStructBase
     /**
      * Set AccessReference value
      * @param string $accessReference
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
     public function setAccessReference($accessReference = null)
     {
@@ -135,24 +135,24 @@ class RetrievedArtifact extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]|null
      */
     public function getNotifications()
     {
@@ -161,15 +161,15 @@ class RetrievedArtifact extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $retrievedArtifactNotificationsItem) {
             // validation for constraint: itemType
-            if (!$retrievedArtifactNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($retrievedArtifactNotificationsItem) ? get_class($retrievedArtifactNotificationsItem) : gettype($retrievedArtifactNotificationsItem)), __LINE__);
+            if (!$retrievedArtifactNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($retrievedArtifactNotificationsItem) ? get_class($retrievedArtifactNotificationsItem) : gettype($retrievedArtifactNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -178,14 +178,14 @@ class RetrievedArtifact extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
-    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
@@ -200,17 +200,17 @@ class RetrievedArtifact extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ArtifactType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ArtifactType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ArtifactType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ArtifactType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ArtifactType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\ArtifactType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ArtifactType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ArtifactType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -225,17 +225,17 @@ class RetrievedArtifact extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ArtifactFormatType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ArtifactFormatType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ArtifactFormatType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ArtifactFormatType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $format
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
     public function setFormat($format = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ArtifactFormatType::valueIsValid($format)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $format, implode(', ', \CommerceFedEx\FedExPHP\Enums\ArtifactFormatType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ArtifactFormatType::valueIsValid($format)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $format, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ArtifactFormatType::getValidValues())), __LINE__);
         }
         $this->Format = $format;
         return $this;
@@ -251,7 +251,7 @@ class RetrievedArtifact extends AbstractStructBase
     /**
      * Set FormatSpecification value
      * @param string $formatSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
     public function setFormatSpecification($formatSpecification = null)
     {
@@ -273,7 +273,7 @@ class RetrievedArtifact extends AbstractStructBase
     /**
      * Set ReferenceId value
      * @param string $referenceId
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
     public function setReferenceId($referenceId = null)
     {
@@ -286,7 +286,7 @@ class RetrievedArtifact extends AbstractStructBase
     }
     /**
      * Get Parts value
-     * @return \CommerceFedEx\FedExPHP\Structs\ArtifactPart[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart[]|null
      */
     public function getParts()
     {
@@ -295,15 +295,15 @@ class RetrievedArtifact extends AbstractStructBase
     /**
      * Set Parts value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ArtifactPart[] $parts
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart[] $parts
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
     public function setParts(array $parts = array())
     {
         foreach ($parts as $retrievedArtifactPartsItem) {
             // validation for constraint: itemType
-            if (!$retrievedArtifactPartsItem instanceof \CommerceFedEx\FedExPHP\Structs\ArtifactPart) {
-                throw new \InvalidArgumentException(sprintf('The Parts property can only contain items of \CommerceFedEx\FedExPHP\Structs\ArtifactPart, "%s" given', is_object($retrievedArtifactPartsItem) ? get_class($retrievedArtifactPartsItem) : gettype($retrievedArtifactPartsItem)), __LINE__);
+            if (!$retrievedArtifactPartsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart) {
+                throw new \InvalidArgumentException(sprintf('The Parts property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart, "%s" given', is_object($retrievedArtifactPartsItem) ? get_class($retrievedArtifactPartsItem) : gettype($retrievedArtifactPartsItem)), __LINE__);
             }
         }
         $this->Parts = $parts;
@@ -312,14 +312,14 @@ class RetrievedArtifact extends AbstractStructBase
     /**
      * Add item to Parts value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ArtifactPart $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
-    public function addToParts(\CommerceFedEx\FedExPHP\Structs\ArtifactPart $item)
+    public function addToParts(\NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ArtifactPart) {
-            throw new \InvalidArgumentException(sprintf('The Parts property can only contain items of \CommerceFedEx\FedExPHP\Structs\ArtifactPart, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart) {
+            throw new \InvalidArgumentException(sprintf('The Parts property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Parts[] = $item;
         return $this;
@@ -330,7 +330,7 @@ class RetrievedArtifact extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrievedArtifact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrievedArtifact
      */
     public static function __set_state(array $array)
     {

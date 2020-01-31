@@ -73,17 +73,17 @@ class ShippingDocumentStorageDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentStorageDetailType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentStorageDetailType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentStorageDetailType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentStorageDetailType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShippingDocumentStorageDetailType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentStorageDetailType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentStorageDetailType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentStorageDetailType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -99,7 +99,7 @@ class ShippingDocumentStorageDetail extends AbstractStructBase
     /**
      * Set FilePath value
      * @param string $filePath
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail
      */
     public function setFilePath($filePath = null)
     {
@@ -120,17 +120,17 @@ class ShippingDocumentStorageDetail extends AbstractStructBase
     }
     /**
      * Set FileNaming value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentNamingType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentNamingType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentNamingType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentNamingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $fileNaming
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail
      */
     public function setFileNaming($fileNaming = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShippingDocumentNamingType::valueIsValid($fileNaming)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $fileNaming, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentNamingType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentNamingType::valueIsValid($fileNaming)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $fileNaming, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentNamingType::getValidValues())), __LINE__);
         }
         $this->FileNaming = $fileNaming;
         return $this;
@@ -146,7 +146,7 @@ class ShippingDocumentStorageDetail extends AbstractStructBase
     /**
      * Set FileSuffix value
      * @param string $fileSuffix
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail
      */
     public function setFileSuffix($fileSuffix = null)
     {
@@ -163,7 +163,7 @@ class ShippingDocumentStorageDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail
      */
     public static function __set_state(array $array)
     {

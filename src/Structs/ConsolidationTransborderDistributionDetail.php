@@ -16,7 +16,7 @@ class ConsolidationTransborderDistributionDetail extends AbstractStructBase
      * The SpecialServicesRequested
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
      */
     public $SpecialServicesRequested;
     /**
@@ -31,10 +31,10 @@ class ConsolidationTransborderDistributionDetail extends AbstractStructBase
      * Constructor method for ConsolidationTransborderDistributionDetail
      * @uses ConsolidationTransborderDistributionDetail::setSpecialServicesRequested()
      * @uses ConsolidationTransborderDistributionDetail::setRouting()
-     * @param \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested
      * @param string $routing
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested = null, $routing = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested = null, $routing = null)
     {
         $this
             ->setSpecialServicesRequested($specialServicesRequested)
@@ -42,7 +42,7 @@ class ConsolidationTransborderDistributionDetail extends AbstractStructBase
     }
     /**
      * Get SpecialServicesRequested value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested|null
      */
     public function getSpecialServicesRequested()
     {
@@ -50,10 +50,10 @@ class ConsolidationTransborderDistributionDetail extends AbstractStructBase
     }
     /**
      * Set SpecialServicesRequested value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationTransborderDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationTransborderDistributionDetail
      */
-    public function setSpecialServicesRequested(\CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested = null)
+    public function setSpecialServicesRequested(\NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested $specialServicesRequested = null)
     {
         $this->SpecialServicesRequested = $specialServicesRequested;
         return $this;
@@ -68,17 +68,17 @@ class ConsolidationTransborderDistributionDetail extends AbstractStructBase
     }
     /**
      * Set Routing value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransborderDistributionRoutingType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransborderDistributionRoutingType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionRoutingType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionRoutingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $routing
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationTransborderDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationTransborderDistributionDetail
      */
     public function setRouting($routing = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TransborderDistributionRoutingType::valueIsValid($routing)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $routing, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransborderDistributionRoutingType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionRoutingType::valueIsValid($routing)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $routing, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionRoutingType::getValidValues())), __LINE__);
         }
         $this->Routing = $routing;
         return $this;
@@ -89,7 +89,7 @@ class ConsolidationTransborderDistributionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationTransborderDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationTransborderDistributionDetail
      */
     public static function __set_state(array $array)
     {

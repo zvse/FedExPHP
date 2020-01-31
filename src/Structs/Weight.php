@@ -16,7 +16,7 @@ class Weight extends AbstractStructBase
      * The Units
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the unit of measure associated with a weight value.
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $Units;
@@ -24,7 +24,7 @@ class Weight extends AbstractStructBase
      * The Value
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the weight value of a package/shipment.
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var float
      */
     public $Value;
@@ -43,7 +43,7 @@ class Weight extends AbstractStructBase
     }
     /**
      * Get Units value
-     * @return string
+     * @return string|null
      */
     public function getUnits()
     {
@@ -51,24 +51,24 @@ class Weight extends AbstractStructBase
     }
     /**
      * Set Units value
-     * @uses \CommerceFedEx\FedExPHP\Enums\WeightUnits::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\WeightUnits::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\WeightUnits::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\WeightUnits::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $units
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public function setUnits($units = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\WeightUnits::valueIsValid($units)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \CommerceFedEx\FedExPHP\Enums\WeightUnits::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\WeightUnits::valueIsValid($units)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\WeightUnits::getValidValues())), __LINE__);
         }
         $this->Units = $units;
         return $this;
     }
     /**
      * Get Value value
-     * @return float
+     * @return float|null
      */
     public function getValue()
     {
@@ -77,7 +77,7 @@ class Weight extends AbstractStructBase
     /**
      * Set Value value
      * @param float $value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public function setValue($value = null)
     {
@@ -90,7 +90,7 @@ class Weight extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public static function __set_state(array $array)
     {

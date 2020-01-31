@@ -18,28 +18,28 @@ class RetrieveJobResultsRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -56,7 +56,7 @@ class RetrieveJobResultsRequest extends AbstractStructBase
      * - documentation: Specifies the filters to be used for retrieving artifacts.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter[]
      */
     public $Filters;
     /**
@@ -67,14 +67,14 @@ class RetrieveJobResultsRequest extends AbstractStructBase
      * @uses RetrieveJobResultsRequest::setTransactionDetail()
      * @uses RetrieveJobResultsRequest::setJobId()
      * @uses RetrieveJobResultsRequest::setFilters()
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $jobId
-     * @param \CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter[] $filters
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter[] $filters
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $jobId = null, array $filters = array())
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $jobId = null, array $filters = array())
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -86,7 +86,7 @@ class RetrieveJobResultsRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -94,17 +94,17 @@ class RetrieveJobResultsRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest
      */
-    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -112,17 +112,17 @@ class RetrieveJobResultsRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest
      */
-    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -130,17 +130,17 @@ class RetrieveJobResultsRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -148,10 +148,10 @@ class RetrieveJobResultsRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -167,7 +167,7 @@ class RetrieveJobResultsRequest extends AbstractStructBase
     /**
      * Set JobId value
      * @param string $jobId
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest
      */
     public function setJobId($jobId = null)
     {
@@ -180,7 +180,7 @@ class RetrieveJobResultsRequest extends AbstractStructBase
     }
     /**
      * Get Filters value
-     * @return \CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter[]|null
      */
     public function getFilters()
     {
@@ -189,15 +189,15 @@ class RetrieveJobResultsRequest extends AbstractStructBase
     /**
      * Set Filters value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter[] $filters
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter[] $filters
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest
      */
     public function setFilters(array $filters = array())
     {
         foreach ($filters as $retrieveJobResultsRequestFiltersItem) {
             // validation for constraint: itemType
-            if (!$retrieveJobResultsRequestFiltersItem instanceof \CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter) {
-                throw new \InvalidArgumentException(sprintf('The Filters property can only contain items of \CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter, "%s" given', is_object($retrieveJobResultsRequestFiltersItem) ? get_class($retrieveJobResultsRequestFiltersItem) : gettype($retrieveJobResultsRequestFiltersItem)), __LINE__);
+            if (!$retrieveJobResultsRequestFiltersItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter) {
+                throw new \InvalidArgumentException(sprintf('The Filters property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter, "%s" given', is_object($retrieveJobResultsRequestFiltersItem) ? get_class($retrieveJobResultsRequestFiltersItem) : gettype($retrieveJobResultsRequestFiltersItem)), __LINE__);
             }
         }
         $this->Filters = $filters;
@@ -206,14 +206,14 @@ class RetrieveJobResultsRequest extends AbstractStructBase
     /**
      * Add item to Filters value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest
      */
-    public function addToFilters(\CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter $item)
+    public function addToFilters(\NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter) {
-            throw new \InvalidArgumentException(sprintf('The Filters property can only contain items of \CommerceFedEx\FedExPHP\Structs\ArtifactRetrievalFilter, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter) {
+            throw new \InvalidArgumentException(sprintf('The Filters property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ArtifactRetrievalFilter, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Filters[] = $item;
         return $this;
@@ -224,7 +224,7 @@ class RetrieveJobResultsRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RetrieveJobResultsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RetrieveJobResultsRequest
      */
     public static function __set_state(array $array)
     {

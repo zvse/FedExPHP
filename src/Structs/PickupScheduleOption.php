@@ -119,17 +119,17 @@ class PickupScheduleOption extends AbstractStructBase
     }
     /**
      * Set Carrier value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrier
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public function setCarrier($carrier = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrier)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrier, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrier)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrier, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->Carrier = $carrier;
         return $this;
@@ -145,7 +145,7 @@ class PickupScheduleOption extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public function setDescription($description = null)
     {
@@ -166,17 +166,17 @@ class PickupScheduleOption extends AbstractStructBase
     }
     /**
      * Set ScheduleDay value
-     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $scheduleDay
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public function setScheduleDay($scheduleDay = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\PickupRequestType::valueIsValid($scheduleDay)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $scheduleDay, implode(', ', \CommerceFedEx\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::valueIsValid($scheduleDay)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $scheduleDay, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PickupRequestType::getValidValues())), __LINE__);
         }
         $this->ScheduleDay = $scheduleDay;
         return $this;
@@ -192,7 +192,7 @@ class PickupScheduleOption extends AbstractStructBase
     /**
      * Set Available value
      * @param bool $available
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public function setAvailable($available = null)
     {
@@ -210,7 +210,7 @@ class PickupScheduleOption extends AbstractStructBase
     /**
      * Set PickupDate value
      * @param string $pickupDate
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public function setPickupDate($pickupDate = null)
     {
@@ -232,7 +232,7 @@ class PickupScheduleOption extends AbstractStructBase
     /**
      * Set CutOffTime value
      * @param string $cutOffTime
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public function setCutOffTime($cutOffTime = null)
     {
@@ -254,7 +254,7 @@ class PickupScheduleOption extends AbstractStructBase
     /**
      * Set AccessTime value
      * @param string $accessTime
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public function setAccessTime($accessTime = null)
     {
@@ -276,7 +276,7 @@ class PickupScheduleOption extends AbstractStructBase
     /**
      * Set ResidentialAvailable value
      * @param bool $residentialAvailable
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public function setResidentialAvailable($residentialAvailable = null)
     {
@@ -293,17 +293,17 @@ class PickupScheduleOption extends AbstractStructBase
     }
     /**
      * Set CountryRelationship value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CountryRelationshipType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CountryRelationshipType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CountryRelationshipType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CountryRelationshipType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $countryRelationship
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public function setCountryRelationship($countryRelationship = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CountryRelationshipType::valueIsValid($countryRelationship)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $countryRelationship, implode(', ', \CommerceFedEx\FedExPHP\Enums\CountryRelationshipType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CountryRelationshipType::valueIsValid($countryRelationship)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $countryRelationship, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CountryRelationshipType::getValidValues())), __LINE__);
         }
         $this->CountryRelationship = $countryRelationship;
         return $this;
@@ -314,7 +314,7 @@ class PickupScheduleOption extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupScheduleOption
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupScheduleOption
      */
     public static function __set_state(array $array)
     {

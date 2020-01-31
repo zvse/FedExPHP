@@ -18,7 +18,7 @@ class Notification extends AbstractStructBase
      * - documentation: The severity of this notification. This can indicate success or failure or some other information about the request. The values that can be returned are SUCCESS - Your transaction succeeded with no other applicable information. NOTE
      * - Additional information that may be of interest to you about your transaction. WARNING - Additional information that you need to know about your transaction that you may need to take action on. ERROR - Information about an error that occurred while
      * processing your transaction. FAILURE - FedEx was unable to process your transaction at this time due to a system failure. Please try again later
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var string
      */
     public $Severity;
@@ -26,7 +26,7 @@ class Notification extends AbstractStructBase
      * The Source
      * Meta informations extracted from the WSDL
      * - documentation: Indicates the source of this notification. Combined with the Code it uniquely identifies this notification
-     * - minOccurs: 0
+     * - minOccurs: 1
      * @var string
      */
     public $Source;
@@ -60,7 +60,7 @@ class Notification extends AbstractStructBase
      * - documentation: A collection of name/value pairs that provide specific data to help the client determine the nature of an error (or warning, etc.) without having to parse the message string.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\NotificationParameter[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter[]
      */
     public $MessageParameters;
     /**
@@ -76,7 +76,7 @@ class Notification extends AbstractStructBase
      * @param string $code
      * @param string $message
      * @param string $localizedMessage
-     * @param \CommerceFedEx\FedExPHP\Structs\NotificationParameter[] $messageParameters
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter[] $messageParameters
      */
     public function __construct($severity = null, $source = null, $code = null, $message = null, $localizedMessage = null, array $messageParameters = array())
     {
@@ -90,7 +90,7 @@ class Notification extends AbstractStructBase
     }
     /**
      * Get Severity value
-     * @return string|null
+     * @return string
      */
     public function getSeverity()
     {
@@ -98,24 +98,24 @@ class Notification extends AbstractStructBase
     }
     /**
      * Set Severity value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $severity
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification
      */
     public function setSeverity($severity = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($severity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $severity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($severity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $severity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->Severity = $severity;
         return $this;
     }
     /**
      * Get Source value
-     * @return string|null
+     * @return string
      */
     public function getSource()
     {
@@ -124,7 +124,7 @@ class Notification extends AbstractStructBase
     /**
      * Set Source value
      * @param string $source
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification
      */
     public function setSource($source = null)
     {
@@ -146,7 +146,7 @@ class Notification extends AbstractStructBase
     /**
      * Set Code value
      * @param string $code
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification
      */
     public function setCode($code = null)
     {
@@ -168,7 +168,7 @@ class Notification extends AbstractStructBase
     /**
      * Set Message value
      * @param string $message
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification
      */
     public function setMessage($message = null)
     {
@@ -190,7 +190,7 @@ class Notification extends AbstractStructBase
     /**
      * Set LocalizedMessage value
      * @param string $localizedMessage
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification
      */
     public function setLocalizedMessage($localizedMessage = null)
     {
@@ -203,7 +203,7 @@ class Notification extends AbstractStructBase
     }
     /**
      * Get MessageParameters value
-     * @return \CommerceFedEx\FedExPHP\Structs\NotificationParameter[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter[]|null
      */
     public function getMessageParameters()
     {
@@ -212,15 +212,15 @@ class Notification extends AbstractStructBase
     /**
      * Set MessageParameters value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\NotificationParameter[] $messageParameters
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter[] $messageParameters
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification
      */
     public function setMessageParameters(array $messageParameters = array())
     {
         foreach ($messageParameters as $notificationMessageParametersItem) {
             // validation for constraint: itemType
-            if (!$notificationMessageParametersItem instanceof \CommerceFedEx\FedExPHP\Structs\NotificationParameter) {
-                throw new \InvalidArgumentException(sprintf('The MessageParameters property can only contain items of \CommerceFedEx\FedExPHP\Structs\NotificationParameter, "%s" given', is_object($notificationMessageParametersItem) ? get_class($notificationMessageParametersItem) : gettype($notificationMessageParametersItem)), __LINE__);
+            if (!$notificationMessageParametersItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter) {
+                throw new \InvalidArgumentException(sprintf('The MessageParameters property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter, "%s" given', is_object($notificationMessageParametersItem) ? get_class($notificationMessageParametersItem) : gettype($notificationMessageParametersItem)), __LINE__);
             }
         }
         $this->MessageParameters = $messageParameters;
@@ -229,14 +229,14 @@ class Notification extends AbstractStructBase
     /**
      * Add item to MessageParameters value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\NotificationParameter $item
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification
      */
-    public function addToMessageParameters(\CommerceFedEx\FedExPHP\Structs\NotificationParameter $item)
+    public function addToMessageParameters(\NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\NotificationParameter) {
-            throw new \InvalidArgumentException(sprintf('The MessageParameters property can only contain items of \CommerceFedEx\FedExPHP\Structs\NotificationParameter, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter) {
+            throw new \InvalidArgumentException(sprintf('The MessageParameters property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\NotificationParameter, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->MessageParameters[] = $item;
         return $this;
@@ -247,7 +247,7 @@ class Notification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification
      */
     public static function __set_state(array $array)
     {

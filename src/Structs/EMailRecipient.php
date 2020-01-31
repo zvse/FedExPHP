@@ -33,7 +33,7 @@ class EMailRecipient extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies how the email notification for the pending shipment need to be processed.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\EmailOptionsRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\EmailOptionsRequested
      */
     public $OptionsRequested;
     /**
@@ -41,7 +41,7 @@ class EMailRecipient extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Localization and language details specified by the recipient of the EMail.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Localization
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Localization
      */
     public $Localization;
     /**
@@ -52,10 +52,10 @@ class EMailRecipient extends AbstractStructBase
      * @uses EMailRecipient::setLocalization()
      * @param string $emailAddress
      * @param string $role
-     * @param \CommerceFedEx\FedExPHP\Structs\EmailOptionsRequested $optionsRequested
-     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EmailOptionsRequested $optionsRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
      */
-    public function __construct($emailAddress = null, $role = null, \CommerceFedEx\FedExPHP\Structs\EmailOptionsRequested $optionsRequested = null, \CommerceFedEx\FedExPHP\Structs\Localization $localization = null)
+    public function __construct($emailAddress = null, $role = null, \NicholasCreativeMedia\FedExPHP\Structs\EmailOptionsRequested $optionsRequested = null, \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
     {
         $this
             ->setEmailAddress($emailAddress)
@@ -74,7 +74,7 @@ class EMailRecipient extends AbstractStructBase
     /**
      * Set EmailAddress value
      * @param string $emailAddress
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailRecipient
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient
      */
     public function setEmailAddress($emailAddress = null)
     {
@@ -95,24 +95,24 @@ class EMailRecipient extends AbstractStructBase
     }
     /**
      * Set Role value
-     * @uses \CommerceFedEx\FedExPHP\Enums\AccessorRoleType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\AccessorRoleType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AccessorRoleType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AccessorRoleType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $role
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailRecipient
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient
      */
     public function setRole($role = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\AccessorRoleType::valueIsValid($role)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \CommerceFedEx\FedExPHP\Enums\AccessorRoleType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\AccessorRoleType::valueIsValid($role)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $role, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AccessorRoleType::getValidValues())), __LINE__);
         }
         $this->Role = $role;
         return $this;
     }
     /**
      * Get OptionsRequested value
-     * @return \CommerceFedEx\FedExPHP\Structs\EmailOptionsRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EmailOptionsRequested|null
      */
     public function getOptionsRequested()
     {
@@ -120,17 +120,17 @@ class EMailRecipient extends AbstractStructBase
     }
     /**
      * Set OptionsRequested value
-     * @param \CommerceFedEx\FedExPHP\Structs\EmailOptionsRequested $optionsRequested
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailRecipient
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EmailOptionsRequested $optionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient
      */
-    public function setOptionsRequested(\CommerceFedEx\FedExPHP\Structs\EmailOptionsRequested $optionsRequested = null)
+    public function setOptionsRequested(\NicholasCreativeMedia\FedExPHP\Structs\EmailOptionsRequested $optionsRequested = null)
     {
         $this->OptionsRequested = $optionsRequested;
         return $this;
     }
     /**
      * Get Localization value
-     * @return \CommerceFedEx\FedExPHP\Structs\Localization|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Localization|null
      */
     public function getLocalization()
     {
@@ -138,10 +138,10 @@ class EMailRecipient extends AbstractStructBase
     }
     /**
      * Set Localization value
-     * @param \CommerceFedEx\FedExPHP\Structs\Localization $localization
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailRecipient
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Localization $localization
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient
      */
-    public function setLocalization(\CommerceFedEx\FedExPHP\Structs\Localization $localization = null)
+    public function setLocalization(\NicholasCreativeMedia\FedExPHP\Structs\Localization $localization = null)
     {
         $this->Localization = $localization;
         return $this;
@@ -152,7 +152,7 @@ class EMailRecipient extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\EMailRecipient
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EMailRecipient
      */
     public static function __set_state(array $array)
     {

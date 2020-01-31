@@ -14,10 +14,20 @@ class PaymentType
      */
     const VALUE_ACCOUNT = 'ACCOUNT';
     /**
+     * Constant for value 'CASH'
+     * @return string 'CASH'
+     */
+    const VALUE_CASH = 'CASH';
+    /**
      * Constant for value 'COLLECT'
      * @return string 'COLLECT'
      */
     const VALUE_COLLECT = 'COLLECT';
+    /**
+     * Constant for value 'CREDIT_CARD'
+     * @return string 'CREDIT_CARD'
+     */
+    const VALUE_CREDIT_CARD = 'CREDIT_CARD';
     /**
      * Constant for value 'RECIPIENT'
      * @return string 'RECIPIENT'
@@ -46,7 +56,9 @@ class PaymentType
     /**
      * Return allowed values
      * @uses self::VALUE_ACCOUNT
+     * @uses self::VALUE_CASH
      * @uses self::VALUE_COLLECT
+     * @uses self::VALUE_CREDIT_CARD
      * @uses self::VALUE_RECIPIENT
      * @uses self::VALUE_SENDER
      * @uses self::VALUE_THIRD_PARTY
@@ -56,7 +68,9 @@ class PaymentType
     {
         return array(
             self::VALUE_ACCOUNT,
+            self::VALUE_CASH,
             self::VALUE_COLLECT,
+            self::VALUE_CREDIT_CARD,
             self::VALUE_RECIPIENT,
             self::VALUE_SENDER,
             self::VALUE_THIRD_PARTY,

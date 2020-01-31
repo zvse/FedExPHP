@@ -35,7 +35,7 @@ class EdtTaxDetail extends AbstractStructBase
      * The TaxableValue
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TaxableValue;
     /**
@@ -56,7 +56,7 @@ class EdtTaxDetail extends AbstractStructBase
      * The Amount
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $Amount;
     /**
@@ -71,12 +71,12 @@ class EdtTaxDetail extends AbstractStructBase
      * @param string $taxType
      * @param string $effectiveDate
      * @param string $name
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $taxableValue
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $taxableValue
      * @param string $description
      * @param string $formula
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
      */
-    public function __construct($taxType = null, $effectiveDate = null, $name = null, \CommerceFedEx\FedExPHP\Structs\Money $taxableValue = null, $description = null, $formula = null, \CommerceFedEx\FedExPHP\Structs\Money $amount = null)
+    public function __construct($taxType = null, $effectiveDate = null, $name = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $taxableValue = null, $description = null, $formula = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
     {
         $this
             ->setTaxType($taxType)
@@ -97,17 +97,17 @@ class EdtTaxDetail extends AbstractStructBase
     }
     /**
      * Set TaxType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\EdtTaxType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\EdtTaxType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EdtTaxType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EdtTaxType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $taxType
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail
      */
     public function setTaxType($taxType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\EdtTaxType::valueIsValid($taxType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $taxType, implode(', ', \CommerceFedEx\FedExPHP\Enums\EdtTaxType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\EdtTaxType::valueIsValid($taxType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $taxType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EdtTaxType::getValidValues())), __LINE__);
         }
         $this->TaxType = $taxType;
         return $this;
@@ -123,7 +123,7 @@ class EdtTaxDetail extends AbstractStructBase
     /**
      * Set EffectiveDate value
      * @param string $effectiveDate
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail
      */
     public function setEffectiveDate($effectiveDate = null)
     {
@@ -145,7 +145,7 @@ class EdtTaxDetail extends AbstractStructBase
     /**
      * Set Name value
      * @param string $name
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail
      */
     public function setName($name = null)
     {
@@ -158,7 +158,7 @@ class EdtTaxDetail extends AbstractStructBase
     }
     /**
      * Get TaxableValue value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTaxableValue()
     {
@@ -166,10 +166,10 @@ class EdtTaxDetail extends AbstractStructBase
     }
     /**
      * Set TaxableValue value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $taxableValue
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $taxableValue
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail
      */
-    public function setTaxableValue(\CommerceFedEx\FedExPHP\Structs\Money $taxableValue = null)
+    public function setTaxableValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $taxableValue = null)
     {
         $this->TaxableValue = $taxableValue;
         return $this;
@@ -185,7 +185,7 @@ class EdtTaxDetail extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail
      */
     public function setDescription($description = null)
     {
@@ -207,7 +207,7 @@ class EdtTaxDetail extends AbstractStructBase
     /**
      * Set Formula value
      * @param string $formula
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail
      */
     public function setFormula($formula = null)
     {
@@ -220,7 +220,7 @@ class EdtTaxDetail extends AbstractStructBase
     }
     /**
      * Get Amount value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getAmount()
     {
@@ -228,10 +228,10 @@ class EdtTaxDetail extends AbstractStructBase
     }
     /**
      * Set Amount value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail
      */
-    public function setAmount(\CommerceFedEx\FedExPHP\Structs\Money $amount = null)
+    public function setAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
     {
         $this->Amount = $amount;
         return $this;
@@ -242,7 +242,7 @@ class EdtTaxDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtTaxDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtTaxDetail
      */
     public static function __set_state(array $array)
     {

@@ -22,7 +22,7 @@ class DeliveryRequestDetail extends AbstractStructBase
      * The RedirectToHoldAtLocationDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
      */
     public $RedirectToHoldAtLocationDetail;
     /**
@@ -30,9 +30,9 @@ class DeliveryRequestDetail extends AbstractStructBase
      * @uses DeliveryRequestDetail::setType()
      * @uses DeliveryRequestDetail::setRedirectToHoldAtLocationDetail()
      * @param string $type
-     * @param \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail $redirectToHoldAtLocationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail $redirectToHoldAtLocationDetail
      */
-    public function __construct($type = null, \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail $redirectToHoldAtLocationDetail = null)
+    public function __construct($type = null, \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail $redirectToHoldAtLocationDetail = null)
     {
         $this
             ->setType($type)
@@ -48,24 +48,24 @@ class DeliveryRequestDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DeliveryOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DeliveryOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DeliveryOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DeliveryOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryRequestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryRequestDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DeliveryOptionType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\DeliveryOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DeliveryOptionType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DeliveryOptionType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
     }
     /**
      * Get RedirectToHoldAtLocationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail|null
      */
     public function getRedirectToHoldAtLocationDetail()
     {
@@ -73,10 +73,10 @@ class DeliveryRequestDetail extends AbstractStructBase
     }
     /**
      * Set RedirectToHoldAtLocationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail $redirectToHoldAtLocationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryRequestDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail $redirectToHoldAtLocationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryRequestDetail
      */
-    public function setRedirectToHoldAtLocationDetail(\CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail $redirectToHoldAtLocationDetail = null)
+    public function setRedirectToHoldAtLocationDetail(\NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail $redirectToHoldAtLocationDetail = null)
     {
         $this->RedirectToHoldAtLocationDetail = $redirectToHoldAtLocationDetail;
         return $this;
@@ -87,7 +87,7 @@ class DeliveryRequestDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DeliveryRequestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeliveryRequestDetail
      */
     public static function __set_state(array $array)
     {

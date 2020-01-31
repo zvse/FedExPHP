@@ -36,7 +36,7 @@ class Message extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\MessageParameter[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter[]
      */
     public $Parameters;
     /**
@@ -48,7 +48,7 @@ class Message extends AbstractStructBase
      * @param string $code
      * @param string $text
      * @param string $localizedText
-     * @param \CommerceFedEx\FedExPHP\Structs\MessageParameter[] $parameters
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter[] $parameters
      */
     public function __construct($code = null, $text = null, $localizedText = null, array $parameters = array())
     {
@@ -69,7 +69,7 @@ class Message extends AbstractStructBase
     /**
      * Set Code value
      * @param string $code
-     * @return \CommerceFedEx\FedExPHP\Structs\Message
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Message
      */
     public function setCode($code = null)
     {
@@ -91,7 +91,7 @@ class Message extends AbstractStructBase
     /**
      * Set Text value
      * @param string $text
-     * @return \CommerceFedEx\FedExPHP\Structs\Message
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Message
      */
     public function setText($text = null)
     {
@@ -113,7 +113,7 @@ class Message extends AbstractStructBase
     /**
      * Set LocalizedText value
      * @param string $localizedText
-     * @return \CommerceFedEx\FedExPHP\Structs\Message
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Message
      */
     public function setLocalizedText($localizedText = null)
     {
@@ -126,7 +126,7 @@ class Message extends AbstractStructBase
     }
     /**
      * Get Parameters value
-     * @return \CommerceFedEx\FedExPHP\Structs\MessageParameter[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter[]|null
      */
     public function getParameters()
     {
@@ -135,15 +135,15 @@ class Message extends AbstractStructBase
     /**
      * Set Parameters value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\MessageParameter[] $parameters
-     * @return \CommerceFedEx\FedExPHP\Structs\Message
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter[] $parameters
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Message
      */
     public function setParameters(array $parameters = array())
     {
         foreach ($parameters as $messageParametersItem) {
             // validation for constraint: itemType
-            if (!$messageParametersItem instanceof \CommerceFedEx\FedExPHP\Structs\MessageParameter) {
-                throw new \InvalidArgumentException(sprintf('The Parameters property can only contain items of \CommerceFedEx\FedExPHP\Structs\MessageParameter, "%s" given', is_object($messageParametersItem) ? get_class($messageParametersItem) : gettype($messageParametersItem)), __LINE__);
+            if (!$messageParametersItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter) {
+                throw new \InvalidArgumentException(sprintf('The Parameters property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter, "%s" given', is_object($messageParametersItem) ? get_class($messageParametersItem) : gettype($messageParametersItem)), __LINE__);
             }
         }
         $this->Parameters = $parameters;
@@ -152,14 +152,14 @@ class Message extends AbstractStructBase
     /**
      * Add item to Parameters value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\MessageParameter $item
-     * @return \CommerceFedEx\FedExPHP\Structs\Message
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Message
      */
-    public function addToParameters(\CommerceFedEx\FedExPHP\Structs\MessageParameter $item)
+    public function addToParameters(\NicholasCreativeMedia\FedExPHP\Structs\MessageParameter $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\MessageParameter) {
-            throw new \InvalidArgumentException(sprintf('The Parameters property can only contain items of \CommerceFedEx\FedExPHP\Structs\MessageParameter, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter) {
+            throw new \InvalidArgumentException(sprintf('The Parameters property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\MessageParameter, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Parameters[] = $item;
         return $this;
@@ -170,7 +170,7 @@ class Message extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Message
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Message
      */
     public static function __set_state(array $array)
     {

@@ -61,7 +61,7 @@ class LicenseOrPermitDetail extends AbstractStructBase
     /**
      * Set Number value
      * @param string $number
-     * @return \CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail
      */
     public function setNumber($number = null)
     {
@@ -83,7 +83,7 @@ class LicenseOrPermitDetail extends AbstractStructBase
     /**
      * Set EffectiveDate value
      * @param string $effectiveDate
-     * @return \CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail
      */
     public function setEffectiveDate($effectiveDate = null)
     {
@@ -105,7 +105,7 @@ class LicenseOrPermitDetail extends AbstractStructBase
     /**
      * Set ExpirationDate value
      * @param string $expirationDate
-     * @return \CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail
      */
     public function setExpirationDate($expirationDate = null)
     {
@@ -122,7 +122,7 @@ class LicenseOrPermitDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\LicenseOrPermitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LicenseOrPermitDetail
      */
     public static function __set_state(array $array)
     {

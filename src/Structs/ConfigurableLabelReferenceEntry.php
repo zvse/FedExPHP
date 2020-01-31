@@ -13,7 +13,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     /**
      * The ZoneNumber
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var int
      */
     public $ZoneNumber;
@@ -59,7 +59,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     }
     /**
      * Get ZoneNumber value
-     * @return int
+     * @return int|null
      */
     public function getZoneNumber()
     {
@@ -68,7 +68,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     /**
      * Set ZoneNumber value
      * @param int $zoneNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public function setZoneNumber($zoneNumber = null)
     {
@@ -90,7 +90,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     /**
      * Set Header value
      * @param string $header
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public function setHeader($header = null)
     {
@@ -112,7 +112,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     /**
      * Set DataField value
      * @param string $dataField
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public function setDataField($dataField = null)
     {
@@ -134,7 +134,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
     /**
      * Set LiteralValue value
      * @param string $literalValue
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public function setLiteralValue($literalValue = null)
     {
@@ -151,7 +151,7 @@ class ConfigurableLabelReferenceEntry extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfigurableLabelReferenceEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfigurableLabelReferenceEntry
      */
     public static function __set_state(array $array)
     {

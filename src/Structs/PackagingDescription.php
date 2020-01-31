@@ -30,7 +30,7 @@ class PackagingDescription extends AbstractStructBase
      * - documentation: Branded, translated, and/or localized names for this packaging.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ProductName[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ProductName[]
      */
     public $Names;
     /**
@@ -56,7 +56,7 @@ class PackagingDescription extends AbstractStructBase
      * @uses PackagingDescription::setAstraDescription()
      * @param string $packagingType
      * @param string $code
-     * @param \CommerceFedEx\FedExPHP\Structs\ProductName[] $names
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ProductName[] $names
      * @param string $description
      * @param string $astraDescription
      */
@@ -80,7 +80,7 @@ class PackagingDescription extends AbstractStructBase
     /**
      * Set PackagingType value
      * @param string $packagingType
-     * @return \CommerceFedEx\FedExPHP\Structs\PackagingDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackagingDescription
      */
     public function setPackagingType($packagingType = null)
     {
@@ -102,7 +102,7 @@ class PackagingDescription extends AbstractStructBase
     /**
      * Set Code value
      * @param string $code
-     * @return \CommerceFedEx\FedExPHP\Structs\PackagingDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackagingDescription
      */
     public function setCode($code = null)
     {
@@ -115,7 +115,7 @@ class PackagingDescription extends AbstractStructBase
     }
     /**
      * Get Names value
-     * @return \CommerceFedEx\FedExPHP\Structs\ProductName[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProductName[]|null
      */
     public function getNames()
     {
@@ -124,15 +124,15 @@ class PackagingDescription extends AbstractStructBase
     /**
      * Set Names value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ProductName[] $names
-     * @return \CommerceFedEx\FedExPHP\Structs\PackagingDescription
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ProductName[] $names
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackagingDescription
      */
     public function setNames(array $names = array())
     {
         foreach ($names as $packagingDescriptionNamesItem) {
             // validation for constraint: itemType
-            if (!$packagingDescriptionNamesItem instanceof \CommerceFedEx\FedExPHP\Structs\ProductName) {
-                throw new \InvalidArgumentException(sprintf('The Names property can only contain items of \CommerceFedEx\FedExPHP\Structs\ProductName, "%s" given', is_object($packagingDescriptionNamesItem) ? get_class($packagingDescriptionNamesItem) : gettype($packagingDescriptionNamesItem)), __LINE__);
+            if (!$packagingDescriptionNamesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ProductName) {
+                throw new \InvalidArgumentException(sprintf('The Names property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ProductName, "%s" given', is_object($packagingDescriptionNamesItem) ? get_class($packagingDescriptionNamesItem) : gettype($packagingDescriptionNamesItem)), __LINE__);
             }
         }
         $this->Names = $names;
@@ -141,14 +141,14 @@ class PackagingDescription extends AbstractStructBase
     /**
      * Add item to Names value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ProductName $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PackagingDescription
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ProductName $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackagingDescription
      */
-    public function addToNames(\CommerceFedEx\FedExPHP\Structs\ProductName $item)
+    public function addToNames(\NicholasCreativeMedia\FedExPHP\Structs\ProductName $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ProductName) {
-            throw new \InvalidArgumentException(sprintf('The Names property can only contain items of \CommerceFedEx\FedExPHP\Structs\ProductName, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ProductName) {
+            throw new \InvalidArgumentException(sprintf('The Names property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ProductName, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Names[] = $item;
         return $this;
@@ -164,7 +164,7 @@ class PackagingDescription extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\PackagingDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackagingDescription
      */
     public function setDescription($description = null)
     {
@@ -186,7 +186,7 @@ class PackagingDescription extends AbstractStructBase
     /**
      * Set AstraDescription value
      * @param string $astraDescription
-     * @return \CommerceFedEx\FedExPHP\Structs\PackagingDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackagingDescription
      */
     public function setAstraDescription($astraDescription = null)
     {
@@ -203,7 +203,7 @@ class PackagingDescription extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PackagingDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackagingDescription
      */
     public static function __set_state(array $array)
     {

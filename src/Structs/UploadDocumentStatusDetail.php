@@ -130,7 +130,7 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     /**
      * Set LineNumber value
      * @param int $lineNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setLineNumber($lineNumber = null)
     {
@@ -152,7 +152,7 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     /**
      * Set CustomerReference value
      * @param string $customerReference
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setCustomerReference($customerReference = null)
     {
@@ -173,17 +173,17 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     }
     /**
      * Set DocumentProducer value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentProducerType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $documentProducer
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setDocumentProducer($documentProducer = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid($documentProducer)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentProducer, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentProducerType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentProducerType::valueIsValid($documentProducer)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentProducer, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentProducerType::getValidValues())), __LINE__);
         }
         $this->DocumentProducer = $documentProducer;
         return $this;
@@ -198,17 +198,17 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     }
     /**
      * Set DocumentType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $documentType
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setDocumentType($documentType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentType::valueIsValid($documentType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentType, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentType::valueIsValid($documentType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentType::getValidValues())), __LINE__);
         }
         $this->DocumentType = $documentType;
         return $this;
@@ -224,7 +224,7 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     /**
      * Set FileName value
      * @param string $fileName
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setFileName($fileName = null)
     {
@@ -245,17 +245,17 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     }
     /**
      * Set Status value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentStatusType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentStatusType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentStatusType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentStatusType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $status
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setStatus($status = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentStatusType::valueIsValid($status)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentStatusType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentStatusType::valueIsValid($status)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $status, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentStatusType::getValidValues())), __LINE__);
         }
         $this->Status = $status;
         return $this;
@@ -270,17 +270,17 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     }
     /**
      * Set StatusInfo value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentStatusInfoType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentStatusInfoType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentStatusInfoType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentStatusInfoType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $statusInfo
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setStatusInfo($statusInfo = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentStatusInfoType::valueIsValid($statusInfo)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $statusInfo, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentStatusInfoType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentStatusInfoType::valueIsValid($statusInfo)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $statusInfo, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentStatusInfoType::getValidValues())), __LINE__);
         }
         $this->StatusInfo = $statusInfo;
         return $this;
@@ -296,7 +296,7 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     /**
      * Set Message value
      * @param string $message
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setMessage($message = null)
     {
@@ -318,7 +318,7 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     /**
      * Set DocumentId value
      * @param string $documentId
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setDocumentId($documentId = null)
     {
@@ -339,17 +339,17 @@ class UploadDocumentStatusDetail extends AbstractStructBase
     }
     /**
      * Set DocumentIdProducer value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentIdProducer::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentIdProducer::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentIdProducer::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentIdProducer::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $documentIdProducer
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public function setDocumentIdProducer($documentIdProducer = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentIdProducer::valueIsValid($documentIdProducer)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentIdProducer, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentIdProducer::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentIdProducer::valueIsValid($documentIdProducer)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $documentIdProducer, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentIdProducer::getValidValues())), __LINE__);
         }
         $this->DocumentIdProducer = $documentIdProducer;
         return $this;
@@ -360,7 +360,7 @@ class UploadDocumentStatusDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentStatusDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentStatusDetail
      */
     public static function __set_state(array $array)
     {

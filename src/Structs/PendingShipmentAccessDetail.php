@@ -17,13 +17,13 @@ class PendingShipmentAccessDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail[]
      */
     public $AccessorDetails;
     /**
      * Constructor method for PendingShipmentAccessDetail
      * @uses PendingShipmentAccessDetail::setAccessorDetails()
-     * @param \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail[] $accessorDetails
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail[] $accessorDetails
      */
     public function __construct(array $accessorDetails = array())
     {
@@ -32,7 +32,7 @@ class PendingShipmentAccessDetail extends AbstractStructBase
     }
     /**
      * Get AccessorDetails value
-     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail[]|null
      */
     public function getAccessorDetails()
     {
@@ -41,15 +41,15 @@ class PendingShipmentAccessDetail extends AbstractStructBase
     /**
      * Set AccessorDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail[] $accessorDetails
-     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail[] $accessorDetails
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessDetail
      */
     public function setAccessorDetails(array $accessorDetails = array())
     {
         foreach ($accessorDetails as $pendingShipmentAccessDetailAccessorDetailsItem) {
             // validation for constraint: itemType
-            if (!$pendingShipmentAccessDetailAccessorDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail) {
-                throw new \InvalidArgumentException(sprintf('The AccessorDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail, "%s" given', is_object($pendingShipmentAccessDetailAccessorDetailsItem) ? get_class($pendingShipmentAccessDetailAccessorDetailsItem) : gettype($pendingShipmentAccessDetailAccessorDetailsItem)), __LINE__);
+            if (!$pendingShipmentAccessDetailAccessorDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail) {
+                throw new \InvalidArgumentException(sprintf('The AccessorDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail, "%s" given', is_object($pendingShipmentAccessDetailAccessorDetailsItem) ? get_class($pendingShipmentAccessDetailAccessorDetailsItem) : gettype($pendingShipmentAccessDetailAccessorDetailsItem)), __LINE__);
             }
         }
         $this->AccessorDetails = $accessorDetails;
@@ -58,14 +58,14 @@ class PendingShipmentAccessDetail extends AbstractStructBase
     /**
      * Add item to AccessorDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessDetail
      */
-    public function addToAccessorDetails(\CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail $item)
+    public function addToAccessorDetails(\NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail) {
-            throw new \InvalidArgumentException(sprintf('The AccessorDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessorDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail) {
+            throw new \InvalidArgumentException(sprintf('The AccessorDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessorDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AccessorDetails[] = $item;
         return $this;
@@ -76,7 +76,7 @@ class PendingShipmentAccessDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PendingShipmentAccessDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PendingShipmentAccessDetail
      */
     public static function __set_state(array $array)
     {

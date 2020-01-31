@@ -58,7 +58,7 @@ class UniqueTrackingNumber extends AbstractStructBase
     /**
      * Set TrackingNumber value
      * @param string $trackingNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber
      */
     public function setTrackingNumber($trackingNumber = null)
     {
@@ -80,7 +80,7 @@ class UniqueTrackingNumber extends AbstractStructBase
     /**
      * Set TrackingNumberUniqueIdentifier value
      * @param string $trackingNumberUniqueIdentifier
-     * @return \CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber
      */
     public function setTrackingNumberUniqueIdentifier($trackingNumberUniqueIdentifier = null)
     {
@@ -102,7 +102,7 @@ class UniqueTrackingNumber extends AbstractStructBase
     /**
      * Set ShipDate value
      * @param string $shipDate
-     * @return \CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber
      */
     public function setShipDate($shipDate = null)
     {
@@ -119,7 +119,7 @@ class UniqueTrackingNumber extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UniqueTrackingNumber
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UniqueTrackingNumber
      */
     public static function __set_state(array $array)
     {

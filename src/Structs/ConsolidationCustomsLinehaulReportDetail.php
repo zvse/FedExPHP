@@ -14,7 +14,7 @@ class ConsolidationCustomsLinehaulReportDetail extends AbstractStructBase
      * The Format
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
@@ -22,7 +22,7 @@ class ConsolidationCustomsLinehaulReportDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]
      */
     public $CustomerImageUsages;
     /**
@@ -37,11 +37,11 @@ class ConsolidationCustomsLinehaulReportDetail extends AbstractStructBase
      * @uses ConsolidationCustomsLinehaulReportDetail::setFormat()
      * @uses ConsolidationCustomsLinehaulReportDetail::setCustomerImageUsages()
      * @uses ConsolidationCustomsLinehaulReportDetail::setSignatureName()
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
      * @param string $signatureName
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null, array $customerImageUsages = array(), $signatureName = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null, array $customerImageUsages = array(), $signatureName = null)
     {
         $this
             ->setFormat($format)
@@ -50,7 +50,7 @@ class ConsolidationCustomsLinehaulReportDetail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -58,17 +58,17 @@ class ConsolidationCustomsLinehaulReportDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
      */
-    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
     }
     /**
      * Get CustomerImageUsages value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[]|null
      */
     public function getCustomerImageUsages()
     {
@@ -77,15 +77,15 @@ class ConsolidationCustomsLinehaulReportDetail extends AbstractStructBase
     /**
      * Set CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage[] $customerImageUsages
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
      */
     public function setCustomerImageUsages(array $customerImageUsages = array())
     {
         foreach ($customerImageUsages as $consolidationCustomsLinehaulReportDetailCustomerImageUsagesItem) {
             // validation for constraint: itemType
-            if (!$consolidationCustomsLinehaulReportDetailCustomerImageUsagesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($consolidationCustomsLinehaulReportDetailCustomerImageUsagesItem) ? get_class($consolidationCustomsLinehaulReportDetailCustomerImageUsagesItem) : gettype($consolidationCustomsLinehaulReportDetailCustomerImageUsagesItem)), __LINE__);
+            if (!$consolidationCustomsLinehaulReportDetailCustomerImageUsagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+                throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($consolidationCustomsLinehaulReportDetailCustomerImageUsagesItem) ? get_class($consolidationCustomsLinehaulReportDetailCustomerImageUsagesItem) : gettype($consolidationCustomsLinehaulReportDetailCustomerImageUsagesItem)), __LINE__);
             }
         }
         $this->CustomerImageUsages = $customerImageUsages;
@@ -94,14 +94,14 @@ class ConsolidationCustomsLinehaulReportDetail extends AbstractStructBase
     /**
      * Add item to CustomerImageUsages value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
      */
-    public function addToCustomerImageUsages(\CommerceFedEx\FedExPHP\Structs\CustomerImageUsage $item)
+    public function addToCustomerImageUsages(\NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage) {
-            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage) {
+            throw new \InvalidArgumentException(sprintf('The CustomerImageUsages property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerImageUsage, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerImageUsages[] = $item;
         return $this;
@@ -117,7 +117,7 @@ class ConsolidationCustomsLinehaulReportDetail extends AbstractStructBase
     /**
      * Set SignatureName value
      * @param string $signatureName
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
      */
     public function setSignatureName($signatureName = null)
     {
@@ -134,7 +134,7 @@ class ConsolidationCustomsLinehaulReportDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
      */
     public static function __set_state(array $array)
     {

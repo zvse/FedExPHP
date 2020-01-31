@@ -17,7 +17,7 @@ class HazardousCommodityContent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Identifies and describes an individual hazardous commodity.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public $Description;
     /**
@@ -25,7 +25,7 @@ class HazardousCommodityContent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the amount of the commodity in alternate units.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail
      */
     public $Quantity;
     /**
@@ -34,7 +34,7 @@ class HazardousCommodityContent extends AbstractStructBase
      * - documentation: This describes the inner receptacle details for a hazardous commodity within the dangerous goods container.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail[]
      */
     public $InnerReceptacles;
     /**
@@ -42,7 +42,7 @@ class HazardousCommodityContent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Customer-provided specifications for handling individual commodities.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail
      */
     public $Options;
     /**
@@ -50,7 +50,7 @@ class HazardousCommodityContent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the details of any radio active materials within the commodity.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail
      */
     public $RadionuclideDetail;
     /**
@@ -58,7 +58,7 @@ class HazardousCommodityContent extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The total mass of the contained explosive substances, without the mass of any casings, bullets, shells, etc.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail
      */
     public $NetExplosiveDetail;
     /**
@@ -69,14 +69,14 @@ class HazardousCommodityContent extends AbstractStructBase
      * @uses HazardousCommodityContent::setOptions()
      * @uses HazardousCommodityContent::setRadionuclideDetail()
      * @uses HazardousCommodityContent::setNetExplosiveDetail()
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription $description
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail[] $innerReceptacles
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail $options
-     * @param \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail $radionuclideDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription $description
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail[] $innerReceptacles
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail $options
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail $radionuclideDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription $description = null, \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null, array $innerReceptacles = array(), \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail $options = null, \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail $radionuclideDetail = null, \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription $description = null, \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null, array $innerReceptacles = array(), \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail $options = null, \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail $radionuclideDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail = null)
     {
         $this
             ->setDescription($description)
@@ -88,7 +88,7 @@ class HazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Get Description value
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription|null
      */
     public function getDescription()
     {
@@ -96,17 +96,17 @@ class HazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Set Description value
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription $description
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription $description
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityContent
      */
-    public function setDescription(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription $description = null)
+    public function setDescription(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription $description = null)
     {
         $this->Description = $description;
         return $this;
     }
     /**
      * Get Quantity value
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail|null
      */
     public function getQuantity()
     {
@@ -114,17 +114,17 @@ class HazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Set Quantity value
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityContent
      */
-    public function setQuantity(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null)
+    public function setQuantity(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityQuantityDetail $quantity = null)
     {
         $this->Quantity = $quantity;
         return $this;
     }
     /**
      * Get InnerReceptacles value
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail[]|null
      */
     public function getInnerReceptacles()
     {
@@ -133,15 +133,15 @@ class HazardousCommodityContent extends AbstractStructBase
     /**
      * Set InnerReceptacles value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail[] $innerReceptacles
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail[] $innerReceptacles
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityContent
      */
     public function setInnerReceptacles(array $innerReceptacles = array())
     {
         foreach ($innerReceptacles as $hazardousCommodityContentInnerReceptaclesItem) {
             // validation for constraint: itemType
-            if (!$hazardousCommodityContentInnerReceptaclesItem instanceof \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail) {
-                throw new \InvalidArgumentException(sprintf('The InnerReceptacles property can only contain items of \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail, "%s" given', is_object($hazardousCommodityContentInnerReceptaclesItem) ? get_class($hazardousCommodityContentInnerReceptaclesItem) : gettype($hazardousCommodityContentInnerReceptaclesItem)), __LINE__);
+            if (!$hazardousCommodityContentInnerReceptaclesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail) {
+                throw new \InvalidArgumentException(sprintf('The InnerReceptacles property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail, "%s" given', is_object($hazardousCommodityContentInnerReceptaclesItem) ? get_class($hazardousCommodityContentInnerReceptaclesItem) : gettype($hazardousCommodityContentInnerReceptaclesItem)), __LINE__);
             }
         }
         $this->InnerReceptacles = $innerReceptacles;
@@ -150,21 +150,21 @@ class HazardousCommodityContent extends AbstractStructBase
     /**
      * Add item to InnerReceptacles value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityContent
      */
-    public function addToInnerReceptacles(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail $item)
+    public function addToInnerReceptacles(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail) {
-            throw new \InvalidArgumentException(sprintf('The InnerReceptacles property can only contain items of \CommerceFedEx\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail) {
+            throw new \InvalidArgumentException(sprintf('The InnerReceptacles property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityInnerReceptacleDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->InnerReceptacles[] = $item;
         return $this;
     }
     /**
      * Get Options value
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail|null
      */
     public function getOptions()
     {
@@ -172,17 +172,17 @@ class HazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail $options
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail $options
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityContent
      */
-    public function setOptions(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityOptionDetail $options = null)
+    public function setOptions(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityOptionDetail $options = null)
     {
         $this->Options = $options;
         return $this;
     }
     /**
      * Get RadionuclideDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail|null
      */
     public function getRadionuclideDetail()
     {
@@ -190,17 +190,17 @@ class HazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Set RadionuclideDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\RadionuclideDetail $radionuclideDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail $radionuclideDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityContent
      */
-    public function setRadionuclideDetail(\CommerceFedEx\FedExPHP\Structs\RadionuclideDetail $radionuclideDetail = null)
+    public function setRadionuclideDetail(\NicholasCreativeMedia\FedExPHP\Structs\RadionuclideDetail $radionuclideDetail = null)
     {
         $this->RadionuclideDetail = $radionuclideDetail;
         return $this;
     }
     /**
      * Get NetExplosiveDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail|null
      */
     public function getNetExplosiveDetail()
     {
@@ -208,10 +208,10 @@ class HazardousCommodityContent extends AbstractStructBase
     }
     /**
      * Set NetExplosiveDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityContent
      */
-    public function setNetExplosiveDetail(\CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail = null)
+    public function setNetExplosiveDetail(\NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail $netExplosiveDetail = null)
     {
         $this->NetExplosiveDetail = $netExplosiveDetail;
         return $this;
@@ -222,7 +222,7 @@ class HazardousCommodityContent extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityContent
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityContent
      */
     public static function __set_state(array $array)
     {

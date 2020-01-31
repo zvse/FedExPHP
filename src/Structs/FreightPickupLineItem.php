@@ -36,7 +36,7 @@ class FreightPickupLineItem extends AbstractStructBase
      * The Destination
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Address
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
      */
     public $Destination;
     /**
@@ -57,7 +57,7 @@ class FreightPickupLineItem extends AbstractStructBase
      * The Weight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $Weight;
     /**
@@ -85,7 +85,7 @@ class FreightPickupLineItem extends AbstractStructBase
      * The SpecialServicesRequested
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested
      */
     public $SpecialServicesRequested;
     /**
@@ -112,17 +112,17 @@ class FreightPickupLineItem extends AbstractStructBase
      * @param string $trackingNumber
      * @param string $service
      * @param int $sequenceNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $destination
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destination
      * @param string $packaging
      * @param int $pieces
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
      * @param int $totalHandlingUnits
      * @param string $purchaseOrderNumber
      * @param bool $justOneMore
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested
      * @param string $description
      */
-    public function __construct($trackingNumber = null, $service = null, $sequenceNumber = null, \CommerceFedEx\FedExPHP\Structs\Address $destination = null, $packaging = null, $pieces = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null, $totalHandlingUnits = null, $purchaseOrderNumber = null, $justOneMore = null, \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested = null, $description = null)
+    public function __construct($trackingNumber = null, $service = null, $sequenceNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $destination = null, $packaging = null, $pieces = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null, $totalHandlingUnits = null, $purchaseOrderNumber = null, $justOneMore = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested = null, $description = null)
     {
         $this
             ->setTrackingNumber($trackingNumber)
@@ -149,7 +149,7 @@ class FreightPickupLineItem extends AbstractStructBase
     /**
      * Set TrackingNumber value
      * @param string $trackingNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setTrackingNumber($trackingNumber = null)
     {
@@ -171,7 +171,7 @@ class FreightPickupLineItem extends AbstractStructBase
     /**
      * Set Service value
      * @param string $service
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setService($service = null)
     {
@@ -193,7 +193,7 @@ class FreightPickupLineItem extends AbstractStructBase
     /**
      * Set SequenceNumber value
      * @param int $sequenceNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setSequenceNumber($sequenceNumber = null)
     {
@@ -206,7 +206,7 @@ class FreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Get Destination value
-     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
      */
     public function getDestination()
     {
@@ -214,10 +214,10 @@ class FreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Set Destination value
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $destination
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destination
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
-    public function setDestination(\CommerceFedEx\FedExPHP\Structs\Address $destination = null)
+    public function setDestination(\NicholasCreativeMedia\FedExPHP\Structs\Address $destination = null)
     {
         $this->Destination = $destination;
         return $this;
@@ -232,17 +232,17 @@ class FreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Set Packaging value
-     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $packaging
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setPackaging($packaging = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::valueIsValid($packaging)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packaging, implode(', ', \CommerceFedEx\FedExPHP\Enums\PhysicalPackagingType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::valueIsValid($packaging)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packaging, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PhysicalPackagingType::getValidValues())), __LINE__);
         }
         $this->Packaging = $packaging;
         return $this;
@@ -258,7 +258,7 @@ class FreightPickupLineItem extends AbstractStructBase
     /**
      * Set Pieces value
      * @param int $pieces
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setPieces($pieces = null)
     {
@@ -271,7 +271,7 @@ class FreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Get Weight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getWeight()
     {
@@ -279,10 +279,10 @@ class FreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Set Weight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
-    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function setWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this->Weight = $weight;
         return $this;
@@ -298,7 +298,7 @@ class FreightPickupLineItem extends AbstractStructBase
     /**
      * Set TotalHandlingUnits value
      * @param int $totalHandlingUnits
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setTotalHandlingUnits($totalHandlingUnits = null)
     {
@@ -320,7 +320,7 @@ class FreightPickupLineItem extends AbstractStructBase
     /**
      * Set PurchaseOrderNumber value
      * @param string $purchaseOrderNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setPurchaseOrderNumber($purchaseOrderNumber = null)
     {
@@ -342,7 +342,7 @@ class FreightPickupLineItem extends AbstractStructBase
     /**
      * Set JustOneMore value
      * @param bool $justOneMore
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setJustOneMore($justOneMore = null)
     {
@@ -351,7 +351,7 @@ class FreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Get SpecialServicesRequested value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested|null
      */
     public function getSpecialServicesRequested()
     {
@@ -359,10 +359,10 @@ class FreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Set SpecialServicesRequested value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
-    public function setSpecialServicesRequested(\CommerceFedEx\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested = null)
+    public function setSpecialServicesRequested(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentSpecialServicesRequested $specialServicesRequested = null)
     {
         $this->SpecialServicesRequested = $specialServicesRequested;
         return $this;
@@ -378,7 +378,7 @@ class FreightPickupLineItem extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public function setDescription($description = null)
     {
@@ -395,7 +395,7 @@ class FreightPickupLineItem extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightPickupLineItem
      */
     public static function __set_state(array $array)
     {

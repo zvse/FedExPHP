@@ -51,7 +51,7 @@ class CreditCard extends AbstractStructBase
      * The CreditCardHolder
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ParsedContactAndAddress
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ParsedContactAndAddress
      */
     public $CreditCardHolder;
     /**
@@ -77,10 +77,10 @@ class CreditCard extends AbstractStructBase
      * @param string $expirationDate
      * @param string $lastAuthenticationByFedexDate
      * @param string $verificationCode
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedContactAndAddress $creditCardHolder
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedContactAndAddress $creditCardHolder
      * @param string[] $trackData
      */
-    public function __construct($number = null, $creditCardType = null, $expirationDate = null, $lastAuthenticationByFedexDate = null, $verificationCode = null, \CommerceFedEx\FedExPHP\Structs\ParsedContactAndAddress $creditCardHolder = null, array $trackData = array())
+    public function __construct($number = null, $creditCardType = null, $expirationDate = null, $lastAuthenticationByFedexDate = null, $verificationCode = null, \NicholasCreativeMedia\FedExPHP\Structs\ParsedContactAndAddress $creditCardHolder = null, array $trackData = array())
     {
         $this
             ->setNumber($number)
@@ -102,7 +102,7 @@ class CreditCard extends AbstractStructBase
     /**
      * Set Number value
      * @param string $number
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCard
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
      */
     public function setNumber($number = null)
     {
@@ -123,17 +123,17 @@ class CreditCard extends AbstractStructBase
     }
     /**
      * Set CreditCardType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $creditCardType
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCard
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
      */
     public function setCreditCardType($creditCardType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CreditCardType::valueIsValid($creditCardType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $creditCardType, implode(', ', \CommerceFedEx\FedExPHP\Enums\CreditCardType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CreditCardType::valueIsValid($creditCardType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $creditCardType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CreditCardType::getValidValues())), __LINE__);
         }
         $this->CreditCardType = $creditCardType;
         return $this;
@@ -149,7 +149,7 @@ class CreditCard extends AbstractStructBase
     /**
      * Set ExpirationDate value
      * @param string $expirationDate
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCard
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
      */
     public function setExpirationDate($expirationDate = null)
     {
@@ -171,7 +171,7 @@ class CreditCard extends AbstractStructBase
     /**
      * Set LastAuthenticationByFedexDate value
      * @param string $lastAuthenticationByFedexDate
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCard
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
      */
     public function setLastAuthenticationByFedexDate($lastAuthenticationByFedexDate = null)
     {
@@ -193,7 +193,7 @@ class CreditCard extends AbstractStructBase
     /**
      * Set VerificationCode value
      * @param string $verificationCode
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCard
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
      */
     public function setVerificationCode($verificationCode = null)
     {
@@ -206,7 +206,7 @@ class CreditCard extends AbstractStructBase
     }
     /**
      * Get CreditCardHolder value
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContactAndAddress|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContactAndAddress|null
      */
     public function getCreditCardHolder()
     {
@@ -214,10 +214,10 @@ class CreditCard extends AbstractStructBase
     }
     /**
      * Set CreditCardHolder value
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedContactAndAddress $creditCardHolder
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCard
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedContactAndAddress $creditCardHolder
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
      */
-    public function setCreditCardHolder(\CommerceFedEx\FedExPHP\Structs\ParsedContactAndAddress $creditCardHolder = null)
+    public function setCreditCardHolder(\NicholasCreativeMedia\FedExPHP\Structs\ParsedContactAndAddress $creditCardHolder = null)
     {
         $this->CreditCardHolder = $creditCardHolder;
         return $this;
@@ -234,7 +234,7 @@ class CreditCard extends AbstractStructBase
      * Set TrackData value
      * @throws \InvalidArgumentException
      * @param string[] $trackData
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCard
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
      */
     public function setTrackData(array $trackData = array())
     {
@@ -251,7 +251,7 @@ class CreditCard extends AbstractStructBase
      * Add item to TrackData value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCard
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
      */
     public function addToTrackData($item)
     {
@@ -268,7 +268,7 @@ class CreditCard extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCard
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCard
      */
     public static function __set_state(array $array)
     {

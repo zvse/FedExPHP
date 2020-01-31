@@ -78,7 +78,7 @@ class CloseSmartPostDetail extends AbstractStructBase
     /**
      * Set HubId value
      * @param string $hubId
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseSmartPostDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseSmartPostDetail
      */
     public function setHubId($hubId = null)
     {
@@ -100,7 +100,7 @@ class CloseSmartPostDetail extends AbstractStructBase
     /**
      * Set CustomerId value
      * @param string $customerId
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseSmartPostDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseSmartPostDetail
      */
     public function setCustomerId($customerId = null)
     {
@@ -122,7 +122,7 @@ class CloseSmartPostDetail extends AbstractStructBase
     /**
      * Set CustomerManifestId value
      * @param string $customerManifestId
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseSmartPostDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseSmartPostDetail
      */
     public function setCustomerManifestId($customerManifestId = null)
     {
@@ -144,7 +144,7 @@ class CloseSmartPostDetail extends AbstractStructBase
     /**
      * Set DestinationCountryCode value
      * @param string $destinationCountryCode
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseSmartPostDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseSmartPostDetail
      */
     public function setDestinationCountryCode($destinationCountryCode = null)
     {
@@ -165,17 +165,17 @@ class CloseSmartPostDetail extends AbstractStructBase
     }
     /**
      * Set PickupCarrier value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $pickupCarrier
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseSmartPostDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseSmartPostDetail
      */
     public function setPickupCarrier($pickupCarrier = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($pickupCarrier)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickupCarrier, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($pickupCarrier)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickupCarrier, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->PickupCarrier = $pickupCarrier;
         return $this;
@@ -186,7 +186,7 @@ class CloseSmartPostDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseSmartPostDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseSmartPostDetail
      */
     public static function __set_state(array $array)
     {

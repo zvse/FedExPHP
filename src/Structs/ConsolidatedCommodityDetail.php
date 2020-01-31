@@ -31,7 +31,7 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
      * The SubtotalCustomsValue
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $SubtotalCustomsValue;
     /**
@@ -39,7 +39,7 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity[]
      */
     public $Commodities;
     /**
@@ -50,10 +50,10 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
      * @uses ConsolidatedCommodityDetail::setCommodities()
      * @param string $groupDescription
      * @param float $subtotalQuantity
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $subtotalCustomsValue
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity[] $commodities
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $subtotalCustomsValue
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity[] $commodities
      */
-    public function __construct($groupDescription = null, $subtotalQuantity = null, \CommerceFedEx\FedExPHP\Structs\Money $subtotalCustomsValue = null, array $commodities = array())
+    public function __construct($groupDescription = null, $subtotalQuantity = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $subtotalCustomsValue = null, array $commodities = array())
     {
         $this
             ->setGroupDescription($groupDescription)
@@ -72,7 +72,7 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
     /**
      * Set GroupDescription value
      * @param string $groupDescription
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDetail
      */
     public function setGroupDescription($groupDescription = null)
     {
@@ -94,7 +94,7 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
     /**
      * Set SubtotalQuantity value
      * @param float $subtotalQuantity
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDetail
      */
     public function setSubtotalQuantity($subtotalQuantity = null)
     {
@@ -103,7 +103,7 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
     }
     /**
      * Get SubtotalCustomsValue value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getSubtotalCustomsValue()
     {
@@ -111,17 +111,17 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
     }
     /**
      * Set SubtotalCustomsValue value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $subtotalCustomsValue
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $subtotalCustomsValue
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDetail
      */
-    public function setSubtotalCustomsValue(\CommerceFedEx\FedExPHP\Structs\Money $subtotalCustomsValue = null)
+    public function setSubtotalCustomsValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $subtotalCustomsValue = null)
     {
         $this->SubtotalCustomsValue = $subtotalCustomsValue;
         return $this;
     }
     /**
      * Get Commodities value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity[]|null
      */
     public function getCommodities()
     {
@@ -130,15 +130,15 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
     /**
      * Set Commodities value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity[] $commodities
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity[] $commodities
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDetail
      */
     public function setCommodities(array $commodities = array())
     {
         foreach ($commodities as $consolidatedCommodityDetailCommoditiesItem) {
             // validation for constraint: itemType
-            if (!$consolidatedCommodityDetailCommoditiesItem instanceof \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity) {
-                throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity, "%s" given', is_object($consolidatedCommodityDetailCommoditiesItem) ? get_class($consolidatedCommodityDetailCommoditiesItem) : gettype($consolidatedCommodityDetailCommoditiesItem)), __LINE__);
+            if (!$consolidatedCommodityDetailCommoditiesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity) {
+                throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity, "%s" given', is_object($consolidatedCommodityDetailCommoditiesItem) ? get_class($consolidatedCommodityDetailCommoditiesItem) : gettype($consolidatedCommodityDetailCommoditiesItem)), __LINE__);
             }
         }
         $this->Commodities = $commodities;
@@ -147,14 +147,14 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
     /**
      * Add item to Commodities value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDetail
      */
-    public function addToCommodities(\CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity $item)
+    public function addToCommodities(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity) {
-            throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodity, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity) {
+            throw new \InvalidArgumentException(sprintf('The Commodities property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodity, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Commodities[] = $item;
         return $this;
@@ -165,7 +165,7 @@ class ConsolidatedCommodityDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommodityDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommodityDetail
      */
     public static function __set_state(array $array)
     {

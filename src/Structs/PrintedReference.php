@@ -49,17 +49,17 @@ class PrintedReference extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\PrintedReferenceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\PrintedReferenceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PrintedReferenceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PrintedReferenceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\PrintedReference
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\PrintedReferenceType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\PrintedReferenceType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\PrintedReferenceType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PrintedReferenceType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -75,7 +75,7 @@ class PrintedReference extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \CommerceFedEx\FedExPHP\Structs\PrintedReference
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference
      */
     public function setValue($value = null)
     {
@@ -92,7 +92,7 @@ class PrintedReference extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PrintedReference
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PrintedReference
      */
     public static function __set_state(array $array)
     {

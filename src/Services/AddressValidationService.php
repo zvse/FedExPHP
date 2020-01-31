@@ -23,12 +23,12 @@ class Service extends AbstractSoapClientBase
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'AddressValidationService_v4.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\AddressValidationClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\AddressValidationClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('aval',4,0,0);
+        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('aval',4,0,0);
     }
     /**
      * Method to call the operation originally named addressValidation
@@ -36,10 +36,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\AddressValidationRequest $addressValidationRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest $addressValidationRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply|bool
      */
-    public function addressValidation(\CommerceFedEx\FedExPHP\Structs\AddressValidationRequest $addressValidationRequest)
+    public function addressValidation(\NicholasCreativeMedia\FedExPHP\Structs\AddressValidationRequest $addressValidationRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->addressValidation($addressValidationRequest));
@@ -52,7 +52,7 @@ class Service extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \CommerceFedEx\FedExPHP\Structs\AddressValidationReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AddressValidationReply
      */
     public function getResult()
     {

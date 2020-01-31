@@ -15,23 +15,23 @@ class GeneralAgencyAgreementDetail extends AbstractStructBase
     /**
      * The Format
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
      * Constructor method for GeneralAgencyAgreementDetail
      * @uses GeneralAgencyAgreementDetail::setFormat()
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this
             ->setFormat($format);
     }
     /**
      * Get Format value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -39,10 +39,10 @@ class GeneralAgencyAgreementDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \CommerceFedEx\FedExPHP\Structs\GeneralAgencyAgreementDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GeneralAgencyAgreementDetail
      */
-    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
@@ -53,7 +53,7 @@ class GeneralAgencyAgreementDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\GeneralAgencyAgreementDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\GeneralAgencyAgreementDetail
      */
     public static function __set_state(array $array)
     {

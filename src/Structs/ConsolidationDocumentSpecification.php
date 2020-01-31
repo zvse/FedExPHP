@@ -26,7 +26,7 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the production of the short form of the Child Reference Number document.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CondensedCrnReportDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CondensedCrnReportDetail
      */
     public $CondensedCrnReportDetail;
     /**
@@ -34,7 +34,7 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the production of the consolidated commercial invoice document.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail
      */
     public $ConsolidatedCommercialInvoiceDetail;
     /**
@@ -43,28 +43,28 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
      * - documentation: Specifies the production of the consolidation-level custom documents.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail[]
      */
     public $CustomDocumentDetails;
     /**
      * The ConsolidatedCustomsLinehaulReportDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail
      */
     public $ConsolidatedCustomsLinehaulReportDetail;
     /**
      * The ConsolidatedPartyReportDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidatedPartyReportDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedPartyReportDetail
      */
     public $ConsolidatedPartyReportDetail;
     /**
      * The ConsolidatedSoldToSummaryReportDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail
      */
     public $ConsolidatedSoldToSummaryReportDetail;
     /**
@@ -72,7 +72,7 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the production of the consolidation-level customs packing list.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomsPackingListDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomsPackingListDetail
      */
     public $CustomsPackingListDetail;
     /**
@@ -80,14 +80,14 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the production of the Child Reference Number document.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CrnReportDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CrnReportDetail
      */
     public $CrnReportDetail;
     /**
      * The CommoditiesByTrackingNumberDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail
      */
     public $CommoditiesByTrackingNumberDetail;
     /**
@@ -103,17 +103,17 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
      * @uses ConsolidationDocumentSpecification::setCrnReportDetail()
      * @uses ConsolidationDocumentSpecification::setCommoditiesByTrackingNumberDetail()
      * @param string[] $consolidationDocumentTypes
-     * @param \CommerceFedEx\FedExPHP\Structs\CondensedCrnReportDetail $condensedCrnReportDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail $consolidatedCommercialInvoiceDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail[] $customDocumentDetails
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail $consolidatedCustomsLinehaulReportDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedPartyReportDetail $consolidatedPartyReportDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail $consolidatedSoldToSummaryReportDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomsPackingListDetail $customsPackingListDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\CrnReportDetail $crnReportDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail $commoditiesByTrackingNumberDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CondensedCrnReportDetail $condensedCrnReportDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail $consolidatedCommercialInvoiceDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail[] $customDocumentDetails
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail $consolidatedCustomsLinehaulReportDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedPartyReportDetail $consolidatedPartyReportDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail $consolidatedSoldToSummaryReportDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsPackingListDetail $customsPackingListDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CrnReportDetail $crnReportDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail $commoditiesByTrackingNumberDetail
      */
-    public function __construct(array $consolidationDocumentTypes = array(), \CommerceFedEx\FedExPHP\Structs\CondensedCrnReportDetail $condensedCrnReportDetail = null, \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail $consolidatedCommercialInvoiceDetail = null, array $customDocumentDetails = array(), \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail $consolidatedCustomsLinehaulReportDetail = null, \CommerceFedEx\FedExPHP\Structs\ConsolidatedPartyReportDetail $consolidatedPartyReportDetail = null, \CommerceFedEx\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail $consolidatedSoldToSummaryReportDetail = null, \CommerceFedEx\FedExPHP\Structs\CustomsPackingListDetail $customsPackingListDetail = null, \CommerceFedEx\FedExPHP\Structs\CrnReportDetail $crnReportDetail = null, \CommerceFedEx\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail $commoditiesByTrackingNumberDetail = null)
+    public function __construct(array $consolidationDocumentTypes = array(), \NicholasCreativeMedia\FedExPHP\Structs\CondensedCrnReportDetail $condensedCrnReportDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail $consolidatedCommercialInvoiceDetail = null, array $customDocumentDetails = array(), \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail $consolidatedCustomsLinehaulReportDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedPartyReportDetail $consolidatedPartyReportDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail $consolidatedSoldToSummaryReportDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\CustomsPackingListDetail $customsPackingListDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\CrnReportDetail $crnReportDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail $commoditiesByTrackingNumberDetail = null)
     {
         $this
             ->setConsolidationDocumentTypes($consolidationDocumentTypes)
@@ -137,46 +137,46 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set ConsolidationDocumentTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedConsolidationDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedConsolidationDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedConsolidationDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedConsolidationDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $consolidationDocumentTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
     public function setConsolidationDocumentTypes(array $consolidationDocumentTypes = array())
     {
         $invalidValues = array();
         foreach ($consolidationDocumentTypes as $consolidationDocumentSpecificationConsolidationDocumentTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\RequestedConsolidationDocumentType::valueIsValid($consolidationDocumentSpecificationConsolidationDocumentTypesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\RequestedConsolidationDocumentType::valueIsValid($consolidationDocumentSpecificationConsolidationDocumentTypesItem)) {
                 $invalidValues[] = var_export($consolidationDocumentSpecificationConsolidationDocumentTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RequestedConsolidationDocumentType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequestedConsolidationDocumentType::getValidValues())), __LINE__);
         }
         $this->ConsolidationDocumentTypes = $consolidationDocumentTypes;
         return $this;
     }
     /**
      * Add item to ConsolidationDocumentTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedConsolidationDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedConsolidationDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedConsolidationDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedConsolidationDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
     public function addToConsolidationDocumentTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RequestedConsolidationDocumentType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RequestedConsolidationDocumentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RequestedConsolidationDocumentType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequestedConsolidationDocumentType::getValidValues())), __LINE__);
         }
         $this->ConsolidationDocumentTypes[] = $item;
         return $this;
     }
     /**
      * Get CondensedCrnReportDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CondensedCrnReportDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CondensedCrnReportDetail|null
      */
     public function getCondensedCrnReportDetail()
     {
@@ -184,17 +184,17 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set CondensedCrnReportDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CondensedCrnReportDetail $condensedCrnReportDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CondensedCrnReportDetail $condensedCrnReportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
-    public function setCondensedCrnReportDetail(\CommerceFedEx\FedExPHP\Structs\CondensedCrnReportDetail $condensedCrnReportDetail = null)
+    public function setCondensedCrnReportDetail(\NicholasCreativeMedia\FedExPHP\Structs\CondensedCrnReportDetail $condensedCrnReportDetail = null)
     {
         $this->CondensedCrnReportDetail = $condensedCrnReportDetail;
         return $this;
     }
     /**
      * Get ConsolidatedCommercialInvoiceDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail|null
      */
     public function getConsolidatedCommercialInvoiceDetail()
     {
@@ -202,17 +202,17 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set ConsolidatedCommercialInvoiceDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail $consolidatedCommercialInvoiceDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail $consolidatedCommercialInvoiceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
-    public function setConsolidatedCommercialInvoiceDetail(\CommerceFedEx\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail $consolidatedCommercialInvoiceDetail = null)
+    public function setConsolidatedCommercialInvoiceDetail(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedCommercialInvoiceDetail $consolidatedCommercialInvoiceDetail = null)
     {
         $this->ConsolidatedCommercialInvoiceDetail = $consolidatedCommercialInvoiceDetail;
         return $this;
     }
     /**
      * Get CustomDocumentDetails value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail[]|null
      */
     public function getCustomDocumentDetails()
     {
@@ -221,15 +221,15 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     /**
      * Set CustomDocumentDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail[] $customDocumentDetails
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail[] $customDocumentDetails
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
     public function setCustomDocumentDetails(array $customDocumentDetails = array())
     {
         foreach ($customDocumentDetails as $consolidationDocumentSpecificationCustomDocumentDetailsItem) {
             // validation for constraint: itemType
-            if (!$consolidationDocumentSpecificationCustomDocumentDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail) {
-                throw new \InvalidArgumentException(sprintf('The CustomDocumentDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail, "%s" given', is_object($consolidationDocumentSpecificationCustomDocumentDetailsItem) ? get_class($consolidationDocumentSpecificationCustomDocumentDetailsItem) : gettype($consolidationDocumentSpecificationCustomDocumentDetailsItem)), __LINE__);
+            if (!$consolidationDocumentSpecificationCustomDocumentDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail) {
+                throw new \InvalidArgumentException(sprintf('The CustomDocumentDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail, "%s" given', is_object($consolidationDocumentSpecificationCustomDocumentDetailsItem) ? get_class($consolidationDocumentSpecificationCustomDocumentDetailsItem) : gettype($consolidationDocumentSpecificationCustomDocumentDetailsItem)), __LINE__);
             }
         }
         $this->CustomDocumentDetails = $customDocumentDetails;
@@ -238,21 +238,21 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     /**
      * Add item to CustomDocumentDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
-    public function addToCustomDocumentDetails(\CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail $item)
+    public function addToCustomDocumentDetails(\NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail) {
-            throw new \InvalidArgumentException(sprintf('The CustomDocumentDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomConsolidationDocumentDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail) {
+            throw new \InvalidArgumentException(sprintf('The CustomDocumentDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomConsolidationDocumentDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomDocumentDetails[] = $item;
         return $this;
     }
     /**
      * Get ConsolidatedCustomsLinehaulReportDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail|null
      */
     public function getConsolidatedCustomsLinehaulReportDetail()
     {
@@ -260,17 +260,17 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set ConsolidatedCustomsLinehaulReportDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail $consolidatedCustomsLinehaulReportDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail $consolidatedCustomsLinehaulReportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
-    public function setConsolidatedCustomsLinehaulReportDetail(\CommerceFedEx\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail $consolidatedCustomsLinehaulReportDetail = null)
+    public function setConsolidatedCustomsLinehaulReportDetail(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationCustomsLinehaulReportDetail $consolidatedCustomsLinehaulReportDetail = null)
     {
         $this->ConsolidatedCustomsLinehaulReportDetail = $consolidatedCustomsLinehaulReportDetail;
         return $this;
     }
     /**
      * Get ConsolidatedPartyReportDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedPartyReportDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedPartyReportDetail|null
      */
     public function getConsolidatedPartyReportDetail()
     {
@@ -278,17 +278,17 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set ConsolidatedPartyReportDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedPartyReportDetail $consolidatedPartyReportDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedPartyReportDetail $consolidatedPartyReportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
-    public function setConsolidatedPartyReportDetail(\CommerceFedEx\FedExPHP\Structs\ConsolidatedPartyReportDetail $consolidatedPartyReportDetail = null)
+    public function setConsolidatedPartyReportDetail(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedPartyReportDetail $consolidatedPartyReportDetail = null)
     {
         $this->ConsolidatedPartyReportDetail = $consolidatedPartyReportDetail;
         return $this;
     }
     /**
      * Get ConsolidatedSoldToSummaryReportDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail|null
      */
     public function getConsolidatedSoldToSummaryReportDetail()
     {
@@ -296,17 +296,17 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set ConsolidatedSoldToSummaryReportDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail $consolidatedSoldToSummaryReportDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail $consolidatedSoldToSummaryReportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
-    public function setConsolidatedSoldToSummaryReportDetail(\CommerceFedEx\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail $consolidatedSoldToSummaryReportDetail = null)
+    public function setConsolidatedSoldToSummaryReportDetail(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidatedSoldToSummaryReportDetail $consolidatedSoldToSummaryReportDetail = null)
     {
         $this->ConsolidatedSoldToSummaryReportDetail = $consolidatedSoldToSummaryReportDetail;
         return $this;
     }
     /**
      * Get CustomsPackingListDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomsPackingListDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsPackingListDetail|null
      */
     public function getCustomsPackingListDetail()
     {
@@ -314,17 +314,17 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set CustomsPackingListDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomsPackingListDetail $customsPackingListDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsPackingListDetail $customsPackingListDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
-    public function setCustomsPackingListDetail(\CommerceFedEx\FedExPHP\Structs\CustomsPackingListDetail $customsPackingListDetail = null)
+    public function setCustomsPackingListDetail(\NicholasCreativeMedia\FedExPHP\Structs\CustomsPackingListDetail $customsPackingListDetail = null)
     {
         $this->CustomsPackingListDetail = $customsPackingListDetail;
         return $this;
     }
     /**
      * Get CrnReportDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CrnReportDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CrnReportDetail|null
      */
     public function getCrnReportDetail()
     {
@@ -332,17 +332,17 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set CrnReportDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CrnReportDetail $crnReportDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CrnReportDetail $crnReportDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
-    public function setCrnReportDetail(\CommerceFedEx\FedExPHP\Structs\CrnReportDetail $crnReportDetail = null)
+    public function setCrnReportDetail(\NicholasCreativeMedia\FedExPHP\Structs\CrnReportDetail $crnReportDetail = null)
     {
         $this->CrnReportDetail = $crnReportDetail;
         return $this;
     }
     /**
      * Get CommoditiesByTrackingNumberDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail|null
      */
     public function getCommoditiesByTrackingNumberDetail()
     {
@@ -350,10 +350,10 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set CommoditiesByTrackingNumberDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail $commoditiesByTrackingNumberDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail $commoditiesByTrackingNumberDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
-    public function setCommoditiesByTrackingNumberDetail(\CommerceFedEx\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail $commoditiesByTrackingNumberDetail = null)
+    public function setCommoditiesByTrackingNumberDetail(\NicholasCreativeMedia\FedExPHP\Structs\CommoditiesByTrackingNumberReportDetail $commoditiesByTrackingNumberDetail = null)
     {
         $this->CommoditiesByTrackingNumberDetail = $commoditiesByTrackingNumberDetail;
         return $this;
@@ -364,7 +364,7 @@ class ConsolidationDocumentSpecification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
     public static function __set_state(array $array)
     {

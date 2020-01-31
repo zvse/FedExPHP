@@ -16,24 +16,24 @@ class ParsedContactAndAddress extends AbstractStructBase
      * The Contact
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ParsedContact
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact
      */
     public $Contact;
     /**
      * The Address
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Address
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
      */
     public $Address;
     /**
      * Constructor method for ParsedContactAndAddress
      * @uses ParsedContactAndAddress::setContact()
      * @uses ParsedContactAndAddress::setAddress()
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedContact $contact
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact $contact
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ParsedContact $contact = null, \CommerceFedEx\FedExPHP\Structs\Address $address = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ParsedContact $contact = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $address = null)
     {
         $this
             ->setContact($contact)
@@ -41,7 +41,7 @@ class ParsedContactAndAddress extends AbstractStructBase
     }
     /**
      * Get Contact value
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContact|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact|null
      */
     public function getContact()
     {
@@ -49,17 +49,17 @@ class ParsedContactAndAddress extends AbstractStructBase
     }
     /**
      * Set Contact value
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedContact $contact
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContactAndAddress
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedContact $contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContactAndAddress
      */
-    public function setContact(\CommerceFedEx\FedExPHP\Structs\ParsedContact $contact = null)
+    public function setContact(\NicholasCreativeMedia\FedExPHP\Structs\ParsedContact $contact = null)
     {
         $this->Contact = $contact;
         return $this;
     }
     /**
      * Get Address value
-     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
      */
     public function getAddress()
     {
@@ -67,10 +67,10 @@ class ParsedContactAndAddress extends AbstractStructBase
     }
     /**
      * Set Address value
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContactAndAddress
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContactAndAddress
      */
-    public function setAddress(\CommerceFedEx\FedExPHP\Structs\Address $address = null)
+    public function setAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $address = null)
     {
         $this->Address = $address;
         return $this;
@@ -81,7 +81,7 @@ class ParsedContactAndAddress extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedContactAndAddress
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedContactAndAddress
      */
     public static function __set_state(array $array)
     {

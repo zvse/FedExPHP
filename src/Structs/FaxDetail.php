@@ -38,7 +38,7 @@ class FaxDetail extends AbstractStructBase
     /**
      * Set PhoneNumber value
      * @param string $phoneNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\FaxDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FaxDetail
      */
     public function setPhoneNumber($phoneNumber = null)
     {
@@ -55,7 +55,7 @@ class FaxDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\FaxDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FaxDetail
      */
     public static function __set_state(array $array)
     {

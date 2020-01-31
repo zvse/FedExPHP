@@ -16,7 +16,7 @@ class CompletedConsolidationDetail extends AbstractStructBase
      * - documentation: The shipment-level artifacts constructed when confirming this consolidation.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment[]
      */
     public $ConsolidationShipments;
     /**
@@ -25,15 +25,15 @@ class CompletedConsolidationDetail extends AbstractStructBase
      * - documentation: Contains all documents produced for this distribution consolidation.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument[]
      */
     public $Documents;
     /**
      * Constructor method for CompletedConsolidationDetail
      * @uses CompletedConsolidationDetail::setConsolidationShipments()
      * @uses CompletedConsolidationDetail::setDocuments()
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment[] $consolidationShipments
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument[] $documents
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment[] $consolidationShipments
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument[] $documents
      */
     public function __construct(array $consolidationShipments = array(), array $documents = array())
     {
@@ -43,7 +43,7 @@ class CompletedConsolidationDetail extends AbstractStructBase
     }
     /**
      * Get ConsolidationShipments value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment[]|null
      */
     public function getConsolidationShipments()
     {
@@ -52,15 +52,15 @@ class CompletedConsolidationDetail extends AbstractStructBase
     /**
      * Set ConsolidationShipments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment[] $consolidationShipments
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment[] $consolidationShipments
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedConsolidationDetail
      */
     public function setConsolidationShipments(array $consolidationShipments = array())
     {
         foreach ($consolidationShipments as $completedConsolidationDetailConsolidationShipmentsItem) {
             // validation for constraint: itemType
-            if (!$completedConsolidationDetailConsolidationShipmentsItem instanceof \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment) {
-                throw new \InvalidArgumentException(sprintf('The ConsolidationShipments property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment, "%s" given', is_object($completedConsolidationDetailConsolidationShipmentsItem) ? get_class($completedConsolidationDetailConsolidationShipmentsItem) : gettype($completedConsolidationDetailConsolidationShipmentsItem)), __LINE__);
+            if (!$completedConsolidationDetailConsolidationShipmentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment) {
+                throw new \InvalidArgumentException(sprintf('The ConsolidationShipments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment, "%s" given', is_object($completedConsolidationDetailConsolidationShipmentsItem) ? get_class($completedConsolidationDetailConsolidationShipmentsItem) : gettype($completedConsolidationDetailConsolidationShipmentsItem)), __LINE__);
             }
         }
         $this->ConsolidationShipments = $consolidationShipments;
@@ -69,21 +69,21 @@ class CompletedConsolidationDetail extends AbstractStructBase
     /**
      * Add item to ConsolidationShipments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedConsolidationDetail
      */
-    public function addToConsolidationShipments(\CommerceFedEx\FedExPHP\Structs\ConsolidationShipment $item)
+    public function addToConsolidationShipments(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment) {
-            throw new \InvalidArgumentException(sprintf('The ConsolidationShipments property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConsolidationShipment, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment) {
+            throw new \InvalidArgumentException(sprintf('The ConsolidationShipments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationShipment, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ConsolidationShipments[] = $item;
         return $this;
     }
     /**
      * Get Documents value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument[]|null
      */
     public function getDocuments()
     {
@@ -92,15 +92,15 @@ class CompletedConsolidationDetail extends AbstractStructBase
     /**
      * Set Documents value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument[] $documents
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument[] $documents
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedConsolidationDetail
      */
     public function setDocuments(array $documents = array())
     {
         foreach ($documents as $completedConsolidationDetailDocumentsItem) {
             // validation for constraint: itemType
-            if (!$completedConsolidationDetailDocumentsItem instanceof \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument) {
-                throw new \InvalidArgumentException(sprintf('The Documents property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument, "%s" given', is_object($completedConsolidationDetailDocumentsItem) ? get_class($completedConsolidationDetailDocumentsItem) : gettype($completedConsolidationDetailDocumentsItem)), __LINE__);
+            if (!$completedConsolidationDetailDocumentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument) {
+                throw new \InvalidArgumentException(sprintf('The Documents property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument, "%s" given', is_object($completedConsolidationDetailDocumentsItem) ? get_class($completedConsolidationDetailDocumentsItem) : gettype($completedConsolidationDetailDocumentsItem)), __LINE__);
             }
         }
         $this->Documents = $documents;
@@ -109,14 +109,14 @@ class CompletedConsolidationDetail extends AbstractStructBase
     /**
      * Add item to Documents value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedConsolidationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedConsolidationDetail
      */
-    public function addToDocuments(\CommerceFedEx\FedExPHP\Structs\ConsolidationDocument $item)
+    public function addToDocuments(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument) {
-            throw new \InvalidArgumentException(sprintf('The Documents property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument) {
+            throw new \InvalidArgumentException(sprintf('The Documents property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Documents[] = $item;
         return $this;
@@ -127,7 +127,7 @@ class CompletedConsolidationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedConsolidationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedConsolidationDetail
      */
     public static function __set_state(array $array)
     {

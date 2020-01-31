@@ -61,7 +61,7 @@ class CurrencyExchangeRate extends AbstractStructBase
     /**
      * Set FromCurrency value
      * @param string $fromCurrency
-     * @return \CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate
      */
     public function setFromCurrency($fromCurrency = null)
     {
@@ -83,7 +83,7 @@ class CurrencyExchangeRate extends AbstractStructBase
     /**
      * Set IntoCurrency value
      * @param string $intoCurrency
-     * @return \CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate
      */
     public function setIntoCurrency($intoCurrency = null)
     {
@@ -105,7 +105,7 @@ class CurrencyExchangeRate extends AbstractStructBase
     /**
      * Set Rate value
      * @param float $rate
-     * @return \CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate
      */
     public function setRate($rate = null)
     {
@@ -118,7 +118,7 @@ class CurrencyExchangeRate extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate
      */
     public static function __set_state(array $array)
     {

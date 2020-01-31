@@ -21,14 +21,25 @@ class AlcoholDetail extends AbstractStructBase
      */
     public $RecipientType;
     /**
+     * The ShipperAgreementType
+     * Meta informations extracted from the WSDL
+     * - documentation: Specifies what type of entity the shipper of the alcohol shipment is registered as, for example, fulfillment house, retailer or a winery.
+     * - minOccurs: 0
+     * @var string
+     */
+    public $ShipperAgreementType;
+    /**
      * Constructor method for AlcoholDetail
      * @uses AlcoholDetail::setRecipientType()
+     * @uses AlcoholDetail::setShipperAgreementType()
      * @param string $recipientType
+     * @param string $shipperAgreementType
      */
-    public function __construct($recipientType = null)
+    public function __construct($recipientType = null, $shipperAgreementType = null)
     {
         $this
-            ->setRecipientType($recipientType);
+            ->setRecipientType($recipientType)
+            ->setShipperAgreementType($shipperAgreementType);
     }
     /**
      * Get RecipientType value
@@ -40,19 +51,41 @@ class AlcoholDetail extends AbstractStructBase
     }
     /**
      * Set RecipientType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\AlcoholRecipientType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\AlcoholRecipientType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AlcoholRecipientType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AlcoholRecipientType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $recipientType
-     * @return \CommerceFedEx\FedExPHP\Structs\AlcoholDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail
      */
     public function setRecipientType($recipientType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\AlcoholRecipientType::valueIsValid($recipientType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $recipientType, implode(', ', \CommerceFedEx\FedExPHP\Enums\AlcoholRecipientType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\AlcoholRecipientType::valueIsValid($recipientType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $recipientType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AlcoholRecipientType::getValidValues())), __LINE__);
         }
         $this->RecipientType = $recipientType;
+        return $this;
+    }
+    /**
+     * Get ShipperAgreementType value
+     * @return string|null
+     */
+    public function getShipperAgreementType()
+    {
+        return $this->ShipperAgreementType;
+    }
+    /**
+     * Set ShipperAgreementType value
+     * @param string $shipperAgreementType
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail
+     */
+    public function setShipperAgreementType($shipperAgreementType = null)
+    {
+        // validation for constraint: string
+        if (!is_null($shipperAgreementType) && !is_string($shipperAgreementType)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($shipperAgreementType)), __LINE__);
+        }
+        $this->ShipperAgreementType = $shipperAgreementType;
         return $this;
     }
     /**
@@ -61,7 +94,7 @@ class AlcoholDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\AlcoholDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail
      */
     public static function __set_state(array $array)
     {

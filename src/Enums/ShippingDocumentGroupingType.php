@@ -16,6 +16,11 @@ class ShippingDocumentGroupingType
      */
     const VALUE_CONSOLIDATED_BY_DOCUMENT_TYPE = 'CONSOLIDATED_BY_DOCUMENT_TYPE';
     /**
+     * Constant for value 'CONSOLIDATED_BY_IMAGE_TYPE'
+     * @return string 'CONSOLIDATED_BY_IMAGE_TYPE'
+     */
+    const VALUE_CONSOLIDATED_BY_IMAGE_TYPE = 'CONSOLIDATED_BY_IMAGE_TYPE';
+    /**
      * Constant for value 'INDIVIDUAL'
      * @return string 'INDIVIDUAL'
      */
@@ -33,6 +38,7 @@ class ShippingDocumentGroupingType
     /**
      * Return allowed values
      * @uses self::VALUE_CONSOLIDATED_BY_DOCUMENT_TYPE
+     * @uses self::VALUE_CONSOLIDATED_BY_IMAGE_TYPE
      * @uses self::VALUE_INDIVIDUAL
      * @return string[]
      */
@@ -40,6 +46,7 @@ class ShippingDocumentGroupingType
     {
         return array(
             self::VALUE_CONSOLIDATED_BY_DOCUMENT_TYPE,
+            self::VALUE_CONSOLIDATED_BY_IMAGE_TYPE,
             self::VALUE_INDIVIDUAL,
         );
     }

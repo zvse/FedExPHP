@@ -22,7 +22,7 @@ class UploadDocumentsProcessingOptionsRequested extends AbstractStructBase
      * The PostShipmentUploadDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PostShipmentUploadDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PostShipmentUploadDetail
      */
     public $PostShipmentUploadDetail;
     /**
@@ -30,9 +30,9 @@ class UploadDocumentsProcessingOptionsRequested extends AbstractStructBase
      * @uses UploadDocumentsProcessingOptionsRequested::setOptions()
      * @uses UploadDocumentsProcessingOptionsRequested::setPostShipmentUploadDetail()
      * @param string[] $options
-     * @param \CommerceFedEx\FedExPHP\Structs\PostShipmentUploadDetail $postShipmentUploadDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PostShipmentUploadDetail $postShipmentUploadDetail
      */
-    public function __construct(array $options = array(), \CommerceFedEx\FedExPHP\Structs\PostShipmentUploadDetail $postShipmentUploadDetail = null)
+    public function __construct(array $options = array(), \NicholasCreativeMedia\FedExPHP\Structs\PostShipmentUploadDetail $postShipmentUploadDetail = null)
     {
         $this
             ->setOptions($options)
@@ -48,46 +48,46 @@ class UploadDocumentsProcessingOptionsRequested extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentsProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentsProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentsProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentsProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $options
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentsProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentsProcessingOptionsRequested
      */
     public function setOptions(array $options = array())
     {
         $invalidValues = array();
         foreach ($options as $uploadDocumentsProcessingOptionsRequestedOptionsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentsProcessingOptionType::valueIsValid($uploadDocumentsProcessingOptionsRequestedOptionsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentsProcessingOptionType::valueIsValid($uploadDocumentsProcessingOptionsRequestedOptionsItem)) {
                 $invalidValues[] = var_export($uploadDocumentsProcessingOptionsRequestedOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentsProcessingOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentsProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options = $options;
         return $this;
     }
     /**
      * Add item to Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentsProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadDocumentsProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentsProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentsProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentsProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentsProcessingOptionsRequested
      */
     public function addToOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadDocumentsProcessingOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadDocumentsProcessingOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentsProcessingOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadDocumentsProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
     }
     /**
      * Get PostShipmentUploadDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\PostShipmentUploadDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PostShipmentUploadDetail|null
      */
     public function getPostShipmentUploadDetail()
     {
@@ -95,10 +95,10 @@ class UploadDocumentsProcessingOptionsRequested extends AbstractStructBase
     }
     /**
      * Set PostShipmentUploadDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\PostShipmentUploadDetail $postShipmentUploadDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentsProcessingOptionsRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PostShipmentUploadDetail $postShipmentUploadDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentsProcessingOptionsRequested
      */
-    public function setPostShipmentUploadDetail(\CommerceFedEx\FedExPHP\Structs\PostShipmentUploadDetail $postShipmentUploadDetail = null)
+    public function setPostShipmentUploadDetail(\NicholasCreativeMedia\FedExPHP\Structs\PostShipmentUploadDetail $postShipmentUploadDetail = null)
     {
         $this->PostShipmentUploadDetail = $postShipmentUploadDetail;
         return $this;
@@ -109,7 +109,7 @@ class UploadDocumentsProcessingOptionsRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentsProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentsProcessingOptionsRequested
      */
     public static function __set_state(array $array)
     {

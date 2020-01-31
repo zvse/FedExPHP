@@ -48,17 +48,17 @@ class CloseManifestReferenceDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseManifestReferenceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseManifestReferenceDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -74,7 +74,7 @@ class CloseManifestReferenceDetail extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseManifestReferenceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseManifestReferenceDetail
      */
     public function setValue($value = null)
     {
@@ -91,7 +91,7 @@ class CloseManifestReferenceDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseManifestReferenceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseManifestReferenceDetail
      */
     public static function __set_state(array $array)
     {

@@ -57,17 +57,17 @@ class NetExplosiveDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NetExplosiveClassificationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NetExplosiveClassificationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NetExplosiveClassificationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NetExplosiveClassificationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NetExplosiveClassificationType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\NetExplosiveClassificationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NetExplosiveClassificationType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NetExplosiveClassificationType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -83,7 +83,7 @@ class NetExplosiveDetail extends AbstractStructBase
     /**
      * Set Amount value
      * @param float $amount
-     * @return \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail
      */
     public function setAmount($amount = null)
     {
@@ -101,7 +101,7 @@ class NetExplosiveDetail extends AbstractStructBase
     /**
      * Set Units value
      * @param string $units
-     * @return \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail
      */
     public function setUnits($units = null)
     {
@@ -118,7 +118,7 @@ class NetExplosiveDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\NetExplosiveDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\NetExplosiveDetail
      */
     public static function __set_state(array $array)
     {

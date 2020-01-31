@@ -33,7 +33,7 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies how to store document images.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail
      */
     public $StorageDetail;
     /**
@@ -41,7 +41,7 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies how to e-mail document images.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentEMailDetail
      */
     public $EMailDetail;
     /**
@@ -49,7 +49,7 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies how a queued document is to be printed.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPrintDetail
      */
     public $PrintDetail;
     /**
@@ -61,11 +61,11 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
      * @uses ShippingDocumentDispositionDetail::setPrintDetail()
      * @param string $dispositionType
      * @param string $grouping
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail
      */
-    public function __construct($dispositionType = null, $grouping = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail = null)
+    public function __construct($dispositionType = null, $grouping = null, \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail = null)
     {
         $this
             ->setDispositionType($dispositionType)
@@ -84,17 +84,17 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
     }
     /**
      * Set DispositionType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentDispositionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentDispositionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentDispositionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentDispositionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $dispositionType
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail
      */
     public function setDispositionType($dispositionType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShippingDocumentDispositionType::valueIsValid($dispositionType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dispositionType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentDispositionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentDispositionType::valueIsValid($dispositionType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dispositionType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentDispositionType::getValidValues())), __LINE__);
         }
         $this->DispositionType = $dispositionType;
         return $this;
@@ -109,24 +109,24 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
     }
     /**
      * Set Grouping value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentGroupingType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentGroupingType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentGroupingType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentGroupingType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $grouping
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail
      */
     public function setGrouping($grouping = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShippingDocumentGroupingType::valueIsValid($grouping)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $grouping, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentGroupingType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentGroupingType::valueIsValid($grouping)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $grouping, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentGroupingType::getValidValues())), __LINE__);
         }
         $this->Grouping = $grouping;
         return $this;
     }
     /**
      * Get StorageDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail|null
      */
     public function getStorageDetail()
     {
@@ -134,17 +134,17 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
     }
     /**
      * Set StorageDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail
      */
-    public function setStorageDetail(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail = null)
+    public function setStorageDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentStorageDetail $storageDetail = null)
     {
         $this->StorageDetail = $storageDetail;
         return $this;
     }
     /**
      * Get EMailDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentEMailDetail|null
      */
     public function getEMailDetail()
     {
@@ -152,17 +152,17 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
     }
     /**
      * Set EMailDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail
      */
-    public function setEMailDetail(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail = null)
+    public function setEMailDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentEMailDetail $eMailDetail = null)
     {
         $this->EMailDetail = $eMailDetail;
         return $this;
     }
     /**
      * Get PrintDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPrintDetail|null
      */
     public function getPrintDetail()
     {
@@ -170,10 +170,10 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
     }
     /**
      * Set PrintDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail
      */
-    public function setPrintDetail(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail = null)
+    public function setPrintDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPrintDetail $printDetail = null)
     {
         $this->PrintDetail = $printDetail;
         return $this;
@@ -184,7 +184,7 @@ class ShippingDocumentDispositionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentDispositionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentDispositionDetail
      */
     public static function __set_state(array $array)
     {

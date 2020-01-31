@@ -22,14 +22,14 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
      * The Origin
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Address
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
      */
     public $Origin;
     /**
      * The Destination
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Address
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
      */
     public $Destination;
     /**
@@ -65,7 +65,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Name, title and place of the signatory for this shipment.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory
      */
     public $Signatory;
     /**
@@ -73,7 +73,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The contact information for infectious substances.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Contact
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public $InfectiousSubstanceResponsibleContact;
     /**
@@ -103,7 +103,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
      * The MasterTrackingId
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public $MasterTrackingId;
     /**
@@ -122,20 +122,20 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
      * @uses UploadedDangerousGoodsShipmentDetail::setAdditionalHandling()
      * @uses UploadedDangerousGoodsShipmentDetail::setMasterTrackingId()
      * @param string[] $attributes
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $origin
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $destination
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $origin
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destination
      * @param string $carrierCode
      * @param string $serviceType
      * @param string $shipDate
      * @param string $offeror
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory $signatory
-     * @param \CommerceFedEx\FedExPHP\Structs\Contact $infectiousSubstanceResponsibleContact
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory $signatory
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $infectiousSubstanceResponsibleContact
      * @param string $emergencyContactNumber
      * @param string $aircraftCategoryType
      * @param string $additionalHandling
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId
      */
-    public function __construct(array $attributes = array(), \CommerceFedEx\FedExPHP\Structs\Address $origin = null, \CommerceFedEx\FedExPHP\Structs\Address $destination = null, $carrierCode = null, $serviceType = null, $shipDate = null, $offeror = null, \CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory $signatory = null, \CommerceFedEx\FedExPHP\Structs\Contact $infectiousSubstanceResponsibleContact = null, $emergencyContactNumber = null, $aircraftCategoryType = null, $additionalHandling = null, \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId = null)
+    public function __construct(array $attributes = array(), \NicholasCreativeMedia\FedExPHP\Structs\Address $origin = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $destination = null, $carrierCode = null, $serviceType = null, $shipDate = null, $offeror = null, \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory $signatory = null, \NicholasCreativeMedia\FedExPHP\Structs\Contact $infectiousSubstanceResponsibleContact = null, $emergencyContactNumber = null, $aircraftCategoryType = null, $additionalHandling = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId = null)
     {
         $this
             ->setAttributes($attributes)
@@ -162,46 +162,46 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Attributes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $attributes
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public function setAttributes(array $attributes = array())
     {
         $invalidValues = array();
         foreach ($attributes as $uploadedDangerousGoodsShipmentDetailAttributesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::valueIsValid($uploadedDangerousGoodsShipmentDetailAttributesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::valueIsValid($uploadedDangerousGoodsShipmentDetailAttributesItem)) {
                 $invalidValues[] = var_export($uploadedDangerousGoodsShipmentDetailAttributesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::getValidValues())), __LINE__);
         }
         $this->Attributes = $attributes;
         return $this;
     }
     /**
      * Add item to Attributes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public function addToAttributes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\UploadedDangerousGoodsShipmentAttributeType::getValidValues())), __LINE__);
         }
         $this->Attributes[] = $item;
         return $this;
     }
     /**
      * Get Origin value
-     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
      */
     public function getOrigin()
     {
@@ -209,17 +209,17 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Origin value
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $origin
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $origin
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
-    public function setOrigin(\CommerceFedEx\FedExPHP\Structs\Address $origin = null)
+    public function setOrigin(\NicholasCreativeMedia\FedExPHP\Structs\Address $origin = null)
     {
         $this->Origin = $origin;
         return $this;
     }
     /**
      * Get Destination value
-     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
      */
     public function getDestination()
     {
@@ -227,10 +227,10 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Destination value
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $destination
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $destination
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
-    public function setDestination(\CommerceFedEx\FedExPHP\Structs\Address $destination = null)
+    public function setDestination(\NicholasCreativeMedia\FedExPHP\Structs\Address $destination = null)
     {
         $this->Destination = $destination;
         return $this;
@@ -245,17 +245,17 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set CarrierCode value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $carrierCode
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public function setCarrierCode($carrierCode = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($carrierCode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $carrierCode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->CarrierCode = $carrierCode;
         return $this;
@@ -271,7 +271,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     /**
      * Set ServiceType value
      * @param string $serviceType
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public function setServiceType($serviceType = null)
     {
@@ -293,7 +293,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     /**
      * Set ShipDate value
      * @param string $shipDate
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public function setShipDate($shipDate = null)
     {
@@ -315,7 +315,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     /**
      * Set Offeror value
      * @param string $offeror
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public function setOfferor($offeror = null)
     {
@@ -328,7 +328,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Get Signatory value
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory|null
      */
     public function getSignatory()
     {
@@ -336,17 +336,17 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Signatory value
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory $signatory
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory $signatory
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
-    public function setSignatory(\CommerceFedEx\FedExPHP\Structs\DangerousGoodsSignatory $signatory = null)
+    public function setSignatory(\NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsSignatory $signatory = null)
     {
         $this->Signatory = $signatory;
         return $this;
     }
     /**
      * Get InfectiousSubstanceResponsibleContact value
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact|null
      */
     public function getInfectiousSubstanceResponsibleContact()
     {
@@ -354,10 +354,10 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set InfectiousSubstanceResponsibleContact value
-     * @param \CommerceFedEx\FedExPHP\Structs\Contact $infectiousSubstanceResponsibleContact
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $infectiousSubstanceResponsibleContact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
-    public function setInfectiousSubstanceResponsibleContact(\CommerceFedEx\FedExPHP\Structs\Contact $infectiousSubstanceResponsibleContact = null)
+    public function setInfectiousSubstanceResponsibleContact(\NicholasCreativeMedia\FedExPHP\Structs\Contact $infectiousSubstanceResponsibleContact = null)
     {
         $this->InfectiousSubstanceResponsibleContact = $infectiousSubstanceResponsibleContact;
         return $this;
@@ -373,7 +373,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     /**
      * Set EmergencyContactNumber value
      * @param string $emergencyContactNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public function setEmergencyContactNumber($emergencyContactNumber = null)
     {
@@ -394,17 +394,17 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set AircraftCategoryType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $aircraftCategoryType
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public function setAircraftCategoryType($aircraftCategoryType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid($aircraftCategoryType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $aircraftCategoryType, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid($aircraftCategoryType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $aircraftCategoryType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues())), __LINE__);
         }
         $this->AircraftCategoryType = $aircraftCategoryType;
         return $this;
@@ -420,7 +420,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     /**
      * Set AdditionalHandling value
      * @param string $additionalHandling
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public function setAdditionalHandling($additionalHandling = null)
     {
@@ -433,7 +433,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Get MasterTrackingId value
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId|null
      */
     public function getMasterTrackingId()
     {
@@ -441,10 +441,10 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set MasterTrackingId value
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
-    public function setMasterTrackingId(\CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId = null)
+    public function setMasterTrackingId(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId = null)
     {
         $this->MasterTrackingId = $masterTrackingId;
         return $this;
@@ -455,7 +455,7 @@ class UploadedDangerousGoodsShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsShipmentDetail
      */
     public static function __set_state(array $array)
     {

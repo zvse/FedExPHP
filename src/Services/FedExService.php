@@ -6,7 +6,7 @@ use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
 /**
  * Class FedExService
- * @package CommerceFedEx\FedExPHP\Services
+ * @package NicholasCreativeMedia\FedExPHP\Services
  */
 class FedExService extends AbstractSoapClientBase
 {

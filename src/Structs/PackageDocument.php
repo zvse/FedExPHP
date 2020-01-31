@@ -24,7 +24,7 @@ class PackageDocument extends AbstractStructBase
      * - documentation: All shipping documents, including labels and barcodes, that apply to the indicated package.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocument[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[]
      */
     public $ShippingDocuments;
     /**
@@ -32,7 +32,7 @@ class PackageDocument extends AbstractStructBase
      * @uses PackageDocument::setSequenceNumber()
      * @uses PackageDocument::setShippingDocuments()
      * @param int $sequenceNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $shippingDocuments
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[] $shippingDocuments
      */
     public function __construct($sequenceNumber = null, array $shippingDocuments = array())
     {
@@ -51,7 +51,7 @@ class PackageDocument extends AbstractStructBase
     /**
      * Set SequenceNumber value
      * @param int $sequenceNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageDocument
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument
      */
     public function setSequenceNumber($sequenceNumber = null)
     {
@@ -64,7 +64,7 @@ class PackageDocument extends AbstractStructBase
     }
     /**
      * Get ShippingDocuments value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocument[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[]|null
      */
     public function getShippingDocuments()
     {
@@ -73,15 +73,15 @@ class PackageDocument extends AbstractStructBase
     /**
      * Set ShippingDocuments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $shippingDocuments
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageDocument
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[] $shippingDocuments
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument
      */
     public function setShippingDocuments(array $shippingDocuments = array())
     {
         foreach ($shippingDocuments as $packageDocumentShippingDocumentsItem) {
             // validation for constraint: itemType
-            if (!$packageDocumentShippingDocumentsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocument) {
-                throw new \InvalidArgumentException(sprintf('The ShippingDocuments property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($packageDocumentShippingDocumentsItem) ? get_class($packageDocumentShippingDocumentsItem) : gettype($packageDocumentShippingDocumentsItem)), __LINE__);
+            if (!$packageDocumentShippingDocumentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument) {
+                throw new \InvalidArgumentException(sprintf('The ShippingDocuments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($packageDocumentShippingDocumentsItem) ? get_class($packageDocumentShippingDocumentsItem) : gettype($packageDocumentShippingDocumentsItem)), __LINE__);
             }
         }
         $this->ShippingDocuments = $shippingDocuments;
@@ -90,14 +90,14 @@ class PackageDocument extends AbstractStructBase
     /**
      * Add item to ShippingDocuments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageDocument
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument
      */
-    public function addToShippingDocuments(\CommerceFedEx\FedExPHP\Structs\ShippingDocument $item)
+    public function addToShippingDocuments(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocument) {
-            throw new \InvalidArgumentException(sprintf('The ShippingDocuments property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument) {
+            throw new \InvalidArgumentException(sprintf('The ShippingDocuments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ShippingDocuments[] = $item;
         return $this;
@@ -108,7 +108,7 @@ class PackageDocument extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageDocument
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument
      */
     public static function __set_state(array $array)
     {

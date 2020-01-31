@@ -21,21 +21,32 @@ class BrokerDetail extends AbstractStructBase
      * The Broker
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Party
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public $Broker;
+    /**
+     * The BrokerageProcessingChargesPayment
+     * Meta informations extracted from the WSDL
+     * - documentation: Specifies details about how the charges for the brokerage processing are paid for.
+     * - minOccurs: 0
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payment
+     */
+    public $BrokerageProcessingChargesPayment;
     /**
      * Constructor method for BrokerDetail
      * @uses BrokerDetail::setType()
      * @uses BrokerDetail::setBroker()
+     * @uses BrokerDetail::setBrokerageProcessingChargesPayment()
      * @param string $type
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $broker
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $broker
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $brokerageProcessingChargesPayment
      */
-    public function __construct($type = null, \CommerceFedEx\FedExPHP\Structs\Party $broker = null)
+    public function __construct($type = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $broker = null, \NicholasCreativeMedia\FedExPHP\Structs\Payment $brokerageProcessingChargesPayment = null)
     {
         $this
             ->setType($type)
-            ->setBroker($broker);
+            ->setBroker($broker)
+            ->setBrokerageProcessingChargesPayment($brokerageProcessingChargesPayment);
     }
     /**
      * Get Type value
@@ -47,24 +58,24 @@ class BrokerDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\BrokerType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\BrokerType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BrokerType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\BrokerType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\BrokerDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\BrokerType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\BrokerType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\BrokerType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\BrokerType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
     }
     /**
      * Get Broker value
-     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
      */
     public function getBroker()
     {
@@ -72,12 +83,30 @@ class BrokerDetail extends AbstractStructBase
     }
     /**
      * Set Broker value
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $broker
-     * @return \CommerceFedEx\FedExPHP\Structs\BrokerDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $broker
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail
      */
-    public function setBroker(\CommerceFedEx\FedExPHP\Structs\Party $broker = null)
+    public function setBroker(\NicholasCreativeMedia\FedExPHP\Structs\Party $broker = null)
     {
         $this->Broker = $broker;
+        return $this;
+    }
+    /**
+     * Get BrokerageProcessingChargesPayment value
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment|null
+     */
+    public function getBrokerageProcessingChargesPayment()
+    {
+        return $this->BrokerageProcessingChargesPayment;
+    }
+    /**
+     * Set BrokerageProcessingChargesPayment value
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $brokerageProcessingChargesPayment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail
+     */
+    public function setBrokerageProcessingChargesPayment(\NicholasCreativeMedia\FedExPHP\Structs\Payment $brokerageProcessingChargesPayment = null)
+    {
+        $this->BrokerageProcessingChargesPayment = $brokerageProcessingChargesPayment;
         return $this;
     }
     /**
@@ -86,7 +115,7 @@ class BrokerDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\BrokerDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BrokerDetail
      */
     public static function __set_state(array $array)
     {

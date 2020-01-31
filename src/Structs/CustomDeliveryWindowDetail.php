@@ -31,7 +31,7 @@ class CustomDeliveryWindowDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Range of dates for custom delivery request; only used if type is BETWEEN.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DateRange
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DateRange
      */
     public $RequestRange;
     /**
@@ -50,10 +50,10 @@ class CustomDeliveryWindowDetail extends AbstractStructBase
      * @uses CustomDeliveryWindowDetail::setRequestDate()
      * @param string $type
      * @param string $requestTime
-     * @param \CommerceFedEx\FedExPHP\Structs\DateRange $requestRange
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DateRange $requestRange
      * @param string $requestDate
      */
-    public function __construct($type = null, $requestTime = null, \CommerceFedEx\FedExPHP\Structs\DateRange $requestRange = null, $requestDate = null)
+    public function __construct($type = null, $requestTime = null, \NicholasCreativeMedia\FedExPHP\Structs\DateRange $requestRange = null, $requestDate = null)
     {
         $this
             ->setType($type)
@@ -71,17 +71,17 @@ class CustomDeliveryWindowDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomDeliveryWindowType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomDeliveryWindowType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomDeliveryWindowType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomDeliveryWindowType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDeliveryWindowDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDeliveryWindowDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CustomDeliveryWindowType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomDeliveryWindowType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomDeliveryWindowType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomDeliveryWindowType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -97,7 +97,7 @@ class CustomDeliveryWindowDetail extends AbstractStructBase
     /**
      * Set RequestTime value
      * @param string $requestTime
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDeliveryWindowDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDeliveryWindowDetail
      */
     public function setRequestTime($requestTime = null)
     {
@@ -110,7 +110,7 @@ class CustomDeliveryWindowDetail extends AbstractStructBase
     }
     /**
      * Get RequestRange value
-     * @return \CommerceFedEx\FedExPHP\Structs\DateRange|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DateRange|null
      */
     public function getRequestRange()
     {
@@ -118,10 +118,10 @@ class CustomDeliveryWindowDetail extends AbstractStructBase
     }
     /**
      * Set RequestRange value
-     * @param \CommerceFedEx\FedExPHP\Structs\DateRange $requestRange
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDeliveryWindowDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DateRange $requestRange
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDeliveryWindowDetail
      */
-    public function setRequestRange(\CommerceFedEx\FedExPHP\Structs\DateRange $requestRange = null)
+    public function setRequestRange(\NicholasCreativeMedia\FedExPHP\Structs\DateRange $requestRange = null)
     {
         $this->RequestRange = $requestRange;
         return $this;
@@ -137,7 +137,7 @@ class CustomDeliveryWindowDetail extends AbstractStructBase
     /**
      * Set RequestDate value
      * @param string $requestDate
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDeliveryWindowDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDeliveryWindowDetail
      */
     public function setRequestDate($requestDate = null)
     {
@@ -154,7 +154,7 @@ class CustomDeliveryWindowDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDeliveryWindowDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDeliveryWindowDetail
      */
     public static function __set_state(array $array)
     {

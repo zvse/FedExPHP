@@ -14,7 +14,7 @@ class ParsedAddressPartsDetail extends AbstractStructBase
      * The ParsedStreetLine
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail
      */
     public $ParsedStreetLine;
     /**
@@ -22,17 +22,17 @@ class ParsedAddressPartsDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The postal code specified in a form that is supported by USPS as base, secondary and tertiary.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail
      */
     public $ParsedPostalCode;
     /**
      * Constructor method for ParsedAddressPartsDetail
      * @uses ParsedAddressPartsDetail::setParsedStreetLine()
      * @uses ParsedAddressPartsDetail::setParsedPostalCode()
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail $parsedStreetLine
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail $parsedPostalCode
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail $parsedStreetLine
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail $parsedPostalCode
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail $parsedStreetLine = null, \CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail $parsedPostalCode = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail $parsedStreetLine = null, \NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail $parsedPostalCode = null)
     {
         $this
             ->setParsedStreetLine($parsedStreetLine)
@@ -40,7 +40,7 @@ class ParsedAddressPartsDetail extends AbstractStructBase
     }
     /**
      * Get ParsedStreetLine value
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail|null
      */
     public function getParsedStreetLine()
     {
@@ -48,17 +48,17 @@ class ParsedAddressPartsDetail extends AbstractStructBase
     }
     /**
      * Set ParsedStreetLine value
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail $parsedStreetLine
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedAddressPartsDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail $parsedStreetLine
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedAddressPartsDetail
      */
-    public function setParsedStreetLine(\CommerceFedEx\FedExPHP\Structs\ParsedStreetLineDetail $parsedStreetLine = null)
+    public function setParsedStreetLine(\NicholasCreativeMedia\FedExPHP\Structs\ParsedStreetLineDetail $parsedStreetLine = null)
     {
         $this->ParsedStreetLine = $parsedStreetLine;
         return $this;
     }
     /**
      * Get ParsedPostalCode value
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail|null
      */
     public function getParsedPostalCode()
     {
@@ -66,10 +66,10 @@ class ParsedAddressPartsDetail extends AbstractStructBase
     }
     /**
      * Set ParsedPostalCode value
-     * @param \CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail $parsedPostalCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedAddressPartsDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail $parsedPostalCode
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedAddressPartsDetail
      */
-    public function setParsedPostalCode(\CommerceFedEx\FedExPHP\Structs\ParsedPostalCodeDetail $parsedPostalCode = null)
+    public function setParsedPostalCode(\NicholasCreativeMedia\FedExPHP\Structs\ParsedPostalCodeDetail $parsedPostalCode = null)
     {
         $this->ParsedPostalCode = $parsedPostalCode;
         return $this;
@@ -80,7 +80,7 @@ class ParsedAddressPartsDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ParsedAddressPartsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ParsedAddressPartsDetail
      */
     public static function __set_state(array $array)
     {

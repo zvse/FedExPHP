@@ -28,14 +28,14 @@ class PackageSpecialServicesRequested extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: For use with FedEx Ground services only; COD must be present in shipment's special services.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CodDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CodDetail
      */
     public $CodDetail;
     /**
      * The DangerousGoodsDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail
      */
     public $DangerousGoodsDetail;
     /**
@@ -44,35 +44,42 @@ class PackageSpecialServicesRequested extends AbstractStructBase
      * - documentation: Provides details about the batteries or cells that are contained within this specific package.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail[]
      */
     public $BatteryDetails;
     /**
      * The DryIceWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $DryIceWeight;
     /**
      * The SignatureOptionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail
      */
     public $SignatureOptionDetail;
+    /**
+     * The PieceCountVerificationBoxCount
+     * Meta informations extracted from the WSDL
+     * - minOccurs: 0
+     * @var int
+     */
+    public $PieceCountVerificationBoxCount;
     /**
      * The PriorityAlertDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail
      */
     public $PriorityAlertDetail;
     /**
      * The AlcoholDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\AlcoholDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail
      */
     public $AlcoholDetail;
     /**
@@ -83,18 +90,20 @@ class PackageSpecialServicesRequested extends AbstractStructBase
      * @uses PackageSpecialServicesRequested::setBatteryDetails()
      * @uses PackageSpecialServicesRequested::setDryIceWeight()
      * @uses PackageSpecialServicesRequested::setSignatureOptionDetail()
+     * @uses PackageSpecialServicesRequested::setPieceCountVerificationBoxCount()
      * @uses PackageSpecialServicesRequested::setPriorityAlertDetail()
      * @uses PackageSpecialServicesRequested::setAlcoholDetail()
      * @param string[] $specialServiceTypes
-     * @param \CommerceFedEx\FedExPHP\Structs\CodDetail $codDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail $dangerousGoodsDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail[] $batteryDetails
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight
-     * @param \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $signatureOptionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\AlcoholDetail $alcoholDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CodDetail $codDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail $dangerousGoodsDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail[] $batteryDetails
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $dryIceWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $signatureOptionDetail
+     * @param int $pieceCountVerificationBoxCount
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail $alcoholDetail
      */
-    public function __construct(array $specialServiceTypes = array(), \CommerceFedEx\FedExPHP\Structs\CodDetail $codDetail = null, \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail $dangerousGoodsDetail = null, array $batteryDetails = array(), \CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight = null, \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $signatureOptionDetail = null, \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null, \CommerceFedEx\FedExPHP\Structs\AlcoholDetail $alcoholDetail = null)
+    public function __construct(array $specialServiceTypes = array(), \NicholasCreativeMedia\FedExPHP\Structs\CodDetail $codDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail $dangerousGoodsDetail = null, array $batteryDetails = array(), \NicholasCreativeMedia\FedExPHP\Structs\Weight $dryIceWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $signatureOptionDetail = null, $pieceCountVerificationBoxCount = null, \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail $alcoholDetail = null)
     {
         $this
             ->setSpecialServiceTypes($specialServiceTypes)
@@ -103,6 +112,7 @@ class PackageSpecialServicesRequested extends AbstractStructBase
             ->setBatteryDetails($batteryDetails)
             ->setDryIceWeight($dryIceWeight)
             ->setSignatureOptionDetail($signatureOptionDetail)
+            ->setPieceCountVerificationBoxCount($pieceCountVerificationBoxCount)
             ->setPriorityAlertDetail($priorityAlertDetail)
             ->setAlcoholDetail($alcoholDetail);
     }
@@ -118,7 +128,7 @@ class PackageSpecialServicesRequested extends AbstractStructBase
      * Set SpecialServiceTypes value
      * @throws \InvalidArgumentException
      * @param string[] $specialServiceTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
     public function setSpecialServiceTypes(array $specialServiceTypes = array())
     {
@@ -135,7 +145,7 @@ class PackageSpecialServicesRequested extends AbstractStructBase
      * Add item to SpecialServiceTypes value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
     public function addToSpecialServiceTypes($item)
     {
@@ -148,7 +158,7 @@ class PackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Get CodDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CodDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CodDetail|null
      */
     public function getCodDetail()
     {
@@ -156,17 +166,17 @@ class PackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set CodDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CodDetail $codDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CodDetail $codDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
-    public function setCodDetail(\CommerceFedEx\FedExPHP\Structs\CodDetail $codDetail = null)
+    public function setCodDetail(\NicholasCreativeMedia\FedExPHP\Structs\CodDetail $codDetail = null)
     {
         $this->CodDetail = $codDetail;
         return $this;
     }
     /**
      * Get DangerousGoodsDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail|null
      */
     public function getDangerousGoodsDetail()
     {
@@ -174,17 +184,17 @@ class PackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set DangerousGoodsDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail $dangerousGoodsDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail $dangerousGoodsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
-    public function setDangerousGoodsDetail(\CommerceFedEx\FedExPHP\Structs\DangerousGoodsDetail $dangerousGoodsDetail = null)
+    public function setDangerousGoodsDetail(\NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsDetail $dangerousGoodsDetail = null)
     {
         $this->DangerousGoodsDetail = $dangerousGoodsDetail;
         return $this;
     }
     /**
      * Get BatteryDetails value
-     * @return \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail[]|null
      */
     public function getBatteryDetails()
     {
@@ -193,15 +203,15 @@ class PackageSpecialServicesRequested extends AbstractStructBase
     /**
      * Set BatteryDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail[] $batteryDetails
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail[] $batteryDetails
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
     public function setBatteryDetails(array $batteryDetails = array())
     {
         foreach ($batteryDetails as $packageSpecialServicesRequestedBatteryDetailsItem) {
             // validation for constraint: itemType
-            if (!$packageSpecialServicesRequestedBatteryDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail) {
-                throw new \InvalidArgumentException(sprintf('The BatteryDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail, "%s" given', is_object($packageSpecialServicesRequestedBatteryDetailsItem) ? get_class($packageSpecialServicesRequestedBatteryDetailsItem) : gettype($packageSpecialServicesRequestedBatteryDetailsItem)), __LINE__);
+            if (!$packageSpecialServicesRequestedBatteryDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail) {
+                throw new \InvalidArgumentException(sprintf('The BatteryDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail, "%s" given', is_object($packageSpecialServicesRequestedBatteryDetailsItem) ? get_class($packageSpecialServicesRequestedBatteryDetailsItem) : gettype($packageSpecialServicesRequestedBatteryDetailsItem)), __LINE__);
             }
         }
         $this->BatteryDetails = $batteryDetails;
@@ -210,21 +220,21 @@ class PackageSpecialServicesRequested extends AbstractStructBase
     /**
      * Add item to BatteryDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
-    public function addToBatteryDetails(\CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail $item)
+    public function addToBatteryDetails(\NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail) {
-            throw new \InvalidArgumentException(sprintf('The BatteryDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\BatteryClassificationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail) {
+            throw new \InvalidArgumentException(sprintf('The BatteryDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\BatteryClassificationDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->BatteryDetails[] = $item;
         return $this;
     }
     /**
      * Get DryIceWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getDryIceWeight()
     {
@@ -232,17 +242,17 @@ class PackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set DryIceWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $dryIceWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
-    public function setDryIceWeight(\CommerceFedEx\FedExPHP\Structs\Weight $dryIceWeight = null)
+    public function setDryIceWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $dryIceWeight = null)
     {
         $this->DryIceWeight = $dryIceWeight;
         return $this;
     }
     /**
      * Get SignatureOptionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail|null
      */
     public function getSignatureOptionDetail()
     {
@@ -250,17 +260,39 @@ class PackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set SignatureOptionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $signatureOptionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $signatureOptionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
-    public function setSignatureOptionDetail(\CommerceFedEx\FedExPHP\Structs\SignatureOptionDetail $signatureOptionDetail = null)
+    public function setSignatureOptionDetail(\NicholasCreativeMedia\FedExPHP\Structs\SignatureOptionDetail $signatureOptionDetail = null)
     {
         $this->SignatureOptionDetail = $signatureOptionDetail;
         return $this;
     }
     /**
+     * Get PieceCountVerificationBoxCount value
+     * @return int|null
+     */
+    public function getPieceCountVerificationBoxCount()
+    {
+        return $this->PieceCountVerificationBoxCount;
+    }
+    /**
+     * Set PieceCountVerificationBoxCount value
+     * @param int $pieceCountVerificationBoxCount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
+     */
+    public function setPieceCountVerificationBoxCount($pieceCountVerificationBoxCount = null)
+    {
+        // validation for constraint: int
+        if (!is_null($pieceCountVerificationBoxCount) && !is_numeric($pieceCountVerificationBoxCount)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a numeric value, "%s" given', gettype($pieceCountVerificationBoxCount)), __LINE__);
+        }
+        $this->PieceCountVerificationBoxCount = $pieceCountVerificationBoxCount;
+        return $this;
+    }
+    /**
      * Get PriorityAlertDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail|null
      */
     public function getPriorityAlertDetail()
     {
@@ -268,17 +300,17 @@ class PackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set PriorityAlertDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
-    public function setPriorityAlertDetail(\CommerceFedEx\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
+    public function setPriorityAlertDetail(\NicholasCreativeMedia\FedExPHP\Structs\PriorityAlertDetail $priorityAlertDetail = null)
     {
         $this->PriorityAlertDetail = $priorityAlertDetail;
         return $this;
     }
     /**
      * Get AlcoholDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\AlcoholDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail|null
      */
     public function getAlcoholDetail()
     {
@@ -286,10 +318,10 @@ class PackageSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set AlcoholDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\AlcoholDetail $alcoholDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail $alcoholDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
-    public function setAlcoholDetail(\CommerceFedEx\FedExPHP\Structs\AlcoholDetail $alcoholDetail = null)
+    public function setAlcoholDetail(\NicholasCreativeMedia\FedExPHP\Structs\AlcoholDetail $alcoholDetail = null)
     {
         $this->AlcoholDetail = $alcoholDetail;
         return $this;
@@ -300,7 +332,7 @@ class PackageSpecialServicesRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageSpecialServicesRequested
      */
     public static function __set_state(array $array)
     {

@@ -17,21 +17,21 @@ class DeleteTagRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
@@ -39,7 +39,7 @@ class DeleteTagRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: If the original ProcessTagRequest specified third-party payment, then the delete request must contain the same pay type and payor account number for security purposes.
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\Payment
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payment
      */
     public $Payment;
     /**
@@ -53,7 +53,7 @@ class DeleteTagRequest extends AbstractStructBase
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -82,16 +82,16 @@ class DeleteTagRequest extends AbstractStructBase
      * @uses DeleteTagRequest::setTransactionDetail()
      * @uses DeleteTagRequest::setDispatchLocationId()
      * @uses DeleteTagRequest::setDispatchDate()
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $payment
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $payment
      * @param string $confirmationNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $dispatchLocationId
      * @param string $dispatchDate
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\Payment $payment = null, $confirmationNumber = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $dispatchLocationId = null, $dispatchDate = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\Payment $payment = null, $confirmationNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $dispatchLocationId = null, $dispatchDate = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -105,7 +105,7 @@ class DeleteTagRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -113,17 +113,17 @@ class DeleteTagRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest
      */
-    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -131,17 +131,17 @@ class DeleteTagRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest
      */
-    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -149,17 +149,17 @@ class DeleteTagRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get Payment value
-     * @return \CommerceFedEx\FedExPHP\Structs\Payment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment
      */
     public function getPayment()
     {
@@ -167,10 +167,10 @@ class DeleteTagRequest extends AbstractStructBase
     }
     /**
      * Set Payment value
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $payment
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $payment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest
      */
-    public function setPayment(\CommerceFedEx\FedExPHP\Structs\Payment $payment = null)
+    public function setPayment(\NicholasCreativeMedia\FedExPHP\Structs\Payment $payment = null)
     {
         $this->Payment = $payment;
         return $this;
@@ -186,7 +186,7 @@ class DeleteTagRequest extends AbstractStructBase
     /**
      * Set ConfirmationNumber value
      * @param string $confirmationNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest
      */
     public function setConfirmationNumber($confirmationNumber = null)
     {
@@ -199,7 +199,7 @@ class DeleteTagRequest extends AbstractStructBase
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -207,10 +207,10 @@ class DeleteTagRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -226,7 +226,7 @@ class DeleteTagRequest extends AbstractStructBase
     /**
      * Set DispatchLocationId value
      * @param string $dispatchLocationId
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest
      */
     public function setDispatchLocationId($dispatchLocationId = null)
     {
@@ -248,7 +248,7 @@ class DeleteTagRequest extends AbstractStructBase
     /**
      * Set DispatchDate value
      * @param string $dispatchDate
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest
      */
     public function setDispatchDate($dispatchDate = null)
     {
@@ -265,7 +265,7 @@ class DeleteTagRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteTagRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteTagRequest
      */
     public static function __set_state(array $array)
     {

@@ -11,6 +11,21 @@ namespace NicholasCreativeMedia\FedExPHP\Enums;
 class ShippingDocumentDispositionType
 {
     /**
+     * Constant for value 'CONFIRMED'
+     * @return string 'CONFIRMED'
+     */
+    const VALUE_CONFIRMED = 'CONFIRMED';
+    /**
+     * Constant for value 'DEFERRED_QUEUED'
+     * @return string 'DEFERRED_QUEUED'
+     */
+    const VALUE_DEFERRED_QUEUED = 'DEFERRED_QUEUED';
+    /**
+     * Constant for value 'DEFERRED_RETURNED'
+     * @return string 'DEFERRED_RETURNED'
+     */
+    const VALUE_DEFERRED_RETURNED = 'DEFERRED_RETURNED';
+    /**
      * Constant for value 'DEFERRED_STORED'
      * @return string 'DEFERRED_STORED'
      */
@@ -47,6 +62,9 @@ class ShippingDocumentDispositionType
     }
     /**
      * Return allowed values
+     * @uses self::VALUE_CONFIRMED
+     * @uses self::VALUE_DEFERRED_QUEUED
+     * @uses self::VALUE_DEFERRED_RETURNED
      * @uses self::VALUE_DEFERRED_STORED
      * @uses self::VALUE_EMAILED
      * @uses self::VALUE_QUEUED
@@ -57,6 +75,9 @@ class ShippingDocumentDispositionType
     public static function getValidValues()
     {
         return array(
+            self::VALUE_CONFIRMED,
+            self::VALUE_DEFERRED_QUEUED,
+            self::VALUE_DEFERRED_RETURNED,
             self::VALUE_DEFERRED_STORED,
             self::VALUE_EMAILED,
             self::VALUE_QUEUED,

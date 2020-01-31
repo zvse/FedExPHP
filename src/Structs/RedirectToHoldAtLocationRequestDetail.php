@@ -28,7 +28,7 @@ class RedirectToHoldAtLocationRequestDetail extends AbstractStructBase
      * The HoldingLocationContactAndAddress
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
      */
     public $HoldingLocationContactAndAddress;
     /**
@@ -46,10 +46,10 @@ class RedirectToHoldAtLocationRequestDetail extends AbstractStructBase
      * @uses RedirectToHoldAtLocationRequestDetail::setComments()
      * @param string $holdingLocationId
      * @param int $holdingLocationNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocationContactAndAddress
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $holdingLocationContactAndAddress
      * @param string $comments
      */
-    public function __construct($holdingLocationId = null, $holdingLocationNumber = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocationContactAndAddress = null, $comments = null)
+    public function __construct($holdingLocationId = null, $holdingLocationNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $holdingLocationContactAndAddress = null, $comments = null)
     {
         $this
             ->setHoldingLocationId($holdingLocationId)
@@ -68,7 +68,7 @@ class RedirectToHoldAtLocationRequestDetail extends AbstractStructBase
     /**
      * Set HoldingLocationId value
      * @param string $holdingLocationId
-     * @return \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
      */
     public function setHoldingLocationId($holdingLocationId = null)
     {
@@ -90,7 +90,7 @@ class RedirectToHoldAtLocationRequestDetail extends AbstractStructBase
     /**
      * Set HoldingLocationNumber value
      * @param int $holdingLocationNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
      */
     public function setHoldingLocationNumber($holdingLocationNumber = null)
     {
@@ -103,7 +103,7 @@ class RedirectToHoldAtLocationRequestDetail extends AbstractStructBase
     }
     /**
      * Get HoldingLocationContactAndAddress value
-     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getHoldingLocationContactAndAddress()
     {
@@ -111,10 +111,10 @@ class RedirectToHoldAtLocationRequestDetail extends AbstractStructBase
     }
     /**
      * Set HoldingLocationContactAndAddress value
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocationContactAndAddress
-     * @return \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $holdingLocationContactAndAddress
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
      */
-    public function setHoldingLocationContactAndAddress(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocationContactAndAddress = null)
+    public function setHoldingLocationContactAndAddress(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $holdingLocationContactAndAddress = null)
     {
         $this->HoldingLocationContactAndAddress = $holdingLocationContactAndAddress;
         return $this;
@@ -130,7 +130,7 @@ class RedirectToHoldAtLocationRequestDetail extends AbstractStructBase
     /**
      * Set Comments value
      * @param string $comments
-     * @return \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
      */
     public function setComments($comments = null)
     {
@@ -147,7 +147,7 @@ class RedirectToHoldAtLocationRequestDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RedirectToHoldAtLocationRequestDetail
      */
     public static function __set_state(array $array)
     {

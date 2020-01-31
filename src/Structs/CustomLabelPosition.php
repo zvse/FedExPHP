@@ -14,7 +14,7 @@ class CustomLabelPosition extends AbstractStructBase
      * The X
      * Meta informations extracted from the WSDL
      * - documentation: Horizontal position, relative to left edge of custom area.
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var int
      */
     public $X;
@@ -22,7 +22,7 @@ class CustomLabelPosition extends AbstractStructBase
      * The Y
      * Meta informations extracted from the WSDL
      * - documentation: Vertical position, relative to top edge of custom area.
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var int
      */
     public $Y;
@@ -41,7 +41,7 @@ class CustomLabelPosition extends AbstractStructBase
     }
     /**
      * Get X value
-     * @return int
+     * @return int|null
      */
     public function getX()
     {
@@ -50,7 +50,7 @@ class CustomLabelPosition extends AbstractStructBase
     /**
      * Set X value
      * @param int $x
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
      */
     public function setX($x = null)
     {
@@ -63,7 +63,7 @@ class CustomLabelPosition extends AbstractStructBase
     }
     /**
      * Get Y value
-     * @return int
+     * @return int|null
      */
     public function getY()
     {
@@ -72,7 +72,7 @@ class CustomLabelPosition extends AbstractStructBase
     /**
      * Set Y value
      * @param int $y
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
      */
     public function setY($y = null)
     {
@@ -89,7 +89,7 @@ class CustomLabelPosition extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
      */
     public static function __set_state(array $array)
     {

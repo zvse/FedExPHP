@@ -25,7 +25,7 @@ class CompletedFreightPickupLineItem extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Describes the destination service center handling the delivery of this line item.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail
      */
     public $Destination;
     /**
@@ -51,11 +51,11 @@ class CompletedFreightPickupLineItem extends AbstractStructBase
      * @uses CompletedFreightPickupLineItem::setTotalTravelTime()
      * @uses CompletedFreightPickupLineItem::setEtaDeliveryTimestamp()
      * @param int $sequenceNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $destination
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $destination
      * @param string $totalTravelTime
      * @param string $etaDeliveryTimestamp
      */
-    public function __construct($sequenceNumber = null, \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $destination = null, $totalTravelTime = null, $etaDeliveryTimestamp = null)
+    public function __construct($sequenceNumber = null, \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $destination = null, $totalTravelTime = null, $etaDeliveryTimestamp = null)
     {
         $this
             ->setSequenceNumber($sequenceNumber)
@@ -74,7 +74,7 @@ class CompletedFreightPickupLineItem extends AbstractStructBase
     /**
      * Set SequenceNumber value
      * @param int $sequenceNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem
      */
     public function setSequenceNumber($sequenceNumber = null)
     {
@@ -87,7 +87,7 @@ class CompletedFreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Get Destination value
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail|null
      */
     public function getDestination()
     {
@@ -95,10 +95,10 @@ class CompletedFreightPickupLineItem extends AbstractStructBase
     }
     /**
      * Set Destination value
-     * @param \CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $destination
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $destination
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem
      */
-    public function setDestination(\CommerceFedEx\FedExPHP\Structs\FreightServiceCenterDetail $destination = null)
+    public function setDestination(\NicholasCreativeMedia\FedExPHP\Structs\FreightServiceCenterDetail $destination = null)
     {
         $this->Destination = $destination;
         return $this;
@@ -114,7 +114,7 @@ class CompletedFreightPickupLineItem extends AbstractStructBase
     /**
      * Set TotalTravelTime value
      * @param string $totalTravelTime
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem
      */
     public function setTotalTravelTime($totalTravelTime = null)
     {
@@ -136,7 +136,7 @@ class CompletedFreightPickupLineItem extends AbstractStructBase
     /**
      * Set EtaDeliveryTimestamp value
      * @param string $etaDeliveryTimestamp
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem
      */
     public function setEtaDeliveryTimestamp($etaDeliveryTimestamp = null)
     {
@@ -153,7 +153,7 @@ class CompletedFreightPickupLineItem extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedFreightPickupLineItem
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedFreightPickupLineItem
      */
     public static function __set_state(array $array)
     {

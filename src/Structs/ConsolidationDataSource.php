@@ -51,17 +51,17 @@ class ConsolidationDataSource extends AbstractStructBase
     }
     /**
      * Set Field value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationDataType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationDataType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationDataType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationDataType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $field
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource
      */
     public function setField($field = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationDataType::valueIsValid($field)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $field, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationDataType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationDataType::valueIsValid($field)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $field, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationDataType::getValidValues())), __LINE__);
         }
         $this->Field = $field;
         return $this;
@@ -76,17 +76,17 @@ class ConsolidationDataSource extends AbstractStructBase
     }
     /**
      * Set Source value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationDataSourceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationDataSourceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationDataSourceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationDataSourceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $source
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource
      */
     public function setSource($source = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationDataSourceType::valueIsValid($source)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $source, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationDataSourceType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationDataSourceType::valueIsValid($source)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $source, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationDataSourceType::getValidValues())), __LINE__);
         }
         $this->Source = $source;
         return $this;
@@ -97,7 +97,7 @@ class ConsolidationDataSource extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource
      */
     public static function __set_state(array $array)
     {

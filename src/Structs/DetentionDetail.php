@@ -41,7 +41,7 @@ class DetentionDetail extends AbstractStructBase
     /**
      * Set Duration value
      * @param string $duration
-     * @return \CommerceFedEx\FedExPHP\Structs\DetentionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DetentionDetail
      */
     public function setDuration($duration = null)
     {
@@ -58,7 +58,7 @@ class DetentionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DetentionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DetentionDetail
      */
     public static function __set_state(array $array)
     {

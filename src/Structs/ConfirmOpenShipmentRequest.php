@@ -17,28 +17,28 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -46,7 +46,7 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: This is used to specify processing options related to synchronous or asynchronous processing.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested
      */
     public $AsynchronousProcessingOptions;
     /**
@@ -61,7 +61,7 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
      * The LabelSpecification
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\LabelSpecification
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
      */
     public $LabelSpecification;
     /**
@@ -69,7 +69,7 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Contains data used to create additional (non-label) shipping documents.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification
      */
     public $ShippingDocumentSpecification;
     /**
@@ -101,18 +101,18 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
      * @uses ConfirmOpenShipmentRequest::setShippingDocumentSpecification()
      * @uses ConfirmOpenShipmentRequest::setRateRequestTypes()
      * @uses ConfirmOpenShipmentRequest::setEdtRequestType()
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions
      * @param string $index
-     * @param \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
      * @param string[] $rateRequestTypes
      * @param string $edtRequestType
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions = null, $index = null, \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null, array $rateRequestTypes = array(), $edtRequestType = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions = null, $index = null, \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification = null, \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null, array $rateRequestTypes = array(), $edtRequestType = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -128,7 +128,7 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -136,17 +136,17 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
-    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -154,17 +154,17 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
-    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -172,17 +172,17 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -190,17 +190,17 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
     /**
      * Get AsynchronousProcessingOptions value
-     * @return \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested|null
      */
     public function getAsynchronousProcessingOptions()
     {
@@ -208,10 +208,10 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Set AsynchronousProcessingOptions value
-     * @param \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
-    public function setAsynchronousProcessingOptions(\CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions = null)
+    public function setAsynchronousProcessingOptions(\NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingOptionsRequested $asynchronousProcessingOptions = null)
     {
         $this->AsynchronousProcessingOptions = $asynchronousProcessingOptions;
         return $this;
@@ -227,7 +227,7 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     /**
      * Set Index value
      * @param string $index
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
     public function setIndex($index = null)
     {
@@ -240,7 +240,7 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Get LabelSpecification value
-     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification|null
      */
     public function getLabelSpecification()
     {
@@ -248,17 +248,17 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Set LabelSpecification value
-     * @param \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
-    public function setLabelSpecification(\CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification = null)
+    public function setLabelSpecification(\NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification = null)
     {
         $this->LabelSpecification = $labelSpecification;
         return $this;
     }
     /**
      * Get ShippingDocumentSpecification value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification|null
      */
     public function getShippingDocumentSpecification()
     {
@@ -266,10 +266,10 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Set ShippingDocumentSpecification value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
-    public function setShippingDocumentSpecification(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null)
+    public function setShippingDocumentSpecification(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentSpecification $shippingDocumentSpecification = null)
     {
         $this->ShippingDocumentSpecification = $shippingDocumentSpecification;
         return $this;
@@ -284,39 +284,39 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Set RateRequestTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $rateRequestTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
     public function setRateRequestTypes(array $rateRequestTypes = array())
     {
         $invalidValues = array();
         foreach ($rateRequestTypes as $confirmOpenShipmentRequestRateRequestTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid($confirmOpenShipmentRequestRateRequestTypesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid($confirmOpenShipmentRequestRateRequestTypesItem)) {
                 $invalidValues[] = var_export($confirmOpenShipmentRequestRateRequestTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
         }
         $this->RateRequestTypes = $rateRequestTypes;
         return $this;
     }
     /**
      * Add item to RateRequestTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
     public function addToRateRequestTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RateRequestType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateRequestType::getValidValues())), __LINE__);
         }
         $this->RateRequestTypes[] = $item;
         return $this;
@@ -331,17 +331,17 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
     }
     /**
      * Set EdtRequestType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\EdtRequestType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\EdtRequestType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $edtRequestType
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
     public function setEdtRequestType($edtRequestType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\EdtRequestType::valueIsValid($edtRequestType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $edtRequestType, implode(', ', \CommerceFedEx\FedExPHP\Enums\EdtRequestType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::valueIsValid($edtRequestType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $edtRequestType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\EdtRequestType::getValidValues())), __LINE__);
         }
         $this->EdtRequestType = $edtRequestType;
         return $this;
@@ -352,7 +352,7 @@ class ConfirmOpenShipmentRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConfirmOpenShipmentRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConfirmOpenShipmentRequest
      */
     public static function __set_state(array $array)
     {

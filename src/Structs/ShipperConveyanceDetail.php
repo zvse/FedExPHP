@@ -39,7 +39,7 @@ class ShipperConveyanceDetail extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipperConveyanceDetail
      */
     public function setId($id = null)
     {
@@ -56,7 +56,7 @@ class ShipperConveyanceDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipperConveyanceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipperConveyanceDetail
      */
     public static function __set_state(array $array)
     {

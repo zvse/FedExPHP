@@ -40,39 +40,39 @@ class CreditCardTransactionAttributesDetail extends AbstractStructBase
     }
     /**
      * Set Types value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardTransactionAttributeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardTransactionAttributeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardTransactionAttributeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardTransactionAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $types
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionAttributesDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionAttributesDetail
      */
     public function setTypes(array $types = array())
     {
         $invalidValues = array();
         foreach ($types as $creditCardTransactionAttributesDetailTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\CreditCardTransactionAttributeType::valueIsValid($creditCardTransactionAttributesDetailTypesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\CreditCardTransactionAttributeType::valueIsValid($creditCardTransactionAttributesDetailTypesItem)) {
                 $invalidValues[] = var_export($creditCardTransactionAttributesDetailTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\CreditCardTransactionAttributeType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CreditCardTransactionAttributeType::getValidValues())), __LINE__);
         }
         $this->Types = $types;
         return $this;
     }
     /**
      * Add item to Types value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardTransactionAttributeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CreditCardTransactionAttributeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardTransactionAttributeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CreditCardTransactionAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionAttributesDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionAttributesDetail
      */
     public function addToTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CreditCardTransactionAttributeType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\CreditCardTransactionAttributeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CreditCardTransactionAttributeType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CreditCardTransactionAttributeType::getValidValues())), __LINE__);
         }
         $this->Types[] = $item;
         return $this;
@@ -83,7 +83,7 @@ class CreditCardTransactionAttributesDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CreditCardTransactionAttributesDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreditCardTransactionAttributesDetail
      */
     public static function __set_state(array $array)
     {

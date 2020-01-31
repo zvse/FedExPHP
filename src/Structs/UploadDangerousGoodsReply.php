@@ -24,21 +24,21 @@ class UploadDangerousGoodsReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -53,14 +53,14 @@ class UploadDangerousGoodsReply extends AbstractStructBase
      * The MasterTrackingId
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public $MasterTrackingId;
     /**
      * The CompletedShipmentDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public $CompletedShipmentDetail;
     /**
@@ -68,7 +68,7 @@ class UploadDangerousGoodsReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup[]
      */
     public $CompletedHandlingUnitGroups;
     /**
@@ -82,15 +82,15 @@ class UploadDangerousGoodsReply extends AbstractStructBase
      * @uses UploadDangerousGoodsReply::setCompletedShipmentDetail()
      * @uses UploadDangerousGoodsReply::setCompletedHandlingUnitGroups()
      * @param string $highestSeverity
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $uploadId
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup[] $completedHandlingUnitGroups
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup[] $completedHandlingUnitGroups
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $uploadId = null, \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId = null, \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail = null, array $completedHandlingUnitGroups = array())
+    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $uploadId = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId = null, \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail = null, array $completedHandlingUnitGroups = array())
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -112,24 +112,24 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -138,15 +138,15 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $uploadDangerousGoodsReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$uploadDangerousGoodsReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($uploadDangerousGoodsReplyNotificationsItem) ? get_class($uploadDangerousGoodsReplyNotificationsItem) : gettype($uploadDangerousGoodsReplyNotificationsItem)), __LINE__);
+            if (!$uploadDangerousGoodsReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($uploadDangerousGoodsReplyNotificationsItem) ? get_class($uploadDangerousGoodsReplyNotificationsItem) : gettype($uploadDangerousGoodsReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -155,21 +155,21 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
-    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -177,17 +177,17 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -195,10 +195,10 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -214,7 +214,7 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     /**
      * Set UploadId value
      * @param string $uploadId
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
     public function setUploadId($uploadId = null)
     {
@@ -227,7 +227,7 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     }
     /**
      * Get MasterTrackingId value
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId|null
      */
     public function getMasterTrackingId()
     {
@@ -235,17 +235,17 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     }
     /**
      * Set MasterTrackingId value
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
-    public function setMasterTrackingId(\CommerceFedEx\FedExPHP\Structs\TrackingId $masterTrackingId = null)
+    public function setMasterTrackingId(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $masterTrackingId = null)
     {
         $this->MasterTrackingId = $masterTrackingId;
         return $this;
     }
     /**
      * Get CompletedShipmentDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail|null
      */
     public function getCompletedShipmentDetail()
     {
@@ -253,17 +253,17 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     }
     /**
      * Set CompletedShipmentDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
-    public function setCompletedShipmentDetail(\CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail = null)
+    public function setCompletedShipmentDetail(\NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail $completedShipmentDetail = null)
     {
         $this->CompletedShipmentDetail = $completedShipmentDetail;
         return $this;
     }
     /**
      * Get CompletedHandlingUnitGroups value
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup[]|null
      */
     public function getCompletedHandlingUnitGroups()
     {
@@ -272,15 +272,15 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     /**
      * Set CompletedHandlingUnitGroups value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup[] $completedHandlingUnitGroups
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup[] $completedHandlingUnitGroups
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
     public function setCompletedHandlingUnitGroups(array $completedHandlingUnitGroups = array())
     {
         foreach ($completedHandlingUnitGroups as $uploadDangerousGoodsReplyCompletedHandlingUnitGroupsItem) {
             // validation for constraint: itemType
-            if (!$uploadDangerousGoodsReplyCompletedHandlingUnitGroupsItem instanceof \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup) {
-                throw new \InvalidArgumentException(sprintf('The CompletedHandlingUnitGroups property can only contain items of \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup, "%s" given', is_object($uploadDangerousGoodsReplyCompletedHandlingUnitGroupsItem) ? get_class($uploadDangerousGoodsReplyCompletedHandlingUnitGroupsItem) : gettype($uploadDangerousGoodsReplyCompletedHandlingUnitGroupsItem)), __LINE__);
+            if (!$uploadDangerousGoodsReplyCompletedHandlingUnitGroupsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup) {
+                throw new \InvalidArgumentException(sprintf('The CompletedHandlingUnitGroups property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup, "%s" given', is_object($uploadDangerousGoodsReplyCompletedHandlingUnitGroupsItem) ? get_class($uploadDangerousGoodsReplyCompletedHandlingUnitGroupsItem) : gettype($uploadDangerousGoodsReplyCompletedHandlingUnitGroupsItem)), __LINE__);
             }
         }
         $this->CompletedHandlingUnitGroups = $completedHandlingUnitGroups;
@@ -289,14 +289,14 @@ class UploadDangerousGoodsReply extends AbstractStructBase
     /**
      * Add item to CompletedHandlingUnitGroups value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup $item
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
-    public function addToCompletedHandlingUnitGroups(\CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup $item)
+    public function addToCompletedHandlingUnitGroups(\NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup) {
-            throw new \InvalidArgumentException(sprintf('The CompletedHandlingUnitGroups property can only contain items of \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup) {
+            throw new \InvalidArgumentException(sprintf('The CompletedHandlingUnitGroups property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsHandlingUnitGroup, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CompletedHandlingUnitGroups[] = $item;
         return $this;
@@ -307,7 +307,7 @@ class UploadDangerousGoodsReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDangerousGoodsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDangerousGoodsReply
      */
     public static function __set_state(array $array)
     {

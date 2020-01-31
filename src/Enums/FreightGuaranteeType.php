@@ -19,6 +19,11 @@ class FreightGuaranteeType
      */
     const VALUE_GUARANTEED_MORNING = 'GUARANTEED_MORNING';
     /**
+     * Constant for value 'GUARANTEED_TIME'
+     * @return string 'GUARANTEED_TIME'
+     */
+    const VALUE_GUARANTEED_TIME = 'GUARANTEED_TIME';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -32,6 +37,7 @@ class FreightGuaranteeType
      * Return allowed values
      * @uses self::VALUE_GUARANTEED_DATE
      * @uses self::VALUE_GUARANTEED_MORNING
+     * @uses self::VALUE_GUARANTEED_TIME
      * @return string[]
      */
     public static function getValidValues()
@@ -39,6 +45,7 @@ class FreightGuaranteeType
         return array(
             self::VALUE_GUARANTEED_DATE,
             self::VALUE_GUARANTEED_MORNING,
+            self::VALUE_GUARANTEED_TIME,
         );
     }
     /**

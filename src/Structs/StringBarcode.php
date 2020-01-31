@@ -51,17 +51,17 @@ class StringBarcode extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\StringBarcodeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\StringBarcodeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\StringBarcodeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\StringBarcodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\StringBarcode
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\StringBarcodeType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\StringBarcodeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\StringBarcodeType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\StringBarcodeType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -77,7 +77,7 @@ class StringBarcode extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \CommerceFedEx\FedExPHP\Structs\StringBarcode
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode
      */
     public function setValue($value = null)
     {
@@ -94,7 +94,7 @@ class StringBarcode extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\StringBarcode
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\StringBarcode
      */
     public static function __set_state(array $array)
     {

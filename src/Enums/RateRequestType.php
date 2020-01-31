@@ -9,6 +9,21 @@ namespace NicholasCreativeMedia\FedExPHP\Enums;
 class RateRequestType
 {
     /**
+     * Constant for value 'ACCOUNT'
+     * @return string 'ACCOUNT'
+     */
+    const VALUE_ACCOUNT = 'ACCOUNT';
+    /**
+     * Constant for value 'CUSTOM'
+     * @return string 'CUSTOM'
+     */
+    const VALUE_CUSTOM = 'CUSTOM';
+    /**
+     * Constant for value 'INCENTIVE'
+     * @return string 'INCENTIVE'
+     */
+    const VALUE_INCENTIVE = 'INCENTIVE';
+    /**
      * Constant for value 'LIST'
      * @return string 'LIST'
      */
@@ -24,6 +39,16 @@ class RateRequestType
      */
     const VALUE_PREFERRED = 'PREFERRED';
     /**
+     * Constant for value 'RATED'
+     * @return string 'RATED'
+     */
+    const VALUE_RATED = 'RATED';
+    /**
+     * Constant for value 'RETAIL'
+     * @return string 'RETAIL'
+     */
+    const VALUE_RETAIL = 'RETAIL';
+    /**
      * Return true if value is allowed
      * @uses self::getValidValues()
      * @param mixed $value value
@@ -35,17 +60,27 @@ class RateRequestType
     }
     /**
      * Return allowed values
+     * @uses self::VALUE_ACCOUNT
+     * @uses self::VALUE_CUSTOM
+     * @uses self::VALUE_INCENTIVE
      * @uses self::VALUE_LIST
      * @uses self::VALUE_NONE
      * @uses self::VALUE_PREFERRED
+     * @uses self::VALUE_RATED
+     * @uses self::VALUE_RETAIL
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
+            self::VALUE_ACCOUNT,
+            self::VALUE_CUSTOM,
+            self::VALUE_INCENTIVE,
             self::VALUE_LIST,
             self::VALUE_NONE,
             self::VALUE_PREFERRED,
+            self::VALUE_RATED,
+            self::VALUE_RETAIL,
         );
     }
     /**

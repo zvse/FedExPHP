@@ -50,7 +50,7 @@ class LocalTimeRange extends AbstractStructBase
     /**
      * Set Begins value
      * @param string $begins
-     * @return \CommerceFedEx\FedExPHP\Structs\LocalTimeRange
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange
      */
     public function setBegins($begins = null)
     {
@@ -72,7 +72,7 @@ class LocalTimeRange extends AbstractStructBase
     /**
      * Set Ends value
      * @param string $ends
-     * @return \CommerceFedEx\FedExPHP\Structs\LocalTimeRange
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange
      */
     public function setEnds($ends = null)
     {
@@ -89,7 +89,7 @@ class LocalTimeRange extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\LocalTimeRange
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LocalTimeRange
      */
     public static function __set_state(array $array)
     {

@@ -49,7 +49,7 @@ class ReturnAssociationDetail extends AbstractStructBase
     /**
      * Set TrackingNumber value
      * @param string $trackingNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnAssociationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnAssociationDetail
      */
     public function setTrackingNumber($trackingNumber = null)
     {
@@ -71,7 +71,7 @@ class ReturnAssociationDetail extends AbstractStructBase
     /**
      * Set ShipDate value
      * @param string $shipDate
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnAssociationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnAssociationDetail
      */
     public function setShipDate($shipDate = null)
     {
@@ -88,7 +88,7 @@ class ReturnAssociationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ReturnAssociationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReturnAssociationDetail
      */
     public static function __set_state(array $array)
     {

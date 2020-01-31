@@ -140,7 +140,7 @@ class Contact extends AbstractStructBase
     /**
      * Set ContactId value
      * @param string $contactId
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setContactId($contactId = null)
     {
@@ -162,7 +162,7 @@ class Contact extends AbstractStructBase
     /**
      * Set PersonName value
      * @param string $personName
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setPersonName($personName = null)
     {
@@ -184,7 +184,7 @@ class Contact extends AbstractStructBase
     /**
      * Set Title value
      * @param string $title
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setTitle($title = null)
     {
@@ -206,7 +206,7 @@ class Contact extends AbstractStructBase
     /**
      * Set CompanyName value
      * @param string $companyName
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setCompanyName($companyName = null)
     {
@@ -228,7 +228,7 @@ class Contact extends AbstractStructBase
     /**
      * Set PhoneNumber value
      * @param string $phoneNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setPhoneNumber($phoneNumber = null)
     {
@@ -250,7 +250,7 @@ class Contact extends AbstractStructBase
     /**
      * Set PhoneExtension value
      * @param string $phoneExtension
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setPhoneExtension($phoneExtension = null)
     {
@@ -272,7 +272,7 @@ class Contact extends AbstractStructBase
     /**
      * Set TollFreePhoneNumber value
      * @param string $tollFreePhoneNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setTollFreePhoneNumber($tollFreePhoneNumber = null)
     {
@@ -294,7 +294,7 @@ class Contact extends AbstractStructBase
     /**
      * Set PagerNumber value
      * @param string $pagerNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setPagerNumber($pagerNumber = null)
     {
@@ -316,7 +316,7 @@ class Contact extends AbstractStructBase
     /**
      * Set FaxNumber value
      * @param string $faxNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setFaxNumber($faxNumber = null)
     {
@@ -338,7 +338,7 @@ class Contact extends AbstractStructBase
     /**
      * Set EMailAddress value
      * @param string $eMailAddress
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public function setEMailAddress($eMailAddress = null)
     {
@@ -355,7 +355,7 @@ class Contact extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public static function __set_state(array $array)
     {

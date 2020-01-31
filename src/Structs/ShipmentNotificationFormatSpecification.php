@@ -37,17 +37,17 @@ class ShipmentNotificationFormatSpecification extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationFormatType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationFormatType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationFormatType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationFormatType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentNotificationFormatSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentNotificationFormatSpecification
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationFormatType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationFormatType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationFormatType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationFormatType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -58,7 +58,7 @@ class ShipmentNotificationFormatSpecification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentNotificationFormatSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentNotificationFormatSpecification
      */
     public static function __set_state(array $array)
     {

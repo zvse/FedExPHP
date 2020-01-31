@@ -22,21 +22,21 @@ class Party extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification[]
      */
     public $Tins;
     /**
      * The Contact
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Contact
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Contact
      */
     public $Contact;
     /**
      * The Address
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Address
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Address
      */
     public $Address;
     /**
@@ -46,11 +46,11 @@ class Party extends AbstractStructBase
      * @uses Party::setContact()
      * @uses Party::setAddress()
      * @param string $accountNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification[] $tins
-     * @param \CommerceFedEx\FedExPHP\Structs\Contact $contact
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification[] $tins
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $contact
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
      */
-    public function __construct($accountNumber = null, array $tins = array(), \CommerceFedEx\FedExPHP\Structs\Contact $contact = null, \CommerceFedEx\FedExPHP\Structs\Address $address = null)
+    public function __construct($accountNumber = null, array $tins = array(), \NicholasCreativeMedia\FedExPHP\Structs\Contact $contact = null, \NicholasCreativeMedia\FedExPHP\Structs\Address $address = null)
     {
         $this
             ->setAccountNumber($accountNumber)
@@ -69,7 +69,7 @@ class Party extends AbstractStructBase
     /**
      * Set AccountNumber value
      * @param string $accountNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\Party
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public function setAccountNumber($accountNumber = null)
     {
@@ -82,7 +82,7 @@ class Party extends AbstractStructBase
     }
     /**
      * Get Tins value
-     * @return \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification[]|null
      */
     public function getTins()
     {
@@ -91,15 +91,15 @@ class Party extends AbstractStructBase
     /**
      * Set Tins value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification[] $tins
-     * @return \CommerceFedEx\FedExPHP\Structs\Party
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification[] $tins
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public function setTins(array $tins = array())
     {
         foreach ($tins as $partyTinsItem) {
             // validation for constraint: itemType
-            if (!$partyTinsItem instanceof \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification) {
-                throw new \InvalidArgumentException(sprintf('The Tins property can only contain items of \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification, "%s" given', is_object($partyTinsItem) ? get_class($partyTinsItem) : gettype($partyTinsItem)), __LINE__);
+            if (!$partyTinsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification) {
+                throw new \InvalidArgumentException(sprintf('The Tins property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification, "%s" given', is_object($partyTinsItem) ? get_class($partyTinsItem) : gettype($partyTinsItem)), __LINE__);
             }
         }
         $this->Tins = $tins;
@@ -108,21 +108,21 @@ class Party extends AbstractStructBase
     /**
      * Add item to Tins value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\Party
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
-    public function addToTins(\CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification $item)
+    public function addToTins(\NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification) {
-            throw new \InvalidArgumentException(sprintf('The Tins property can only contain items of \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification) {
+            throw new \InvalidArgumentException(sprintf('The Tins property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Tins[] = $item;
         return $this;
     }
     /**
      * Get Contact value
-     * @return \CommerceFedEx\FedExPHP\Structs\Contact|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Contact|null
      */
     public function getContact()
     {
@@ -130,17 +130,17 @@ class Party extends AbstractStructBase
     }
     /**
      * Set Contact value
-     * @param \CommerceFedEx\FedExPHP\Structs\Contact $contact
-     * @return \CommerceFedEx\FedExPHP\Structs\Party
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Contact $contact
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
-    public function setContact(\CommerceFedEx\FedExPHP\Structs\Contact $contact = null)
+    public function setContact(\NicholasCreativeMedia\FedExPHP\Structs\Contact $contact = null)
     {
         $this->Contact = $contact;
         return $this;
     }
     /**
      * Get Address value
-     * @return \CommerceFedEx\FedExPHP\Structs\Address|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Address|null
      */
     public function getAddress()
     {
@@ -148,10 +148,10 @@ class Party extends AbstractStructBase
     }
     /**
      * Set Address value
-     * @param \CommerceFedEx\FedExPHP\Structs\Address $address
-     * @return \CommerceFedEx\FedExPHP\Structs\Party
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Address $address
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
-    public function setAddress(\CommerceFedEx\FedExPHP\Structs\Address $address = null)
+    public function setAddress(\NicholasCreativeMedia\FedExPHP\Structs\Address $address = null)
     {
         $this->Address = $address;
         return $this;
@@ -162,7 +162,7 @@ class Party extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Party
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public static function __set_state(array $array)
     {

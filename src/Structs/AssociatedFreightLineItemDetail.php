@@ -39,7 +39,7 @@ class AssociatedFreightLineItemDetail extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail
      */
     public function setId($id = null)
     {
@@ -56,7 +56,7 @@ class AssociatedFreightLineItemDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedFreightLineItemDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedFreightLineItemDetail
      */
     public static function __set_state(array $array)
     {

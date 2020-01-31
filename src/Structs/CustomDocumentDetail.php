@@ -17,7 +17,7 @@ class CustomDocumentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Common information controlling document production.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat
      */
     public $Format;
     /**
@@ -57,14 +57,14 @@ class CustomDocumentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: If provided, thermal documents will include specified doc tab content. If omitted, document will be produced without doc tab content.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DocTabContent
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent
      */
     public $DocTabContent;
     /**
      * The CustomContent
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail
      */
     public $CustomContent;
     /**
@@ -76,15 +76,15 @@ class CustomDocumentDetail extends AbstractStructBase
      * @uses CustomDocumentDetail::setCustomDocumentIdentifier()
      * @uses CustomDocumentDetail::setDocTabContent()
      * @uses CustomDocumentDetail::setCustomContent()
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
      * @param string $labelPrintingOrientation
      * @param string $labelRotation
      * @param string $specificationId
      * @param string $customDocumentIdentifier
-     * @param \CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail $customContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail $customContent
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null, $labelPrintingOrientation = null, $labelRotation = null, $specificationId = null, $customDocumentIdentifier = null, \CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent = null, \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail $customContent = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null, $labelPrintingOrientation = null, $labelRotation = null, $specificationId = null, $customDocumentIdentifier = null, \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent = null, \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail $customContent = null)
     {
         $this
             ->setFormat($format)
@@ -97,7 +97,7 @@ class CustomDocumentDetail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat|null
      */
     public function getFormat()
     {
@@ -105,10 +105,10 @@ class CustomDocumentDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDocumentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDocumentDetail
      */
-    public function setFormat(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentFormat $format = null)
+    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
@@ -123,17 +123,17 @@ class CustomDocumentDetail extends AbstractStructBase
     }
     /**
      * Set LabelPrintingOrientation value
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelPrintingOrientation
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDocumentDetail
      */
     public function setLabelPrintingOrientation($labelPrintingOrientation = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid($labelPrintingOrientation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelPrintingOrientation, implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::valueIsValid($labelPrintingOrientation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelPrintingOrientation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelPrintingOrientationType::getValidValues())), __LINE__);
         }
         $this->LabelPrintingOrientation = $labelPrintingOrientation;
         return $this;
@@ -148,17 +148,17 @@ class CustomDocumentDetail extends AbstractStructBase
     }
     /**
      * Set LabelRotation value
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelRotationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\LabelRotationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelRotationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LabelRotationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelRotation
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDocumentDetail
      */
     public function setLabelRotation($labelRotation = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\LabelRotationType::valueIsValid($labelRotation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelRotation, implode(', ', \CommerceFedEx\FedExPHP\Enums\LabelRotationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\LabelRotationType::valueIsValid($labelRotation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelRotation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LabelRotationType::getValidValues())), __LINE__);
         }
         $this->LabelRotation = $labelRotation;
         return $this;
@@ -174,7 +174,7 @@ class CustomDocumentDetail extends AbstractStructBase
     /**
      * Set SpecificationId value
      * @param string $specificationId
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDocumentDetail
      */
     public function setSpecificationId($specificationId = null)
     {
@@ -196,7 +196,7 @@ class CustomDocumentDetail extends AbstractStructBase
     /**
      * Set CustomDocumentIdentifier value
      * @param string $customDocumentIdentifier
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDocumentDetail
      */
     public function setCustomDocumentIdentifier($customDocumentIdentifier = null)
     {
@@ -209,7 +209,7 @@ class CustomDocumentDetail extends AbstractStructBase
     }
     /**
      * Get DocTabContent value
-     * @return \CommerceFedEx\FedExPHP\Structs\DocTabContent|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent|null
      */
     public function getDocTabContent()
     {
@@ -217,17 +217,17 @@ class CustomDocumentDetail extends AbstractStructBase
     }
     /**
      * Set DocTabContent value
-     * @param \CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDocumentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDocumentDetail
      */
-    public function setDocTabContent(\CommerceFedEx\FedExPHP\Structs\DocTabContent $docTabContent = null)
+    public function setDocTabContent(\NicholasCreativeMedia\FedExPHP\Structs\DocTabContent $docTabContent = null)
     {
         $this->DocTabContent = $docTabContent;
         return $this;
     }
     /**
      * Get CustomContent value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail|null
      */
     public function getCustomContent()
     {
@@ -235,10 +235,10 @@ class CustomDocumentDetail extends AbstractStructBase
     }
     /**
      * Set CustomContent value
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelDetail $customContent
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDocumentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail $customContent
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDocumentDetail
      */
-    public function setCustomContent(\CommerceFedEx\FedExPHP\Structs\CustomLabelDetail $customContent = null)
+    public function setCustomContent(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelDetail $customContent = null)
     {
         $this->CustomContent = $customContent;
         return $this;
@@ -249,7 +249,7 @@ class CustomDocumentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomDocumentDetail
      */
     public static function __set_state(array $array)
     {

@@ -23,14 +23,14 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
      * The ExpressTotalPackageWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $ExpressTotalPackageWeight;
     /**
      * The ExpressTotalPackageAdjustedWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $ExpressTotalPackageAdjustedWeight;
     /**
@@ -44,14 +44,14 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
      * The ExpressTotalFreightWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $ExpressTotalFreightWeight;
     /**
      * The ExpressTotalFreightAdjustedWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $ExpressTotalFreightAdjustedWeight;
     /**
@@ -65,14 +65,14 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
      * The GroundTotalPackageWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $GroundTotalPackageWeight;
     /**
      * The GroundTotalPackageAdjustedWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $GroundTotalPackageAdjustedWeight;
     /**
@@ -96,17 +96,17 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
      * @uses TransborderDistributionSummaryDetail::setGroundTotalPackageAdjustedWeight()
      * @uses TransborderDistributionSummaryDetail::setNumberOfUnconsolidatedCommodities()
      * @param int $expressPackageCount
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalPackageWeight
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalPackageAdjustedWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalPackageWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalPackageAdjustedWeight
      * @param int $expressFreightPackageCount
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalFreightWeight
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalFreightAdjustedWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalFreightWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalFreightAdjustedWeight
      * @param int $groundPackageCount
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $groundTotalPackageWeight
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $groundTotalPackageAdjustedWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $groundTotalPackageWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $groundTotalPackageAdjustedWeight
      * @param int $numberOfUnconsolidatedCommodities
      */
-    public function __construct($expressPackageCount = null, \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalPackageWeight = null, \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalPackageAdjustedWeight = null, $expressFreightPackageCount = null, \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalFreightWeight = null, \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalFreightAdjustedWeight = null, $groundPackageCount = null, \CommerceFedEx\FedExPHP\Structs\Weight $groundTotalPackageWeight = null, \CommerceFedEx\FedExPHP\Structs\Weight $groundTotalPackageAdjustedWeight = null, $numberOfUnconsolidatedCommodities = null)
+    public function __construct($expressPackageCount = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalPackageWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalPackageAdjustedWeight = null, $expressFreightPackageCount = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalFreightWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalFreightAdjustedWeight = null, $groundPackageCount = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $groundTotalPackageWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $groundTotalPackageAdjustedWeight = null, $numberOfUnconsolidatedCommodities = null)
     {
         $this
             ->setExpressPackageCount($expressPackageCount)
@@ -131,7 +131,7 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     /**
      * Set ExpressPackageCount value
      * @param int $expressPackageCount
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
     public function setExpressPackageCount($expressPackageCount = null)
     {
@@ -144,7 +144,7 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Get ExpressTotalPackageWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getExpressTotalPackageWeight()
     {
@@ -152,17 +152,17 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set ExpressTotalPackageWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalPackageWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalPackageWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
-    public function setExpressTotalPackageWeight(\CommerceFedEx\FedExPHP\Structs\Weight $expressTotalPackageWeight = null)
+    public function setExpressTotalPackageWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalPackageWeight = null)
     {
         $this->ExpressTotalPackageWeight = $expressTotalPackageWeight;
         return $this;
     }
     /**
      * Get ExpressTotalPackageAdjustedWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getExpressTotalPackageAdjustedWeight()
     {
@@ -170,10 +170,10 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set ExpressTotalPackageAdjustedWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalPackageAdjustedWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalPackageAdjustedWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
-    public function setExpressTotalPackageAdjustedWeight(\CommerceFedEx\FedExPHP\Structs\Weight $expressTotalPackageAdjustedWeight = null)
+    public function setExpressTotalPackageAdjustedWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalPackageAdjustedWeight = null)
     {
         $this->ExpressTotalPackageAdjustedWeight = $expressTotalPackageAdjustedWeight;
         return $this;
@@ -189,7 +189,7 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     /**
      * Set ExpressFreightPackageCount value
      * @param int $expressFreightPackageCount
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
     public function setExpressFreightPackageCount($expressFreightPackageCount = null)
     {
@@ -202,7 +202,7 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Get ExpressTotalFreightWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getExpressTotalFreightWeight()
     {
@@ -210,17 +210,17 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set ExpressTotalFreightWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalFreightWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalFreightWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
-    public function setExpressTotalFreightWeight(\CommerceFedEx\FedExPHP\Structs\Weight $expressTotalFreightWeight = null)
+    public function setExpressTotalFreightWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalFreightWeight = null)
     {
         $this->ExpressTotalFreightWeight = $expressTotalFreightWeight;
         return $this;
     }
     /**
      * Get ExpressTotalFreightAdjustedWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getExpressTotalFreightAdjustedWeight()
     {
@@ -228,10 +228,10 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set ExpressTotalFreightAdjustedWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $expressTotalFreightAdjustedWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalFreightAdjustedWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
-    public function setExpressTotalFreightAdjustedWeight(\CommerceFedEx\FedExPHP\Structs\Weight $expressTotalFreightAdjustedWeight = null)
+    public function setExpressTotalFreightAdjustedWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $expressTotalFreightAdjustedWeight = null)
     {
         $this->ExpressTotalFreightAdjustedWeight = $expressTotalFreightAdjustedWeight;
         return $this;
@@ -247,7 +247,7 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     /**
      * Set GroundPackageCount value
      * @param int $groundPackageCount
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
     public function setGroundPackageCount($groundPackageCount = null)
     {
@@ -260,7 +260,7 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Get GroundTotalPackageWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getGroundTotalPackageWeight()
     {
@@ -268,17 +268,17 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set GroundTotalPackageWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $groundTotalPackageWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $groundTotalPackageWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
-    public function setGroundTotalPackageWeight(\CommerceFedEx\FedExPHP\Structs\Weight $groundTotalPackageWeight = null)
+    public function setGroundTotalPackageWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $groundTotalPackageWeight = null)
     {
         $this->GroundTotalPackageWeight = $groundTotalPackageWeight;
         return $this;
     }
     /**
      * Get GroundTotalPackageAdjustedWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getGroundTotalPackageAdjustedWeight()
     {
@@ -286,10 +286,10 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set GroundTotalPackageAdjustedWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $groundTotalPackageAdjustedWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $groundTotalPackageAdjustedWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
-    public function setGroundTotalPackageAdjustedWeight(\CommerceFedEx\FedExPHP\Structs\Weight $groundTotalPackageAdjustedWeight = null)
+    public function setGroundTotalPackageAdjustedWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $groundTotalPackageAdjustedWeight = null)
     {
         $this->GroundTotalPackageAdjustedWeight = $groundTotalPackageAdjustedWeight;
         return $this;
@@ -305,7 +305,7 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
     /**
      * Set NumberOfUnconsolidatedCommodities value
      * @param int $numberOfUnconsolidatedCommodities
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
     public function setNumberOfUnconsolidatedCommodities($numberOfUnconsolidatedCommodities = null)
     {
@@ -322,7 +322,7 @@ class TransborderDistributionSummaryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSummaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSummaryDetail
      */
     public static function __set_state(array $array)
     {

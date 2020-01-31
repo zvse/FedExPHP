@@ -52,7 +52,7 @@ class HazardousCommodityPackagingDetail extends AbstractStructBase
     /**
      * Set Count value
      * @param int $count
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackagingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackagingDetail
      */
     public function setCount($count = null)
     {
@@ -74,7 +74,7 @@ class HazardousCommodityPackagingDetail extends AbstractStructBase
     /**
      * Set Units value
      * @param string $units
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackagingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackagingDetail
      */
     public function setUnits($units = null)
     {
@@ -91,7 +91,7 @@ class HazardousCommodityPackagingDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackagingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackagingDetail
      */
     public static function __set_state(array $array)
     {

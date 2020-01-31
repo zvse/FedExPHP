@@ -38,17 +38,17 @@ class ShipmentManifestDetail extends AbstractStructBase
     }
     /**
      * Set ManifestReferenceType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $manifestReferenceType
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentManifestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentManifestDetail
      */
     public function setManifestReferenceType($manifestReferenceType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::valueIsValid($manifestReferenceType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $manifestReferenceType, implode(', ', \CommerceFedEx\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::valueIsValid($manifestReferenceType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $manifestReferenceType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CustomerReferenceType::getValidValues())), __LINE__);
         }
         $this->ManifestReferenceType = $manifestReferenceType;
         return $this;
@@ -59,7 +59,7 @@ class ShipmentManifestDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentManifestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentManifestDetail
      */
     public static function __set_state(array $array)
     {

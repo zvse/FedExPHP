@@ -49,7 +49,7 @@ class EdtExciseCondition extends AbstractStructBase
     /**
      * Set Category value
      * @param string $category
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition
      */
     public function setCategory($category = null)
     {
@@ -71,7 +71,7 @@ class EdtExciseCondition extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition
      */
     public function setValue($value = null)
     {
@@ -88,7 +88,7 @@ class EdtExciseCondition extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtExciseCondition
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtExciseCondition
      */
     public static function __set_state(array $array)
     {

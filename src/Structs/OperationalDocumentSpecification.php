@@ -24,7 +24,7 @@ class OperationalDocumentSpecification extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the data required to produce a singature release document.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\SignatureReleaseDocumentDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\SignatureReleaseDocumentDetail
      */
     public $SignatureReleaseDocumentDetail;
     /**
@@ -32,9 +32,9 @@ class OperationalDocumentSpecification extends AbstractStructBase
      * @uses OperationalDocumentSpecification::setDocumentTypes()
      * @uses OperationalDocumentSpecification::setSignatureReleaseDocumentDetail()
      * @param string[] $documentTypes
-     * @param \CommerceFedEx\FedExPHP\Structs\SignatureReleaseDocumentDetail $signatureReleaseDocumentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureReleaseDocumentDetail $signatureReleaseDocumentDetail
      */
-    public function __construct(array $documentTypes = array(), \CommerceFedEx\FedExPHP\Structs\SignatureReleaseDocumentDetail $signatureReleaseDocumentDetail = null)
+    public function __construct(array $documentTypes = array(), \NicholasCreativeMedia\FedExPHP\Structs\SignatureReleaseDocumentDetail $signatureReleaseDocumentDetail = null)
     {
         $this
             ->setDocumentTypes($documentTypes)
@@ -50,46 +50,46 @@ class OperationalDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set DocumentTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\OperationalDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\OperationalDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperationalDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperationalDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $documentTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\OperationalDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OperationalDocumentSpecification
      */
     public function setDocumentTypes(array $documentTypes = array())
     {
         $invalidValues = array();
         foreach ($documentTypes as $operationalDocumentSpecificationDocumentTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\OperationalDocumentType::valueIsValid($operationalDocumentSpecificationDocumentTypesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\OperationalDocumentType::valueIsValid($operationalDocumentSpecificationDocumentTypesItem)) {
                 $invalidValues[] = var_export($operationalDocumentSpecificationDocumentTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\OperationalDocumentType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\OperationalDocumentType::getValidValues())), __LINE__);
         }
         $this->DocumentTypes = $documentTypes;
         return $this;
     }
     /**
      * Add item to DocumentTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\OperationalDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\OperationalDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperationalDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\OperationalDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\OperationalDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OperationalDocumentSpecification
      */
     public function addToDocumentTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\OperationalDocumentType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\OperationalDocumentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\OperationalDocumentType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\OperationalDocumentType::getValidValues())), __LINE__);
         }
         $this->DocumentTypes[] = $item;
         return $this;
     }
     /**
      * Get SignatureReleaseDocumentDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\SignatureReleaseDocumentDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SignatureReleaseDocumentDetail|null
      */
     public function getSignatureReleaseDocumentDetail()
     {
@@ -97,10 +97,10 @@ class OperationalDocumentSpecification extends AbstractStructBase
     }
     /**
      * Set SignatureReleaseDocumentDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\SignatureReleaseDocumentDetail $signatureReleaseDocumentDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\OperationalDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SignatureReleaseDocumentDetail $signatureReleaseDocumentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OperationalDocumentSpecification
      */
-    public function setSignatureReleaseDocumentDetail(\CommerceFedEx\FedExPHP\Structs\SignatureReleaseDocumentDetail $signatureReleaseDocumentDetail = null)
+    public function setSignatureReleaseDocumentDetail(\NicholasCreativeMedia\FedExPHP\Structs\SignatureReleaseDocumentDetail $signatureReleaseDocumentDetail = null)
     {
         $this->SignatureReleaseDocumentDetail = $signatureReleaseDocumentDetail;
         return $this;
@@ -111,7 +111,7 @@ class OperationalDocumentSpecification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\OperationalDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OperationalDocumentSpecification
      */
     public static function __set_state(array $array)
     {

@@ -18,13 +18,13 @@ class SpecialEquipmentDetail extends AbstractStructBase
      * - documentation: Contains an entry for each type of special equipment used with shipment
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem[]
      */
     public $LineItems;
     /**
      * Constructor method for SpecialEquipmentDetail
      * @uses SpecialEquipmentDetail::setLineItems()
-     * @param \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem[] $lineItems
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem[] $lineItems
      */
     public function __construct(array $lineItems = array())
     {
@@ -33,7 +33,7 @@ class SpecialEquipmentDetail extends AbstractStructBase
     }
     /**
      * Get LineItems value
-     * @return \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem[]|null
      */
     public function getLineItems()
     {
@@ -42,15 +42,15 @@ class SpecialEquipmentDetail extends AbstractStructBase
     /**
      * Set LineItems value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem[] $lineItems
-     * @return \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem[] $lineItems
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentDetail
      */
     public function setLineItems(array $lineItems = array())
     {
         foreach ($lineItems as $specialEquipmentDetailLineItemsItem) {
             // validation for constraint: itemType
-            if (!$specialEquipmentDetailLineItemsItem instanceof \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem) {
-                throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem, "%s" given', is_object($specialEquipmentDetailLineItemsItem) ? get_class($specialEquipmentDetailLineItemsItem) : gettype($specialEquipmentDetailLineItemsItem)), __LINE__);
+            if (!$specialEquipmentDetailLineItemsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem) {
+                throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem, "%s" given', is_object($specialEquipmentDetailLineItemsItem) ? get_class($specialEquipmentDetailLineItemsItem) : gettype($specialEquipmentDetailLineItemsItem)), __LINE__);
             }
         }
         $this->LineItems = $lineItems;
@@ -59,14 +59,14 @@ class SpecialEquipmentDetail extends AbstractStructBase
     /**
      * Add item to LineItems value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem $item
-     * @return \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentDetail
      */
-    public function addToLineItems(\CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem $item)
+    public function addToLineItems(\NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem) {
-            throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentLineItem, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem) {
+            throw new \InvalidArgumentException(sprintf('The LineItems property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentLineItem, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->LineItems[] = $item;
         return $this;
@@ -77,7 +77,7 @@ class SpecialEquipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\SpecialEquipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SpecialEquipmentDetail
      */
     public static function __set_state(array $array)
     {

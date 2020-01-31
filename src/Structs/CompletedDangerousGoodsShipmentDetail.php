@@ -71,7 +71,7 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The total dry ice information for the shipment.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail
      */
     public $ShipmentDryIceDetail;
     /**
@@ -100,10 +100,10 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
      * @param string[] $dangerousGoodsDescriptors
      * @param string $accessibility
      * @param string[] $options
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $shipmentDryIceDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $shipmentDryIceDetail
      * @param string $expirationDate
      */
-    public function __construct($regulation = null, array $regulationAttributes = array(), $totalHandlingUnitCount = null, $aircraftCategoryType = null, array $dangerousGoodsDescriptors = array(), $accessibility = null, array $options = array(), \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $shipmentDryIceDetail = null, $expirationDate = null)
+    public function __construct($regulation = null, array $regulationAttributes = array(), $totalHandlingUnitCount = null, $aircraftCategoryType = null, array $dangerousGoodsDescriptors = array(), $accessibility = null, array $options = array(), \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $shipmentDryIceDetail = null, $expirationDate = null)
     {
         $this
             ->setRegulation($regulation)
@@ -126,17 +126,17 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Regulation value
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityRegulationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityRegulationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityRegulationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityRegulationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $regulation
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function setRegulation($regulation = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityRegulationType::valueIsValid($regulation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $regulation, implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityRegulationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityRegulationType::valueIsValid($regulation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $regulation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityRegulationType::getValidValues())), __LINE__);
         }
         $this->Regulation = $regulation;
         return $this;
@@ -151,39 +151,39 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set RegulationAttributes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $regulationAttributes
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function setRegulationAttributes(array $regulationAttributes = array())
     {
         $invalidValues = array();
         foreach ($regulationAttributes as $completedDangerousGoodsShipmentDetailRegulationAttributesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::valueIsValid($completedDangerousGoodsShipmentDetailRegulationAttributesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::valueIsValid($completedDangerousGoodsShipmentDetailRegulationAttributesItem)) {
                 $invalidValues[] = var_export($completedDangerousGoodsShipmentDetailRegulationAttributesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::getValidValues())), __LINE__);
         }
         $this->RegulationAttributes = $regulationAttributes;
         return $this;
     }
     /**
      * Add item to RegulationAttributes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function addToRegulationAttributes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsRegulationAttributeType::getValidValues())), __LINE__);
         }
         $this->RegulationAttributes[] = $item;
         return $this;
@@ -199,7 +199,7 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
     /**
      * Set TotalHandlingUnitCount value
      * @param int $totalHandlingUnitCount
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function setTotalHandlingUnitCount($totalHandlingUnitCount = null)
     {
@@ -220,17 +220,17 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set AircraftCategoryType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $aircraftCategoryType
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function setAircraftCategoryType($aircraftCategoryType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid($aircraftCategoryType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $aircraftCategoryType, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::valueIsValid($aircraftCategoryType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $aircraftCategoryType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAircraftCategoryType::getValidValues())), __LINE__);
         }
         $this->AircraftCategoryType = $aircraftCategoryType;
         return $this;
@@ -245,39 +245,39 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set DangerousGoodsDescriptors value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsDescriptorType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsDescriptorType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsDescriptorType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsDescriptorType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $dangerousGoodsDescriptors
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function setDangerousGoodsDescriptors(array $dangerousGoodsDescriptors = array())
     {
         $invalidValues = array();
         foreach ($dangerousGoodsDescriptors as $completedDangerousGoodsShipmentDetailDangerousGoodsDescriptorsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsDescriptorType::valueIsValid($completedDangerousGoodsShipmentDetailDangerousGoodsDescriptorsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsDescriptorType::valueIsValid($completedDangerousGoodsShipmentDetailDangerousGoodsDescriptorsItem)) {
                 $invalidValues[] = var_export($completedDangerousGoodsShipmentDetailDangerousGoodsDescriptorsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsDescriptorType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsDescriptorType::getValidValues())), __LINE__);
         }
         $this->DangerousGoodsDescriptors = $dangerousGoodsDescriptors;
         return $this;
     }
     /**
      * Add item to DangerousGoodsDescriptors value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsDescriptorType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsDescriptorType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsDescriptorType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsDescriptorType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function addToDangerousGoodsDescriptors($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsDescriptorType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsDescriptorType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsDescriptorType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsDescriptorType::getValidValues())), __LINE__);
         }
         $this->DangerousGoodsDescriptors[] = $item;
         return $this;
@@ -292,17 +292,17 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Accessibility value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $accessibility
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function setAccessibility($accessibility = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid($accessibility)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $accessibility, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid($accessibility)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $accessibility, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues())), __LINE__);
         }
         $this->Accessibility = $accessibility;
         return $this;
@@ -317,46 +317,46 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $options
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function setOptions(array $options = array())
     {
         $invalidValues = array();
         foreach ($options as $completedDangerousGoodsShipmentDetailOptionsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid($completedDangerousGoodsShipmentDetailOptionsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid($completedDangerousGoodsShipmentDetailOptionsItem)) {
                 $invalidValues[] = var_export($completedDangerousGoodsShipmentDetailOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues())), __LINE__);
         }
         $this->Options = $options;
         return $this;
     }
     /**
      * Add item to Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function addToOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityOptionType::getValidValues())), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
     }
     /**
      * Get ShipmentDryIceDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail|null
      */
     public function getShipmentDryIceDetail()
     {
@@ -364,10 +364,10 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
     }
     /**
      * Set ShipmentDryIceDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $shipmentDryIceDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $shipmentDryIceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
-    public function setShipmentDryIceDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $shipmentDryIceDetail = null)
+    public function setShipmentDryIceDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $shipmentDryIceDetail = null)
     {
         $this->ShipmentDryIceDetail = $shipmentDryIceDetail;
         return $this;
@@ -383,7 +383,7 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
     /**
      * Set ExpirationDate value
      * @param string $expirationDate
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public function setExpirationDate($expirationDate = null)
     {
@@ -400,7 +400,7 @@ class CompletedDangerousGoodsShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedDangerousGoodsShipmentDetail
      */
     public static function __set_state(array $array)
     {

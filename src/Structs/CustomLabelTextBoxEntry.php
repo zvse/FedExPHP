@@ -16,21 +16,21 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
      * The TopLeftCorner
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
      */
     public $TopLeftCorner;
     /**
      * The BottomRightCorner
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
      */
     public $BottomRightCorner;
     /**
      * The Position
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition
      */
     public $Position;
     /**
@@ -90,9 +90,9 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
      * @uses CustomLabelTextBoxEntry::setFontName()
      * @uses CustomLabelTextBoxEntry::setFontSize()
      * @uses CustomLabelTextBoxEntry::setRotation()
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $topLeftCorner
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $topLeftCorner
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position
      * @param string $format
      * @param string[] $dataFields
      * @param string $thermalFontId
@@ -100,7 +100,7 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
      * @param int $fontSize
      * @param string $rotation
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $topLeftCorner = null, \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner = null, \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position = null, $format = null, array $dataFields = array(), $thermalFontId = null, $fontName = null, $fontSize = null, $rotation = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $topLeftCorner = null, \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner = null, \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position = null, $format = null, array $dataFields = array(), $thermalFontId = null, $fontName = null, $fontSize = null, $rotation = null)
     {
         $this
             ->setTopLeftCorner($topLeftCorner)
@@ -115,7 +115,7 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
     }
     /**
      * Get TopLeftCorner value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition|null
      */
     public function getTopLeftCorner()
     {
@@ -123,17 +123,17 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
     }
     /**
      * Set TopLeftCorner value
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $topLeftCorner
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $topLeftCorner
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
-    public function setTopLeftCorner(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $topLeftCorner = null)
+    public function setTopLeftCorner(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $topLeftCorner = null)
     {
         $this->TopLeftCorner = $topLeftCorner;
         return $this;
     }
     /**
      * Get BottomRightCorner value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition|null
      */
     public function getBottomRightCorner()
     {
@@ -141,17 +141,17 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
     }
     /**
      * Set BottomRightCorner value
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
-    public function setBottomRightCorner(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner = null)
+    public function setBottomRightCorner(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $bottomRightCorner = null)
     {
         $this->BottomRightCorner = $bottomRightCorner;
         return $this;
     }
     /**
      * Get Position value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition|null
      */
     public function getPosition()
     {
@@ -159,10 +159,10 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
     }
     /**
      * Set Position value
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
-    public function setPosition(\CommerceFedEx\FedExPHP\Structs\CustomLabelPosition $position = null)
+    public function setPosition(\NicholasCreativeMedia\FedExPHP\Structs\CustomLabelPosition $position = null)
     {
         $this->Position = $position;
         return $this;
@@ -178,7 +178,7 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
     /**
      * Set Format value
      * @param string $format
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
     public function setFormat($format = null)
     {
@@ -201,7 +201,7 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
      * Set DataFields value
      * @throws \InvalidArgumentException
      * @param string[] $dataFields
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
     public function setDataFields(array $dataFields = array())
     {
@@ -218,7 +218,7 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
      * Add item to DataFields value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
     public function addToDataFields($item)
     {
@@ -240,7 +240,7 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
     /**
      * Set ThermalFontId value
      * @param string $thermalFontId
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
     public function setThermalFontId($thermalFontId = null)
     {
@@ -262,7 +262,7 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
     /**
      * Set FontName value
      * @param string $fontName
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
     public function setFontName($fontName = null)
     {
@@ -284,7 +284,7 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
     /**
      * Set FontSize value
      * @param int $fontSize
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
     public function setFontSize($fontSize = null)
     {
@@ -305,17 +305,17 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
     }
     /**
      * Set Rotation value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RotationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RotationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RotationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RotationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $rotation
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
     public function setRotation($rotation = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RotationType::valueIsValid($rotation)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rotation, implode(', ', \CommerceFedEx\FedExPHP\Enums\RotationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RotationType::valueIsValid($rotation)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rotation, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RotationType::getValidValues())), __LINE__);
         }
         $this->Rotation = $rotation;
         return $this;
@@ -326,7 +326,7 @@ class CustomLabelTextBoxEntry extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomLabelTextBoxEntry
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomLabelTextBoxEntry
      */
     public static function __set_state(array $array)
     {

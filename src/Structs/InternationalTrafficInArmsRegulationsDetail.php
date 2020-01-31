@@ -38,7 +38,7 @@ class InternationalTrafficInArmsRegulationsDetail extends AbstractStructBase
     /**
      * Set LicenseOrExemptionNumber value
      * @param string $licenseOrExemptionNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalTrafficInArmsRegulationsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalTrafficInArmsRegulationsDetail
      */
     public function setLicenseOrExemptionNumber($licenseOrExemptionNumber = null)
     {
@@ -55,7 +55,7 @@ class InternationalTrafficInArmsRegulationsDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalTrafficInArmsRegulationsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalTrafficInArmsRegulationsDetail
      */
     public static function __set_state(array $array)
     {

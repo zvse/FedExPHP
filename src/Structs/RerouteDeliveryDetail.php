@@ -73,17 +73,17 @@ class RerouteDeliveryDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RerouteDeliveryType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RerouteDeliveryType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RerouteDeliveryType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RerouteDeliveryType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\RerouteDeliveryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RerouteDeliveryDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RerouteDeliveryType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\RerouteDeliveryType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RerouteDeliveryType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RerouteDeliveryType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -98,17 +98,17 @@ class RerouteDeliveryDetail extends AbstractStructBase
     }
     /**
      * Set TransitTime value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $transitTime
-     * @return \CommerceFedEx\FedExPHP\Structs\RerouteDeliveryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RerouteDeliveryDetail
      */
     public function setTransitTime($transitTime = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TransitTimeType::valueIsValid($transitTime)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $transitTime, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::valueIsValid($transitTime)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $transitTime, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransitTimeType::getValidValues())), __LINE__);
         }
         $this->TransitTime = $transitTime;
         return $this;
@@ -124,7 +124,7 @@ class RerouteDeliveryDetail extends AbstractStructBase
     /**
      * Set CommitmentDate value
      * @param string $commitmentDate
-     * @return \CommerceFedEx\FedExPHP\Structs\RerouteDeliveryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RerouteDeliveryDetail
      */
     public function setCommitmentDate($commitmentDate = null)
     {
@@ -146,7 +146,7 @@ class RerouteDeliveryDetail extends AbstractStructBase
     /**
      * Set CommitmentTime value
      * @param string $commitmentTime
-     * @return \CommerceFedEx\FedExPHP\Structs\RerouteDeliveryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RerouteDeliveryDetail
      */
     public function setCommitmentTime($commitmentTime = null)
     {
@@ -163,7 +163,7 @@ class RerouteDeliveryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RerouteDeliveryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RerouteDeliveryDetail
      */
     public static function __set_state(array $array)
     {

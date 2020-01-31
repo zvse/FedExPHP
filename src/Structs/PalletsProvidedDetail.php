@@ -41,7 +41,7 @@ class PalletsProvidedDetail extends AbstractStructBase
     /**
      * Set PalletCount value
      * @param int $palletCount
-     * @return \CommerceFedEx\FedExPHP\Structs\PalletsProvidedDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PalletsProvidedDetail
      */
     public function setPalletCount($palletCount = null)
     {
@@ -58,7 +58,7 @@ class PalletsProvidedDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PalletsProvidedDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PalletsProvidedDetail
      */
     public static function __set_state(array $array)
     {

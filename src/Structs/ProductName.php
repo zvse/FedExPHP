@@ -60,7 +60,7 @@ class ProductName extends AbstractStructBase
     /**
      * Set Type value
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\ProductName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProductName
      */
     public function setType($type = null)
     {
@@ -82,7 +82,7 @@ class ProductName extends AbstractStructBase
     /**
      * Set Encoding value
      * @param string $encoding
-     * @return \CommerceFedEx\FedExPHP\Structs\ProductName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProductName
      */
     public function setEncoding($encoding = null)
     {
@@ -104,7 +104,7 @@ class ProductName extends AbstractStructBase
     /**
      * Set Value value
      * @param string $value
-     * @return \CommerceFedEx\FedExPHP\Structs\ProductName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProductName
      */
     public function setValue($value = null)
     {
@@ -121,7 +121,7 @@ class ProductName extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ProductName
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProductName
      */
     public static function __set_state(array $array)
     {

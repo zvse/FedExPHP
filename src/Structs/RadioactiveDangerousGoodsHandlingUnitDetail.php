@@ -69,7 +69,7 @@ class RadioactiveDangerousGoodsHandlingUnitDetail extends AbstractStructBase
     /**
      * Set TransportIndex value
      * @param float $transportIndex
-     * @return \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
      */
     public function setTransportIndex($transportIndex = null)
     {
@@ -87,7 +87,7 @@ class RadioactiveDangerousGoodsHandlingUnitDetail extends AbstractStructBase
     /**
      * Set SurfaceReading value
      * @param float $surfaceReading
-     * @return \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
      */
     public function setSurfaceReading($surfaceReading = null)
     {
@@ -105,7 +105,7 @@ class RadioactiveDangerousGoodsHandlingUnitDetail extends AbstractStructBase
     /**
      * Set CriticalitySafetyIndex value
      * @param float $criticalitySafetyIndex
-     * @return \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
      */
     public function setCriticalitySafetyIndex($criticalitySafetyIndex = null)
     {
@@ -122,17 +122,17 @@ class RadioactiveDangerousGoodsHandlingUnitDetail extends AbstractStructBase
     }
     /**
      * Set LabelType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RadioactiveLabelType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RadioactiveLabelType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RadioactiveLabelType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RadioactiveLabelType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $labelType
-     * @return \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
      */
     public function setLabelType($labelType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RadioactiveLabelType::valueIsValid($labelType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelType, implode(', ', \CommerceFedEx\FedExPHP\Enums\RadioactiveLabelType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RadioactiveLabelType::valueIsValid($labelType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $labelType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RadioactiveLabelType::getValidValues())), __LINE__);
         }
         $this->LabelType = $labelType;
         return $this;
@@ -143,7 +143,7 @@ class RadioactiveDangerousGoodsHandlingUnitDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RadioactiveDangerousGoodsHandlingUnitDetail
      */
     public static function __set_state(array $array)
     {

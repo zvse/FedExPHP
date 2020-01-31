@@ -23,12 +23,12 @@ class Service extends AbstractSoapClientBase
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'DGLD_v1.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\DGLD_v1.wsdlClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\DGLD_v1.wsdlClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('dgds',1,0,0);
+        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('dgds',1,0,0);
     }
     /**
      * Method to call the operation originally named listDangerousGoods
@@ -36,10 +36,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\ListDangerousGoodsRequest $listDangerousGoodsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\ListDangerousGoodsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ListDangerousGoodsRequest $listDangerousGoodsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ListDangerousGoodsReply|bool
      */
-    public function listDangerousGoods(\CommerceFedEx\FedExPHP\Structs\ListDangerousGoodsRequest $listDangerousGoodsRequest)
+    public function listDangerousGoods(\NicholasCreativeMedia\FedExPHP\Structs\ListDangerousGoodsRequest $listDangerousGoodsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->listDangerousGoods($listDangerousGoodsRequest));
@@ -52,7 +52,7 @@ class Service extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \CommerceFedEx\FedExPHP\Structs\ListDangerousGoodsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ListDangerousGoodsReply
      */
     public function getResult()
     {

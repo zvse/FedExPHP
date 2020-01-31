@@ -18,13 +18,13 @@ class SplitPaymentSpecification extends AbstractStructBase
      * - documentation: Each entry specifies payement for a single aspect of the shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail[]
      */
     public $Payments;
     /**
      * Constructor method for SplitPaymentSpecification
      * @uses SplitPaymentSpecification::setPayments()
-     * @param \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail[] $payments
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail[] $payments
      */
     public function __construct(array $payments = array())
     {
@@ -33,7 +33,7 @@ class SplitPaymentSpecification extends AbstractStructBase
     }
     /**
      * Get Payments value
-     * @return \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail[]|null
      */
     public function getPayments()
     {
@@ -42,15 +42,15 @@ class SplitPaymentSpecification extends AbstractStructBase
     /**
      * Set Payments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail[] $payments
-     * @return \CommerceFedEx\FedExPHP\Structs\SplitPaymentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail[] $payments
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentSpecification
      */
     public function setPayments(array $payments = array())
     {
         foreach ($payments as $splitPaymentSpecificationPaymentsItem) {
             // validation for constraint: itemType
-            if (!$splitPaymentSpecificationPaymentsItem instanceof \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail) {
-                throw new \InvalidArgumentException(sprintf('The Payments property can only contain items of \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail, "%s" given', is_object($splitPaymentSpecificationPaymentsItem) ? get_class($splitPaymentSpecificationPaymentsItem) : gettype($splitPaymentSpecificationPaymentsItem)), __LINE__);
+            if (!$splitPaymentSpecificationPaymentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail) {
+                throw new \InvalidArgumentException(sprintf('The Payments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail, "%s" given', is_object($splitPaymentSpecificationPaymentsItem) ? get_class($splitPaymentSpecificationPaymentsItem) : gettype($splitPaymentSpecificationPaymentsItem)), __LINE__);
             }
         }
         $this->Payments = $payments;
@@ -59,14 +59,14 @@ class SplitPaymentSpecification extends AbstractStructBase
     /**
      * Add item to Payments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\SplitPaymentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentSpecification
      */
-    public function addToPayments(\CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail $item)
+    public function addToPayments(\NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail) {
-            throw new \InvalidArgumentException(sprintf('The Payments property can only contain items of \CommerceFedEx\FedExPHP\Structs\SplitPaymentDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail) {
+            throw new \InvalidArgumentException(sprintf('The Payments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Payments[] = $item;
         return $this;
@@ -77,7 +77,7 @@ class SplitPaymentSpecification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\SplitPaymentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentSpecification
      */
     public static function __set_state(array $array)
     {

@@ -13,14 +13,14 @@ class TaxpayerIdentification extends AbstractStructBase
     /**
      * The TinType
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $TinType;
     /**
      * The Number
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $Number;
@@ -70,7 +70,7 @@ class TaxpayerIdentification extends AbstractStructBase
     }
     /**
      * Get TinType value
-     * @return string
+     * @return string|null
      */
     public function getTinType()
     {
@@ -78,24 +78,24 @@ class TaxpayerIdentification extends AbstractStructBase
     }
     /**
      * Set TinType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TinType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TinType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TinType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TinType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $tinType
-     * @return \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification
      */
     public function setTinType($tinType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TinType::valueIsValid($tinType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $tinType, implode(', ', \CommerceFedEx\FedExPHP\Enums\TinType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TinType::valueIsValid($tinType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $tinType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TinType::getValidValues())), __LINE__);
         }
         $this->TinType = $tinType;
         return $this;
     }
     /**
      * Get Number value
-     * @return string
+     * @return string|null
      */
     public function getNumber()
     {
@@ -104,7 +104,7 @@ class TaxpayerIdentification extends AbstractStructBase
     /**
      * Set Number value
      * @param string $number
-     * @return \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification
      */
     public function setNumber($number = null)
     {
@@ -126,7 +126,7 @@ class TaxpayerIdentification extends AbstractStructBase
     /**
      * Set Usage value
      * @param string $usage
-     * @return \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification
      */
     public function setUsage($usage = null)
     {
@@ -148,7 +148,7 @@ class TaxpayerIdentification extends AbstractStructBase
     /**
      * Set EffectiveDate value
      * @param string $effectiveDate
-     * @return \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification
      */
     public function setEffectiveDate($effectiveDate = null)
     {
@@ -170,7 +170,7 @@ class TaxpayerIdentification extends AbstractStructBase
     /**
      * Set ExpirationDate value
      * @param string $expirationDate
-     * @return \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification
      */
     public function setExpirationDate($expirationDate = null)
     {
@@ -187,7 +187,7 @@ class TaxpayerIdentification extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\TaxpayerIdentification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TaxpayerIdentification
      */
     public static function __set_state(array $array)
     {

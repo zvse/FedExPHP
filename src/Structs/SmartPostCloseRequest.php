@@ -17,28 +17,28 @@ class SmartPostCloseRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -73,7 +73,7 @@ class SmartPostCloseRequest extends AbstractStructBase
      * The ManifestReferenceDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CloseManifestReferenceDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CloseManifestReferenceDetail
      */
     public $ManifestReferenceDetail;
     /**
@@ -87,17 +87,17 @@ class SmartPostCloseRequest extends AbstractStructBase
      * @uses SmartPostCloseRequest::setDestinationCountryCode()
      * @uses SmartPostCloseRequest::setPickUpCarrier()
      * @uses SmartPostCloseRequest::setManifestReferenceDetail()
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $hubId
      * @param string $customerManifestId
      * @param string $destinationCountryCode
      * @param string $pickUpCarrier
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseManifestReferenceDetail $manifestReferenceDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseManifestReferenceDetail $manifestReferenceDetail
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $hubId = null, $customerManifestId = null, $destinationCountryCode = null, $pickUpCarrier = null, \CommerceFedEx\FedExPHP\Structs\CloseManifestReferenceDetail $manifestReferenceDetail = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $hubId = null, $customerManifestId = null, $destinationCountryCode = null, $pickUpCarrier = null, \NicholasCreativeMedia\FedExPHP\Structs\CloseManifestReferenceDetail $manifestReferenceDetail = null)
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -112,7 +112,7 @@ class SmartPostCloseRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -120,17 +120,17 @@ class SmartPostCloseRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
-    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -138,17 +138,17 @@ class SmartPostCloseRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
-    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -156,17 +156,17 @@ class SmartPostCloseRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -174,10 +174,10 @@ class SmartPostCloseRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -193,7 +193,7 @@ class SmartPostCloseRequest extends AbstractStructBase
     /**
      * Set HubId value
      * @param string $hubId
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
     public function setHubId($hubId = null)
     {
@@ -215,7 +215,7 @@ class SmartPostCloseRequest extends AbstractStructBase
     /**
      * Set CustomerManifestId value
      * @param string $customerManifestId
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
     public function setCustomerManifestId($customerManifestId = null)
     {
@@ -237,7 +237,7 @@ class SmartPostCloseRequest extends AbstractStructBase
     /**
      * Set DestinationCountryCode value
      * @param string $destinationCountryCode
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
     public function setDestinationCountryCode($destinationCountryCode = null)
     {
@@ -258,24 +258,24 @@ class SmartPostCloseRequest extends AbstractStructBase
     }
     /**
      * Set PickUpCarrier value
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $pickUpCarrier
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
     public function setPickUpCarrier($pickUpCarrier = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\CarrierCodeType::valueIsValid($pickUpCarrier)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickUpCarrier, implode(', ', \CommerceFedEx\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::valueIsValid($pickUpCarrier)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pickUpCarrier, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\CarrierCodeType::getValidValues())), __LINE__);
         }
         $this->PickUpCarrier = $pickUpCarrier;
         return $this;
     }
     /**
      * Get ManifestReferenceDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseManifestReferenceDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseManifestReferenceDetail|null
      */
     public function getManifestReferenceDetail()
     {
@@ -283,10 +283,10 @@ class SmartPostCloseRequest extends AbstractStructBase
     }
     /**
      * Set ManifestReferenceDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseManifestReferenceDetail $manifestReferenceDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseManifestReferenceDetail $manifestReferenceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
-    public function setManifestReferenceDetail(\CommerceFedEx\FedExPHP\Structs\CloseManifestReferenceDetail $manifestReferenceDetail = null)
+    public function setManifestReferenceDetail(\NicholasCreativeMedia\FedExPHP\Structs\CloseManifestReferenceDetail $manifestReferenceDetail = null)
     {
         $this->ManifestReferenceDetail = $manifestReferenceDetail;
         return $this;
@@ -297,7 +297,7 @@ class SmartPostCloseRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostCloseRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostCloseRequest
      */
     public static function __set_state(array $array)
     {

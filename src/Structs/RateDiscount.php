@@ -28,7 +28,7 @@ class RateDiscount extends AbstractStructBase
      * The Amount
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $Amount;
     /**
@@ -46,10 +46,10 @@ class RateDiscount extends AbstractStructBase
      * @uses RateDiscount::setPercent()
      * @param string $rateDiscountType
      * @param string $description
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
      * @param float $percent
      */
-    public function __construct($rateDiscountType = null, $description = null, \CommerceFedEx\FedExPHP\Structs\Money $amount = null, $percent = null)
+    public function __construct($rateDiscountType = null, $description = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null, $percent = null)
     {
         $this
             ->setRateDiscountType($rateDiscountType)
@@ -67,17 +67,17 @@ class RateDiscount extends AbstractStructBase
     }
     /**
      * Set RateDiscountType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateDiscountType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateDiscountType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateDiscountType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateDiscountType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $rateDiscountType
-     * @return \CommerceFedEx\FedExPHP\Structs\RateDiscount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount
      */
     public function setRateDiscountType($rateDiscountType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RateDiscountType::valueIsValid($rateDiscountType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateDiscountType, implode(', ', \CommerceFedEx\FedExPHP\Enums\RateDiscountType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RateDiscountType::valueIsValid($rateDiscountType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateDiscountType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateDiscountType::getValidValues())), __LINE__);
         }
         $this->RateDiscountType = $rateDiscountType;
         return $this;
@@ -93,7 +93,7 @@ class RateDiscount extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\RateDiscount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount
      */
     public function setDescription($description = null)
     {
@@ -106,7 +106,7 @@ class RateDiscount extends AbstractStructBase
     }
     /**
      * Get Amount value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getAmount()
     {
@@ -114,10 +114,10 @@ class RateDiscount extends AbstractStructBase
     }
     /**
      * Set Amount value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $amount
-     * @return \CommerceFedEx\FedExPHP\Structs\RateDiscount
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $amount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount
      */
-    public function setAmount(\CommerceFedEx\FedExPHP\Structs\Money $amount = null)
+    public function setAmount(\NicholasCreativeMedia\FedExPHP\Structs\Money $amount = null)
     {
         $this->Amount = $amount;
         return $this;
@@ -133,7 +133,7 @@ class RateDiscount extends AbstractStructBase
     /**
      * Set Percent value
      * @param float $percent
-     * @return \CommerceFedEx\FedExPHP\Structs\RateDiscount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount
      */
     public function setPercent($percent = null)
     {
@@ -146,7 +146,7 @@ class RateDiscount extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RateDiscount
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount
      */
     public static function __set_state(array $array)
     {

@@ -24,7 +24,7 @@ class UploadedDangerousGoodsContainerGroup extends AbstractStructBase
      * - documentation: This specifies the commodities in the container. A container may also be known as a dangerous goods package, but this is not necessarily the same as the 'package' or handling unit that a courier transports for shipping. If the
      * handling unit is an OVERPACK, then this container is inside the handling unit.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainer
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainer
      */
     public $Container;
     /**
@@ -32,9 +32,9 @@ class UploadedDangerousGoodsContainerGroup extends AbstractStructBase
      * @uses UploadedDangerousGoodsContainerGroup::setNumberOfIdenticalContainers()
      * @uses UploadedDangerousGoodsContainerGroup::setContainer()
      * @param int $numberOfIdenticalContainers
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainer $container
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainer $container
      */
-    public function __construct($numberOfIdenticalContainers = null, \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainer $container = null)
+    public function __construct($numberOfIdenticalContainers = null, \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainer $container = null)
     {
         $this
             ->setNumberOfIdenticalContainers($numberOfIdenticalContainers)
@@ -51,7 +51,7 @@ class UploadedDangerousGoodsContainerGroup extends AbstractStructBase
     /**
      * Set NumberOfIdenticalContainers value
      * @param int $numberOfIdenticalContainers
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup
      */
     public function setNumberOfIdenticalContainers($numberOfIdenticalContainers = null)
     {
@@ -64,7 +64,7 @@ class UploadedDangerousGoodsContainerGroup extends AbstractStructBase
     }
     /**
      * Get Container value
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainer|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainer|null
      */
     public function getContainer()
     {
@@ -72,10 +72,10 @@ class UploadedDangerousGoodsContainerGroup extends AbstractStructBase
     }
     /**
      * Set Container value
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainer $container
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainer $container
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup
      */
-    public function setContainer(\CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainer $container = null)
+    public function setContainer(\NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainer $container = null)
     {
         $this->Container = $container;
         return $this;
@@ -86,7 +86,7 @@ class UploadedDangerousGoodsContainerGroup extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadedDangerousGoodsContainerGroup
      */
     public static function __set_state(array $array)
     {

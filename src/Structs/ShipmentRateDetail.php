@@ -64,7 +64,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the currency exchange performed on financial amounts for this rate.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate
      */
     public $CurrencyExchangeRate;
     /**
@@ -102,7 +102,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * The TotalBillingWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $TotalBillingWeight;
     /**
@@ -110,35 +110,35 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Sum of dimensional weights for all packages.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $TotalDimWeight;
     /**
      * The TotalBaseCharge
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalBaseCharge;
     /**
      * The TotalFreightDiscounts
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalFreightDiscounts;
     /**
      * The TotalNetFreight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalNetFreight;
     /**
      * The TotalSurcharges
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalSurcharges;
     /**
@@ -146,7 +146,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: This shipment's totalNetFreight + totalSurcharges (not including totalTaxes).
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalNetFedExCharge;
     /**
@@ -154,21 +154,21 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total of the transportation-based taxes.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalTaxes;
     /**
      * The TotalNetCharge
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalNetCharge;
     /**
      * The TotalRebates
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalRebates;
     /**
@@ -176,7 +176,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total of all values under this shipment's dutiesAndTaxes; only provided if estimated duties and taxes were calculated for this shipment.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalDutiesAndTaxes;
     /**
@@ -184,7 +184,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the total amount of the shipment-level fees and taxes that are not based on transportation charges or commodity-level estimated duties and taxes.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalAncillaryFeesAndTaxes;
     /**
@@ -192,7 +192,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The total of the totalDutiesAndTaxes plus the totalAncillaryFeesAndTaxes.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalDutiesTaxesAndFees;
     /**
@@ -201,7 +201,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * - documentation: This shipment's totalNetCharge + totalDutiesTaxesAndFees; some duties and taxes are only provided if estimated duties and taxes were calculated for this shipment AND duties, taxes and transportation charges are all paid by the same
      * sender's account.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalNetChargeWithDutiesAndTaxes;
     /**
@@ -210,7 +210,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * - documentation: Identifies the Rate Details per each leg in a Freight Shipment
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail[]
      */
     public $ShipmentLegRateDetails;
     /**
@@ -218,7 +218,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Rate data specific to FedEx Freight and FedEx National Freight services.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\FreightRateDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail
      */
     public $FreightRateDetail;
     /**
@@ -227,7 +227,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * - documentation: All rate discounts that apply to this shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RateDiscount[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount[]
      */
     public $FreightDiscounts;
     /**
@@ -236,7 +236,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * - documentation: All rebates that apply to this shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Rebate[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Rebate[]
      */
     public $Rebates;
     /**
@@ -245,7 +245,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * - documentation: All surcharges that apply to this shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Surcharge[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Surcharge[]
      */
     public $Surcharges;
     /**
@@ -254,7 +254,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * - documentation: All transportation-based taxes applicable to this shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Tax[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Tax[]
      */
     public $Taxes;
     /**
@@ -263,7 +263,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * - documentation: All commodity-based duties and taxes applicable to this shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax[]
      */
     public $DutiesAndTaxes;
     /**
@@ -272,7 +272,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * - documentation: Identifies the shipment-level fees and taxes that are not based on transportation charges or commodity-level estimated duties and taxes.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax[]
      */
     public $AncillaryFeesAndTaxes;
     /**
@@ -280,7 +280,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The "order level" variable handling charges.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges
      */
     public $VariableHandlingCharges;
     /**
@@ -288,7 +288,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: The total of all variable handling charges at both shipment (order) and package level.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges
      */
     public $TotalVariableHandlingCharges;
     /**
@@ -334,37 +334,37 @@ class ShipmentRateDetail extends AbstractStructBase
      * @param string $pricingCode
      * @param string $ratedWeightMethod
      * @param string $minimumChargeType
-     * @param \CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate $currencyExchangeRate
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate $currencyExchangeRate
      * @param string[] $specialRatingApplied
      * @param int $dimDivisor
      * @param string $dimDivisorType
      * @param float $fuelSurchargePercent
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalBillingWeight
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalDimWeight
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalBaseCharge
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalFreightDiscounts
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetFreight
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalSurcharges
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetFedExCharge
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalTaxes
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetCharge
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalRebates
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalDutiesAndTaxes
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalAncillaryFeesAndTaxes
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalDutiesTaxesAndFees
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetChargeWithDutiesAndTaxes
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail[] $shipmentLegRateDetails
-     * @param \CommerceFedEx\FedExPHP\Structs\FreightRateDetail $freightRateDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\RateDiscount[] $freightDiscounts
-     * @param \CommerceFedEx\FedExPHP\Structs\Rebate[] $rebates
-     * @param \CommerceFedEx\FedExPHP\Structs\Surcharge[] $surcharges
-     * @param \CommerceFedEx\FedExPHP\Structs\Tax[] $taxes
-     * @param \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax[] $dutiesAndTaxes
-     * @param \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax[] $ancillaryFeesAndTaxes
-     * @param \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges $variableHandlingCharges
-     * @param \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges $totalVariableHandlingCharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalBillingWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalDimWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalBaseCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalFreightDiscounts
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetFreight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalSurcharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetFedExCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalTaxes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalRebates
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalDutiesAndTaxes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalAncillaryFeesAndTaxes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalDutiesTaxesAndFees
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetChargeWithDutiesAndTaxes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail[] $shipmentLegRateDetails
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail $freightRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount[] $freightDiscounts
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Rebate[] $rebates
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Surcharge[] $surcharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Tax[] $taxes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax[] $dutiesAndTaxes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax[] $ancillaryFeesAndTaxes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges $variableHandlingCharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges $totalVariableHandlingCharges
      */
-    public function __construct($rateType = null, $rateScale = null, $rateZone = null, $pricingCode = null, $ratedWeightMethod = null, $minimumChargeType = null, \CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate $currencyExchangeRate = null, array $specialRatingApplied = array(), $dimDivisor = null, $dimDivisorType = null, $fuelSurchargePercent = null, \CommerceFedEx\FedExPHP\Structs\Weight $totalBillingWeight = null, \CommerceFedEx\FedExPHP\Structs\Weight $totalDimWeight = null, \CommerceFedEx\FedExPHP\Structs\Money $totalBaseCharge = null, \CommerceFedEx\FedExPHP\Structs\Money $totalFreightDiscounts = null, \CommerceFedEx\FedExPHP\Structs\Money $totalNetFreight = null, \CommerceFedEx\FedExPHP\Structs\Money $totalSurcharges = null, \CommerceFedEx\FedExPHP\Structs\Money $totalNetFedExCharge = null, \CommerceFedEx\FedExPHP\Structs\Money $totalTaxes = null, \CommerceFedEx\FedExPHP\Structs\Money $totalNetCharge = null, \CommerceFedEx\FedExPHP\Structs\Money $totalRebates = null, \CommerceFedEx\FedExPHP\Structs\Money $totalDutiesAndTaxes = null, \CommerceFedEx\FedExPHP\Structs\Money $totalAncillaryFeesAndTaxes = null, \CommerceFedEx\FedExPHP\Structs\Money $totalDutiesTaxesAndFees = null, \CommerceFedEx\FedExPHP\Structs\Money $totalNetChargeWithDutiesAndTaxes = null, array $shipmentLegRateDetails = array(), \CommerceFedEx\FedExPHP\Structs\FreightRateDetail $freightRateDetail = null, array $freightDiscounts = array(), array $rebates = array(), array $surcharges = array(), array $taxes = array(), array $dutiesAndTaxes = array(), array $ancillaryFeesAndTaxes = array(), \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges $variableHandlingCharges = null, \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges $totalVariableHandlingCharges = null)
+    public function __construct($rateType = null, $rateScale = null, $rateZone = null, $pricingCode = null, $ratedWeightMethod = null, $minimumChargeType = null, \NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate $currencyExchangeRate = null, array $specialRatingApplied = array(), $dimDivisor = null, $dimDivisorType = null, $fuelSurchargePercent = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalBillingWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalDimWeight = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalBaseCharge = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalFreightDiscounts = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetFreight = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalSurcharges = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetFedExCharge = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalTaxes = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetCharge = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalRebates = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalDutiesAndTaxes = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalAncillaryFeesAndTaxes = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalDutiesTaxesAndFees = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetChargeWithDutiesAndTaxes = null, array $shipmentLegRateDetails = array(), \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail $freightRateDetail = null, array $freightDiscounts = array(), array $rebates = array(), array $surcharges = array(), array $taxes = array(), array $dutiesAndTaxes = array(), array $ancillaryFeesAndTaxes = array(), \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges $variableHandlingCharges = null, \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges $totalVariableHandlingCharges = null)
     {
         $this
             ->setRateType($rateType)
@@ -413,17 +413,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set RateType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnedRateType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnedRateType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $rateType
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setRateType($rateType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ReturnedRateType::valueIsValid($rateType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ReturnedRateType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::valueIsValid($rateType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $rateType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ReturnedRateType::getValidValues())), __LINE__);
         }
         $this->RateType = $rateType;
         return $this;
@@ -439,7 +439,7 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set RateScale value
      * @param string $rateScale
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setRateScale($rateScale = null)
     {
@@ -461,7 +461,7 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set RateZone value
      * @param string $rateZone
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setRateZone($rateZone = null)
     {
@@ -482,17 +482,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set PricingCode value
-     * @uses \CommerceFedEx\FedExPHP\Enums\PricingCodeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\PricingCodeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PricingCodeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PricingCodeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $pricingCode
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setPricingCode($pricingCode = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\PricingCodeType::valueIsValid($pricingCode)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pricingCode, implode(', ', \CommerceFedEx\FedExPHP\Enums\PricingCodeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\PricingCodeType::valueIsValid($pricingCode)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $pricingCode, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PricingCodeType::getValidValues())), __LINE__);
         }
         $this->PricingCode = $pricingCode;
         return $this;
@@ -507,17 +507,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set RatedWeightMethod value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RatedWeightMethod::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RatedWeightMethod::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RatedWeightMethod::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RatedWeightMethod::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $ratedWeightMethod
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setRatedWeightMethod($ratedWeightMethod = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RatedWeightMethod::valueIsValid($ratedWeightMethod)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $ratedWeightMethod, implode(', ', \CommerceFedEx\FedExPHP\Enums\RatedWeightMethod::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RatedWeightMethod::valueIsValid($ratedWeightMethod)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $ratedWeightMethod, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RatedWeightMethod::getValidValues())), __LINE__);
         }
         $this->RatedWeightMethod = $ratedWeightMethod;
         return $this;
@@ -532,24 +532,24 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set MinimumChargeType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\MinimumChargeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\MinimumChargeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\MinimumChargeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\MinimumChargeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $minimumChargeType
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setMinimumChargeType($minimumChargeType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\MinimumChargeType::valueIsValid($minimumChargeType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $minimumChargeType, implode(', ', \CommerceFedEx\FedExPHP\Enums\MinimumChargeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\MinimumChargeType::valueIsValid($minimumChargeType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $minimumChargeType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\MinimumChargeType::getValidValues())), __LINE__);
         }
         $this->MinimumChargeType = $minimumChargeType;
         return $this;
     }
     /**
      * Get CurrencyExchangeRate value
-     * @return \CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate|null
      */
     public function getCurrencyExchangeRate()
     {
@@ -557,10 +557,10 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set CurrencyExchangeRate value
-     * @param \CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate $currencyExchangeRate
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate $currencyExchangeRate
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setCurrencyExchangeRate(\CommerceFedEx\FedExPHP\Structs\CurrencyExchangeRate $currencyExchangeRate = null)
+    public function setCurrencyExchangeRate(\NicholasCreativeMedia\FedExPHP\Structs\CurrencyExchangeRate $currencyExchangeRate = null)
     {
         $this->CurrencyExchangeRate = $currencyExchangeRate;
         return $this;
@@ -575,39 +575,39 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set SpecialRatingApplied value
-     * @uses \CommerceFedEx\FedExPHP\Enums\SpecialRatingAppliedType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\SpecialRatingAppliedType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SpecialRatingAppliedType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SpecialRatingAppliedType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $specialRatingApplied
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setSpecialRatingApplied(array $specialRatingApplied = array())
     {
         $invalidValues = array();
         foreach ($specialRatingApplied as $shipmentRateDetailSpecialRatingAppliedItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\SpecialRatingAppliedType::valueIsValid($shipmentRateDetailSpecialRatingAppliedItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\SpecialRatingAppliedType::valueIsValid($shipmentRateDetailSpecialRatingAppliedItem)) {
                 $invalidValues[] = var_export($shipmentRateDetailSpecialRatingAppliedItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\SpecialRatingAppliedType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SpecialRatingAppliedType::getValidValues())), __LINE__);
         }
         $this->SpecialRatingApplied = $specialRatingApplied;
         return $this;
     }
     /**
      * Add item to SpecialRatingApplied value
-     * @uses \CommerceFedEx\FedExPHP\Enums\SpecialRatingAppliedType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\SpecialRatingAppliedType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SpecialRatingAppliedType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SpecialRatingAppliedType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function addToSpecialRatingApplied($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\SpecialRatingAppliedType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\SpecialRatingAppliedType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\SpecialRatingAppliedType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SpecialRatingAppliedType::getValidValues())), __LINE__);
         }
         $this->SpecialRatingApplied[] = $item;
         return $this;
@@ -623,7 +623,7 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set DimDivisor value
      * @param int $dimDivisor
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setDimDivisor($dimDivisor = null)
     {
@@ -644,17 +644,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set DimDivisorType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateDimensionalDivisorType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RateDimensionalDivisorType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateDimensionalDivisorType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RateDimensionalDivisorType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $dimDivisorType
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setDimDivisorType($dimDivisorType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RateDimensionalDivisorType::valueIsValid($dimDivisorType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dimDivisorType, implode(', ', \CommerceFedEx\FedExPHP\Enums\RateDimensionalDivisorType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RateDimensionalDivisorType::valueIsValid($dimDivisorType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dimDivisorType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RateDimensionalDivisorType::getValidValues())), __LINE__);
         }
         $this->DimDivisorType = $dimDivisorType;
         return $this;
@@ -670,7 +670,7 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set FuelSurchargePercent value
      * @param float $fuelSurchargePercent
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setFuelSurchargePercent($fuelSurchargePercent = null)
     {
@@ -679,7 +679,7 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Get TotalBillingWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getTotalBillingWeight()
     {
@@ -687,17 +687,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalBillingWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalBillingWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalBillingWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalBillingWeight(\CommerceFedEx\FedExPHP\Structs\Weight $totalBillingWeight = null)
+    public function setTotalBillingWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $totalBillingWeight = null)
     {
         $this->TotalBillingWeight = $totalBillingWeight;
         return $this;
     }
     /**
      * Get TotalDimWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getTotalDimWeight()
     {
@@ -705,17 +705,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalDimWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalDimWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalDimWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalDimWeight(\CommerceFedEx\FedExPHP\Structs\Weight $totalDimWeight = null)
+    public function setTotalDimWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $totalDimWeight = null)
     {
         $this->TotalDimWeight = $totalDimWeight;
         return $this;
     }
     /**
      * Get TotalBaseCharge value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalBaseCharge()
     {
@@ -723,17 +723,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalBaseCharge value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalBaseCharge
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalBaseCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalBaseCharge(\CommerceFedEx\FedExPHP\Structs\Money $totalBaseCharge = null)
+    public function setTotalBaseCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalBaseCharge = null)
     {
         $this->TotalBaseCharge = $totalBaseCharge;
         return $this;
     }
     /**
      * Get TotalFreightDiscounts value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalFreightDiscounts()
     {
@@ -741,17 +741,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalFreightDiscounts value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalFreightDiscounts
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalFreightDiscounts
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalFreightDiscounts(\CommerceFedEx\FedExPHP\Structs\Money $totalFreightDiscounts = null)
+    public function setTotalFreightDiscounts(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalFreightDiscounts = null)
     {
         $this->TotalFreightDiscounts = $totalFreightDiscounts;
         return $this;
     }
     /**
      * Get TotalNetFreight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalNetFreight()
     {
@@ -759,17 +759,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalNetFreight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetFreight
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetFreight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalNetFreight(\CommerceFedEx\FedExPHP\Structs\Money $totalNetFreight = null)
+    public function setTotalNetFreight(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetFreight = null)
     {
         $this->TotalNetFreight = $totalNetFreight;
         return $this;
     }
     /**
      * Get TotalSurcharges value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalSurcharges()
     {
@@ -777,17 +777,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalSurcharges value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalSurcharges
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalSurcharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalSurcharges(\CommerceFedEx\FedExPHP\Structs\Money $totalSurcharges = null)
+    public function setTotalSurcharges(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalSurcharges = null)
     {
         $this->TotalSurcharges = $totalSurcharges;
         return $this;
     }
     /**
      * Get TotalNetFedExCharge value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalNetFedExCharge()
     {
@@ -795,17 +795,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalNetFedExCharge value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetFedExCharge
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetFedExCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalNetFedExCharge(\CommerceFedEx\FedExPHP\Structs\Money $totalNetFedExCharge = null)
+    public function setTotalNetFedExCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetFedExCharge = null)
     {
         $this->TotalNetFedExCharge = $totalNetFedExCharge;
         return $this;
     }
     /**
      * Get TotalTaxes value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalTaxes()
     {
@@ -813,17 +813,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalTaxes value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalTaxes
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalTaxes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalTaxes(\CommerceFedEx\FedExPHP\Structs\Money $totalTaxes = null)
+    public function setTotalTaxes(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalTaxes = null)
     {
         $this->TotalTaxes = $totalTaxes;
         return $this;
     }
     /**
      * Get TotalNetCharge value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalNetCharge()
     {
@@ -831,17 +831,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalNetCharge value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetCharge
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalNetCharge(\CommerceFedEx\FedExPHP\Structs\Money $totalNetCharge = null)
+    public function setTotalNetCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetCharge = null)
     {
         $this->TotalNetCharge = $totalNetCharge;
         return $this;
     }
     /**
      * Get TotalRebates value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalRebates()
     {
@@ -849,17 +849,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalRebates value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalRebates
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalRebates
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalRebates(\CommerceFedEx\FedExPHP\Structs\Money $totalRebates = null)
+    public function setTotalRebates(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalRebates = null)
     {
         $this->TotalRebates = $totalRebates;
         return $this;
     }
     /**
      * Get TotalDutiesAndTaxes value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalDutiesAndTaxes()
     {
@@ -867,17 +867,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalDutiesAndTaxes value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalDutiesAndTaxes
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalDutiesAndTaxes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalDutiesAndTaxes(\CommerceFedEx\FedExPHP\Structs\Money $totalDutiesAndTaxes = null)
+    public function setTotalDutiesAndTaxes(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalDutiesAndTaxes = null)
     {
         $this->TotalDutiesAndTaxes = $totalDutiesAndTaxes;
         return $this;
     }
     /**
      * Get TotalAncillaryFeesAndTaxes value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalAncillaryFeesAndTaxes()
     {
@@ -885,17 +885,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalAncillaryFeesAndTaxes value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalAncillaryFeesAndTaxes
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalAncillaryFeesAndTaxes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalAncillaryFeesAndTaxes(\CommerceFedEx\FedExPHP\Structs\Money $totalAncillaryFeesAndTaxes = null)
+    public function setTotalAncillaryFeesAndTaxes(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalAncillaryFeesAndTaxes = null)
     {
         $this->TotalAncillaryFeesAndTaxes = $totalAncillaryFeesAndTaxes;
         return $this;
     }
     /**
      * Get TotalDutiesTaxesAndFees value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalDutiesTaxesAndFees()
     {
@@ -903,17 +903,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalDutiesTaxesAndFees value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalDutiesTaxesAndFees
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalDutiesTaxesAndFees
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalDutiesTaxesAndFees(\CommerceFedEx\FedExPHP\Structs\Money $totalDutiesTaxesAndFees = null)
+    public function setTotalDutiesTaxesAndFees(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalDutiesTaxesAndFees = null)
     {
         $this->TotalDutiesTaxesAndFees = $totalDutiesTaxesAndFees;
         return $this;
     }
     /**
      * Get TotalNetChargeWithDutiesAndTaxes value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalNetChargeWithDutiesAndTaxes()
     {
@@ -921,17 +921,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalNetChargeWithDutiesAndTaxes value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetChargeWithDutiesAndTaxes
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetChargeWithDutiesAndTaxes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalNetChargeWithDutiesAndTaxes(\CommerceFedEx\FedExPHP\Structs\Money $totalNetChargeWithDutiesAndTaxes = null)
+    public function setTotalNetChargeWithDutiesAndTaxes(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetChargeWithDutiesAndTaxes = null)
     {
         $this->TotalNetChargeWithDutiesAndTaxes = $totalNetChargeWithDutiesAndTaxes;
         return $this;
     }
     /**
      * Get ShipmentLegRateDetails value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail[]|null
      */
     public function getShipmentLegRateDetails()
     {
@@ -940,15 +940,15 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set ShipmentLegRateDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail[] $shipmentLegRateDetails
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail[] $shipmentLegRateDetails
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setShipmentLegRateDetails(array $shipmentLegRateDetails = array())
     {
         foreach ($shipmentLegRateDetails as $shipmentRateDetailShipmentLegRateDetailsItem) {
             // validation for constraint: itemType
-            if (!$shipmentRateDetailShipmentLegRateDetailsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail) {
-                throw new \InvalidArgumentException(sprintf('The ShipmentLegRateDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail, "%s" given', is_object($shipmentRateDetailShipmentLegRateDetailsItem) ? get_class($shipmentRateDetailShipmentLegRateDetailsItem) : gettype($shipmentRateDetailShipmentLegRateDetailsItem)), __LINE__);
+            if (!$shipmentRateDetailShipmentLegRateDetailsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail) {
+                throw new \InvalidArgumentException(sprintf('The ShipmentLegRateDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail, "%s" given', is_object($shipmentRateDetailShipmentLegRateDetailsItem) ? get_class($shipmentRateDetailShipmentLegRateDetailsItem) : gettype($shipmentRateDetailShipmentLegRateDetailsItem)), __LINE__);
             }
         }
         $this->ShipmentLegRateDetails = $shipmentLegRateDetails;
@@ -957,21 +957,21 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Add item to ShipmentLegRateDetails value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function addToShipmentLegRateDetails(\CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail $item)
+    public function addToShipmentLegRateDetails(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail) {
-            throw new \InvalidArgumentException(sprintf('The ShipmentLegRateDetails property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShipmentLegRateDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail) {
+            throw new \InvalidArgumentException(sprintf('The ShipmentLegRateDetails property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShipmentLegRateDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ShipmentLegRateDetails[] = $item;
         return $this;
     }
     /**
      * Get FreightRateDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightRateDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail|null
      */
     public function getFreightRateDetail()
     {
@@ -979,17 +979,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set FreightRateDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\FreightRateDetail $freightRateDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail $freightRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setFreightRateDetail(\CommerceFedEx\FedExPHP\Structs\FreightRateDetail $freightRateDetail = null)
+    public function setFreightRateDetail(\NicholasCreativeMedia\FedExPHP\Structs\FreightRateDetail $freightRateDetail = null)
     {
         $this->FreightRateDetail = $freightRateDetail;
         return $this;
     }
     /**
      * Get FreightDiscounts value
-     * @return \CommerceFedEx\FedExPHP\Structs\RateDiscount[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount[]|null
      */
     public function getFreightDiscounts()
     {
@@ -998,15 +998,15 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set FreightDiscounts value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RateDiscount[] $freightDiscounts
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount[] $freightDiscounts
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setFreightDiscounts(array $freightDiscounts = array())
     {
         foreach ($freightDiscounts as $shipmentRateDetailFreightDiscountsItem) {
             // validation for constraint: itemType
-            if (!$shipmentRateDetailFreightDiscountsItem instanceof \CommerceFedEx\FedExPHP\Structs\RateDiscount) {
-                throw new \InvalidArgumentException(sprintf('The FreightDiscounts property can only contain items of \CommerceFedEx\FedExPHP\Structs\RateDiscount, "%s" given', is_object($shipmentRateDetailFreightDiscountsItem) ? get_class($shipmentRateDetailFreightDiscountsItem) : gettype($shipmentRateDetailFreightDiscountsItem)), __LINE__);
+            if (!$shipmentRateDetailFreightDiscountsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount) {
+                throw new \InvalidArgumentException(sprintf('The FreightDiscounts property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount, "%s" given', is_object($shipmentRateDetailFreightDiscountsItem) ? get_class($shipmentRateDetailFreightDiscountsItem) : gettype($shipmentRateDetailFreightDiscountsItem)), __LINE__);
             }
         }
         $this->FreightDiscounts = $freightDiscounts;
@@ -1015,21 +1015,21 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Add item to FreightDiscounts value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RateDiscount $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function addToFreightDiscounts(\CommerceFedEx\FedExPHP\Structs\RateDiscount $item)
+    public function addToFreightDiscounts(\NicholasCreativeMedia\FedExPHP\Structs\RateDiscount $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RateDiscount) {
-            throw new \InvalidArgumentException(sprintf('The FreightDiscounts property can only contain items of \CommerceFedEx\FedExPHP\Structs\RateDiscount, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount) {
+            throw new \InvalidArgumentException(sprintf('The FreightDiscounts property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RateDiscount, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->FreightDiscounts[] = $item;
         return $this;
     }
     /**
      * Get Rebates value
-     * @return \CommerceFedEx\FedExPHP\Structs\Rebate[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Rebate[]|null
      */
     public function getRebates()
     {
@@ -1038,15 +1038,15 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set Rebates value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Rebate[] $rebates
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Rebate[] $rebates
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setRebates(array $rebates = array())
     {
         foreach ($rebates as $shipmentRateDetailRebatesItem) {
             // validation for constraint: itemType
-            if (!$shipmentRateDetailRebatesItem instanceof \CommerceFedEx\FedExPHP\Structs\Rebate) {
-                throw new \InvalidArgumentException(sprintf('The Rebates property can only contain items of \CommerceFedEx\FedExPHP\Structs\Rebate, "%s" given', is_object($shipmentRateDetailRebatesItem) ? get_class($shipmentRateDetailRebatesItem) : gettype($shipmentRateDetailRebatesItem)), __LINE__);
+            if (!$shipmentRateDetailRebatesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Rebate) {
+                throw new \InvalidArgumentException(sprintf('The Rebates property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Rebate, "%s" given', is_object($shipmentRateDetailRebatesItem) ? get_class($shipmentRateDetailRebatesItem) : gettype($shipmentRateDetailRebatesItem)), __LINE__);
             }
         }
         $this->Rebates = $rebates;
@@ -1055,21 +1055,21 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Add item to Rebates value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Rebate $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Rebate $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function addToRebates(\CommerceFedEx\FedExPHP\Structs\Rebate $item)
+    public function addToRebates(\NicholasCreativeMedia\FedExPHP\Structs\Rebate $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Rebate) {
-            throw new \InvalidArgumentException(sprintf('The Rebates property can only contain items of \CommerceFedEx\FedExPHP\Structs\Rebate, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Rebate) {
+            throw new \InvalidArgumentException(sprintf('The Rebates property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Rebate, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Rebates[] = $item;
         return $this;
     }
     /**
      * Get Surcharges value
-     * @return \CommerceFedEx\FedExPHP\Structs\Surcharge[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Surcharge[]|null
      */
     public function getSurcharges()
     {
@@ -1078,15 +1078,15 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set Surcharges value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Surcharge[] $surcharges
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Surcharge[] $surcharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setSurcharges(array $surcharges = array())
     {
         foreach ($surcharges as $shipmentRateDetailSurchargesItem) {
             // validation for constraint: itemType
-            if (!$shipmentRateDetailSurchargesItem instanceof \CommerceFedEx\FedExPHP\Structs\Surcharge) {
-                throw new \InvalidArgumentException(sprintf('The Surcharges property can only contain items of \CommerceFedEx\FedExPHP\Structs\Surcharge, "%s" given', is_object($shipmentRateDetailSurchargesItem) ? get_class($shipmentRateDetailSurchargesItem) : gettype($shipmentRateDetailSurchargesItem)), __LINE__);
+            if (!$shipmentRateDetailSurchargesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Surcharge) {
+                throw new \InvalidArgumentException(sprintf('The Surcharges property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Surcharge, "%s" given', is_object($shipmentRateDetailSurchargesItem) ? get_class($shipmentRateDetailSurchargesItem) : gettype($shipmentRateDetailSurchargesItem)), __LINE__);
             }
         }
         $this->Surcharges = $surcharges;
@@ -1095,21 +1095,21 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Add item to Surcharges value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Surcharge $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Surcharge $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function addToSurcharges(\CommerceFedEx\FedExPHP\Structs\Surcharge $item)
+    public function addToSurcharges(\NicholasCreativeMedia\FedExPHP\Structs\Surcharge $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Surcharge) {
-            throw new \InvalidArgumentException(sprintf('The Surcharges property can only contain items of \CommerceFedEx\FedExPHP\Structs\Surcharge, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Surcharge) {
+            throw new \InvalidArgumentException(sprintf('The Surcharges property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Surcharge, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Surcharges[] = $item;
         return $this;
     }
     /**
      * Get Taxes value
-     * @return \CommerceFedEx\FedExPHP\Structs\Tax[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Tax[]|null
      */
     public function getTaxes()
     {
@@ -1118,15 +1118,15 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set Taxes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Tax[] $taxes
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Tax[] $taxes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setTaxes(array $taxes = array())
     {
         foreach ($taxes as $shipmentRateDetailTaxesItem) {
             // validation for constraint: itemType
-            if (!$shipmentRateDetailTaxesItem instanceof \CommerceFedEx\FedExPHP\Structs\Tax) {
-                throw new \InvalidArgumentException(sprintf('The Taxes property can only contain items of \CommerceFedEx\FedExPHP\Structs\Tax, "%s" given', is_object($shipmentRateDetailTaxesItem) ? get_class($shipmentRateDetailTaxesItem) : gettype($shipmentRateDetailTaxesItem)), __LINE__);
+            if (!$shipmentRateDetailTaxesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Tax) {
+                throw new \InvalidArgumentException(sprintf('The Taxes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Tax, "%s" given', is_object($shipmentRateDetailTaxesItem) ? get_class($shipmentRateDetailTaxesItem) : gettype($shipmentRateDetailTaxesItem)), __LINE__);
             }
         }
         $this->Taxes = $taxes;
@@ -1135,21 +1135,21 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Add item to Taxes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Tax $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Tax $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function addToTaxes(\CommerceFedEx\FedExPHP\Structs\Tax $item)
+    public function addToTaxes(\NicholasCreativeMedia\FedExPHP\Structs\Tax $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Tax) {
-            throw new \InvalidArgumentException(sprintf('The Taxes property can only contain items of \CommerceFedEx\FedExPHP\Structs\Tax, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Tax) {
+            throw new \InvalidArgumentException(sprintf('The Taxes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Tax, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Taxes[] = $item;
         return $this;
     }
     /**
      * Get DutiesAndTaxes value
-     * @return \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax[]|null
      */
     public function getDutiesAndTaxes()
     {
@@ -1158,15 +1158,15 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set DutiesAndTaxes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax[] $dutiesAndTaxes
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax[] $dutiesAndTaxes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setDutiesAndTaxes(array $dutiesAndTaxes = array())
     {
         foreach ($dutiesAndTaxes as $shipmentRateDetailDutiesAndTaxesItem) {
             // validation for constraint: itemType
-            if (!$shipmentRateDetailDutiesAndTaxesItem instanceof \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax) {
-                throw new \InvalidArgumentException(sprintf('The DutiesAndTaxes property can only contain items of \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax, "%s" given', is_object($shipmentRateDetailDutiesAndTaxesItem) ? get_class($shipmentRateDetailDutiesAndTaxesItem) : gettype($shipmentRateDetailDutiesAndTaxesItem)), __LINE__);
+            if (!$shipmentRateDetailDutiesAndTaxesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax) {
+                throw new \InvalidArgumentException(sprintf('The DutiesAndTaxes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax, "%s" given', is_object($shipmentRateDetailDutiesAndTaxesItem) ? get_class($shipmentRateDetailDutiesAndTaxesItem) : gettype($shipmentRateDetailDutiesAndTaxesItem)), __LINE__);
             }
         }
         $this->DutiesAndTaxes = $dutiesAndTaxes;
@@ -1175,21 +1175,21 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Add item to DutiesAndTaxes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function addToDutiesAndTaxes(\CommerceFedEx\FedExPHP\Structs\EdtCommodityTax $item)
+    public function addToDutiesAndTaxes(\NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax) {
-            throw new \InvalidArgumentException(sprintf('The DutiesAndTaxes property can only contain items of \CommerceFedEx\FedExPHP\Structs\EdtCommodityTax, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax) {
+            throw new \InvalidArgumentException(sprintf('The DutiesAndTaxes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\EdtCommodityTax, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DutiesAndTaxes[] = $item;
         return $this;
     }
     /**
      * Get AncillaryFeesAndTaxes value
-     * @return \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax[]|null
      */
     public function getAncillaryFeesAndTaxes()
     {
@@ -1198,15 +1198,15 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Set AncillaryFeesAndTaxes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax[] $ancillaryFeesAndTaxes
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax[] $ancillaryFeesAndTaxes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public function setAncillaryFeesAndTaxes(array $ancillaryFeesAndTaxes = array())
     {
         foreach ($ancillaryFeesAndTaxes as $shipmentRateDetailAncillaryFeesAndTaxesItem) {
             // validation for constraint: itemType
-            if (!$shipmentRateDetailAncillaryFeesAndTaxesItem instanceof \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax) {
-                throw new \InvalidArgumentException(sprintf('The AncillaryFeesAndTaxes property can only contain items of \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax, "%s" given', is_object($shipmentRateDetailAncillaryFeesAndTaxesItem) ? get_class($shipmentRateDetailAncillaryFeesAndTaxesItem) : gettype($shipmentRateDetailAncillaryFeesAndTaxesItem)), __LINE__);
+            if (!$shipmentRateDetailAncillaryFeesAndTaxesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax) {
+                throw new \InvalidArgumentException(sprintf('The AncillaryFeesAndTaxes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax, "%s" given', is_object($shipmentRateDetailAncillaryFeesAndTaxesItem) ? get_class($shipmentRateDetailAncillaryFeesAndTaxesItem) : gettype($shipmentRateDetailAncillaryFeesAndTaxesItem)), __LINE__);
             }
         }
         $this->AncillaryFeesAndTaxes = $ancillaryFeesAndTaxes;
@@ -1215,21 +1215,21 @@ class ShipmentRateDetail extends AbstractStructBase
     /**
      * Add item to AncillaryFeesAndTaxes value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function addToAncillaryFeesAndTaxes(\CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax $item)
+    public function addToAncillaryFeesAndTaxes(\NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax) {
-            throw new \InvalidArgumentException(sprintf('The AncillaryFeesAndTaxes property can only contain items of \CommerceFedEx\FedExPHP\Structs\AncillaryFeeAndTax, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax) {
+            throw new \InvalidArgumentException(sprintf('The AncillaryFeesAndTaxes property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\AncillaryFeeAndTax, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->AncillaryFeesAndTaxes[] = $item;
         return $this;
     }
     /**
      * Get VariableHandlingCharges value
-     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges|null
      */
     public function getVariableHandlingCharges()
     {
@@ -1237,17 +1237,17 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set VariableHandlingCharges value
-     * @param \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges $variableHandlingCharges
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges $variableHandlingCharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setVariableHandlingCharges(\CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges $variableHandlingCharges = null)
+    public function setVariableHandlingCharges(\NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges $variableHandlingCharges = null)
     {
         $this->VariableHandlingCharges = $variableHandlingCharges;
         return $this;
     }
     /**
      * Get TotalVariableHandlingCharges value
-     * @return \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges|null
      */
     public function getTotalVariableHandlingCharges()
     {
@@ -1255,10 +1255,10 @@ class ShipmentRateDetail extends AbstractStructBase
     }
     /**
      * Set TotalVariableHandlingCharges value
-     * @param \CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges $totalVariableHandlingCharges
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges $totalVariableHandlingCharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
-    public function setTotalVariableHandlingCharges(\CommerceFedEx\FedExPHP\Structs\VariableHandlingCharges $totalVariableHandlingCharges = null)
+    public function setTotalVariableHandlingCharges(\NicholasCreativeMedia\FedExPHP\Structs\VariableHandlingCharges $totalVariableHandlingCharges = null)
     {
         $this->TotalVariableHandlingCharges = $totalVariableHandlingCharges;
         return $this;
@@ -1269,7 +1269,7 @@ class ShipmentRateDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentRateDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentRateDetail
      */
     public static function __set_state(array $array)
     {

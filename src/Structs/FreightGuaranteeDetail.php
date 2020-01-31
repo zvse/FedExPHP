@@ -26,17 +26,28 @@ class FreightGuaranteeDetail extends AbstractStructBase
      */
     public $Date;
     /**
+     * The Time
+     * Meta informations extracted from the WSDL
+     * - documentation: Time for GUARANTEED_TIME only.
+     * - minOccurs: 0
+     * @var string
+     */
+    public $Time;
+    /**
      * Constructor method for FreightGuaranteeDetail
      * @uses FreightGuaranteeDetail::setType()
      * @uses FreightGuaranteeDetail::setDate()
+     * @uses FreightGuaranteeDetail::setTime()
      * @param string $type
      * @param string $date
+     * @param string $time
      */
-    public function __construct($type = null, $date = null)
+    public function __construct($type = null, $date = null, $time = null)
     {
         $this
             ->setType($type)
-            ->setDate($date);
+            ->setDate($date)
+            ->setTime($time);
     }
     /**
      * Get Type value
@@ -48,17 +59,17 @@ class FreightGuaranteeDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightGuaranteeType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\FreightGuaranteeType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightGuaranteeType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FreightGuaranteeType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightGuaranteeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightGuaranteeDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\FreightGuaranteeType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\FreightGuaranteeType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\FreightGuaranteeType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FreightGuaranteeType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -74,7 +85,7 @@ class FreightGuaranteeDetail extends AbstractStructBase
     /**
      * Set Date value
      * @param string $date
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightGuaranteeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightGuaranteeDetail
      */
     public function setDate($date = null)
     {
@@ -86,12 +97,34 @@ class FreightGuaranteeDetail extends AbstractStructBase
         return $this;
     }
     /**
+     * Get Time value
+     * @return string|null
+     */
+    public function getTime()
+    {
+        return $this->Time;
+    }
+    /**
+     * Set Time value
+     * @param string $time
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightGuaranteeDetail
+     */
+    public function setTime($time = null)
+    {
+        // validation for constraint: string
+        if (!is_null($time) && !is_string($time)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($time)), __LINE__);
+        }
+        $this->Time = $time;
+        return $this;
+    }
+    /**
      * Method called when an object has been exported with var_export() functions
      * It allows to return an object instantiated with the values
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\FreightGuaranteeDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\FreightGuaranteeDetail
      */
     public static function __set_state(array $array)
     {

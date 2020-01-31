@@ -28,14 +28,14 @@ class PickupShipmentAttributes extends AbstractStructBase
      * The Dimensions
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public $Dimensions;
     /**
      * The Weight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $Weight;
     /**
@@ -46,10 +46,10 @@ class PickupShipmentAttributes extends AbstractStructBase
      * @uses PickupShipmentAttributes::setWeight()
      * @param string $serviceType
      * @param string $packagingType
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
      */
-    public function __construct($serviceType = null, $packagingType = null, \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null, \CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function __construct($serviceType = null, $packagingType = null, \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null, \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this
             ->setServiceType($serviceType)
@@ -68,7 +68,7 @@ class PickupShipmentAttributes extends AbstractStructBase
     /**
      * Set ServiceType value
      * @param string $serviceType
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes
      */
     public function setServiceType($serviceType = null)
     {
@@ -90,7 +90,7 @@ class PickupShipmentAttributes extends AbstractStructBase
     /**
      * Set PackagingType value
      * @param string $packagingType
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes
      */
     public function setPackagingType($packagingType = null)
     {
@@ -103,7 +103,7 @@ class PickupShipmentAttributes extends AbstractStructBase
     }
     /**
      * Get Dimensions value
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions|null
      */
     public function getDimensions()
     {
@@ -111,17 +111,17 @@ class PickupShipmentAttributes extends AbstractStructBase
     }
     /**
      * Set Dimensions value
-     * @param \CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes
      */
-    public function setDimensions(\CommerceFedEx\FedExPHP\Structs\Dimensions $dimensions = null)
+    public function setDimensions(\NicholasCreativeMedia\FedExPHP\Structs\Dimensions $dimensions = null)
     {
         $this->Dimensions = $dimensions;
         return $this;
     }
     /**
      * Get Weight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getWeight()
     {
@@ -129,10 +129,10 @@ class PickupShipmentAttributes extends AbstractStructBase
     }
     /**
      * Set Weight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $weight
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $weight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes
      */
-    public function setWeight(\CommerceFedEx\FedExPHP\Structs\Weight $weight = null)
+    public function setWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $weight = null)
     {
         $this->Weight = $weight;
         return $this;
@@ -143,7 +143,7 @@ class PickupShipmentAttributes extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PickupShipmentAttributes
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PickupShipmentAttributes
      */
     public static function __set_state(array $array)
     {

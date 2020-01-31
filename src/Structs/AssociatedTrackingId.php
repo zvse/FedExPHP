@@ -25,7 +25,7 @@ class AssociatedTrackingId extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the other entity.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public $TrackingId;
     /**
@@ -33,9 +33,9 @@ class AssociatedTrackingId extends AbstractStructBase
      * @uses AssociatedTrackingId::setType()
      * @uses AssociatedTrackingId::setTrackingId()
      * @param string $type
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId
      */
-    public function __construct($type = null, \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId = null)
+    public function __construct($type = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId = null)
     {
         $this
             ->setType($type)
@@ -51,24 +51,24 @@ class AssociatedTrackingId extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\AssociatedTrackingIdType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\AssociatedTrackingIdType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AssociatedTrackingIdType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AssociatedTrackingIdType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\AssociatedTrackingIdType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\AssociatedTrackingIdType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\AssociatedTrackingIdType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AssociatedTrackingIdType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
     }
     /**
      * Get TrackingId value
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId|null
      */
     public function getTrackingId()
     {
@@ -76,10 +76,10 @@ class AssociatedTrackingId extends AbstractStructBase
     }
     /**
      * Set TrackingId value
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId
      */
-    public function setTrackingId(\CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId = null)
+    public function setTrackingId(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId = null)
     {
         $this->TrackingId = $trackingId;
         return $this;
@@ -90,7 +90,7 @@ class AssociatedTrackingId extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedTrackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedTrackingId
      */
     public static function __set_state(array $array)
     {

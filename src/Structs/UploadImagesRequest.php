@@ -17,28 +17,28 @@ class UploadImagesRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public $WebAuthenticationDetail;
     /**
      * The ClientDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public $ClientDetail;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -46,7 +46,7 @@ class UploadImagesRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\UploadImageDetail[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail[]
      */
     public $Images;
     /**
@@ -56,13 +56,13 @@ class UploadImagesRequest extends AbstractStructBase
      * @uses UploadImagesRequest::setVersion()
      * @uses UploadImagesRequest::setTransactionDetail()
      * @uses UploadImagesRequest::setImages()
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadImageDetail[] $images
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail[] $images
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null, \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, array $images = array())
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, array $images = array())
     {
         $this
             ->setWebAuthenticationDetail($webAuthenticationDetail)
@@ -73,7 +73,7 @@ class UploadImagesRequest extends AbstractStructBase
     }
     /**
      * Get WebAuthenticationDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail
      */
     public function getWebAuthenticationDetail()
     {
@@ -81,17 +81,17 @@ class UploadImagesRequest extends AbstractStructBase
     }
     /**
      * Set WebAuthenticationDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImagesRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImagesRequest
      */
-    public function setWebAuthenticationDetail(\CommerceFedEx\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
+    public function setWebAuthenticationDetail(\NicholasCreativeMedia\FedExPHP\Structs\WebAuthenticationDetail $webAuthenticationDetail = null)
     {
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
     /**
      * Get ClientDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ClientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail
      */
     public function getClientDetail()
     {
@@ -99,17 +99,17 @@ class UploadImagesRequest extends AbstractStructBase
     }
     /**
      * Set ClientDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImagesRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImagesRequest
      */
-    public function setClientDetail(\CommerceFedEx\FedExPHP\Structs\ClientDetail $clientDetail = null)
+    public function setClientDetail(\NicholasCreativeMedia\FedExPHP\Structs\ClientDetail $clientDetail = null)
     {
         $this->ClientDetail = $clientDetail;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -117,17 +117,17 @@ class UploadImagesRequest extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImagesRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImagesRequest
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -135,17 +135,17 @@ class UploadImagesRequest extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImagesRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImagesRequest
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
     /**
      * Get Images value
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImageDetail[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail[]|null
      */
     public function getImages()
     {
@@ -154,15 +154,15 @@ class UploadImagesRequest extends AbstractStructBase
     /**
      * Set Images value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadImageDetail[] $images
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImagesRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail[] $images
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImagesRequest
      */
     public function setImages(array $images = array())
     {
         foreach ($images as $uploadImagesRequestImagesItem) {
             // validation for constraint: itemType
-            if (!$uploadImagesRequestImagesItem instanceof \CommerceFedEx\FedExPHP\Structs\UploadImageDetail) {
-                throw new \InvalidArgumentException(sprintf('The Images property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadImageDetail, "%s" given', is_object($uploadImagesRequestImagesItem) ? get_class($uploadImagesRequestImagesItem) : gettype($uploadImagesRequestImagesItem)), __LINE__);
+            if (!$uploadImagesRequestImagesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail) {
+                throw new \InvalidArgumentException(sprintf('The Images property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail, "%s" given', is_object($uploadImagesRequestImagesItem) ? get_class($uploadImagesRequestImagesItem) : gettype($uploadImagesRequestImagesItem)), __LINE__);
             }
         }
         $this->Images = $images;
@@ -171,14 +171,14 @@ class UploadImagesRequest extends AbstractStructBase
     /**
      * Add item to Images value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadImageDetail $item
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImagesRequest
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImagesRequest
      */
-    public function addToImages(\CommerceFedEx\FedExPHP\Structs\UploadImageDetail $item)
+    public function addToImages(\NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\UploadImageDetail) {
-            throw new \InvalidArgumentException(sprintf('The Images property can only contain items of \CommerceFedEx\FedExPHP\Structs\UploadImageDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail) {
+            throw new \InvalidArgumentException(sprintf('The Images property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\UploadImageDetail, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Images[] = $item;
         return $this;
@@ -189,7 +189,7 @@ class UploadImagesRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImagesRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImagesRequest
      */
     public static function __set_state(array $array)
     {

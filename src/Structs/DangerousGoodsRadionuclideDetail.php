@@ -24,7 +24,7 @@ class DangerousGoodsRadionuclideDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the measure of radioactivity for this dangerous goods commodity.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideActivity
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideActivity
      */
     public $Activity;
     /**
@@ -49,11 +49,11 @@ class DangerousGoodsRadionuclideDetail extends AbstractStructBase
      * @uses DangerousGoodsRadionuclideDetail::setPhysicalForm()
      * @uses DangerousGoodsRadionuclideDetail::setChemicalForm()
      * @param string[] $radionuclides
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideActivity $activity
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideActivity $activity
      * @param string $physicalForm
      * @param string $chemicalForm
      */
-    public function __construct(array $radionuclides = array(), \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideActivity $activity = null, $physicalForm = null, $chemicalForm = null)
+    public function __construct(array $radionuclides = array(), \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideActivity $activity = null, $physicalForm = null, $chemicalForm = null)
     {
         $this
             ->setRadionuclides($radionuclides)
@@ -73,7 +73,7 @@ class DangerousGoodsRadionuclideDetail extends AbstractStructBase
      * Set Radionuclides value
      * @throws \InvalidArgumentException
      * @param string[] $radionuclides
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
      */
     public function setRadionuclides(array $radionuclides = array())
     {
@@ -90,7 +90,7 @@ class DangerousGoodsRadionuclideDetail extends AbstractStructBase
      * Add item to Radionuclides value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
      */
     public function addToRadionuclides($item)
     {
@@ -103,7 +103,7 @@ class DangerousGoodsRadionuclideDetail extends AbstractStructBase
     }
     /**
      * Get Activity value
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideActivity|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideActivity|null
      */
     public function getActivity()
     {
@@ -111,10 +111,10 @@ class DangerousGoodsRadionuclideDetail extends AbstractStructBase
     }
     /**
      * Set Activity value
-     * @param \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideActivity $activity
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideActivity $activity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
      */
-    public function setActivity(\CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideActivity $activity = null)
+    public function setActivity(\NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideActivity $activity = null)
     {
         $this->Activity = $activity;
         return $this;
@@ -129,17 +129,17 @@ class DangerousGoodsRadionuclideDetail extends AbstractStructBase
     }
     /**
      * Set PhysicalForm value
-     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalFormType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\PhysicalFormType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalFormType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\PhysicalFormType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $physicalForm
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
      */
     public function setPhysicalForm($physicalForm = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\PhysicalFormType::valueIsValid($physicalForm)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $physicalForm, implode(', ', \CommerceFedEx\FedExPHP\Enums\PhysicalFormType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\PhysicalFormType::valueIsValid($physicalForm)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $physicalForm, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\PhysicalFormType::getValidValues())), __LINE__);
         }
         $this->PhysicalForm = $physicalForm;
         return $this;
@@ -155,7 +155,7 @@ class DangerousGoodsRadionuclideDetail extends AbstractStructBase
     /**
      * Set ChemicalForm value
      * @param string $chemicalForm
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
      */
     public function setChemicalForm($chemicalForm = null)
     {
@@ -172,7 +172,7 @@ class DangerousGoodsRadionuclideDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideDetail
      */
     public static function __set_state(array $array)
     {

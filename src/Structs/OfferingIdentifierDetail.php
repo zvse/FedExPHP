@@ -61,7 +61,7 @@ class OfferingIdentifierDetail extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\OfferingIdentifierDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OfferingIdentifierDetail
      */
     public function setId($id = null)
     {
@@ -83,7 +83,7 @@ class OfferingIdentifierDetail extends AbstractStructBase
     /**
      * Set Type value
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\OfferingIdentifierDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OfferingIdentifierDetail
      */
     public function setType($type = null)
     {
@@ -105,7 +105,7 @@ class OfferingIdentifierDetail extends AbstractStructBase
     /**
      * Set Code value
      * @param string $code
-     * @return \CommerceFedEx\FedExPHP\Structs\OfferingIdentifierDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OfferingIdentifierDetail
      */
     public function setCode($code = null)
     {
@@ -122,7 +122,7 @@ class OfferingIdentifierDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\OfferingIdentifierDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\OfferingIdentifierDetail
      */
     public static function __set_state(array $array)
     {

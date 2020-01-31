@@ -22,7 +22,7 @@ class RatedDeliveryDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total charges for this shipment.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalNetCharge;
     /**
@@ -30,7 +30,7 @@ class RatedDeliveryDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Total surcharges for this shipment.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalSurcharges;
     /**
@@ -39,7 +39,7 @@ class RatedDeliveryDetail extends AbstractStructBase
      * - documentation: Specifies the details about surcharges.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Surcharge[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Surcharge[]
      */
     public $Surcharges;
     /**
@@ -49,11 +49,11 @@ class RatedDeliveryDetail extends AbstractStructBase
      * @uses RatedDeliveryDetail::setTotalSurcharges()
      * @uses RatedDeliveryDetail::setSurcharges()
      * @param int $totalPieces
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetCharge
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalSurcharges
-     * @param \CommerceFedEx\FedExPHP\Structs\Surcharge[] $surcharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetCharge
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalSurcharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Surcharge[] $surcharges
      */
-    public function __construct($totalPieces = null, \CommerceFedEx\FedExPHP\Structs\Money $totalNetCharge = null, \CommerceFedEx\FedExPHP\Structs\Money $totalSurcharges = null, array $surcharges = array())
+    public function __construct($totalPieces = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetCharge = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalSurcharges = null, array $surcharges = array())
     {
         $this
             ->setTotalPieces($totalPieces)
@@ -72,7 +72,7 @@ class RatedDeliveryDetail extends AbstractStructBase
     /**
      * Set TotalPieces value
      * @param int $totalPieces
-     * @return \CommerceFedEx\FedExPHP\Structs\RatedDeliveryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedDeliveryDetail
      */
     public function setTotalPieces($totalPieces = null)
     {
@@ -85,7 +85,7 @@ class RatedDeliveryDetail extends AbstractStructBase
     }
     /**
      * Get TotalNetCharge value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalNetCharge()
     {
@@ -93,17 +93,17 @@ class RatedDeliveryDetail extends AbstractStructBase
     }
     /**
      * Set TotalNetCharge value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalNetCharge
-     * @return \CommerceFedEx\FedExPHP\Structs\RatedDeliveryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetCharge
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedDeliveryDetail
      */
-    public function setTotalNetCharge(\CommerceFedEx\FedExPHP\Structs\Money $totalNetCharge = null)
+    public function setTotalNetCharge(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalNetCharge = null)
     {
         $this->TotalNetCharge = $totalNetCharge;
         return $this;
     }
     /**
      * Get TotalSurcharges value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalSurcharges()
     {
@@ -111,17 +111,17 @@ class RatedDeliveryDetail extends AbstractStructBase
     }
     /**
      * Set TotalSurcharges value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalSurcharges
-     * @return \CommerceFedEx\FedExPHP\Structs\RatedDeliveryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalSurcharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedDeliveryDetail
      */
-    public function setTotalSurcharges(\CommerceFedEx\FedExPHP\Structs\Money $totalSurcharges = null)
+    public function setTotalSurcharges(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalSurcharges = null)
     {
         $this->TotalSurcharges = $totalSurcharges;
         return $this;
     }
     /**
      * Get Surcharges value
-     * @return \CommerceFedEx\FedExPHP\Structs\Surcharge[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Surcharge[]|null
      */
     public function getSurcharges()
     {
@@ -130,15 +130,15 @@ class RatedDeliveryDetail extends AbstractStructBase
     /**
      * Set Surcharges value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Surcharge[] $surcharges
-     * @return \CommerceFedEx\FedExPHP\Structs\RatedDeliveryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Surcharge[] $surcharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedDeliveryDetail
      */
     public function setSurcharges(array $surcharges = array())
     {
         foreach ($surcharges as $ratedDeliveryDetailSurchargesItem) {
             // validation for constraint: itemType
-            if (!$ratedDeliveryDetailSurchargesItem instanceof \CommerceFedEx\FedExPHP\Structs\Surcharge) {
-                throw new \InvalidArgumentException(sprintf('The Surcharges property can only contain items of \CommerceFedEx\FedExPHP\Structs\Surcharge, "%s" given', is_object($ratedDeliveryDetailSurchargesItem) ? get_class($ratedDeliveryDetailSurchargesItem) : gettype($ratedDeliveryDetailSurchargesItem)), __LINE__);
+            if (!$ratedDeliveryDetailSurchargesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Surcharge) {
+                throw new \InvalidArgumentException(sprintf('The Surcharges property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Surcharge, "%s" given', is_object($ratedDeliveryDetailSurchargesItem) ? get_class($ratedDeliveryDetailSurchargesItem) : gettype($ratedDeliveryDetailSurchargesItem)), __LINE__);
             }
         }
         $this->Surcharges = $surcharges;
@@ -147,14 +147,14 @@ class RatedDeliveryDetail extends AbstractStructBase
     /**
      * Add item to Surcharges value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Surcharge $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RatedDeliveryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Surcharge $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedDeliveryDetail
      */
-    public function addToSurcharges(\CommerceFedEx\FedExPHP\Structs\Surcharge $item)
+    public function addToSurcharges(\NicholasCreativeMedia\FedExPHP\Structs\Surcharge $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Surcharge) {
-            throw new \InvalidArgumentException(sprintf('The Surcharges property can only contain items of \CommerceFedEx\FedExPHP\Structs\Surcharge, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Surcharge) {
+            throw new \InvalidArgumentException(sprintf('The Surcharges property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Surcharge, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Surcharges[] = $item;
         return $this;
@@ -165,7 +165,7 @@ class RatedDeliveryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RatedDeliveryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RatedDeliveryDetail
      */
     public static function __set_state(array $array)
     {

@@ -24,21 +24,21 @@ class DeleteOpenShipmentReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -48,11 +48,11 @@ class DeleteOpenShipmentReply extends AbstractStructBase
      * @uses DeleteOpenShipmentReply::setVersion()
      * @uses DeleteOpenShipmentReply::setTransactionDetail()
      * @param string $highestSeverity
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -70,24 +70,24 @@ class DeleteOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -96,15 +96,15 @@ class DeleteOpenShipmentReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $deleteOpenShipmentReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$deleteOpenShipmentReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($deleteOpenShipmentReplyNotificationsItem) ? get_class($deleteOpenShipmentReplyNotificationsItem) : gettype($deleteOpenShipmentReplyNotificationsItem)), __LINE__);
+            if (!$deleteOpenShipmentReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($deleteOpenShipmentReplyNotificationsItem) ? get_class($deleteOpenShipmentReplyNotificationsItem) : gettype($deleteOpenShipmentReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -113,21 +113,21 @@ class DeleteOpenShipmentReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentReply
      */
-    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -135,17 +135,17 @@ class DeleteOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentReply
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -153,10 +153,10 @@ class DeleteOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentReply
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -167,7 +167,7 @@ class DeleteOpenShipmentReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DeleteOpenShipmentReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeleteOpenShipmentReply
      */
     public static function __set_state(array $array)
     {

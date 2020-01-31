@@ -41,7 +41,7 @@ class PalletShrinkwrapDetail extends AbstractStructBase
     /**
      * Set PalletCount value
      * @param int $palletCount
-     * @return \CommerceFedEx\FedExPHP\Structs\PalletShrinkwrapDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PalletShrinkwrapDetail
      */
     public function setPalletCount($palletCount = null)
     {
@@ -58,7 +58,7 @@ class PalletShrinkwrapDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\PalletShrinkwrapDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PalletShrinkwrapDetail
      */
     public static function __set_state(array $array)
     {

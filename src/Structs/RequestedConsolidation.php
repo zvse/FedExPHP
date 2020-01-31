@@ -31,7 +31,7 @@ class RequestedConsolidation extends AbstractStructBase
      * - documentation: Master Air Way Bill tracking ID
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]
      */
     public $TrackingIds;
     /**
@@ -46,7 +46,7 @@ class RequestedConsolidation extends AbstractStructBase
      * The Shipper
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Party
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public $Shipper;
     /**
@@ -54,7 +54,7 @@ class RequestedConsolidation extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Physical starting address for the shipment, if different from shipper's address.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
      */
     public $Origin;
     /**
@@ -63,7 +63,7 @@ class RequestedConsolidation extends AbstractStructBase
      * - documentation: Indicates the party responsible for purchasing the goods shipped from the shipper to the recipient. The sold to party is not necessarily the recipient or the importer of record. The sold to party is relevant when the purchaser,
      * rather than the recipient, determines when certain customs regulations apply.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Party
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public $SoldTo;
     /**
@@ -79,14 +79,14 @@ class RequestedConsolidation extends AbstractStructBase
      * - documentation: Specifies how selected values in the consolidation are to be determined.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource[]
      */
     public $ConsolidationDataSources;
     /**
      * The SpecialServicesRequested
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested
      */
     public $SpecialServicesRequested;
     /**
@@ -95,21 +95,21 @@ class RequestedConsolidation extends AbstractStructBase
      * - documentation: References applying to the entire consolidation.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomerReference[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[]
      */
     public $CustomerReferences;
     /**
      * The LabelSpecification
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\LabelSpecification
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification
      */
     public $LabelSpecification;
     /**
      * The InternationalDistributionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail
      */
     public $InternationalDistributionDetail;
     /**
@@ -117,7 +117,7 @@ class RequestedConsolidation extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the transborder data when the consolidation type is transborder distribution.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationTransborderDistributionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationTransborderDistributionDetail
      */
     public $TransborderDistributionDetail;
     /**
@@ -126,7 +126,7 @@ class RequestedConsolidation extends AbstractStructBase
      * - documentation: Specifies the type and location id for the distribution location to be used to process the consolidation.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation[]
      */
     public $DistributionLocations;
     /**
@@ -134,14 +134,14 @@ class RequestedConsolidation extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Customs clearance data, used for both international and intra-country shipping.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail
      */
     public $CustomsClearanceDetail;
     /**
      * The ShippingChargesPayment
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Payment
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Payment
      */
     public $ShippingChargesPayment;
     /**
@@ -149,7 +149,7 @@ class RequestedConsolidation extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Provides requirements for production of all documents for this consolidation.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification
      */
     public $ConsolidationDocumentSpecification;
     /**
@@ -184,25 +184,25 @@ class RequestedConsolidation extends AbstractStructBase
      * @uses RequestedConsolidation::setCrnShippingDocumentTypes()
      * @param string $consolidationType
      * @param string $shipDate
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
      * @param string $description
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $shipper
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $origin
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $soldTo
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $shipper
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $origin
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $soldTo
      * @param string $bookingNumber
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource[] $consolidationDataSources
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference[] $customerReferences
-     * @param \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification
-     * @param \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail $internationalDistributionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationTransborderDistributionDetail $transborderDistributionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[] $distributionLocations
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource[] $consolidationDataSources
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[] $customerReferences
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail $internationalDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationTransborderDistributionDetail $transborderDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation[] $distributionLocations
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification
      * @param string[] $crnShippingDocumentTypes
      */
-    public function __construct($consolidationType = null, $shipDate = null, array $trackingIds = array(), $description = null, \CommerceFedEx\FedExPHP\Structs\Party $shipper = null, \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $origin = null, \CommerceFedEx\FedExPHP\Structs\Party $soldTo = null, $bookingNumber = null, array $consolidationDataSources = array(), \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested = null, array $customerReferences = array(), \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification = null, \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail $internationalDistributionDetail = null, \CommerceFedEx\FedExPHP\Structs\ConsolidationTransborderDistributionDetail $transborderDistributionDetail = null, array $distributionLocations = array(), \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail = null, \CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment = null, \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification = null, array $crnShippingDocumentTypes = array())
+    public function __construct($consolidationType = null, $shipDate = null, array $trackingIds = array(), $description = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $shipper = null, \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $origin = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $soldTo = null, $bookingNumber = null, array $consolidationDataSources = array(), \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested = null, array $customerReferences = array(), \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification = null, \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail $internationalDistributionDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationTransborderDistributionDetail $transborderDistributionDetail = null, array $distributionLocations = array(), \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment = null, \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification = null, array $crnShippingDocumentTypes = array())
     {
         $this
             ->setConsolidationType($consolidationType)
@@ -235,17 +235,17 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set ConsolidationType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ConsolidationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $consolidationType
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function setConsolidationType($consolidationType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ConsolidationType::valueIsValid($consolidationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $consolidationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ConsolidationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::valueIsValid($consolidationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $consolidationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ConsolidationType::getValidValues())), __LINE__);
         }
         $this->ConsolidationType = $consolidationType;
         return $this;
@@ -261,7 +261,7 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Set ShipDate value
      * @param string $shipDate
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function setShipDate($shipDate = null)
     {
@@ -274,7 +274,7 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Get TrackingIds value
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]|null
      */
     public function getTrackingIds()
     {
@@ -283,15 +283,15 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Set TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function setTrackingIds(array $trackingIds = array())
     {
         foreach ($trackingIds as $requestedConsolidationTrackingIdsItem) {
             // validation for constraint: itemType
-            if (!$requestedConsolidationTrackingIdsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
-                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($requestedConsolidationTrackingIdsItem) ? get_class($requestedConsolidationTrackingIdsItem) : gettype($requestedConsolidationTrackingIdsItem)), __LINE__);
+            if (!$requestedConsolidationTrackingIdsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
+                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($requestedConsolidationTrackingIdsItem) ? get_class($requestedConsolidationTrackingIdsItem) : gettype($requestedConsolidationTrackingIdsItem)), __LINE__);
             }
         }
         $this->TrackingIds = $trackingIds;
@@ -300,14 +300,14 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Add item to TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function addToTrackingIds(\CommerceFedEx\FedExPHP\Structs\TrackingId $item)
+    public function addToTrackingIds(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
-            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
+            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->TrackingIds[] = $item;
         return $this;
@@ -323,7 +323,7 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function setDescription($description = null)
     {
@@ -336,7 +336,7 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Get Shipper value
-     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
      */
     public function getShipper()
     {
@@ -344,17 +344,17 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set Shipper value
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $shipper
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $shipper
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setShipper(\CommerceFedEx\FedExPHP\Structs\Party $shipper = null)
+    public function setShipper(\NicholasCreativeMedia\FedExPHP\Structs\Party $shipper = null)
     {
         $this->Shipper = $shipper;
         return $this;
     }
     /**
      * Get Origin value
-     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getOrigin()
     {
@@ -362,17 +362,17 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set Origin value
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $origin
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $origin
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setOrigin(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $origin = null)
+    public function setOrigin(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $origin = null)
     {
         $this->Origin = $origin;
         return $this;
     }
     /**
      * Get SoldTo value
-     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
      */
     public function getSoldTo()
     {
@@ -380,10 +380,10 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set SoldTo value
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $soldTo
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $soldTo
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setSoldTo(\CommerceFedEx\FedExPHP\Structs\Party $soldTo = null)
+    public function setSoldTo(\NicholasCreativeMedia\FedExPHP\Structs\Party $soldTo = null)
     {
         $this->SoldTo = $soldTo;
         return $this;
@@ -399,7 +399,7 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Set BookingNumber value
      * @param string $bookingNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function setBookingNumber($bookingNumber = null)
     {
@@ -412,7 +412,7 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Get ConsolidationDataSources value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource[]|null
      */
     public function getConsolidationDataSources()
     {
@@ -421,15 +421,15 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Set ConsolidationDataSources value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource[] $consolidationDataSources
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource[] $consolidationDataSources
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function setConsolidationDataSources(array $consolidationDataSources = array())
     {
         foreach ($consolidationDataSources as $requestedConsolidationConsolidationDataSourcesItem) {
             // validation for constraint: itemType
-            if (!$requestedConsolidationConsolidationDataSourcesItem instanceof \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource) {
-                throw new \InvalidArgumentException(sprintf('The ConsolidationDataSources property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource, "%s" given', is_object($requestedConsolidationConsolidationDataSourcesItem) ? get_class($requestedConsolidationConsolidationDataSourcesItem) : gettype($requestedConsolidationConsolidationDataSourcesItem)), __LINE__);
+            if (!$requestedConsolidationConsolidationDataSourcesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource) {
+                throw new \InvalidArgumentException(sprintf('The ConsolidationDataSources property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource, "%s" given', is_object($requestedConsolidationConsolidationDataSourcesItem) ? get_class($requestedConsolidationConsolidationDataSourcesItem) : gettype($requestedConsolidationConsolidationDataSourcesItem)), __LINE__);
             }
         }
         $this->ConsolidationDataSources = $consolidationDataSources;
@@ -438,21 +438,21 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Add item to ConsolidationDataSources value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function addToConsolidationDataSources(\CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource $item)
+    public function addToConsolidationDataSources(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource) {
-            throw new \InvalidArgumentException(sprintf('The ConsolidationDataSources property can only contain items of \CommerceFedEx\FedExPHP\Structs\ConsolidationDataSource, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource) {
+            throw new \InvalidArgumentException(sprintf('The ConsolidationDataSources property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDataSource, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ConsolidationDataSources[] = $item;
         return $this;
     }
     /**
      * Get SpecialServicesRequested value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested|null
      */
     public function getSpecialServicesRequested()
     {
@@ -460,17 +460,17 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set SpecialServicesRequested value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setSpecialServicesRequested(\CommerceFedEx\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested = null)
+    public function setSpecialServicesRequested(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationSpecialServicesRequested $specialServicesRequested = null)
     {
         $this->SpecialServicesRequested = $specialServicesRequested;
         return $this;
     }
     /**
      * Get CustomerReferences value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[]|null
      */
     public function getCustomerReferences()
     {
@@ -479,15 +479,15 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Set CustomerReferences value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference[] $customerReferences
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[] $customerReferences
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function setCustomerReferences(array $customerReferences = array())
     {
         foreach ($customerReferences as $requestedConsolidationCustomerReferencesItem) {
             // validation for constraint: itemType
-            if (!$requestedConsolidationCustomerReferencesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerReference) {
-                throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerReference, "%s" given', is_object($requestedConsolidationCustomerReferencesItem) ? get_class($requestedConsolidationCustomerReferencesItem) : gettype($requestedConsolidationCustomerReferencesItem)), __LINE__);
+            if (!$requestedConsolidationCustomerReferencesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference) {
+                throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference, "%s" given', is_object($requestedConsolidationCustomerReferencesItem) ? get_class($requestedConsolidationCustomerReferencesItem) : gettype($requestedConsolidationCustomerReferencesItem)), __LINE__);
             }
         }
         $this->CustomerReferences = $customerReferences;
@@ -496,21 +496,21 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Add item to CustomerReferences value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function addToCustomerReferences(\CommerceFedEx\FedExPHP\Structs\CustomerReference $item)
+    public function addToCustomerReferences(\NicholasCreativeMedia\FedExPHP\Structs\CustomerReference $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerReference) {
-            throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference) {
+            throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerReferences[] = $item;
         return $this;
     }
     /**
      * Get LabelSpecification value
-     * @return \CommerceFedEx\FedExPHP\Structs\LabelSpecification|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification|null
      */
     public function getLabelSpecification()
     {
@@ -518,17 +518,17 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set LabelSpecification value
-     * @param \CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setLabelSpecification(\CommerceFedEx\FedExPHP\Structs\LabelSpecification $labelSpecification = null)
+    public function setLabelSpecification(\NicholasCreativeMedia\FedExPHP\Structs\LabelSpecification $labelSpecification = null)
     {
         $this->LabelSpecification = $labelSpecification;
         return $this;
     }
     /**
      * Get InternationalDistributionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail|null
      */
     public function getInternationalDistributionDetail()
     {
@@ -536,17 +536,17 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set InternationalDistributionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail $internationalDistributionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail $internationalDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setInternationalDistributionDetail(\CommerceFedEx\FedExPHP\Structs\InternationalDistributionDetail $internationalDistributionDetail = null)
+    public function setInternationalDistributionDetail(\NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionDetail $internationalDistributionDetail = null)
     {
         $this->InternationalDistributionDetail = $internationalDistributionDetail;
         return $this;
     }
     /**
      * Get TransborderDistributionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationTransborderDistributionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationTransborderDistributionDetail|null
      */
     public function getTransborderDistributionDetail()
     {
@@ -554,17 +554,17 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set TransborderDistributionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationTransborderDistributionDetail $transborderDistributionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationTransborderDistributionDetail $transborderDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setTransborderDistributionDetail(\CommerceFedEx\FedExPHP\Structs\ConsolidationTransborderDistributionDetail $transborderDistributionDetail = null)
+    public function setTransborderDistributionDetail(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationTransborderDistributionDetail $transborderDistributionDetail = null)
     {
         $this->TransborderDistributionDetail = $transborderDistributionDetail;
         return $this;
     }
     /**
      * Get DistributionLocations value
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation[]|null
      */
     public function getDistributionLocations()
     {
@@ -573,15 +573,15 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Set DistributionLocations value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[] $distributionLocations
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation[] $distributionLocations
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function setDistributionLocations(array $distributionLocations = array())
     {
         foreach ($distributionLocations as $requestedConsolidationDistributionLocationsItem) {
             // validation for constraint: itemType
-            if (!$requestedConsolidationDistributionLocationsItem instanceof \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation) {
-                throw new \InvalidArgumentException(sprintf('The DistributionLocations property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($requestedConsolidationDistributionLocationsItem) ? get_class($requestedConsolidationDistributionLocationsItem) : gettype($requestedConsolidationDistributionLocationsItem)), __LINE__);
+            if (!$requestedConsolidationDistributionLocationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation) {
+                throw new \InvalidArgumentException(sprintf('The DistributionLocations property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($requestedConsolidationDistributionLocationsItem) ? get_class($requestedConsolidationDistributionLocationsItem) : gettype($requestedConsolidationDistributionLocationsItem)), __LINE__);
             }
         }
         $this->DistributionLocations = $distributionLocations;
@@ -590,21 +590,21 @@ class RequestedConsolidation extends AbstractStructBase
     /**
      * Add item to DistributionLocations value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function addToDistributionLocations(\CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation $item)
+    public function addToDistributionLocations(\NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation) {
-            throw new \InvalidArgumentException(sprintf('The DistributionLocations property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation) {
+            throw new \InvalidArgumentException(sprintf('The DistributionLocations property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->DistributionLocations[] = $item;
         return $this;
     }
     /**
      * Get CustomsClearanceDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail|null
      */
     public function getCustomsClearanceDetail()
     {
@@ -612,17 +612,17 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set CustomsClearanceDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setCustomsClearanceDetail(\CommerceFedEx\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail = null)
+    public function setCustomsClearanceDetail(\NicholasCreativeMedia\FedExPHP\Structs\CustomsClearanceDetail $customsClearanceDetail = null)
     {
         $this->CustomsClearanceDetail = $customsClearanceDetail;
         return $this;
     }
     /**
      * Get ShippingChargesPayment value
-     * @return \CommerceFedEx\FedExPHP\Structs\Payment|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Payment|null
      */
     public function getShippingChargesPayment()
     {
@@ -630,17 +630,17 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set ShippingChargesPayment value
-     * @param \CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setShippingChargesPayment(\CommerceFedEx\FedExPHP\Structs\Payment $shippingChargesPayment = null)
+    public function setShippingChargesPayment(\NicholasCreativeMedia\FedExPHP\Structs\Payment $shippingChargesPayment = null)
     {
         $this->ShippingChargesPayment = $shippingChargesPayment;
         return $this;
     }
     /**
      * Get ConsolidationDocumentSpecification value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification|null
      */
     public function getConsolidationDocumentSpecification()
     {
@@ -648,10 +648,10 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set ConsolidationDocumentSpecification value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
-    public function setConsolidationDocumentSpecification(\CommerceFedEx\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification = null)
+    public function setConsolidationDocumentSpecification(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocumentSpecification $consolidationDocumentSpecification = null)
     {
         $this->ConsolidationDocumentSpecification = $consolidationDocumentSpecification;
         return $this;
@@ -666,39 +666,39 @@ class RequestedConsolidation extends AbstractStructBase
     }
     /**
      * Set CrnShippingDocumentTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $crnShippingDocumentTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function setCrnShippingDocumentTypes(array $crnShippingDocumentTypes = array())
     {
         $invalidValues = array();
         foreach ($crnShippingDocumentTypes as $requestedConsolidationCrnShippingDocumentTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid($requestedConsolidationCrnShippingDocumentTypesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid($requestedConsolidationCrnShippingDocumentTypesItem)) {
                 $invalidValues[] = var_export($requestedConsolidationCrnShippingDocumentTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues())), __LINE__);
         }
         $this->CrnShippingDocumentTypes = $crnShippingDocumentTypes;
         return $this;
     }
     /**
      * Add item to CrnShippingDocumentTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public function addToCrnShippingDocumentTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RequestedShippingDocumentType::getValidValues())), __LINE__);
         }
         $this->CrnShippingDocumentTypes[] = $item;
         return $this;
@@ -709,7 +709,7 @@ class RequestedConsolidation extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedConsolidation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedConsolidation
      */
     public static function __set_state(array $array)
     {

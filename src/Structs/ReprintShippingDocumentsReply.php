@@ -24,21 +24,21 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -54,7 +54,7 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
      * - documentation: Shipment level shipping documents for reprint
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocument[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[]
      */
     public $ShipmentDocuments;
     /**
@@ -63,7 +63,7 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
      * - documentation: Package-level shipping documents for reprint
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PackageDocument[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument[]
      */
     public $PackageDocuments;
     /**
@@ -76,14 +76,14 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
      * @uses ReprintShippingDocumentsReply::setShipmentDocuments()
      * @uses ReprintShippingDocumentsReply::setPackageDocuments()
      * @param string $highestSeverity
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $jobId
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $shipmentDocuments
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageDocument[] $packageDocuments
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[] $shipmentDocuments
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument[] $packageDocuments
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $jobId = null, array $shipmentDocuments = array(), array $packageDocuments = array())
+    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $jobId = null, array $shipmentDocuments = array(), array $packageDocuments = array())
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -104,24 +104,24 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -130,15 +130,15 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $reprintShippingDocumentsReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$reprintShippingDocumentsReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($reprintShippingDocumentsReplyNotificationsItem) ? get_class($reprintShippingDocumentsReplyNotificationsItem) : gettype($reprintShippingDocumentsReplyNotificationsItem)), __LINE__);
+            if (!$reprintShippingDocumentsReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($reprintShippingDocumentsReplyNotificationsItem) ? get_class($reprintShippingDocumentsReplyNotificationsItem) : gettype($reprintShippingDocumentsReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -147,21 +147,21 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
-    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -169,17 +169,17 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -187,10 +187,10 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -206,7 +206,7 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     /**
      * Set JobId value
      * @param string $jobId
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
     public function setJobId($jobId = null)
     {
@@ -219,7 +219,7 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     }
     /**
      * Get ShipmentDocuments value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocument[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[]|null
      */
     public function getShipmentDocuments()
     {
@@ -228,15 +228,15 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     /**
      * Set ShipmentDocuments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $shipmentDocuments
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[] $shipmentDocuments
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
     public function setShipmentDocuments(array $shipmentDocuments = array())
     {
         foreach ($shipmentDocuments as $reprintShippingDocumentsReplyShipmentDocumentsItem) {
             // validation for constraint: itemType
-            if (!$reprintShippingDocumentsReplyShipmentDocumentsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocument) {
-                throw new \InvalidArgumentException(sprintf('The ShipmentDocuments property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($reprintShippingDocumentsReplyShipmentDocumentsItem) ? get_class($reprintShippingDocumentsReplyShipmentDocumentsItem) : gettype($reprintShippingDocumentsReplyShipmentDocumentsItem)), __LINE__);
+            if (!$reprintShippingDocumentsReplyShipmentDocumentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument) {
+                throw new \InvalidArgumentException(sprintf('The ShipmentDocuments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($reprintShippingDocumentsReplyShipmentDocumentsItem) ? get_class($reprintShippingDocumentsReplyShipmentDocumentsItem) : gettype($reprintShippingDocumentsReplyShipmentDocumentsItem)), __LINE__);
             }
         }
         $this->ShipmentDocuments = $shipmentDocuments;
@@ -245,21 +245,21 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     /**
      * Add item to ShipmentDocuments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
-    public function addToShipmentDocuments(\CommerceFedEx\FedExPHP\Structs\ShippingDocument $item)
+    public function addToShipmentDocuments(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocument) {
-            throw new \InvalidArgumentException(sprintf('The ShipmentDocuments property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument) {
+            throw new \InvalidArgumentException(sprintf('The ShipmentDocuments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ShipmentDocuments[] = $item;
         return $this;
     }
     /**
      * Get PackageDocuments value
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageDocument[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument[]|null
      */
     public function getPackageDocuments()
     {
@@ -268,15 +268,15 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     /**
      * Set PackageDocuments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageDocument[] $packageDocuments
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument[] $packageDocuments
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
     public function setPackageDocuments(array $packageDocuments = array())
     {
         foreach ($packageDocuments as $reprintShippingDocumentsReplyPackageDocumentsItem) {
             // validation for constraint: itemType
-            if (!$reprintShippingDocumentsReplyPackageDocumentsItem instanceof \CommerceFedEx\FedExPHP\Structs\PackageDocument) {
-                throw new \InvalidArgumentException(sprintf('The PackageDocuments property can only contain items of \CommerceFedEx\FedExPHP\Structs\PackageDocument, "%s" given', is_object($reprintShippingDocumentsReplyPackageDocumentsItem) ? get_class($reprintShippingDocumentsReplyPackageDocumentsItem) : gettype($reprintShippingDocumentsReplyPackageDocumentsItem)), __LINE__);
+            if (!$reprintShippingDocumentsReplyPackageDocumentsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument) {
+                throw new \InvalidArgumentException(sprintf('The PackageDocuments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument, "%s" given', is_object($reprintShippingDocumentsReplyPackageDocumentsItem) ? get_class($reprintShippingDocumentsReplyPackageDocumentsItem) : gettype($reprintShippingDocumentsReplyPackageDocumentsItem)), __LINE__);
             }
         }
         $this->PackageDocuments = $packageDocuments;
@@ -285,14 +285,14 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
     /**
      * Add item to PackageDocuments value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageDocument $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
-    public function addToPackageDocuments(\CommerceFedEx\FedExPHP\Structs\PackageDocument $item)
+    public function addToPackageDocuments(\NicholasCreativeMedia\FedExPHP\Structs\PackageDocument $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\PackageDocument) {
-            throw new \InvalidArgumentException(sprintf('The PackageDocuments property can only contain items of \CommerceFedEx\FedExPHP\Structs\PackageDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument) {
+            throw new \InvalidArgumentException(sprintf('The PackageDocuments property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\PackageDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->PackageDocuments[] = $item;
         return $this;
@@ -303,7 +303,7 @@ class ReprintShippingDocumentsReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ReprintShippingDocumentsReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ReprintShippingDocumentsReply
      */
     public static function __set_state(array $array)
     {

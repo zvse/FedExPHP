@@ -68,7 +68,7 @@ class ContentRecord extends AbstractStructBase
     /**
      * Set PartNumber value
      * @param string $partNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ContentRecord
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord
      */
     public function setPartNumber($partNumber = null)
     {
@@ -90,7 +90,7 @@ class ContentRecord extends AbstractStructBase
     /**
      * Set ItemNumber value
      * @param string $itemNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ContentRecord
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord
      */
     public function setItemNumber($itemNumber = null)
     {
@@ -112,7 +112,7 @@ class ContentRecord extends AbstractStructBase
     /**
      * Set ReceivedQuantity value
      * @param int $receivedQuantity
-     * @return \CommerceFedEx\FedExPHP\Structs\ContentRecord
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord
      */
     public function setReceivedQuantity($receivedQuantity = null)
     {
@@ -134,7 +134,7 @@ class ContentRecord extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\ContentRecord
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord
      */
     public function setDescription($description = null)
     {
@@ -151,7 +151,7 @@ class ContentRecord extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ContentRecord
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContentRecord
      */
     public static function __set_state(array $array)
     {

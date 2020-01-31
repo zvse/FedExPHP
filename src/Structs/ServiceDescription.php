@@ -30,7 +30,7 @@ class ServiceDescription extends AbstractStructBase
      * - documentation: Branded, translated, and/or localized names for this service.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ProductName[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ProductName[]
      */
     public $Names;
     /**
@@ -56,7 +56,7 @@ class ServiceDescription extends AbstractStructBase
      * @uses ServiceDescription::setAstraDescription()
      * @param string $serviceType
      * @param string $code
-     * @param \CommerceFedEx\FedExPHP\Structs\ProductName[] $names
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ProductName[] $names
      * @param string $description
      * @param string $astraDescription
      */
@@ -80,7 +80,7 @@ class ServiceDescription extends AbstractStructBase
     /**
      * Set ServiceType value
      * @param string $serviceType
-     * @return \CommerceFedEx\FedExPHP\Structs\ServiceDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceDescription
      */
     public function setServiceType($serviceType = null)
     {
@@ -102,7 +102,7 @@ class ServiceDescription extends AbstractStructBase
     /**
      * Set Code value
      * @param string $code
-     * @return \CommerceFedEx\FedExPHP\Structs\ServiceDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceDescription
      */
     public function setCode($code = null)
     {
@@ -115,7 +115,7 @@ class ServiceDescription extends AbstractStructBase
     }
     /**
      * Get Names value
-     * @return \CommerceFedEx\FedExPHP\Structs\ProductName[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ProductName[]|null
      */
     public function getNames()
     {
@@ -124,15 +124,15 @@ class ServiceDescription extends AbstractStructBase
     /**
      * Set Names value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ProductName[] $names
-     * @return \CommerceFedEx\FedExPHP\Structs\ServiceDescription
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ProductName[] $names
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceDescription
      */
     public function setNames(array $names = array())
     {
         foreach ($names as $serviceDescriptionNamesItem) {
             // validation for constraint: itemType
-            if (!$serviceDescriptionNamesItem instanceof \CommerceFedEx\FedExPHP\Structs\ProductName) {
-                throw new \InvalidArgumentException(sprintf('The Names property can only contain items of \CommerceFedEx\FedExPHP\Structs\ProductName, "%s" given', is_object($serviceDescriptionNamesItem) ? get_class($serviceDescriptionNamesItem) : gettype($serviceDescriptionNamesItem)), __LINE__);
+            if (!$serviceDescriptionNamesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ProductName) {
+                throw new \InvalidArgumentException(sprintf('The Names property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ProductName, "%s" given', is_object($serviceDescriptionNamesItem) ? get_class($serviceDescriptionNamesItem) : gettype($serviceDescriptionNamesItem)), __LINE__);
             }
         }
         $this->Names = $names;
@@ -141,14 +141,14 @@ class ServiceDescription extends AbstractStructBase
     /**
      * Add item to Names value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ProductName $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ServiceDescription
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ProductName $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceDescription
      */
-    public function addToNames(\CommerceFedEx\FedExPHP\Structs\ProductName $item)
+    public function addToNames(\NicholasCreativeMedia\FedExPHP\Structs\ProductName $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ProductName) {
-            throw new \InvalidArgumentException(sprintf('The Names property can only contain items of \CommerceFedEx\FedExPHP\Structs\ProductName, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ProductName) {
+            throw new \InvalidArgumentException(sprintf('The Names property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ProductName, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Names[] = $item;
         return $this;
@@ -164,7 +164,7 @@ class ServiceDescription extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \CommerceFedEx\FedExPHP\Structs\ServiceDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceDescription
      */
     public function setDescription($description = null)
     {
@@ -186,7 +186,7 @@ class ServiceDescription extends AbstractStructBase
     /**
      * Set AstraDescription value
      * @param string $astraDescription
-     * @return \CommerceFedEx\FedExPHP\Structs\ServiceDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceDescription
      */
     public function setAstraDescription($astraDescription = null)
     {
@@ -203,7 +203,7 @@ class ServiceDescription extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ServiceDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ServiceDescription
      */
     public static function __set_state(array $array)
     {

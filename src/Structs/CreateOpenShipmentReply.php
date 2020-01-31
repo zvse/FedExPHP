@@ -24,21 +24,21 @@ class CreateOpenShipmentReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
@@ -53,7 +53,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: This indicates whether the transaction was processed synchronously or asynchronously.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingResultsDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingResultsDetail
      */
     public $AsynchronousProcessingResults;
     /**
@@ -67,7 +67,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
      * The CompletedShipmentDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail
      */
     public $CompletedShipmentDetail;
     /**
@@ -76,7 +76,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
      * - documentation: Empty unless error label behavior is PACKAGE_ERROR_LABELS and one or more errors occured during transaction processing.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocument[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[]
      */
     public $ErrorLabels;
     /**
@@ -91,7 +91,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
      * The AdvisoryDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAdvisoryDetail
      */
     public $AdvisoryDetail;
     /**
@@ -108,18 +108,18 @@ class CreateOpenShipmentReply extends AbstractStructBase
      * @uses CreateOpenShipmentReply::setIndex()
      * @uses CreateOpenShipmentReply::setAdvisoryDetail()
      * @param string $highestSeverity
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
      * @param string $jobId
-     * @param \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingResultsDetail $asynchronousProcessingResults
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingResultsDetail $asynchronousProcessingResults
      * @param string $serviceType
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $errorLabels
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[] $errorLabels
      * @param string $index
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $jobId = null, \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingResultsDetail $asynchronousProcessingResults = null, $serviceType = null, \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null, array $errorLabels = array(), $index = null, \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail = null)
+    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, $jobId = null, \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingResultsDetail $asynchronousProcessingResults = null, $serviceType = null, \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null, array $errorLabels = array(), $index = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail = null)
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -144,24 +144,24 @@ class CreateOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -170,15 +170,15 @@ class CreateOpenShipmentReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $createOpenShipmentReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$createOpenShipmentReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($createOpenShipmentReplyNotificationsItem) ? get_class($createOpenShipmentReplyNotificationsItem) : gettype($createOpenShipmentReplyNotificationsItem)), __LINE__);
+            if (!$createOpenShipmentReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($createOpenShipmentReplyNotificationsItem) ? get_class($createOpenShipmentReplyNotificationsItem) : gettype($createOpenShipmentReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -187,21 +187,21 @@ class CreateOpenShipmentReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
-    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -209,17 +209,17 @@ class CreateOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -227,10 +227,10 @@ class CreateOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
@@ -246,7 +246,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
     /**
      * Set JobId value
      * @param string $jobId
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
     public function setJobId($jobId = null)
     {
@@ -259,7 +259,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Get AsynchronousProcessingResults value
-     * @return \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingResultsDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingResultsDetail|null
      */
     public function getAsynchronousProcessingResults()
     {
@@ -267,10 +267,10 @@ class CreateOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Set AsynchronousProcessingResults value
-     * @param \CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingResultsDetail $asynchronousProcessingResults
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingResultsDetail $asynchronousProcessingResults
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
-    public function setAsynchronousProcessingResults(\CommerceFedEx\FedExPHP\Structs\AsynchronousProcessingResultsDetail $asynchronousProcessingResults = null)
+    public function setAsynchronousProcessingResults(\NicholasCreativeMedia\FedExPHP\Structs\AsynchronousProcessingResultsDetail $asynchronousProcessingResults = null)
     {
         $this->AsynchronousProcessingResults = $asynchronousProcessingResults;
         return $this;
@@ -286,7 +286,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
     /**
      * Set ServiceType value
      * @param string $serviceType
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
     public function setServiceType($serviceType = null)
     {
@@ -299,7 +299,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Get CompletedShipmentDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail|null
      */
     public function getCompletedShipmentDetail()
     {
@@ -307,17 +307,17 @@ class CreateOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Set CompletedShipmentDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
-    public function setCompletedShipmentDetail(\CommerceFedEx\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null)
+    public function setCompletedShipmentDetail(\NicholasCreativeMedia\FedExPHP\Structs\CompletedShipmentDetail $completedShipmentDetail = null)
     {
         $this->CompletedShipmentDetail = $completedShipmentDetail;
         return $this;
     }
     /**
      * Get ErrorLabels value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocument[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[]|null
      */
     public function getErrorLabels()
     {
@@ -326,15 +326,15 @@ class CreateOpenShipmentReply extends AbstractStructBase
     /**
      * Set ErrorLabels value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument[] $errorLabels
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument[] $errorLabels
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
     public function setErrorLabels(array $errorLabels = array())
     {
         foreach ($errorLabels as $createOpenShipmentReplyErrorLabelsItem) {
             // validation for constraint: itemType
-            if (!$createOpenShipmentReplyErrorLabelsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocument) {
-                throw new \InvalidArgumentException(sprintf('The ErrorLabels property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($createOpenShipmentReplyErrorLabelsItem) ? get_class($createOpenShipmentReplyErrorLabelsItem) : gettype($createOpenShipmentReplyErrorLabelsItem)), __LINE__);
+            if (!$createOpenShipmentReplyErrorLabelsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument) {
+                throw new \InvalidArgumentException(sprintf('The ErrorLabels property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($createOpenShipmentReplyErrorLabelsItem) ? get_class($createOpenShipmentReplyErrorLabelsItem) : gettype($createOpenShipmentReplyErrorLabelsItem)), __LINE__);
             }
         }
         $this->ErrorLabels = $errorLabels;
@@ -343,14 +343,14 @@ class CreateOpenShipmentReply extends AbstractStructBase
     /**
      * Add item to ErrorLabels value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
-    public function addToErrorLabels(\CommerceFedEx\FedExPHP\Structs\ShippingDocument $item)
+    public function addToErrorLabels(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocument) {
-            throw new \InvalidArgumentException(sprintf('The ErrorLabels property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument) {
+            throw new \InvalidArgumentException(sprintf('The ErrorLabels property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->ErrorLabels[] = $item;
         return $this;
@@ -366,7 +366,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
     /**
      * Set Index value
      * @param string $index
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
     public function setIndex($index = null)
     {
@@ -379,7 +379,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Get AdvisoryDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAdvisoryDetail|null
      */
     public function getAdvisoryDetail()
     {
@@ -387,10 +387,10 @@ class CreateOpenShipmentReply extends AbstractStructBase
     }
     /**
      * Set AdvisoryDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
-    public function setAdvisoryDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail = null)
+    public function setAdvisoryDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentAdvisoryDetail $advisoryDetail = null)
     {
         $this->AdvisoryDetail = $advisoryDetail;
         return $this;
@@ -401,7 +401,7 @@ class CreateOpenShipmentReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateOpenShipmentReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateOpenShipmentReply
      */
     public static function __set_state(array $array)
     {

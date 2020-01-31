@@ -14,7 +14,7 @@ class DetailedDeliveryManifestDetail extends AbstractStructBase
      * The Format
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat
      */
     public $Format;
     /**
@@ -31,10 +31,10 @@ class DetailedDeliveryManifestDetail extends AbstractStructBase
      * Constructor method for DetailedDeliveryManifestDetail
      * @uses DetailedDeliveryManifestDetail::setFormat()
      * @uses DetailedDeliveryManifestDetail::setClientTimeZoneOffset()
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat $format
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat $format
      * @param string $clientTimeZoneOffset
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat $format = null, $clientTimeZoneOffset = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat $format = null, $clientTimeZoneOffset = null)
     {
         $this
             ->setFormat($format)
@@ -42,7 +42,7 @@ class DetailedDeliveryManifestDetail extends AbstractStructBase
     }
     /**
      * Get Format value
-     * @return \CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat|null
      */
     public function getFormat()
     {
@@ -50,10 +50,10 @@ class DetailedDeliveryManifestDetail extends AbstractStructBase
     }
     /**
      * Set Format value
-     * @param \CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat $format
-     * @return \CommerceFedEx\FedExPHP\Structs\DetailedDeliveryManifestDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat $format
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DetailedDeliveryManifestDetail
      */
-    public function setFormat(\CommerceFedEx\FedExPHP\Structs\CloseDocumentFormat $format = null)
+    public function setFormat(\NicholasCreativeMedia\FedExPHP\Structs\CloseDocumentFormat $format = null)
     {
         $this->Format = $format;
         return $this;
@@ -69,7 +69,7 @@ class DetailedDeliveryManifestDetail extends AbstractStructBase
     /**
      * Set ClientTimeZoneOffset value
      * @param string $clientTimeZoneOffset
-     * @return \CommerceFedEx\FedExPHP\Structs\DetailedDeliveryManifestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DetailedDeliveryManifestDetail
      */
     public function setClientTimeZoneOffset($clientTimeZoneOffset = null)
     {
@@ -86,7 +86,7 @@ class DetailedDeliveryManifestDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DetailedDeliveryManifestDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DetailedDeliveryManifestDetail
      */
     public static function __set_state(array $array)
     {

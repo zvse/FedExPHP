@@ -39,7 +39,7 @@ class HazardousCommodityDescription extends AbstractStructBase
      * The PackingDetails
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackingDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackingDetail
      */
     public $PackingDetails;
     /**
@@ -127,7 +127,7 @@ class HazardousCommodityDescription extends AbstractStructBase
      * @param string $id
      * @param int $sequenceNumber
      * @param string $packingGroup
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackingDetail $packingDetails
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackingDetail $packingDetails
      * @param bool $reportableQuantity
      * @param string $properShippingName
      * @param string $technicalName
@@ -138,7 +138,7 @@ class HazardousCommodityDescription extends AbstractStructBase
      * @param string[] $processingOptions
      * @param string $authorization
      */
-    public function __construct($id = null, $sequenceNumber = null, $packingGroup = null, \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackingDetail $packingDetails = null, $reportableQuantity = null, $properShippingName = null, $technicalName = null, $percentage = null, $hazardClass = null, array $subsidiaryClasses = array(), $labelText = null, array $processingOptions = array(), $authorization = null)
+    public function __construct($id = null, $sequenceNumber = null, $packingGroup = null, \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackingDetail $packingDetails = null, $reportableQuantity = null, $properShippingName = null, $technicalName = null, $percentage = null, $hazardClass = null, array $subsidiaryClasses = array(), $labelText = null, array $processingOptions = array(), $authorization = null)
     {
         $this
             ->setId($id)
@@ -166,7 +166,7 @@ class HazardousCommodityDescription extends AbstractStructBase
     /**
      * Set Id value
      * @param string $id
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setId($id = null)
     {
@@ -188,7 +188,7 @@ class HazardousCommodityDescription extends AbstractStructBase
     /**
      * Set SequenceNumber value
      * @param int $sequenceNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setSequenceNumber($sequenceNumber = null)
     {
@@ -209,24 +209,24 @@ class HazardousCommodityDescription extends AbstractStructBase
     }
     /**
      * Set PackingGroup value
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityPackingGroupType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityPackingGroupType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityPackingGroupType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityPackingGroupType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $packingGroup
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setPackingGroup($packingGroup = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityPackingGroupType::valueIsValid($packingGroup)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packingGroup, implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityPackingGroupType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityPackingGroupType::valueIsValid($packingGroup)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $packingGroup, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityPackingGroupType::getValidValues())), __LINE__);
         }
         $this->PackingGroup = $packingGroup;
         return $this;
     }
     /**
      * Get PackingDetails value
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackingDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackingDetail|null
      */
     public function getPackingDetails()
     {
@@ -234,10 +234,10 @@ class HazardousCommodityDescription extends AbstractStructBase
     }
     /**
      * Set PackingDetails value
-     * @param \CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackingDetail $packingDetails
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackingDetail $packingDetails
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
-    public function setPackingDetails(\CommerceFedEx\FedExPHP\Structs\HazardousCommodityPackingDetail $packingDetails = null)
+    public function setPackingDetails(\NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityPackingDetail $packingDetails = null)
     {
         $this->PackingDetails = $packingDetails;
         return $this;
@@ -253,7 +253,7 @@ class HazardousCommodityDescription extends AbstractStructBase
     /**
      * Set ReportableQuantity value
      * @param bool $reportableQuantity
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setReportableQuantity($reportableQuantity = null)
     {
@@ -271,7 +271,7 @@ class HazardousCommodityDescription extends AbstractStructBase
     /**
      * Set ProperShippingName value
      * @param string $properShippingName
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setProperShippingName($properShippingName = null)
     {
@@ -293,7 +293,7 @@ class HazardousCommodityDescription extends AbstractStructBase
     /**
      * Set TechnicalName value
      * @param string $technicalName
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setTechnicalName($technicalName = null)
     {
@@ -315,7 +315,7 @@ class HazardousCommodityDescription extends AbstractStructBase
     /**
      * Set Percentage value
      * @param float $percentage
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setPercentage($percentage = null)
     {
@@ -333,7 +333,7 @@ class HazardousCommodityDescription extends AbstractStructBase
     /**
      * Set HazardClass value
      * @param string $hazardClass
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setHazardClass($hazardClass = null)
     {
@@ -356,7 +356,7 @@ class HazardousCommodityDescription extends AbstractStructBase
      * Set SubsidiaryClasses value
      * @throws \InvalidArgumentException
      * @param string[] $subsidiaryClasses
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setSubsidiaryClasses(array $subsidiaryClasses = array())
     {
@@ -373,7 +373,7 @@ class HazardousCommodityDescription extends AbstractStructBase
      * Add item to SubsidiaryClasses value
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function addToSubsidiaryClasses($item)
     {
@@ -395,7 +395,7 @@ class HazardousCommodityDescription extends AbstractStructBase
     /**
      * Set LabelText value
      * @param string $labelText
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setLabelText($labelText = null)
     {
@@ -416,39 +416,39 @@ class HazardousCommodityDescription extends AbstractStructBase
     }
     /**
      * Set ProcessingOptions value
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $processingOptions
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setProcessingOptions(array $processingOptions = array())
     {
         $invalidValues = array();
         foreach ($processingOptions as $hazardousCommodityDescriptionProcessingOptionsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::valueIsValid($hazardousCommodityDescriptionProcessingOptionsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::valueIsValid($hazardousCommodityDescriptionProcessingOptionsItem)) {
                 $invalidValues[] = var_export($hazardousCommodityDescriptionProcessingOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->ProcessingOptions = $processingOptions;
         return $this;
     }
     /**
      * Add item to ProcessingOptions value
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function addToProcessingOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\HazardousCommodityDescriptionProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->ProcessingOptions[] = $item;
         return $this;
@@ -464,7 +464,7 @@ class HazardousCommodityDescription extends AbstractStructBase
     /**
      * Set Authorization value
      * @param string $authorization
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public function setAuthorization($authorization = null)
     {
@@ -481,7 +481,7 @@ class HazardousCommodityDescription extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\HazardousCommodityDescription
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\HazardousCommodityDescription
      */
     public static function __set_state(array $array)
     {

@@ -33,7 +33,7 @@ class ShipmentInternationalDistributionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Provides summary totals across all CRNs in a distribution.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
     public $SummaryDetail;
     /**
@@ -41,7 +41,7 @@ class ShipmentInternationalDistributionDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies how charges relating to different aspects of a shipment are to be paid.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\SplitPaymentSpecification
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentSpecification
      */
     public $SplitPaymentSpecification;
     /**
@@ -52,10 +52,10 @@ class ShipmentInternationalDistributionDetail extends AbstractStructBase
      * @uses ShipmentInternationalDistributionDetail::setSplitPaymentSpecification()
      * @param string $clearanceFacilityLocId
      * @param string $clearanceType
-     * @param \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail $summaryDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\SplitPaymentSpecification $splitPaymentSpecification
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail $summaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentSpecification $splitPaymentSpecification
      */
-    public function __construct($clearanceFacilityLocId = null, $clearanceType = null, \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail $summaryDetail = null, \CommerceFedEx\FedExPHP\Structs\SplitPaymentSpecification $splitPaymentSpecification = null)
+    public function __construct($clearanceFacilityLocId = null, $clearanceType = null, \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail $summaryDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentSpecification $splitPaymentSpecification = null)
     {
         $this
             ->setClearanceFacilityLocId($clearanceFacilityLocId)
@@ -74,7 +74,7 @@ class ShipmentInternationalDistributionDetail extends AbstractStructBase
     /**
      * Set ClearanceFacilityLocId value
      * @param string $clearanceFacilityLocId
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail
      */
     public function setClearanceFacilityLocId($clearanceFacilityLocId = null)
     {
@@ -95,24 +95,24 @@ class ShipmentInternationalDistributionDetail extends AbstractStructBase
     }
     /**
      * Set ClearanceType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DistributionClearanceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DistributionClearanceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DistributionClearanceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DistributionClearanceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $clearanceType
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail
      */
     public function setClearanceType($clearanceType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DistributionClearanceType::valueIsValid($clearanceType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $clearanceType, implode(', ', \CommerceFedEx\FedExPHP\Enums\DistributionClearanceType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DistributionClearanceType::valueIsValid($clearanceType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $clearanceType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DistributionClearanceType::getValidValues())), __LINE__);
         }
         $this->ClearanceType = $clearanceType;
         return $this;
     }
     /**
      * Get SummaryDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail|null
      */
     public function getSummaryDetail()
     {
@@ -120,17 +120,17 @@ class ShipmentInternationalDistributionDetail extends AbstractStructBase
     }
     /**
      * Set SummaryDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail $summaryDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail $summaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail
      */
-    public function setSummaryDetail(\CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail $summaryDetail = null)
+    public function setSummaryDetail(\NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail $summaryDetail = null)
     {
         $this->SummaryDetail = $summaryDetail;
         return $this;
     }
     /**
      * Get SplitPaymentSpecification value
-     * @return \CommerceFedEx\FedExPHP\Structs\SplitPaymentSpecification|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentSpecification|null
      */
     public function getSplitPaymentSpecification()
     {
@@ -138,10 +138,10 @@ class ShipmentInternationalDistributionDetail extends AbstractStructBase
     }
     /**
      * Set SplitPaymentSpecification value
-     * @param \CommerceFedEx\FedExPHP\Structs\SplitPaymentSpecification $splitPaymentSpecification
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentSpecification $splitPaymentSpecification
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail
      */
-    public function setSplitPaymentSpecification(\CommerceFedEx\FedExPHP\Structs\SplitPaymentSpecification $splitPaymentSpecification = null)
+    public function setSplitPaymentSpecification(\NicholasCreativeMedia\FedExPHP\Structs\SplitPaymentSpecification $splitPaymentSpecification = null)
     {
         $this->SplitPaymentSpecification = $splitPaymentSpecification;
         return $this;
@@ -152,7 +152,7 @@ class ShipmentInternationalDistributionDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentInternationalDistributionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentInternationalDistributionDetail
      */
     public static function __set_state(array $array)
     {

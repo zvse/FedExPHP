@@ -16,7 +16,7 @@ class AdditionalLabelsDetail extends AbstractStructBase
      * The Type
      * Meta informations extracted from the WSDL
      * - documentation: The type of additional labels to return.
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $Type;
@@ -24,7 +24,7 @@ class AdditionalLabelsDetail extends AbstractStructBase
      * The Count
      * Meta informations extracted from the WSDL
      * - documentation: The number of this type label to return
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var int
      */
     public $Count;
@@ -43,7 +43,7 @@ class AdditionalLabelsDetail extends AbstractStructBase
     }
     /**
      * Get Type value
-     * @return string
+     * @return string|null
      */
     public function getType()
     {
@@ -51,24 +51,24 @@ class AdditionalLabelsDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\AdditionalLabelsType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\AdditionalLabelsType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AdditionalLabelsType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AdditionalLabelsType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\AdditionalLabelsType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\AdditionalLabelsType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\AdditionalLabelsType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AdditionalLabelsType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
     }
     /**
      * Get Count value
-     * @return int
+     * @return int|null
      */
     public function getCount()
     {
@@ -77,7 +77,7 @@ class AdditionalLabelsDetail extends AbstractStructBase
     /**
      * Set Count value
      * @param int $count
-     * @return \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail
      */
     public function setCount($count = null)
     {
@@ -94,7 +94,7 @@ class AdditionalLabelsDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\AdditionalLabelsDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AdditionalLabelsDetail
      */
     public static function __set_state(array $array)
     {

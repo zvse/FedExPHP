@@ -16,7 +16,7 @@ class SmartPostShipmentDetail extends AbstractStructBase
      * The ProcessingOptionsRequested
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested
      */
     public $ProcessingOptionsRequested;
     /**
@@ -33,6 +33,14 @@ class SmartPostShipmentDetail extends AbstractStructBase
      * @var string
      */
     public $AncillaryEndorsement;
+    /**
+     * The SpecialServices
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: unbounded
+     * - minOccurs: 0
+     * @var string[]
+     */
+    public $SpecialServices;
     /**
      * The HubId
      * Meta informations extracted from the WSDL
@@ -52,26 +60,29 @@ class SmartPostShipmentDetail extends AbstractStructBase
      * @uses SmartPostShipmentDetail::setProcessingOptionsRequested()
      * @uses SmartPostShipmentDetail::setIndicia()
      * @uses SmartPostShipmentDetail::setAncillaryEndorsement()
+     * @uses SmartPostShipmentDetail::setSpecialServices()
      * @uses SmartPostShipmentDetail::setHubId()
      * @uses SmartPostShipmentDetail::setCustomerManifestId()
-     * @param \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested
      * @param string $indicia
      * @param string $ancillaryEndorsement
+     * @param string[] $specialServices
      * @param string $hubId
      * @param string $customerManifestId
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested = null, $indicia = null, $ancillaryEndorsement = null, $hubId = null, $customerManifestId = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested = null, $indicia = null, $ancillaryEndorsement = null, array $specialServices = array(), $hubId = null, $customerManifestId = null)
     {
         $this
             ->setProcessingOptionsRequested($processingOptionsRequested)
             ->setIndicia($indicia)
             ->setAncillaryEndorsement($ancillaryEndorsement)
+            ->setSpecialServices($specialServices)
             ->setHubId($hubId)
             ->setCustomerManifestId($customerManifestId);
     }
     /**
      * Get ProcessingOptionsRequested value
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested|null
      */
     public function getProcessingOptionsRequested()
     {
@@ -79,10 +90,10 @@ class SmartPostShipmentDetail extends AbstractStructBase
     }
     /**
      * Set ProcessingOptionsRequested value
-     * @param \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail
      */
-    public function setProcessingOptionsRequested(\CommerceFedEx\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested = null)
+    public function setProcessingOptionsRequested(\NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested = null)
     {
         $this->ProcessingOptionsRequested = $processingOptionsRequested;
         return $this;
@@ -97,17 +108,17 @@ class SmartPostShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Indicia value
-     * @uses \CommerceFedEx\FedExPHP\Enums\SmartPostIndiciaType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\SmartPostIndiciaType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostIndiciaType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostIndiciaType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $indicia
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail
      */
     public function setIndicia($indicia = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\SmartPostIndiciaType::valueIsValid($indicia)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $indicia, implode(', ', \CommerceFedEx\FedExPHP\Enums\SmartPostIndiciaType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\SmartPostIndiciaType::valueIsValid($indicia)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $indicia, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SmartPostIndiciaType::getValidValues())), __LINE__);
         }
         $this->Indicia = $indicia;
         return $this;
@@ -122,19 +133,66 @@ class SmartPostShipmentDetail extends AbstractStructBase
     }
     /**
      * Set AncillaryEndorsement value
-     * @uses \CommerceFedEx\FedExPHP\Enums\SmartPostAncillaryEndorsementType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\SmartPostAncillaryEndorsementType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostAncillaryEndorsementType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostAncillaryEndorsementType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $ancillaryEndorsement
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail
      */
     public function setAncillaryEndorsement($ancillaryEndorsement = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\SmartPostAncillaryEndorsementType::valueIsValid($ancillaryEndorsement)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $ancillaryEndorsement, implode(', ', \CommerceFedEx\FedExPHP\Enums\SmartPostAncillaryEndorsementType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\SmartPostAncillaryEndorsementType::valueIsValid($ancillaryEndorsement)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $ancillaryEndorsement, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SmartPostAncillaryEndorsementType::getValidValues())), __LINE__);
         }
         $this->AncillaryEndorsement = $ancillaryEndorsement;
+        return $this;
+    }
+    /**
+     * Get SpecialServices value
+     * @return string[]|null
+     */
+    public function getSpecialServices()
+    {
+        return $this->SpecialServices;
+    }
+    /**
+     * Set SpecialServices value
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostShipmentSpecialServiceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostShipmentSpecialServiceType::getValidValues()
+     * @throws \InvalidArgumentException
+     * @param string[] $specialServices
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail
+     */
+    public function setSpecialServices(array $specialServices = array())
+    {
+        $invalidValues = array();
+        foreach ($specialServices as $smartPostShipmentDetailSpecialServicesItem) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\SmartPostShipmentSpecialServiceType::valueIsValid($smartPostShipmentDetailSpecialServicesItem)) {
+                $invalidValues[] = var_export($smartPostShipmentDetailSpecialServicesItem);
+            }
+        }
+        if (!empty($invalidValues)) {
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SmartPostShipmentSpecialServiceType::getValidValues())), __LINE__);
+        }
+        $this->SpecialServices = $specialServices;
+        return $this;
+    }
+    /**
+     * Add item to SpecialServices value
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostShipmentSpecialServiceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\SmartPostShipmentSpecialServiceType::getValidValues()
+     * @throws \InvalidArgumentException
+     * @param string $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail
+     */
+    public function addToSpecialServices($item)
+    {
+        // validation for constraint: enumeration
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\SmartPostShipmentSpecialServiceType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\SmartPostShipmentSpecialServiceType::getValidValues())), __LINE__);
+        }
+        $this->SpecialServices[] = $item;
         return $this;
     }
     /**
@@ -148,7 +206,7 @@ class SmartPostShipmentDetail extends AbstractStructBase
     /**
      * Set HubId value
      * @param string $hubId
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail
      */
     public function setHubId($hubId = null)
     {
@@ -170,7 +228,7 @@ class SmartPostShipmentDetail extends AbstractStructBase
     /**
      * Set CustomerManifestId value
      * @param string $customerManifestId
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail
      */
     public function setCustomerManifestId($customerManifestId = null)
     {
@@ -187,7 +245,7 @@ class SmartPostShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\SmartPostShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\SmartPostShipmentDetail
      */
     public static function __set_state(array $array)
     {

@@ -23,12 +23,12 @@ class Service extends AbstractSoapClientBase
         if ($mode === true) $mode = 'live';
         $default_options = [
            \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => dirname(__FILE__).DIRECTORY_SEPARATOR.'wsdl-'.$mode.DIRECTORY_SEPARATOR.'UploadDocumentService_v11.wsdl',
-           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \CommerceFedEx\FedExPHP\UploadDocumentClassMap::get(),
+           \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_CLASSMAP => \NicholasCreativeMedia\FedExPHP\UploadDocumentClassMap::get(),
         ];
         $options = array_merge($default_options,$wsdlOptions);
         parent::__construct($options,$resetSoapClient,$mode);
 
-        $this->version = new \CommerceFedEx\FedExPHP\Structs\VersionId('cdus',11,0,0);
+        $this->version = new \NicholasCreativeMedia\FedExPHP\Structs\VersionId('cdus',11,0,0);
     }
     /**
      * Method to call the operation originally named uploadDocuments
@@ -36,10 +36,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadDocumentsRequest $uploadDocumentsRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentsReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentsRequest $uploadDocumentsRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentsReply|bool
      */
-    public function uploadDocuments(\CommerceFedEx\FedExPHP\Structs\UploadDocumentsRequest $uploadDocumentsRequest)
+    public function uploadDocuments(\NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentsRequest $uploadDocumentsRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->uploadDocuments($uploadDocumentsRequest));
@@ -55,10 +55,10 @@ class Service extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \CommerceFedEx\FedExPHP\Structs\UploadImagesRequest $uploadImagesRequest
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadImagesReply|bool
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\UploadImagesRequest $uploadImagesRequest
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadImagesReply|bool
      */
-    public function uploadImages(\CommerceFedEx\FedExPHP\Structs\UploadImagesRequest $uploadImagesRequest)
+    public function uploadImages(\NicholasCreativeMedia\FedExPHP\Structs\UploadImagesRequest $uploadImagesRequest)
     {
         try {
             $this->setResult(self::getSoapClient()->uploadImages($uploadImagesRequest));
@@ -71,7 +71,7 @@ class Service extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \CommerceFedEx\FedExPHP\Structs\UploadDocumentsReply|\CommerceFedEx\FedExPHP\Structs\UploadImagesReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\UploadDocumentsReply|\NicholasCreativeMedia\FedExPHP\Structs\UploadImagesReply
      */
     public function getResult()
     {

@@ -16,7 +16,7 @@ class VersionId extends AbstractStructBase
      * The ServiceId
      * Meta informations extracted from the WSDL
      * - documentation: Identifies a system or sub-system which performs an operation.
-     * - fixed: cdus
+     * - fixed: vacs
      * - minOccurs: 1
      * @var string
      */
@@ -25,7 +25,7 @@ class VersionId extends AbstractStructBase
      * The Major
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the service business level.
-     * - fixed: 11
+     * - fixed: 13
      * - minOccurs: 1
      * @var int
      */
@@ -78,7 +78,7 @@ class VersionId extends AbstractStructBase
     /**
      * Set ServiceId value
      * @param string $serviceId
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function setServiceId($serviceId = null)
     {
@@ -100,7 +100,7 @@ class VersionId extends AbstractStructBase
     /**
      * Set Major value
      * @param int $major
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function setMajor($major = null)
     {
@@ -122,7 +122,7 @@ class VersionId extends AbstractStructBase
     /**
      * Set Intermediate value
      * @param int $intermediate
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function setIntermediate($intermediate = null)
     {
@@ -144,7 +144,7 @@ class VersionId extends AbstractStructBase
     /**
      * Set Minor value
      * @param int $minor
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function setMinor($minor = null)
     {
@@ -161,7 +161,7 @@ class VersionId extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public static function __set_state(array $array)
     {

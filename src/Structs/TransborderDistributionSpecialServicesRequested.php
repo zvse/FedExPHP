@@ -26,7 +26,7 @@ class TransborderDistributionSpecialServicesRequested extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies details for origin-country LTL services performed by FedEx.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransborderDistributionLtlDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionLtlDetail
      */
     public $TransborderDistributionLtlDetail;
     /**
@@ -34,9 +34,9 @@ class TransborderDistributionSpecialServicesRequested extends AbstractStructBase
      * @uses TransborderDistributionSpecialServicesRequested::setSpecialServiceTypes()
      * @uses TransborderDistributionSpecialServicesRequested::setTransborderDistributionLtlDetail()
      * @param string[] $specialServiceTypes
-     * @param \CommerceFedEx\FedExPHP\Structs\TransborderDistributionLtlDetail $transborderDistributionLtlDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionLtlDetail $transborderDistributionLtlDetail
      */
-    public function __construct(array $specialServiceTypes = array(), \CommerceFedEx\FedExPHP\Structs\TransborderDistributionLtlDetail $transborderDistributionLtlDetail = null)
+    public function __construct(array $specialServiceTypes = array(), \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionLtlDetail $transborderDistributionLtlDetail = null)
     {
         $this
             ->setSpecialServiceTypes($specialServiceTypes)
@@ -52,46 +52,46 @@ class TransborderDistributionSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set SpecialServiceTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransborderDistributionSpecialServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransborderDistributionSpecialServiceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionSpecialServiceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $specialServiceTypes
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
      */
     public function setSpecialServiceTypes(array $specialServiceTypes = array())
     {
         $invalidValues = array();
         foreach ($specialServiceTypes as $transborderDistributionSpecialServicesRequestedSpecialServiceTypesItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\TransborderDistributionSpecialServiceType::valueIsValid($transborderDistributionSpecialServicesRequestedSpecialServiceTypesItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionSpecialServiceType::valueIsValid($transborderDistributionSpecialServicesRequestedSpecialServiceTypesItem)) {
                 $invalidValues[] = var_export($transborderDistributionSpecialServicesRequestedSpecialServiceTypesItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\TransborderDistributionSpecialServiceType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->SpecialServiceTypes = $specialServiceTypes;
         return $this;
     }
     /**
      * Add item to SpecialServiceTypes value
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransborderDistributionSpecialServiceType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\TransborderDistributionSpecialServiceType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionSpecialServiceType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionSpecialServiceType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
      */
     public function addToSpecialServiceTypes($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\TransborderDistributionSpecialServiceType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\TransborderDistributionSpecialServiceType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionSpecialServiceType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\TransborderDistributionSpecialServiceType::getValidValues())), __LINE__);
         }
         $this->SpecialServiceTypes[] = $item;
         return $this;
     }
     /**
      * Get TransborderDistributionLtlDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionLtlDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionLtlDetail|null
      */
     public function getTransborderDistributionLtlDetail()
     {
@@ -99,10 +99,10 @@ class TransborderDistributionSpecialServicesRequested extends AbstractStructBase
     }
     /**
      * Set TransborderDistributionLtlDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransborderDistributionLtlDetail $transborderDistributionLtlDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionLtlDetail $transborderDistributionLtlDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
      */
-    public function setTransborderDistributionLtlDetail(\CommerceFedEx\FedExPHP\Structs\TransborderDistributionLtlDetail $transborderDistributionLtlDetail = null)
+    public function setTransborderDistributionLtlDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionLtlDetail $transborderDistributionLtlDetail = null)
     {
         $this->TransborderDistributionLtlDetail = $transborderDistributionLtlDetail;
         return $this;
@@ -113,7 +113,7 @@ class TransborderDistributionSpecialServicesRequested extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransborderDistributionSpecialServicesRequested
      */
     public static function __set_state(array $array)
     {

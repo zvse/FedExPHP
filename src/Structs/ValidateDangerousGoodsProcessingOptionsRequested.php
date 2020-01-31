@@ -38,39 +38,39 @@ class ValidateDangerousGoodsProcessingOptionsRequested extends AbstractStructBas
     }
     /**
      * Set Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string[] $options
-     * @return \CommerceFedEx\FedExPHP\Structs\ValidateDangerousGoodsProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidateDangerousGoodsProcessingOptionsRequested
      */
     public function setOptions(array $options = array())
     {
         $invalidValues = array();
         foreach ($options as $validateDangerousGoodsProcessingOptionsRequestedOptionsItem) {
-            if (!\CommerceFedEx\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::valueIsValid($validateDangerousGoodsProcessingOptionsRequestedOptionsItem)) {
+            if (!\NicholasCreativeMedia\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::valueIsValid($validateDangerousGoodsProcessingOptionsRequestedOptionsItem)) {
                 $invalidValues[] = var_export($validateDangerousGoodsProcessingOptionsRequestedOptionsItem);
             }
         }
         if (!empty($invalidValues)) {
-            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \CommerceFedEx\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::getValidValues())), __LINE__);
+            throw new \InvalidArgumentException(sprintf('Value(s) "%s" is/are invalid, please use one of: %s', implode(', ', $invalidValues), implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options = $options;
         return $this;
     }
     /**
      * Add item to Options value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ValidateDangerousGoodsProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidateDangerousGoodsProcessingOptionsRequested
      */
     public function addToOptions($item)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::valueIsValid($item)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \CommerceFedEx\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::valueIsValid($item)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $item, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ValidateDangerousGoodsProcessingOptionType::getValidValues())), __LINE__);
         }
         $this->Options[] = $item;
         return $this;
@@ -81,7 +81,7 @@ class ValidateDangerousGoodsProcessingOptionsRequested extends AbstractStructBas
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ValidateDangerousGoodsProcessingOptionsRequested
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ValidateDangerousGoodsProcessingOptionsRequested
      */
     public static function __set_state(array $array)
     {

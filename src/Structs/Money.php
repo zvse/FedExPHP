@@ -13,14 +13,14 @@ class Money extends AbstractStructBase
     /**
      * The Currency
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $Currency;
     /**
      * The Amount
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var float
      */
     public $Amount;
@@ -39,7 +39,7 @@ class Money extends AbstractStructBase
     }
     /**
      * Get Currency value
-     * @return string
+     * @return string|null
      */
     public function getCurrency()
     {
@@ -48,7 +48,7 @@ class Money extends AbstractStructBase
     /**
      * Set Currency value
      * @param string $currency
-     * @return \CommerceFedEx\FedExPHP\Structs\Money
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public function setCurrency($currency = null)
     {
@@ -61,7 +61,7 @@ class Money extends AbstractStructBase
     }
     /**
      * Get Amount value
-     * @return float
+     * @return float|null
      */
     public function getAmount()
     {
@@ -70,7 +70,7 @@ class Money extends AbstractStructBase
     /**
      * Set Amount value
      * @param float $amount
-     * @return \CommerceFedEx\FedExPHP\Structs\Money
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public function setAmount($amount = null)
     {
@@ -83,7 +83,7 @@ class Money extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Money
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public static function __set_state(array $array)
     {

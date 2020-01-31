@@ -47,17 +47,17 @@ class DeclarationCurrency extends AbstractStructBase
     }
     /**
      * Set Value value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DeclarationValueType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DeclarationValueType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DeclarationValueType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DeclarationValueType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $value
-     * @return \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency
      */
     public function setValue($value = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DeclarationValueType::valueIsValid($value)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $value, implode(', ', \CommerceFedEx\FedExPHP\Enums\DeclarationValueType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DeclarationValueType::valueIsValid($value)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $value, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DeclarationValueType::getValidValues())), __LINE__);
         }
         $this->Value = $value;
         return $this;
@@ -73,7 +73,7 @@ class DeclarationCurrency extends AbstractStructBase
     /**
      * Set Currency value
      * @param string $currency
-     * @return \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency
      */
     public function setCurrency($currency = null)
     {
@@ -90,7 +90,7 @@ class DeclarationCurrency extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DeclarationCurrency
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DeclarationCurrency
      */
     public static function __set_state(array $array)
     {

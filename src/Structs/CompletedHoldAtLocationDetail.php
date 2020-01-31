@@ -15,7 +15,7 @@ class CompletedHoldAtLocationDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Identifies the branded location name, the hold at location phone number and the address of the location.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ContactAndAddress
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress
      */
     public $HoldingLocation;
     /**
@@ -38,11 +38,11 @@ class CompletedHoldAtLocationDetail extends AbstractStructBase
      * @uses CompletedHoldAtLocationDetail::setHoldingLocation()
      * @uses CompletedHoldAtLocationDetail::setHoldingLocationType()
      * @uses CompletedHoldAtLocationDetail::setHoldingLocationTypeForDisplay()
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocation
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $holdingLocation
      * @param string $holdingLocationType
      * @param string $holdingLocationTypeForDisplay
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocation = null, $holdingLocationType = null, $holdingLocationTypeForDisplay = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $holdingLocation = null, $holdingLocationType = null, $holdingLocationTypeForDisplay = null)
     {
         $this
             ->setHoldingLocation($holdingLocation)
@@ -51,7 +51,7 @@ class CompletedHoldAtLocationDetail extends AbstractStructBase
     }
     /**
      * Get HoldingLocation value
-     * @return \CommerceFedEx\FedExPHP\Structs\ContactAndAddress|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress|null
      */
     public function getHoldingLocation()
     {
@@ -59,10 +59,10 @@ class CompletedHoldAtLocationDetail extends AbstractStructBase
     }
     /**
      * Set HoldingLocation value
-     * @param \CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocation
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHoldAtLocationDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $holdingLocation
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHoldAtLocationDetail
      */
-    public function setHoldingLocation(\CommerceFedEx\FedExPHP\Structs\ContactAndAddress $holdingLocation = null)
+    public function setHoldingLocation(\NicholasCreativeMedia\FedExPHP\Structs\ContactAndAddress $holdingLocation = null)
     {
         $this->HoldingLocation = $holdingLocation;
         return $this;
@@ -77,17 +77,17 @@ class CompletedHoldAtLocationDetail extends AbstractStructBase
     }
     /**
      * Set HoldingLocationType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\FedExLocationType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $holdingLocationType
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHoldAtLocationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHoldAtLocationDetail
      */
     public function setHoldingLocationType($holdingLocationType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\FedExLocationType::valueIsValid($holdingLocationType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $holdingLocationType, implode(', ', \CommerceFedEx\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::valueIsValid($holdingLocationType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $holdingLocationType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\FedExLocationType::getValidValues())), __LINE__);
         }
         $this->HoldingLocationType = $holdingLocationType;
         return $this;
@@ -103,7 +103,7 @@ class CompletedHoldAtLocationDetail extends AbstractStructBase
     /**
      * Set HoldingLocationTypeForDisplay value
      * @param string $holdingLocationTypeForDisplay
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHoldAtLocationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHoldAtLocationDetail
      */
     public function setHoldingLocationTypeForDisplay($holdingLocationTypeForDisplay = null)
     {
@@ -120,7 +120,7 @@ class CompletedHoldAtLocationDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CompletedHoldAtLocationDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CompletedHoldAtLocationDetail
      */
     public static function __set_state(array $array)
     {

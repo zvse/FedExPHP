@@ -13,28 +13,28 @@ class Dimensions extends AbstractStructBase
     /**
      * The Length
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var int
      */
     public $Length;
     /**
      * The Width
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var int
      */
     public $Width;
     /**
      * The Height
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var int
      */
     public $Height;
     /**
      * The Units
      * Meta informations extracted from the WSDL
-     * - minOccurs: 1
+     * - minOccurs: 0
      * @var string
      */
     public $Units;
@@ -59,7 +59,7 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Get Length value
-     * @return int
+     * @return int|null
      */
     public function getLength()
     {
@@ -68,7 +68,7 @@ class Dimensions extends AbstractStructBase
     /**
      * Set Length value
      * @param int $length
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public function setLength($length = null)
     {
@@ -81,7 +81,7 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Get Width value
-     * @return int
+     * @return int|null
      */
     public function getWidth()
     {
@@ -90,7 +90,7 @@ class Dimensions extends AbstractStructBase
     /**
      * Set Width value
      * @param int $width
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public function setWidth($width = null)
     {
@@ -103,7 +103,7 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Get Height value
-     * @return int
+     * @return int|null
      */
     public function getHeight()
     {
@@ -112,7 +112,7 @@ class Dimensions extends AbstractStructBase
     /**
      * Set Height value
      * @param int $height
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public function setHeight($height = null)
     {
@@ -125,7 +125,7 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Get Units value
-     * @return string
+     * @return string|null
      */
     public function getUnits()
     {
@@ -133,17 +133,17 @@ class Dimensions extends AbstractStructBase
     }
     /**
      * Set Units value
-     * @uses \CommerceFedEx\FedExPHP\Enums\LinearUnits::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\LinearUnits::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $units
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public function setUnits($units = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\LinearUnits::valueIsValid($units)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \CommerceFedEx\FedExPHP\Enums\LinearUnits::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::valueIsValid($units)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $units, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\LinearUnits::getValidValues())), __LINE__);
         }
         $this->Units = $units;
         return $this;
@@ -154,7 +154,7 @@ class Dimensions extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\Dimensions
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Dimensions
      */
     public static function __set_state(array $array)
     {

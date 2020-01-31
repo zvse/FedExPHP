@@ -48,7 +48,7 @@ class DangerousGoodsRadionuclideActivity extends AbstractStructBase
     /**
      * Set Value value
      * @param float $value
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideActivity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideActivity
      */
     public function setValue($value = null)
     {
@@ -65,17 +65,17 @@ class DangerousGoodsRadionuclideActivity extends AbstractStructBase
     }
     /**
      * Set UnitOfMeasure value
-     * @uses \CommerceFedEx\FedExPHP\Enums\RadioactivityUnitOfMeasure::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\RadioactivityUnitOfMeasure::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RadioactivityUnitOfMeasure::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\RadioactivityUnitOfMeasure::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $unitOfMeasure
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideActivity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideActivity
      */
     public function setUnitOfMeasure($unitOfMeasure = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\RadioactivityUnitOfMeasure::valueIsValid($unitOfMeasure)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $unitOfMeasure, implode(', ', \CommerceFedEx\FedExPHP\Enums\RadioactivityUnitOfMeasure::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\RadioactivityUnitOfMeasure::valueIsValid($unitOfMeasure)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $unitOfMeasure, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\RadioactivityUnitOfMeasure::getValidValues())), __LINE__);
         }
         $this->UnitOfMeasure = $unitOfMeasure;
         return $this;
@@ -86,7 +86,7 @@ class DangerousGoodsRadionuclideActivity extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\DangerousGoodsRadionuclideActivity
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\DangerousGoodsRadionuclideActivity
      */
     public static function __set_state(array $array)
     {

@@ -24,28 +24,28 @@ class CreateConsolidationReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public $Notifications;
     /**
      * The Version
      * Meta informations extracted from the WSDL
      * - minOccurs: 1
-     * @var \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public $Version;
     /**
      * The TransactionDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TransactionDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail
      */
     public $TransactionDetail;
     /**
      * The ConsolidationKey
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ConsolidationKey
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey
      */
     public $ConsolidationKey;
     /**
@@ -54,7 +54,7 @@ class CreateConsolidationReply extends AbstractStructBase
      * - documentation: Initially contains only Master Air Way Bill tracking ID.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]
      */
     public $TrackingIds;
     /**
@@ -62,7 +62,7 @@ class CreateConsolidationReply extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation[]
      */
     public $EffectiveDistributionLocations;
     /**
@@ -75,14 +75,14 @@ class CreateConsolidationReply extends AbstractStructBase
      * @uses CreateConsolidationReply::setTrackingIds()
      * @uses CreateConsolidationReply::setEffectiveDistributionLocations()
      * @param string $highestSeverity
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[] $effectiveDistributionLocations
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation[] $effectiveDistributionLocations
      */
-    public function __construct($highestSeverity = null, array $notifications = array(), \CommerceFedEx\FedExPHP\Structs\VersionId $version = null, \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey = null, array $trackingIds = array(), array $effectiveDistributionLocations = array())
+    public function __construct($highestSeverity = null, array $notifications = array(), \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null, \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey = null, array $trackingIds = array(), array $effectiveDistributionLocations = array())
     {
         $this
             ->setHighestSeverity($highestSeverity)
@@ -103,24 +103,24 @@ class CreateConsolidationReply extends AbstractStructBase
     }
     /**
      * Set HighestSeverity value
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $highestSeverity
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
     public function setHighestSeverity($highestSeverity = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \CommerceFedEx\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::valueIsValid($highestSeverity)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $highestSeverity, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\NotificationSeverityType::getValidValues())), __LINE__);
         }
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
     /**
      * Get Notifications value
-     * @return \CommerceFedEx\FedExPHP\Structs\Notification[]
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Notification[]
      */
     public function getNotifications()
     {
@@ -129,15 +129,15 @@ class CreateConsolidationReply extends AbstractStructBase
     /**
      * Set Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification[] $notifications
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification[] $notifications
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
     public function setNotifications(array $notifications = array())
     {
         foreach ($notifications as $createConsolidationReplyNotificationsItem) {
             // validation for constraint: itemType
-            if (!$createConsolidationReplyNotificationsItem instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($createConsolidationReplyNotificationsItem) ? get_class($createConsolidationReplyNotificationsItem) : gettype($createConsolidationReplyNotificationsItem)), __LINE__);
+            if (!$createConsolidationReplyNotificationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+                throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($createConsolidationReplyNotificationsItem) ? get_class($createConsolidationReplyNotificationsItem) : gettype($createConsolidationReplyNotificationsItem)), __LINE__);
             }
         }
         $this->Notifications = $notifications;
@@ -146,21 +146,21 @@ class CreateConsolidationReply extends AbstractStructBase
     /**
      * Add item to Notifications value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\Notification $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Notification $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
-    public function addToNotifications(\CommerceFedEx\FedExPHP\Structs\Notification $item)
+    public function addToNotifications(\NicholasCreativeMedia\FedExPHP\Structs\Notification $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\Notification) {
-            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \CommerceFedEx\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\Notification) {
+            throw new \InvalidArgumentException(sprintf('The Notifications property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\Notification, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Notifications[] = $item;
         return $this;
     }
     /**
      * Get Version value
-     * @return \CommerceFedEx\FedExPHP\Structs\VersionId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\VersionId
      */
     public function getVersion()
     {
@@ -168,17 +168,17 @@ class CreateConsolidationReply extends AbstractStructBase
     }
     /**
      * Set Version value
-     * @param \CommerceFedEx\FedExPHP\Structs\VersionId $version
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\VersionId $version
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
-    public function setVersion(\CommerceFedEx\FedExPHP\Structs\VersionId $version = null)
+    public function setVersion(\NicholasCreativeMedia\FedExPHP\Structs\VersionId $version = null)
     {
         $this->Version = $version;
         return $this;
     }
     /**
      * Get TransactionDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\TransactionDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail|null
      */
     public function getTransactionDetail()
     {
@@ -186,17 +186,17 @@ class CreateConsolidationReply extends AbstractStructBase
     }
     /**
      * Set TransactionDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
-    public function setTransactionDetail(\CommerceFedEx\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
+    public function setTransactionDetail(\NicholasCreativeMedia\FedExPHP\Structs\TransactionDetail $transactionDetail = null)
     {
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
     /**
      * Get ConsolidationKey value
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationKey|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey|null
      */
     public function getConsolidationKey()
     {
@@ -204,17 +204,17 @@ class CreateConsolidationReply extends AbstractStructBase
     }
     /**
      * Set ConsolidationKey value
-     * @param \CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
-    public function setConsolidationKey(\CommerceFedEx\FedExPHP\Structs\ConsolidationKey $consolidationKey = null)
+    public function setConsolidationKey(\NicholasCreativeMedia\FedExPHP\Structs\ConsolidationKey $consolidationKey = null)
     {
         $this->ConsolidationKey = $consolidationKey;
         return $this;
     }
     /**
      * Get TrackingIds value
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[]|null
      */
     public function getTrackingIds()
     {
@@ -223,15 +223,15 @@ class CreateConsolidationReply extends AbstractStructBase
     /**
      * Set TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId[] $trackingIds
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId[] $trackingIds
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
     public function setTrackingIds(array $trackingIds = array())
     {
         foreach ($trackingIds as $createConsolidationReplyTrackingIdsItem) {
             // validation for constraint: itemType
-            if (!$createConsolidationReplyTrackingIdsItem instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
-                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($createConsolidationReplyTrackingIdsItem) ? get_class($createConsolidationReplyTrackingIdsItem) : gettype($createConsolidationReplyTrackingIdsItem)), __LINE__);
+            if (!$createConsolidationReplyTrackingIdsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
+                throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($createConsolidationReplyTrackingIdsItem) ? get_class($createConsolidationReplyTrackingIdsItem) : gettype($createConsolidationReplyTrackingIdsItem)), __LINE__);
             }
         }
         $this->TrackingIds = $trackingIds;
@@ -240,21 +240,21 @@ class CreateConsolidationReply extends AbstractStructBase
     /**
      * Add item to TrackingIds value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
-    public function addToTrackingIds(\CommerceFedEx\FedExPHP\Structs\TrackingId $item)
+    public function addToTrackingIds(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\TrackingId) {
-            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \CommerceFedEx\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\TrackingId) {
+            throw new \InvalidArgumentException(sprintf('The TrackingIds property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\TrackingId, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->TrackingIds[] = $item;
         return $this;
     }
     /**
      * Get EffectiveDistributionLocations value
-     * @return \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation[]|null
      */
     public function getEffectiveDistributionLocations()
     {
@@ -263,15 +263,15 @@ class CreateConsolidationReply extends AbstractStructBase
     /**
      * Set EffectiveDistributionLocations value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation[] $effectiveDistributionLocations
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation[] $effectiveDistributionLocations
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
     public function setEffectiveDistributionLocations(array $effectiveDistributionLocations = array())
     {
         foreach ($effectiveDistributionLocations as $createConsolidationReplyEffectiveDistributionLocationsItem) {
             // validation for constraint: itemType
-            if (!$createConsolidationReplyEffectiveDistributionLocationsItem instanceof \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation) {
-                throw new \InvalidArgumentException(sprintf('The EffectiveDistributionLocations property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($createConsolidationReplyEffectiveDistributionLocationsItem) ? get_class($createConsolidationReplyEffectiveDistributionLocationsItem) : gettype($createConsolidationReplyEffectiveDistributionLocationsItem)), __LINE__);
+            if (!$createConsolidationReplyEffectiveDistributionLocationsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation) {
+                throw new \InvalidArgumentException(sprintf('The EffectiveDistributionLocations property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($createConsolidationReplyEffectiveDistributionLocationsItem) ? get_class($createConsolidationReplyEffectiveDistributionLocationsItem) : gettype($createConsolidationReplyEffectiveDistributionLocationsItem)), __LINE__);
             }
         }
         $this->EffectiveDistributionLocations = $effectiveDistributionLocations;
@@ -280,14 +280,14 @@ class CreateConsolidationReply extends AbstractStructBase
     /**
      * Add item to EffectiveDistributionLocations value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation $item
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
-    public function addToEffectiveDistributionLocations(\CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation $item)
+    public function addToEffectiveDistributionLocations(\NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation) {
-            throw new \InvalidArgumentException(sprintf('The EffectiveDistributionLocations property can only contain items of \CommerceFedEx\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation) {
+            throw new \InvalidArgumentException(sprintf('The EffectiveDistributionLocations property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\RequestedDistributionLocation, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->EffectiveDistributionLocations[] = $item;
         return $this;
@@ -298,7 +298,7 @@ class CreateConsolidationReply extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\CreateConsolidationReply
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CreateConsolidationReply
      */
     public static function __set_state(array $array)
     {

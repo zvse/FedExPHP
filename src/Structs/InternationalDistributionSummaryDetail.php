@@ -16,7 +16,7 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
      * The TotalWeight
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Weight
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Weight
      */
     public $TotalWeight;
     /**
@@ -37,56 +37,56 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
      * The TotalCustomsValue
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalCustomsValue;
     /**
      * The TotalInsuredValue
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalInsuredValue;
     /**
      * The TotalFreightCharges
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalFreightCharges;
     /**
      * The TotalInsuranceCharges
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalInsuranceCharges;
     /**
      * The TotalTaxesOrMiscellaneousCharges
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalTaxesOrMiscellaneousCharges;
     /**
      * The TotalHandlingCosts
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalHandlingCosts;
     /**
      * The TotalPackingCosts
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Money
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Money
      */
     public $TotalPackingCosts;
     /**
      * The DryIceDetail
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail
      */
     public $DryIceDetail;
     /**
@@ -110,20 +110,20 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
      * @uses InternationalDistributionSummaryDetail::setTotalPackingCosts()
      * @uses InternationalDistributionSummaryDetail::setDryIceDetail()
      * @uses InternationalDistributionSummaryDetail::setDangerousGoodsAccessibility()
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight
      * @param int $totalPackageCount
      * @param int $totalUniqueAddressCount
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalCustomsValue
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalFreightCharges
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalInsuranceCharges
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalTaxesOrMiscellaneousCharges
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalHandlingCosts
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalPackingCosts
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalCustomsValue
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalFreightCharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuranceCharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalTaxesOrMiscellaneousCharges
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalHandlingCosts
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalPackingCosts
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail
      * @param string $dangerousGoodsAccessibility
      */
-    public function __construct(\CommerceFedEx\FedExPHP\Structs\Weight $totalWeight = null, $totalPackageCount = null, $totalUniqueAddressCount = null, \CommerceFedEx\FedExPHP\Structs\Money $totalCustomsValue = null, \CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue = null, \CommerceFedEx\FedExPHP\Structs\Money $totalFreightCharges = null, \CommerceFedEx\FedExPHP\Structs\Money $totalInsuranceCharges = null, \CommerceFedEx\FedExPHP\Structs\Money $totalTaxesOrMiscellaneousCharges = null, \CommerceFedEx\FedExPHP\Structs\Money $totalHandlingCosts = null, \CommerceFedEx\FedExPHP\Structs\Money $totalPackingCosts = null, \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail = null, $dangerousGoodsAccessibility = null)
+    public function __construct(\NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight = null, $totalPackageCount = null, $totalUniqueAddressCount = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalCustomsValue = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalFreightCharges = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuranceCharges = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalTaxesOrMiscellaneousCharges = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalHandlingCosts = null, \NicholasCreativeMedia\FedExPHP\Structs\Money $totalPackingCosts = null, \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail = null, $dangerousGoodsAccessibility = null)
     {
         $this
             ->setTotalWeight($totalWeight)
@@ -141,7 +141,7 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Get TotalWeight value
-     * @return \CommerceFedEx\FedExPHP\Structs\Weight|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Weight|null
      */
     public function getTotalWeight()
     {
@@ -149,10 +149,10 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set TotalWeight value
-     * @param \CommerceFedEx\FedExPHP\Structs\Weight $totalWeight
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
-    public function setTotalWeight(\CommerceFedEx\FedExPHP\Structs\Weight $totalWeight = null)
+    public function setTotalWeight(\NicholasCreativeMedia\FedExPHP\Structs\Weight $totalWeight = null)
     {
         $this->TotalWeight = $totalWeight;
         return $this;
@@ -168,7 +168,7 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     /**
      * Set TotalPackageCount value
      * @param int $totalPackageCount
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
     public function setTotalPackageCount($totalPackageCount = null)
     {
@@ -190,7 +190,7 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     /**
      * Set TotalUniqueAddressCount value
      * @param int $totalUniqueAddressCount
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
     public function setTotalUniqueAddressCount($totalUniqueAddressCount = null)
     {
@@ -203,7 +203,7 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Get TotalCustomsValue value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalCustomsValue()
     {
@@ -211,17 +211,17 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set TotalCustomsValue value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalCustomsValue
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalCustomsValue
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
-    public function setTotalCustomsValue(\CommerceFedEx\FedExPHP\Structs\Money $totalCustomsValue = null)
+    public function setTotalCustomsValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalCustomsValue = null)
     {
         $this->TotalCustomsValue = $totalCustomsValue;
         return $this;
     }
     /**
      * Get TotalInsuredValue value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalInsuredValue()
     {
@@ -229,17 +229,17 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set TotalInsuredValue value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
-    public function setTotalInsuredValue(\CommerceFedEx\FedExPHP\Structs\Money $totalInsuredValue = null)
+    public function setTotalInsuredValue(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuredValue = null)
     {
         $this->TotalInsuredValue = $totalInsuredValue;
         return $this;
     }
     /**
      * Get TotalFreightCharges value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalFreightCharges()
     {
@@ -247,17 +247,17 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set TotalFreightCharges value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalFreightCharges
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalFreightCharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
-    public function setTotalFreightCharges(\CommerceFedEx\FedExPHP\Structs\Money $totalFreightCharges = null)
+    public function setTotalFreightCharges(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalFreightCharges = null)
     {
         $this->TotalFreightCharges = $totalFreightCharges;
         return $this;
     }
     /**
      * Get TotalInsuranceCharges value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalInsuranceCharges()
     {
@@ -265,17 +265,17 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set TotalInsuranceCharges value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalInsuranceCharges
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuranceCharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
-    public function setTotalInsuranceCharges(\CommerceFedEx\FedExPHP\Structs\Money $totalInsuranceCharges = null)
+    public function setTotalInsuranceCharges(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalInsuranceCharges = null)
     {
         $this->TotalInsuranceCharges = $totalInsuranceCharges;
         return $this;
     }
     /**
      * Get TotalTaxesOrMiscellaneousCharges value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalTaxesOrMiscellaneousCharges()
     {
@@ -283,17 +283,17 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set TotalTaxesOrMiscellaneousCharges value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalTaxesOrMiscellaneousCharges
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalTaxesOrMiscellaneousCharges
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
-    public function setTotalTaxesOrMiscellaneousCharges(\CommerceFedEx\FedExPHP\Structs\Money $totalTaxesOrMiscellaneousCharges = null)
+    public function setTotalTaxesOrMiscellaneousCharges(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalTaxesOrMiscellaneousCharges = null)
     {
         $this->TotalTaxesOrMiscellaneousCharges = $totalTaxesOrMiscellaneousCharges;
         return $this;
     }
     /**
      * Get TotalHandlingCosts value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalHandlingCosts()
     {
@@ -301,17 +301,17 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set TotalHandlingCosts value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalHandlingCosts
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalHandlingCosts
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
-    public function setTotalHandlingCosts(\CommerceFedEx\FedExPHP\Structs\Money $totalHandlingCosts = null)
+    public function setTotalHandlingCosts(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalHandlingCosts = null)
     {
         $this->TotalHandlingCosts = $totalHandlingCosts;
         return $this;
     }
     /**
      * Get TotalPackingCosts value
-     * @return \CommerceFedEx\FedExPHP\Structs\Money|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Money|null
      */
     public function getTotalPackingCosts()
     {
@@ -319,17 +319,17 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set TotalPackingCosts value
-     * @param \CommerceFedEx\FedExPHP\Structs\Money $totalPackingCosts
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Money $totalPackingCosts
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
-    public function setTotalPackingCosts(\CommerceFedEx\FedExPHP\Structs\Money $totalPackingCosts = null)
+    public function setTotalPackingCosts(\NicholasCreativeMedia\FedExPHP\Structs\Money $totalPackingCosts = null)
     {
         $this->TotalPackingCosts = $totalPackingCosts;
         return $this;
     }
     /**
      * Get DryIceDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail|null
      */
     public function getDryIceDetail()
     {
@@ -337,10 +337,10 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set DryIceDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
-    public function setDryIceDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail = null)
+    public function setDryIceDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentDryIceDetail $dryIceDetail = null)
     {
         $this->DryIceDetail = $dryIceDetail;
         return $this;
@@ -355,17 +355,17 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
     }
     /**
      * Set DangerousGoodsAccessibility value
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $dangerousGoodsAccessibility
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
     public function setDangerousGoodsAccessibility($dangerousGoodsAccessibility = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid($dangerousGoodsAccessibility)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dangerousGoodsAccessibility, implode(', ', \CommerceFedEx\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::valueIsValid($dangerousGoodsAccessibility)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $dangerousGoodsAccessibility, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\DangerousGoodsAccessibilityType::getValidValues())), __LINE__);
         }
         $this->DangerousGoodsAccessibility = $dangerousGoodsAccessibility;
         return $this;
@@ -376,7 +376,7 @@ class InternationalDistributionSummaryDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\InternationalDistributionSummaryDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\InternationalDistributionSummaryDetail
      */
     public static function __set_state(array $array)
     {

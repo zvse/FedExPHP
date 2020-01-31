@@ -63,7 +63,7 @@ class ConsolidationDocument extends AbstractStructBase
      * - documentation: One or more document parts which make up a single logical document, such as multiple pages of a single form.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart[]
      */
     public $Parts;
     /**
@@ -81,7 +81,7 @@ class ConsolidationDocument extends AbstractStructBase
      * @param string $imageType
      * @param int $resolution
      * @param int $copiesToPrint
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart[] $parts
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart[] $parts
      */
     public function __construct($type = null, $shippingDocumentDisposition = null, $accessReference = null, $imageType = null, $resolution = null, $copiesToPrint = null, array $parts = array())
     {
@@ -104,17 +104,17 @@ class ConsolidationDocument extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnedConsolidationDocumentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ReturnedConsolidationDocumentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnedConsolidationDocumentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ReturnedConsolidationDocumentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ReturnedConsolidationDocumentType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\ReturnedConsolidationDocumentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ReturnedConsolidationDocumentType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ReturnedConsolidationDocumentType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
@@ -129,17 +129,17 @@ class ConsolidationDocument extends AbstractStructBase
     }
     /**
      * Set ShippingDocumentDisposition value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentDispositionType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentDispositionType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentDispositionType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentDispositionType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $shippingDocumentDisposition
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument
      */
     public function setShippingDocumentDisposition($shippingDocumentDisposition = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShippingDocumentDispositionType::valueIsValid($shippingDocumentDisposition)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $shippingDocumentDisposition, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentDispositionType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentDispositionType::valueIsValid($shippingDocumentDisposition)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $shippingDocumentDisposition, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentDispositionType::getValidValues())), __LINE__);
         }
         $this->ShippingDocumentDisposition = $shippingDocumentDisposition;
         return $this;
@@ -155,7 +155,7 @@ class ConsolidationDocument extends AbstractStructBase
     /**
      * Set AccessReference value
      * @param string $accessReference
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument
      */
     public function setAccessReference($accessReference = null)
     {
@@ -176,17 +176,17 @@ class ConsolidationDocument extends AbstractStructBase
     }
     /**
      * Set ImageType value
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $imageType
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument
      */
     public function setImageType($imageType = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid($imageType)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $imageType, implode(', ', \CommerceFedEx\FedExPHP\Enums\ShippingDocumentImageType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::valueIsValid($imageType)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $imageType, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\ShippingDocumentImageType::getValidValues())), __LINE__);
         }
         $this->ImageType = $imageType;
         return $this;
@@ -202,7 +202,7 @@ class ConsolidationDocument extends AbstractStructBase
     /**
      * Set Resolution value
      * @param int $resolution
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument
      */
     public function setResolution($resolution = null)
     {
@@ -224,7 +224,7 @@ class ConsolidationDocument extends AbstractStructBase
     /**
      * Set CopiesToPrint value
      * @param int $copiesToPrint
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument
      */
     public function setCopiesToPrint($copiesToPrint = null)
     {
@@ -237,7 +237,7 @@ class ConsolidationDocument extends AbstractStructBase
     }
     /**
      * Get Parts value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart[]|null
      */
     public function getParts()
     {
@@ -246,15 +246,15 @@ class ConsolidationDocument extends AbstractStructBase
     /**
      * Set Parts value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart[] $parts
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart[] $parts
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument
      */
     public function setParts(array $parts = array())
     {
         foreach ($parts as $consolidationDocumentPartsItem) {
             // validation for constraint: itemType
-            if (!$consolidationDocumentPartsItem instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart) {
-                throw new \InvalidArgumentException(sprintf('The Parts property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart, "%s" given', is_object($consolidationDocumentPartsItem) ? get_class($consolidationDocumentPartsItem) : gettype($consolidationDocumentPartsItem)), __LINE__);
+            if (!$consolidationDocumentPartsItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart) {
+                throw new \InvalidArgumentException(sprintf('The Parts property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart, "%s" given', is_object($consolidationDocumentPartsItem) ? get_class($consolidationDocumentPartsItem) : gettype($consolidationDocumentPartsItem)), __LINE__);
             }
         }
         $this->Parts = $parts;
@@ -263,14 +263,14 @@ class ConsolidationDocument extends AbstractStructBase
     /**
      * Add item to Parts value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart $item
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument
      */
-    public function addToParts(\CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart $item)
+    public function addToParts(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart) {
-            throw new \InvalidArgumentException(sprintf('The Parts property can only contain items of \CommerceFedEx\FedExPHP\Structs\ShippingDocumentPart, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart) {
+            throw new \InvalidArgumentException(sprintf('The Parts property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocumentPart, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->Parts[] = $item;
         return $this;
@@ -281,7 +281,7 @@ class ConsolidationDocument extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ConsolidationDocument
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ConsolidationDocument
      */
     public static function __set_state(array $array)
     {

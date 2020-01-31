@@ -21,14 +21,14 @@ class AssociatedShipmentDetail extends AbstractStructBase
      * The Sender
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Party
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public $Sender;
     /**
      * The Recipient
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\Party
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\Party
      */
     public $Recipient;
     /**
@@ -50,7 +50,7 @@ class AssociatedShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies the tracking id for the payment on the return.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\TrackingId
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\TrackingId
      */
     public $TrackingId;
     /**
@@ -59,7 +59,7 @@ class AssociatedShipmentDetail extends AbstractStructBase
      * - documentation: Specifies additional customer reference data about the associated shipment.
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\CustomerReference[]
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[]
      */
     public $CustomerReferences;
     /**
@@ -67,7 +67,7 @@ class AssociatedShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies shipment level operational information.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail
      */
     public $ShipmentOperationalDetail;
     /**
@@ -75,14 +75,14 @@ class AssociatedShipmentDetail extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - documentation: Specifies package level operational information on the associated shipment. This information is not tied to an individual outbound package.
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail
      */
     public $PackageOperationalDetail;
     /**
      * The Label
      * Meta informations extracted from the WSDL
      * - minOccurs: 0
-     * @var \CommerceFedEx\FedExPHP\Structs\ShippingDocument
+     * @var \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument
      */
     public $Label;
     /**
@@ -98,17 +98,17 @@ class AssociatedShipmentDetail extends AbstractStructBase
      * @uses AssociatedShipmentDetail::setPackageOperationalDetail()
      * @uses AssociatedShipmentDetail::setLabel()
      * @param string $type
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $sender
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $recipient
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $sender
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $recipient
      * @param string $serviceType
      * @param string $packagingType
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference[] $customerReferences
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail $shipmentOperationalDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $packageOperationalDetail
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[] $customerReferences
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail $shipmentOperationalDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail $packageOperationalDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label
      */
-    public function __construct($type = null, \CommerceFedEx\FedExPHP\Structs\Party $sender = null, \CommerceFedEx\FedExPHP\Structs\Party $recipient = null, $serviceType = null, $packagingType = null, \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId = null, array $customerReferences = array(), \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail $shipmentOperationalDetail = null, \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $packageOperationalDetail = null, \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label = null)
+    public function __construct($type = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $sender = null, \NicholasCreativeMedia\FedExPHP\Structs\Party $recipient = null, $serviceType = null, $packagingType = null, \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId = null, array $customerReferences = array(), \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail $shipmentOperationalDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail $packageOperationalDetail = null, \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label = null)
     {
         $this
             ->setType($type)
@@ -132,24 +132,24 @@ class AssociatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Type value
-     * @uses \CommerceFedEx\FedExPHP\Enums\AssociatedShipmentType::valueIsValid()
-     * @uses \CommerceFedEx\FedExPHP\Enums\AssociatedShipmentType::getValidValues()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AssociatedShipmentType::valueIsValid()
+     * @uses \NicholasCreativeMedia\FedExPHP\Enums\AssociatedShipmentType::getValidValues()
      * @throws \InvalidArgumentException
      * @param string $type
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
     public function setType($type = null)
     {
         // validation for constraint: enumeration
-        if (!\CommerceFedEx\FedExPHP\Enums\AssociatedShipmentType::valueIsValid($type)) {
-            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \CommerceFedEx\FedExPHP\Enums\AssociatedShipmentType::getValidValues())), __LINE__);
+        if (!\NicholasCreativeMedia\FedExPHP\Enums\AssociatedShipmentType::valueIsValid($type)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $type, implode(', ', \NicholasCreativeMedia\FedExPHP\Enums\AssociatedShipmentType::getValidValues())), __LINE__);
         }
         $this->Type = $type;
         return $this;
     }
     /**
      * Get Sender value
-     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
      */
     public function getSender()
     {
@@ -157,17 +157,17 @@ class AssociatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Sender value
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $sender
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $sender
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
-    public function setSender(\CommerceFedEx\FedExPHP\Structs\Party $sender = null)
+    public function setSender(\NicholasCreativeMedia\FedExPHP\Structs\Party $sender = null)
     {
         $this->Sender = $sender;
         return $this;
     }
     /**
      * Get Recipient value
-     * @return \CommerceFedEx\FedExPHP\Structs\Party|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\Party|null
      */
     public function getRecipient()
     {
@@ -175,10 +175,10 @@ class AssociatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Recipient value
-     * @param \CommerceFedEx\FedExPHP\Structs\Party $recipient
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\Party $recipient
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
-    public function setRecipient(\CommerceFedEx\FedExPHP\Structs\Party $recipient = null)
+    public function setRecipient(\NicholasCreativeMedia\FedExPHP\Structs\Party $recipient = null)
     {
         $this->Recipient = $recipient;
         return $this;
@@ -194,7 +194,7 @@ class AssociatedShipmentDetail extends AbstractStructBase
     /**
      * Set ServiceType value
      * @param string $serviceType
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
     public function setServiceType($serviceType = null)
     {
@@ -216,7 +216,7 @@ class AssociatedShipmentDetail extends AbstractStructBase
     /**
      * Set PackagingType value
      * @param string $packagingType
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
     public function setPackagingType($packagingType = null)
     {
@@ -229,7 +229,7 @@ class AssociatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Get TrackingId value
-     * @return \CommerceFedEx\FedExPHP\Structs\TrackingId|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\TrackingId|null
      */
     public function getTrackingId()
     {
@@ -237,17 +237,17 @@ class AssociatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set TrackingId value
-     * @param \CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
-    public function setTrackingId(\CommerceFedEx\FedExPHP\Structs\TrackingId $trackingId = null)
+    public function setTrackingId(\NicholasCreativeMedia\FedExPHP\Structs\TrackingId $trackingId = null)
     {
         $this->TrackingId = $trackingId;
         return $this;
     }
     /**
      * Get CustomerReferences value
-     * @return \CommerceFedEx\FedExPHP\Structs\CustomerReference[]|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[]|null
      */
     public function getCustomerReferences()
     {
@@ -256,15 +256,15 @@ class AssociatedShipmentDetail extends AbstractStructBase
     /**
      * Set CustomerReferences value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference[] $customerReferences
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference[] $customerReferences
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
     public function setCustomerReferences(array $customerReferences = array())
     {
         foreach ($customerReferences as $associatedShipmentDetailCustomerReferencesItem) {
             // validation for constraint: itemType
-            if (!$associatedShipmentDetailCustomerReferencesItem instanceof \CommerceFedEx\FedExPHP\Structs\CustomerReference) {
-                throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerReference, "%s" given', is_object($associatedShipmentDetailCustomerReferencesItem) ? get_class($associatedShipmentDetailCustomerReferencesItem) : gettype($associatedShipmentDetailCustomerReferencesItem)), __LINE__);
+            if (!$associatedShipmentDetailCustomerReferencesItem instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference) {
+                throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference, "%s" given', is_object($associatedShipmentDetailCustomerReferencesItem) ? get_class($associatedShipmentDetailCustomerReferencesItem) : gettype($associatedShipmentDetailCustomerReferencesItem)), __LINE__);
             }
         }
         $this->CustomerReferences = $customerReferences;
@@ -273,21 +273,21 @@ class AssociatedShipmentDetail extends AbstractStructBase
     /**
      * Add item to CustomerReferences value
      * @throws \InvalidArgumentException
-     * @param \CommerceFedEx\FedExPHP\Structs\CustomerReference $item
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference $item
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
-    public function addToCustomerReferences(\CommerceFedEx\FedExPHP\Structs\CustomerReference $item)
+    public function addToCustomerReferences(\NicholasCreativeMedia\FedExPHP\Structs\CustomerReference $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \CommerceFedEx\FedExPHP\Structs\CustomerReference) {
-            throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \CommerceFedEx\FedExPHP\Structs\CustomerReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
+        if (!$item instanceof \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference) {
+            throw new \InvalidArgumentException(sprintf('The CustomerReferences property can only contain items of \NicholasCreativeMedia\FedExPHP\Structs\CustomerReference, "%s" given', is_object($item) ? get_class($item) : gettype($item)), __LINE__);
         }
         $this->CustomerReferences[] = $item;
         return $this;
     }
     /**
      * Get ShipmentOperationalDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail|null
      */
     public function getShipmentOperationalDetail()
     {
@@ -295,17 +295,17 @@ class AssociatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set ShipmentOperationalDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail $shipmentOperationalDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail $shipmentOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
-    public function setShipmentOperationalDetail(\CommerceFedEx\FedExPHP\Structs\ShipmentOperationalDetail $shipmentOperationalDetail = null)
+    public function setShipmentOperationalDetail(\NicholasCreativeMedia\FedExPHP\Structs\ShipmentOperationalDetail $shipmentOperationalDetail = null)
     {
         $this->ShipmentOperationalDetail = $shipmentOperationalDetail;
         return $this;
     }
     /**
      * Get PackageOperationalDetail value
-     * @return \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail|null
      */
     public function getPackageOperationalDetail()
     {
@@ -313,17 +313,17 @@ class AssociatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set PackageOperationalDetail value
-     * @param \CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $packageOperationalDetail
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail $packageOperationalDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
-    public function setPackageOperationalDetail(\CommerceFedEx\FedExPHP\Structs\PackageOperationalDetail $packageOperationalDetail = null)
+    public function setPackageOperationalDetail(\NicholasCreativeMedia\FedExPHP\Structs\PackageOperationalDetail $packageOperationalDetail = null)
     {
         $this->PackageOperationalDetail = $packageOperationalDetail;
         return $this;
     }
     /**
      * Get Label value
-     * @return \CommerceFedEx\FedExPHP\Structs\ShippingDocument|null
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument|null
      */
     public function getLabel()
     {
@@ -331,10 +331,10 @@ class AssociatedShipmentDetail extends AbstractStructBase
     }
     /**
      * Set Label value
-     * @param \CommerceFedEx\FedExPHP\Structs\ShippingDocument $label
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @param \NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
-    public function setLabel(\CommerceFedEx\FedExPHP\Structs\ShippingDocument $label = null)
+    public function setLabel(\NicholasCreativeMedia\FedExPHP\Structs\ShippingDocument $label = null)
     {
         $this->Label = $label;
         return $this;
@@ -345,7 +345,7 @@ class AssociatedShipmentDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\AssociatedShipmentDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\AssociatedShipmentDetail
      */
     public static function __set_state(array $array)
     {

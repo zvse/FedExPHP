@@ -41,7 +41,7 @@ class MarkingOrTaggingDetail extends AbstractStructBase
     /**
      * Set Count value
      * @param int $count
-     * @return \CommerceFedEx\FedExPHP\Structs\MarkingOrTaggingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\MarkingOrTaggingDetail
      */
     public function setCount($count = null)
     {
@@ -58,7 +58,7 @@ class MarkingOrTaggingDetail extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\MarkingOrTaggingDetail
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\MarkingOrTaggingDetail
      */
     public static function __set_state(array $array)
     {

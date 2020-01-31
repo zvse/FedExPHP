@@ -50,7 +50,7 @@ class ArtifactPart extends AbstractStructBase
     /**
      * Set SequenceNumber value
      * @param int $sequenceNumber
-     * @return \CommerceFedEx\FedExPHP\Structs\ArtifactPart
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart
      */
     public function setSequenceNumber($sequenceNumber = null)
     {
@@ -72,7 +72,7 @@ class ArtifactPart extends AbstractStructBase
     /**
      * Set Contents value
      * @param string $contents
-     * @return \CommerceFedEx\FedExPHP\Structs\ArtifactPart
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart
      */
     public function setContents($contents = null)
     {
@@ -89,7 +89,7 @@ class ArtifactPart extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \CommerceFedEx\FedExPHP\Structs\ArtifactPart
+     * @return \NicholasCreativeMedia\FedExPHP\Structs\ArtifactPart
      */
     public static function __set_state(array $array)
     {
