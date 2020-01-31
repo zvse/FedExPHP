@@ -3,18 +3,31 @@
 namespace NicholasCreativeMedia\FedExPHP\Enums;
 
 /**
- * This class stands for DeliveryOptionType Enums
- * Meta informations extracted from the WSDL
- * - documentation: Specifies the different option types for delivery.
+ * This class stands for TrackDeliveryOptionType Enums
  * @subpackage Enumerations
  */
-class DeliveryOptionType
+class TrackDeliveryOptionType
 {
     /**
-     * Constant for value 'INDIRECT_SIGNATURE_RELEASE'
-     * @return string 'INDIRECT_SIGNATURE_RELEASE'
+     * Constant for value 'APPOINTMENT'
+     * @return string 'APPOINTMENT'
      */
-    const VALUE_INDIRECT_SIGNATURE_RELEASE = 'INDIRECT_SIGNATURE_RELEASE';
+    const VALUE_APPOINTMENT = 'APPOINTMENT';
+    /**
+     * Constant for value 'DATE_CERTAIN'
+     * @return string 'DATE_CERTAIN'
+     */
+    const VALUE_DATE_CERTAIN = 'DATE_CERTAIN';
+    /**
+     * Constant for value 'ELECTRONIC_SIGNATURE_RELEASE'
+     * @return string 'ELECTRONIC_SIGNATURE_RELEASE'
+     */
+    const VALUE_ELECTRONIC_SIGNATURE_RELEASE = 'ELECTRONIC_SIGNATURE_RELEASE';
+    /**
+     * Constant for value 'EVENING'
+     * @return string 'EVENING'
+     */
+    const VALUE_EVENING = 'EVENING';
     /**
      * Constant for value 'REDIRECT_TO_HOLD_AT_LOCATION'
      * @return string 'REDIRECT_TO_HOLD_AT_LOCATION'
@@ -25,11 +38,6 @@ class DeliveryOptionType
      * @return string 'REROUTE'
      */
     const VALUE_REROUTE = 'REROUTE';
-    /**
-     * Constant for value 'RESCHEDULE'
-     * @return string 'RESCHEDULE'
-     */
-    const VALUE_RESCHEDULE = 'RESCHEDULE';
     /**
      * Return true if value is allowed
      * @uses self::getValidValues()
@@ -42,19 +50,23 @@ class DeliveryOptionType
     }
     /**
      * Return allowed values
-     * @uses self::VALUE_INDIRECT_SIGNATURE_RELEASE
+     * @uses self::VALUE_APPOINTMENT
+     * @uses self::VALUE_DATE_CERTAIN
+     * @uses self::VALUE_ELECTRONIC_SIGNATURE_RELEASE
+     * @uses self::VALUE_EVENING
      * @uses self::VALUE_REDIRECT_TO_HOLD_AT_LOCATION
      * @uses self::VALUE_REROUTE
-     * @uses self::VALUE_RESCHEDULE
      * @return string[]
      */
     public static function getValidValues()
     {
         return array(
-            self::VALUE_INDIRECT_SIGNATURE_RELEASE,
+            self::VALUE_APPOINTMENT,
+            self::VALUE_DATE_CERTAIN,
+            self::VALUE_ELECTRONIC_SIGNATURE_RELEASE,
+            self::VALUE_EVENING,
             self::VALUE_REDIRECT_TO_HOLD_AT_LOCATION,
             self::VALUE_REROUTE,
-            self::VALUE_RESCHEDULE,
         );
     }
     /**
