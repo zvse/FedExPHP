@@ -8,7 +8,7 @@ use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
  * This class stands for all operations
  * @subpackage Services
  */
-class Service extends AbstractSoapClientBase
+class TrackService extends AbstractSoapClientBase
 {
 
     /**
